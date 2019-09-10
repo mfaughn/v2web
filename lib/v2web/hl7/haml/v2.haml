@@ -1,0 +1,162 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=windows-1252", "http-equiv" => "Content-Type"}
+    %title HL7 - REFACTORED
+    %link{:href => "http://hl7.eu/refactored/hl7.ico", :rel => "SHORTCUT ICON"}
+    %style{:type => 'text/css'}
+      @import '/css/hl7.css';
+      @import '/css/fhir.css';
+      @import '/css/bootstrap.css';
+      @import '/css/bootstrap-fhir.css';
+      @import '/css/project.css';
+      @import '/css/pygments-manni.css';
+      @import '/css/jquery-ui.css';
+      @import '/css/modules.css';
+      
+
+    %meta{:content => "(C) Health Level Seven, Int. 2019", :name => "COPYRIGHT"}
+    %meta{:content => "HL7 Comprehensive Database", :name => "Generator"}
+    / %meta{:content => "Frank Oemig", :name => "Author"}/
+
+  %body{:style => ""}
+    #segment-header.segment
+      / segment-header
+      .container
+        / container
+        %a#logo{:href => "http://hl7.org/hl7v2+", "no-external" => "true"}
+          %img{:alt => "logo HL7 Europe Int.", :src => "/images/hl7-eu-logo.gif", :width => "120"}
+        #hl7-status
+          %img{:alt => "visit the hl7 website", :height => "40", :src => "/images/hl7-v2plus.gif"}
+        #hl7-nav
+          %a#hl7-logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+            %img{:alt => "visit the hl7 website", :height => "50", :src => "/images/3dhl7_deu.gif"}/
+      / /container
+    / /segment-header
+    #segment-navbar.segment
+      / segment-navbar
+      #stripe
+      .container
+        / container
+        / HEADER CONTENT
+        %nav.navbar.navbar-inverse
+          .container
+            %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand.hidden{:href => "http://hl7.eu/refactored/index.html"} FHIR
+            .nav-collapse.collapse.navbar-inverse-collapse
+              %ul.nav.navbar-nav
+                %li
+                  %a{:href => "http://hl7.eu/refactored/hl7.html"} Home
+                %li
+                  %a{:href => "http://hl7.eu/refactored/tab.html"} Vocabulary
+                %li
+                  %a{:href => "http://hl7.eu/refactored/ctrl.html"} Control
+                %li
+                  %a{:href => "http://hl7.eu/refactored/encoding.html"} Encoding
+                %li
+                  %a{:href => "http://hl7.eu/refactored/transport.html"} Transport
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dt.html"} Data Types
+                %li
+                  %a{:href => "http://hl7.eu/refactored/msg.html"} Message Structures
+                %li
+                  %a{:href => "http://hl7.eu/refactored/seg.html"} Segments
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dom.html"} Domains
+                %li
+                  %a{:href => "http://hl7.eu/refactored/profile.html"} Profiling
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dt_flav.html"} Data Type Flavors
+                %li
+                  %a{:href => "http://hl7.eu/refactored/v2x.html"} v2.x
+            / /.nav-collapse
+          / /.container
+        / /.navbar
+    #segment-breadcrumb.segment
+      / segment-breadcrumb
+      .container
+        / container
+        %ul.breadcrumb
+          %li
+            %b
+              %a{:href => "http://hl7.eu/refactored/hl7.html"} Home
+      / /container
+    / /segment-breadcrumb
+    .container
+      = content
+    / container
+
+
+    / JS and analytics only.
+    /
+      Bootstrap core JavaScript
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    %script{:type => 'text/javascript', :src => "/js/jquery.js"}
+    / note keep space here, otherwise it will be transformed to empty tag -> fails
+    %script{:type => 'text/javascript', :src => "/js/bootstrap.min.js"}
+    %script{:type => 'text/javascript', :src => "/js/respond.min.js"}
+    %script{:type => 'text/javascript', :src => "/js/fhir.js"}
+    /
+      Analytics Below
+      \==================================================
+    %script{:type => 'text/javascript', :src => "/js/jquery-ui.min.js"}
+    :javascript
+      try {
+         var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+       } catch(exception){ 
+       }
+       if (!currentTabIndex)
+         currentTabIndex = '0';
+      
+      $( '#tabs-Extension' ).tabs({ 
+      active: currentTabIndex, 
+      activate: function( event, ui ) { store(ui.newTab.index()); } 
+      });
+           
+           
+      function store(currentTab) {
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+        } catch(exception){ 
+        }
+        $( '#tabs-Extension' ).tabs('option', 'active', currentTab);
+      }
+
+      /
+        Analytics Below
+        \==================================================
+      :javascript
+        try {
+           var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+         } catch(exception){
+         }
+         if (!currentTabIndex)
+           currentTabIndex = '0';
+         $( '#tabs-1' ).tabs({
+           active: currentTabIndex,
+           activate: function( event, ui ) { store(ui.newTab.index()); }
+         });
+        function store(currentTab) {
+          document.activeElement.blur();
+          try {
+            sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+          } catch(exception){
+        }
+         $( '#tabs' ).tabs('option', 'active', currentTab);
+        }
+  #segment-footer.segment
+    / segment-footer
+    .container
+      / container
+      .inner-wrapper
+        %p
+          &copy; HL7.org 2019+. HL7 v2+ (HL7-DB #94) generated on #{Time.now.strftime('%B %d, %Y at %T')}
+          / achive note
+      / /inner-wrapper
+    / /container
+  / /segment-footer

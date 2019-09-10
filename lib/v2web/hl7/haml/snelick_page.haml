@@ -1,0 +1,81 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=windows-1252", "http-equiv" => "Content-Type"}
+    %title
+      HL7 - #{title}
+    %link{:href => "images/hl7_favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
+    %style{:type => 'text/css'}
+      / @import './css/hl7.css';
+      / @import './css/fhir.css';
+      / @import './css/bootstrap.css';
+      / @import './css/bootstrap-fhir.css';
+      / @import './css/project.css';
+      / @import './css/pygments-manni.css';
+      / @import './css/jquery-ui.css';
+      / @import './css/modules.css';
+      @import 'css/hl7.css';
+      @import 'css/fhir.css';
+      @import 'css/bootstrap.css';
+      @import 'css/bootstrap-fhir.css';
+      @import 'css/project.css';
+      @import 'css/pygments-manni.css';
+      @import 'css/jquery-ui.css';
+      @import 'css/modules.css';
+      @import 'css/codemirror.css';
+      @import 'css/snelick.css';
+
+    %meta{:content => "(C) Health Level Seven, Int. 2019", :name => "COPYRIGHT"}
+    %meta{:content => "Michael Faughn", :name => "Developer"}
+
+  %body{:style => ""}
+    #segment-header.segment
+      .container
+        %a#logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+          %img{:alt => "HL7 International", :src => "images/hl7-logo-header.png", :width => "120"}
+        #hl7-nav
+          %a#hl7-logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+            %img{:alt => "visit the hl7 website", :height => "50", :src => "images/3dhl7_deu.gif"}
+    #segment-navbar.segment
+      #stripe
+      .container
+        / HEADER CONTENT
+        %nav.navbar.navbar-inverse
+          .container
+            %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .nav-collapse.collapse.navbar-inverse-collapse
+              %ul.nav.navbar-nav
+                %li.navbar_snelick
+                  %a{:href => homepage_url} Home
+                = navbar_items
+
+    #segment-breadcrumb.segment
+      .container
+        %ul.breadcrumb
+          %li
+            %b
+              %a{:href => homepage_url} Home
+
+    .container
+      = content
+
+      - # ==================================================
+      - # Placed at the end of the document so the pages load faster
+      %script{:src => "js/jquery.js"}
+      %script{:src => "js/jquery-ui.min.js"}
+      %script{:src => "js/bootstrap.min.js"}
+      %script{:src => "js/respond.min.js"}
+      / %script{:src => "js/fhir.js"} / This file was empty so not including it
+      %script{:src => "js/codemirror/codemirror.js"}
+      %script{:src => "js/codemirror/mode/xml.js"}
+      %script{:src => "js/v2.js"}
+
+    %p
+    #segment-footer.segment
+      .container
+        .inner-wrapper
+          %p
+            &copy; HL7.org 2019+. HL7 v2+.

@@ -1,0 +1,56 @@
+conformance = SDoc::Document.where(Sequel.ilike(:title, '%Conformance Methodology%')).first
+datatypes   = SDoc::Document.where(Sequel.ilike(:title, '%DataType Specializations%')).first
+
+ChangeTracker.start
+root = WebDoc::Homepage.create
+ChangeTracker.commit
+
+def site_from_doc(doc, home)
+  ChangeTracker.start
+  level = WebDoc::Level.create(:text => doc.title)
+  home.add_level(level)
+  ChangeTracker.commit
+  
+  clauses1 = doc.content.select { |c| c.is_a?(SDoc::Clause) }
+  clauses1.each do |clause|
+    # puts "#{doc.title} -- #{clause.title}"
+    ChangeTracker.start
+    group = WebDoc::LevelGroup.create
+    group.doc = clause
+    level.add_group(group)
+    group.save
+    clauses2 = clause.content.select { |c| c.is_a?(SDoc::Clause) }
+    clauses2.each do |subclause|
+      section = WebDoc::Section.create
+      section.doc = subclause
+      group.add_section(section)
+      section.save
+    end
+    ChangeTracker.commit
+  end  
+end
+
+site_from_doc(conformance, root)
+site_from_doc(datatypes, root)
+root.to_hl7_site
+
+# def create_sections_for_group(group)
+#   doc = group.doc
+#   clauses1 = doc.content.select { |c| c.is_a?(SDoc::Clause) }
+#   clauses1.each do |clause|
+#     ChangeTracker.start
+#     s = WebDoc::Section.create
+#     s.doc = clause
+#     group.add_section(s)
+#     s.save
+#     ChangeTracker.commit
+#   end
+#   clauses1.each do |clause|
+#     ChangeTracker.start
+#     s = WebDoc::Section.create
+#     s.doc = clause
+#     group.add_section(s)
+#     s.save
+#     ChangeTracker.commit
+#   end
+# end

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=windows-1252' http-equiv='Content-Type'>
+    <title>
+      HL7 - Glossary
+    </title>
+    <link href='images/hl7_favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <style type='text/css'>
+      <!-- @import './css/hl7.css'; -->
+      <!-- @import './css/fhir.css'; -->
+      <!-- @import './css/bootstrap.css'; -->
+      <!-- @import './css/bootstrap-fhir.css'; -->
+      <!-- @import './css/project.css'; -->
+      <!-- @import './css/pygments-manni.css'; -->
+      <!-- @import './css/jquery-ui.css'; -->
+      <!-- @import './css/modules.css'; -->
+      @import 'css/hl7.css';
+      @import 'css/fhir.css';
+      @import 'css/bootstrap.css';
+      @import 'css/bootstrap-fhir.css';
+      @import 'css/project.css';
+      @import 'css/pygments-manni.css';
+      @import 'css/jquery-ui.css';
+      @import 'css/modules.css';
+      @import 'css/codemirror.css';
+      @import 'css/snelick.css';
+    </style>
+    <meta content='(C) Health Level Seven, Int. 2019' name='COPYRIGHT'>
+    <meta content='Michael Faughn' name='Developer'>
+  </head>
+  <body style=''>
+    <div class='segment' id='segment-header'>
+      <div class='container'>
+        <a href='http://www.hl7.org/' id='logo' no-external='true'>
+          <img alt='HL7 International' src='images/hl7-logo-header.png' width='120'>
+        </a>
+        <div id='hl7-nav'>
+          <a href='http://www.hl7.org/' id='hl7-logo' no-external='true'>
+            <img alt='visit the hl7 website' height='50' src='images/3dhl7_deu.gif'>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='segment' id='segment-navbar'>
+      <div id='stripe'></div>
+      <div class='container'>
+        <!-- HEADER CONTENT -->
+        <nav class='navbar navbar-inverse'>
+          <div class='container'>
+            <button class='navbar-toggle' data-target='.navbar-inverse-collapse' data-toggle='collapse' type='button'>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </button>
+            <div class='nav-collapse collapse navbar-inverse-collapse'>
+              <ul class='nav navbar-nav'>
+                <li>
+                  <a href='main.html'>Home</a>
+                </li>
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Introduction.html'>
+                    Introduction
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Levels.html'>
+                    Profile Levels
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_HL7_v2_Implementation_Guides.html'>
+                    HL7 v2 Implementation Guides
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profiles.html'>
+                    Message Profiles
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profile_Identification.html'>
+                    Message Profile Identification
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profiles_in_Use.html'>
+                    Profiles in Use
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Relationships.html'>
+                    Profile Relationships
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Documentation.html'>
+                    Profile Documentation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Canonical_Representation.html'>
+                    Canonical Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Computable_Representation.html'>
+                    Computable Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Glossary.html'>
+                    Glossary
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_To_DO.html'>
+                    To DO
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Notes_to_Balloters.html'>
+                    Notes to Balloters
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class='segment' id='segment-breadcrumb'>
+      <div class='container'>
+        <ul class='breadcrumb'>
+          <li>
+            <b>
+              <a href='main.html'>Home</a>
+            </b>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='container'>
+      <h2>
+        11 Glossary
+      </h2>
+      <p>
+        
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Term
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Context
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Definition
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Usage
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Optionality
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Non-empty Value
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Base Standard
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Specifier
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                A person who is creating the implementation guide or message profile.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Defines a set of different constraints that are possible for a field instance (occurrence).
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Base Data Type
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this is the HL7 base datatype for the field as defined in Chapter 2 of the base standard. The default datatype and all the datatypes flavors associated with that field must derive from the base datatype.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Default Data Type
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this is the data type flavor that is triggered when the parameter to identify a slice are not satisfied. The default datatype is optional. If the default is not specified, then a field occurrence instance must contain a discriminator value that is explicitly defined.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Discriminator Position
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this is the position of the discriminator element(s). The path is relative to the base datatype. All occurrences of the field have the same discriminator position. Discriminator position can be one or more elements (e.g., PID-11.6 (Country) and PID-11.7 (Address Type)).
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Discriminator Value
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this is the value of the discriminator. For fixed value, the evaluation is on a literal value. For exists, the evaluation is on Boolean logic. For pattern, the evaluation is on a regex (regular expression).
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Slice Min
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this attribute determines the minimum number of occurrences that must contain "discriminator value" and therefore conform to &ldquo;slice datatype flavor&rdquo;.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Slice Max
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Slicing
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                this attribute determines the maximum number of occurrences that must contain "discriminator value" and therefore conform to &ldquo;slice datatype flavor&rdquo;.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <script src='js/jquery.js'></script>
+      <script src='js/jquery-ui.min.js'></script>
+      <script src='js/bootstrap.min.js'></script>
+      <script src='js/respond.min.js'></script>
+      <!-- %script{:src => "js/fhir.js"} / This file was empty so not including it -->
+      <script src='js/codemirror/codemirror.js'></script>
+      <script src='js/codemirror/mode/xml.js'></script>
+      <script src='js/v2.js'></script>
+    </div>
+    <p></p>
+    <div class='segment' id='segment-footer'>
+      <div class='container'>
+        <div class='inner-wrapper'>
+          <p>
+            &copy; HL7.org 2019+. HL7 v2+.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

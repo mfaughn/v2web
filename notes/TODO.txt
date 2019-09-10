@@ -1,0 +1,4 @@
+Extract SegmentTypes from Ch. 2 section 2.14
+
+Work on Rob's stuff
+

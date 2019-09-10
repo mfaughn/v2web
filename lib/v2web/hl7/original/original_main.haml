@@ -1,0 +1,2298 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=windows-1252", "http-equiv" => "Content-Type"}/
+    %title HL7 - REFACTORED
+    %link{:href => "http://hl7.eu/refactored/hl7.ico", :rel => "SHORTCUT ICON"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/hl7.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/fhir.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/bootstrap-fhir.css", :rel => "stylesheet"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/project.css", :rel => "stylesheet"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/pygments-manni.css", :rel => "stylesheet"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/jquery-ui.css", :rel => "stylesheet"}/
+    %link{:href => "./HL7 - REFACTORED_Home_files/modules.css", :rel => "stylesheet"}/
+    %style{:media => "screen", :type => "text/css"}
+      :cdata
+        \.navbar-brand {
+        float: left;
+        margin-left: -15px;
+        margin-right: 5px;
+        }
+        \.navbar-nav {
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+        \.navbar-nav > li {
+        float: left;
+        }
+        \.navbar-nav > li > a {
+        border-radius: 0;
+        }
+        \.navbar-nav.pull-right {
+        float: right;
+        width: auto;
+        }
+        \.navbar-toggle {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: none;
+        }
+        \.nav-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        }
+        
+        \.modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        }
+        \.modal-content {
+        \-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        \.carousel-control .glyphicon,
+        \.carousel-control .icon-prev,
+        \.carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+        }
+        \.carousel-caption {
+        left: 20%;
+        right: 20%;
+        padding-bottom: 30px;
+        }
+        \.carousel-indicators {
+        bottom: 20px;
+        }
+        
+        \.jumbotron {
+        padding: 50px 60px;
+        border-radius: 6px;
+        }
+        \.jumbotron h1 {
+        font-size: 63px;
+        }
+        
+        \.navbar-brand {
+        float: left;
+        margin-left: -15px;
+        margin-right: 5px;
+        }
+        \.navbar-nav {
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+        \.navbar-nav > li {
+        float: left;
+        }
+        \.navbar-nav > li > a {
+        border-radius: 0;
+        }
+        \.navbar-nav.pull-right {
+        float: right;
+        width: auto;
+        }
+        \.navbar-toggle {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: none;
+        }
+        \.nav-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        }
+        
+        \.modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        }
+        \.modal-content {
+        \-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        \.carousel-control .glyphicon,
+        \.carousel-control .icon-prev,
+        \.carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+        }
+        \.carousel-caption {
+        left: 20%;
+        right: 20%;
+        padding-bottom: 30px;
+        }
+        \.carousel-indicators {
+        bottom: 20px;
+        }
+        
+        \.jumbotron {
+        padding: 50px 60px;
+        border-radius: 6px;
+        }
+        \.jumbotron h1 {
+        font-size: 63px;
+        }
+    %style{:media => "print", :type => "text/css"}
+      :cdata
+        \.page-break	{ display:block; page-break-before:always; }
+        
+        * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        }
+        a,
+        a:visited {
+        text-decoration: underline;
+        }
+        a[href]:after {
+        content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+        content: " (" attr(title) ")";
+        }
+        \.ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+        content: "";
+        }
+        pre,
+        blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+        }
+        thead {
+        display: table-header-group;
+        }
+        tr,
+        img {
+        page-break-inside: avoid;
+        }
+        img {
+        max-width: 100% !important;
+        }
+        @page  {
+        margin: 2cm .5cm;
+        }
+        p,
+        h2,
+        h3 {
+        orphans: 3;
+        widows: 3;
+        }
+        h2,
+        h3 {
+        page-break-after: avoid;
+        }
+        \.navbar {
+        display: none;
+        }
+        \.table td,
+        \.table th {
+        background-color: #fff !important;
+        }
+        \.btn > .caret,
+        \.dropup > .btn > .caret {
+        border-top-color: #000 !important;
+        }
+        \.label {
+        border: 1px solid #000;
+        }
+        \.table {
+        border-collapse: collapse !important;
+        }
+        \.table-bordered th,
+        \.table-bordered td {
+        border: 1px solid #ddd !important;
+        }
+        
+        \.visible-print {
+        display: block !important;
+        }
+        tr.visible-print {
+        display: table-row !important;
+        }
+        th.visible-print,
+        td.visible-print {
+        display: table-cell !important;
+        }
+        \.hidden-print {
+        display: none !important;
+        }
+        tr.hidden-print {
+        display: none !important;
+        }
+        th.hidden-print,
+        td.hidden-print {
+        display: none !important;
+        }
+        
+        * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        }
+        a,
+        a:visited {
+        text-decoration: underline;
+        }
+        a[href]:after {
+        content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+        content: " (" attr(title) ")";
+        }
+        \.ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+        content: "";
+        }
+        pre,
+        blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+        }
+        thead {
+        display: table-header-group;
+        }
+        tr,
+        img {
+        page-break-inside: avoid;
+        }
+        img {
+        max-width: 100% !important;
+        }
+        @page  {
+        margin: 2cm .5cm;
+        }
+        p,
+        h2,
+        h3 {
+        orphans: 3;
+        widows: 3;
+        }
+        h2,
+        h3 {
+        page-break-after: avoid;
+        }
+        \.navbar {
+        display: none;
+        }
+        \.table td,
+        \.table th {
+        background-color: #fff !important;
+        }
+        \.btn > .caret,
+        \.dropup > .btn > .caret {
+        border-top-color: #000 !important;
+        }
+        \.label {
+        border: 1px solid #000;
+        }
+        \.table {
+        border-collapse: collapse !important;
+        }
+        \.table-bordered th,
+        \.table-bordered td {
+        border: 1px solid #ddd !important;
+        }
+        
+        \.visible-print {
+        display: block !important;
+        }
+        tr.visible-print {
+        display: table-row !important;
+        }
+        th.visible-print,
+        td.visible-print {
+        display: table-cell !important;
+        }
+        \.hidden-print {
+        display: none !important;
+        }
+        tr.hidden-print {
+        display: none !important;
+        }
+        th.hidden-print,
+        td.hidden-print {
+        display: none !important;
+        }
+    %style{:media => "all", :type => "text/css"}
+      :cdata
+        \.page-break	{ display:none; }
+        
+        \.lead {
+        font-size: 21px;
+        }
+        
+        \.row {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.container {
+        max-width: 728px;
+        }
+        \.col-sm-1,
+        \.col-sm-2,
+        \.col-sm-3,
+        \.col-sm-4,
+        \.col-sm-5,
+        \.col-sm-6,
+        \.col-sm-7,
+        \.col-sm-8,
+        \.col-sm-9,
+        \.col-sm-10,
+        \.col-sm-11,
+        \.col-sm-12 {
+        float: left;
+        }
+        \.col-sm-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-sm-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-sm-3 {
+        width: 25%;
+        }
+        \.col-sm-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-sm-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-sm-6 {
+        width: 50%;
+        }
+        \.col-sm-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-sm-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-sm-9 {
+        width: 75%;
+        }
+        \.col-sm-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-sm-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-sm-12 {
+        width: 100%;
+        }
+        \.col-push-1 {
+        left: 8.333333333333332%;
+        }
+        \.col-push-2 {
+        left: 16.666666666666664%;
+        }
+        \.col-push-3 {
+        left: 25%;
+        }
+        \.col-push-4 {
+        left: 33.33333333333333%;
+        }
+        \.col-push-5 {
+        left: 41.66666666666667%;
+        }
+        \.col-push-6 {
+        left: 50%;
+        }
+        \.col-push-7 {
+        left: 58.333333333333336%;
+        }
+        \.col-push-8 {
+        left: 66.66666666666666%;
+        }
+        \.col-push-9 {
+        left: 75%;
+        }
+        \.col-push-10 {
+        left: 83.33333333333334%;
+        }
+        \.col-push-11 {
+        left: 91.66666666666666%;
+        }
+        \.col-pull-1 {
+        right: 8.333333333333332%;
+        }
+        \.col-pull-2 {
+        right: 16.666666666666664%;
+        }
+        \.col-pull-3 {
+        right: 25%;
+        }
+        \.col-pull-4 {
+        right: 33.33333333333333%;
+        }
+        \.col-pull-5 {
+        right: 41.66666666666667%;
+        }
+        \.col-pull-6 {
+        right: 50%;
+        }
+        \.col-pull-7 {
+        right: 58.333333333333336%;
+        }
+        \.col-pull-8 {
+        right: 66.66666666666666%;
+        }
+        \.col-pull-9 {
+        right: 75%;
+        }
+        \.col-pull-10 {
+        right: 83.33333333333334%;
+        }
+        \.col-pull-11 {
+        right: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 940px;
+        }
+        \.col-lg-1,
+        \.col-lg-2,
+        \.col-lg-3,
+        \.col-lg-4,
+        \.col-lg-5,
+        \.col-lg-6,
+        \.col-lg-7,
+        \.col-lg-8,
+        \.col-lg-9,
+        \.col-lg-10,
+        \.col-lg-11,
+        \.col-lg-12 {
+        float: left;
+        }
+        \.col-lg-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-lg-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-lg-3 {
+        width: 25%;
+        }
+        \.col-lg-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-lg-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-lg-6 {
+        width: 50%;
+        }
+        \.col-lg-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-lg-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-lg-9 {
+        width: 75%;
+        }
+        \.col-lg-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-lg-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-lg-12 {
+        width: 100%;
+        }
+        \.col-offset-1 {
+        margin-left: 8.333333333333332%;
+        }
+        \.col-offset-2 {
+        margin-left: 16.666666666666664%;
+        }
+        \.col-offset-3 {
+        margin-left: 25%;
+        }
+        \.col-offset-4 {
+        margin-left: 33.33333333333333%;
+        }
+        \.col-offset-5 {
+        margin-left: 41.66666666666667%;
+        }
+        \.col-offset-6 {
+        margin-left: 50%;
+        }
+        \.col-offset-7 {
+        margin-left: 58.333333333333336%;
+        }
+        \.col-offset-8 {
+        margin-left: 66.66666666666666%;
+        }
+        \.col-offset-9 {
+        margin-left: 75%;
+        }
+        \.col-offset-10 {
+        margin-left: 83.33333333333334%;
+        }
+        \.col-offset-11 {
+        margin-left: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 1170px;
+        }
+        
+        \.form-horizontal .form-group {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.form-horizontal .control-label {
+        text-align: right;
+        }
+        
+        \.visible-sm {
+        display: none !important;
+        }
+        tr.visible-sm {
+        display: none !important;
+        }
+        th.visible-sm,
+        td.visible-sm {
+        display: none !important;
+        }
+        \.visible-md {
+        display: none !important;
+        }
+        tr.visible-md {
+        display: none !important;
+        }
+        th.visible-md,
+        td.visible-md {
+        display: none !important;
+        }
+        \.visible-lg {
+        display: block !important;
+        }
+        tr.visible-lg {
+        display: table-row !important;
+        }
+        th.visible-lg,
+        td.visible-lg {
+        display: table-cell !important;
+        }
+        \.hidden-sm {
+        display: block !important;
+        }
+        tr.hidden-sm {
+        display: table-row !important;
+        }
+        th.hidden-sm,
+        td.hidden-sm {
+        display: table-cell !important;
+        }
+        \.hidden-md {
+        display: block !important;
+        }
+        tr.hidden-md {
+        display: table-row !important;
+        }
+        th.hidden-md,
+        td.hidden-md {
+        display: table-cell !important;
+        }
+        \.hidden-lg {
+        display: none !important;
+        }
+        tr.hidden-lg {
+        display: none !important;
+        }
+        th.hidden-lg,
+        td.hidden-lg {
+        display: none !important;
+        }
+        
+        \.lead {
+        font-size: 21px;
+        }
+        
+        \.row {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.container {
+        max-width: 728px;
+        }
+        \.col-sm-1,
+        \.col-sm-2,
+        \.col-sm-3,
+        \.col-sm-4,
+        \.col-sm-5,
+        \.col-sm-6,
+        \.col-sm-7,
+        \.col-sm-8,
+        \.col-sm-9,
+        \.col-sm-10,
+        \.col-sm-11,
+        \.col-sm-12 {
+        float: left;
+        }
+        \.col-sm-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-sm-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-sm-3 {
+        width: 25%;
+        }
+        \.col-sm-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-sm-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-sm-6 {
+        width: 50%;
+        }
+        \.col-sm-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-sm-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-sm-9 {
+        width: 75%;
+        }
+        \.col-sm-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-sm-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-sm-12 {
+        width: 100%;
+        }
+        \.col-push-1 {
+        left: 8.333333333333332%;
+        }
+        \.col-push-2 {
+        left: 16.666666666666664%;
+        }
+        \.col-push-3 {
+        left: 25%;
+        }
+        \.col-push-4 {
+        left: 33.33333333333333%;
+        }
+        \.col-push-5 {
+        left: 41.66666666666667%;
+        }
+        \.col-push-6 {
+        left: 50%;
+        }
+        \.col-push-7 {
+        left: 58.333333333333336%;
+        }
+        \.col-push-8 {
+        left: 66.66666666666666%;
+        }
+        \.col-push-9 {
+        left: 75%;
+        }
+        \.col-push-10 {
+        left: 83.33333333333334%;
+        }
+        \.col-push-11 {
+        left: 91.66666666666666%;
+        }
+        \.col-pull-1 {
+        right: 8.333333333333332%;
+        }
+        \.col-pull-2 {
+        right: 16.666666666666664%;
+        }
+        \.col-pull-3 {
+        right: 25%;
+        }
+        \.col-pull-4 {
+        right: 33.33333333333333%;
+        }
+        \.col-pull-5 {
+        right: 41.66666666666667%;
+        }
+        \.col-pull-6 {
+        right: 50%;
+        }
+        \.col-pull-7 {
+        right: 58.333333333333336%;
+        }
+        \.col-pull-8 {
+        right: 66.66666666666666%;
+        }
+        \.col-pull-9 {
+        right: 75%;
+        }
+        \.col-pull-10 {
+        right: 83.33333333333334%;
+        }
+        \.col-pull-11 {
+        right: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 940px;
+        }
+        \.col-lg-1,
+        \.col-lg-2,
+        \.col-lg-3,
+        \.col-lg-4,
+        \.col-lg-5,
+        \.col-lg-6,
+        \.col-lg-7,
+        \.col-lg-8,
+        \.col-lg-9,
+        \.col-lg-10,
+        \.col-lg-11,
+        \.col-lg-12 {
+        float: left;
+        }
+        \.col-lg-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-lg-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-lg-3 {
+        width: 25%;
+        }
+        \.col-lg-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-lg-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-lg-6 {
+        width: 50%;
+        }
+        \.col-lg-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-lg-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-lg-9 {
+        width: 75%;
+        }
+        \.col-lg-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-lg-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-lg-12 {
+        width: 100%;
+        }
+        \.col-offset-1 {
+        margin-left: 8.333333333333332%;
+        }
+        \.col-offset-2 {
+        margin-left: 16.666666666666664%;
+        }
+        \.col-offset-3 {
+        margin-left: 25%;
+        }
+        \.col-offset-4 {
+        margin-left: 33.33333333333333%;
+        }
+        \.col-offset-5 {
+        margin-left: 41.66666666666667%;
+        }
+        \.col-offset-6 {
+        margin-left: 50%;
+        }
+        \.col-offset-7 {
+        margin-left: 58.333333333333336%;
+        }
+        \.col-offset-8 {
+        margin-left: 66.66666666666666%;
+        }
+        \.col-offset-9 {
+        margin-left: 75%;
+        }
+        \.col-offset-10 {
+        margin-left: 83.33333333333334%;
+        }
+        \.col-offset-11 {
+        margin-left: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 1100px;
+        }
+        
+        \.form-horizontal .form-group {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.form-horizontal .control-label {
+        text-align: right;
+        }
+        
+        \.visible-sm {
+        display: none !important;
+        }
+        tr.visible-sm {
+        display: none !important;
+        }
+        th.visible-sm,
+        td.visible-sm {
+        display: none !important;
+        }
+        \.visible-md {
+        display: none !important;
+        }
+        tr.visible-md {
+        display: none !important;
+        }
+        th.visible-md,
+        td.visible-md {
+        display: none !important;
+        }
+        \.visible-lg {
+        display: block !important;
+        }
+        tr.visible-lg {
+        display: table-row !important;
+        }
+        th.visible-lg,
+        td.visible-lg {
+        display: table-cell !important;
+        }
+        \.hidden-sm {
+        display: block !important;
+        }
+        tr.hidden-sm {
+        display: table-row !important;
+        }
+        th.hidden-sm,
+        td.hidden-sm {
+        display: table-cell !important;
+        }
+        \.hidden-md {
+        display: block !important;
+        }
+        tr.hidden-md {
+        display: table-row !important;
+        }
+        th.hidden-md,
+        td.hidden-md {
+        display: table-cell !important;
+        }
+        \.hidden-lg {
+        display: none !important;
+        }
+        tr.hidden-lg {
+        display: none !important;
+        }
+        th.hidden-lg,
+        td.hidden-lg {
+        display: none !important;
+        }
+    %style{:media => "screen", :type => "text/css"}
+      :cdata
+        \.navbar-brand {
+        float: left;
+        margin-left: -15px;
+        margin-right: 5px;
+        }
+        \.navbar-nav {
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+        \.navbar-nav > li {
+        float: left;
+        }
+        \.navbar-nav > li > a {
+        border-radius: 0;
+        }
+        \.navbar-nav.pull-right {
+        float: right;
+        width: auto;
+        }
+        \.navbar-toggle {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: none;
+        }
+        \.nav-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        }
+        
+        \.modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        }
+        \.modal-content {
+        \-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        \.carousel-control .glyphicon,
+        \.carousel-control .icon-prev,
+        \.carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+        }
+        \.carousel-caption {
+        left: 20%;
+        right: 20%;
+        padding-bottom: 30px;
+        }
+        \.carousel-indicators {
+        bottom: 20px;
+        }
+        
+        \.jumbotron {
+        padding: 50px 60px;
+        border-radius: 6px;
+        }
+        \.jumbotron h1 {
+        font-size: 63px;
+        }
+        
+        \.navbar-brand {
+        float: left;
+        margin-left: -15px;
+        margin-right: 5px;
+        }
+        \.navbar-nav {
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+        \.navbar-nav > li {
+        float: left;
+        }
+        \.navbar-nav > li > a {
+        border-radius: 0;
+        }
+        \.navbar-nav.pull-right {
+        float: right;
+        width: auto;
+        }
+        \.navbar-toggle {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: none;
+        }
+        \.nav-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        }
+        
+        \.modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        }
+        \.modal-content {
+        \-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        \.carousel-control .glyphicon,
+        \.carousel-control .icon-prev,
+        \.carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+        }
+        \.carousel-caption {
+        left: 20%;
+        right: 20%;
+        padding-bottom: 30px;
+        }
+        \.carousel-indicators {
+        bottom: 20px;
+        }
+        
+        \.jumbotron {
+        padding: 50px 60px;
+        border-radius: 6px;
+        }
+        \.jumbotron h1 {
+        font-size: 63px;
+        }
+    %style{:media => "print", :type => "text/css"}
+      :cdata
+        \.page-break	{ display:block; page-break-before:always; }
+        
+        * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        }
+        a,
+        a:visited {
+        text-decoration: underline;
+        }
+        a[href]:after {
+        content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+        content: " (" attr(title) ")";
+        }
+        \.ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+        content: "";
+        }
+        pre,
+        blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+        }
+        thead {
+        display: table-header-group;
+        }
+        tr,
+        img {
+        page-break-inside: avoid;
+        }
+        img {
+        max-width: 100% !important;
+        }
+        @page  {
+        margin: 2cm .5cm;
+        }
+        p,
+        h2,
+        h3 {
+        orphans: 3;
+        widows: 3;
+        }
+        h2,
+        h3 {
+        page-break-after: avoid;
+        }
+        \.navbar {
+        display: none;
+        }
+        \.table td,
+        \.table th {
+        background-color: #fff !important;
+        }
+        \.btn > .caret,
+        \.dropup > .btn > .caret {
+        border-top-color: #000 !important;
+        }
+        \.label {
+        border: 1px solid #000;
+        }
+        \.table {
+        border-collapse: collapse !important;
+        }
+        \.table-bordered th,
+        \.table-bordered td {
+        border: 1px solid #ddd !important;
+        }
+        
+        \.visible-print {
+        display: block !important;
+        }
+        tr.visible-print {
+        display: table-row !important;
+        }
+        th.visible-print,
+        td.visible-print {
+        display: table-cell !important;
+        }
+        \.hidden-print {
+        display: none !important;
+        }
+        tr.hidden-print {
+        display: none !important;
+        }
+        th.hidden-print,
+        td.hidden-print {
+        display: none !important;
+        }
+        
+        * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        }
+        a,
+        a:visited {
+        text-decoration: underline;
+        }
+        a[href]:after {
+        content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+        content: " (" attr(title) ")";
+        }
+        \.ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+        content: "";
+        }
+        pre,
+        blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+        }
+        thead {
+        display: table-header-group;
+        }
+        tr,
+        img {
+        page-break-inside: avoid;
+        }
+        img {
+        max-width: 100% !important;
+        }
+        @page  {
+        margin: 2cm .5cm;
+        }
+        p,
+        h2,
+        h3 {
+        orphans: 3;
+        widows: 3;
+        }
+        h2,
+        h3 {
+        page-break-after: avoid;
+        }
+        \.navbar {
+        display: none;
+        }
+        \.table td,
+        \.table th {
+        background-color: #fff !important;
+        }
+        \.btn > .caret,
+        \.dropup > .btn > .caret {
+        border-top-color: #000 !important;
+        }
+        \.label {
+        border: 1px solid #000;
+        }
+        \.table {
+        border-collapse: collapse !important;
+        }
+        \.table-bordered th,
+        \.table-bordered td {
+        border: 1px solid #ddd !important;
+        }
+        
+        \.visible-print {
+        display: block !important;
+        }
+        tr.visible-print {
+        display: table-row !important;
+        }
+        th.visible-print,
+        td.visible-print {
+        display: table-cell !important;
+        }
+        \.hidden-print {
+        display: none !important;
+        }
+        tr.hidden-print {
+        display: none !important;
+        }
+        th.hidden-print,
+        td.hidden-print {
+        display: none !important;
+        }
+    %style{:media => "all", :type => "text/css"}
+      :cdata
+        \.page-break	{ display:none; }
+        
+        \.lead {
+        font-size: 21px;
+        }
+        
+        \.row {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.container {
+        max-width: 728px;
+        }
+        \.col-sm-1,
+        \.col-sm-2,
+        \.col-sm-3,
+        \.col-sm-4,
+        \.col-sm-5,
+        \.col-sm-6,
+        \.col-sm-7,
+        \.col-sm-8,
+        \.col-sm-9,
+        \.col-sm-10,
+        \.col-sm-11,
+        \.col-sm-12 {
+        float: left;
+        }
+        \.col-sm-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-sm-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-sm-3 {
+        width: 25%;
+        }
+        \.col-sm-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-sm-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-sm-6 {
+        width: 50%;
+        }
+        \.col-sm-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-sm-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-sm-9 {
+        width: 75%;
+        }
+        \.col-sm-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-sm-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-sm-12 {
+        width: 100%;
+        }
+        \.col-push-1 {
+        left: 8.333333333333332%;
+        }
+        \.col-push-2 {
+        left: 16.666666666666664%;
+        }
+        \.col-push-3 {
+        left: 25%;
+        }
+        \.col-push-4 {
+        left: 33.33333333333333%;
+        }
+        \.col-push-5 {
+        left: 41.66666666666667%;
+        }
+        \.col-push-6 {
+        left: 50%;
+        }
+        \.col-push-7 {
+        left: 58.333333333333336%;
+        }
+        \.col-push-8 {
+        left: 66.66666666666666%;
+        }
+        \.col-push-9 {
+        left: 75%;
+        }
+        \.col-push-10 {
+        left: 83.33333333333334%;
+        }
+        \.col-push-11 {
+        left: 91.66666666666666%;
+        }
+        \.col-pull-1 {
+        right: 8.333333333333332%;
+        }
+        \.col-pull-2 {
+        right: 16.666666666666664%;
+        }
+        \.col-pull-3 {
+        right: 25%;
+        }
+        \.col-pull-4 {
+        right: 33.33333333333333%;
+        }
+        \.col-pull-5 {
+        right: 41.66666666666667%;
+        }
+        \.col-pull-6 {
+        right: 50%;
+        }
+        \.col-pull-7 {
+        right: 58.333333333333336%;
+        }
+        \.col-pull-8 {
+        right: 66.66666666666666%;
+        }
+        \.col-pull-9 {
+        right: 75%;
+        }
+        \.col-pull-10 {
+        right: 83.33333333333334%;
+        }
+        \.col-pull-11 {
+        right: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 940px;
+        }
+        \.col-lg-1,
+        \.col-lg-2,
+        \.col-lg-3,
+        \.col-lg-4,
+        \.col-lg-5,
+        \.col-lg-6,
+        \.col-lg-7,
+        \.col-lg-8,
+        \.col-lg-9,
+        \.col-lg-10,
+        \.col-lg-11,
+        \.col-lg-12 {
+        float: left;
+        }
+        \.col-lg-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-lg-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-lg-3 {
+        width: 25%;
+        }
+        \.col-lg-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-lg-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-lg-6 {
+        width: 50%;
+        }
+        \.col-lg-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-lg-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-lg-9 {
+        width: 75%;
+        }
+        \.col-lg-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-lg-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-lg-12 {
+        width: 100%;
+        }
+        \.col-offset-1 {
+        margin-left: 8.333333333333332%;
+        }
+        \.col-offset-2 {
+        margin-left: 16.666666666666664%;
+        }
+        \.col-offset-3 {
+        margin-left: 25%;
+        }
+        \.col-offset-4 {
+        margin-left: 33.33333333333333%;
+        }
+        \.col-offset-5 {
+        margin-left: 41.66666666666667%;
+        }
+        \.col-offset-6 {
+        margin-left: 50%;
+        }
+        \.col-offset-7 {
+        margin-left: 58.333333333333336%;
+        }
+        \.col-offset-8 {
+        margin-left: 66.66666666666666%;
+        }
+        \.col-offset-9 {
+        margin-left: 75%;
+        }
+        \.col-offset-10 {
+        margin-left: 83.33333333333334%;
+        }
+        \.col-offset-11 {
+        margin-left: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 1170px;
+        }
+        
+        \.form-horizontal .form-group {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.form-horizontal .control-label {
+        text-align: right;
+        }
+        
+        \.visible-sm {
+        display: none !important;
+        }
+        tr.visible-sm {
+        display: none !important;
+        }
+        th.visible-sm,
+        td.visible-sm {
+        display: none !important;
+        }
+        \.visible-md {
+        display: none !important;
+        }
+        tr.visible-md {
+        display: none !important;
+        }
+        th.visible-md,
+        td.visible-md {
+        display: none !important;
+        }
+        \.visible-lg {
+        display: block !important;
+        }
+        tr.visible-lg {
+        display: table-row !important;
+        }
+        th.visible-lg,
+        td.visible-lg {
+        display: table-cell !important;
+        }
+        \.hidden-sm {
+        display: block !important;
+        }
+        tr.hidden-sm {
+        display: table-row !important;
+        }
+        th.hidden-sm,
+        td.hidden-sm {
+        display: table-cell !important;
+        }
+        \.hidden-md {
+        display: block !important;
+        }
+        tr.hidden-md {
+        display: table-row !important;
+        }
+        th.hidden-md,
+        td.hidden-md {
+        display: table-cell !important;
+        }
+        \.hidden-lg {
+        display: none !important;
+        }
+        tr.hidden-lg {
+        display: none !important;
+        }
+        th.hidden-lg,
+        td.hidden-lg {
+        display: none !important;
+        }
+        
+        \.lead {
+        font-size: 21px;
+        }
+        
+        \.row {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.container {
+        max-width: 728px;
+        }
+        \.col-sm-1,
+        \.col-sm-2,
+        \.col-sm-3,
+        \.col-sm-4,
+        \.col-sm-5,
+        \.col-sm-6,
+        \.col-sm-7,
+        \.col-sm-8,
+        \.col-sm-9,
+        \.col-sm-10,
+        \.col-sm-11,
+        \.col-sm-12 {
+        float: left;
+        }
+        \.col-sm-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-sm-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-sm-3 {
+        width: 25%;
+        }
+        \.col-sm-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-sm-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-sm-6 {
+        width: 50%;
+        }
+        \.col-sm-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-sm-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-sm-9 {
+        width: 75%;
+        }
+        \.col-sm-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-sm-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-sm-12 {
+        width: 100%;
+        }
+        \.col-push-1 {
+        left: 8.333333333333332%;
+        }
+        \.col-push-2 {
+        left: 16.666666666666664%;
+        }
+        \.col-push-3 {
+        left: 25%;
+        }
+        \.col-push-4 {
+        left: 33.33333333333333%;
+        }
+        \.col-push-5 {
+        left: 41.66666666666667%;
+        }
+        \.col-push-6 {
+        left: 50%;
+        }
+        \.col-push-7 {
+        left: 58.333333333333336%;
+        }
+        \.col-push-8 {
+        left: 66.66666666666666%;
+        }
+        \.col-push-9 {
+        left: 75%;
+        }
+        \.col-push-10 {
+        left: 83.33333333333334%;
+        }
+        \.col-push-11 {
+        left: 91.66666666666666%;
+        }
+        \.col-pull-1 {
+        right: 8.333333333333332%;
+        }
+        \.col-pull-2 {
+        right: 16.666666666666664%;
+        }
+        \.col-pull-3 {
+        right: 25%;
+        }
+        \.col-pull-4 {
+        right: 33.33333333333333%;
+        }
+        \.col-pull-5 {
+        right: 41.66666666666667%;
+        }
+        \.col-pull-6 {
+        right: 50%;
+        }
+        \.col-pull-7 {
+        right: 58.333333333333336%;
+        }
+        \.col-pull-8 {
+        right: 66.66666666666666%;
+        }
+        \.col-pull-9 {
+        right: 75%;
+        }
+        \.col-pull-10 {
+        right: 83.33333333333334%;
+        }
+        \.col-pull-11 {
+        right: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 940px;
+        }
+        \.col-lg-1,
+        \.col-lg-2,
+        \.col-lg-3,
+        \.col-lg-4,
+        \.col-lg-5,
+        \.col-lg-6,
+        \.col-lg-7,
+        \.col-lg-8,
+        \.col-lg-9,
+        \.col-lg-10,
+        \.col-lg-11,
+        \.col-lg-12 {
+        float: left;
+        }
+        \.col-lg-1 {
+        width: 8.333333333333332%;
+        }
+        \.col-lg-2 {
+        width: 16.666666666666664%;
+        }
+        \.col-lg-3 {
+        width: 25%;
+        }
+        \.col-lg-4 {
+        width: 33.33333333333333%;
+        }
+        \.col-lg-5 {
+        width: 41.66666666666667%;
+        }
+        \.col-lg-6 {
+        width: 50%;
+        }
+        \.col-lg-7 {
+        width: 58.333333333333336%;
+        }
+        \.col-lg-8 {
+        width: 66.66666666666666%;
+        }
+        \.col-lg-9 {
+        width: 75%;
+        }
+        \.col-lg-10 {
+        width: 83.33333333333334%;
+        }
+        \.col-lg-11 {
+        width: 91.66666666666666%;
+        }
+        \.col-lg-12 {
+        width: 100%;
+        }
+        \.col-offset-1 {
+        margin-left: 8.333333333333332%;
+        }
+        \.col-offset-2 {
+        margin-left: 16.666666666666664%;
+        }
+        \.col-offset-3 {
+        margin-left: 25%;
+        }
+        \.col-offset-4 {
+        margin-left: 33.33333333333333%;
+        }
+        \.col-offset-5 {
+        margin-left: 41.66666666666667%;
+        }
+        \.col-offset-6 {
+        margin-left: 50%;
+        }
+        \.col-offset-7 {
+        margin-left: 58.333333333333336%;
+        }
+        \.col-offset-8 {
+        margin-left: 66.66666666666666%;
+        }
+        \.col-offset-9 {
+        margin-left: 75%;
+        }
+        \.col-offset-10 {
+        margin-left: 83.33333333333334%;
+        }
+        \.col-offset-11 {
+        margin-left: 91.66666666666666%;
+        }
+        
+        \.container {
+        max-width: 1100px;
+        }
+        
+        \.form-horizontal .form-group {
+        margin-left: -15px;
+        margin-right: -15px;
+        }
+        
+        \.form-horizontal .control-label {
+        text-align: right;
+        }
+        
+        \.visible-sm {
+        display: none !important;
+        }
+        tr.visible-sm {
+        display: none !important;
+        }
+        th.visible-sm,
+        td.visible-sm {
+        display: none !important;
+        }
+        \.visible-md {
+        display: none !important;
+        }
+        tr.visible-md {
+        display: none !important;
+        }
+        th.visible-md,
+        td.visible-md {
+        display: none !important;
+        }
+        \.visible-lg {
+        display: block !important;
+        }
+        tr.visible-lg {
+        display: table-row !important;
+        }
+        th.visible-lg,
+        td.visible-lg {
+        display: table-cell !important;
+        }
+        \.hidden-sm {
+        display: block !important;
+        }
+        tr.hidden-sm {
+        display: table-row !important;
+        }
+        th.hidden-sm,
+        td.hidden-sm {
+        display: table-cell !important;
+        }
+        \.hidden-md {
+        display: block !important;
+        }
+        tr.hidden-md {
+        display: table-row !important;
+        }
+        th.hidden-md,
+        td.hidden-md {
+        display: table-cell !important;
+        }
+        \.hidden-lg {
+        display: none !important;
+        }
+        tr.hidden-lg {
+        display: none !important;
+        }
+        th.hidden-lg,
+        td.hidden-lg {
+        display: none !important;
+        }
+    %meta{:content => "(C) Health Level Seven, Int. 2019", :name => "COPYRIGHT"}/
+    %meta{:content => "HL7 Comprehensive Database", :name => "Generator"}/
+    %meta{:content => "Frank Oemig", :name => "Author"}/
+    %script{:src => "./HL7 - REFACTORED_Home_files/jquery.js"}
+    :javascript
+
+  %body{:style => ""}
+    #segment-header.segment
+      / segment-header
+      .container
+        / container
+        %a#logo{:href => "http://hl7.org/hl7v2+", "no-external" => "true"}
+          %img{:alt => "logo HL7 Europe Int.", :src => "./HL7 - REFACTORED_Home_files/hl7-eu-logo.gif", :width => "120"}/
+        #hl7-status
+          %img{:alt => "visit the hl7 website", :height => "40", :src => "./HL7 - REFACTORED_Home_files/hl7-v2plus.gif"}/
+        #hl7-nav
+          %a#hl7-logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+            %img{:alt => "visit the hl7 website", :height => "50", :src => "./HL7 - REFACTORED_Home_files/3dhl7_deu.gif"}/
+      / /container
+    / /segment-header
+    #segment-navbar.segment
+      / segment-navbar
+      #stripe
+      .container
+        / container
+        / HEADER CONTENT
+        %nav.navbar.navbar-inverse
+          .container
+            %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand.hidden{:href => "http://hl7.eu/refactored/index.html"} FHIR
+            .nav-collapse.collapse.navbar-inverse-collapse
+              %ul.nav.navbar-nav
+                %li
+                  %a{:href => "http://hl7.eu/refactored/hl7.html"} Home
+                %li
+                  %a{:href => "http://hl7.eu/refactored/tab.html"} Vocabulary
+                %li
+                  %a{:href => "http://hl7.eu/refactored/ctrl.html"} Control
+                %li
+                  %a{:href => "http://hl7.eu/refactored/encoding.html"} Encoding
+                %li
+                  %a{:href => "http://hl7.eu/refactored/transport.html"} Transport
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dt.html"} Data Types
+                %li
+                  %a{:href => "http://hl7.eu/refactored/msg.html"} Message Structures
+                %li
+                  %a{:href => "http://hl7.eu/refactored/seg.html"} Segments
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dom.html"} Domains
+                %li
+                  %a{:href => "http://hl7.eu/refactored/profile.html"} Profiling
+                %li
+                  %a{:href => "http://hl7.eu/refactored/dt_flav.html"} Data Type Flavors
+                %li
+                  %a{:href => "http://hl7.eu/refactored/v2x.html"} v2.x
+            / /.nav-collapse
+          / /.container
+        / /.navbar
+    #segment-breadcrumb.segment
+      / segment-breadcrumb
+      .container
+        / container
+        %ul.breadcrumb
+          %li
+            %b
+              %a{:href => "http://hl7.eu/refactored/hl7.html"} Home
+      / /container
+    / /segment-breadcrumb
+    .container
+      / container
+      %h1.self-link-parent
+        %span.sectioncount
+          1
+          %a{:name => "1"}
+        HL7 v2+ - HL7 v2 refactored - Working Draft! (99.0)
+      %p{:style => "background-color: gold; border:1px solid maroon; padding: 5px; max-width: 790px;"}
+        This is the working draft for what is preliminary called
+        = succeed "." do
+          %b HL7v2+
+      %h1.self-link-parent
+        %span.sectioncount
+          2
+          %a{:name => "2"}
+        Welcome to HL7 v2+® (99.0)
+      %p HL7 v2+ is a standard for health care data exchange, built as a successor of HL7 v2.x, and published by HL7®.
+      %p{:style => "padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; max-width: 790px"}
+        %b First time here?
+        = succeed "See" do
+          %br/
+        = succeed "." do
+          %a{:href => "http://hl7.eu/refactored/toc.html"} Table of Contents
+      #diagram
+        %p.level-text
+          %b Introduction
+          to this standard (
+          %a{:href => "http://hl7.eu/refactored/chapter.1.html"}> chapter 1
+          ).
+        %p.content
+          %a{:href => "http://hl7.eu/refactored/ToC.html"} Table of Contents
+        %p.level-text
+          %b Level 1
+          Basic framework on which the specification is built.
+        #foundation.box_row.box_more
+          .box{:id => ""}
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/foundation-module.html", :style => "background-image: url('foundation.png');"}
+                %span Foundation
+            %p.content
+              %span
+                %a{:href => "http://hl7.eu/refactored/control.html"} Control
+                (Messaging)
+          #encoding.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/encoding.html", :style => "background-image: url('workflow.png');"}
+                %span Encoding
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/downloads.html"}> Abstract Message Syntax (AMS)
+              ,
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/encoding01er7.html"} Encoding Rules 7 (ER)
+              %a{:href => "http://hl7.eu/refactored/encoding02xml.html"} XML-Encoding (v2.x)ml
+          #transport.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/transport.html", :style => "background-image: url('linked-data.png');"}
+                %span Transport
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/security.html"}> HLLP
+              ,
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/transport01mllp.html"} MLLP
+              %a{:href => "http://hl7.eu/refactored/transport02http.html"} HTTP
+        %p.level-text
+          %b Level 2
+          Vocabulary
+        #foundation.box.box_row.box_one
+          %p.head
+            %a{:href => "http://hl7.eu/refactored/tab.html", :style => "background-image: url('terminology.png');"}
+              %span Terminology (Tables)
+          %p.content
+            %a{:href => "http://hl7.eu/refactored/tab.html"}> CodeSystem
+            ,
+            %a{:href => "http://hl7.eu/refactored/tab.html"} ValueSet
+        %p.level-text
+          %b Level 3
+          Building Blocks
+        #foundation.box.box_row.box_one
+          %p.head
+            %a{:href => "http://hl7.eu/refactored/linked-data-module.html", :style => "background-image: url('index.png');"}
+              %span Technical
+          %p.content
+            %a{:href => "http://hl7.eu/refactored/dt.html"} Data Types
+            \-&gt;
+            %a{:href => "http://hl7.eu/refactored/seg.html"} Segments
+            \-&gt;
+            %a{:href => "http://hl7.eu/refactored/msg.html"} Message Structures
+        %p.level-text
+          %b Level 4
+          Domains
+        #foundation.box_row.box_more
+          #clinical.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/dom.html", :style => "background-image: url('secpriv.jpg');"}
+                %span Administrative
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/dom07.html"}> Master Files
+              ,
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom05.html"} Queries
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom14.html"} Personnel Mngmt
+              %br/
+              %a{:href => "http://hl7.eu/refactored/dom13.html"} Appl Mngmt
+          #clinical.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/dom.html", :style => "background-image: url('administration.jpg');"}
+                %span Patient
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/dom01.html"}> ADT
+              ,
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom10.html"} Referral
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom09.html"} Scheduling
+              %br/
+              %a{:href => "http://hl7.eu/refactored/dom16.html"} Materials Mngmt
+          #financial.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/dom.html", :style => "background-image: url('financial.png');"}
+                %span Financial
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/dom02.html"}> Billing
+              ,
+              %br/
+              %a{:href => "http://hl7.eu/refactored/dom15.html"} Claims &amp; Reimbursement
+          #clinical.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/dom.html", :style => "background-image: url('clinical.png');"}
+                %span Clinical
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/dom03.html"}> General Orders
+              ,
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom03.html"} Laboratory Orders
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom03.html"} Dietary Orders
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom03.html"} Supply
+              %br/
+              = succeed "," do
+                %a{:href => "http://hl7.eu/refactored/dom04.html"} Pharmacy/Treatment
+              %br/
+              %a{:href => "http://hl7.eu/refactored/dom12.html"} Lab Automation
+          #medication.box
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/dom.html", :style => "background-image: url('medication.png');"}
+                %span Medical
+            %p.content
+              %a{:href => "http://hl7.eu/refactored/dom11.html"}> Patient Care
+              ,
+              %br/
+              %a{:href => "http://hl7.eu/refactored/dom08.html"} Medical Record
+        %p.level-text
+          %b Level 5
+          Conformance
+        #foundation.box.box_row.box_one
+          %p.head
+            %a{:href => "http://hl7.eu/refactored/profile.html", :style => "background-image: url('conformance.jpg');"}
+              %span Conformance
+          %p.content
+            %a{:href => "http://hl7.eu/refactored/profile.html"} Profiling
+        %p.level-text
+          %b Level 6
+          Implementable Technology Specification
+        %p.level-text
+          %b Level 7
+          Core Profiles
+        #foundation.box_row.box_more
+          .box{:id => ""}
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/ig.html", :style => "background-image: url('index.png');"}
+                %span Data Type Flavors
+            %p.content
+            %p.content TBD01390: This is where profile components like official data type flavors should be listed.
+            %p
+          .box{:id => ""}
+            %p.head
+              %a{:href => "http://hl7.eu/refactored/ig.html", :style => "background-image: url('index.png');"}
+                %span Implementation Guide Registry
+            %p.content
+            %p.content TBD01450: This is where implementations begin and guides should be listed. Maintaining the implementation guides on this platform will be too tedious, so that a list with hyperlinks should be sufficient.
+            %p
+      %h1.self-link-parent
+        %span.sectioncount
+          3
+          %a{:name => "3"}
+        Complimentary Explanation on how this documentation is structured (99.0)
+      #tabs-1.ui-tabs.ui-widget.ui-widget-content.ui-corner-all
+        %ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all{:role => "tablist"}
+          %li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active{"aria-controls" => "tabs-1-folder-1", "aria-expanded" => "true", "aria-labelledby" => "ui-id-1", "aria-selected" => "true", :role => "tab", :tabindex => "0"}
+            %a#ui-id-1.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-1", :role => "presentation", :tabindex => "-1"} Control
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-2", "aria-expanded" => "false", "aria-labelledby" => "ui-id-2", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-2.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-2", :role => "presentation", :tabindex => "-1"} Encoding
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-3", "aria-expanded" => "false", "aria-labelledby" => "ui-id-3", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-3.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-3", :role => "presentation", :tabindex => "-1"} Transport
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-4", "aria-expanded" => "false", "aria-labelledby" => "ui-id-4", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-4.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-4", :role => "presentation", :tabindex => "-1"} Profile
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-5", "aria-expanded" => "false", "aria-labelledby" => "ui-id-5", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-5.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-5", :role => "presentation", :tabindex => "-1"} Domains
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-6", "aria-expanded" => "false", "aria-labelledby" => "ui-id-6", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-6.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-6", :role => "presentation", :tabindex => "-1"} Message Structures
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-7", "aria-expanded" => "false", "aria-labelledby" => "ui-id-7", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-7.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-7", :role => "presentation", :tabindex => "-1"} Segments
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-8", "aria-expanded" => "false", "aria-labelledby" => "ui-id-8", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-8.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-8", :role => "presentation", :tabindex => "-1"} Vocabulary
+          %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-9", "aria-expanded" => "false", "aria-labelledby" => "ui-id-9", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+            %a#ui-id-9.ui-tabs-anchor{:href => "http://hl7.eu/refactored/hl7.html#tabs-1-folder-9", :role => "presentation", :tabindex => "-1"} Data Types
+        #tabs-1-folder-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "false", "aria-labelledby" => "ui-id-1", :role => "tabpanel"}
+          #tbl
+            #folder-1-1-inner
+              %p
+                %b Control
+              %p Basics for HL7 v2.x
+        #tabs-1-folder-2.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-2", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-2-inner
+              %p
+                %b Encoding
+              %p Encoding manages the transformation from the logical models to serialized data.
+              %ul
+                %li AMS: Abstract Message Specification
+                %li ER7: Encoding Rules 7 = vertical bar syntax
+                %li v2.xml: Encoding using XML
+                %li
+                  %font{:color => "red"} JSON: we need to think about that
+        #tabs-1-folder-3.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-3", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-3-inner
+              %p
+                %b Transport
+              %p There are different means of transport:
+              %ul
+                %li Files
+                %li MLLP
+                %li HTTP
+              %p TBD (00025)
+        #tabs-1-folder-4.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-4", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-4-inner
+              %p
+                %b Profile
+              %p Text Profiles
+              %p Chapter 2B should go there!
+              %p TBD (00035)
+        #tabs-1-folder-5.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-5", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-5-inner
+              %p
+                %b Domain
+              %p The content (events message structures, etc.) will be organized into domains to get rid of the chapter view.
+              %p The tricky thing is when generating the contents peresumably in a single step, which ssections should be left out and replaced by appropriate links? How to mark then? Also, for the skipped content we need a link back to where it is used. Here, if we see the message structures, we need a list of links telling us where this specific message structure is used.
+              %p TBD (00045)
+        #tabs-1-folder-6.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-6", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-6-inner
+              %p
+                %b Message Structure
+              %p Currently there is a list of the message structures with links to the details. Do we need context information within those pages? Or do we need to group them together, eg. By message type?
+              %p TBD (00053)!
+        #tabs-1-folder-7.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-7", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-7-inner
+              %p
+                %b Segment
+              %p This is a list of segments
+              %p TBD (00061)
+        #tabs-1-folder-8.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-8", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-8-inner
+              %p
+                %b Vocabulary
+              %p Vocabulary will take care of the updated vocabulary model allowing for harmonizing with other product lines. We need to clarify
+              %ul
+                %li Links/Names in segments and data types: what is that?
+                %li How to represent: Vocabulary domains, value sets and code systems? We have enhanced/updated/corrected the representation and management of tables. We should not violate the work done!
+              %p TBD (00069)
+        #tabs-1-folder-9.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-9", :role => "tabpanel", :style => "display: none;"}
+          #tbl
+            #folder-1-9-inner
+              %p
+                %b Data Types
+              %p List of all Data Types
+              %p TBD (00077)
+      %p Please be aware, that this is an intermediate version. We need to add an explanation here telling readers what has been changed and why.
+      %p The following changes were applied to improve the way the standard is written:
+      %ul
+        %li Message Structures: tree structure, and Must Support and cardinality
+      %ul
+        %li Segments: Must-Support and Cardinality instead of optionality and repetitions
+      %ul
+        %li Domains: restructured into contents instead of chapters
+      %ul
+        %li Encoding: incorporated into the standard instead of different documents
+      %ul
+        %li Transport
+      / JS and analytics only.
+      /
+        Bootstrap core JavaScript
+        \==================================================
+      / Placed at the end of the document so the pages load faster
+      %script{:src => "./HL7 - REFACTORED_Home_files/jquery(1).js"} :cdata
+      / note keep space here, otherwise it will be transformed to empty tag -> fails
+      %script{:src => "./HL7 - REFACTORED_Home_files/bootstrap.min.js"} :cdata
+      %script{:src => "./HL7 - REFACTORED_Home_files/respond.min.js"} :cdata
+      %script{:src => "./HL7 - REFACTORED_Home_files/fhir.js"} :cdata
+      /
+        Analytics Below
+        \==================================================
+      %script{:src => "./HL7 - REFACTORED_Home_files/jquery.js"} :cdata
+      %script{:src => "./HL7 - REFACTORED_Home_files/jquery-ui.min.js"} :cdata
+      :javascript
+        try {
+           var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+         } catch(exception){ 
+         }
+         if (!currentTabIndex)
+           currentTabIndex = '0';
+        
+        $( '#tabs-Extension' ).tabs({ 
+        active: currentTabIndex, 
+        activate: function( event, ui ) { store(ui.newTab.index()); } 
+        });
+             
+             
+        function store(currentTab) {
+          document.activeElement.blur();
+          try {
+            sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+          } catch(exception){ 
+          }
+          $( '#tabs-Extension' ).tabs('option', 'active', currentTab);
+        }
+      %ul
+        %li
+          %a{:href => "http://hl7.eu/refactored/hl7intro.html"} Introduction
+          %br/
+        /
+          Bootstrap core JavaScript
+          \==================================================
+        / Placed at the end of the document so the pages load faster
+        %script{:src => "./HL7 - REFACTORED_Home_files/jquery(1).js"} :cdata
+        / note keep space here, otherwise it will be transformed to empty tag -> fails
+        %script{:src => "./HL7 - REFACTORED_Home_files/bootstrap.min.js"} :cdata
+        %script{:src => "./HL7 - REFACTORED_Home_files/respond.min.js"} :cdata
+        %script{:src => "./HL7 - REFACTORED_Home_files/fhir.js"} :cdata
+        /
+          Analytics Below
+          \==================================================
+        %script{:src => "./HL7 - REFACTORED_Home_files/jquery.js"} :cdata
+        %script{:src => "./HL7 - REFACTORED_Home_files/jquery-ui.min.js"} :cdata
+        :javascript
+          try {
+             var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+           } catch(exception){
+           }
+           if (!currentTabIndex)
+             currentTabIndex = '0';
+           $( '#tabs-1' ).tabs({
+             active: currentTabIndex,
+             activate: function( event, ui ) { store(ui.newTab.index()); }
+           });
+          function store(currentTab) {
+            document.activeElement.blur();
+            try {
+              sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+            } catch(exception){
+          }
+           $( '#tabs' ).tabs('option', 'active', currentTab);
+          }
+    / container
+    %p
+    #segment-footer.segment
+      / segment-footer
+      .container
+        / container
+        .inner-wrapper
+          %p
+            © HL7.org 2019+. HL7 v2+ (HL7-DB #94) generated on Fr, Mrz 01, 2019.
+            / achive note
+        / /inner-wrapper
+      / /container
+    / /segment-footer

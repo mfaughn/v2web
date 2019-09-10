@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=windows-1252' http-equiv='Content-Type'>
+    <title>
+      HL7 - To DO
+    </title>
+    <link href='images/hl7_favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <style type='text/css'>
+      <!-- @import './css/hl7.css'; -->
+      <!-- @import './css/fhir.css'; -->
+      <!-- @import './css/bootstrap.css'; -->
+      <!-- @import './css/bootstrap-fhir.css'; -->
+      <!-- @import './css/project.css'; -->
+      <!-- @import './css/pygments-manni.css'; -->
+      <!-- @import './css/jquery-ui.css'; -->
+      <!-- @import './css/modules.css'; -->
+      @import 'css/hl7.css';
+      @import 'css/fhir.css';
+      @import 'css/bootstrap.css';
+      @import 'css/bootstrap-fhir.css';
+      @import 'css/project.css';
+      @import 'css/pygments-manni.css';
+      @import 'css/jquery-ui.css';
+      @import 'css/modules.css';
+      @import 'css/codemirror.css';
+      @import 'css/snelick.css';
+    </style>
+    <meta content='(C) Health Level Seven, Int. 2019' name='COPYRIGHT'>
+    <meta content='Michael Faughn' name='Developer'>
+  </head>
+  <body style=''>
+    <div class='segment' id='segment-header'>
+      <div class='container'>
+        <a href='http://www.hl7.org/' id='logo' no-external='true'>
+          <img alt='HL7 International' src='images/hl7-logo-header.png' width='120'>
+        </a>
+        <div id='hl7-nav'>
+          <a href='http://www.hl7.org/' id='hl7-logo' no-external='true'>
+            <img alt='visit the hl7 website' height='50' src='images/3dhl7_deu.gif'>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='segment' id='segment-navbar'>
+      <div id='stripe'></div>
+      <div class='container'>
+        <!-- HEADER CONTENT -->
+        <nav class='navbar navbar-inverse'>
+          <div class='container'>
+            <button class='navbar-toggle' data-target='.navbar-inverse-collapse' data-toggle='collapse' type='button'>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </button>
+            <div class='nav-collapse collapse navbar-inverse-collapse'>
+              <ul class='nav navbar-nav'>
+                <li>
+                  <a href='main.html'>Home</a>
+                </li>
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Introduction.html'>
+                    Introduction
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Levels.html'>
+                    Profile Levels
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_HL7_v2_Implementation_Guides.html'>
+                    HL7 v2 Implementation Guides
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profiles.html'>
+                    Message Profiles
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profile_Identification.html'>
+                    Message Profile Identification
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profiles_in_Use.html'>
+                    Profiles in Use
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Relationships.html'>
+                    Profile Relationships
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Documentation.html'>
+                    Profile Documentation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Canonical_Representation.html'>
+                    Canonical Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Computable_Representation.html'>
+                    Computable Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Glossary.html'>
+                    Glossary
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_To_DO.html'>
+                    To DO
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Notes_to_Balloters.html'>
+                    Notes to Balloters
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class='segment' id='segment-breadcrumb'>
+      <div class='container'>
+        <ul class='breadcrumb'>
+          <li>
+            <b>
+              <a href='main.html'>Home</a>
+            </b>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='container'>
+      <h2>
+        12 To DO
+      </h2>
+      <h3>
+        12.1 Extra Text
+      </h3>
+      <p>
+        The HL7 v2 standard provides only a foundation (framework) to be used as a starting point and was designed to accommodate the many diverse business processes that exist in the healthcare industry. This universal design was necessary to gain broad industry support; however, attempting to accommodate such wide-ranging requirements resulted in a standard that include numerous optional elements as well as other aspects that are not completely defined, making alignment of interface implementations overly difficult. Profiling is<br>For these reasons, further definition of the base standard (through constraining or extending) is necessary to support a use and context. Profiles are created to provide precisely defined requirements. Profiles reduce or eliminate the optionality (or openness) of a base standard. They also are used to manage and document requirements that are necessary and sufficient for implementation.<br>A key recognition is that the message profile definition is an independent entity that can be reused in other implementation guides or for other purposes.<br>For example, the VXU V04 (Unsolicited Vaccination Record Update) message event is a generic template for communicating information about a patient’s immunization related events. The base message template is composed of mostly optional data elements. For a given use case, e.g., Send Unsolicited Immunization Update for the US Realm [4], the message template is &ldquo;profiled&rdquo;. That is, elements can be constrained to be required, content can be bound to a set of pre-coordinated codes, and so on. The base message event (e.g., VXU V04) that has been constrained for a particular use (e.g., submitting immunization events) is referred to as a conformance profile. An implementation guide is a collection of conformance profiles organized for a workflow (e.g., submitting, acknowledging, querying, and responding to/for immunization events). In this example, four conformance profiles exist, each with different message events; one for submitting an immunization event, for sending an acknowledgment, for querying for an immunization history, and for providing an immunization history.<br>A major challenge for the healthcare industry is achieving interoperability among proprietary applications provided by different vendors. For example, each hospital department may use one or more applications that need to share clinical and administrative information with other applications. Each application may require multiple communication interfaces that must be modified and maintained. This approach is a difficult way to achieve interoperability. Alternatively, interoperability can be achieved through the use of standardized interfaces, which can reduce the cost of building and managing unique interfaces for each associated application. Developers can build applications that conform to the standardized interface definition, increasing the likelihood of interoperability and reducing cost. Maintenance cost is also reduced, since there are fewer unique interfaces to maintain. One obstacle to achieving usable standardized interfaces is that the base standards are often not defined at a granular enough level to support a specific use case or local requirements; therefore, the base standard must be further defined or &ldquo;constrained&rdquo;.<br>
+      </p>
+      <h4>
+        12.1.1 Profiling Methodology Summary
+      </h4>
+      <p>
+        Error! Reference source not found. summarizes the concepts of profiling [SING-SPP]. A profile is a refinement of the base standard and such refinements can be articulated as annotations (informative), constraints (normative), and extensions (normative). The constraint model presented in Error! Reference source not found. is for a single interaction (i.e., a single static conformance profile). The dynamic (transactional) aspects would be considered within the scope of an integration profile (and be constrained and extended according to the same principles).
+      </p>
+      
+      <figure class='center'>
+        <img src = 'data:image/png;base64,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
+        q34yQf9+esUvUi+sEQVc9INLVTv9bUThlFlcAg/e//C3jj11i4FDrX99fcwx
+        aoRvzF+QayLSXzXSv7xXJNdWQHlHwPUv62Xu35NP/Dn7lPbd8xAprAdF9lVF
+        Qy8BHNPU28MdM+62Mq68/OepFxauABv5wqVdI5X8APVzudox8pIFAkkReP/9
+        D757xveOGHvcHTPuWrp0mYltf+jRK6ZcNemM7ydVSkg5sXtTSPkhk91w/c3q
+        m/obMj3JIBCGgOtfYRIHpmHUiI2usBmDHNOQ0QGpJmsig2jsHLTpgNFjRqmH
+        Z2TqJk3iPW6WLftQlln+0Qqvfc79/llLls3T3yYyWkJVSbWPxBaeUOUaKObH
+        ky+7/trf9OzZ49IrJr/8+jNqfvo3bfp1xx5/ZP21it2bAlUdOGjAq288p396
+        E6kuHy77SOntbyFesdt/4hkLgNu6mPffLsN2DFnvwFEjZN4akz3w8J3SeZ8R
+        e9Yoh+z/JFCvvsPhp3SbnDzR+a8vkFd64Kh9VdL9Mx9KtzykZ4lA4r04EYFZ
+        IhRHF+0hyitVzjvuvvmbx47bYIP1TYqGn0su+/f/nDE1jlDy5I1AIn0hESF5
+        I4e+EIhJIJH+4hVSTg+28mNaKGQ280THH/31rx16kBZ4NKBqF9Kb1yJQFX6q
+        kDLtTlpAjyJjfGurthuijLff9nuLm1FKpfdJUwIN25bY0ui9NxhIcXgmRy8X
+        LWT/lSipYcL1b6ft99R/nXy914faLVXKUft/3dKY5MA9RG91LP5Pmnsrbrkk
+        wauwtCVOIGTTKmyy26bfqbqfdubJbdtuXRmCNWm1ZGuuatveJq28IXufRQ5Y
+        37R+YeVW6E2ueavZW0YXhG0N3oXu+XqoxPpiA6r2FAmU/B+cf7Hy6q8vol11
+        dA+E0gdLYVsRFU+EgDVOdQSvNGtvavkVRg1L7x1x1DjjjREVWnhgFEHlIVJa
+        hRxtNUa74ZKRK5Hm5ITgmCbLcw1pGs/kiW4/9F9sV+5rh47S30faZ3kT2bb4
+        C8+/uM8ehyix7bDPfu4vip/zOpS2G6LR8YTjvqNv9V4plX7ihNO90tTP5TUq
+        eMA+VBq91ye+Dh9Y5/32+ppGNROulxZ69V+f/MCMpXuI6rHe6iiXPFppLv2d
+        BMslJ8OrsLQdPXJcqbedopEQnTcCt9+2unmPHjOysuKaGlmTVku2lGrb+u/h
+        Y45xDSxk71MW1zetX1Q9+eGat5q9dernZ8/RX/VEa/AulsZ6qFegLzaglp4i
+        COpQ7oFgD5a8GRx9s0tAWxYKVNPj3Q0xevirvX117921FlNZb3l13hFHjVOd
+        xXuINkzLr9zCS6MIwgyRYUZbVVNdyQ2XqvKF3189M+SVCAEc00QwBgsxH/Tk
+        UybY1988bpz+XvXTa0pT28jxy+v+QwExf37+Yfmy5rT5Ump0VFSAEiiZouv0
+        rZ4I7vSuxjZbNXGBd0ppUXffPeP7Nhhro1N5TawLGHKlaBXq4cfvts/vmvmf
+        WuJ18k857UR9qMeNEusrSxMYZqSCTvrW6RpcVbSpqihA01b6+0Z0c9xNoJWo
+        jD7fPUULITqHBMylq7pcqlNQciLVulyTVhCqGpjGkt/c+J/eelfufWqxyqJ+
+        Z8GsatJ6b9kr9yZr8OoyyqK85//gbH3y4Ycf6RP1dJOmv9ZDSzt7ad8v11PU
+        DSXq+xeulq+/1jfVYfXf391xr3C5D9XF7NnCCwKRCPiO5HvP2P3s6tX3sdgQ
+        o3//57sX6L8/uewH+lth1JCDaN3K1z11ftF3H0XlMSJSCw8zRDoslUfbX/58
+        qncoVI/u0WO9SEhJXIEAjmmKzWPab26T9D2+OtzK0FCqUUG9sfQiGI2XCpiz
+        KaaWV88+Z/U66Pz5C33KaQz71fVX2vqrpqo2xrz7zmJLZmObBiEXeKeUirrT
+        QBjG23t69sM6wOTGe412Q3fYzis/JCm5lSpOhapoU1VRgFLJBk7fAKwq/HbG
+        VHNw9feYfwzSby58O2RZJINAIAF1Mc2p1K3UulyTVhDqr2/5ldLfOHWaN1eY
+        3qdFFAtmVZNWHwx58kPN++fXXK4symtqqCPInVVPN2n6e+jYQwI7u69eifQU
+        qa3jILQZCCRIQI1KKxp65utI4tU/u1azQT3qqx7dUx9Uv7t4yoXe7nnq6ROl
+        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
+        vfXFmOpbPQgso64lt0BVd/JG2wEqxbvGrvPOeZnHVG+4JSksHMIBsbBaMbFt
+        EfvrWIWJMZU0ZxfBjxcbKuB2nZALNwwpx00tlNF7J4uNHCGFxMBYzyzeZu9i
+        qZ0CVdHJuA6sHEERExbXy7TeWWPEmzRRiEjgCq5379jbYQM7u6oZZxZRT0uk
+        WZadaCldeLb9Iueya45dLsbUebempmydlUl4mtwaJdu6lXcqpalXmHPW2rby
+        XkIsCV6D1uLyNgpFBsutPPVVX5PD4GbF6lPlwjBsXda7jqPEyli5V5a6xZKj
+        J6Tv1rAcBda3dHR0eM3c0tLyzrK/Z8Hwm/RYK6m4tMZWx+6Ka2xd1CITNGvT
+        mCbBhmFWlmMddY6RrGlKa9SUxhI0Obu+zTU9zTX/cSu7CRrXiUrVWPW3lA1U
+        8nh8Drq73tK+1Qkbnco3sLa34G3nbrTTfEMDsB0odBGrvr0I3+1vadjIZKZq
+        KclPyVhe8l44Brx0T8k+t1yl2N2g481oEcPOoDYJcTMKCdEaik1HXf+yXUGv
+        /GQNl56xYpvJiJU+ZKziNlsrHdN926dK6dL4+pSusdOClK3LlErzbivJv7Su
+        V6FXuo5p6rnu6ZtVyvS1xH6kYSYZqL29XTq3tra2ta3exvxn/8UxTbaPWTvT
+        NpZ71gcOookXWllgsk0qdm+vc63rWZzmplrGi9HtkzVNaZWbz1jm65SOCjim
+        9WzwGS+LblXBQBqh5HhVPcpTNxOnZ6zme/rVzSilBaVhpnKOaaG38tOzsSag
+        brO+3KwrvdKRXGcCdkK8KW+JqjPJMMXJK419TjyMfNJAoMkIeI8x2E/A2I/C
+        8IJANgmwlZ9NuySsVbJzHaahCZonWdMUYcU0QfhRRaVqLLpVVHNUSJ+qpVRu
+        vowlx9Qb1Jjepnw8C6ZnrHyZKR69uuVKw0z5WzFda63PL1/+cd2gN3FBn3zy
+        d8FMsIKYJimYiZumVLF11un63ntLk1K4yHLqYKwi46Xu6RFQkGIRrs1ODyCS
+        60wgYCs/8QsB4gls7bXh7Nmv1BlHUxb30kvzBTOeFQJzYZqk2knipim1V+9N
+        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
+        l3QmyeIyAAAAAElFTkSuQmCC
+        ' alt = '' />
+        <figcaption></figcaption>
+      </figure>
+      
+      <p>
+        Figure 7.22: Profiling Methodology Summary<br>
+      </p>
+      <h4>
+        12.1.2 Compliance (USE THIS)
+      </h4>
+      <p>
+        For each of the conformance constructs described above, the standard defines a set of &ldquo;allowable constraints&rdquo; (i.e., the rules for profile compliance) that can be applied. Allowable constraints are a means of restricting requirements in the base standard (or another profile) to make those requirements more specific. As such, elements that are &ldquo;Required&rdquo; cannot be relaxed, e.g., changed to &ldquo;Optional&rdquo;.<br>For example, in HL7 v2.x an element that is declared as optional (O) in the base standard can be constrained (&ldquo;profiled&rdquo;) to required (R). The conformance constructs and allowable constraint models are defined by each standard.
+      </p>
+      <h4>
+        12.1.3 Length
+      </h4>
+      <p>
+        The Length requirements are different and changed in the standard in certain versions of the standard. Table X provides an overview.<br><br><br><br><br><br><br>
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Concept
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Version
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Definition
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Comments
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Maximum Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                2.3, 2.3.1, 2.4
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Maximum number of characters that one occurrence of the data field may occupy. Normative, but can be changed on a site-specific basis.
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Definition is ambiguous. Does this mean the base standard is not normative but the locally agreed maximum length is? Specified at the field level only. No length specification for data type elements except sparingly in narrative text.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Maximum Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                2.5, 2.5.1, 2.6
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Maximum number of characters that one occurrence of the data field may occupy. Changes to the field length may be negotiated by a site agreement such as a conformance profile. When this is done, it shall not render the implementation non-conformant. The receiver must be able to receive up to the maximum field length, and the sender can send up to the maximum field length.
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Definition is ambiguous. Maximum length added to data types (HL7 Table 0440 gives maximum length for total—including delimiters, the data type definition gives maximum length for the component or subcomponent). For the receiver, a &ldquo;support&rdquo; requirement is given. For the sender, it is ambiguous, i.e., it does not state that sender must be capable of sending the maximum length.
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                Conformance section/chapter introduced but provide no instruction for constraining maximum length (except that it shall be updated) in profiles.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Normative Length
+              </p>
+              
+              <p>
+                (Minimum and Maximum)
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                2.7
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Normative lengths are only specified for primitive data types. Normative Length is specified in one of two forms:
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                • the minimum and the maximum length separated by two dots, e.g. m..n
+              </p>
+              
+              <p>
+                • the list of possible values for length separated by commas, e.g. x,y,z
+              </p>
+              
+              <p>
+                (maybe this is for something like date where you can have 4,6,8 instead 4..8)
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                When a normative length is asserted, conformant messages must have a length that lies within the boundaries specified. The boundaries are inclusive, so a length of 1..2 means the length of the item may be either 1 or 2.
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                Note: The minimum length is always 1 or more. If an item is optional, and there is no content present, the item is considered as not populated, rather than present with a length of 0.
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                Note: The deletion indicator is treated as having no length and therefore fits to all length specifications.
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Starting in v2.7, the specification of length changed significantly:
+              </p>
+              
+              <p>
+                
+              </p>
+              
+              <p>
+                The previous definition of maximum length is redefined and replaced with normative minimum and maximum length.
+              </p>
+              
+              <p>
+                Length is now only applicable to primitive data elements.
+              </p>
+              
+              <p>
+                The concept of Conformance Length is introduced.
+              </p>
+              
+              <p>
+                The concept of Truncation is introduced.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Conformance Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                2.7
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        <br><br>Constraining length follows the methodology provided in this specification and can be used in any HL7 v2 version. The length constraint only applies to primitive data elements. Although, earlier versions of HL7 v2 specified lengths for composite elements (e.g., a field with a complex data type), length constraints for composite elements is not supported in message profiles.<br><br><br><br><br><br><br>Although various versions of the HL7 standard length may not be normative or is ambiguous to requirements, the message profile can be used to specify normative minimum and maximum length and conformance length. Such specification in derived profiles are deemed to be normative if so specified. The HL7 v2 Conformance Methodology specifies that constraints related to length are optional and this choice can be determined on a per element basis. That is, length constraints can be specified for every primitive data element or selected primitive data elements at the discretion of the specifier. Furthermore, if a length constraint is specified, then specification must follow the rules stated in this document. Length constraints include Minimum and Maximum Length, Conformance Length, and Truncation Indicators.<br><br>
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Concept
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Base
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Constrainable
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Implementation
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Conformance Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Informative
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Normative
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Not Applicable
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        <br><br>
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Concept
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Base
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Constrainable
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Implementation
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Conformance Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Informative
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Normative
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Not Applicable
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <script src='js/jquery.js'></script>
+      <script src='js/jquery-ui.min.js'></script>
+      <script src='js/bootstrap.min.js'></script>
+      <script src='js/respond.min.js'></script>
+      <!-- %script{:src => "js/fhir.js"} / This file was empty so not including it -->
+      <script src='js/codemirror/codemirror.js'></script>
+      <script src='js/codemirror/mode/xml.js'></script>
+      <script src='js/v2.js'></script>
+    </div>
+    <p></p>
+    <div class='segment' id='segment-footer'>
+      <div class='container'>
+        <div class='inner-wrapper'>
+          <p>
+            &copy; HL7.org 2019+. HL7 v2+.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

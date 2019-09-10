@@ -1,0 +1,5 @@
+.ui-tabs-panel.ui-widget-content.ui-corner-bottom{:id => tab_content_id, "aria-hidden" => (selected == 'true' ? 'false' : 'true'), "aria-labelledby" => tab_label_id, :role => "tabpanel", :style => "display : #{selected == 'true' ? 'block' : 'none'};"}
+  / This might be useless
+  .div{:id => tab_content_inner_id}
+    %textarea.codemirror-textarea-xml
+      = tab_content

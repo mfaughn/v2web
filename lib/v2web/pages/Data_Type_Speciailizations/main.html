@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=windows-1252' http-equiv='Content-Type'>
+<title>
+HL7 - Data_Type_Speciailizations
+</title>
+<link href='images/hl7_favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<style type='text/css'>
+<!-- @import './css/hl7.css'; -->
+<!-- @import './css/fhir.css'; -->
+<!-- @import './css/bootstrap.css'; -->
+<!-- @import './css/bootstrap-fhir.css'; -->
+<!-- @import './css/project.css'; -->
+<!-- @import './css/pygments-manni.css'; -->
+<!-- @import './css/jquery-ui.css'; -->
+<!-- @import './css/modules.css'; -->
+@import 'css/hl7.css';
+@import 'css/fhir.css';
+@import 'css/bootstrap.css';
+@import 'css/bootstrap-fhir.css';
+@import 'css/project.css';
+@import 'css/pygments-manni.css';
+@import 'css/jquery-ui.css';
+@import 'css/modules.css';
+@import 'css/codemirror.css';
+</style>
+<meta content='(C) Health Level Seven, Int. 2019' name='COPYRIGHT'>
+<meta content='Michael Faughn' name='Developer'>
+</head>
+<body style=''>
+<div class='segment' id='segment-header'>
+<div class='container'>
+<a href='http://www.hl7.org/' id='logo' no-external='true'>
+<img alt='HL7 International' src='images/hl7-logo-header.png' width='120'>
+</a>
+<div id='hl7-nav'>
+<a href='http://www.hl7.org/' id='hl7-logo' no-external='true'>
+<img alt='visit the hl7 website' height='50' src='images/3dhl7_deu.gif'>
+</a>
+</div>
+</div>
+</div>
+<div class='segment' id='segment-navbar'>
+<div id='stripe'></div>
+<div class='container'>
+<!-- HEADER CONTENT -->
+<nav class='navbar navbar-inverse'>
+<div class='container'>
+<button class='navbar-toggle' data-target='.navbar-inverse-collapse' data-toggle='collapse' type='button'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<div class='nav-collapse collapse navbar-inverse-collapse'>
+<ul class='nav navbar-nav'>
+<li>
+<a href='main.html'>Home</a>
+</li>
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Introduction.html'>
+Introduction
+</a>
+</li>
+
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Definition_and_Methodology.html'>
+Definition and Methodology
+</a>
+</li>
+
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Data_Type_Flavor_Specification.html'>
+Data Type Flavor Specification
+</a>
+</li>
+
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Standardized_Data_Type_Flavor_Library.html'>
+Standardized Data Type Flavor Library
+</a>
+</li>
+
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Appendix_A_&amp;ndash;_Base_Standard_Data_Type_Evolution.html'>
+Appendix A &ndash; Base Standard Data Type Evolution
+</a>
+</li>
+
+<li>
+<a href='HL7_v2_DataType_Specializations_Ballot-May2018_Glossary.html'>
+Glossary
+</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div class='segment' id='segment-breadcrumb'>
+<div class='container'>
+<ul class='breadcrumb'>
+<li>
+<b>
+<a href='main.html'>Home</a>
+</b>
+</li>
+</ul>
+</div>
+</div>
+<div class='container'>
+<p>
+V2_SPEC_DT_FLAVORS_R1_D1_2018MAY<br>
+</p>
+
+<figure>
+<img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACUCAMAAABLCVCcAAADAFBMVEX6/P7u
+MiQjHh/tNCS+VTnU1dfzbUp4eXz2yrXlMyX0+v39+vTx8vOkpqlhTkaaWkXp
+NiWPWUb//fnt7e64urzuMCTqMyWTlZg4NjghHx+lWkRHR0jFxsjsOCXh4uPp
+LSWHiYvv8PDp1smRk5XsMCRVVljJyszxrZLaQyz++fjFUjhZSUPsSzL29/j/
+/P32m3vmLCTSakrVhmr69fP6+vsoJSb74dR5VknuKSTPt6olIiPCxMYkISLl
+OCWrra/5+/z++vvuLSTqMSQkIiLrNCjqLyPiZ0drUkjuLyT4+PlRRUDZppDK
+TjTlt6IkICHpMCT99e/cPisiICHsJSW8UzbTSTBhYmXnMiTjPSntMSQgHh/s
+LiSfoaToKSVDPTrTxrsrKSr89vjz+PfpOybrNSTtLii2VjyLW0nnLyThk3nc
+3t+mVz5lZmiNV0PedFXMSi7on4Liyb3NmoWCWUrqKiR7fX/kNSekhnr5/Pn+
+7uTxdVPsKySVV0C9Vz1kZWf4+PXdVTfFemHhgmODV0T6+PjApJioemkyLSyW
+mJvuMCdwcXSHWEY3MS4lIyUiHR7zcUWusLL40sCdn6H6+PqtbVfay8Dzi2nt
+NSMnIiLqMSbOXUGOalwkHh9tbnHKzc/U0Mh+gIMjHx/jLybBwcLATzS2Uzfm
+wK6zWUHtblHnMCb7+/fnMybrLiYjHR3tMij3+/iZm54hHB7pLyiKjI/w6+ci
+Hh3JUDHsMCWOkJPxYT3f4OHuMyXlJiT3+vy7vb/kOS4fHh7uLyZdT0olIiHu
+KygfHiDQ0tNgYWT2ooIgHBzqKyaCV0gzMTP6wKbzgF5oaWtbXF7GyMr9/f2+
+VzYmISAmIiAlISK9Ti8pJichHh7tMyQjISP8/PxjZGYjHBr///wuKSf9/vz/
+/f79/fzsMiTtMiX9/v/HycvtMiT9/Pv9/f7rMyXtMyZmZ2onIyRfYGLp6utL
+TE7xakvl5ufu6OJwUkbk3dfBUjHub0m2VzfqISSOfniJWEn////uMSQjHyBM
+WiYxAAAAAWJLR0QAiAUdSAAAAAxjbVBQSkNtcDA3MTIAAAADSABzvAAADaBJ
+REFUeF7tnH1oHMcVwK2TEiInVSTLK/lsqXaQDWnArgt3tbvduD45olIpB3GC
+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
+' alt = '' />
+<figcaption></figcaption>
+</figure>
+
+<p>
+<br><br><br>HL7 Version 2 Standardized Data Type Specializations Release 1<br>May 2018<br><br>HL7 Draft Ballot for Comments<br><br>Sponsored by:Conformance Work Group<br><br>
+</p>
+
+<table>
+<tbody>
+<caption></caption>
+<tr>
+<th border='1'>
+<p>
+Conformance Co-chair: Principle Author
+</p>
+
+</th>
+
+<th border='1'>
+<p>
+Robert Snelick, National Institute of Standards and Technology (NIST)
+</p>
+
+</th>
+
+</tr>
+
+<tr>
+<td>
+<p>
+Conformance Co-chair
+</p>
+
+</td>
+
+<td>
+<p>
+Frank Oemig
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+Conformance Co-chair
+</p>
+
+</td>
+
+<td>
+<p>
+Nathan Bunker, American Immunization Registry Association (AIRA)
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+Conformance Co-chair
+</p>
+
+</td>
+
+<td>
+<p>
+Ioana Singureanu
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+Public Health Co-chair: Principle Author
+</p>
+
+</td>
+
+<td>
+<p>
+Craig Newman, Centers for Disease Control and Prevention (CDC)
+</p>
+
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+<p>
+<br>Questions or comments regarding this document should be directed to the Conformance Workgroup (cgit@lists.hl7.org).<br><br><br><br><br>Copyright © 2018 Health Level Seven International ® ALL RIGHTS RESERVED. The reproduction of this material in any form is strictly forbidden without the written permission of the publisher. HL7 and Health Level Seven are registered trademarks of Health Level Seven International. Reg. U.S. Pat & TM Off.<br>Use of this material is governed by HL7's IP Compliance Policy.<br>The authors of this document wish to recognize the following participants who contributed their time and expertise to the development of this specification.
+</p>
+
+<table>
+<tbody>
+<caption></caption>
+<tr>
+<th border='1'>
+<p>
+
+</p>
+
+</th>
+
+<th border='1'>
+<p>
+
+</p>
+
+</th>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+Sheryl Taylor
+</p>
+
+</td>
+
+<td>
+<p>
+National Institute of Standards and Technology (NIST)
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<p>
+
+</p>
+
+</td>
+
+<td>
+<p>
+
+</p>
+
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+<p>
+<br><br><br><br><br>
+</p>
+
+<script src='js/jquery.js'></script>
+<script src='js/jquery-ui.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/respond.min.js'></script>
+<!-- %script{:src => "js/fhir.js"} / This file was empty so not including it -->
+<script src='js/codemirror/codemirror.js'></script>
+<script src='js/codemirror/mode/xml.js'></script>
+<script src='js/v2.js'></script>
+</div>
+<p></p>
+<div class='segment' id='segment-footer'>
+<div class='container'>
+<div class='inner-wrapper'>
+<p>
+&copy; HL7.org 2019+. HL7 v2+.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

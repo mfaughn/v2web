@@ -1,0 +1,14 @@
+.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{:id => tabs_id}
+  %ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all{:role => "tablist"}
+    %li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active{"aria-controls" => "tabs-1-folder-1", "aria-expanded" => "true", "aria-labelledby" => "ui-id-149", "aria-selected" => "true", :role => "tab", :tabindex => "0"}
+      %a#ui-id-149.ui-tabs-anchor{:href => "http://hl7.eu/refactored/dom07.html#tabs-1-folder-1", :role => "presentation", :tabindex => "-1"} Message
+    %li.ui-state-default.ui-corner-top{"aria-controls" => "tabs-1-folder-2", "aria-expanded" => "false", "aria-labelledby" => "ui-id-150", "aria-selected" => "false", :role => "tab", :tabindex => "-1"}
+      %a#ui-id-150.ui-tabs-anchor{:href => "http://hl7.eu/refactored/dom07.html#tabs-1-folder-2", :role => "presentation", :tabindex => "-1"} FHIR Structure Definition
+  #tabs-1-folder-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "false", "aria-labelledby" => "ui-id-149", :role => "tabpanel"}
+    #folder-1-1-inner
+      / tab content
+  #tabs-1-folder-2.ui-tabs-panel.ui-widget-content.ui-corner-bottom{"aria-hidden" => "true", "aria-labelledby" => "ui-id-150", :role => "tabpanel", :style => "display: none;"}
+    #folder-1-2-inner
+      %div{"data-include" => "StructDef/MSG-MFN_M13.xml"}
+        / XML was here
+  

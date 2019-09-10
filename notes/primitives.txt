@@ -1,0 +1,11 @@
+DT - date - same
+DTM - date/time - same
+FT - formatted text (derived from TX) - markdown?
+GTS - general timing sequence - string?
+ID - coded value for HL7 defined tables
+IS - coded value for user-defined tables
+NM - numeric - integer or decimal
+SI - sequence ID - integer (constrained)
+SNM - string of telephone number digits
+TM - time - same
+TX - text - string?

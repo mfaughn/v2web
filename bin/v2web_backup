@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby  # This is the shebang line for rvm. For default OS X ruby, it's #!/usr/bin/ruby
+
+# Foundation load_path_management can not be revectored to a development version, 
+# becasue it's code is used to do the redirection (to reduce redundancy)
+require 'Foundation/load_path_management'
+Foundation.setup_app('v2_web', __FILE__)
+
+
+require "v2_web_generated"
+require "v2_web_generated/model/driver" 
+
+require 'db_io'
+$BACKUP_IOs = [DB_IO::Schema.new, DB_IO::CSV.new, DB_IO::JSON.new] # [DB_IO::Schema.new, DB_IO::CSV.new, DB_IO::YAML.new, DB_IO::JSON.new]
+DB.backup
+
+

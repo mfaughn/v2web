@@ -1,0 +1,12 @@
+#box_row.box_more{ :id => level_group_title }
+  .box
+    %p.head
+      / %a{:href => level_group_link, :style => "background-image: url('foundation.png');"}
+      %a{ :href => level_group_link }
+        %span
+          = level_group_title
+    %p.content
+      - section_links.each do |link, title|
+        %a{ :href => link }
+          = title
+        %br

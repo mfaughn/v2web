@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# This is the shebang line for rvm. For default OS X ruby, it's #!/usr/bin/ruby
+
+# Put GUI code on the load path as well, for debugging
+ARGV.replace ARGV + ["-l", "./lib/:../gui_site/lib/:../gui_director/lib/:../html_gui_builder/lib/"]
+
+# Foundation load_path_management can not be revectored to a development version, 
+# becasue it's code is used to do the redirection (to reduce redundancy)
+require 'Foundation/load_path_management'
+Foundation.setup_app('v2_web', __FILE__)
+
+# require "ref_impl_runtime"
+
+require "v2_web/meta_info"
+require "sequel_specific_associations"
+require "v2_web_generated"
+require "v2_web_generated/model/driver" 
+
+require 'v2_web/model_extensions'
+
+
+require 'irb'
+IRB.start

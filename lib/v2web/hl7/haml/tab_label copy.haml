@@ -1,0 +1,3 @@
+%li.ui-state-default.ui-corner-top{:role => "tab", :tabindex => tab_index, "aria-controls" => tab_content_id, "aria-expanded" => selected, "aria-labelledby" => tab_label_id, "aria-selected" => selected, :class => ('ui-tabs-active ui-state-active' if selected == 'true')}
+  %a.ui-tabs-anchor{:id => tab_label_id, :href => tab_url, :role => "presentation", :tabindex => "-1"}
+    = tab_title

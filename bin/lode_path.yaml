@@ -1,0 +1,6 @@
+---
+"~/projects":
+# - none
+- html_gui_builder
+- gui_director
+- sequel_specific_associations

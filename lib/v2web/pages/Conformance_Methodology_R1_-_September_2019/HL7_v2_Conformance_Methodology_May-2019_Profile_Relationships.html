@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=windows-1252' http-equiv='Content-Type'>
+    <title>
+      HL7 - Profile Relationships
+    </title>
+    <link href='images/hl7_favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <style type='text/css'>
+      <!-- @import './css/hl7.css'; -->
+      <!-- @import './css/fhir.css'; -->
+      <!-- @import './css/bootstrap.css'; -->
+      <!-- @import './css/bootstrap-fhir.css'; -->
+      <!-- @import './css/project.css'; -->
+      <!-- @import './css/pygments-manni.css'; -->
+      <!-- @import './css/jquery-ui.css'; -->
+      <!-- @import './css/modules.css'; -->
+      @import 'css/hl7.css';
+      @import 'css/fhir.css';
+      @import 'css/bootstrap.css';
+      @import 'css/bootstrap-fhir.css';
+      @import 'css/project.css';
+      @import 'css/pygments-manni.css';
+      @import 'css/jquery-ui.css';
+      @import 'css/modules.css';
+      @import 'css/codemirror.css';
+      @import 'css/snelick.css';
+    </style>
+    <meta content='(C) Health Level Seven, Int. 2019' name='COPYRIGHT'>
+    <meta content='Michael Faughn' name='Developer'>
+  </head>
+  <body style=''>
+    <div class='segment' id='segment-header'>
+      <div class='container'>
+        <a href='http://www.hl7.org/' id='logo' no-external='true'>
+          <img alt='HL7 International' src='images/hl7-logo-header.png' width='120'>
+        </a>
+        <div id='hl7-nav'>
+          <a href='http://www.hl7.org/' id='hl7-logo' no-external='true'>
+            <img alt='visit the hl7 website' height='50' src='images/3dhl7_deu.gif'>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='segment' id='segment-navbar'>
+      <div id='stripe'></div>
+      <div class='container'>
+        <!-- HEADER CONTENT -->
+        <nav class='navbar navbar-inverse'>
+          <div class='container'>
+            <button class='navbar-toggle' data-target='.navbar-inverse-collapse' data-toggle='collapse' type='button'>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </button>
+            <div class='nav-collapse collapse navbar-inverse-collapse'>
+              <ul class='nav navbar-nav'>
+                <li>
+                  <a href='main.html'>Home</a>
+                </li>
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Introduction.html'>
+                    Introduction
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Levels.html'>
+                    Profile Levels
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_HL7_v2_Implementation_Guides.html'>
+                    HL7 v2 Implementation Guides
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profiles.html'>
+                    Message Profiles
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Message_Profile_Identification.html'>
+                    Message Profile Identification
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profiles_in_Use.html'>
+                    Profiles in Use
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Relationships.html'>
+                    Profile Relationships
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Profile_Documentation.html'>
+                    Profile Documentation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Canonical_Representation.html'>
+                    Canonical Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Computable_Representation.html'>
+                    Computable Representation
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Glossary.html'>
+                    Glossary
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_To_DO.html'>
+                    To DO
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='HL7_v2_Conformance_Methodology_May-2019_Notes_to_Balloters.html'>
+                    Notes to Balloters
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class='segment' id='segment-breadcrumb'>
+      <div class='container'>
+        <ul class='breadcrumb'>
+          <li>
+            <b>
+              <a href='main.html'>Home</a>
+            </b>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='container'>
+      <h2>
+        7 Profile Relationships
+      </h2>
+      <h3>
+        7.1 Compatibility
+      </h3>
+      <p>
+        Table 8.13 indicates the allowable profile pairs for compatibility and addresses point  in Error! Reference source not found.. Note that the assessment in Table 8.13 is not an operational analysis; it provides a tool for evaluating whether the usage construct in a sender profile is compatible with that construct in a receiver profile. For a pair of profiles to be compatible, all element pairs in the profiles must adhere to the profile compatibility rules given in Table 8.13 below. For example, if the sender profile specifies an element as required and the receiver profile also specifies the corresponding element as required, then the profiles are compatible for that element. If, however, the sender profile specifies an element as not-supported and the receiver profile specifies the corresponding element as required, then the profiles are not compatible for that element, since the receiver is expecting data that the sender will never provide. The same evaluation must be performed for all conformance constructs.
+      </p>
+      <h4>
+        7.1.1 Usage
+      </h4>
+      <p>
+        Having different alternatives for usage may result in a negative impact on message exchange. This section elaborates on the various allowable pairings. The following two tables do not take conditional usage into account; the implications of conditions are explained later.<br>Table 8.13 addresses implementable profiles where each element must be profiled; that is, no elements can be O or optional. Table 8.14 addresses additional optionality choices available for constrainable profiles.<br>Optional elements apply only to constrainable profiles. Often PDOs develop constrainable level profiles for national specifications (e.g., specifications used in the US for the Health IT Certification Program). Their goal is to specify elements that are needed to meet their use case requirements. Beyond that, they allow trading partners to negotiate among themselves regarding local customization of the remaining un-profiled (or optional) elements.<br>Defining compatibility among systems requires a comparison of the capabilities of the sending side to the requirements on the receiving side through the means of profiles. For assessing compatibility, use case requirements are defined in higher level constrainable profiles and are thus not considered. For example, the assignment of &ldquo;R&rdquo; usage for an element on the sending side expresses the fact (or the intent) that this element is always valued in every message instance that is sent. &ldquo;RE&rdquo; usage expresses the intent that data will be present in messages if the data are entered into the system or are made available in some other way. In other words, these usage requirements identify what a receiver can expect in messages being sent to them. Statements for a receiver are clear expressions of their requirements. Therefore, a required element (&ldquo;R&rdquo; usage) indicates that the receiver must get this information in order to be able to process the message or a specific part of the message. Having said this, the pairing &ldquo;R  X&rdquo; is deemed compatible, since the receiver can ignore a data element for which the sender always provides data, although this behavior may not fulfill a certain use case or meet external expectations. Use case requirements must, therefore, be introduced as higher level requirements (&ldquo;R&rdquo;) in the form of a constrainable profile that must be fulfilled by both sender and receiver, i.e., the implementable profiles must be compliant to this higher level constrainable profile. Providing such a use case requirement would mean that the applications are compatible, although the receiver is not compliant (i.e., the receiver’s implementable profile is not compliant with the constrainable profile). The receiver is conformant to its implementable profile, because this profile does not support the element; however, the fact that the receiver is not compliant prevents interoperability. In summary, specific aspects of compliance, compatibility, and conformance need to be met to enable interoperability.
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Sender
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Receiver
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Compatible
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Comment
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver supports this element but not always expecting it.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver doesn’t support this element.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver is not guaranteed to get required data.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver doesn’t support this element.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver will not get required data.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver will not get the data it needs for certain use cases.
+              </p>
+              
+              <p>
+                Note there has to be at least one instance in which a data value is needed; otherwise, the element should not be profiled to RE. On the other hand, RE is the only construct to express the capability of the receiving system to handle data.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                The element is not necessary for operation.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        <br>The analysis of optional elements for profile compatibility provides guidance for pairing potential implementable profiles derived from constrainable profiles. A definitive assessment of profile compatibility can’t be made until implementation profiles are developed; however, the guidance provided here will aid in the specification of constrainable profiles. As is to be expected, profile compatibility of constrainable profiles is directly linked to the requirements of the compatibility rules of implementable profiles.
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Sender
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Receiver
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Compatible
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Comment
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver does not express any expectations or requirements on the data and may support this element in the future. Compatible receiver profiling in the implementable profile include R, RE, or X.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Only RE, X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver does not expect data and may support this element in the future. Compatible receiver profiling includes RE, or X.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Only X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver does not expect data and may support this element in the future. However, it can only be compatible if it is constrained to X.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Only R
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver requires the data. Compatible sender profiling option is R.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Only R, RE
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver expects data in certain instances. Compatible sender profiling options is R or RE.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                X
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Compatibility sender profiling options is R, RE, or X.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                O
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Possible
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Compatibility can be achieved by following the rules for implementation profiles as given above.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <h4>
+        7.1.2 Cardinality
+      </h4>
+      <p>
+        Adding constraints to the cardinality of elements can be accomplished by narrowing the range of possible occurrences. Table 8.15 explains the possible restrictions.
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Sender
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Receiver
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Compatible
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Comment
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver can process data, but can also handle absence of data.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [n..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver will not get required data, if n>0.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver has no expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver supports more than the sender.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [n..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver will not get required data, if n>0.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..0]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver has no expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [0..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver processes the data.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Sender and Receiver have the same expectations.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [1..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver supports more than the sender.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [1..1]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [n..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Receiver will not get required data, if n>1.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [x..y]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [n..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                If m<x.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                [x..y]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                [n..m]
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                If n>y.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <h4>
+        7.1.3 Data Type
+      </h4>
+      <p>
+        Probably just some general comments that refer to other constraint compatibility.
+      </p>
+      <h4>
+        7.1.4 Content
+      </h4>
+      <h5>
+        7.1.4.1 Vocabulary
+      </h5>
+      <p>
+        Value sets can be created for senders and receivers independently. Since this is the case, under what circumstances are the value sets compatible?  Figure 8.18 shows how a sender and receiver might profile a value set differently in a constrained profile. The sender excludes both D and H, while the receiver excludes D but includes H. In this case, the derived profiles (and therefore implementations) are compatible.
+      </p>
+      
+      <figure class='center'>
+        FILE MISSING!
+      </figure>
+      
+      <p>
+        Figure 8.18: Terminology Assessment for Sender/Receiver Implementations<br>In general, if the sender is only sending a subset of the codes that are supported by the receiving application (Figure 8.18), then the profiles are compatible. If the sender uses a code the receiver does not support, however (see element &ldquo;D&rdquo; in Figure 8.19), a compatibility issue occurs.
+      </p>
+      
+      <figure class='center'>
+        FILE MISSING!
+      </figure>
+      
+      <p>
+        Figure 8.19: Compatibility Issues with Supportive Set of Codes<br>According to the implementation guide, both derived profiles are compliant, because they specify valid constraints. The sender and receiver are not compatible, however, because the sender specifies code &ldquo;D&rdquo; as R-required while the receiver has specified code &ldquo;H&rdquo; as E-excluded. Thus, even if both sender and receiver implement their specified profiles correctly (that is, they are conformant), they are not interoperable. This example stresses the importance of trading partner agreements to address specific use case needs. In this case, the sender has an expectation about a code that is not supported by the receiver. Table 8.16 depicts the situation clearly in a row and column format.
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                Sender
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Relationship
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Receiver
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Compatible
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Comment
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                S := { c | c is supported by sender}
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                R := { c | c is supported by receiver}
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                The receiver has more supportive capabilities than the sender.
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                The sender can send a code that the receiver does not understand.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <h5>
+        7.1.4.2 Constant Values
+      </h5>
+      <p>
+        Have to be the same.
+      </p>
+      <h4>
+        7.1.5 Length
+      </h4>
+      <p>
+        Most vendors do not provide details about the implemented length for data elements. In these cases, incompatibilities among senders and receivers can only be identified by a systematic testing of all data elements, which implies that each data element on the sending side must be populated to its maximum length. On the receiving side, all data in the messages must be evaluated to determine whether some values are being truncated, a manual and tedious process that can be automated by tooling if the implementable profiles specify the implemented length.<br>At this point it can be noted that the receiver’s capabilities must be greater than the sender’s capabilities in order for them to be compatible.
+      </p>
+      
+      <table class='center table_border1'>
+        <tbody>
+          <caption></caption>
+          <tr class='tr_snelick'>
+            <th class='table_border1 th_snelick'>
+              <p>
+                
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Sender
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Receiver
+              </p>
+            </th>
+            
+            <th class='table_border1 th_snelick'>
+              <p>
+                Compatible
+              </p>
+            </th>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Implemented Minimum Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                <
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                =
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                >
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                Implemented Maximum Length
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                <
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                =
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                Yes
+              </p>
+            </td>
+          </tr>
+          
+          <tr class='tr_snelick'>
+            <td class='table_border1'>
+              <p>
+                
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                m
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                >
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                n
+              </p>
+            </td>
+            
+            <td class='table_border1'>
+              <p>
+                No
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>
+        
+      </p>
+      <h4>
+        7.1.6 Conformance Statements
+      </h4>
+      <p>
+        Probably general rules.
+      </p>
+      <h4>
+        7.1.7 Co-constraints
+      </h4>
+      <p>
+        Probably general rules
+      </p>
+      <script src='js/jquery.js'></script>
+      <script src='js/jquery-ui.min.js'></script>
+      <script src='js/bootstrap.min.js'></script>
+      <script src='js/respond.min.js'></script>
+      <!-- %script{:src => "js/fhir.js"} / This file was empty so not including it -->
+      <script src='js/codemirror/codemirror.js'></script>
+      <script src='js/codemirror/mode/xml.js'></script>
+      <script src='js/v2.js'></script>
+    </div>
+    <p></p>
+    <div class='segment' id='segment-footer'>
+      <div class='container'>
+        <div class='inner-wrapper'>
+          <p>
+            &copy; HL7.org 2019+. HL7 v2+.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
