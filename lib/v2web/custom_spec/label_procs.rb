@@ -1,4 +1,4 @@
-module S_Doc
+module V2Web
   HL7_SECTION_LABEL = proc do
     haml = <<-EOS
     :sass

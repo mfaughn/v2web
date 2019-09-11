@@ -1,5 +1,5 @@
 def delete_snelick
-  Snelick.classes(:no_imports => true).each do |c|
+  V2Web.classes(:no_imports => true).each do |c|
     next unless c < Sequel::Model
     next if c.enumeration?
     if DB.tables.include?(c.table_name)
@@ -14,10 +14,10 @@ conformance = SDoc::Document.where(Sequel.ilike(:title, '%Conformance Methodolog
 # datatypes   = SDoc::Document.where(Sequel.ilike(:title, '%DataType Specializations%')).last
 
 ChangeTracker.start
-csite = Snelick::Site.create(:name => 'Conformance Methodology R1 - September 2019')
+csite = V2Web::Site.create(:name => 'Conformance Methodology R1 - September 2019')
 csite.doc = conformance
 csite.save
-# dsite = Snelick::Site.create(:name => 'Data Type Speciailizations')
+# dsite = V2Web::Site.create(:name => 'Data Type Speciailizations')
 # dsite.doc = datatypes
 # dsite.save
 ChangeTracker.commit
@@ -31,11 +31,11 @@ end
 def create_section(clause, parent_site_element, linked = false)
   # puts "#{doc.title} -- #{clause.title}"
   ChangeTracker.start
-  section = Snelick::Section.create
+  section = V2Web::Section.create
   section.render_as = 'linked_page' if linked
   section.doc = clause
   section.save
-  if parent_site_element.is_a?(Snelick::Site)
+  if parent_site_element.is_a?(V2Web::Site)
     parent_site_element.add_content(section)
   else
     parent_site_element.add_subsection(section)
