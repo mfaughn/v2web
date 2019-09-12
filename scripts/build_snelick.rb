@@ -12,10 +12,10 @@ def link_section(sect, linked = false)
   sect.subsections.each { |ss| link_section(ss) }
 end
 
-conformance = V2Web::Site.where(Sequel.ilike(:title, '%Conformance Methodology%')).last
+conformance = V2Web::Standard.where(Sequel.ilike(:title, '%Conformance Methodology%')).last
 indicate_page_linkages(conformance)
 conformance.to_hl7_site
 
-# datatypes   = V2Web::Site.where(Sequel.ilike(:title, '%DataType Specializations%')).last
+# datatypes   = V2Web::Standard.where(Sequel.ilike(:title, '%DataType Specializations%')).last
 # indicate_page_linkages(datatypes)
 # datatypes.to_hl7_site

@@ -18,11 +18,11 @@ module Gui
     end
     
     def generate_datatype_page(opt = nil)
-      datatypes_doc = V2Web::Site.where(Sequel.ilike(:title, '%DataType%')).last
+      datatypes_doc = V2Web::Standard.where(Sequel.ilike(:title, '%DataType%')).last
       respond(datatypes_doc.to_hl7_site)
     end
     def generate_conformance_page(opt = nil)
-      conformance_doc = V2Web::Site.where(Sequel.ilike(:title, '%Conformance%')).last
+      conformance_doc = V2Web::Standard.where(Sequel.ilike(:title, '%Conformance%')).last
       respond(conformance_doc.to_hl7_site)
     end
     

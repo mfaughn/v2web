@@ -8,7 +8,7 @@ module V2Web
 
   class Section
     # FIXME not sure this is correct anymore
-    # alias_association :subsections, 'V2Web::Section', :type => :many_to_many, :alias_of => :content
+    alias_association :subsections, 'V2Web::Section', :type => :many_to_many, :alias_of => :content
     
     def subsections
       content.select { |c| c.is_a?(V2Web::Section) }
@@ -51,7 +51,7 @@ module V2Web
     
     def site_depth(d = 1, root = nil)
       # if root isn't passed then we are totally guessing
-      root ||= parents.find { |sect| sect.is_a?(V2Web::Site) }
+      root ||= parents.find { |sect| sect.is_a?(V2Web::Standard) }
       site ? d : parent.site_depth(d + 1, root)
     end
     

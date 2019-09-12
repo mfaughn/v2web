@@ -24,7 +24,7 @@ module V2Web
     def extract_document(doc, title = 'Test')
       doc.remove_namespaces!
       ChangeTracker.start
-      @site = V2Web::Site.create(:title => title, :version => Time.now.strftime('%Y.%m.%d.%R'))
+      @site = V2Web::Standard.create(:title => title, :version => Time.now.strftime('%Y.%m.%d.%R'))
       @composition = FHIR::Composition.create
       @composition.v2  = @site
       @current_section = @site

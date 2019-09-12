@@ -1,6 +1,6 @@
 require_relative 'label_procs'
 #Homepage
-homepage_item :'V2Web::Site', :getter => 'sites'
+homepage_item :'V2Web::Standard', :getter => 'sites'
 homepage_item :'V2Web::Section', :getter => 'web_sections'
 homepage_item :'V2Web::Box', :getter => 'boxes'
 homepage_item :'V2Web::Table'

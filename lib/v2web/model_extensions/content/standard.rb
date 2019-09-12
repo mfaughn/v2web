@@ -1,6 +1,6 @@
 require 'fileutils'
 module V2Web
-  class Site
+  class Standard
     def to_hl7_site_file(location = nil)
       payload = content.map { |c| c.to_hl7_site(:parent => self, :parent_number => nil) }.join("\n")
       V2Web.create_site_file(payload, location)
@@ -19,7 +19,7 @@ module V2Web
       # Do this now so we have the links to put in the navbar
       ls  = linked_sections.map { |s| ["#{s.link_title}.html", s.title.hl7, s] }
       
-      # FIXME ...if need be.  We are currently assuming that all of the main sections are going to be linked sections.  If any of the sections aren't linked, they are being lost here because we aren't doing anything with them.  This is only true for sections directly contained by the Site obj.
+      # FIXME ...if need be.  We are currently assuming that all of the main sections are going to be linked sections.  If any of the sections aren't linked, they are being lost here because we aren't doing anything with them.  This is only true for sections directly contained by the Standard obj.
       
       # create the main page
       page_content = front_matter.map { |l| l.to_hl7_site }.join("\n")
@@ -63,5 +63,5 @@ module V2Web
       title.gsub(/\s/, '_').hl7
     end
     
-  end # Site
+  end # Standard
 end

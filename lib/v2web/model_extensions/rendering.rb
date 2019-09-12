@@ -1,8 +1,4 @@
-# require 'ostruct'
 require 'base64'
-require_relative 'webdoc'
-require_relative 'sdoc'
-require_relative 'string'
 module V2Web
   
   # Maybe we should pass locals in instead of just passing content
@@ -13,7 +9,7 @@ module V2Web
   end
   
   def self.template_dir
-    @template_dir ||= File.join(__dir__, 'haml')
+    @template_dir ||= File.join(__dir__, '../haml')
   end
   def self.template_dir=(val)
     @template_dir = val
