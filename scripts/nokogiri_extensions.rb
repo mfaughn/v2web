@@ -10,7 +10,7 @@ module Nokogiri::XML
       styles = children.map { |c| c.map_styles}.flatten.uniq.sort
     end
     # def extract
-    #   extractor = SDoc::DocXtractor.new
+    #   extractor = V2Web::DocXtractor.new
     #   extractor.extract(self)
     #   # children.each { |c| c.extract(extractor)}
     # end

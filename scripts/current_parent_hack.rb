@@ -1,5 +1,5 @@
-module SDoc  
-  class Clause
+module V2Web  
+  class Section
     attr_accessor :current_parent
-  end # Clause
-end # SDoc
+  end # Section
+end # V2Web

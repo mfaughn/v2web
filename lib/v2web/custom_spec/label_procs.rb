@@ -34,7 +34,7 @@ module V2Web
         margin-left: 20px
 
     %div.label_style
-      HL7 v2+ Website Specifications
+      HL7 v2+ Web Publications / Specifications
     EOS
     Haml::Engine.new(haml.reset_indentation).render(self)
   end

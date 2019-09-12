@@ -28,7 +28,7 @@ sources = []
 sources << ['../test_data/V282_CH02A_DataTypes_strippedA']
 # sources << ['../test_data/HL7v2ConformanceMethodology_14052019_accepted_changes', 'test']
 sources.each do |input|
-  extractor = SDoc::DocXtractor.new
+  extractor = V2Web::DocXtractor.new
   docx_path = File.join(__dir__, input) + '.docx'
   html_path = File.join(__dir__, input) + '.html'
   stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")

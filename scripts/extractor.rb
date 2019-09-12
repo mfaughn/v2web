@@ -19,16 +19,16 @@
 # FIXME you are ignoring <w:tab/>
 require 'shellwords'
 require_relative 'current_parent_hack'
-module SDoc
+module V2Web
   class DocXtractor
     def extract_document(doc, title = 'Test')
       doc.remove_namespaces!
       ChangeTracker.start
-      @document = SDoc::Document.create(:title => title, :version => Time.now.strftime('%Y.%m.%d.%R'))
+      @site = V2Web::Site.create(:title => title, :version => Time.now.strftime('%Y.%m.%d.%R'))
       @composition = FHIR::Composition.create
-      @composition.sdoc = @document
-      @current_clause  = @document
-      @current_section = @composition
+      @composition.v2  = @site
+      @current_section = @site
+      @current_fhir    = @composition
       ChangeTracker.commit
       @current_depth = 0
       doc.children.each { |c| extract(c) }
@@ -102,10 +102,10 @@ module SDoc
       # ntype = node.class.to_s
       # if ntype == 'Text'
       #   ChangeTracker.start
-      #   t = SDoc::Text.new
+      #   t = V2Web::Text.new
       #   t.content = Gui_Builder_Profile::RichText.new(:content => node.content)
       #   t.save
-      #   @current_clause.add_content(t)
+      #   @current_section.add_content(t)
       #   ChangeTracker.commit
       #   return
       # end
@@ -114,7 +114,7 @@ module SDoc
         node.children.each { |c| extract(c) }
       when 'document'
         ChangeTracker.start
-        @document.source = Gui_Builder_Profile::Code.create(:content => node.to_xml)
+        @site.ooxml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
         ChangeTracker.commit
         node.children.each { |c| extract(c) }
       when 'tbl'
@@ -139,11 +139,11 @@ module SDoc
         if blip
           id = blip.attr('embed')
           ChangeTracker.start
-          figure = SDoc::Figure.create
+          figure = V2Web::Figure.create
           @last_figure = figure
           figure.file = @images[id]
           figure.save
-          @current_clause.add_content(figure)
+          @current_section.add_content(figure)
           ChangeTracker.commit
           @current_text = nil
           return
@@ -167,11 +167,11 @@ module SDoc
               if imagedata
                 id = imagedata.attr('id')
                 ChangeTracker.start
-                figure = SDoc::Figure.create
+                figure = V2Web::Figure.create
                 # @last_figure = figure
                 figure.file = @images[id]
                 figure.save
-                @current_clause.add_content(figure)
+                @current_section.add_content(figure)
                 ChangeTracker.commit
                 @current_text = nil # close preceeding text block
               end              
@@ -242,18 +242,18 @@ module SDoc
     def start_list(indicator_kind, unordered = false)
       @current_text = nil
       ChangeTracker.start
-      @list = SDoc::List.new
+      @list = V2Web::List.new
       # FIXME turn these on after regeneration
       # @list.ordered = true unless unordered
       # @list.indicator = 'letters'
       @list.item_indicator = 'letters' # turn off after regeneration
-      @current_clause.add_content(@list)
+      @current_section.add_content(@list)
       ChangeTracker.commit
     end
     
     def add_list_item(node)
       ChangeTracker.start
-      text ||= SDoc::Text.create
+      text ||= V2Web::Text.create
       text.content = Gui_Builder_Profile::RichText.create(:content => extract_text(node))
       text.save
       @list.add_item(text) # TODO only works for simple text content
@@ -275,28 +275,49 @@ module SDoc
     end
     
     def make_html_text(nodes)
-      html = Gui_Builder_Profile::RichText.create(:content => nodes.map{ |n| n.to_html}.join("\n") )
+      html = Gui_Builder_Profile::RichText.create(:content => nodes.map { |n| n.to_html }.join("\n") )
       html.markup_language = 'HTML'
       html.save
       html
+    end
+
+    def box(node, style)
+      @current_text = nil
+      ChangeTracker.start
+      box = V2Web::Box.create
+      box.style = style
+      @current_section.add_content(box)
+      ChangeTracker.commit
+      parent = @current_section
+      @current_section = box
+      add_text(node)
+      @current_section = parent
+    end
+
+    def gray_box(node)
+      box(node, 'gray_box')
+    end
+
+    def pink_box(node)
+      box(node, 'pink_box')
     end
     
     def add_table(node)
       @current_text = nil # make sure we close the preceeding text block
       ChangeTracker.start
       # puts "NO CAPTION" unless @caption
-      table = SDoc::Table.create
+      table = V2Web::Table.create
       if @caption
         table.caption = @caption
         @caption = nil
       end
-      table.source = make_xml_code(node)
-      @current_clause.add_content(table)
+      table.ooxml = make_xml_code(node)
+      @current_section.add_content(table)
       ChangeTracker.commit
       ChangeTracker.start
       cols = node.xpath('.//tblGrid/gridCol')
       cols.each do |col|
-        scol = SDoc::Column.create
+        scol = V2Web::Column.create
         # TODO = capture original style and put it in here
         table.add_column(scol)
       end
@@ -308,9 +329,9 @@ module SDoc
       rows = node.xpath('.//tr')
       rows.each_with_index do |row, i|
         ChangeTracker.start
-        srow = SDoc::Row.create
+        srow = V2Web::Row.create
         srow.header = i == 0 ? true : false
-        srow.source = make_xml_code(row)
+        srow.ooxml = make_xml_code(row)
         srow.save
         table.add_row(srow)
         ChangeTracker.commit
@@ -322,13 +343,13 @@ module SDoc
       cells = node.xpath('.//tc')
       cells.each do |cell|
         ChangeTracker.start
-        scell = SDoc::Cell.create
+        scell = V2Web::Cell.create
         srow.add_cell(scell)
-        scell.source = make_xml_code(cell)
+        scell.ooxml = make_xml_code(cell)
         paragraphs = cell.xpath('.//p')
         paragraphs.each do |para|
           text = Gui_Builder_Profile::RichText.create(:content => extract_text(para))
-          stext = SDoc::Text.create
+          stext = V2Web::Text.create
           stext.content = text
           scell.add_content(stext)
         end
@@ -339,16 +360,15 @@ module SDoc
     
     def add_text(node)
       ChangeTracker.start
-      @current_text ||= SDoc::Text.create
+      @current_text ||= V2Web::Text.create
       if @current_text.content
-        @current_text.content_content = @current_text.content_content + '<br>' + extract_text(node)
         @current_text.content_content = @current_text.content_content + extract_p(node)
       else
         @current_text.content = Gui_Builder_Profile::RichText.create(:content => extract_p(node))
       end
       @current_text.save
-      unless @current_clause.content.last&.is?(@current_text)
-        @current_clause.add_content(@current_text)
+      unless @current_section.content.last&.is?(@current_text)
+        @current_section.add_content(@current_text)
       end
       ChangeTracker.commit
     end
@@ -369,58 +389,63 @@ module SDoc
       @current_text = nil    
       ChangeTracker.start
       # puts "#{header_depth} -- #{extract_text(node)}"
-      next_clause  = SDoc::Clause.create(:title => extract_text(node))
+      next_clause  = V2Web::Section.create(:title => extract_text(node))
       xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
       xml.language = 'XML'
       xml.save
-      next_clause.source = xml
+      next_clause.ooxml = xml
       if header_depth == @current_depth
-        next_clause.current_parent = @current_clause.current_parent
+        next_clause.current_parent = @current_section.current_parent
       elsif header_depth > @current_depth
         @current_depth += 1
-        next_clause.current_parent = @current_clause
+        next_clause.current_parent = @current_section
       elsif header_depth < @current_depth
         change = @current_depth - header_depth
-        target = @current_clause.current_parent
+        target = @current_section.current_parent
         change.times do
           target = target.current_parent
         end
+        
         next_clause.current_parent = target
         @current_depth = header_depth # errrr, ok...doing it this way depends on no skipped header types in the original Word Doc...
       end
-      @current_clause = next_clause
-      @current_clause.current_parent.add_content(@current_clause)
+      
+      @current_section = next_clause
+
+      @current_section.current_parent.add_content(@current_section)
       # if header_depth >= @current_depth
-      #   # next_clause  = SDoc::Clause.create(:title => extract_text(node))
-      #   # xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
+      # 
+      # next_clause  = V2Web::Section.create(:title => extract_text(node))
+      #   
+      # xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
       #   # xml.language = 'XML'
       #   # xml.save
-      #   # next_clause.source = xml
+      #   # next_clause.ooxml = xml
       #   # FIXME turn this back on for FHIR resource linking
       #   # section      = FHIR::Section.create(:title => extract_text(node))
       #   # section.sdoc = next_clause
       #   # narrative    = FHIR::Narrative.create
       #   # section.text = narrative
-      #   # next_clause.source = # FIXME
+      #   # next_clause.ooxml = # FIXME
       #   # html = 'FIXME' # FIXME convert .docx snippet to html snippet
       #   # code = Gui_Builder_Profile::Code.create(:content => html)
       #   # code.language = 'HTML'
       #   # narrative.div = code
       #   # narrative.save
-      #   # @current_section.add_section(section) if @current_section
-      #   # @current_section = section
+      #   # @current_fhir.add_section(section) if @current_fhir
+      #   # @current_fhir = section
       #   if header_depth > @current_depth
       #     @current_depth += 1
-      #     next_clause.current_parent = @current_clause
-      #     # FIXME not tracking current parent of section -- need to do this in order for this to get structured correctly.  see :current_parent for analogous situation applied to SDoc elements
+      #     next_clause.current_parent = @current_section
+      #     # FIXME not tracking current parent of section -- need to do this in order for this to get structured correctly.  see :current_parent for analogous situation applied to V2Web elements
       #   else
-      #     next_clause.current_parent = @current_clause.current_parent
+      #     next_clause.current_parent = @current_section.current_parent
       #   end
       #   next_clause.current_parent.add_content(next_clause)
-      #   @current_clause = next_clause
+      #   @current_section = next_clause
       # else
-      #   @current_clause = @current_clause.current_parent
-      #   # @current_section = @current_section.parent
+      #   @current_section = @current_section.current_parent
+      #   # @current_fhir = @current_fhir.parent
       #   @current_depth -= 1 # This is WRONGGGGGGGG!!~!!!!! we don't know how far to go back up!
       # end
       ChangeTracker.commit

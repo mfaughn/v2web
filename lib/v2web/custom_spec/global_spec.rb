@@ -1,4 +1,5 @@
 global_spec_modifier do |view|
+  view.hide('ooxml')
   kontent = view.content
   view_classifier = view.data_classifier
   content_index = nil

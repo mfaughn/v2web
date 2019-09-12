@@ -6,6 +6,6 @@
 # Foundation load_path_management can not be revectored to a development version, 
 # becasue it's code is used to do the redirection (to reduce redundancy)
 require 'Foundation/load_path_management'
-application_module = Foundation.setup_app('v2_web', __FILE__)
+application_module = Foundation.setup_app('v2web', __FILE__)
 require 'gui_site/launcher'
 Gui.run(application_module)

@@ -1,4 +1,4 @@
-module SDoc
+module V2Web
   class DocXtractor
     # def extract_footers(path)
     #   here = Dir.pwd

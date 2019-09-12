@@ -3,7 +3,15 @@ require 'base64'
 require_relative 'webdoc'
 require_relative 'sdoc'
 require_relative 'string'
-module HL7Site
+module V2Web
+  
+  # Maybe we should pass locals in instead of just passing content
+  def self.create_linked_page(locals, root_dir, link)
+    location = File.join(root_dir, link)
+    page = V2Web.render_with_locals(:snelick_page, locals)
+    File.open(location, 'w+') { |f| f.puts page }
+  end
+  
   def self.template_dir
     @template_dir ||= File.join(__dir__, 'haml')
   end

@@ -1,5 +1,5 @@
 require 'open3'
-module SDoc
+module V2Web
   class DocXtractor
     def clear_hl7
       HL7.classes(:no_imports => true).each do |c|

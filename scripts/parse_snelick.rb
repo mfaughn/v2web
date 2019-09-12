@@ -29,7 +29,7 @@ sources = []
 # sources << ['../test_data/HL7v2DataTypeSpecializationsBallot-May2018', 'HL7 v2 DataType Specializations Ballot-May2018']
 sources << ['../test_data/V2_CONFORM_R1_O1_2019SEP', 'HL7v2 Conformance Methodology R1 O1 - September 2019']
 sources.each do |docx, title|
-  extractor = SDoc::DocXtractor.new
+  extractor = V2Web::DocXtractor.new
   path = File.join(__dir__, docx)
   extractor.extract_rels(path)
   extractor.extract_headers(path)

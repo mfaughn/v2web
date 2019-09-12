@@ -1,5 +1,5 @@
 require 'open3'
-module SDoc
+module V2Web
   class DocXtractor
     def extract_control_segements(doc, html)
       @html = File.open(html) { |f| Nokogiri::XML(f) }
