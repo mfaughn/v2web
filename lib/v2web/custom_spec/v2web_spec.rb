@@ -9,9 +9,11 @@ organizer(:Details, V2Web::Section) do
   # string('identifying_text', :label => 'Identifier', :disable => true)
   view_ref(:Summary, 'subsections', V2Web::Section, :label => 'Subsections')
   reorder('title', :to_beginning => true)
-  relabel('fhir', 'FHIR')
-  reorder('remarks', 'subsections', 'content', 'fhir', 'source', :to_end => true)
-  reorder('identifying_text', :to_beginning => true)
+  relabel('fhir_composition', 'FHIR Composition')
+  relabel('fhir', 'FHIR Section (backbone element)')
+  relabel('parents', 'Parent Section(s)')
+  reorder('remarks', 'subsections', 'content', 'parents', 'fhir_composition', 'fhir', 'original', 'ooxml', :to_end => true)
+  reorder('title', 'version', 'rendering_as', :to_beginning => true)
 end
 
 collection(:Summary, V2Web::SubsectionContent) do

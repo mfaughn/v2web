@@ -10,9 +10,9 @@ module V2Web
     # FIXME not sure this is correct anymore
     alias_association :subsections, 'V2Web::Section', :type => :many_to_many, :alias_of => :content
     
-    def subsections
-      content.select { |c| c.is_a?(V2Web::Section) }
-    end
+    # def subsections
+    #   content.select { |c| c.is_a?(V2Web::Section) }
+    # end
     
     derived_attribute(:identifying_text, ::String)
     def identifying_text
@@ -23,25 +23,21 @@ module V2Web
       number + ' ' + title
     end
     
-    def guess_root
-      root = parents.find { |parent| parent.is_a?(V2Web::Standard) }
-      return root if root
-      root = parents.find { |parent| parent.parents.each { |grandparent| grandparent.guess_root } }
+    def guess_root(from = parents)
+      from.find { |parent| parent.is_a?(V2Web::Standard) } || guess_root(from.map(&:parents).flatten.compact)
     end
     
-    # this will have problems if the same clause exists in multiple places in a single Document.
-    def number(root = nil)
-      root ||= guess_root
+    # this will have problems if the same section exists in multiple places in a single Document.
+    def number(root = guess_root)
       if parents.include?(root)
-        i = root.content.index { |c| c.id == self.id }
+        i = root.subsections.index { |c| c.id == self.id }
         return (i + 1).to_s
       end
       ret = nil
       parents.find do |parent|
-        # puts Rainbow("#{title} -- container: #{container&.title}").orange
-        val = parent.number(doc)
+        val = parent.number(root)
         if val
-          i = parent.content.index { |c| c.id == self.id }
+          i = parent.subsections.index { |c| c.id == self.id }
           ret = val + '.' + (i + 1).to_s
         end
       end
@@ -57,7 +53,7 @@ module V2Web
     def hl7_page_link(root_dir, base_link)
       link = File.join(root_dir, local_link(base_link))
       locals = {:link => link, :title => title, :depth => site_depth}
-      V2Web.render_with_locals(:snelick_section_link, locals)
+      V2Web.render_with_locals(:v2_section_link, locals)
     end
     
     def link_title

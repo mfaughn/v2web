@@ -12,7 +12,7 @@ module V2Web
     def to_hl7_site
       # Make a place to put everything and copy js/css/image files that will be needed
       dir_name ||= title.gsub(/\s/, '_')
-      root_dir = relative("../../pages/#{dir_name}")
+      root_dir = relative("../../../#{dir_name}")
       FileUtils.mkdir_p(root_dir)
       copy_web_files(root_dir)
       
@@ -28,7 +28,7 @@ module V2Web
       # FIXME is there some way to introduce pipe chars or something between navbar items here?
       nav_bar_items = nav_bar_items.join("\n")
       locals = {:content => page_content, :navbar_items => nav_bar_items, :title => title, :homepage_url => 'main.html'}
-      page = V2Web.render_with_locals(:snelick_page, locals)
+      page = V2Web.render_with_locals(:v2_page, locals)
       
       main_location = File.join(root_dir, 'main.html')
       File.open(main_location, 'w+') { |f| f.puts page }
@@ -52,7 +52,7 @@ module V2Web
     
     def copy_web_files(dest_dir, source_dir = nil)
       ['css', 'images', 'js'].each do |folder|
-        source_dir ||= File.join(dest_dir, '..', 'v2plus')
+        source_dir ||= relative("../../site_files")
         source = File.join(source_dir, folder)
         dest   = File.join(dest_dir, folder)
         FileUtils.copy_entry(source, dest) #unless File.exist?(dest)

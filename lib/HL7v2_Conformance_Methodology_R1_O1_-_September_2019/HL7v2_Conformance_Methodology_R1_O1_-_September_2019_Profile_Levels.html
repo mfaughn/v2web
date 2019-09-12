@@ -55,88 +55,88 @@ HL7 - Profile Levels
 </button>
 <div class='nav-collapse collapse navbar-inverse-collapse'>
 <ul class='nav navbar-nav'>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='main.html'>Home</a>
 </li>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Introduction.html'>
 Introduction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Levels.html'>
 Profile Levels
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_HL7_v2_Implementation_Guides.html'>
 HL7 v2 Implementation Guides
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Message_Profiles.html'>
 Message Profiles
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Constraints.html'>
 Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Vocabulary_Constraints.html'>
 Vocabulary Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Construction.html'>
 Profile Construction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Pairing_Sender_and_Receiver_Profile_for_Use.html'>
 Pairing Sender and Receiver Profile for Use
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Documentation.html'>
 Profile Documentation
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Computable_Document_Definitions.html'>
 Computable Document Definitions
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Glossary.html'>
 Glossary
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_A:_Predicate_Definition_Language.html'>
 Appendix A: Predicate Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_B:_Conformance_Statement_Definition_Language.html'>
 Appendix B: Conformance Statement Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_C:_Schema_Definitions.html'>
 Appendix C: Schema Definitions
 </a>
@@ -161,29 +161,29 @@ Appendix C: Schema Definitions
 </div>
 <div class='container'>
 <h2>
-11 Profile Levels
+2 Profile Levels
 </h2>
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Profiles innately form a logical hierarchy as levels of constraints are applied to the base standard. That is, profiling is typically an iterative process that proceeds from the base standard to intermediate levels (e.g., a national level profile), to local (implementation) levels. Three profile levels are defined:</p>
 </p>
 
 <ul>
 <li>
-<p class='p_snelick'>
+<p class='p_v2web'>
 Standard Profile
 </p>
 
 </li>
 
 <li>
-<p class='p_snelick'>
+<p class='p_v2web'>
 Constrainable Profile
 </p>
 
 </li>
 
 <li>
-<p class='p_snelick'>
+<p class='p_v2web'>
 Implementable Profile
 </p>
 
@@ -191,7 +191,7 @@ Implementable Profile
 
 </ul>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Figure 2.1 illustrates the basic profile-level hierarchy and the degree of constraints applied at each level. The standard-level profile (hereafter called &ldquo;standard profile&rdquo;) represents the base standard definitions and constraints as-is and establishes the framework for a specific type of event (e.g., an unsolicited vaccination record update &ndash; VXU V04 message event). Treating the standard as a profile aids in related discussions and management. At this level, the overall structure (&ldquo;template&rdquo;), including the data type definitions, is established; however, the full declaration of requirements has yet to be specified, and, therefore, considerable openness still exists. For example, the allowable segments are defined, but the set of segments that are to be included for this use case has not yet been determined.</p><p>Additional profiles are subsequently derived from the standard profile. The standard profile can be defined more precisely by adding constraints for a desired use (e.g., the national level of requirements for the unsolicited vaccination record update message) to create a constrainable profile. A constrainable profile is derived from either the standard profile or another constrainable profile, and it further constrains the definition attributes in accordance to the profile compliance rules stipulated in this document. For example, a U.S. state-level constrainable profile can be derived from a national-level profile by adding more constraints for a specific state.</p><p></p>
 </p>
 
@@ -1260,13 +1260,13 @@ iEDSBP4fq55mQu1BnLAAAAAASUVORK5CYII=
 <figcaption>Figure 2.1: Basic Profile-Level Hierarchy</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>In a constrainable profile, analogous to the standard profile, not all element attributes are fully constrained. An implementable profile defines all elements such that all optionality and openness have been removed. All interfaces deployed in a production setting are implementable profiles whether they are documented (explicitly stated) or not documented (implicitly stated). It is recommended that interfaces be completely documented to the implementable profile level using the profiling mechanisms described in this specification.</p><p>An implementable profile may also be derived by further constraining another implementable profile. In this case, all openness has been removed, however additional constraints on attributes are applied; for example, the usage of &ldquo;required, but may be empty&rdquo; can be strengthened to &ldquo;required&rdquo; if the refined use case needs it to be.</p><p>Constraints are added iteratively, thereby forming a hierarchy of profile levels; but a certain set of rules must be followed. A profile can only further constrain, not relax, the requirements defined in its parent profile. For example, if an element (e.g., a field) is &ldquo;required&rdquo; in the parent profile, the element can&rsquo;t be profiled to &ldquo;optional&rdquo; in a (compliant) child profile, because &ldquo;optional&rdquo; would be a relaxed requirement relative to &ldquo;required&rdquo;.</p><p>Conformity assessment can be conducted for each profile level. A complete assessment of the interface declaring conformance to an implementation profile can be determined. For standard-level and constrainable-level profiles, not all aspects can be determined. Declaring conformance to the base standard is generally of limited use to perspective stakeholders.</p>
 </p>
-<h2>
-6 Profiles in Use
-</h2>
-<p class='p_snelick'>
+<h3>
+2.1 Profiles in Use
+</h3>
+<p class='p_v2web'>
 <p>Two typical real-world scenarios demonstrating the use of the profile level model are presented in Figure 2.2.  In the first case, a national-level constrainable profile is developed. A hospital (group) adopts and refines the national-level guidance provided in the realm-specific constrainable profile. The hospital procures a vendor&rsquo;s product that can be configured to satisfy the requirements. The hospital and the vendor finalize the requirements and the software is installed. The resultant interface is documented as an implementable profile. Alternatively, the hospital could have provided their desired implementable profile directly to the vendor.</p>
 </p>
 
@@ -2349,7 +2349,7 @@ iEAxCfz/gaTmSCaJMtMAAAAASUVORK5CYII=
 <figcaption>Figure 2.2: Example Profile Hierarchy</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>In the second case, a vendor refines the national-level guidance profile and provides a generic implementation based on this constrainable profile. When working with clients for whom this profile closely satisfies their requirements, a final refinement is made at the specific sites. The vendor often will (or should) provide the documentation for the installed interface in the form of an implementable profile. The examples shown in Figure 2.2 can be nested and refined to any depth as appropriate.</p><p></p>
 </p>
 

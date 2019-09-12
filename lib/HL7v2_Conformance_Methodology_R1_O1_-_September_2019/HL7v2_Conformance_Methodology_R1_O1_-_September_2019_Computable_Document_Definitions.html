@@ -55,88 +55,88 @@ HL7 - Computable Document Definitions
 </button>
 <div class='nav-collapse collapse navbar-inverse-collapse'>
 <ul class='nav navbar-nav'>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='main.html'>Home</a>
 </li>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Introduction.html'>
 Introduction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Levels.html'>
 Profile Levels
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_HL7_v2_Implementation_Guides.html'>
 HL7 v2 Implementation Guides
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Message_Profiles.html'>
 Message Profiles
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Constraints.html'>
 Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Vocabulary_Constraints.html'>
 Vocabulary Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Construction.html'>
 Profile Construction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Pairing_Sender_and_Receiver_Profile_for_Use.html'>
 Pairing Sender and Receiver Profile for Use
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Documentation.html'>
 Profile Documentation
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Computable_Document_Definitions.html'>
 Computable Document Definitions
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Glossary.html'>
 Glossary
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_A:_Predicate_Definition_Language.html'>
 Appendix A: Predicate Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_B:_Conformance_Statement_Definition_Language.html'>
 Appendix B: Conformance Statement Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_C:_Schema_Definitions.html'>
 Appendix C: Schema Definitions
 </a>
@@ -161,12 +161,12 @@ Appendix C: Schema Definitions
 </div>
 <div class='container'>
 <h2>
-19 Computable Document Definitions
+10 Computable Document Definitions
 </h2>
-<h2>
-1 Document Definitions Layout
-</h2>
-<p class='p_snelick'>
+<h3>
+10.1 Document Definitions Layout
+</h3>
+<p class='p_v2web'>
 <p>The structure of the implementation guide, message profile, vocabulary definitions, and their descendants are expressed in a computable format using the XML schema language. Specific instances of each document type are expressed in XML. The document definitions are independent but have relationship among them. Additionally, ancillary documents are defined separately to facilitate document management and processing. Appendix C provides the XML schema definitions.</p><p></p>
 </p>
 
@@ -1744,7 +1744,7 @@ gAAEIAABCEAAAhMQ+D+gZnvJdW+t1QAAAABJRU5ErkJggg==
 <figcaption>Figure 10.1: Implementation Guide Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.1 provides a high-level overview of the implementation guide document definition. The definition contains meta data and one or more message profiles. The implementation guide document definition contains references to other document definitions. This allows reuse of the fundamental building block components such as data type definitions.</p><p>A message profile is normatively expressed as an XML instance document that contains the HL7 v2 message structure along with message element requirements. The XML instance document is governed by the message profile schema (XSD) document that provides the rules for expressing the requirements given in the normative clauses in this document.</p>
 </p>
 
@@ -3213,7 +3213,7 @@ TAcdVXogHAAAAABJRU5ErkJggg==
 <figcaption>Figure 10.2: Message Profile Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.2 illustrates the components of a message profile in the context of an implementation guide document definition. The message profiles contain segment groups and segments. The segment references segments definitions which in turn contains the fields along with constraint attributes.</p>
 </p>
 
@@ -4068,7 +4068,7 @@ gA6BNzYAAAAASUVORK5CYII=
 <figcaption>Figure 10.3: Data Type Library Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.3 shows the definition of the data type library that is referenced in field and components. The data type library contains base level data types and data type flavors used in the implementation guide.</p><p></p>
 </p>
 
@@ -5036,7 +5036,7 @@ AAEIQAACEIAABIpP4P8DhIWexv5wXP4AAAAASUVORK5CYII=
 <figcaption>Figure 10.4: Value Set Library Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.4 shows the value set library document definition. The value set library contains a list of value set definitions that provides the meta data and constraint attributes for each value set definition. Additionally, the value set definition contains the list of code values and their references to a code system.</p><p></p>
 </p>
 
@@ -5950,7 +5950,7 @@ AElFTkSuQmCC
 <figcaption>Figure 10.5: Vocabulary Binding Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.5 shows the vocabulary binding document definition. The definition provides the link between the vocabulary definition and the element.</p>
 </p>
 
@@ -7694,7 +7694,7 @@ YII=
 <figcaption>Figure 10.6: Condition Predicate, Conformance Statement and Co-constraints Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.6 shows the document definition for the Condition Predicate, Conformance Statement, and Co-constraints. The definition provides a set of constraint types that can be applied to a given element at various levels in message profile structure definition (e.g., segment).</p><p></p>
 </p>
 
@@ -8688,7 +8688,7 @@ YII=
 <figcaption>Figure 10.7: Profile Construction Components Relationships</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.7 shows the relationships among the message profiles and how a message profile can be constructed. A complete document definition can be contained in a message profile. However, a message profile may be constructed using various parts. A core profile and one or more profile components can be combined to create a composite profile, which is a message profile.</p>
 </p>
 
@@ -9391,49 +9391,49 @@ BCDQAgGkWAuwSAoBCEAAAhCAAASyJfD/A/IDJS5cZrnpAAAAAElFTkSuQmCC
 <figcaption>Figure 10.8: Slicing Document Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 10.8 shows the document definition for the Slicing mechanism.</p>
 </p>
-<h2>
-2 Meta Data
-</h2>
-<p class='p_snelick'>
+<h3>
+10.2 Meta Data
+</h3>
+<p class='p_v2web'>
 <p>Meta data is provided for both an implementation guide and message profile.</p>
 </p>
-<h2>
-2 Implementation Guide Meta Data
-</h2>
-<p class='p_snelick'>
+<h4>
+10.2.1 Implementation Guide Meta Data
+</h4>
+<p class='p_v2web'>
 <p>Table 10.1 provides a list of the meta data and definition for an HL7 v2 implementation guide. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) or Optional (O). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 10.1: Implementation Guide Meta Data</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Attribute
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Definition
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Type
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Use
 </p>
 
@@ -9441,30 +9441,30 @@ Use
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Name
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The natural language name of the implementation guide. Commonly used as the title of the implementation guide.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9472,30 +9472,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 IG Version
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The version of the implementation guide as decided by the author. There is no prescribed format.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9503,30 +9503,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Organization
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The name/identification of the organization or owner of the implementation guide.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9534,30 +9534,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Author
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 List of authors that created the implementation guide.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9565,30 +9565,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 HL7 Version
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 List of HL7 profile versions included in the implementation guide. Generally, most implementation guides include message profiles of the same HL7 version.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9596,30 +9596,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Create Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The date the implementation guide was created.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9627,30 +9627,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Last Update Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The date the implementation guide was last updated.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9658,30 +9658,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Status
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The status of the implementation guide. Can be draft, publish, superseded, or withdrawn.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9689,30 +9689,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Publish Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 If the status is &ldquo;published&rdquo;, this is the date the implementation guide was published. Once published, the IG version is static.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 C
 </p>
 
@@ -9720,30 +9720,30 @@ C
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Description
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Provides a short summary and intended use of the implementation guide
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9753,40 +9753,40 @@ O
 
 </tbody>
 </table>
-<h2>
-3 Message Profile Meta Data
-</h2>
-<p class='p_snelick'>
+<h4>
+10.2.2 Message Profile Meta Data
+</h4>
+<p class='p_v2web'>
 <p>Table 10.2 provides a list of the meta data and definition for an HL7 v2 message profile. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) or Optional (O). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 10.2: Message Profile Meta Data</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Attribute
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Definition
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Type
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Use
 </p>
 
@@ -9794,30 +9794,30 @@ Use
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Name
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The natural language name of the message profile. Commonly used as the title of the implementation guide.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9825,30 +9825,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 HL7 Version
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The HL7 foundational version of the message profile; i.e., the version of the HL7 v2 abstract message definition. Corresponds to MSH-12.1. Value is obtained from table HL70104.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9856,30 +9856,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Organization
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The name/identification of the organization or owner of the message profile.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9887,30 +9887,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Author
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 List of authors that created the message profile.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -9918,30 +9918,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Message Code
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The HL7 v2 Message Code (e.g., ADT). Corresponds to MSH-9.1. Value is obtained from table HL70076.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9949,30 +9949,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Trigger Event
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The HL7 v2 Trigger Event (e.g., A04). Corresponds to MSH-9.2. Value is obtained from table HL70003.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -9980,30 +9980,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Message Structure
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The HL7 v2 Message Structure (e.g., ADT_A01). Corresponds to MSH-9.3. Value is obtained from table HL70354.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -10011,30 +10011,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Level
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The type (level) of message profiles (HL7, Constrainable, Implementation).
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -10042,30 +10042,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Role
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The role (perspective) of the message profile (Sender, Receiver, or Both).
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -10073,30 +10073,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Create Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The date the message profile was created.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -10104,30 +10104,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Last Update Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The date the message profile was last updated.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -10135,30 +10135,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Status
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The status of the message profile. Can be draft, publish, superseded, or withdrawn.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -10166,30 +10166,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Publish Date
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 If the status is &ldquo;published&rdquo;, this is the date the message profile was published. Once published, the message profile version is static.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date Format
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 C
 </p>
 
@@ -10197,30 +10197,30 @@ C
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Description
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Provides a short summary and intended use of the message profile.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 String
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 O
 </p>
 
@@ -10228,30 +10228,30 @@ O
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Message Profile Identifier
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The Message Profile Identifier meta data is consisted with the definition of MSH-21 (Message Profile Identifier) specified in the message profile. The Message Profile Identifier Element may have an unlimited number of occurrences.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 EI Data Type
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -10259,30 +10259,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 Profile Type
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Indicates the type of profile represented. Can be (profile, profile component, composite profile, or value set collection).
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Enum
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -10293,7 +10293,7 @@ R
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p></p>
 </p>
 

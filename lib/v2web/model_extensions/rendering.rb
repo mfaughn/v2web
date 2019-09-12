@@ -4,7 +4,7 @@ module V2Web
   # Maybe we should pass locals in instead of just passing content
   def self.create_linked_page(locals, root_dir, link)
     location = File.join(root_dir, link)
-    page = V2Web.render_with_locals(:snelick_page, locals)
+    page = V2Web.render_with_locals(:v2_page, locals)
     File.open(location, 'w+') { |f| f.puts page }
   end
   

@@ -6,6 +6,8 @@ module V2Web
       # puts rendering_type.inspect
       html += rows.map { |r| r.to_hl7_site(r.header) }
       locals = { :content => html.join("\n") }
+      locals[:classes] = style.map(&:value).join(' ')
+      # puts locals[:classes] unless locals[:classes]&.empty?
       V2Web.render_with_locals(:table, locals)
     end
     
@@ -65,7 +67,9 @@ module V2Web
   class Cell
     def to_hl7_site(header = false)
       tag = header ? :th : :td
-      V2Web.render_with_locals(tag, {:content => content.map { |c| c.to_hl7_site(self) }.join("\n") })
+      locals = {:content => content.map { |c| c.to_hl7_site(self) }.join("\n") }
+      locals[:classes] = style.collect(&:value).join(' ')
+      V2Web.render_with_locals(tag, locals)
     end
     
     def html_content

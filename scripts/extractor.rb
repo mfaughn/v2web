@@ -313,6 +313,7 @@ module V2Web
       end
       table.ooxml = make_xml_code(node)
       @current_section.add_content(table)
+      add_styles(node, table)
       ChangeTracker.commit
       ChangeTracker.start
       cols = node.xpath('.//tblGrid/gridCol')
@@ -344,6 +345,7 @@ module V2Web
       cells.each do |cell|
         ChangeTracker.start
         scell = V2Web::Cell.create
+        add_styles(cell, scell)
         srow.add_cell(scell)
         scell.ooxml = make_xml_code(cell)
         paragraphs = cell.xpath('.//p')
@@ -355,6 +357,19 @@ module V2Web
         end
         scell.save
         ChangeTracker.commit
+      end
+    end
+    
+    # NOTE: This assumes that a UnitOfWork is already opened!
+    def add_styles(node, model)
+      if node.to_s =~ /fill="EECECC"/ && model.is_a?(V2Web::Cell)
+        model.add_style('emphasis_column')
+      end
+      if node.to_s =~ /fill="C96660"/ && model.is_a?(V2Web::Cell)
+        model.add_style('emphasis_header')
+      end
+      if node.to_s =~ /fill="F3E1E1"/ && model.is_a?(V2Web::Table)
+        model.add_style('striped_rows')
       end
     end
     
@@ -389,16 +404,16 @@ module V2Web
       @current_text = nil    
       ChangeTracker.start
       # puts "#{header_depth} -- #{extract_text(node)}"
-      next_clause  = V2Web::Section.create(:title => extract_text(node))
+      next_section  = V2Web::Section.create(:title => extract_text(node), :version => Time.now.strftime('%Y.%m.%d.%R'))
       xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
       xml.language = 'XML'
       xml.save
-      next_clause.ooxml = xml
+      next_section.ooxml = xml
       if header_depth == @current_depth
-        next_clause.current_parent = @current_section.current_parent
+        next_section.current_parent = @current_section.current_parent
       elsif header_depth > @current_depth
         @current_depth += 1
-        next_clause.current_parent = @current_section
+        next_section.current_parent = @current_section
       elsif header_depth < @current_depth
         change = @current_depth - header_depth
         target = @current_section.current_parent
@@ -406,27 +421,27 @@ module V2Web
           target = target.current_parent
         end
         
-        next_clause.current_parent = target
+        next_section.current_parent = target
         @current_depth = header_depth # errrr, ok...doing it this way depends on no skipped header types in the original Word Doc...
       end
       
-      @current_section = next_clause
+      @current_section = next_section
 
       @current_section.current_parent.add_content(@current_section)
       # if header_depth >= @current_depth
       # 
-      # next_clause  = V2Web::Section.create(:title => extract_text(node))
+      # next_section  = V2Web::Section.create(:title => extract_text(node))
       #   
       # xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
       #   # xml.language = 'XML'
       #   # xml.save
-      #   # next_clause.ooxml = xml
+      #   # next_section.ooxml = xml
       #   # FIXME turn this back on for FHIR resource linking
       #   # section      = FHIR::Section.create(:title => extract_text(node))
-      #   # section.sdoc = next_clause
+      #   # section.sdoc = next_section
       #   # narrative    = FHIR::Narrative.create
       #   # section.text = narrative
-      #   # next_clause.ooxml = # FIXME
+      #   # next_section.ooxml = # FIXME
       #   # html = 'FIXME' # FIXME convert .docx snippet to html snippet
       #   # code = Gui_Builder_Profile::Code.create(:content => html)
       #   # code.language = 'HTML'
@@ -436,13 +451,13 @@ module V2Web
       #   # @current_fhir = section
       #   if header_depth > @current_depth
       #     @current_depth += 1
-      #     next_clause.current_parent = @current_section
+      #     next_section.current_parent = @current_section
       #     # FIXME not tracking current parent of section -- need to do this in order for this to get structured correctly.  see :current_parent for analogous situation applied to V2Web elements
       #   else
-      #     next_clause.current_parent = @current_section.current_parent
+      #     next_section.current_parent = @current_section.current_parent
       #   end
-      #   next_clause.current_parent.add_content(next_clause)
-      #   @current_section = next_clause
+      #   next_section.current_parent.add_content(next_section)
+      #   @current_section = next_section
       # else
       #   @current_section = @current_section.current_parent
       #   # @current_fhir = @current_fhir.parent

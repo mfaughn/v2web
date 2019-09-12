@@ -55,88 +55,88 @@ HL7 - Vocabulary Constraints
 </button>
 <div class='nav-collapse collapse navbar-inverse-collapse'>
 <ul class='nav navbar-nav'>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='main.html'>Home</a>
 </li>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Introduction.html'>
 Introduction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Levels.html'>
 Profile Levels
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_HL7_v2_Implementation_Guides.html'>
 HL7 v2 Implementation Guides
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Message_Profiles.html'>
 Message Profiles
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Constraints.html'>
 Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Vocabulary_Constraints.html'>
 Vocabulary Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Construction.html'>
 Profile Construction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Pairing_Sender_and_Receiver_Profile_for_Use.html'>
 Pairing Sender and Receiver Profile for Use
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Documentation.html'>
 Profile Documentation
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Computable_Document_Definitions.html'>
 Computable Document Definitions
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Glossary.html'>
 Glossary
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_A:_Predicate_Definition_Language.html'>
 Appendix A: Predicate Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_B:_Conformance_Statement_Definition_Language.html'>
 Appendix B: Conformance Statement Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_C:_Schema_Definitions.html'>
 Appendix C: Schema Definitions
 </a>
@@ -161,29 +161,29 @@ Appendix C: Schema Definitions
 </div>
 <div class='container'>
 <h2>
-15 Vocabulary Constraints
+6 Vocabulary Constraints
 </h2>
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>The purpose of vocabulary profiling is to narrow the allowable content of data elements that are bound to coded data types such as ID, IS, CE, CWE, and CNE.  Vocabulary is a term used to describe, in general, the mechanics of defining, maintaining, and using codes to represent concepts in healthcare data exchange. An understanding of the vocabulary terms and principles is necessary before describing vocabulary profiling. A number of key concepts are defined:</p><p>Coded Data Element: is an element with a data type definition that supports coded concepts. Examples include IS, ID, CE, CWE, and CNE and any data type flavors of coded data type definitions (e.g., CWE_01).</p><p>Code System: is a managed collection of codes that represent concepts used in a particular business or technical area and in which often there are relationships between the coded concepts. Code systems are developed to provide a set of coded concepts for a particular domain, and they are designed for one or many specific or general business uses. A code system may be a simple list of coded concepts, or it may be designed with one or more explicit relationships between the coded concepts (at least hierarchical, and often many other types of relationships in a multi-dimensional fashion). As an example, a concept domain of &ldquo;Administrative Gender&rdquo; can contain a concept &ldquo;male&rdquo;, and a code &ldquo;M&rdquo; that represents the concept &ldquo;male&rdquo; within the context of the code system.</p><p>Value Set: is a collection of codes targeted for a specific use. A value set draws codes from one (usually) or more code systems; the result is a set of codes that constrains the possible content of a data element. A key distinction between a value set and a code system is that a code system is used as a reference source of coded meaning, whereas a value set is a specific constraint for a set of explicit business uses. Ultimately, binding of data elements to value sets is required for implementation.</p><p></p>
 </p>
 
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 Value Set Examples: The Logical Observation Identifiers Names and Codes (LOINC) is a code system that has tens of thousands of observations. It is widely used in healthcare data exchange standards to specify all existing laboratory tests in current use internationally as well as the most common clinical observations. Two examples of value sets that draw from the LOINC code system are the set of codes that specify radiology study types and the set of codes that just specify laboratory observations. Another example value set that draws from the LOINC code system is the NIP003 value set that contains immunization observations such as &ldquo;30963-3&rdquo; for &ldquo;Vaccine Funding Source&rdquo;. The NIP003 value set includes only a few dozen codes out of the tens of thousands of LOINC codes.<p></p><p>Concept Domain: is an abstract notion that refers to a set of related ideas (concepts) that serve to help define the meaning of a particular data element (over and above just the name of the data element). A concept domain does not directly define a particular set of concepts and is independent from a specific and explicit association to a particular vocabulary (code system or value set). The concept domain of postal code (ZIP code in the US) is a good example.</p><p>Tables: HL7 v2 defines a set of pre-defined tables that contain identifiers and may also contain codes.  A table sometimes acts like a code system, value set, and/or a concept domain depending on how it is defined and used. Tables in HL7 v2 have two types: HL7 Table and User Table. An HL7 Table includes values that must be used if the concept to be conveyed is contained in the table. HL7 Tables can be extended for inclusion of concepts not pre-defined in the table. A table could also be categorized as a User Table; this kind of table provides a list of suggested values that could be used, or, alternatively, a different set of values could be defined and used. The User Table could be empty with no values suggested, which indicates that this entire set of values must be defined by a specifier. Tables have a pre-defined identifier—the table number—that helps in managing the tables and in binding them to a data element.</p><p>In the context of profiling, the pre-defined set of tables in HL7 v2 can be used as a starting point for defining value sets. In different cases, a Table might be constrained (like a code system), extended, replaced (acting like a concept domain), or used exactly as-is (acting like a value set).</p>
 </p>
-<h2>
-4 Vocabulary Profiling Mechanics
-</h2>
-<p class='p_snelick'>
+<h3>
+6.1 Vocabulary Profiling Mechanics
+</h3>
+<p class='p_v2web'>
 <p>At a high level, the process of defining vocabulary requirements can be divided into two distinct aspects: (1) Binding and (2) Vocabulary Definition.</p><p>Binding consists of the following parts:</p><p>The Vocabulary Definition consists of the following parts:</p><p>In a specification, not all aspects of vocabulary constraints need to be defined, and often their definition will depend on the profile level. For example, a constrainable profile can bind an element to a concept domain. It is expected that a derived profile would further define the vocabulary constraints.</p><p>Binding: is the association of a coded data element to a vocabulary. Depending on the level of the specification, the binding can be to a concept domain, code system, or value set. The HL7 v2 tables can represent any of these three vocabulary types depending on how the table is defined and used. At each specification (profile) level, the binding becomes increasingly specific, refining the data semantics of the element by limiting the vocabulary&rsquo;s content to a particular set of coded values. For example, at the base standard level just a concept domain may be specified, and at the profile level a value set containing explicit codes for an implementation may be specified. In profiling, the HL7 v2 tables often are the starting point for value set creation.</p><p>Table 6.1 illustrates a binding of the coded data element PID-8 (Administrative Sex) to the vocabulary identifier by &ldquo;HL70001_EX&rdquo;. The vocabulary definition referenced by &ldquo;HL70001_EX&rdquo; reveals the details of the binding. Likewise, PID-10 (&ldquo;Race&rdquo;) is bound to the vocabulary definition identified by &ldquo;HL70005&rdquo;. In these examples, &ldquo;HL70001_EX&rdquo; is a modified set of codes that is based on the standard set of codes specified in the HL70001 table, and &ldquo;HL70005&rdquo; is used as-is.</p><p></p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 6.1: Binding Examples</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Patient Identification (PID) Segment Definition Excerpt
 </p>
 
@@ -191,37 +191,37 @@ Patient Identification (PID) Segment Definition Excerpt
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 SEQ
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Name
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 DT
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Usage
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Vocabulary
 </p>
 
@@ -229,37 +229,37 @@ Vocabulary
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
@@ -267,37 +267,37 @@ Vocabulary
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 7
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date/Time of Birth
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 TS
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -305,37 +305,37 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 8
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Administrative Sex
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 IS
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 HL70001_EX
 </p>
 
@@ -343,37 +343,37 @@ HL70001_EX
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 9
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Patient Alias
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 X
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -381,37 +381,37 @@ X
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 10
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Race
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 CE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 RE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 HL70005
 </p>
 
@@ -419,37 +419,37 @@ HL70005
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
@@ -460,16 +460,16 @@ HL70005
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Binding Strength: indicates the conformance of the binding, that is, whether the vocabulary must be used or not. There are two possible values: Required (R) and Suggested (S) (Recommended). All bindings are eventually required in implementations, and a suggested binding can be specified in a constrainable profile (i.e., the specification needs to be further constrained before implementation). The bound vocabulary definition with a binding strength of &ldquo;Suggested&rdquo; can be used as-is, modified, or replaced by an alternative code set in derived profiles. Bindings to concept domains and code systems always have a binding strength of &ldquo;Suggested&rdquo;,  because at the implementation level, all vocabulary bindings are to value sets (i.e., a definitive set of codes have been selected). Table 6.2 shows a required binding strength for HL70001_EX to PID-8 and a suggested binding strength for HL70005 for PID-10.</p><p></p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 6.2: Binding Examples with Binding Strength</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Patient Identification (PID) Segment Definition Excerpt
 </p>
 
@@ -477,44 +477,44 @@ Patient Identification (PID) Segment Definition Excerpt
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 SEQ
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Name
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 DT
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Usage
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Vocabulary
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='emphasis_header table_v2web1'>
+<p class='p_v2web'>
 Strength
 </p>
 
@@ -522,44 +522,44 @@ Strength
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -567,44 +567,44 @@ Strength
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 7
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Date/Time of Birth
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 TS
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -612,44 +612,44 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 8
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Administrative Sex
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 IS
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 HL70001_EX
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -657,44 +657,44 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 9
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Patient Alias
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 X
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -702,44 +702,44 @@ X
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 10
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Race
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 CE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 RE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 HL70005
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 S
 </p>
 
@@ -747,44 +747,44 @@ S
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 …
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
@@ -795,17 +795,17 @@ S
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>In constrainable profiles, the binding strength can initially be left unspecified (in essence, a binding strength of suggested) and then set once the use case or implementation requirements are better known. For implementation profiles, the binding strength must be set to required.</p><p>It is important in profiles to set the binding strength explicitly to required when the intent is to require a set of codes for use. This declaration is necessary to avoid confusion related to the implications of the underlying data type of the element with which the binding is associated. For example, the &ldquo;IS&rdquo; data type indicates that the element is associated with a User Table, but this association is not the desired specification in the profile.</p><p></p>
 </p>
 
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 No aspects of binding should be specified for coded elements with a usage of X (Cardinality of 0..0), as they are of no consequence.<p></p><p>Binding Parameters: define allowable options for code set modifications in derived profiles. Binding parameters include extensibility and stability.</p><p>Extensibility: indicates whether the value set definition can be extended or not in a derived (profiled) version of the specification. The extensibility of a value set definition can be either open or closed. Open means that more values can be added to the value set in a derived specification. Closed means that no more values can be added to the value set in a derived specification.</p><p>Stability: indicates whether the content of a value set can change outside of the definition of the value set or the specification in which it is bound to one or more data elements. Often the value set is dependent on an external code system that may be updated or replaced after publication of the interoperability specification. Stability can have one of two values: static or dynamic. Static indicates that for this version of the specification the value set is completely fixed, both its definition and the expanded list of codes. If the value set needs to be modified, then a new value set and an updated version of the specification must be created. Dynamic means that a value set can change outside of the definition of the specification (and thereby becoming, in essence, a new value set that may be managed and referred to in various ways). In some instances, dynamic value sets are entire code systems that periodically are updated.</p><p></p>
 </p>
 
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 Implementation Note: The CVX code system (used for immunization messaging in the US) or the German PZN (pharmaceutical central numbers) are good examples of when value sets with dynamic stability would be included in a specification. A new vaccine may be developed or an existing one deprecated and replaced with another. Another good example is the set of codes used for diagnoses. In Germany, a new code system for this purpose is released every year (e.g., &ldquo;ICD-10 German Modification Release 2016&rdquo;). In order to avoid the need for an updated release of the specification each year, the binding to a value set with dynamic stability is established. Under these circumstances the latest version of the value set should be used. How trading partners convey the use of the updated value set varies in practice. In some cases, it may be critical for them to be in harmony with the latest version immediately, while in others it may not be. When a prior agreement about this harmonization is not negotiated, the use of the conformance claim is helpful. The Message Profile Identifier element (MSH-21) can declare the value set being used (the value set can be managed as a profile component).<p></p><p>An overview of the vocabulary profiling mechanics is given in Figure 6.1. Point (1) indicates an element with a data type the supports coded data. A Value Set Binding, in simple terms, refers to assigning a set of coded concepts to a particular data element in order to implement the concept domain associated with the data element. A binding is thus to a value set and is what is indicated as point (2). In Figure 6.1, the Administrative Sex data element (1) in the Patient Identification Definition is bound to the value set identified by HL70001_EX in the value set column (2). The Value Set Identifier is an attribute of the value set definition (6). The Binding Strength (3) indicates the conformance of the binding, that is, whether the vocabulary must be used or not.</p>
 </p>
 
@@ -3022,13 +3022,13 @@ IAgIAoKAICAICAKCgCCQsAj8f3pJNnYRKzQdAAAAAElFTkSuQmCC
 <figcaption>Figure 6.1: Summary of vocabulary mechanics</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>The Value Set Definition (4) provides meta data and the codes. Meta data shown in Figure 6.1 include the name of the value set (5), the identifier (6), and value set properties extensibility (7) and stability (8). The codes (9) contained in the value set are F, M, and U, as indicated by the check marks in the usage column (11). For each code (value), a description is given (10). The value set is composed of codes from the HL70001 v2.5.1 code system (12). Note: a value set may include codes from multiple code systems. The value set definition shown in Figure 6.1 shows all of the codes in the code system (A, F, M, N, O, U) and the codes selected for inclusion into the value set (F, M, U). A value set definition may or may not include the complete set of codes in the source code system. The complete set is presented in this example to show the value set in the context of the source code system. Other forms of representation are equally acceptable as long as sufficient information is provided to indicate the status of the code. In this example value set, the usage is limited to inclusion or exclusion. Additional specificity can be associated with the code usage, the methodology is presented in Section 6.1.5. Here, vocabulary usage is defined in terms of the exclusion, definite inclusion, or possible inclusion of a code in a value set.</p><p>The Content Definition of the value set indicates the method used to expand a value set definition into a set of codes. The example presented in Table 6.1 is an explicit listing (i.e., enumeration). An enumerated value set definition is called an Extensional definition. Other means used to expand a value set definition into a set of codes include using regular expressions, characterizing specific attributes for a specific code system (e.g., all laboratory codes in LOINC), or using hierarchical associations that include all specializations of the codes in question. By applying these kinds of mechanisms, a value set definition can be expanded to the Value Set Expansion providing all codes required for the identified business use in the implementation. This form is called an Intensional definition. An Intensional definition should include how to obtain the value set expansion.</p>
 </p>
-<h2>
-12 Typical Vocabulary Bindings
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.1 Typical Vocabulary Bindings
+</h4>
+<p class='p_v2web'>
 <p>Figure 6.2 indicates the types of vocabulary bindings that are typical for each profiling level. The base standard level supports broad use cases, so it follows that the vocabulary bindings are typically at the concept domain and code system level. As use cases are developed and refinement of a specification occurs at the constrainable profile level, more information becomes known, and, therefore, relevant value sets begin to emerge. At the implementation level, all coded elements must be linked to a specific value set. In some implementation-level specifications, an element is bound to a code system, which is then deemed implicitly to be the value set (although explicit designation is recommended).</p>
 </p>
 
@@ -3788,16 +3788,16 @@ WCDw/wFz0IP6jw1XQQAAAABJRU5ErkJggg==
 ' alt = 'Figure 6.2: Typical Vocabulary Bindings' />
 <figcaption>Figure 6.2: Typical Vocabulary Bindings</figcaption>
 </figure>
-<h2>
-13 Single Code Element Binding
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.2 Single Code Element Binding
+</h4>
+<p class='p_v2web'>
 <p>A single code element binding is a vocabulary binding in which the binding to an element is to a single value selected from a vocabulary definition. Through analysis, it is determined that only a single code is suitable for the use case. In such circumstances, the binding is to a constant value and a special binding mechanism can be applied. The single code element binding constraint pattern allows for the vocabulary binding without having to employ the complete vocabulary mechanics process. The constraint pattern is shown below:</p><p>Constraint Pattern: Element Location (Element Name) SHALL contain the constant value ‘Code&rsquo; drawn from the ‘Code System&rsquo; code system.</p><p>A typical example is for MSH-9 values and MSH-12 (Version ID). The example below is for the message event defined in MSH-9.2.</p><p>Example: MSH-9.2 (Event Type) SHALL contain the constant value ‘A04&rsquo; drawn from the ‘HL70003&rsquo; code system.</p><p>The single code element binding is a convenience mechanism for specifying a complete vocabulary binding in a single statement.</p>
 </p>
-<h2>
-14 Use of Extensibility and Stability
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.3 Use of Extensibility and Stability
+</h4>
+<p class='p_v2web'>
 <p>Figure 6.3 shows value set attributes of Extensibility and Stability, along with the allowable settings these attributes may take on related to the specification space and their impact in post-specification and runtime environments. The requirements for value sets are determined when specifications are created initially in the base standard, and then these requirements are subsequently refined through the mechanism of profiling. The specification (and the impact of that specification) of the extensibility and stability for a value set can be considered in three distinct spaces: the specification space, post-specification space, and operational space. In the specification space, the extensibility of a value set can be designated as &ldquo;open&rdquo; or &ldquo;closed&rdquo;. Constrainable profiles (which include the base standard) can specify value set extensibility as either &ldquo;open&rdquo; or &ldquo;closed&rdquo;. For implementation profiles, the value set extensibility is closed. At this point in the creation of the specification, the use case is definitive; therefore, the universe of allowable values for the element is known and is documented as such. Any desired change would have to occur in another version of the specification with a new value set. Extensibility is a construct in the context of the specification space; modification of a value set outside the specification space is controlled by Stability and is discussed next.</p><p>There are circumstances when, although the complete state is known, it is anticipated that additional updates to a value set will be necessary. In some cases, the updates can be managed, published, and communicated in an orderly manner. This situation occurs in the post-specification space, and it is indicated by the value set having a stability of &ldquo;dynamic&rdquo;.</p><p>For most internal value set bindings (i.e., HL7 tables), the settings for extensibility and stability predominantly are &ldquo;closed&rdquo; and &ldquo;static&rdquo; (and for implementation profiles extensibility must be &ldquo;closed&rdquo;). A stability of &ldquo;static&rdquo; is appropriate for value sets where all concepts needed for the use case are known at the time of specification. These value sets may also have dependent concepts or those in which the value set is tightly-coupled to the underlying technical infrastructure; that is, the concepts have certain dependencies within the use case, and any change that is made has a significant and consequential impact on implementations. For example, if a value set for laboratory results defined a state machine using various status codes (preliminary, final, corrected, etc.), it would be unacceptable to allow another state to be defined outside the bounds of the specification. This example is one in which the value set codes are tightly-coupled to the technical infrastructure. A more subtle example is the definition of the abnormal flags (HL7 v2 Table 0078) that indicate the result interpretation. The code &ldquo;H&rdquo; indicates &ldquo;above high normal&rdquo; and &ldquo;HH&rdquo; indicates &ldquo;above upper panic limits&rdquo;. If an intermediate setting is needed, for example, &ldquo;HU&rdquo; for &ldquo;very high&rdquo;, then this concept should be defined as part of a new version of the interoperability specification and value set (and not as part of a local value set or a dynamic value set). Adding an intermediate value changes the interpretation of the existing result interpretations in the value set, which, in turn, is a patient safety issue (in some circumstances).</p><p></p>
 </p>
 
@@ -4759,48 +4759,48 @@ CEAAAgUT+P8BIj3NhVBYiV4AAAAASUVORK5CYII=
 <figcaption>Figure 6.3: Extensibility and Stability Use in Specifications</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Other value sets that contain independent concepts can have a stability of &ldquo;dynamic&rdquo;. For example, ICD-10 codes could be updated and published periodically (as a new version or a new code system). This update is outside the scope of the published version of the specification that references the ICD-10 code system as a value set. Tagging the value set as dynamic, however, is a notification to implementers that the value set can change and that they should check for and make their updates accordingly.</p><p>Certain real-world circumstances necessitate communication of an unknown code. An example might be when a new strain of a virus is detected that must be reported to public health agencies. A code for this virus could be established (without formal recognition of a code system steward) and reportable lab result messages with this code could be sent immediately, even though the receiver may not know how to handle the new code. If the code can be handled by &ldquo;generic&rdquo; processing, however, a complete understanding of it by the receiver may not be necessary. Also, when the code and the associated concept are published officially, receivers that update to this new value set can then process this information in a meaningful way (if so desired). This circumstance is indicated in the &ldquo;Operational Space&rdquo; as an &ldquo;Unexpected Code may be Sent&rdquo;.</p><p>In this circumstance, there is no pre-coordinated agreement about this code, but there can be a pre-coordinated agreement that an unknown code is possible for a given element. It is important that standards provide an explicit and distinct mechanism to support this notion such that it is not conflated with other mechanisms, which dilutes the specification and lessens the capabilities for validation. HL7 v2 introduced the concept of Implementation Tolerance that allows for unknown (undocumented) codes to be exchanged at runtime with impunity, because the complete code set is not known to the implementers. For a binding that supports implementation tolerance, an implementation must process unknown codes without raising an exception.</p><p></p>
 </p>
 
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 Implementation Tolerance: There are certain use cases that necessitate sending unknown codes. A profile can declare implementation tolerance for a given vocabulary binding.<p></p><p>It should be pointed out that, regardless of the use of implementation tolerance, implementations always have the latitude to be tolerant. A conformance violation may be detected, but the implementation can process the data in whatever manner they see fit.</p><p>It is important that vocabulary specification provide a way to indicate whether a data element definition allows or disallows unexpected (unpublished) codes. The mechanism should not be conflated with existing mechanisms (i.e., Extensibility and Stability). Implementers must be able to distinguish concepts of extensibility and stability from the case of unexpected codes in operational environments. Such information enables precise specifications and robust implementations. Systems can handle the &ldquo;expected&rdquo; unexpected code for data elements specified with this attribute and report a violation for data elements in which unexpected codes are not allowed. For most data elements, unanticipated and unexpected codes would not be expected (in well-defined specifications).</p>
 </p>
-<h2>
-15 Profiling at the Code Level
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.4 Profiling at the Code Level
+</h4>
+<p class='p_v2web'>
 <p>Similar to, but not equivalent to, usage for data elements is the concept of usage for the codes in a value set. Vocabulary usage is a mechanism for defining and setting the scope of the concepts to be included, considered for inclusion (or exclusion), or excluded in a value set definition.</p><p>Table 6.3 defines usage indicators for profiling vocabulary. Required (R) usage indicates that the code must be supported (and thus can be used); Permitted (P) indicates that the code can be profiled to R, P, or E in a derived profile; and Excluded (E) indicates that the code must not be supported (and thus cannot be used) for the given element. The Permitted usage indicator is only applicable to constrainable profiles, i.e., it cannot appear in an implementation profile (it must become an R or an E). Permitted usage can be included in a closed value set (at the constrainable profile level). In this situation, the set of all known concepts are defined, but some concepts are left to be profiled at the implementation level based on local requirements/needs.</p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 6.3: Vocabulary Profiling Usage</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Usage
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Name
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Conformance
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Allowable Usage
 </p>
 
@@ -4808,30 +4808,30 @@ Allowable Usage
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Required
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The code SHALL be supported.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R
 </p>
 
@@ -4839,30 +4839,30 @@ R
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 P
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Permitted (applicable to constrainable profiles only)
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 None; to be specified.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R, P, E
 </p>
 
@@ -4870,30 +4870,30 @@ R, P, E
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 E
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Excluded
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The code SHALL NOT be supported.
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 E
 </p>
 
@@ -4904,7 +4904,7 @@ E
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 6.4 indicates the relationship of vocabulary usage to the profiling hierarchy. The value set is deemed to be &ldquo;scoped&rdquo; (at the constrainable profile level). At the base standard level, all codes have an implied usage of Permitted. The base standard defines a set of concepts and the representative codes. The binding strength determines how the value set can be used in derived specifications. If the binding strength is &ldquo;Required&rdquo;, and if the concept that needs to be conveyed is available in the code set, then the code must be used. The use case analysis determines which codes are applicable for the element to which the value set is bound. An important point to make here is that the base standard would have defined a set of codes with associated concepts. A binding strength of Required means that the value set must be used; however, only the codes that are appropriate to use (based on use case analysis) for the element to which the value set is bound should be specified in derived profiles. This analysis should be completed for every element to which the base vocabulary is bound. In practice, specification at this granular level rarely occurs (but should) in implementation guides.</p>
 </p>
 
@@ -6412,7 +6412,7 @@ gg==
 <figcaption>Figure 6.4: Vocabulary Profiling Usage and Allowable Transitions</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 6.5 presents a typical vocabulary specification for administrative gender at the base standard level. The table indicates the value (or code), a description, usage, and the code system to which each value belongs. Typically, usage is not designated at the base standard level; Permitted is the implied usage for each code.</p>
 </p>
 
@@ -6731,7 +6731,7 @@ O64gAAAAAElFTkSuQmCC
 <figcaption>Figure 6.5: Base Standard Sample Vocabulary Definition</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Also, unless explicitly stated otherwise, a vocabulary specification at the base standard level has open extensibility. Extensibility is rarely restricted in a base standard (or more precisely, there is no indication of the extensibility).</p>
 </p>
 
@@ -7186,7 +7186,7 @@ xIoAVSpW1UVnSYAESCBlBP4/5dOmRqeIWloAAAAASUVORK5CYII=
 <figcaption>Figure 6.6: Example Vocabulary Profiling 1</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Figure 6.6 shows a vocabulary profiling example using an abbreviated value set definition. Starting with the base standard definition, a set of concepts and associated codes are defined. The Usage for all of the codes is Permitted, and the value set definition has &ldquo;open&rdquo; extensibility. This value set definition is equivalent to the sample vocabulary definition in Figure 6.5 (but the description and code system columns are omitted for brevity in Figure 6.6). The usage of each code in the value set is determined based on the use case analysis conducted during the development of a derived specification. In the constrainable profile in Figure 6.6, the usage for codes &ldquo;F&rdquo; and &ldquo;M&rdquo; is profiled to Required; for &ldquo;A&rdquo;, &ldquo;N&rdquo;, and &ldquo;O&rdquo; the usage is profiled to Excluded; and usage for &ldquo;U&rdquo; is left to be decided in another derived specification (e.g., a local implementation). Furthermore, the specification authors decided that no additional codes can be added in derived profiles (Extensibility = &ldquo;closed&rdquo;), and that this value set is not suitable for revisions post publication of the specification (Stability = &ldquo;static&rdquo;). Next, Figure 6.6 shows that, at the implementable profile level, the local use case dictated that the concept represented by the code &ldquo;U&rdquo; was not needed, therefore, it is profiled with a usage of &ldquo;E&rdquo;. A different local use case could specify that the concept is needed, in which case the usage for the code &ldquo;U&rdquo; would be set to &ldquo;R&rdquo;.</p>
 </p>
 
@@ -7657,7 +7657,7 @@ jARIgARI4P8DgyKxgLO0GFcAAAAASUVORK5CYII=
 <figcaption>Figure 6.7: Example Vocabulary Profiling 2</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>In the next example (Figure 6.7), the use case for the implementable profile warranted an additional concept represented by the code &ldquo;X&rdquo;. This extension is valid since the value set has Extensibility set to &ldquo;open&rdquo; in the constrainable profile. If the Extensibility had been &ldquo;closed&rdquo; in the constrainable profile, the code &ldquo;X&rdquo; could not have been added to the implementable profile (to be considered compliant with its parent profile).</p>
 </p>
 
@@ -8152,7 +8152,7 @@ CZAACZhBgIplRj3RShIgARIggf8PzarmB7npZ7UAAAAASUVORK5CYII=
 <figcaption>Figure 6.8: Example Vocabulary Profiling 3</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>The example in Figure 6.8 shows that a new concept (represented by &ldquo;Y&rdquo;) was added in the constrainable profile, and another concept (represented by &ldquo;Z&rdquo;) was added in the implementable profile. The base standard Extensibility is &ldquo;open&rdquo;, which allows for the addition of code &ldquo;Y&rdquo; in the constrainable profile; likewise, the constrainable profile Extensibility is &ldquo;open&rdquo;, which allows for the addition of the code &ldquo;Z&rdquo; in the implementable profile. It is important to note that the extensibility is a construct that is in the specification space; as long as the specification authors indicate that it is &ldquo;open&rdquo;, additional codes can be added as the use case is refined. Additional codes can be added even when the Stability is &ldquo;static&rdquo;, because Stability describes another dimension of specification, which is whether the value set can be modified post-specification by an external steward. In this example, the authors deemed this value set not to be modifiable post-specification.</p>
 </p>
 
@@ -8926,7 +8926,7 @@ BK4Jiz0AfwAAAABJRU5ErkJggg==
 <figcaption>Figure 6.9: Example Vocabulary Profiling 4</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Figure 6.9 demonstrates how the use of a dynamic value set might be defined in practice. Initially at the base standard level, not only is the concept domain known, but a particular code system is specified. An example might be the set of CVX codes for reporting immunizations. When published, the base standard specified codes &rdquo;01&rdquo; through &rdquo;06&rdquo;. It might be assumed that the binding strength and all code usages are defined as Required; however, generally no indication of this explicit requirement is given in the standard. It may also be assumed for this vocabulary definition that Extensibility would be &ldquo;open&rdquo;, and, for Stability either &ldquo;dynamic&rdquo; or &ldquo;static&rdquo; might be assumed (but again, typically no indication is given in the standards). Therefore, in Figure 6.9 all usages are initially shown as Permitted, Extensibility is set to ‘open&rsquo;, and Stability is set to ‘?&rsquo; (unknown, but to be defined). In a constrainable profile (e.g., at the national level), it is likely that a newer version of the CVX code system exists, as years may have passed since the publication of the base standard and the development of an implementation guide, so the constrainable profile would reference the latest CVX code system. Figure 6.9 illustrates this possible change; the immunization represented by the code &rdquo;07&rdquo; has been added to the code system. Stability for the constrainable profile is defined explicitly to be &ldquo;dynamic&rdquo;, which is an indication that post-specification the implementer can expect this code system (implicitly a value set) to change. At the implementable profile level, another update has been made to the CVX code system: code &ldquo;08&rdquo; has been added. This change may have occurred by the time a particular implementation was installed, as the CVX code had been updated since the publication of the national level specification. Implementers should use the latest version of the code system available. Additionally, the implementers should be aware that subsequent revisions will be made and should plan accordingly. This situation is depicted in Figure 6.9 as a post-specification revision; code &ldquo;09&rdquo; has been added. When the immunization message is transmitted, the version of the CVX code system used should be indicated (but it rarely is). HL7 v2.x supports this capability with the message profile identifier. The dynamic value set can be considered a profile component, and the sender can indicate support of a specific version of the value set.</p><p>Another situation to be aware of is the deprecation or status (e.g., made inactive) of codes in an external code system. In such a case, the usage of the code needs to be clearly indicated in the specification. In the previous example, what if code ‘03&rsquo; is made inactive by the external steward of the code system in the post-specification space? Is it valid to continue to send the code? The answer depends on the value set specification tied to the anticipated use. If the value set is deemed to support newly administered vaccines, then the specification would indicate that inactive codes are now &ldquo;excluded&rdquo;, and a new value set is created. However, if the use is for the messaging of historical vaccines, then the inactive codes are still valid (and therefore &ldquo;required&rdquo;). Separate value sets and bindings should be included in the specification to articulate the requirements precisely.</p><p>These examples illustrate the various ways in which a value set can be specified. The vocabulary profiling mechanism provides a flexible utility such that a broad set of value sets can be specified.</p><p>An analysis should be performed for each coded element in the specification to determine which codes from a source code system are applicable for that particular element. Unfortunately, this level of definition usually does not occur in practice. Developers, therefore, must decide for themselves which codes apply to a particular element. For example, in many HL7 v2.x implementation guides, HL7 table 0203 (identifier type) is universally applied to every element that includes an identifier type with no profiling (i.e., HL70203 is simply referred to or is copied as-is from the base standard). There are over one hundred identifier types, and in most cases only a few of the codes are pertinent to any given data element. Figure 6.9 presents one possible solution for specifying the appropriate level of detail.</p>
 </p>
 
@@ -10191,13 +10191,13 @@ AAAASUVORK5CYII=
 <figcaption>Figure 6.10: Creating a Collection of Value Sets and Binding to a Data Elements</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>The Identifier Type in HL7 v2.x is bound to a number of data types and is used in higher-level elements. In a given specification, many data elements will use the Identifier Type for many different purposes. The base standard provides a set of codes for common identifier types that apply to a broad spectrum of identifiers. This set can range from a medical record number to a bank account number. For a particular element, however, only a few of the codes might be applicable.</p><p>At the base standard level all codes in a code system can be implicitly considered Permitted, thus giving the most flexibility for specification in derived profiles. An analysis must be performed for each element that uses the code system in order to ascertain which codes actually do apply.  Figure 6.10 shows a sample list of codes for HL7 table 0203. It also indicates four elements to which this code system is bound in the base standard. For each binding, a value set is created that is shown in the form of a separate column. For the Patient Identifier List-Identifier Type (PID-3.5) element, analysis of the particular use case is necessary (e.g., analysis related to the Lab Results Interface (LRI) determined that support for the Medical Record Number (MR) and Patient External Identifier (PT) codes are required). The Driver&rsquo;s License Number (DL), National Provider Identifier (NPI), and Social Security Number (SS) codes are Permitted, while the rest of the codes are Excluded. For the Patient Account Number-Identifier Type (PID-18.5) only the Account Number code is applicable. Value sets for Ordering Provider-Identifier Type (ORC-12.13) and Performing Organization Name-Identifier Type (OBX-23.7) are defined as well. In addition to specifying the usage for each code, other attributes for each element-specific value set are determined, such as the Binding Strength, Extensibility, and Stability. Essentially, the collection of value sets in Figure 6.10 are domains for the concept of identifier type, and elements can be constrained by indicating the domain.</p><p>The table in the lower part of Figure 6.10 shows examples of value set bindings that might appear in a specification (each row in the table would be in the associated element location in the specification). The upper part of the diagram shows the value set collection. Each column represents a value set and lists the associated attributes and vocabulary-constraint usage for each code in the value set. Some of the attributes appear both in the specification and the value set collection, which allows for easy cross referencing (since they can be specified in separate documents).</p><p>The Binding ID is a qualifier to the Value Set Root Name (HL70203_USL) and, when combined, they provide the binding in the specification (e.g., HL70203_USL.3 is used to bind to the Identifier Type of the Ordering Provider element). The binding qualifier may be included as part of the binding definition in the specification (as shown in Figure 6.10) or it may not be included. If the qualifier is not included in the specification (profile), then the profile and the value set collection are separated, which means the value sets could be changed without requiring changes to the specification. This approach promotes effective management of updates; however, versioning must be accounted for and stakeholders need to be notified.</p><p>Although these value sets are shown to be bound to particular elements for a particular profile, value sets are defined independently in order to promote reuse of the value set. As an example, perhaps several value sets could be created from the administrative gender code system, and then the different value sets could be referenced in many specifications (not only HL7 v2.x but any other specification based on other standards, such as CDA and FHIR). This approach to value-set reuse requires broader vocabulary management.</p>
 </p>
-<h2>
-18 Vocabulary Compatibility
-</h2>
-<p class='p_snelick'>
+<h5>
+6.1.4.1 Vocabulary Compatibility
+</h5>
+<p class='p_v2web'>
 <p>Value sets can be created for senders and receivers independently. Since this is the case, under what circumstances are the value sets compatible?  Figure 6.11 shows how a sender and receiver might profile a value set differently in a constrained profile. The sender excludes both D and H, while the receiver excludes D but includes H. In this case, the derived profiles (and therefore implementations) are compatible.</p>
 </p>
 
@@ -10722,7 +10722,7 @@ AQQQQAABBPIi8P8BA2VRulpTKvsAAAAASUVORK5CYII=
 <figcaption>Figure 6.11: Terminology Assessment for Sender/Receiver Implementations</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>In general, if the sender is only sending a subset of the codes that are supported by the receiving application (Figure 6.11), then the profiles are compatible. If the sender uses a code the receiver does not support, however (see element &ldquo;D&rdquo; in Figure 6.12), a compatibility issue occurs.</p><p></p>
 </p>
 
@@ -11479,44 +11479,44 @@ Gj/WJgESIAESIAES8CuB/w/bWWfyI96vMgAAAABJRU5ErkJggg==
 <figcaption>Figure 6.12: Compatibility Issues with Supportive Set of Codes</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>According to the implementation guide, both derived profiles are compliant, because they specify valid constraints. The sender and receiver are not compatible, however, because the sender specifies code &ldquo;D&rdquo; as R-required while the receiver has specified code &ldquo;D&rdquo; as E-excluded. Thus, even if both sender and receiver implement their specified profiles correctly (that is, they are conformant), they are not interoperable (because the specifications are not compatible). This example stresses the importance of trading-partner agreements to address specific use case needs. In this case, the sender has an expectation about a code that is not supported by the receiver. Table 6.5 depicts the situation in a row and column format.</p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center table_v2web1'>
 <tbody>
 <caption>Table 6.4: Compatibility Analysis for Vocabulary</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Sender
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Relationship
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Receiver
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Compatible
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Comment
 </p>
 
@@ -11524,37 +11524,37 @@ Comment
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 S := { c | c is supported by sender}
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 R := { c | c is supported by receiver}
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Yes
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The receiver has more supportive capabilities than the sender.
 </p>
 
@@ -11562,37 +11562,37 @@ The receiver has more supportive capabilities than the sender.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 No
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 The sender can send a code that the receiver does not understand.
 </p>
 
@@ -11603,50 +11603,50 @@ The sender can send a code that the receiver does not understand.
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p>
 </p>
-<h2>
-16 Profiling HL7 Tables
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.5 Profiling HL7 Tables
+</h4>
+<p class='p_v2web'>
 <p>The base HL7 standard defines four types of tables:</p><p>Certain rules that are defined for these tables in the base standard must be adhered to in the constraint of the table. These rules are the starting point for placing constraints as described in the previous sections on vocabulary profiling.</p><p>User-Defined Table: A user-defined table provides an initial table identifier and, in some cases, suggested code values. These are recommendations and, therefore, place no initial requirements on the vocabulary definition. In a message profile, a specifier may use, extend, modify, or replace the suggested codes and descriptions. Once the vocabulary definition is defined, a specifier may bind the vocabulary definition to a data element and designate the binding strength as &ldquo;required&rdquo;, as prescribed in Section 6.1.1. That is, the specifier considers the data semantics associated with the data element, determines a suitable vocabulary definition, and declares that definition required. The status of the binding is required at this point, even though the underlying data type is ‘IS&rsquo;. A specifier can promote the data type to ‘ID&rsquo;, however, the implications of the initial data type are of little consequences once the vocabulary requirements are specified in a message profile.</p><p>HL7-Defined Table: An HL7-defined table provides an initial table identifier, code values, and certain base standard requirements. Code values defined in an HL7 table must not be redefined in a message profile; and if a concept needed for a use case is not defined, the table definition can be extended. Below is a list of rules for constraining HL7-defined tables:</p><p>Beyond the initial set of rules imposed by HL7-defined tables in the base standard, constraints are applied as described earlier in this section.</p><p>External Tables: An external table is a vocabulary definition created, maintained, and published by another standards organization. A specifier may reference an external table (code system) and bind that table to a data element in a message profile. The base standard may bind a code system or a set of code systems to a data element. In cases of a CNE data type, this binding is the starting point for profiling.</p><p>Local Tables: The HL7 base standard provides no requirements or guidance for local tables. A local table is a table with a non-HL7 assigned table identifier that contains a set of locally or site defined values. Local tables are typically used for elements with a CWE data type. During the process of profiling, a specifier will create and bind local tables. The mechanisms described for specifying vocabulary requirements in this section must be used for defining local tables.</p><p></p>
 </p>
 
-<table class='center table_snelick1'>
+<table class='center striped_rows table_v2web1'>
 <tbody>
 <caption>Table 6.5: Implied Vocabulary Binding Parameters for Base Data Type</caption>
-<tr class='tr_snelick'>
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Replaced
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Bind. Str.
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Ext.
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Stability
 </p>
 
 </th>
 
-<th class='table_snelick1 th_snelick'>
-<p class='p_snelick'>
+<th class='emphasis_header table_v2web1 th_v2web'>
+<p class='p_v2web'>
 Comments
 </p>
 
@@ -11654,37 +11654,37 @@ Comments
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 IS
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Suggested
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Open
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Static
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Completely open for specifier to create and constrain.
 </p>
 
@@ -11692,37 +11692,37 @@ Completely open for specifier to create and constrain.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 ID
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Required
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Open
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Static
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Must use HL7 codes and can be extended.
 </p>
 
@@ -11730,37 +11730,37 @@ Must use HL7 codes and can be extended.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 CE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Suggested
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Open
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Dynamic
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Completely open for specifier to create and constrain.
 </p>
 
@@ -11768,37 +11768,37 @@ Completely open for specifier to create and constrain.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 CF
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Suggested
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Open
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Dynamic
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Completely open for specifier to create and constrain.
 </p>
 
@@ -11806,37 +11806,37 @@ Completely open for specifier to create and constrain.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 CWE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Suggested
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Open
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Dynamic
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Completely open for specifier to create and constrain.
 </p>
 
@@ -11844,37 +11844,37 @@ Completely open for specifier to create and constrain.
 
 </tr>
 
-<tr class='tr_snelick'>
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<tr class='tr_v2web'>
+<td class='emphasis_column table_v2web1'>
+<p class='p_v2web'>
 CNE
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Required
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Closed
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 TBD
 </p>
 
 </td>
 
-<td class='table_snelick1'>
-<p class='p_snelick'>
+<td class='table_v2web1'>
+<p class='p_v2web'>
 Must use bound vocabulary as-is; may be dynamic.
 </p>
 
@@ -11885,19 +11885,19 @@ Must use bound vocabulary as-is; may be dynamic.
 </tbody>
 </table>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Table 6.6 provides a summary of the initial requirements the HL7 v2 base standard places on vocabulary bindings. These requirements are the starting point for message profiles. In most cases, the responsibility of defining and specifying vocabulary requirements falls on the message profile specifier. In other cases, an initial set of requirements are given that can be further defined and constrained.</p>
 </p>
-<h2>
-17 Null Flavors
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.6 Null Flavors
+</h4>
+<p class='p_v2web'>
 <p>A null flavor (or null value) is a concept for representing &ldquo;unknown&rdquo; content. HL7 v2 does not explicitly provide a mechanism for null flavors. However, an equivalent outcome can be achieved for coded data elements by including a null flavor coded value in a value set. Any element that is bound to that value set containing a null flavor can use that value. The determination of employing the null flavor mechanism is use case-dependent. Some HL7 tables include null flavors as part of the code set in the base standard. Additionally, HL7 Table 0353 (CWE Statuses) contains a set of null flavors that can be used in the creation of value sets with a need for null flavor coded values.</p>
 </p>
-<h2>
-18 Relationship of Coded Element Based DatA Types and Flavors
-</h2>
-<p class='p_snelick'>
+<h4>
+6.1.7 Relationship of Coded Element Based DatA Types and Flavors
+</h4>
+<p class='p_v2web'>
 <p>The base standard provides a set of coded element data types for conveying coded data in message elements. This initial set covers only a small portion of specification possibilities. Using the concept of data type flavors and the vocabulary profiling mechanisms together provides a complete set of specifications. For example, the less restrictive &ldquo;CWE&rdquo; in the base standard can be constrained in many ways to precisely state the messaging and vocabulary requirements at a certain profile level. The data type definition determines the requirements for the presence of a code. Vocabulary profiling (binding and vocabulary definition) indicates the requirements for the code set and also for application of further constraints. The base standard co-mingles these dimensions; the Conformance Methodology seeks to delineate the constructs in such a way that specifications and requirements can be clearly understood by implementers.</p><p></p><p></p><p></p>
 </p>
 

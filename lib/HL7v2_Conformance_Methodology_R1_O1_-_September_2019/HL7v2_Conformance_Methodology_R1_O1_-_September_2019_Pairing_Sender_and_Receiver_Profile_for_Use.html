@@ -55,88 +55,88 @@ HL7 - Pairing Sender and Receiver Profile for Use
 </button>
 <div class='nav-collapse collapse navbar-inverse-collapse'>
 <ul class='nav navbar-nav'>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='main.html'>Home</a>
 </li>
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Introduction.html'>
 Introduction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Levels.html'>
 Profile Levels
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_HL7_v2_Implementation_Guides.html'>
 HL7 v2 Implementation Guides
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Message_Profiles.html'>
 Message Profiles
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Constraints.html'>
 Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Vocabulary_Constraints.html'>
 Vocabulary Constraints
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Construction.html'>
 Profile Construction
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Pairing_Sender_and_Receiver_Profile_for_Use.html'>
 Pairing Sender and Receiver Profile for Use
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Profile_Documentation.html'>
 Profile Documentation
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Computable_Document_Definitions.html'>
 Computable Document Definitions
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Glossary.html'>
 Glossary
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_A:_Predicate_Definition_Language.html'>
 Appendix A: Predicate Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_B:_Conformance_Statement_Definition_Language.html'>
 Appendix B: Conformance Statement Definition Language
 </a>
 </li>
 
-<li class='navbar_snelick'>
+<li class='navbar_v2web'>
 <a href='HL7v2_Conformance_Methodology_R1_O1_-_September_2019_Appendix_C:_Schema_Definitions.html'>
 Appendix C: Schema Definitions
 </a>
@@ -161,15 +161,15 @@ Appendix C: Schema Definitions
 </div>
 <div class='container'>
 <h2>
-17 Pairing Sender and Receiver Profile for Use
+8 Pairing Sender and Receiver Profile for Use
 </h2>
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p>Profiles document a set of requirements (or capabilities) for systems. A profile is applicable to a sender, a receiver, or to both if a common expectation is sought. An interaction profile pair associates a sending profile and a receiving profile, e.g., for an ADT message. A profile pair at the transaction level is for the initiator and the responder, e.g., an ADT message and an ACK message. The focus of this section is on the interaction profile pair.</p><p>Sender and receiver profiles can be paired in various ways to satisfy a targeted use. The profile pair binding can have various patterns including:</p><p>Regardless of the profile pairing pattern, a set of expectations is specified in a higher-level constrainable profile for each sender and receiver in the use case. In practice, the expectations can vary substantially. For example, in one case the sender and receiver may have mutual expectations about how the data are processed, and in another case the sender may be agnostic about how the data are processed. Any combination of the profile pairing patterns and processing expectations is valid.</p><p>It is important to note again that the use case defines these expectations, because it describes how the sender and receiver are interpreting requirements for the same message. In the subsections that follow, a representative set of profile pairings are presented along with general expectations of the sender and receiver in the context of a given use case; however, the details about a specific use case are not considered.</p>
 </p>
-<h2>
-2 One-to-one Profile Pairing
-</h2>
-<p class='p_snelick'>
+<h3>
+8.1 One-to-one Profile Pairing
+</h3>
+<p class='p_v2web'>
 <p>A common profile pairing is an exchange between a sender and receiver in which there are mutual expectations. In this case, the sender and the receiver share the same (or nearly the same) profile and, therefore, implement a common set of requirements. An example is the US Realm Laboratory Results Interface (LRI), where the sender has an expectation that the receiver will process and use the data in a prescribed way. From a regulatory perspective in the US, the Clinical Laboratory Improvement Amendments (CLIA) places the responsibility on the sender (i.e., the Laboratory) for ensuring that the laboratory results are correctly consumed, processed, and displayed by the receiving system (e.g., an EHR). As such, nearly identical constrainable profiles are specified to meet the requirements of the use case.</p>
 </p>
 
@@ -1197,13 +1197,13 @@ ARJwRuD/ALG3cIR5AhVhAAAAAElFTkSuQmCC
 <figcaption>Figure 8.1: One-to-one Profile Pairing Pattern (Mutual Expectations)</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 8.1 illustrates a common profile being used, which signifies mutual expectations for the data exchange. This use case documents how the profile pair is to be utilized.</p><p>In another situation, the profile pairing may exhibit the one-to-one pattern, but it may not have strongly-correlated expectations about how the exchanged data are handled. Again, these expectations are described in the higher-level use case.</p><p>Note that in this example, and the examples to follow, an examination of the requirements and their compatibility is limited to the usage conformance construct in order to simplify the explanation of the concept. Analogous analysis applies to the other constraints. In Figure 8.1, the common expectation for the sender and receiver is indicated by the same usage settings.</p>
 </p>
-<h2>
-4 One-to-many Profile Pairing
-</h2>
-<p class='p_snelick'>
+<h4>
+8.1.1 One-to-many Profile Pairing
+</h4>
+<p class='p_v2web'>
 <p>The one-to-many profile-pairing pattern typically is used for broadcast applications in which there is loose correlation of sender and receiver expectations. The sender has no or limited expectations about how the receiver processes and uses the data. The sender is providing a service for the receivers. It is the responsibility of a receiver to ensure that the sender is providing the information necessary to complete the particular use case. An example is the ADT (Admissions, Discharge, and Transfers) use case. Typically, ADT systems will broadcast a patient&rsquo;s information to a number of other systems (which may be internal or external to the sending entity). In such a case, the sender will provide as much information as possible about the patient. This information can be documented in a profile and implemented by the sender. The sender is providing an indication of the data it is able to give. The requirements for the sender often are derived from the collective set of receiver requirements, which is typically fluid, as receiver requirements can change and/or other receivers can be added to the network. Each receiver can provide a profile to indicate what it needs. In essence, the sender profile is a superset of the receiver requirements.</p>
 </p>
 
@@ -3049,13 +3049,13 @@ AAAAAElFTkSuQmCC
 <figcaption>Figure 8.2: One-to-many Profile Pairing Pattern (Receiver-side Expectations)</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>Figure 8.2 illustrates a single sending system along with three receiving systems and excerpts from their profiles. As shown, the sending system profile provides support for all the elements needed by all of the receiving systems. For example, for Receiver 1, the sending system sends Elements 1 and 2, and if known, Element 3. This set of elements satisfies the needs of Receiver 1, because this receiver requires Element 1 (which is supported by the Sender), does not need Element 2 (and will discard it), and does support and will process Element 3 if it is provided by the sender. The higher-level use case indicates the expectations of the sender and receiver. Each receiver has its own use case that informs what data are to be received from sender (and, hence, defines the sender profile). The sender has no expectation about how the data are processed by the receiver—this processing requirement is specified in the higher-level use case. The profiles in this pair are compatible with each other, since the receivers are provided with the data they are requesting.</p><p>Figure 8.2 shows that the pairing of a sender usage of R (or RE) and a receiver usage of X is allowed (and is compatible). Compatibility is a concept that is considered from the receiver&rsquo;s perspective. A simple question used to assess compatibility is: will the receiver be provided the information it needs? In this example, and unlike the example of mutual expectations, the sender has limited expectations or responsibility for the treatment of the data that are sent. The need for the data is driven by the business requirements of the receiver. The receiver takes the information it needs to fulfill its use case and ignores (processes and discards) unwanted data. If the sender had expectations about the processing of one or more data elements, then these expectations are documented in the higher-level constrainable profile, and both sending and receiving profiles would specify a usage of required for each element for which there is a common expectation.</p>
 </p>
-<h2>
-5 Many-to-one Profile Pairing
-</h2>
-<p class='p_snelick'>
+<h4>
+8.1.2 Many-to-one Profile Pairing
+</h4>
+<p class='p_v2web'>
 <p>The many-to-one profile-pairing pattern is typically for use cases in which there is a single collection point for data. Figure 8.3 illustrates a case where multiple senders exchange information with a single receiver. This situation is common in the public health arena where, for example, multiple providers send data to an Immunization Information System (IIS).</p><p></p>
 </p>
 
@@ -4524,7 +4524,7 @@ IAIiUBaB/wAxdkeJmfJfsQAAAABJRU5ErkJggg==
 <figcaption>Figure 8.3: Many-to-one Profile Pairing Pattern (Example 1)</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>For this example, the use case defines a common set of messaging requirements (as indicated by the common usage settings in Figure 8.3). As with the previous examples, these requirements, along with the processing expectation, are defined in the common higher-level constrainable profile (not shown in this diagram). The processing expectations can be mutual (more or less), sender-side oriented, or receiver-side oriented. In the case of the US national guidance for immunization, the processing expectations are mutual (more or less) for the sender and the receiver. This use case is explored below and is related to the many-to-one profile-pairing pattern.</p><p>In immunization systems, two basic types of information are collected: patient identifying information and vaccination events. The IIS is not the source of truth for the patient identifying information, so the patient identifying information is generally loosely correlated in the exchange. The submitter provides patient identifying information to allow patient matching and consolidation of immunization histories, but the submitter is agnostic about how the IIS processes or records patient identifying information. However, the IIS is tasked with storing and creating a complete vaccination history, so the sender expects the IIS to accept and store all submitted vaccinations, which must be available for retrieval later. In this regard, the vaccination requirements between the sender and receiver are mutual (strongly-correlated).</p><p>As shown in Figure 8.3, the data collected by the receiver are provided by many sources, and, therefore, the information about a particular patient may not match the information of any individual sender (provider). For example, an IIS may have information about a patient from both a doctor&rsquo;s office and a pharmacy. Some data (such as patient demographics) may be submitted by both sources while other data (such as childhood immunization information from the doctor&rsquo;s office and a recent influenza immunization from a pharmacy) may be unique to one system or the other. The high-level use case would address this situation. An individual sender would expect the IIS to handle the information they submitted, but also would expect it to handle additional and modified data.</p><p>It is important to note that expectations set for particular data elements will vary according to each use case. In some situations, the expectation may be that the received data are processed and stored, and in other situations the expectation may be that the received data are made available for performing a function after which they will be discarded. For example, patient demographic data are sent as part of the immunization scenario, but there is limited or no expectation that these data will replace the data that exist in the IIS. An individual provider usually is not the source of these data. In this case, the data are needed by the receiver to obtain a match to an existing patient. Once the matching function is performed, the data may be discarded.</p><p></p>
 </p>
 
@@ -6006,13 +6006,13 @@ AAAASUVORK5CYII=
 <figcaption>Figure 8.4: Many-to-one Profile Pairing Pattern (Example 2)</figcaption>
 </figure>
 
-<p class='p_snelick'>
+<p class='p_v2web'>
 <p></p><p>A slightly different circumstance is where not all senders have the capabilities desired by the receiver. As shown in Figure 8.4, Sender 1 and Sender 3 are not capable of supporting a certain requirement. For example, a particular EHR-S may not be capable of reporting refused vaccines; however, other systems in the network support this capability, and the information is useful to the IIS. In this case, the receiver publishes a profile that includes the superset of sender capabilities (or, more appropriately, the receiver&rsquo;s wish list), but does not require support of all capabilities desired. In the example presented in Figure 8.4, this situation is indicated by the designation of &ldquo;RE&rdquo; usage for Element 2. If the data are provided, the receiver can process the information, but the receiver is not dependent on the data to operate. To reiterate, it is the use case that sets the expectations and describes the relationship between the sending and receiving profiles.</p>
 </p>
-<h2>
-6 Design Considerations: Profiling Pairing
-</h2>
-<p class='p_snelick'>
+<h4>
+8.1.3 Design Considerations: Profiling Pairing
+</h4>
+<p class='p_v2web'>
 <p>A design question to consider is: should all profile pairings adhere to the one-to-one pattern? In this paradigm, the sender and receiver share the same (or nearly the same) profile and, thus, expectation about the handling of the data from the sender and receiver perspective is documented in the profile. Take, for example, the use case where the sender is broadcasting to a set of receivers. The sending system documents, in the form of a profile, the superset of requirements that accommodates all receivers. The sending system extracts information from its data model, maps the data to the superset profile, and sends a superset message. When additional requirements are needed in the receiver set, additional provisions are made. The sender unilaterally updates its profile and then broadcasts updated messages. The receivers, based on an original agreement, are prepared to accept unexpected data and deal with them appropriately. Such fluid expectations have advantages in terms of efficiency, operational tolerance, and expansion of capabilities with little or no negotiations in operating interfaces. Alternatively, the sender could tailor messages based on each receiver&rsquo;s profile. Upon data extraction from the data model, the sender maps the data and creates a message specific to a particular receiver based on the negotiated profile. This tight association binds the sending and receiving set of requirements together. There is no ambiguity between what the sender is providing and what the receiver is expecting. The receiver always gets what it expects and nothing more. The robustness of the interface sets a clear expectation and reduces the chance of misconceptions and, therefore, error in interpreting and using the data. The downside of this approach is the increased effort involved in each sender/receiver negotiation and interface implementation. The practicality of this approach also must be considered: is it feasible or optimal to implement it into today&rsquo;s environments?  In some circumstances there are clear benefits, in others, maybe not; but achieving the goal of tight associations may reduce gaps in the interoperability bridge. Implementers need to examine the use case and weigh the trade-offs relative to cost and effectiveness.</p><p></p><p></p><p></p><p></p>
 </p>
 
