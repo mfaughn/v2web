@@ -15,7 +15,7 @@ end
 
 def _stub_folders(clawz, parent_dir, doc, depth = 0)
   return if depth > 1
-  # n = clawz.number_in(doc)
+  # n = clawz.number(doc)
   nums = (clawz.containers + clawz.documents).collect do |container|
     container.subsections.index { |sc| sc.id == clawz.id }
   end

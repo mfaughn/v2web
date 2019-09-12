@@ -9,10 +9,10 @@ module V2Web
       V2Web.render_site(content.map { |c| c.to_hl7_site(:parent => self, :parent_number => nil) }.join("\n"))
     end
     
-    def to_hl7_site(title = nil)
+    def to_hl7_site
       # Make a place to put everything and copy js/css/image files that will be needed
       dir_name ||= title.gsub(/\s/, '_')
-      root_dir = relative("../pages/#{dir_name}")
+      root_dir = relative("../../pages/#{dir_name}")
       FileUtils.mkdir_p(root_dir)
       copy_web_files(root_dir)
       
@@ -35,7 +35,7 @@ module V2Web
       
       ls.each do |link, _, section|
         content = section.hl7_page_content(root_dir, link)
-        linked_page_locals = locals.merge({:content => content, :title => section.doc.title})
+        linked_page_locals = locals.merge({:content => content, :title => section.title})
         V2Web.create_linked_page(linked_page_locals, root_dir, link)
       end
       

@@ -19,20 +19,19 @@ module V2Web
       "<strong>#{title}</strong>"
     end
     
-    def number(parent: nil, parent_number: nil)
-      return '' if parent.nil? # bail out, can't number if no parent
-      parent_number = parent.number if parent_number.nil?
-      num = (parent.subsections.index { |c| c.id == id } + 1).to_s
-      num = parent_number + '.' + num if parent_number
-      num
-    end
-    
     def numbered_title
       number + ' ' + title
     end
     
+    def guess_root
+      root = parents.find { |parent| parent.is_a?(V2Web::Standard) }
+      return root if root
+      root = parents.find { |parent| parent.parents.each { |grandparent| grandparent.guess_root } }
+    end
+    
     # this will have problems if the same clause exists in multiple places in a single Document.
-    def number_in(root)
+    def number(root = nil)
+      root ||= guess_root
       if parents.include?(root)
         i = root.content.index { |c| c.id == self.id }
         return (i + 1).to_s
@@ -40,14 +39,14 @@ module V2Web
       ret = nil
       parents.find do |parent|
         # puts Rainbow("#{title} -- container: #{container&.title}").orange
-        val = parent.number_in(doc)
+        val = parent.number(doc)
         if val
           i = parent.content.index { |c| c.id == self.id }
           ret = val + '.' + (i + 1).to_s
         end
       end
       ret
-    end #def number_in
+    end #def number
     
     def site_depth(d = 1, root = nil)
       # if root isn't passed then we are totally guessing
@@ -57,7 +56,6 @@ module V2Web
     
     def hl7_page_link(root_dir, base_link)
       link = File.join(root_dir, local_link(base_link))
-      title = doc.title
       locals = {:link => link, :title => title, :depth => site_depth}
       V2Web.render_with_locals(:snelick_section_link, locals)
     end
@@ -67,7 +65,7 @@ module V2Web
     end
     
     def local_link(base_link)
-      base_link + '_' + doc.link_title + '.html'
+      base_link + '_' + link_title + '.html'
     end
     
     def hl7_page_content(root_dir, section_link)
@@ -77,15 +75,15 @@ module V2Web
         ss_content = ss.hl7_page_content(root_dir, ss_link)
         V2Web.create_linked_page({:content => ss_content}, root_dir, ss_link)
       end
-      html = doc.to_hl7_section_header
+      html = to_hl7_section_header
       # NOTE giant assumption that everything after the first Clause is also a Clause...
-      front_matter = doc.content.take_while { |c| !c.is_a?(V2Web::Section)}
+      front_matter = content.take_while { |c| !c.is_a?(V2Web::Section)}
       html += front_matter.map { |l| l.to_hl7_site }.join("\n")
       
       subsections.each_with_index do |ss, index|
         if ss.is_a?(V2Web::Section)
           if ss.render_as == 'linked_page'
-            html += ss.doc.to_hl7_section_header(:link => section_link)
+            html += ss.to_hl7_section_header(:link => section_link)
           else
             html += ss.hl7_page_content(root_dir, section_link)
           end
@@ -123,13 +121,13 @@ module V2Web
     
     # returns relative url for created page
     # def to_linked_page(root, root_dir)
-    #   link = "#{doc.link_title}.html"
+    #   link = "#{link_title}.html"
     #   location = File.join(root_dir, link)
     #   # FIXME TabSets just isn't worked out well
-    #   # page_content = doc.hl7_page_content + subsections.map { |ss| ss.hl7_page_content(self) }
-    #   page = V2Web.render_with_locals(:page, {:content => doc.hl7_page_content})
+    #   # page_content = hl7_page_content + subsections.map { |ss| ss.hl7_page_content(self) }
+    #   page = V2Web.render_with_locals(:page, {:content => hl7_page_content})
     #   File.open(location, 'w+') { |f| f.puts page }
-    #   [link, doc.title.hl7]
+    #   [link, title.hl7]
     # end
   end  
 end

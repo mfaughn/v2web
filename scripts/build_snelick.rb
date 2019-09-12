@@ -1,3 +1,4 @@
+Dir.glob(File.join(__dir__, '../lib/v2web/model_extensions', '**', '*.rb'), &method(:load))
 def indicate_page_linkages(site)
   # TODO do something with all the content that isn't a Clause
   main_subsections = site.subsections
