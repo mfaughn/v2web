@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>HL7v2ConformanceMethodologyR1O1September2019</h2><p>The official URL for this implementation guide is: </p><pre>/ImplementationGuide/hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019</pre></div>
+  </text>
+  <url value="/ImplementationGuide/hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019"/>
+  <version value="0.0.0"/>
+  <name value="HL7v2ConformanceMethodologyR1O1September2019"/>
+  <title value="HL7v2 Conformance Methodology R1 O1 - September 2019"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-10-04T08:59:31-04:00"/>
+  <publisher value="Health Level Seven International (v2 Governance Work Group)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping id="profiles">
+      <name value="Profiles"/>
+      <description value="Test"/>
+    </grouping>
+    <grouping id="valueSets">
+      <name value="Value Sets"/>
+      <description value="Value Sets used and defined in this Implementation Guide"/>
+    </grouping>
+    <grouping id="codeSystems">
+      <name value="Code Systems"/>
+      <description value="Code Systems defined in this Implementation Guide"/>
+    </grouping>
+    <grouping id="capabilities">
+      <name value="Capability Statements"/>
+      <description value="Capability Statements defined in this Implementation Guide"/>
+    </grouping>
+    <grouping id="examples">
+      <name value="Examples"/>
+      <description value="Examples of resources following the Implementation Guide Profiles"/>
+    </grouping>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="HL7v2 Conformance Methodology R1 O1 - September 2019"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="Introduction.html"/>
+          <title value="Introduction"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Profile_Levels.html"/>
+          <title value="Profile Levels"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="HL7_v2_Implementation_Guides.html"/>
+          <title value="HL7 v2 Implementation Guides"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Message_Profiles.html"/>
+          <title value="Message Profiles"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Constraints.html"/>
+          <title value="Constraints"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Vocabulary_Constraints.html"/>
+          <title value="Vocabulary Constraints"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Profile_Construction.html"/>
+          <title value="Profile Construction"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Pairing_Sender_and_Receiver_Profile_for_Use_.html"/>
+          <title value="Pairing Sender and Receiver Profile for Use "/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Profile_Documentation.html"/>
+          <title value="Profile Documentation"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Computable_Document_Definitions.html"/>
+          <title value="Computable Document Definitions"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Glossary.html"/>
+          <title value="Glossary"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Appendix_A:_Predicate_Definition_Language.html"/>
+          <title value="Appendix A: Predicate Definition Language"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Appendix_B:_Conformance_Statement_Definition_Language.html"/>
+          <title value="Appendix B: Conformance Statement Definition Language"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="Appendix_C:_Schema_Definitions.html"/>
+          <title value="Appendix C: Schema Definitions"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>

@@ -1,4 +1,5 @@
 require 'base64'
+require_relative 'ig_rendering'
 module V2Web
   
   # Maybe we should pass locals in instead of just passing content

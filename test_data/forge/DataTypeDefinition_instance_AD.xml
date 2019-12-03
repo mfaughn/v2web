@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2-in-FHIR/DataTypeDefinition/address" />
+  <name value='Address'/>
+  <withdrawn value='false'/>
+  <abbreviation value='AD'/>
+  <description>
+    <status value="additional"/><!-- 1..1 generated | extensions | additional | empty -->
+    <!--This obviously needs to be done better in order to preserve the desired formatting.  Note that the FHIR rules for what HTML can be in there are still going to be in effect. -->
+    <div>
+      Definition: This data type specifies the address of a person, place or organization.
+      Note: Used only in the LA1 data type. Retained for backward compatibility as of v2.6. Replaced elsewhere by the XAD data type as of v2.3.
+      Example:
+      |10 ASH LN^#3^LIMA^OH^48132|
+    </div>
+  </description>
+  <array_type value='false'/>
+  <component>
+    <name value='Street Address'/>
+    <sequenceNumber value='1'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='120'/>
+    <mayTruncate value='as defined by data type'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+  <component>
+    <name value='Other Designation'/>
+    <sequenceNumber value='2'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the second line of address. In general, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='120'/>
+    <mayTruncate value='as defined by data type'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+  <component>
+    <name value='City'/>
+    <sequenceNumber value='3'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the city, district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='50'/>
+    <mayTruncate value='as defined by data type'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+  <component>
+    <name value='State or Province'/>
+    <sequenceNumber value='4'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='50'/>
+    <mayTruncate value='as defined by data type'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+  <component>
+    <name value='Zip or Postal Code'/>
+    <sequenceNumber value='5'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9 and the Australian Postcode takes the form 9999.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='12'/>
+    <mayTruncate value='false'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+  <component>
+    <name value='Country'/>
+    <sequenceNumber value='6'/>
+    <definition>
+      <status value="additional"/>
+      <!--FIXME must maintain references within HTML. This will require some interesting processing... -->
+      <div>
+        Definition: This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to HL7 Table 0399 - Country Code in Chapter 2C, Code Tables, for valid values.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <length value='3..3'/>
+    <!--TODO This is a point to wonder about urls.  Should they be derived from the abbreviation or from the entire name? -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/id'/>
+    <!-- Not sure what the URIs for v2 value sets (i.e. tables) should be.  Maybe they don't need the table number?  This is just a placeholder for now -->
+    <!-- Note - This actually maps to an externally defined valueSet.  Not sure if that matters here. -->
+    <binding value='https://www.hl7.org/v2-in-FHIR/ValueSet/0399-CountryCode'/>
+  </component>
+  <component>
+    <name value='Address Type'/>
+    <sequenceNumber value='7'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies the kind or type of address. Refer to HL7 Table 0190 - Address Type in Chapter 2C, Code Tables, for valid values.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <length value='1..3'/>
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/id'/>
+    <!-- Not sure what the URIs for v2 value sets (i.e. tables) should be.  Maybe they don't need the table number?  This is just a placeholder for now -->
+    <binding value='https://www.hl7.org/v2-in-FHIR/ValueSet/0190-AddressType'/>
+  </component>
+  <component>
+    <name value='Other Geographic Designation'/>
+    <sequenceNumber value='8'/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        Definition: This component specifies any other geographic designation that may be necessary. It includes county, bioregion, SMSA, etc.
+      </div>
+    </definition>
+    <optionality value='O'/>
+    <c_length value='50'/>
+    <mayTruncate value='as defined by data type'/>
+    <!--Note here that we are referencing the v2 String data type. -->
+    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  </component>
+</DataTypeDefinition>
+

@@ -1,0 +1,12 @@
+
+      #guidename must match the id of the implementation guide
+      guidename=HL7v2ConformanceMethodologyR1O1September2019
+      copyrightyear=2017+
+      license=CC0-1.0
+      version=0.0.0
+      ballotstatus=STU 1
+      fhirspec=http://build.fhir.org/
+      #excludexml=Yes
+      #excludejson=Yes
+      #excludettl=Yes
+      

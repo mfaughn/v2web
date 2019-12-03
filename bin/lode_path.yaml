@@ -3,4 +3,5 @@
 # - none
 - html_gui_builder
 - gui_director
+- gui_site
 - sequel_specific_associations

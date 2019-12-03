@@ -34,7 +34,35 @@ module V2Web
   DEFAULT_APP_OPTIONS = {
     :spec_name        => 'v2_web_generated.rb',
     :spec_module      => 'V2WebGenerated',
-    :spec_title       => 'V2 Web'
+    :spec_title       => 'V2 Web Editor',
+    
+    :mode             => :dev,
+    # :default_text_language  => :Markdown,
+    # :spec_title       => 'HL7 v2+ Document Manager Prototype',
+    :clear_view_selection_page    => false,
+    :tree_view                    => {:enabled => true, :show_roles => false, :no_open_all => true},
+    # :custom_page_root             => relative('pages'),
+    :login_or_register_blurb_path => File.join(File.expand_path(File.dirname(__FILE__)), "pages/view/blurb.haml"),
+    :license_agreement_path       => File.join(File.expand_path(File.dirname(__FILE__)), "pages/view/agreement.haml"),
+    # :text_languages               => ['Markdown', 'HTML'],
+    :show_text_languages          => true,
+    :default_text_language        => :Plain,
+    :text_always_collapsed        => true,
+    # :custom_home_page             => {:url => '/hl7v2/prototype', :name => 'Documents'},
+    :load_all_controllers         => true,
+    :show_advanced_view           => false,
+    :favicon                      => '/images/hl7.ico',
+    # :custom_pages => {
+    #   # :proto => {
+    #   #   :name => "Document Components",
+    #   #   :url => "/hl7v2/components",
+    #   #   :show_in_nav_bar => true
+    #   # },
+    #   :proto => {
+    #     :name => "Generate Documents",
+    #     :url => "hl7v2/prototype",
+    #     :show_in_nav_bar => true
+    :nothing => nil
   }
   
 end

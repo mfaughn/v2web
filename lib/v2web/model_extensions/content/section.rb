@@ -7,8 +7,15 @@ module V2Web
   end
 
   class Section
+    @@subsection_info = properties[:subsections]
+    def immediate_aggregations_with_data
+      {:subsections => {:value => subsections, :data => self.class.properties[:subsections] }}.to_a
+    end
+    
     # FIXME not sure this is correct anymore
     alias_association :subsections, 'V2Web::Section', :type => :many_to_many, :alias_of => :content
+    
+    alias_association :tab_sets, 'V2Web::TabSet', :type => :many_to_many, :alias_of => :content
     
     # def subsections
     #   content.select { |c| c.is_a?(V2Web::Section) }
@@ -19,16 +26,25 @@ module V2Web
       "<strong>#{title}</strong>"
     end
     
+    derived_attribute(:display_name, ::String)
+    def display_name
+      # "<strong>#{title}</strong>"
+      numbered_title
+    end
+    
     def numbered_title
-      number + ' ' + title
+      n = number
+      n ? number + ' ' + title : title
     end
     
     def guess_root(from = parents)
+      return nil unless parents.any?
       from.find { |parent| parent.is_a?(V2Web::Standard) } || guess_root(from.map(&:parents).flatten.compact)
     end
     
     # this will have problems if the same section exists in multiple places in a single Document.
     def number(root = guess_root)
+      return nil unless parents.any?
       if parents.include?(root)
         i = root.subsections.index { |c| c.id == self.id }
         return (i + 1).to_s
@@ -56,8 +72,13 @@ module V2Web
       V2Web.render_with_locals(:v2_section_link, locals)
     end
     
-    def link_title
-      parents.first.link_title + '_' + title.gsub(/\s/, '_').hl7
+    def link_title(parent = nil)
+      parent ||= parents.first
+      parent.link_title + '_' + url_title
+    end
+    
+    def url_title
+      title.gsub(/\s/, '_').delete(':').hl7
     end
     
     def local_link(base_link)
@@ -102,7 +123,7 @@ module V2Web
     end
     # alias_method :hl7_page_content, :to_hl7_site
     
-    def to_hl7_section_header(depth: nil, parent: nil, parent_number: nil, link: nil)
+    def to_hl7_section_header(link: nil)
       nt = numbered_title
       # puts nt
       depth = nt.slice(/^[\d\.]+/).split('.').count # this is hacky but should work

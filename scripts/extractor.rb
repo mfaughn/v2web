@@ -18,6 +18,7 @@
 # Title
 # FIXME you are ignoring <w:tab/>
 require 'shellwords'
+require 'cgi'
 require_relative 'current_parent_hack'
 module V2Web
   class DocXtractor
@@ -281,17 +282,17 @@ module V2Web
       html
     end
 
-    def box(node, style)
+    def box(node, styles)
       @current_text = nil
       ChangeTracker.start
       box = V2Web::Box.create
-      box.style = style
+      # styles can be passed as single style or array of styles
+      [styles].flatten.each { |s| box.add_style(s) }
       @current_section.add_content(box)
       ChangeTracker.commit
-      parent = @current_section
-      @current_section = box
-      add_text(node)
-      @current_section = parent
+      paragraphs = node.xpath('.//p')
+      paragraphs.each { |pg| add_text(pg, box) }
+      @current_text = nil
     end
 
     def gray_box(node)
@@ -345,6 +346,7 @@ module V2Web
       cells.each do |cell|
         ChangeTracker.start
         scell = V2Web::Cell.create
+        scell.colspan = (cell.to_s.slice(/(?<=gridSpan val=")\d+/) || 1).to_i
         add_styles(cell, scell)
         srow.add_cell(scell)
         scell.ooxml = make_xml_code(cell)
@@ -373,31 +375,84 @@ module V2Web
       end
     end
     
-    def add_text(node)
+    def add_text(node, text_parent = @current_section)
+      debug = true if false && text_parent.is_a?(V2Web::Box)
       ChangeTracker.start
       @current_text ||= V2Web::Text.create
       if @current_text.content
         @current_text.content_content = @current_text.content_content + extract_p(node)
+        @current_text.ooxml_content = @current_text.ooxml_content + "\n" + node.to_xml
       else
         @current_text.content = Gui_Builder_Profile::RichText.create(:content => extract_p(node))
+        xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
+        xml.language = 'XML'
+        xml.save
+        @current_text.ooxml = xml
       end
       @current_text.save
-      unless @current_section.content.last&.is?(@current_text)
-        @current_section.add_content(@current_text)
+      # FIXME look here for Box content issue
+      unless text_parent.content.last&.is?(@current_text)
+        text_parent.add_content(@current_text)
       end
       ChangeTracker.commit
+      if debug
+        puts text_parent.content.last.content_content;puts '*'*20
+      end
     end
     
     def extract_p(node)
-      extract_text(node, true)
+      raise unless node.name == 'p'
+      texts = extract_text(node, true)
+      '<p>' + texts + '</p>'
     end
     
-    def extract_text(node, paragraph = false)
-      texts = node.xpath('.//t').map { |t| t.content }.join.strip
-      if paragraph and node.name == 'p'
-        texts = '<p>' + texts + '</p>'
+    def extract_text(node, preserve_style = false)
+      parsed_text = ''
+      runs = node.xpath('.//r')
+      runs.each do |run|
+        run_text = ''
+        texts = run.xpath('.//t')
+        texts.each { |t| run_text << CGI.escapeHTML(t) }
+        unless run_text.empty?
+          parsed_text << style_text(run, run_text)
+        end
       end
-      texts
+      parsed_text
+    end
+    
+    # Assuming that normal font size in docx is 11pt, which is specified in ooxml in 1/2pt units.
+    # We're going with 15px downstream as the default size -- not sure how to scale things though....
+    def style_text(node, text, default_size: 22)
+      styles = []
+      str  = node.to_s
+      
+      size = (str.slice(/(?<=sz\sval=")\d+/) || default_size).to_i
+      unless size == default_size
+        styles << "font-size:#{size/2 + 4}px" # wild ass guess at getting size right
+      end
+      
+      color = str.slice(/(?<=color val=")[A-Z0-9]+?(?=")/)
+      if color
+        styles << "color:##{color.downcase}"
+      end
+      
+      font = str.slice(/(?<=rFonts ascii=").+?(?=")/)
+      # Assuming default is Times New Roman so we aren't recording it
+      if font == 'Courier New'
+        styles << 'font-family:Courier New,Courier,monospace'
+      end
+      if font == 'Arial'
+        styles << 'font-family:Arial,Helvetica,sans-serif'
+      end
+      
+      if node.to_s =~ /<b\/>/
+        text = '<strong>' + text + '</strong>'
+      end
+      # Finish and apply styles
+      if styles.any?
+        text = '<span style="' + styles.join("; ") + '">' + text + '</span>'
+      end
+      text  
     end
     
     def header(node, header_depth)

@@ -149,8 +149,8 @@ module V2Web
       rows.each do |r|
         ChangeTracker.start
         @vs.steward = r[1]
-        @vs.v_3_harmonization = r[2]
-        @vs.v_3_equivalent = r[3]
+        @vs.v3_harmonization = r[2]
+        @vs.v3_equivalent = r[3]
         @vs.where_used = r[4]
         @vs.status = r[5].downcase if r[5]
         puts Rainbow("#{@vs.table_id} - #{@vs.name} has no status").red unless r[5]
@@ -182,10 +182,10 @@ module V2Web
           v.comment = html
           v.save
         end
-        v.field_1 = r[0] if r[0]
-        v.field_2 = r[1] if r[1]
-        v.field_3 = r[2] if r[2]
-        v.field_4 = r[3] if r[3]      
+        v.field1 = r[0] if r[0]
+        v.field2 = r[1] if r[1]
+        v.field3 = r[2] if r[2]
+        v.field4 = r[3] if r[3]      
         @vs.add_value(v)
         ChangeTracker.commit
         # p v;puts

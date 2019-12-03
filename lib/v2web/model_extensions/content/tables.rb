@@ -1,12 +1,16 @@
+require 'cgi'
 module V2Web
   class Table
     def to_hl7_site(_ = nil)
-      # TODO some tables don't have a header row.  Currently no way to determine that.
-      html = ["<caption>#{caption}</caption>"]
+      html = []
+      if caption && !caption.strip.empty?
+        cap = V2Web.htmlize(caption)
+        html << "<caption>#{cap}</caption>"
+      end
       # puts rendering_type.inspect
       html += rows.map { |r| r.to_hl7_site(r.header) }
       locals = { :content => html.join("\n") }
-      locals[:classes] = style.map(&:value).join(' ')
+      locals[:classes] = styles.map(&:value).join(' ')
       # puts locals[:classes] unless locals[:classes]&.empty?
       V2Web.render_with_locals(:table, locals)
     end
@@ -30,7 +34,7 @@ module V2Web
     def html_simple
       html = []
       html << '<table>' # style="width:100%"
-      html << "<caption>#{caption}</caption>" if caption
+      html << "<caption>#{caption.hl7}</caption>" if caption
       rows.each_with_index do |row, index|
         # Hack to get rid of empty rows
         cell_check = row.cells.map(&:html_content).join.strip
@@ -68,7 +72,8 @@ module V2Web
     def to_hl7_site(header = false)
       tag = header ? :th : :td
       locals = {:content => content.map { |c| c.to_hl7_site(self) }.join("\n") }
-      locals[:classes] = style.collect(&:value).join(' ')
+      locals[:classes] = styles.map(&:value).join(' ')
+      locals[:colspan] = colspan || 1
       V2Web.render_with_locals(tag, locals)
     end
     

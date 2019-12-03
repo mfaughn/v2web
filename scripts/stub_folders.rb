@@ -7,8 +7,7 @@ module V2Web
 end
 require 'fileutils'
 def stub_folders(site)
-  d = site.doc
-  base = File.join( __dir__, '..','stubs', d.title)
+  base = File.join( __dir__, '..','config/v2conformance')
   FileUtils.mkdir_p(base)
   d.subsections.each { |sc| _stub_folders(sc, base, d) }
 end

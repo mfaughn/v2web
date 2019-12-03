@@ -1,0 +1,7 @@
+<page>
+  <nameUrl value="toc.html"/>
+  <title value="Table of Contents"/>
+  <generation value="html"/>
+  <!-- Now for the structure of the table of contents -->
+  PAGES
+</page>

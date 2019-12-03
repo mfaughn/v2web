@@ -5,11 +5,10 @@ module V2Web
       content.first&.identifying_text
     end
       
-    # FIXME!!!
     def to_hl7_site(_ = nil)
-      return ''
-      # TODO this might be different if the content is already HTML
-      V2Web.render_with_locals(:box, {:content => web_content, :css => 'fixme'})
+      locals = {:content => content.map { |c| c.to_hl7_site }.join("\n")}
+      locals[:classes] = styles.map(&:value).join(' ')
+      V2Web.render_with_locals(:box, locals)
     end
   end
 end

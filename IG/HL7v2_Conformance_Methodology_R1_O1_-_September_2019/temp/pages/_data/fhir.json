@@ -1,0 +1,31 @@
+{
+  "path": "http://build.fhir.org/",
+  "canonical": "",
+  "igId": "hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019",
+  "igName": "HL7v2ConformanceMethodologyR1O1September2019",
+  "packageId": "hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019",
+  "igVer": "0.0.0",
+  "errorCount": 2,
+  "version": "4.0.0",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.0-a53ec6ee1b",
+  "toolingVersion": "4.1.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.1.0 (3)",
+  "totalFiles": 1,
+  "processedFiles": 106,
+  "genDate": "Fri, Oct 4, 2019 08:59-0400",
+  "genDay": "04/10/2019",
+  "ig": {
+    "id": "hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019",
+    "name": "HL7v2ConformanceMethodologyR1O1September2019",
+    "title": "HL7v2 Conformance Methodology R1 O1 - September 2019",
+    "url": "/ImplementationGuide/hl7.fhir.uv.HL7v2ConformanceMethodologyR1O1September2019",
+    "version": "0.0.0",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "Health Level Seven International (v2 Governance Work Group)",
+    "date": "2019-10-04T08:59:31-04:00",
+    "fhirVersion": "4.0.0"
+  }
+}

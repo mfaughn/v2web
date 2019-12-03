@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Segment"/>
+  <version value="1"/>
+  <title value="Test-Definition"/>
+  <status value="draft"/>
+  <date value="2018-08-06T12:44:44+02:00"/>
+  <publisher value="FO"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="logical"/>
+  <snapshot>
+    <element id="Segment">
+      <path value="Segment"/>
+      <label value="Segment"/>
+      <short value="detailed Segment-Definition"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Segment"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+    </element>
+    <element id="Segment.name">
+      <path value="Segment.name"/>
+      <label value="name"/>
+      <definition value="This is the name of the segment."/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Segment.code">
+      <path value="Segment.code"/>
+      <label value="code"/>
+      <definition value="This is the 3-character code for the segment."/>
+      <min value="1"/>
+      <maxLength value="3"/>
+    </element>
+    <element id="Segment.description">
+      <path value="Segment.description"/>
+      <label value="description"/>
+      <short value="This is the formal description of the segment."/>
+      <definition value="This is the formal description of the segment."/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Segment.attribute">
+      <path value="Segment.attribute"/>
+      <label value="attribute"/>
+      <min value="1"/>
+    </element>
+    <element>
+      <path value="Segment.attribute.sequence"/>
+      <label value="sequence"/>
+      <short value="sequence number of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element>
+      <path value="Segment.attribute.dataElement"/>
+      <label value="data element"/>
+      <short value="data element number of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element>
+      <path value="Segment.attribute.name"/>
+      <label value="name"/>
+      <short value="name of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="Segment.attribute.table"/>
+      <label value="table"/>
+      <short value="Table number of this attribute. Currently using string."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="Segment.attribute.min"/>
+      <label value="min"/>
+      <short value="min cardinality of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element>
+      <path value="Segment.attribute.max"/>
+      <label value="max"/>
+      <short value="min cardinality of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element>
+      <path value="Segment.attribute.confLen"/>
+      <label value="confLen"/>
+      <short value="conformance length of this attribute."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+  </snapshot>
+</StructureDefinition>

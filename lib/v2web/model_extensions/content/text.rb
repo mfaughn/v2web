@@ -10,8 +10,8 @@ module V2Web
     end
     
     def web_content
-      # content_content.gsub(/\n/, '<br>').hl7
       content_content.hl7
+      # V2Web.htmlize(content_content)
     end
   
     def to_hl7_site(_ = nil)

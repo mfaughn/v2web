@@ -1,0 +1,1170 @@
+<tbl>
+  <tblPr>
+    <tblW w="5000" type="pct"/>
+    <jc val="center"/>
+    <tblBorders>
+      <top val="single" sz="4" space="0" color="auto"/>
+      <left val="single" sz="4" space="0" color="auto"/>
+      <bottom val="single" sz="4" space="0" color="auto"/>
+      <right val="single" sz="4" space="0" color="auto"/>
+    </tblBorders>
+    <tblLayout type="fixed"/>
+    <tblCellMar>
+      <top w="115" type="dxa"/>
+      <left w="115" type="dxa"/>
+      <bottom w="115" type="dxa"/>
+      <right w="115" type="dxa"/>
+    </tblCellMar>
+    <tblLook val="0000"/>
+  </tblPr>
+  <tblGrid>
+    <gridCol w="9590"/>
+  </tblGrid>
+  <tr rsidR="00845B90" rsidRPr="00655E67" rsidTr="00C646D7">
+    <trPr>
+      <jc val="center"/>
+    </trPr>
+    <tc>
+      <tcPr>
+        <tcW w="9355" type="dxa"/>
+        <tcBorders>
+          <top val="single" sz="4" space="0" color="auto"/>
+          <bottom val="single" sz="4" space="0" color="auto"/>
+        </tcBorders>
+        <shd val="clear" color="auto" fill="D9D9D9" themeFill="background1" themeFillShade="D9"/>
+        <vAlign val="center"/>
+      </tcPr>
+      <p rsidR="00845B90" rsidRPr="001F0A73" rsidRDefault="001F0A73" rsidP="00C646D7">
+        <pPr>
+          <rPr>
+            <b/>
+          </rPr>
+        </pPr>
+        <bookmarkStart id="160" name="_Hlk13747293"/>
+        <r>
+          <rPr>
+            <b/>
+          </rPr>
+          <t>Profile Definition</t>
+        </r>
+        <r rsidR="00845B90" rsidRPr="00DB53C9">
+          <rPr>
+            <b/>
+          </rPr>
+          <t>:</t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;MessageProfile&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>  &lt;CoreProfileID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;EntityIdentifier&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>Profile_National_Level</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/EntityIdentifier&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;NamespaceID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>Domain_XYZ</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/NamespaceID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;UniversalID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>1.2.3.4.5</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;UniversalIDType&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>ISO</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalIDType&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>  &lt;/CoreProfileID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;ValueSetLibraryID&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;EntityIdentifier&gt;</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>VS_Library</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/EntityIdentifier&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>  </t>
+        </r>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;NamespaceID&gt;</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>Domain_XYZ</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/NamespaceID&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>  </t>
+        </r>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;UniversalID&gt;</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>1.2.3.4.5</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalID&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>  </t>
+        </r>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;UniversalIDType&gt;</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>ISO</t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalIDType&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00410705" rsidRPr="001F0A73" rsidRDefault="00410705" rsidP="00410705">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r>
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t space="preserve">  </t>
+        </r>
+        <r rsidRPr="001F0A73">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/ValueSetLibraryID&gt; </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>  &lt;ProfileComponentID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;EntityIdentifier&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>State_Profile _Component</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/EntityIdentifier&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;NamespaceID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>Domain_ABC</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/NamespaceID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;UniversalID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>1.2.3.4.6</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>    &lt;UniversalIDType&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <color val="C00000"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>ISO</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>&lt;/UniversalIDType&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang val="fr-FR" eastAsia="en-US"/>
+          </rPr>
+          <t>  &lt;/ProfileComponentID&gt;</t>
+        </r>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <t> </t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00845B90" rsidRDefault="00845B90" rsidP="00845B90">
+        <pPr>
+          <spacing before="0" after="0"/>
+          <jc val="left"/>
+          <textAlignment val="baseline"/>
+          <rPr>
+            <rFonts ascii="Segoe UI" hAnsi="Segoe UI" cs="Segoe UI"/>
+            <kern val="0"/>
+            <sz val="18"/>
+            <szCs val="18"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="00845B90">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <kern val="0"/>
+            <sz val="22"/>
+            <szCs val="22"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+          <lastRenderedPageBreak/>
+          <t>&lt;/MessageProfile&gt; </t>
+        </r>
+      </p>
+      <p rsidR="001F0A73" rsidRPr="001F0A73" rsidRDefault="001F0A73" rsidP="001F0A73">
+        <pPr>
+          <rPr>
+            <b/>
+          </rPr>
+        </pPr>
+        <r>
+          <rPr>
+            <b/>
+          </rPr>
+          <t>Message Instance</t>
+        </r>
+        <r rsidRPr="00DB53C9">
+          <rPr>
+            <b/>
+          </rPr>
+          <t>:</t>
+        </r>
+      </p>
+      <p rsidR="00845B90" rsidRPr="00DB53C9" rsidRDefault="0003436F" rsidP="00C646D7">
+        <pPr>
+          <rPr>
+            <rFonts ascii="Arial" eastAsiaTheme="minorHAnsi" hAnsi="Arial" cs="Arial"/>
+            <kern val="0"/>
+            <lang eastAsia="en-US"/>
+          </rPr>
+        </pPr>
+        <r rsidRPr="004063FC">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>Profile_National_Level^Domain_XYZ^1.2.3.4.5^ISO~</t>
+        </r>
+        <r rsidR="00410705">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>VS_Library</t>
+        </r>
+        <r rsidR="00410705" rsidRPr="004063FC">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>^Domain_</t>
+        </r>
+        <r rsidR="00410705">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>XYZ</t>
+        </r>
+        <r rsidR="00410705" rsidRPr="004063FC">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>^1.2.3.4.</t>
+        </r>
+        <r rsidR="006D4FE2">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>5</t>
+        </r>
+        <r rsidR="00410705" rsidRPr="004063FC">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>^ISO</t>
+        </r>
+        <r rsidR="00410705">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+          </rPr>
+          <t>~</t>
+        </r>
+        <r rsidRPr="004063FC">
+          <rPr>
+            <rFonts ascii="Courier New" hAnsi="Courier New" cs="Courier New"/>
+            <lang val="fr-FR"/>
+          </rPr>
+          <t>State_Profile_Component^Domain_ABC^1.2.3.4.6^ISO</t>
+        </r>
+      </p>
+    </tc>
+  </tr>
+</tbl>
+<p rsidR="00845B90" rsidRDefault="00171B08" rsidP="004B7283">
+  <r>
+    <lastRenderedPageBreak/>
+    <t space="preserve">The </t>
+  </r>
+  <r rsidR="00410705">
+    <t space="preserve">above </t>
+  </r>
+  <r>
+    <t>example illustrate</t>
+  </r>
+  <r rsidR="006D4FE2">
+    <t>s</t>
+  </r>
+  <r>
+    <t space="preserve"> </t>
+  </r>
+  <r rsidR="00410705">
+    <t space="preserve">the </t>
+  </r>
+  <r>
+    <t space="preserve">grouping </t>
+  </r>
+  <r rsidR="00410705">
+    <t space="preserve">of </t>
+  </r>
+  <r>
+    <t space="preserve">three profile building blocks with an implied AND connector. The message profile identifier mechanism also supports an </t>
+  </r>
+  <r rsidR="001F0A73">
+    <t space="preserve">implied </t>
+  </r>
+  <r>
+    <t>OR connector</t>
+  </r>
+  <r rsidR="001F0A73">
+    <t space="preserve"> with the </t>
+  </r>
+  <r rsidR="001F0A73" rsidRPr="001F0A73">
+    <t>PreCoordinatedProfile</t>
+  </r>
+  <r rsidR="001F0A73">
+    <t space="preserve"> element</t>
+  </r>
+  <r>
+    <t space="preserve">. For example, the above illustration </t>
+  </r>
+  <r rsidR="00464C6A">
+    <t space="preserve">also </t>
+  </r>
+  <r>
+    <t space="preserve">could have defined a single pre-coordinated identifier that refers to these three profile building blocks. </t>
+  </r>
+  <r rsidR="0002111E">
+    <t>See the illustration below.</t>
+  </r>
+</p>
+<p rsidR="00AC38CD" rsidRDefault="00AC38CD" rsidP="004B7283"/>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DataElementDefinition"/>
+  <url value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataElementDefinition" />
+  <version value="1st draft" />
+  <name value="DataElementDefinition" />
+  <title value="Definition of v2+ Data Elements" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataElementDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="DataElementDefinition">
+      <path value="DataElementDefinition" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.name">
+      <path value="DataElementDefinition.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.description">
+      <path value="DataElementDefinition.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.itemNumber">
+      <path value="DataElementDefinition.itemNumber" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="positiveInt" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/positiveInt" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.minLength">
+      <path value="DataElementDefinition.minLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.maxLength">
+      <path value="DataElementDefinition.maxLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.field.confLength">
+      <path value="DataElementDefinition.field.confLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataElementDefinition.mayTruncate">
+      <path value="DataElementDefinition.mayTruncate" />
+      <short value="not applicable | true | false" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/v2-in-FHIR/valueset-may-truncate.html" />
+      </binding>
+    </element>
+    <element id="DataElementDefinition.datatype">
+      <path value="DataElementDefinition.datatype" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <!-- See comments at DataTypeDefinition.component.type -->
+        <!-- <targetProfile value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataTypeDefinition" /> -->
+        <aggregation value="referenced" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2-in-FHIR/DataElementDefinition/0093" />
+  <name value='Batch Message Count'/>
+  <description>
+    <status value="additional"/><!-- 1..1 generated | extensions | additional | empty -->
+    <!--This obviously needs to be done better in order to preserve the desired formatting.  Note that the FHIR rules for what HTML can be in there are still going to be in effect. -->
+    <div>
+      This field contains the count of the individual messages contained within the batch. 
+    </div>
+  </description>
+  <itemNumber value='93'/>     
+  <minLength value='0'/>
+  <maxLength value='0'/>
+  <confLength value='10'/>
+  <mayTruncate value='false'/>
+  <datatype value=value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+</DataElementDefinition>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2-in-FHIR/DataTypeDefinition/string" />
+  <name value='String Data'/>
+  <withdrawn value='false'/>
+  <abbreviation value='ST'/>
+  <description>
+    <status value="additional"/><!-- 1..1 generated | extensions | additional | empty -->
+    <!--This obviously needs to be done better in order to preserve the desired formatting.  Note that the FHIR rules for what HTML can be in there are still going to be in effect. -->
+    <div>
+      Definition: The String data type is used for text data when the appearance of text does not bear meaning. This is true for formalized text, symbols and formal expressions, and all kinds of names intended for machine processing (e.g., sorting, querying, indexing, etc.).
+      String data is left justified (i.e., no leading blank space) with trailing blanks optional. Any displayable (printable) ACSII characters (hexadecimal values between 20 and 7E, inclusive, or ASCII decimal values between 32 and 126), except the defined escape characters and defined delimiter characters.
+      Example 1: A textual ST field: |almost any data at all|
+      Example 2: URL encoded in an ST component: ^http://www.pacs.poupon.edu/wado.jsp^
+      Example 3: ISO OID encoded in an ST subcomponent: &2.16.840.1.113883.1.1&
+      To include any HL7 delimiter character (except the segment terminator) within a string data field, use the appropriate HL7 escape sequence (see Section 2.7.1, "Formatting Codes”).
+      Minimum Length: Not specified for the type. May be specified in the context of use. Defaults to 1 Maximum Length: Not specified for the type. May be specified in the context of use
+      ST has no inbuilt semantics – these are assigned where the ST is used. In each case where ST is used, minimum, maximum, and conformance lengths may be specified. Unless specified in the context of use, values of type ST may not be truncated.
+      Usage note: The ST data type is intended for short strings (e.g., less than 1000 characters). For longer strings the TX or FT data types should be used (see Sections 2.A.80, “TX - text data” or 2.A.31, “FT - formatted text data”). FIXME - maintain references to other sections.
+      Alternate character set note: ST - string data may also be used to express other character sets. See Section 2.15.9.18, "Character set," and Section 2.15.9.20, "Alternate character set handling" for details.
+    </div>
+  </description>
+  <array_type value='false'/>
+  <component>
+    <name value='value'/>
+    <!--Note that there is no <sequenceNumber> -->
+    <optionality value='R'/>
+    <mayTruncate value='not applicable'/>
+    <!--Note here that we are referencing the FHIR String data type.  There are alternatives but they more or less amount to either using a computationally meaningless string OR doing what FHIR does for primitive data types which is to use extensions to define them with respect to their corresponding JSON, XML, and RDF types.  Referencing the FHIR data type definition ultimately resolves to these JSON, XML, and RDF types.  Maybe there are other alternatives? -->
+    <!--I'm not entirely sure that this works.  The value would have to be an instance of the FHIR string, which itself has an attribute called value -->
+    <type value='http://hl7.org/fhir/StructureDefinition/string'/>
+  </component>
+</DataTypeDefinition>

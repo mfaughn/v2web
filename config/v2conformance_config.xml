@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<standard title="HL7v2 Conformance Methodology R1 O1 Ballot Revised D9 - September 2019">
+  <section location="1" title="Introduction" localUrl="Introduction.html">
+    <section location="1.1" title="Purpose" localUrl="Purpose.html">
+      <section location="1.1.1" title="Relevant Specifications"/>
+      <section location="1.1.2" title="Requisite Knowledge"/>
+      <section location="1.1.3" title="Supplemental Resources"/>
+    </section>
+    <section location="1.2" title="Conventions and Definitions" localUrl="Conventions_and_Definitions.html">
+      <section location="1.2.1" title="Keywords"/>
+      <section location="1.2.2" title="Definitions"/>
+      <section location="1.2.3" title="Element Representation"/>
+    </section>
+    <section location="1.3" title="Concepts and their Relationships" localUrl="Concepts_and_their_Relationships.html"/>
+    <section location="1.4" title="Profiling and Profile Construction Overview" localUrl="Profiling_and_Profile_Construction_Overview.html">
+      <section location="1.4.1" title="Profiling"/>
+      <section location="1.4.2" title="Constraints"/>
+      <section location="1.4.3" title="Profile Construction"/>
+      <section location="1.4.4" title="Profile Role"/>
+      <section location="1.4.5" title="Segment Flavors and Data Type Flavors"/>
+    </section>
+    <section location="1.5" title="Implementation Guides in Context of Use" localUrl="Implementation_Guides_in_Context_of_Use.html">
+      <section location="1.5.1" title="Validation and the Respopnse to Validation Results"/>
+    </section>
+  </section>
+  <section location="2" title="Profile Levels" localUrl="Profile_Levels.html">
+    <section location="2.1" title="Profiles in Use" localUrl="Profiles_in_Use.html"/>
+  </section>
+  <section location="3" title="HL7 v2 Implementation Guides" localUrl="HL7_v2_Implementation_Guides.html">
+    <section location="3.1" title="Background" localUrl="Background.html">
+      <section location="3.1.1" title="Introduction"/>
+      <section location="3.1.2" title="Purpose"/>
+      <section location="3.1.3" title="Intended Audience"/>
+      <section location="3.1.4" title="Scope"/>
+      <section location="3.1.5" title="Organization of This Guide"/>
+      <section location="3.1.6" title="Reference Specifications—Antecedents"/>
+      <section location="3.1.7" title="Conventions"/>
+      <section location="3.1.8" title="Conformance Clause"/>
+    </section>
+    <section location="3.2" title="Actors" localUrl="Actors.html"/>
+    <section location="3.3" title="Use Case" localUrl="Use_Case.html">
+      <section location="3.3.1" title="Interaction Specification">
+        <section location="3.3.1.1" title="Interaction Model">
+          <section location="3.3.1.1.1" title=""/>
+        </section>
+        <section location="3.3.1.2" title="Acknowledgement Responsibilities "/>
+      </section>
+      <section location="3.3.2" title="Functional Requirements"/>
+      <section location="3.3.3" title="Example Messages"/>
+    </section>
+    <section location="3.4" title="Messaging Infrastructure" localUrl="Messaging_Infrastructure.html"/>
+    <section location="3.5" title="Other Relevant Information" localUrl="Other_Relevant_Information.html"/>
+  </section>
+  <section location="4" title="Message Profiles" localUrl="Message_Profiles.html">
+    <section location="4.1" title="Message Profile Identification" localUrl="Message_Profile_Identification.html"/>
+    <section location="4.2" title="Message Level Profiling" localUrl="Message_Level_Profiling.html">
+      <section location="4.2.1" title=""/>
+    </section>
+    <section location="4.3" title="Segment Level Profiling" localUrl="Segment_Level_Profiling.html">
+      <section location="4.3.1" title=""/>
+    </section>
+    <section location="4.4" title="Data Type Profiling" localUrl="Data_Type_Profiling.html"/>
+    <section location="4.5" title="Primitive Element Profiling" localUrl="Primitive_Element_Profiling.html"/>
+    <section location="4.6" title="Differential Profiles" localUrl="Differential_Profiles.html"/>
+    <section location="4.7" title="Extensions" localUrl="Extensions.html"/>
+  </section>
+  <section location="5" title="Constraints" localUrl="Constraints.html">
+    <section location="5.1" title="Usage" localUrl="Usage.html">
+      <section location="5.1.1" title="Usage Requirements for Sending Applications"/>
+      <section location="5.1.2" title="Usage Requirements for Receiving Applications"/>
+      <section location="5.1.3" title="Conditional Usage">
+        <section location="5.1.3.1" title="Undeclared Conditional Usage"/>
+        <section location="5.1.3.2" title="Declared Conditional Usage"/>
+        <section location="5.1.3.3" title="Factoring Conditional Usage to Non-conditional Usage"/>
+        <section location="5.1.3.4" title="Predicate Definition"/>
+      </section>
+      <section location="5.1.4" title="Usage Compliance">
+        <section location="5.1.4.1" title="Conditional Usage Compliance"/>
+      </section>
+      <section location="5.1.5" title="Usage Compatibility"/>
+      <section location="5.1.6" title="Usage and Conformance"/>
+    </section>
+    <section location="5.2" title="Cardinality" localUrl="Cardinality.html">
+      <section location="5.2.1" title="Relationship between usage and cardinality"/>
+      <section location="5.2.2" title="Repetition, Occurrence, and Cardinality"/>
+      <section location="5.2.3" title="Cardinality Compliance"/>
+      <section location="5.2.4" title="Cardinality Compatibility"/>
+    </section>
+    <section location="5.3" title="Data Type Specialization (Flavor)" localUrl="Data_Type_Specialization_(Flavor).html">
+      <section location="5.3.1" title="Root Data Type Substitution"/>
+      <section location="5.3.2" title="Data Type Compatibility"/>
+    </section>
+    <section location="5.4" title="Content" localUrl="Content.html"/>
+    <section location="5.5" title="Length" localUrl="Length.html">
+      <section location="5.5.1" title="Minimum and Maximum Length"/>
+      <section location="5.5.2" title="Conformance Length"/>
+      <section location="5.5.3" title="Truncation"/>
+      <section location="5.5.4" title="General length Conformance Rules"/>
+    </section>
+    <section location="5.6" title="Slicing" localUrl="Slicing.html">
+      <section location="5.6.1" title="Slicing Using a Discriminator">
+        <section location="5.6.1.1" title="FIXED VALUE DISCRIMINATOR SPECIFICATION AND EXAMPLES">
+          <section location="5.6.1.1.1" title="EXISTS DISCRIMINATOR SPECIFICATION AND EXAMPLES"/>
+          <section location="5.6.1.1.2" title="PATTERN DISCRIMINATOR SPECIFICATION AND EXAMPLES"/>
+        </section>
+        <section location="5.6.1.2" title="Slicing Using Ordering"/>
+        <section location="5.6.1.3" title="Non-Selective Slicing"/>
+      </section>
+    </section>
+    <section location="5.7" title="Conformance Statement" localUrl="Conformance_Statement.html"/>
+    <section location="5.8" title="Co-Constraints" localUrl="Co-Constraints.html"/>
+    <section location="5.9" title="Semantic Refinement" localUrl="Semantic_Refinement.html">
+      <section location="5.9.1" title="Annotations"/>
+    </section>
+  </section>
+  <section location="6" title="Vocabulary Constraints" localUrl="Vocabulary_Constraints.html">
+    <section location="6.1" title="Vocabulary Profiling Mechanics" localUrl="Vocabulary_Profiling_Mechanics.html"/>
+    <section location="6.2" title="Typical Vocabulary Bindings" localUrl="Typical_Vocabulary_Bindings.html"/>
+    <section location="6.3" title="Single Code Element Binding" localUrl="Single_Code_Element_Binding.html"/>
+    <section location="6.4" title="Use of Extensibility and Stability" localUrl="Use_of_Extensibility_and_Stability.html"/>
+    <section location="6.5" title="Profiling at the Code Level" localUrl="Profiling_at_the_Code_Level.html">
+      <section location="6.5.1" title="Vocabulary Compatibility"/>
+    </section>
+    <section location="6.6" title="Profiling HL7 Tables " localUrl="Profiling_HL7_Tables_.html"/>
+    <section location="6.7" title="Null Flavors" localUrl="Null_Flavors.html"/>
+    <section location="6.8" title="Relationship of Coded Element Based Data Types and Flavors" localUrl="Relationship_of_Coded_Element_Based_Data_Types_and_Flavors.html"/>
+  </section>
+  <section location="7" title="Profile Construction" localUrl="Profile_Construction.html">
+    <section location="7.1" title="Profile Design and Management" localUrl="Profile_Design_and_Management.html">
+      <section location="7.1.1" title="Profile Components"/>
+      <section location="7.1.2" title="Composite Profiles"/>
+      <section location="7.1.3" title="Profile Construction Examples"/>
+    </section>
+    <section location="7.2" title="Selective Adoption" localUrl="Selective_Adoption.html">
+      <section location="7.2.1" title="Rationale for Selective Adoption"/>
+      <section location="7.2.2" title="Methods for Selective Adoption">
+        <section location="7.2.2.1" title="Selective Pre-Adoption"/>
+        <section location="7.2.2.2" title="Selective Post-Adoption"/>
+        <section location="7.2.2.3" title="Selective Post-Adoption From Current HL7 v2+ Edition"/>
+      </section>
+      <section location="7.2.3" title="Object Adoption Limitations and Rules"/>
+    </section>
+  </section>
+  <section location="8" title="Pairing Sender and Receiver Profile for Use " localUrl="Pairing_Sender_and_Receiver_Profile_for_Use_.html">
+    <section location="8.1" title="One-to-one Profile Pairing" localUrl="One-to-one_Profile_Pairing.html"/>
+    <section location="8.2" title="One-to-many Profile Pairing" localUrl="One-to-many_Profile_Pairing.html"/>
+    <section location="8.3" title="Many-to-one Profile Pairing" localUrl="Many-to-one_Profile_Pairing.html"/>
+    <section location="8.4" title="Design Considerations: Profiling Pairing" localUrl="Design_Considerations_Profiling_Pairing.html"/>
+  </section>
+  <section location="9" title="Profile Documentation" localUrl="Profile_Documentation.html">
+    <section location="9.1" title="Profile and Implementation Relationships" localUrl="Profile_and_Implementation_Relationships.html"/>
+    <section location="9.2" title="Documentation Quality" localUrl="Documentation_Quality.html"/>
+  </section>
+  <section location="10" title="Computable Document Definitions" localUrl="Computable_Document_Definitions.html">
+    <section location="10.1" title="Document Definitions Layout" localUrl="Document_Definitions_Layout.html"/>
+    <section location="10.2" title="Meta Data" localUrl="Meta_Data.html">
+      <section location="10.2.1" title="Implementation Guide Meta Data"/>
+      <section location="10.2.2" title="Message Profile Meta Data"/>
+    </section>
+  </section>
+  <section location="11" title="Glossary" localUrl="Glossary.html"/>
+  <section location="12" title="Appendix A: Predicate Definition Language" localUrl="Appendix_A_Predicate_Definition_Language.html">
+    <section location="12.1" title="IF Statement" localUrl="IF_Statement.html"/>
+    <section location="12.2" title="Occurrence-Declarative Statement" localUrl="Occurrence-Declarative_Statement.html"/>
+    <section location="12.3" title="Element Location" localUrl="Element_Location.html"/>
+    <section location="12.4" title="Context" localUrl="Context.html"/>
+    <section location="12.5" title="Verbs" localUrl="Verbs.html"/>
+    <section location="12.6" title="Content-Declarative Statements" localUrl="Content-Declarative_Statements.html"/>
+    <section location="12.7" title="Comparison-Content Declarative Statement" localUrl="Comparison-Content_Declarative_Statement.html"/>
+    <section location="12.8" title="Complex Condition Predicates" localUrl="Complex_Condition_Predicates.html"/>
+  </section>
+  <section location="13" title="Appendix B: Conformance Statement Definition Language" localUrl="Appendix_B_Conformance_Statement_Definition_Language.html">
+    <section location="13.1" title="Element Location" localUrl="Element_Location.html"/>
+    <section location="13.2" title="Propositions" localUrl="Propositions.html"/>
+    <section location="13.3" title="Occurrence-Declarative Statement" localUrl="Occurrence-Declarative_Statement.html"/>
+    <section location="13.4" title="Context" localUrl="Context.html"/>
+    <section location="13.5" title="Verbs" localUrl="Verbs.html"/>
+    <section location="13.6" title="Content-Declarative Statement" localUrl="Content-Declarative_Statement.html"/>
+    <section location="13.7" title="Comparison-Content Declarative Statement" localUrl="Comparison-Content_Declarative_Statement.html"/>
+    <section location="13.8" title="Complex Conformance Statements" localUrl="Complex_Conformance_Statements.html"/>
+    <section location="13.9" title="Free-Text Conformance Statements" localUrl="Free-Text_Conformance_Statements.html"/>
+  </section>
+</standard>

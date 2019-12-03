@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="SegmentDefinition"/>
+  <url value="http://hl7.org/v2-in-FHIR/StructureDefinition/SegmentDefinition" />
+  <version value="1st draft" />
+  <name value="SegmentDefinition" />
+  <title value="Definition of v2+ Segments" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://hl7.org/v2-in-FHIR/StructureDefinition/SegmentDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="SegmentDefinition">
+      <path value="SegmentDefinition" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.name">
+      <path value="SegmentDefinition.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.withdrawn">
+      <path value="SegmentDefinition.withdrawn" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.abbreviation">
+      <path value="SegmentDefinition.abbreviation" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.description">
+      <path value="SegmentDefinition.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field">
+      <path value="SegmentDefinition.field" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field.sequenceNumber">
+      <path value="DataTypeDefinition.field.sequenceNumber" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="positiveInt" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/positiveInt" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field.itemNumber">
+      <path value="SegmentDefinition.field.itemNumber" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="positiveInt" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/positiveInt" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field.mustSupport">
+      <path value="SegmentDefinition.field.mustSupport" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/v2-in-FHIR/valueset-segment-field-optionality.html" />
+      </binding>
+    </element>
+    <element id="SegmentDefinition.field.minCardinality">
+      <path value="SegmentDefinition.field.minCardinality" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field.maxCardinality">
+      <path value="SegmentDefinition.field.maxCardinality" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="SegmentDefinition.field.dataElement">
+      <path value="SegmentDefinition.field.dataElement" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DataElementDefinition" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value='http://hl7.org/v2-in-FHIR/SegmentDefinition/batch-trailer-segment'/>
+  <name value='batch trailer segment'/>
+  <withdrawn value='false'/>
+  <abbreviation value='BTS'/>
+  <description>
+    <status value="additional"/><!-- 1..1 generated | extensions | additional | empty -->
+     <div xmlns="http://www.w3.org/1999/xhtml">
+       The BTS segment defines the end of a batch.
+     </div>
+   </description>
+   <field>
+     <sequenceNumber value='1'/>
+     <itemNumber value='93'/>      
+     <maxCardinality value='1'/>
+   </field>
+   <field>
+     <sequenceNumber value='2'/>
+     <itemNumber value='90'/> 
+     <maxCardinality value='1'/>
+   </field>
+   <field>
+     <sequenceNumber value='3'/>
+     <itemNumber value='95'/> 
+   </field>
+</SegmentDefinition>  

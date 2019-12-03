@@ -8,6 +8,7 @@ end
 t = Time.now
 load File.join(__dir__, 'parse_value_sets.rb')
 load File.join(__dir__, 'parse_datatypes.rb')
+load File.join(__dir__, 'parse_control_segments.rb')
 
 HL7::Component.all.each do |c|
   if c.legacy_tbl
@@ -21,4 +22,8 @@ HL7::Component.all.each do |c|
     end
   end
 end
+
+load File.join(__dir__, 'parse_snelick.rb')
+load File.join(__dir__, 'build_snelick.rb')
+
 puts "That took #{Time.now - t} seconds"

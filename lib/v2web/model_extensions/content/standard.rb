@@ -1,4 +1,7 @@
 require 'fileutils'
+# require_relative 'ig_standard'
+load File.join(__dir__, 'ig_standard.rb')
+
 module V2Web
   class Standard
     def to_hl7_site_file(location = nil)

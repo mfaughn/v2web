@@ -1,0 +1,23 @@
+{
+  "package-id": "hl7.fhir.uv.v2plus",
+  "title": "V2 Standard Produced By IG Publisher (Test)",
+  "canonical": "http://hl7.org/fhir/uv/v2plus",
+  "introduction": "Test",
+  "list": [
+/*    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/HL7/v2plus",
+      "status": "ci-build",
+      "current": true
+    },*/
+    {
+      "version": "0.0.0",
+      "date": "xxx",
+      "desc": "Test",
+      "path": "http://hl7.org/fhir/uv/v2plus/test",
+      "status": "ballot",
+      "sequence": "STU1"
+    }
+  ]
+}
