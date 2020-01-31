@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/clinical-study-schedule-master-segment"/>
+  <name value="Clinical Study Schedule Master Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="CM2"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The Technical Steward for the CM2 segment is Orders and Observations.</p>
+          <p>The Clinical Study Schedule Master (CM2) contains the information about the scheduled time points for study or phase-related treatment or evaluation events. The fact that a patient has data satisfying a scheduled time point is sent in the CSS segment, sequence 2. The CM2 segment describes the scheduled time points in general.</p>
+          <p><span id="CM2" class="anchor"/>HL7 Attribute Table - CM2 - Clinical Study Schedule Master</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01024"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01025"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01026"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="200">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01027"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

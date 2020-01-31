@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/adjustment-segment"/>
+  <name value="Adjustment Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="ADJ"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>This segment describes Provider and/or Payer adjustments to a Product/Service Line Item or Response Summary. These include surcharges such as tax, dispensing fees and mark ups.</p>
+          <p>X12 REF: Similar to CAS segment, with a few new fields.</p>
+          <p>HL7 Attribute Table – ADJ – Adjustment</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02003"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02004"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02005"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02006"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="0">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02007"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02008"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="7"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02009"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="8"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02010"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="9"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02011"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="10"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02012"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="11"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02013"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="12"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02014"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="13"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02015"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="14"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02016"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="15"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02017"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/product-experience-observation-segment"/>
+  <name value="Product Experience Observation Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PEO"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>Details related to a particular clinical experience or event are embodied in the PEO segment. This segment can be used to characterize an event which might be attributed to a product to which the patient was exposed. Products with a possible causal relationship to the observed experience are described in the following PCR (possible causal relationship) segments. The message format was designed to be robust and includes many optional elements which may not be required for a particular regulatory purpose but allow a complete representation of the drug experience if needed.</p>
+          <p>A PEX message can contain multiple PEO segments if the patient experienced more than one event but must contain at least one PEO segment.</p>
+          <p>HL7 Attribute Table – PEO<span id="PEO" class="anchor"/> – Product Experience Observation</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01073"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01074"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01075"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01076"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01077"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01078"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="7"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01079"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="8"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01080"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="9"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01081"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="10"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01082"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="11"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01083"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="12"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01084"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="13"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01085"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="14"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01086"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="15"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01087"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="16"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01088"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="17"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01089"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="18"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01090"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="19"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01091"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="20"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01092"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="21"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01093"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="22"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01094"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="23"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01095"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="24"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01096"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="25"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01097"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

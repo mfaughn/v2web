@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/scheduling-class-value-pair"/>
+  <name value="scheduling class value pair"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SCV"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> This data type is used to communicate parameters and preferences to the filler application regarding the selection of an appropriate time slot, resource, location, or filler override criterion for an appointment.</p>
+      <p>For use only with the scheduling chapter.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Parameter Class"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The first component of this field is a code identifying the parameter or preference being passed to the filler application. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70294"><em>User-defined Table 0294 - Time Selection Criteria Parameter Class Codes</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0294/index.html"/>
+  </component>
+  <component>
+    <name value="Parameter Value"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The second component is the actual data value for that parameter.</p>
+        <p>For example, if a filler application allows preference parameters to be passed to specify a preferred start time, a preferred end time, and preferred days of the week for the appointment, it may define the following parameter class codes and valid data sets.</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+</DataTypeDefinition>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01749"/>
+  <name value="BP Transfusion Verifier"/>
+  <itemNumber value="1749"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/extended-composite-id-number-and-name-for-persons"/>
+</DataElementDefinition>

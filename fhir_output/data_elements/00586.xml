@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00586"/>
+  <name value="Sequence Number - Test/Observation Master File"/>
+  <itemNumber value="586"/>
+  <confLength value="4"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+</DataElementDefinition>

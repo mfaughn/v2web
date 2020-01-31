@@ -40,9 +40,7 @@
     <section location="3.2" title="Actors" localUrl="Actors.html"/>
     <section location="3.3" title="Use Case" localUrl="Use_Case.html">
       <section location="3.3.1" title="Interaction Specification">
-        <section location="3.3.1.1" title="Interaction Model">
-          <section location="3.3.1.1.1" title=""/>
-        </section>
+        <section location="3.3.1.1" title="Interaction Model"/>
         <section location="3.3.1.2" title="Acknowledgement Responsibilities "/>
       </section>
       <section location="3.3.2" title="Functional Requirements"/>
@@ -53,12 +51,8 @@
   </section>
   <section location="4" title="Message Profiles" localUrl="Message_Profiles.html">
     <section location="4.1" title="Message Profile Identification" localUrl="Message_Profile_Identification.html"/>
-    <section location="4.2" title="Message Level Profiling" localUrl="Message_Level_Profiling.html">
-      <section location="4.2.1" title=""/>
-    </section>
-    <section location="4.3" title="Segment Level Profiling" localUrl="Segment_Level_Profiling.html">
-      <section location="4.3.1" title=""/>
-    </section>
+    <section location="4.2" title="Message Level Profiling" localUrl="Message_Level_Profiling.html"/>
+    <section location="4.3" title="Segment Level Profiling" localUrl="Segment_Level_Profiling.html"/>
     <section location="4.4" title="Data Type Profiling" localUrl="Data_Type_Profiling.html"/>
     <section location="4.5" title="Primitive Element Profiling" localUrl="Primitive_Element_Profiling.html"/>
     <section location="4.6" title="Differential Profiles" localUrl="Differential_Profiles.html"/>
@@ -100,11 +94,25 @@
     <section location="5.6" title="Slicing" localUrl="Slicing.html">
       <section location="5.6.1" title="Slicing Using a Discriminator">
         <section location="5.6.1.1" title="FIXED VALUE DISCRIMINATOR SPECIFICATION AND EXAMPLES">
+          <tabSet title="Example">
+            <tab title="Fixed Value Discriminator Slicing" file="name-file.xml"/>
+          </tabSet>
           <section location="5.6.1.1.1" title="EXISTS DISCRIMINATOR SPECIFICATION AND EXAMPLES"/>
           <section location="5.6.1.1.2" title="PATTERN DISCRIMINATOR SPECIFICATION AND EXAMPLES"/>
         </section>
-        <section location="5.6.1.2" title="Slicing Using Ordering"/>
-        <section location="5.6.1.3" title="Non-Selective Slicing"/>
+        <section location="5.6.1.2" title="Slicing Using Ordering">
+          <tabSet title="Example">
+            <tab title="Selective Slicing" file="different-file.xml"/>
+          </tabSet>
+        </section>
+        <section location="5.6.1.3" title="Non-Selective Slicing">
+          <tabSet title="Examples">
+            <tab title="Non-Selective Slicing" file="this-file.xml"/>
+            <!-- I added this one just to demonstrate that you could put multiple tabs in a tabSet -->
+            <tab title="Non-Selective Slicing (Alternative)" file="that-file.xml"/>
+            <tab title="A Picture" file="kittens.jpg"/>
+          </tabSet>
+        </section>
       </section>
     </section>
     <section location="5.7" title="Conformance Statement" localUrl="Conformance_Statement.html"/>

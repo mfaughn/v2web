@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/location-with-address-variation-1"/>
+  <name value="location with address variation 1"/>
+  <withdrawn value="true"/>
+  <abbreviation value="LA1"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>
+        <strong>Attention: <em>The LA1 data type was retained for backward compatibility only as of v 2.5 and the detail was withdrawn and removed from the standard as of v 2.8.</em> </strong>
+      </p>
+    </div>
+  </description>
+</DataTypeDefinition>

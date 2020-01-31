@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataTypeDefinition>
-  <url value="http://hl7.org/v2-in-FHIR/DataTypeDefinition/string" />
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/string" />
   <name value='String Data'/>
   <withdrawn value='false'/>
   <abbreviation value='ST'/>

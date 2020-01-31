@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01818"/>
+  <name value="User Message"/>
+  <itemNumber value="1818"/>
+  <confLength value="250"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/text-data"/>
+</DataElementDefinition>

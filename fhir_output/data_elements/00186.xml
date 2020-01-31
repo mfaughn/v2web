@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00186"/>
+  <name value="Patient Valuables Location"/>
+  <itemNumber value="186"/>
+  <confLength value="25"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

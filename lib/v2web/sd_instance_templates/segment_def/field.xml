@@ -1,0 +1,7 @@
+<field>
+  <sequenceNumber value="SEQUENCE_NUMBER"/>
+  <mustSupport value="MUST_SUPPORT"
+  MIN_CARDINALITY
+  MAX_CARDINALITY
+  <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/DATA_ELEMENT"/>
+</field>

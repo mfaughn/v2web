@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/date"/>
+  <name value="date"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Specifies the century and year with optional precision to month and day.</p>
+      <p><strong>Minimum Length:</strong> 4</p>
+      <p><strong>Maximum Length:</strong> 8</p>
+      <p>The number of digits populated specifies the precision using the format specification YYYY[MM[DD]]. Thus:</p>
+      <ol type="a">
+        <li>
+          <p>only the first four digits are used to specify a precision of "year"</p>
+        </li>
+        <li>
+          <p>the first six are used to specify a precision of "month"</p>
+        </li>
+        <li>
+          <p>the first eight are used to specify a precision of "day"</p>
+        </li>
+      </ol>
+      <p>Examples:</p>
+      <p>|19880704|</p>
+      <p>|199503|</p>
+      <p>The DT data type does not follow the normal truncation pattern, and the truncation character is never valid in the DT data type. Instead, the truncation behavior is based on the semantics of dates.</p>
+      <p>Unless specified in the context where the DT type is used, the DT type may not be truncated. When a DT is truncated, the truncated form SHALL still be a valid DT type. Systems should always be able to persist full dates. Refer to Chapter 2, section 2.5.5.2 "Truncation Pattern" for further information.</p>
+      <p>Note: Prior to v2.3, this data type was specified in the format YYYYMMDD. As of v2.3, month and days are no longer required. By site-specific agreement, YYYYMMDD may be used where backward compatibility must be maintained.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Date"/>
+    <sequenceNumber value=""/>
+    <minLength value="4"/>
+    <confLength value="8"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  </component>
+</DataTypeDefinition>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/software-segment"/>
+  <name value="software segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SFT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>Definition: This segment provides additional information about the software product(s) used as a Sending Application. The primary purpose of this segment is for diagnostic use. There MAY be additional uses per site-specific agreements.</p>
+          <p>Implementers are encouraged to use message profile identifiers (as found in <em>2.14.9.21</em>, "<em>MSH-21 Message Profile Identifier (EI) 01598</em>") to control the behavior of the receiving application rather than relying on application or version information in the SFT segment.</p>
+          <p>For example, if software product A has versions 9 and 10 deployed in different Enterprise locations, the fact that they use different message types, segments, or fields SHOULD be reflected via their message profiles (see section 2B, "Conformance Using Message Profiles"). If there is an upgrade from version 10 to 10.1, this would be reflected in the SFT segment, but changes to the message contents SHOULD be reflected via a new/different conformance profile.</p>
+          <p>Use Case: An external application has been customized to communicate with a centralized patient drug history system. However, due to certain, known characteristics of the external software package, the centralized system must modify its behavior in order to process transactions correctly. In one example, the external application could have multiple versions in production. As such, the centralized application will need to know the name of the <strong>Software Vendor Organization</strong>, the <strong>Software Release Number</strong>, the <strong>Software Product Name</strong>, and the <strong>Software Binary ID</strong> so that it can correctly identify the software submitting the transaction and modify its behavior appropriately.</p>
+          <p>While preparing a transaction for submission to a centralized system the sending application specifies its <strong>Software Install Date</strong> and its configuration settings (<strong>Software Product Information</strong>). While processing the transaction, the centralized system encounters an error. Upon examination of the error, install date and configuration of the software that sent the message, helpdesk staff are able to determine the sending application has not been updated to reflect recent application changes.</p>
+          <p>Use Case: In circumstances where a message is manipulated or modified by multiple systems, a repetition of this segment MAY be appended by each system.</p>
+          <p>Example:</p>
+          <p>MSH</p>
+          <p>[{ SFT }]</p>
+          <p>...</p>
+          <p>HL7 Attribute Table – SFT – Software Segment</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01834"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01835"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01836"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01837"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01838"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01839"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

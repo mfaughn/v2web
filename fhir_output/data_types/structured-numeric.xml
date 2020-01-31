@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/structured-numeric"/>
+  <name value="structured numeric"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SN"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> The structured numeric data type is used to unambiguously express numeric clinical results along with qualifications. This enables receiving systems to store the components separately, and facilitates the use of numeric database queries. The corresponding sets of values indicated with the &lt;comparator&gt; and &lt;separator/suffix&gt; components are intended to be the authoritative and complete set of values. If additional values are needed for the &lt;comparator&gt; and &lt;separator/suffix&gt; components, they should be submitted to HL7 for inclusion in the Standard.</p>
+      <p>If &lt;num1&gt; and &lt;num2&gt; are both non-null, then the separator/suffix must be non-null. If the separator is "-", the data range is inclusive; e.g., &lt;num1&gt; - &lt;num2&gt; defines a range of numbers x, such that: &lt;num1&gt; &lt;=x&lt;= &lt;num2&gt;.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Comparator"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Defined as greater than, less than, greater than or equal, less than or equal, equal, and not equal, respectively ( "&gt;" or "&lt;" or "&gt;=" or "&lt;=" or "=" or "&lt;&gt;").</p>
+        <p>If this component is not valued, it defaults to equal ("=").</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Num1"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A number.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Separator/Suffix"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: "-" or "+" or "/" or ":"</p>
+        <p>Examples:</p>
+        <p>|&gt;^100| (greater than 100)</p>
+        <p>|^100^-^200| (equal to range of 100 through 200)</p>
+        <p>|^1^:^228| (ratio of 1 to 128, e.g., the results of a serological test)</p>
+        <p>|^2^+| (categorical response, e.g., occult blood positivity)</p>
+        <p>
+          <strong>Note: The value "." has been deprecated as of version 2.9 and will be withdrawn after two versions.</strong>
+        </p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Num2"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A number or null depending on the measurement.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+</DataTypeDefinition>

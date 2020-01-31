@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/date-and-institution-name"/>
+  <name value="date and institution name"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DIN"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Specifies the date and institution information where a staff member became active or inactive.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Date"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the date when a staff member became active or inactive.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Institution Name"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the institution where a staff member is or was active. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70531"><em>User-Defined Table 0531 - Institution</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0531/index.html"/>
+  </component>
+</DataTypeDefinition>

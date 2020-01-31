@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataElementDefinition>
-  <url value="http://hl7.org/v2-in-FHIR/DataElementDefinition/0093" />
+  <url value="http://hl7.org/v2plus/DataElementDefinition/0093" />
   <name value='Batch Message Count'/>
   <description>
     <status value="additional"/><!-- 1..1 generated | extensions | additional | empty -->
@@ -14,5 +14,5 @@
   <maxLength value='0'/>
   <confLength value='10'/>
   <mayTruncate value='false'/>
-  <datatype value=value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+  <datatype value=value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
 </DataElementDefinition>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/01030"/><name value="Collector"/>s Comment *'/&gt;
+  
+  <itemNumber value="1030"/><mayTruncate value="not applicable"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/></DataElementDefinition>

@@ -1,4 +1,5 @@
 require 'cgi'
+require 'loofah'
 module V2Web
   class Table
     def to_hl7_site(_ = nil)
@@ -17,13 +18,17 @@ module V2Web
     
     derived_attribute(:identifying_text, ::String)
     def identifying_text
-      if title
+      t = if title
+        puts 'title'
         title
       elsif caption
+        puts 'caption'
         caption
       else
         header_row_simple
       end
+      puts t.inspect
+      t
     end
     
     def to_html
@@ -56,8 +61,9 @@ module V2Web
     def header_row_simple
       html = []
       rows.first.cells.each do |cell|
-        html << "#{cell.html_content}"
+        html << Loofah.fragment(cell.html_content).scrub!(:prune).text
       end
+      puts html
       'Table: ' + html.join(" | ")[0..50]
     end
   end

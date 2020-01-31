@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/message-type"/>
+  <name value="message type"/>
+  <withdrawn value="false"/>
+  <abbreviation value="MSG"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This field contains the message type, trigger event, and the message structure ID for the message.</p>
+      <p><strong>Note</strong>: Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Message Code"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the message type code. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70076"><em>HL7 Table 0076– Message Type</em></a> for valid values.</p>
+        <p>This table contains values such as ACK, ADT, ORM, ORU etc.</p>
+        <p>See Chapter 2, "Control", section 2.5.1, "Messages" for further discussion.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0076/index.html"/>
+  </component>
+  <component>
+    <name value="Trigger Event"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the trigger event code. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70003"><em>HL7 Table 0003– Event Type</em></a> for valid values.</p>
+        <p>This table contains values like A01, O01, R01 etc.</p>
+        <p>See Chapter 2, "Control", section 2.3.1, "Trigger Events" for further discussion.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0003/index.html"/>
+  </component>
+  <component>
+    <name value="Message Structure"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the abstract message structure code. Refer to <em><a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70354">HL7 Table 0354 – Message Structure</a></em> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0354/index.html"/>
+  </component>
+</DataTypeDefinition>

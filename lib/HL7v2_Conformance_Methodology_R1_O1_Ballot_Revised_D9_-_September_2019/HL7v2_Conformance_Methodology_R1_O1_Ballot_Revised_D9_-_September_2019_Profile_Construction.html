@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -164,7 +171,7 @@ Appendix B: Conformance Statement Definition Language
 7.1 Profile Design and Management
 </h3>
 <p class='p_v2web'>
-<p>A message profile is normally thought of as a complete message-structure definition with additional constraints applied to it as a &ldquo;whole&rdquo;. However, in some circumstances it is convenient and efficient to employ a modular approach to profile construction. A profile component defines a part or a certain aspect of a message definition and is used to aggregate correlated requirements and/or to differentiate requirements from another profile. It provides a mechanism to support a set of reusable requirements. A profile component can be applied to any construct or section of a message definition. A core profile is used to document the common set of requirements across the set of related profiles. A composite profile is the composition of a profile or core profile and one or more profile components. In the end, a composite profile is a profile with the distinction that the profile was created by combining a profile or core profile and one or more profile components. Profiles and profile components can be combined to develop and manage other profiles. A profile component in a family of profiles can be used to identify different levels of requirements for the same use case or to identify the differences in requirements for different, but closely related, use cases. <span style="font-size:16px">Table 7.1</span> summarizes the profile building blocks. </p><p></p>
+<p>A message profile is normally thought of as a complete message-structure definition with additional constraints applied to it as a &ldquo;whole&rdquo;. However, in some circumstances it is convenient and efficient to employ a modular approach to profile construction. A profile component defines a part or a certain aspect of a message definition and is used to aggregate correlated requirements and/or to differentiate requirements from another profile. It provides a mechanism to support a set of reusable requirements. A profile component can be applied to any construct or section of a message definition. A core profile is used to document the common set of requirements across the set of related profiles. A composite profile is the composition of a profile or core profile and one or more profile components. In the end, a composite profile is a profile with the distinction that the profile was created by combining a profile or core profile and one or more profile components. Profiles and profile components can be combined to develop and manage other profiles. A profile component in a family of profiles can be used to identify different levels of requirements for the same use case or to identify the differences in requirements for different, but closely related, use cases. Table 7.1 summarizes the profile building blocks. </p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -277,7 +284,7 @@ Appendix B: Conformance Statement Definition Language
 7.1.3 Profile Construction Examples
 </h4>
 <p class='p_v2web'>
-<p>This section presents some examples of how profiles can be constructed using the profile building blocks. The examples provide a sampling of uses. When writing a set of related profiles (or a family of profiles), it is important to reuse the profile, core profile, and profile components in order to harmonize the requirements and to gain efficiency. The concepts of the profile levels and profile components provide an effective approach for managing and documenting extensions.</p><p><span style="font-size:16px">Figure 7.1</span> through <span style="font-size:16px">Figure 7.5</span> illustrate possible configurations for composing a family of related profiles. One design principle is to develop a core profile that applies across a family of profiles with the intention of using the profile component concept to specify complete composite profiles.</p>
+<p>This section presents some examples of how profiles can be constructed using the profile building blocks. The examples provide a sampling of uses. When writing a set of related profiles (or a family of profiles), it is important to reuse the profile, core profile, and profile components in order to harmonize the requirements and to gain efficiency. The concepts of the profile levels and profile components provide an effective approach for managing and documenting extensions.</p><p>Figure 7.1 through Figure 7.5 illustrate possible configurations for composing a family of related profiles. One design principle is to develop a core profile that applies across a family of profiles with the intention of using the profile component concept to specify complete composite profiles.</p>
 </p>
 
 <figure class='center'>
@@ -629,7 +636,7 @@ IAEJSEACtQj8f8eBj25W5MzFAAAAAElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p>In the first depiction (<span style="font-size:16px">Figure 7.1</span>), a core profile is developed that expresses all of the common requirements for a related set of profiles. Profile component A and profile component B are also created for aspects that are not defined (constrained) in the core profile. Combined, the three definitions are used to describe a complete specification, Profile 1 (composite profile).</p>
+<p>In the first depiction (Figure 7.1), a core profile is developed that expresses all of the common requirements for a related set of profiles. Profile component A and profile component B are also created for aspects that are not defined (constrained) in the core profile. Combined, the three definitions are used to describe a complete specification, Profile 1 (composite profile).</p>
 </p>
 
 <figure class='center'>
@@ -986,7 +993,7 @@ WKNKBgAAAABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p>For the second depiction (<span style="font-size:16px">Figure 7.2</span>), the core profile and profile component A are reused and combined with profile component C to specify Composite Profile 2. </p><p>In some use cases, a specifier may want to create profiles that differ slightly for the sender and the receiver profile. Profile components can be used to specify these sender and receiver profiles. <span style="font-size:16px">Figure 7.3</span> shows an example in which a core profile is created along with a separate sender profile component and receiver profile component. A composite profile for each, the sender and receiver, is the outcome.</p><p>In the fourth depiction (<span style="font-size:16px">Figure 7.4</span>), Profile Y is combined with profile component D to create Composite Profile 3. Example 4 demonstrates how use case expansions can be managed. This may be the case where a complete profile for a given use case is defined, and another use case exists that extends the requirements. An example is laboratory reporting where a profile is created to submit laboratory results to an EHR-S and then extended to a second profile to submit reportable laboratory results to public health. The requirements for submitting to public health are specified in a profile component. Relating this to example 4, Profile Y is the laboratory reporting profile, profile component D documents the additional requirements for public health reporting, and Composite Profile 3 is the complete public health specification for reportable laboratory results. Another example is the case of national and local requirements. A typical domain for which localization is needed is public health, where a national-level profile is created and additional requirements (constraints) are specified at the state- or jurisdictional-level. A constrainable profile for the national level is created for a particular interaction (e.g., send immunization record). State-level requirements could be expressed in a profile component. When combined with the national-level profile, the result expresses the complete requirements for the state.</p><p></p>
+<p>For the second depiction (Figure 7.2), the core profile and profile component A are reused and combined with profile component C to specify Composite Profile 2. </p><p>In some use cases, a specifier may want to create profiles that differ slightly for the sender and the receiver profile. Profile components can be used to specify these sender and receiver profiles. Figure 7.3 shows an example in which a core profile is created along with a separate sender profile component and receiver profile component. A composite profile for each, the sender and receiver, is the outcome.</p><p>In the fourth depiction (Figure 7.4), Profile Y is combined with profile component D to create Composite Profile 3. Example 4 demonstrates how use case expansions can be managed. This may be the case where a complete profile for a given use case is defined, and another use case exists that extends the requirements. An example is laboratory reporting where a profile is created to submit laboratory results to an EHR-S and then extended to a second profile to submit reportable laboratory results to public health. The requirements for submitting to public health are specified in a profile component. Relating this to example 4, Profile Y is the laboratory reporting profile, profile component D documents the additional requirements for public health reporting, and Composite Profile 3 is the complete public health specification for reportable laboratory results. Another example is the case of national and local requirements. A typical domain for which localization is needed is public health, where a national-level profile is created and additional requirements (constraints) are specified at the state- or jurisdictional-level. A constrainable profile for the national level is created for a particular interaction (e.g., send immunization record). State-level requirements could be expressed in a profile component. When combined with the national-level profile, the result expresses the complete requirements for the state.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -1618,7 +1625,7 @@ rkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p>In this situation, using profile components provides an efficient mechanism to reuse and repurpose in order to accommodate a different, but closely related, use case. Profile components also help reduce implementation efforts by clearly indicating the essential differences.</p><p>Profile components also can express new requirements that replace requirements established in a profile or core profile. This approach often is used when different levels of profiles are developed, or when the profile provides utility outside the original intent of the profile. The fifth depiction (<span style="font-size:16px">Figure 7.5</span>) illustrates a case where a subset of requirements for an existing profile are overridden. Here, Profile Z is used; however, certain aspects are redefined according to the constraint rules and are documented in profile components E and F, which results in Composite Profile 4. It is important to note that if the new profile is intended to be a refinement in the existing profile hierarchy, then the requirement replacement is limited to further constraints (in essence, this is a level). However, if the intent is to establish a new specification to address a similar (but different) use case, then there is no restriction on the requirement replacement, since it is a new profile (i.e., it is not intended to be a specialization of the original). Here, the use of profile components is a mechanism to leverage an existing specification.</p><p></p>
+<p>In this situation, using profile components provides an efficient mechanism to reuse and repurpose in order to accommodate a different, but closely related, use case. Profile components also help reduce implementation efforts by clearly indicating the essential differences.</p><p>Profile components also can express new requirements that replace requirements established in a profile or core profile. This approach often is used when different levels of profiles are developed, or when the profile provides utility outside the original intent of the profile. The fifth depiction (Figure 7.5) illustrates a case where a subset of requirements for an existing profile are overridden. Here, Profile Z is used; however, certain aspects are redefined according to the constraint rules and are documented in profile components E and F, which results in Composite Profile 4. It is important to note that if the new profile is intended to be a refinement in the existing profile hierarchy, then the requirement replacement is limited to further constraints (in essence, this is a level). However, if the intent is to establish a new specification to address a similar (but different) use case, then there is no restriction on the requirement replacement, since it is a new profile (i.e., it is not intended to be a specialization of the original). Here, the use of profile components is a mechanism to leverage an existing specification.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -2213,7 +2220,7 @@ OaoAAAAASUVORK5CYII=
 </figure>
 
 <p class='p_v2web'>
-<p>For each of the complete specifications illustrated in <span style="font-size:16px">Figure 7.1</span> through <span style="font-size:16px">Figure 7.5</span>, the resulting profile can be a constrainable or an implementable profile.</p><p>The key design principles are that when related specifications are being developed, the authors should leverage as much information as possible from existing profiles, or they should design/create core profiles that are a harmonization of requirements for a related set of use cases. The profile components can be developed at any level of granularity; however, caution should be exercised when creating profile components at a fine-grained level or when specifying numerous details. Often, having to manage many building block artifacts can outweigh the benefits these artifacts are supposed to provide. If management tooling is available, then fine granularity of profile components is attainable. A good practice is to introduce an orthogonal structure of the individual requirements (e.g., data type constraints) in one case, message fragments (e.g., for insurance or diagnosis data) in a second case, and value set definitions in another instance, which would allow for easy integration and combinations (i.e., a data type specialization should not include a specific value set binding, as it significantly reduces the ability to reuse).</p><p></p>
+<p>For each of the complete specifications illustrated in Figure 7.1 through Figure 7.5, the resulting profile can be a constrainable or an implementable profile.</p><p>The key design principles are that when related specifications are being developed, the authors should leverage as much information as possible from existing profiles, or they should design/create core profiles that are a harmonization of requirements for a related set of use cases. The profile components can be developed at any level of granularity; however, caution should be exercised when creating profile components at a fine-grained level or when specifying numerous details. Often, having to manage many building block artifacts can outweigh the benefits these artifacts are supposed to provide. If management tooling is available, then fine granularity of profile components is attainable. A good practice is to introduce an orthogonal structure of the individual requirements (e.g., data type constraints) in one case, message fragments (e.g., for insurance or diagnosis data) in a second case, and value set definitions in another instance, which would allow for easy integration and combinations (i.e., a data type specialization should not include a specific value set binding, as it significantly reduces the ability to reuse).</p><p></p>
 </p>
 
 <figure class='center'>
@@ -2532,7 +2539,33 @@ BAhw6zfm9BgBBBBAAAEEEKi0wP8DqD7XQIgVcGQAAAAASUVORK5CYII=
 7.2 Selective Adoption
 </h3>
 <p class='p_v2web'>
-<p>Many versions of the HL7 v2 base standard exist. Each version contains message definitions that are constrained by implementers for a given use case. The process of placing constraints on message definitions is called profiling. Typically, constraints are placed on a message definition defined entirely in a given version of the standard. In some cases, however, specifiers and implementers may want to use as a foundation a given version of the standard (e.g., 2.5.1) while selecting certain features offered by another version of the standard (e.g., 2.8.2). In essence, all HL7 v2 base standard versions can be viewed as a single collection of objects from which specifiers and implementers can pick and choose to construct message profiles. Implementation guides can contain message definitions from different versions of the standard and also could contain message definitions that contain objects from more than one version of the standard. The selective adoption only applies to the base version from which the message profile originates. Selective adoption does not apply to implementation guides. Aspects that need to be included from implementation guides can be included by using the profile component mechanism.</p><p>This section describes:</p><p>The HL7 v2 message profile is the governing artifact for specifying requirements for a message interface. Regardless of the base standard version designation, the profile modifies the standard- level definition to satisfy use case requirements. Such modifications can selectively include objects from different versions of the standard. Therefore, implementers must interpret the requirements based on the message profile (indicated in MSH-21) and not merely rely on the message version (indicated in MSH-12). This premise is true regardless of whether the message profile contains objects from a version other than the foundational version. The message profile declares a foundational version and, for every adopted object, the HL7 v2 version of that object.</p><p>In the context of selective adoption, the following terms are defined to help explain the process:</p><p><strong>Object</strong> &ndash; an object from the HL7 v2 standard; can be any element (group, segment, field), data type, or table.</p><p><strong>Adopted</strong><strong> Object</strong> &ndash; an object from another version of the standard that is imported into a message profile.</p><p><strong>Indigenous Object</strong> &ndash; an object from the foundational version of the message profile. Indigenous objects do not have an explicit version attribute. The version of the object is the version of the Foundational Version.</p><p><strong>Foundational Version</strong> &ndash; this is the version of the base standard that serves as the core (starting) version of the message definition. All objects in the message profile will comply to this version unless explicitly overridden by an adopted object.</p><p><strong>Adopted</strong><strong> Version</strong> &ndash; this is the HL7 v2 version from which an object was adopted.</p>
+<p>Many versions of the HL7 v2 base standard exist. Each version contains message definitions that are constrained by implementers for a given use case. The process of placing constraints on message definitions is called profiling. Typically, constraints are placed on a message definition defined entirely in a given version of the standard. In some cases, however, specifiers and implementers may want to use as a foundation a given version of the standard (e.g., 2.5.1) while selecting certain features offered by another version of the standard (e.g., 2.8.2). In essence, all HL7 v2 base standard versions can be viewed as a single collection of objects from which specifiers and implementers can pick and choose to construct message profiles. Implementation guides can contain message definitions from different versions of the standard and also could contain message definitions that contain objects from more than one version of the standard. The selective adoption only applies to the base version from which the message profile originates. Selective adoption does not apply to implementation guides. Aspects that need to be included from implementation guides can be included by using the profile component mechanism.</p><p>This section describes:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+how to construct a message profile using objects from different versions of the standard
+
+
+</li>
+<li class='p_v2web'>
+
+the different methods for selective adoption
+
+
+</li>
+<li class='p_v2web'>
+
+the type and granularity of the objects that can be adopted
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p>The HL7 v2 message profile is the governing artifact for specifying requirements for a message interface. Regardless of the base standard version designation, the profile modifies the standard- level definition to satisfy use case requirements. Such modifications can selectively include objects from different versions of the standard. Therefore, implementers must interpret the requirements based on the message profile (indicated in MSH-21) and not merely rely on the message version (indicated in MSH-12). This premise is true regardless of whether the message profile contains objects from a version other than the foundational version. The message profile declares a foundational version and, for every adopted object, the HL7 v2 version of that object.</p><p>In the context of selective adoption, the following terms are defined to help explain the process:</p><p><strong>Object</strong> &ndash; an object from the HL7 v2 standard; can be any element (group, segment, field), data type, or table.</p><p><strong>Adopted</strong><strong> Object</strong> &ndash; an object from another version of the standard that is imported into a message profile.</p><p><strong>Indigenous Object</strong> &ndash; an object from the foundational version of the message profile. Indigenous objects do not have an explicit version attribute. The version of the object is the version of the Foundational Version.</p><p><strong>Foundational Version</strong> &ndash; this is the version of the base standard that serves as the core (starting) version of the message definition. All objects in the message profile will comply to this version unless explicitly overridden by an adopted object.</p><p><strong>Adopted</strong><strong> Version</strong> &ndash; this is the HL7 v2 version from which an object was adopted.</p>
 </p>
 <h4>
 7.2.1 Rationale for Selective Adoption
@@ -2544,7 +2577,33 @@ BAhw6zfm9BgBBBBAAAEEEKi0wP8DqD7XQIgVcGQAAAAASUVORK5CYII=
 7.2.2 Methods for Selective Adoption
 </h4>
 <p class='p_v2web'>
-<p>Three methods by which objects can be adopted into a message profile are available:</p><p>The details of each method are given in the sections to follow.</p>
+<p>Three methods by which objects can be adopted into a message profile are available:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+Selective Pre-adoption
+
+
+</li>
+<li class='p_v2web'>
+
+Selective Post-adoption
+
+
+</li>
+<li class='p_v2web'>
+
+Selective Post-adoption from the current HL7 v2+ edition
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p>The details of each method are given in the sections to follow.</p>
 </p>
 <h5>
 7.2.2.1 Selective Pre-Adoption
@@ -3618,7 +3677,7 @@ AhCAAASqmACasoonD9MhAAEIQAACEIBAQgigKRMyEZgBAQhAAAIQgAAEqpjA
 </figure>
 
 <p class='p_v2web'>
-<p><span style="font-size:16px">Figure 7.6</span> shows an example of Selective Pre-adoption. An implementation guide is produced in which the foundation profiles are created with version 2.5.1 message definitions. The figure also shows that a segment, field, and table are pre-adopted from version 2.8.2 and a data type is pre-adopted from version 2.7. The pre-adopted objects are used to replace or extend existing objects in the foundational profile (message) definition. Note, the figure does not show the relationship of the pre-adopted objects in the message profiles, because, depending on how the implementation guide is constructed, this relationship can vary.</p><p></p>
+<p>Figure 7.6 shows an example of Selective Pre-adoption. An implementation guide is produced in which the foundation profiles are created with version 2.5.1 message definitions. The figure also shows that a segment, field, and table are pre-adopted from version 2.8.2 and a data type is pre-adopted from version 2.7. The pre-adopted objects are used to replace or extend existing objects in the foundational profile (message) definition. Note, the figure does not show the relationship of the pre-adopted objects in the message profiles, because, depending on how the implementation guide is constructed, this relationship can vary.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -4676,7 +4735,7 @@ AABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p><span style="font-size:16px">Figure 7.7</span> shows an example of Selective Post-adoption. An implementation guide is produced in which the foundation profiles are created with version 2.8.2 message definitions. The figure also shows that two fields, a data type, and table are all post-adopted from version 2.5.1. The post-adopted objects are used to roll back capabilities to previous definitions of concepts. Note, the figure does not show the relationship of the post-adopted objects in the message profiles, because, depending on how the implementation guide is constructed, this relationship can vary.</p>
+<p>Figure 7.7 shows an example of Selective Post-adoption. An implementation guide is produced in which the foundation profiles are created with version 2.8.2 message definitions. The figure also shows that two fields, a data type, and table are all post-adopted from version 2.5.1. The post-adopted objects are used to roll back capabilities to previous definitions of concepts. Note, the figure does not show the relationship of the post-adopted objects in the message profiles, because, depending on how the implementation guide is constructed, this relationship can vary.</p>
 </p>
 <h5>
 7.2.2.3 Selective Post-Adoption From Current HL7 v2+ Edition

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00416"/>
+  <name value="Guarantor SSN"/>
+  <itemNumber value="416"/>
+  <confLength value="11"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

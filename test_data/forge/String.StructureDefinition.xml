@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://hl7.org/v2-in-FHIR/StructureDefinition/String" />
+  <url value="http://hl7.org/v2plus/StructureDefinition/String" />
   <name value="String" />
   <status value="draft" />
   <fhirVersion value="4.0.0" />
   <kind value="logical" />
   <abstract value="false" />
-  <type value="http://hl7.org/v2-in-FHIR/StructureDefinition/String" />
+  <type value="http://hl7.org/v2plus/StructureDefinition/String" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00911"/>
+  <name value="Slot Spacing Criteria"/>
+  <itemNumber value="911"/>
+  <confLength value="5"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+</DataElementDefinition>

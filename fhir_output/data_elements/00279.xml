@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00279"/>
+  <name value="Requisition Quantity"/>
+  <itemNumber value="279"/>
+  <confLength value="6"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+</DataElementDefinition>

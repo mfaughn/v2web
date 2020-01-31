@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/system-clock-segment"/>
+  <name value="System Clock Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="NCK"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The NCK segment is used to allow the various applications on the network to synchronize their system clocks (system date and time).</p>
+          <p>Usage Notes: If this message is to be used to automatically reset/correct system clocks, it is recommended that the system or administrative personnel initiating the NMQ with the NCK segment have the authority to correct the clock (system date and time) for the other systems on the network. This is important in order to avoid the obvious confusion of multiple systems attempting to resynchronize each other's clocks.</p>
+          <p>If this message is used only to gather information on the various systems' clocks, it is still important for an administrative procedure to be worked out to avoid conflicts when resetting clocks.</p>
+          <p>HL7 Attribute Table – NCK<span id="NCK" class="anchor"/> – System Clock</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01172"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

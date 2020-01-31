@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/location-characteristic-segment"/>
+  <name value="Location Characteristic Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="LCH"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The Technical Steward for the LCH segment is Patient Administration.</p>
+          <p>The LCH segment is used to identify location characteristics which determine which patients will be assigned to the room or bed. It contains the location characteristics of the room or bed identified in the preceding LOC segment. There should be one LCH segment for each attribute.</p>
+          <p>When the LCH segment appears immediately following the LOC segment, it communicates characteristics which are the same across multiple departments that may use the same room. When the LCH segment appears immediately following the LDP segment, it communicates characteristics which differ for different departments that may use the same room. For example, the following characteristics are more likely to vary by which department is using the room: teaching, gender, staffed, set up, overflow, whereas the other characteristics are likely to remain the same.</p>
+          <p><span id="LCH" class="anchor"/>HL7 Attribute Table - LCH - Location Characteristic</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01305"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00763"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00764"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01295"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01294"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

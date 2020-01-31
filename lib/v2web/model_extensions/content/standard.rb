@@ -1,4 +1,5 @@
 require 'fileutils'
+
 # require_relative 'ig_standard'
 load File.join(__dir__, 'ig_standard.rb')
 
@@ -26,7 +27,7 @@ module V2Web
       
       # create the main page
       page_content = front_matter.map { |l| l.to_hl7_site }.join("\n")
-      nav_bar_items = ls.map do |link, title, _| V2Web.render_with_locals(:navbar_item, {:link => link, :title => title})
+      nav_bar_items = ls.map do |link, title, _| V2Web.render_with_locals(:navbar_item, {:link => link, :title => title.hl7})
       end
       # FIXME is there some way to introduce pipe chars or something between navbar items here?
       nav_bar_items = nav_bar_items.join("\n")
@@ -64,6 +65,11 @@ module V2Web
     
     def link_title
       title.gsub(/\s/, '_').hl7
+    end
+    
+    def configure_site(config_file, tab_files)
+      config = File.open(config_file) { |f| Nokogiri::XML(f) }.children.first
+      configure(config, tab_files)
     end
     
   end # Standard

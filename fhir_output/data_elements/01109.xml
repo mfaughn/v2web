@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01109"/>
+  <name value="Product Serial/Lot Number"/>
+  <itemNumber value="1109"/>
+  <confLength value="199"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

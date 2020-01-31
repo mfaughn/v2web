@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/usual-work-segment"/>
+  <name value="Usual Work segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="OH3"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The OH3 segment contains information about the occupation which the subject has held for the longest duration through his or her working history, at the point in time the statement is recorded. Longest-held occupations can be associated with conditions that develop slowly over time or even after the person is no longer performing that type of work, e.g., some respiratory conditions and cancers. It optionally includes a total duration observation, because a person can be in and out of a given occupation over time. In addition, knowing when the person began working in this occupation can provide information about potential exposures and allows the clinician to assess whether sufficient time has elapsed for a chronic condition to appear, i.e. the latency period. This guides appropriate use of screening tests to detect early disease. This segment may be related to either patient or to the Next of Kin.</p>
+          <p>Examples:</p>
+          <p>A person/patient may have worked as a waiter for 3 years, and worked as a nurse for 20 years. The Usual Work would reflect an occupation of nurse as the longest held occupation.</p>
+          <p>The intent is for the segment to be allowed to repeat within a message definition to enable communication of Usual Work for multiple family members, but not the patient. For instance, the Usual Work segment may be repeated in multiple Next of Kin groups in order to allow for inclusion of mother, father, or other related persons, but not more than one usual job is permitted for one person.</p>
+          <p>HL7 Attribute Table – OH3 – Usual Work</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03535"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00816"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03537"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03538"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03539"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03540"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="7"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03542"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="8"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02446"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

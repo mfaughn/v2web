@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/query-selection-criteria"/>
+  <name value="query selection criteria"/>
+  <withdrawn value="false"/>
+  <abbreviation value="QSC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> This field indicates the conditions that qualify the rows to be returned in the query response.</p>
+      <p>Example:</p>
+      <p>|@PID.5.1^EQ^EVANS|</p>
+    </div>
+  </description>
+  <component>
+    <name value="Segment Field Name"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The name of the field that is participating as a qualifier (usually the "key"). Refer to Section <em>2.A.59.1</em>, “<em>Segment Field Name (ST)</em>,” for segment field name conventions.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Relational Operator"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70209"><em>HL7 Table 0209 - Relational Operator</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="2"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0209/index.html"/>
+  </component>
+  <component>
+    <name value="Value"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The value to which the field will be compared.</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Relational Conjunction"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70210"><em>HL7 Table 0210 - Relational Conjunction</em></a> for valid values. The relational conjunction is defined as follows: If more than one comparison is to be made to select qualifying rows, a conjunction relates this repetition of the field to the next.</p>
+        <ul>
+          <li>
+            <blockquote>
+              <p>When applied to strings, the relational operators LT, GT, LE, and GE imply an alphabetic comparison.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>A "generic" comparison selects a record for inclusion in the response when the beginning of the designated field matches the select string.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Where a repeating field is specified as an operand, a match on any instance of that field qualifies the row for inclusion in the response message.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>AND takes precedence over OR. More sophisticated precedence rules require that the query be expressed as an embedded query language message or a stored procedure query message (see Chapter 5, "Query").</p>
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0210/index.html"/>
+  </component>
+</DataTypeDefinition>

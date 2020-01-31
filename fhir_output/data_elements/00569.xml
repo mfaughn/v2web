@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00569"/>
+  <name value="Set ID – OBX"/>
+  <itemNumber value="569"/>
+  <minLength value="1"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/sequence-id"/>
+</DataElementDefinition>

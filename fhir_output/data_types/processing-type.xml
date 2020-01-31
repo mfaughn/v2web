@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/processing-type"/>
+  <name value="processing type"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type indicates whether to process a message as defined in HL7 Application (level 7) Processing rules.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Processing ID"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A value that defines whether the message is part of a production, training, or debugging system. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70103"><em>HL7 Table 0103 - Processing ID</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0103/index.html"/>
+  </component>
+  <component>
+    <name value="Processing Mode"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A value that defines whether the message is part of an archival process or an initial load. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70207"><em>HL7 Table 0207 - Processing Mode</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0207/index.html"/>
+  </component>
+</DataTypeDefinition>

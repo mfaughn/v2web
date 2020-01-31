@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/timestamp"/>
+  <name value="timestamp"/>
+  <withdrawn value="true"/>
+  <abbreviation value="TS"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>
+        <strong>Attention: <em>The TS data type has been replaced by the DTM data type and the detail was withdrawn and removed from the standard as of v 2.6.</em></strong>
+      </p>
+    </div>
+  </description>
+</DataTypeDefinition>

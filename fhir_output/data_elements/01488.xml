@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01488"/>
+  <name value="Test/Service Default Frequency"/>
+  <itemNumber value="1488"/>
+  <confLength value="60"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+</DataElementDefinition>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/03365"/>
+  <name value="Aphaeresis Machine Serial Number"/>
+  <itemNumber value="3365"/>
+  <confLength value="25"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

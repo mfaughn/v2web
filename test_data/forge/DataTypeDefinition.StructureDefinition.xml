@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataTypeDefinition" />
+  <url value="http://hl7.org/v2plus/StructureDefinition/DataTypeDefinition" />
   <name value="DataTypeDefinition" />
   <status value="draft" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataTypeDefinition" />
+  <type value="http://hl7.org/v2plus/StructureDefinition/DataTypeDefinition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>
@@ -128,7 +128,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/v2-in-FHIR/valueset-segment-field-optionality.html" />
+        <valueSet value="http://hl7.org/v2plus/valueset-segment-field-optionality.html" />
       </binding>
     </element>
     <element id="DataTypeDefinition.component.length">
@@ -160,7 +160,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/v2-in-FHIR/valueset-may-truncate.html" />
+        <valueSet value="http://hl7.org/v2plus/valueset-may-truncate.html" />
       </binding>
     </element>
     <element id="DataTypeDefinition.component.comments">

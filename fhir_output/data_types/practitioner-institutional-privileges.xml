@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/practitioner-institutional-privileges"/>
+  <name value="practitioner institutional privileges"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PIP"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies the institutional privileges with associated detail granted to a provider.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Privilege"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the institutional privilege itself. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70525"><em>User-defined Table 0525 – Privilege</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0525/index.html"/>
+  </component>
+  <component>
+    <name value="Privilege Class"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the class category of institutional privilege. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70526"><em>User-defined Table 0526 – Privilege Class</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0526/index.html"/>
+  </component>
+  <component>
+    <name value="Expiration Date"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the date the institutional privilege is/was no longer valid.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date"/>
+  </component>
+  <component>
+    <name value="Activation Date"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the date the institutional privilege became/becomes valid.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date"/>
+  </component>
+  <component>
+    <name value="Facility"/>
+    <sequenceNumber value="5"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the facility in which the institutional privilege is/was valid.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
+  </component>
+</DataTypeDefinition>

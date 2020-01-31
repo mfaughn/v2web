@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/formatted-text-data"/>
+  <name value="formatted text data"/>
+  <withdrawn value="false"/>
+  <abbreviation value="FT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Minimum Length:</strong> 1</p>
+      <p>
+        <strong>Maximum Length: </strong>
+      </p>
+      <p>Definition: This data type is derived from the TX data type by allowing the addition of embedded formatting instructions. These instructions are limited to those that are intrinsic and independent of the circumstances under which the field is being used. The actual instructions and their representation are described in section 2.7.6, “Usage and Examples of Formatted Text”. <em><strong>The FT field is of arbitrary length <del>(up to 64k)</del></strong></em> and may contain formatting commands enclosed in escape characters.</p>
+      <p><strong>Note:</strong> The length restriction of 64k is retained for backward compatibility as of v2.9 and will be withdawn after two versions.</p>
+      <p>Example:</p>
+      <p>|\.sp\(skip one vertical line)|</p>
+      <p>For additional examples of formatting commands see Section 2.7, "Use of Escape Sequences in Text Fields".</p>
+      <p>To include alternative character sets, use the appropriate escape sequence. See Chapter 2, "Control", section 2.15.9.18, "Character set" and section 2.14.9.20, "Alternate character set handling scheme".</p>
+      <p>This specification applies no limit to the length of the FT data type, either here where the data type is defined, or elsewhere where the data type is used. While there is no intrinsic reason to limit the length of this data type for semantic or syntactical reasons, it is expected that some sort of limitation will be imposed for technical reasons in implementations. HL7 recommends that implementation length limits are published in implementation profiles. The contents of an FT field may be truncated, but the truncation pattern does not apply.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Formatted Text Data"/>
+    <sequenceNumber value=""/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  </component>
+</DataTypeDefinition>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/practitioner-license-or-other-id-number"/>
+  <name value="practitioner license or other Id number"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PLN"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies a practitioner’s license number, or other ID number such as UPIN, Medicare and Medicaid number, and associated detail.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="ID Number"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the license number or other ID number such as UPIN, Medicare and Medicaid number.</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Type of ID Number"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the type of number.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70338"><em>User-defined Table 0338 – Practitioner ID Number Type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0338/index.html"/>
+  </component>
+  <component>
+    <name value="State/other Qualifying Information"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the state or province in which the license or ID is valid, if relevant, or other qualifying information. It is recommended that state qualifications use the abbreviations from the postal service of the country.</p>
+      </div>
+    </definition>
+    <confLength value="62"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Expiration Date"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the date when the license or ID is no longer valid.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date"/>
+  </component>
+</DataTypeDefinition>

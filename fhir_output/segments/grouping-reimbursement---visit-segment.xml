@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/grouping-reimbursement---visit-segment"/>
+  <name value="Grouping/Reimbursement - Visit Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="GP1"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>These fields are used in grouping and reimbursement for CMS APCs. Please refer to the "Outpatient Prospective Payment System Final Rule" ("OPPS Final Rule") issued by CMS.</p>
+          <p>
+            <strong>The GP1 segment is specific to the US and may not be implemented in non-US systems.</strong>
+          </p>
+          <p><span id="_Hlt479102398" class="anchor"/>HL7 Attribute Table - GP1 - Grouping/Reimbursement - Visit</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01599"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01600"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01601"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01602"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00387"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

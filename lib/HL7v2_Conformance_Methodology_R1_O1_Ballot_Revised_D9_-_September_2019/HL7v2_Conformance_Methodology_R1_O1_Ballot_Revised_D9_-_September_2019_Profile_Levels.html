@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -162,31 +169,29 @@ Appendix B: Conformance Statement Definition Language
 </p>
 
 <ul>
-<li>
-<p class='p_v2web'>
+<li class='p_v2web'>
+
 <span style="font-size:16px">Standard Profile</span>
-</p>
+
 
 </li>
+<li class='p_v2web'>
 
-<li>
-<p class='p_v2web'>
 <span style="font-size:16px">Constrainable Profile</span>
-</p>
+
 
 </li>
+<li class='p_v2web'>
 
-<li>
-<p class='p_v2web'>
 <span style="font-size:16px">Implementable Profile</span>
-</p>
+
 
 </li>
 
 </ul>
 
 <p class='p_v2web'>
-<p><span style="font-size:16px">Figure </span><span style="font-size:16px">2.1</span> illustrates the basic profile-level hierarchy and the degree of constraints applied at each level. The standard-level profile (hereafter called &ldquo;<strong>standard profile</strong>&rdquo;) represents the base standard definitions and constraints as-is and establishes the framework for a specific type of event (e.g., an unsolicited vaccination record update &ndash; VXU V04 message event). Treating the standard as a profile aids in related discussions and management. At this level, the overall structure (&ldquo;template&rdquo;), including the data type definitions, is established; however, the full declaration of requirements has yet to be specified, and, therefore, considerable openness still exists. For example, the allowable segments are defined, but the set of segments that are to be included for this use case has not yet been determined.</p><p>Additional profiles are subsequently derived from the standard profile. The standard profile can be defined more precisely by adding constraints for a desired use (e.g., the national level of requirements for the unsolicited vaccination record update message) to create a <strong>constrainable p</strong><strong>rofile</strong>. A constrainable profile is derived from either the standard profile or another constrainable profile, and it further constrains the definition attributes in accordance to the profile compliance rules stipulated in this document. For example, a U.S. state-level constrainable profile can be derived from a national-level profile by adding more constraints for a specific state. Note, a U.S. state-level profile could have been created from the standard profile directly.</p>
+<p>Figure 2.1 illustrates the basic profile-level hierarchy and the degree of constraints applied at each level. The standard-level profile (hereafter called &ldquo;<strong>standard profile</strong>&rdquo;) represents the base standard definitions and constraints as-is and establishes the framework for a specific type of event (e.g., an unsolicited vaccination record update &ndash; VXU V04 message event). Treating the standard as a profile aids in related discussions and management. At this level, the overall structure (&ldquo;template&rdquo;), including the data type definitions, is established; however, the full declaration of requirements has yet to be specified, and, therefore, considerable openness still exists. For example, the allowable segments are defined, but the set of segments that are to be included for this use case has not yet been determined.</p><p>Additional profiles are subsequently derived from the standard profile. The standard profile can be defined more precisely by adding constraints for a desired use (e.g., the national level of requirements for the unsolicited vaccination record update message) to create a <strong>constrainable p</strong><strong>rofile</strong>. A constrainable profile is derived from either the standard profile or another constrainable profile, and it further constrains the definition attributes in accordance to the profile compliance rules stipulated in this document. For example, a U.S. state-level constrainable profile can be derived from a national-level profile by adding more constraints for a specific state. Note, a U.S. state-level profile could have been created from the standard profile directly.</p>
 </p>
 
 <figure class='center'>
@@ -1098,7 +1103,7 @@ dd0C1fzueQAAAABJRU5ErkJggg==
 2.1 Profiles in Use
 </h3>
 <p class='p_v2web'>
-<p>Two typical real-world scenarios demonstrating the use of the profile level model are presented in <span style="font-size:16px">Figure 2.2</span><span style="font-size:16px">.</span><span style="font-size:16px"> </span> In the first case, a national-level constrainable profile is developed. A hospital (group) adopts and refines the national-level guidance provided in the realm-specific constrainable profile. The hospital procures a vendor&rsquo;s product that can be configured to satisfy the requirements. The hospital and the vendor finalize the requirements and the software is installed. The resultant interface is documented as an implementable profile. Alternatively, the hospital could have provided their desired implementable profile directly to the vendor.</p>
+<p>Two typical real-world scenarios demonstrating the use of the profile level model are presented in Figure 2.2.  In the first case, a national-level constrainable profile is developed. A hospital (group) adopts and refines the national-level guidance provided in the realm-specific constrainable profile. The hospital procures a vendor&rsquo;s product that can be configured to satisfy the requirements. The hospital and the vendor finalize the requirements and the software is installed. The resultant interface is documented as an implementable profile. Alternatively, the hospital could have provided their desired implementable profile directly to the vendor.</p>
 </p>
 
 <figure class='center'>
@@ -2181,7 +2186,7 @@ iEAxCfz/gaTmSCaJMtMAAAAASUVORK5CYII=
 </figure>
 
 <p class='p_v2web'>
-<p>In the second case, a vendor refines the national-level guidance profile and provides a generic implementation based on this constrainable profile. When working with clients for whom this profile closely satisfies their requirements, a final refinement is made at the specific sites. The vendor often will (or should) provide the documentation for the installed interface in the form of an implementable profile. The examples shown in <span style="font-size:16px">Figure 2.2</span> can be nested and refined to any depth as appropriate.</p><p></p>
+<p>In the second case, a vendor refines the national-level guidance profile and provides a generic implementation based on this constrainable profile. When working with clients for whom this profile closely satisfies their requirements, a final refinement is made at the specific sites. The vendor often will (or should) provide the documentation for the installed interface in the form of an implementable profile. The examples shown in Figure 2.2 can be nested and refined to any depth as appropriate.</p><p></p>
 </p>
 
 <script src='js/jquery.js'></script>

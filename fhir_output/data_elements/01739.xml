@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01739"/>
+  <name value="CP Commercial Product"/>
+  <itemNumber value="1739"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+</DataElementDefinition>

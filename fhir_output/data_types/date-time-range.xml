@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/date-time-range"/>
+  <name value="date/time range"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DR"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Note:</strong> DR cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Range Start Date/Time"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The first component contains the earliest date/time (time stamp) in the specified range.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Range End Date/Time"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>The second component contains the latest date/time in the specified range.</p>
+        <p><strong>Note:</strong> The DTM (time stamp) data type allows the specification of precision.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+</DataTypeDefinition>

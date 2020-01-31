@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/diagnosis-and-procedure-code-segment"/>
+  <name value="Diagnosis and Procedure Code Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DPS"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The Technical Steward for the DPS segment is Orders and Observations.</p>
+          <p>For the payer defined in PM1-1 and the service provider defined in MFE-4 and the Producer's Service/Test/Observation ID in MCP-2 these are the Diagnosis and Procedure that impact coverage requirements as defined by:</p>
+          <ul>
+            <li>
+              <p>When MFI-1 is MLCP (Medical Limited Coverage Process) this segment is identifing what is in limited coverage.</p>
+            </li>
+            <li>
+              <p>When MFI-1 is MACP (Medical Approved Coverage Process) this segment is identifing what is approved. This segment defines the test that are approved for a given Diagnosis Code based on the Procedure Code.</p>
+            </li>
+          </ul>
+          <p>HL7 Attribute Table – DPS – Diagnosis and Procedure Code Segment</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03472"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03484"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00662"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03473"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03474"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

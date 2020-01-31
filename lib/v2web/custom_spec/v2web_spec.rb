@@ -10,6 +10,7 @@ organizer(:Details, V2Web::Section) do
 end
 organizer(:Details, V2Web::Standard) do
   inherits_from_spec(:Details, V2Web::Section)
+  hide('ooxml')
   reorder('remarks', 'subsections', 'content', 'parents', 'fhir_composition', 'fhir', 'original', 'ooxml', :to_end => true)
   reorder('title', 'version', 'rendering_as', :to_beginning => true)
 end

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00326"/>
+  <name value="Number of Refills Remaining"/>
+  <itemNumber value="326"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+</DataElementDefinition>

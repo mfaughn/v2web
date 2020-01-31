@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00199"/>
+  <name value="Next of Kin / Associated Parties Job Title"/>
+  <itemNumber value="199"/>
+  <confLength value="60"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

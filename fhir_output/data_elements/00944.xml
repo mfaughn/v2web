@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00944"/>
+  <name value="Location Description"/>
+  <itemNumber value="944"/>
+  <confLength value="48"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+</DataElementDefinition>

@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -175,7 +182,7 @@ Appendix B: Conformance Statement Definition Language
 </div>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">1</span> provides an overview of the allowable usage indicators in message profiles (i.e., for constrainable and implementable profiles). While the base standard allows for all optionality indicators in some capacity, message-profile usage indicators have restricted use for a profile level.</p>
+<p></p><p>Table 5.1 provides an overview of the allowable usage indicators in message profiles (i.e., for constrainable and implementable profiles). While the base standard allows for all optionality indicators in some capacity, message-profile usage indicators have restricted use for a profile level.</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -395,7 +402,7 @@ Appendix B: Conformance Statement Definition Language
 5.1.1 Usage Requirements for Sending Applications
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 5.2</span> shows the usage rules requirements for a sending application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must provide in a message instance. What is provided is sometimes dependent on conditions and data availability. <span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">2</span> indicates what must be supported by the implementation and what must be provided in the message instance, not how it is accomplished.</p><p></p>
+<p>Table 5.2 shows the usage rules requirements for a sending application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must provide in a message instance. What is provided is sometimes dependent on conditions and data availability. Table 5.2 indicates what must be supported by the implementation and what must be provided in the message instance, not how it is accomplished.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -661,13 +668,51 @@ Appendix B: Conformance Statement Definition Language
 </table>
 
 <p class='p_v2web'>
-<p></p><p>The use of the RE usage code is qualified with the &ldquo;if data is known&rdquo; clause. The sender must interpret the clause as &ldquo;the capability must always be supported, and data must always be sent if known&rdquo;. To clarify, the sender does not determine whether the data should be sent; to be conformant to the rule, the data must be sent. There is a misconception where the RE usage is interpreted as &ldquo;the capability must always be supported, and data may or may not be sent even when known based on a condition external to the profile specification&rdquo;. If there are valid external conditions, then the profile does not describe the use case accurately, and the profile needs to be modified accordingly, or possibly another profile needs to be created. This is not to say that the sender doesn&rsquo;t control what data they send in production systems, but it is an indication that the sender is not conformant to the profile to which they are claiming conformance. The consequence of non-conformity created by not sending known data for an RE element is out of scope for this specification. See <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">1.5.1</span> for insight on how installed systems can handle non-conformities.</p>
+<p></p><p>The use of the RE usage code is qualified with the &ldquo;if data is known&rdquo; clause. The sender must interpret the clause as &ldquo;the capability must always be supported, and data must always be sent if known&rdquo;. To clarify, the sender does not determine whether the data should be sent; to be conformant to the rule, the data must be sent. There is a misconception where the RE usage is interpreted as &ldquo;the capability must always be supported, and data may or may not be sent even when known based on a condition external to the profile specification&rdquo;. If there are valid external conditions, then the profile does not describe the use case accurately, and the profile needs to be modified accordingly, or possibly another profile needs to be created. This is not to say that the sender doesn&rsquo;t control what data they send in production systems, but it is an indication that the sender is not conformant to the profile to which they are claiming conformance. The consequence of non-conformity created by not sending known data for an RE element is out of scope for this specification. See Section 1.5.1 for insight on how installed systems can handle non-conformities.</p>
 </p>
 <h4>
 5.1.2 Usage Requirements for Receiving Applications
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">3</span> shows the usage rules requirements for a receiving application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must process in a message instance. The concept of &ldquo;must process in a meaningful way&rdquo; is intentionally vague at the interface level specification. Exactly what this means can be further defined in the profile definition in the context of a use case or in a functional requirements specification. The phrase &ldquo;process in a meaningful way&rdquo; can mean many things, as illustrated in the simple examples given below:</p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">3</span> indicates what must be supported by the implementation and what must be processed by the implementation, but not how the processing is to be accomplished.</p><p></p>
+<p>Table 5.3 shows the usage rules requirements for a receiving application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must process in a message instance. The concept of &ldquo;must process in a meaningful way&rdquo; is intentionally vague at the interface level specification. Exactly what this means can be further defined in the profile definition in the context of a use case or in a functional requirements specification. The phrase &ldquo;process in a meaningful way&rdquo; can mean many things, as illustrated in the simple examples given below:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+Commit the data element to a data base
+
+
+</li>
+<li class='p_v2web'>
+
+Use the data element for some task (e.g., patient matching) and then discard the data
+
+
+</li>
+<li class='p_v2web'>
+
+Display the data element in the context of a report
+
+
+</li>
+<li class='p_v2web'>
+
+Evaluate the data element and, based on that evaluation, perform a certain task
+
+
+</li>
+<li class='p_v2web'>
+
+Compare the data to existing data base content and, if different, decide which data to keep based on source reliability or other factors
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p>Table 5.3 indicates what must be supported by the implementation and what must be processed by the implementation, but not how the processing is to be accomplished.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -976,7 +1021,7 @@ Appendix B: Conformance Statement Definition Language
 </div>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.4</span> describes various use cases for profiling conditional usage. The examples employ an excerpt of the CWE data type (as of version 2.7). CWE.1 (Code) is the code identifier, CWE.2 (Text) is the text that describes the code concept, CWE.3 (Code System) is the name of the code system of which the code (CWE.1) is a member, and CWE.14 (Code System OID) is the OID of the code system of which the code (CWE.1) is a member. The BASE column indicates the specification as given in the base standard, in which the Code and Text are optional and the Code System and Code System OID are conditional. The conditions and relationships for the CWE definition as defined in the base standard are that if a code is provided, then either the code system or the code system OID must also be provided.</p><p></p>
+<p></p><p>Table 5.4 describes various use cases for profiling conditional usage. The examples employ an excerpt of the CWE data type (as of version 2.7). CWE.1 (Code) is the code identifier, CWE.2 (Text) is the text that describes the code concept, CWE.3 (Code System) is the name of the code system of which the code (CWE.1) is a member, and CWE.14 (Code System OID) is the OID of the code system of which the code (CWE.1) is a member. The BASE column indicates the specification as given in the base standard, in which the Code and Text are optional and the Code System and Code System OID are conditional. The conditions and relationships for the CWE definition as defined in the base standard are that if a code is provided, then either the code system or the code system OID must also be provided.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -1278,7 +1323,7 @@ Appendix B: Conformance Statement Definition Language
 </table>
 
 <p class='p_v2web'>
-<p></p><p>Four profiling examples of the CWE data types that represent a data type flavor (DTF1, DTF2, DTF3, DTF4) are explained below, with references to information in <span style="font-size:16px">Table 5.4</span>:</p><p><strong>DTF1</strong><strong>:</strong> The specifier is requiring a code and the associated code system. Additionally, the specifier is making no statement on the requirement for CWE.14. This requirement designation is left to be specified in a derived profile. The usage of &ldquo;C&rdquo; is used instead of &ldquo;O&rdquo; because of the dependency of the element. Since the original condition has been satisfied by requiring CWE.3, CWE.14 can be profiled to one of R, RE, or X in a derived profile. There is no need to specify an explicit predicate since the condition is an undeclared conditional usage.</p><p><strong>DTF2</strong><strong>:</strong> The specifier is indicating that a code is not to be supported, therefore, CWE.3 and CWE.14 must also not be supported. The text component in this case is required. Since the original predicate will always resolve to false, the specification of a predicate is not necessary, and a non-conditional usage indicator can be specified (&ldquo;X&rdquo; in this example).</p><p><strong>DTF3</strong><strong>:</strong> The specifier is indicating that a code and the associated code system OID are required. The code system name is not to be supported. Since the original condition is satisfied by requiring CWE.14, the specifier has the option to constrain CWE.3 to R, RE, X or leave it to be determined in a derived profile (usage = C). In this case the specifier decided not to support (X).</p><p><strong>DTF4</strong><strong>:</strong> The specifier is constraining the data type flavor such that a code must be supported, and, if available, it must be valued (CWE.1). If the code is not available, then text describing the concept must be valued (CWE.2). If a code is provided, then the code system name (CWE.3) must be provided as well. The specifier is leaving it up to the specifier of a derived profile as to whether the code system OID (CWE.14) must be supported. Since a declared conditional usage is specified, an explicit condition predicate is given (Column DTF4 Predicate).</p>
+<p></p><p>Four profiling examples of the CWE data types that represent a data type flavor (DTF1, DTF2, DTF3, DTF4) are explained below, with references to information in Table 5.4:</p><p><strong>DTF1</strong><strong>:</strong> The specifier is requiring a code and the associated code system. Additionally, the specifier is making no statement on the requirement for CWE.14. This requirement designation is left to be specified in a derived profile. The usage of &ldquo;C&rdquo; is used instead of &ldquo;O&rdquo; because of the dependency of the element. Since the original condition has been satisfied by requiring CWE.3, CWE.14 can be profiled to one of R, RE, or X in a derived profile. There is no need to specify an explicit predicate since the condition is an undeclared conditional usage.</p><p><strong>DTF2</strong><strong>:</strong> The specifier is indicating that a code is not to be supported, therefore, CWE.3 and CWE.14 must also not be supported. The text component in this case is required. Since the original predicate will always resolve to false, the specification of a predicate is not necessary, and a non-conditional usage indicator can be specified (&ldquo;X&rdquo; in this example).</p><p><strong>DTF3</strong><strong>:</strong> The specifier is indicating that a code and the associated code system OID are required. The code system name is not to be supported. Since the original condition is satisfied by requiring CWE.14, the specifier has the option to constrain CWE.3 to R, RE, X or leave it to be determined in a derived profile (usage = C). In this case the specifier decided not to support (X).</p><p><strong>DTF4</strong><strong>:</strong> The specifier is constraining the data type flavor such that a code must be supported, and, if available, it must be valued (CWE.1). If the code is not available, then text describing the concept must be valued (CWE.2). If a code is provided, then the code system name (CWE.3) must be provided as well. The specifier is leaving it up to the specifier of a derived profile as to whether the code system OID (CWE.14) must be supported. Since a declared conditional usage is specified, an explicit condition predicate is given (Column DTF4 Predicate).</p>
 </p>
 <h5>
 5.1.3.4 Predicate Definition
@@ -1291,13 +1336,13 @@ Appendix B: Conformance Statement Definition Language
 </div>
 
 <p class='p_v2web'>
-<p>The predicate may be expressed in a computable language (recommended) or in plain text. This specification does not prescribe a specific method for expressing a predicate. However, a pseudo language (See <span style="font-size:16px">Appendix A</span>) has been developed to concisely and consistently express conditional usage predicates. The language is specifically designed for HL7 v2 in terms of relatability and ease of use. When possible, use of this language is recommended. </p>
+<p>The predicate may be expressed in a computable language (recommended) or in plain text. This specification does not prescribe a specific method for expressing a predicate. However, a pseudo language (See Appendix A) has been developed to concisely and consistently express conditional usage predicates. The language is specifically designed for HL7 v2 in terms of relatability and ease of use. When possible, use of this language is recommended. </p>
 </p>
 <h4>
 5.1.4 Usage Compliance
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 5.5</span> presents the allowable transitions for each Usage code at each possible profile-level transition. The &ldquo;Usage Code&rdquo; column indicates the usage code for the &ldquo;starting&rdquo; profile level. The columns to the right of the Usage Code column indicate the possible usage code for the &ldquo;ending&rdquo; profile level. The &ldquo;starting&rdquo; profile level is indicated by the top line in the column heading, and the &ldquo;ending&rdquo; profile level is indicated by the bottom line in the column heading. For example, in the<span style="color:#ff0000"> </span>first row of the Usage Code column, the usage code is R, which is the usage of the<span style="color:#ff0000"> </span>element as defined in the Base standard. This usage code can only transition to R in a constrainable profile, as indicated by the Usage Code = R and Base-to-Constrainable coordinates.</p>
+<p>Table 5.5 presents the allowable transitions for each Usage code at each possible profile-level transition. The &ldquo;Usage Code&rdquo; column indicates the usage code for the &ldquo;starting&rdquo; profile level. The columns to the right of the Usage Code column indicate the possible usage code for the &ldquo;ending&rdquo; profile level. The &ldquo;starting&rdquo; profile level is indicated by the top line in the column heading, and the &ldquo;ending&rdquo; profile level is indicated by the bottom line in the column heading. For example, in the<span style="color:#ff0000"> </span>first row of the Usage Code column, the usage code is R, which is the usage of the<span style="color:#ff0000"> </span>element as defined in the Base standard. This usage code can only transition to R in a constrainable profile, as indicated by the Usage Code = R and Base-to-Constrainable coordinates.</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -1718,7 +1763,7 @@ Appendix B: Conformance Statement Definition Language
 5.1.4.1 Conditional Usage Compliance
 </h5>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table </span><span style="font-size:16px">5.6</span> indicates the circumstances in which an undeclared conditional usage remains an undeclared conditional usage and the implications of that transition; and the circumstances in which an undeclared conditional is constrained to a declared conditional usage and the implications of that transition. Note, the conditional usage in the base standard is not referred to as an undeclared conditional usage. </p><p></p>
+<p>Table 5.6 indicates the circumstances in which an undeclared conditional usage remains an undeclared conditional usage and the implications of that transition; and the circumstances in which an undeclared conditional is constrained to a declared conditional usage and the implications of that transition. Note, the conditional usage in the base standard is not referred to as an undeclared conditional usage. </p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -1837,7 +1882,7 @@ Appendix B: Conformance Statement Definition Language
 </table>
 
 <p class='p_v2web'>
-<p></p><p>Elements with a conditional usage indicator require a separate examination, because a specialization allows for different combinations depending on the characteristics of the constraint.</p><p></p><p>Compliance assessment for elements with conditional usage (i.e., C(a/b)) is dependent on the respective true and false usage code specification. For example, if conditional usage for an element is specified as C(RE/O), the true usage code &ldquo;RE&rdquo; can be profiled to &ldquo;RE&rdquo; or &ldquo;R&rdquo; in a derived profile. The false usage code of &ldquo;O&rdquo; can be profiled to &ldquo;R&rdquo;, &ldquo;RE&rdquo;, &ldquo;O&rdquo;, or &ldquo;X&rdquo;. The conditional usage codes may collapse to a single non-conditional code if the usage codes are profiled to the same code. For example, if the &ldquo;RE&rdquo; and &ldquo;O&rdquo; usage are both profiled to &ldquo;R&rdquo;, then the usage code can be specified simply as &ldquo;R&rdquo; and not C(R/R). <span style="font-size:16px">Table 5.7</span> summarizes the possible constraints applicable to conditional usage.</p><p></p>
+<p></p><p>Elements with a conditional usage indicator require a separate examination, because a specialization allows for different combinations depending on the characteristics of the constraint.</p><p></p><p>Compliance assessment for elements with conditional usage (i.e., C(a/b)) is dependent on the respective true and false usage code specification. For example, if conditional usage for an element is specified as C(RE/O), the true usage code &ldquo;RE&rdquo; can be profiled to &ldquo;RE&rdquo; or &ldquo;R&rdquo; in a derived profile. The false usage code of &ldquo;O&rdquo; can be profiled to &ldquo;R&rdquo;, &ldquo;RE&rdquo;, &ldquo;O&rdquo;, or &ldquo;X&rdquo;. The conditional usage codes may collapse to a single non-conditional code if the usage codes are profiled to the same code. For example, if the &ldquo;RE&rdquo; and &ldquo;O&rdquo; usage are both profiled to &ldquo;R&rdquo;, then the usage code can be specified simply as &ldquo;R&rdquo; and not C(R/R). Table 5.7 summarizes the possible constraints applicable to conditional usage.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -2026,7 +2071,7 @@ If the condition is never met in a specific use case.
 5.1.5 Usage Compatibility
 </h4>
 <p class='p_v2web'>
-<p>Compatibility is determined from the perspective of a receiver. <span style="font-size:16px">Table 5.8</span> provides a compatibility analysis of an element&rsquo;s usage in a sender profile to an element&rsquo;s usage in a receiver profile. For a pair of profiles to be compatible, all element pairs in the profiles must adhere to the profile compatibility rules. For example, if the sender profile specifies an element as required and the receiver profile also specifies the corresponding element as required, then the profiles are compatible for that element. If, however, the sender profile specifies an element as not-supported and the receiver profile specifies the corresponding element as required, then the profiles are not compatible for that element, since the receiver is expecting data that the sender will never provide.</p><p><span style="font-size:16px">Table 5.8</span> addresses implementable profiles where each element must be profiled; that is, no elements can be optional. <span style="font-size:16px">Table 5.9</span> addresses additional optionality choices available for constrainable profiles. <span style="font-size:16px">Tables 5.8</span> and <span style="font-size:16px">5.9</span> do not take conditional usage into account; an analogous analysis can be performed for each true and false outcome of the conditional usage.</p><p>Optional elements apply only to constrainable profiles. Often specifiers develop constrainable-level profiles for national specifications. Their goal is to specify elements that are needed to meet their use case requirements. Beyond that, they allow trading partners to negotiate among themselves regarding local customization of the remaining un-profiled (or optional) elements.</p><p>Defining compatibility among systems requires a comparison of the capabilities of the sending side to the requirements on the receiving side through the means of profiles. For assessing compatibility, use case requirements are defined in higher-level constrainable profiles and are thus not considered. That is, expectations of the sender and receiver for each element have already been decided upon. For example, the assignment of &ldquo;R&rdquo; usage for an element on the sending side expresses the fact (or the intent) that this element is always valued in every message instance that is sent. &ldquo;RE&rdquo; usage expresses the intent that data will be present in messages if the data are entered into the system or are made available in some other way. In other words, these usage requirements identify what a receiver can expect in messages being sent to them. Statements for a receiver are clear expressions of their requirements. Therefore, a required element (&ldquo;R&rdquo; usage) indicates that the receiver must get this information in order to be able to process the message or a specific part of the message. Having said this, the pairing &ldquo;R  X&rdquo; is deemed compatible, since the receiver can ignore a data element for which the sender always provides data, because the receiver does not need the data to fulfill its use case. although this behavior may not fulfill a certain use case or meet external expectations. Use case requirements must, therefore, be introduced as higher-level requirements in the form of a constrainable profile that must be fulfilled by both sender and receiver, i.e., the implementable profiles must be compliant to this higher-level constrainable profile. Providing such a use case requirement would mean that the applications are compatible, although the receiver is not compliant (i.e., the receiver&rsquo;s implementable profile is not compliant with the constrainable profile). The receiver is conformant to its implementable profile, because this profile does not support the element; however, the fact that the receiver is not compliant prevents interoperability. In summary, specific aspects of compliance, compatibility, and conformance need to be met to enable interoperability.</p><p></p>
+<p>Compatibility is determined from the perspective of a receiver. Table 5.8 provides a compatibility analysis of an element&rsquo;s usage in a sender profile to an element&rsquo;s usage in a receiver profile. For a pair of profiles to be compatible, all element pairs in the profiles must adhere to the profile compatibility rules. For example, if the sender profile specifies an element as required and the receiver profile also specifies the corresponding element as required, then the profiles are compatible for that element. If, however, the sender profile specifies an element as not-supported and the receiver profile specifies the corresponding element as required, then the profiles are not compatible for that element, since the receiver is expecting data that the sender will never provide.</p><p>Table 5.8 addresses implementable profiles where each element must be profiled; that is, no elements can be optional. Table 5.9 addresses additional optionality choices available for constrainable profiles. Tables 5.8 and 5.9 do not take conditional usage into account; an analogous analysis can be performed for each true and false outcome of the conditional usage.</p><p>Optional elements apply only to constrainable profiles. Often specifiers develop constrainable-level profiles for national specifications. Their goal is to specify elements that are needed to meet their use case requirements. Beyond that, they allow trading partners to negotiate among themselves regarding local customization of the remaining un-profiled (or optional) elements.</p><p>Defining compatibility among systems requires a comparison of the capabilities of the sending side to the requirements on the receiving side through the means of profiles. For assessing compatibility, use case requirements are defined in higher-level constrainable profiles and are thus not considered. That is, expectations of the sender and receiver for each element have already been decided upon. For example, the assignment of &ldquo;R&rdquo; usage for an element on the sending side expresses the fact (or the intent) that this element is always valued in every message instance that is sent. &ldquo;RE&rdquo; usage expresses the intent that data will be present in messages if the data are entered into the system or are made available in some other way. In other words, these usage requirements identify what a receiver can expect in messages being sent to them. Statements for a receiver are clear expressions of their requirements. Therefore, a required element (&ldquo;R&rdquo; usage) indicates that the receiver must get this information in order to be able to process the message or a specific part of the message. Having said this, the pairing &ldquo;R  X&rdquo; is deemed compatible, since the receiver can ignore a data element for which the sender always provides data, because the receiver does not need the data to fulfill its use case. although this behavior may not fulfill a certain use case or meet external expectations. Use case requirements must, therefore, be introduced as higher-level requirements in the form of a constrainable profile that must be fulfilled by both sender and receiver, i.e., the implementable profiles must be compliant to this higher-level constrainable profile. Providing such a use case requirement would mean that the applications are compatible, although the receiver is not compliant (i.e., the receiver&rsquo;s implementable profile is not compliant with the constrainable profile). The receiver is conformant to its implementable profile, because this profile does not support the element; however, the fact that the receiver is not compliant prevents interoperability. In summary, specific aspects of compliance, compatibility, and conformance need to be met to enable interoperability.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -2901,28 +2946,25 @@ R, RE
 5.2.1 Relationship between usage and cardinality
 </h4>
 <ul>
-<li>
-<p class='p_v2web'>
+<li class='p_v2web'>
+
 If the usage of an element is Required (R), the minimum cardinality for the element shall  be equal to or greater than 1.
-</p>
+
 
 </li>
+<li class='p_v2web'>
 
-<li>
-<p class='p_v2web'>
 If the usage of an element is not Required (R) (i.e., any code other than &#39;R&#39;), the minimum cardinality shall be 0 except in the following condition:
-</p>
+
 
 </li>
+<li class='p_v2web'>
 
-<li>
-<p class='p_v2web'>
 If the profile author wishes to express a circumstance where an element will not always be present, but when it is present it must have a minimum number of occurrences greater than one, they may document this rule by specifying the RE usage code with the minimum cardinality representing the minimum number of occurrences when the element is present. This expression would be in the form [m..n], indicating that permitted occurrences are either zero or the range of m through n.
-</p>
+
 
 </li>
-
-<li>
+<li class='p_v2web'>
 
 </li>
 
@@ -3115,7 +3157,7 @@ If the profile author wishes to express a circumstance where an element will not
 5.2.3 Cardinality Compliance
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 5.12</span> lists the rules for constraining cardinality. The left-most column indicates the cardinality for an element as defined in the &ldquo;Parent Profile&rdquo; (e.g., the base standard). The combination of the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Valid Compliance Rule&rdquo; column indicates possible modifications of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides valid instances. Likewise, the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Invalid Compliance Rule&rdquo; column indicate possible modifications (invalid in this case) of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides non-valid instances.</p><p>For instance, a cardinality defined in the parent profile as [0..0] and then constrained to [0..0] (m=0 and n= 0) is a valid constraint (row 1 &ndash; valid column); however, if the cardinality is constrained to [1..4], it is invalid (row 1 &ndash; invalid column). In <span style="font-size:16px">Table 5.12</span> it is assumed that &ldquo;m&rdquo; is always less than or equal to &ldquo;n&rdquo;. Generally speaking, the cardinality range must be constrained by increasing the lower boundary and decreasing the upper boundary. The minimum cardinality has to be less than or equal to the maximum cardinality. Additionally, for some of the examples listed in <span style="font-size:16px">Table 5.12</span> a specific value for a variable is used to facilitate the explanation.</p><p></p>
+<p>Table 5.12 lists the rules for constraining cardinality. The left-most column indicates the cardinality for an element as defined in the &ldquo;Parent Profile&rdquo; (e.g., the base standard). The combination of the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Valid Compliance Rule&rdquo; column indicates possible modifications of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides valid instances. Likewise, the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Invalid Compliance Rule&rdquo; column indicate possible modifications (invalid in this case) of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides non-valid instances.</p><p>For instance, a cardinality defined in the parent profile as [0..0] and then constrained to [0..0] (m=0 and n= 0) is a valid constraint (row 1 &ndash; valid column); however, if the cardinality is constrained to [1..4], it is invalid (row 1 &ndash; invalid column). In Table 5.12 it is assumed that &ldquo;m&rdquo; is always less than or equal to &ldquo;n&rdquo;. Generally speaking, the cardinality range must be constrained by increasing the lower boundary and decreasing the upper boundary. The minimum cardinality has to be less than or equal to the maximum cardinality. Additionally, for some of the examples listed in Table 5.12 a specific value for a variable is used to facilitate the explanation.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -3645,13 +3687,13 @@ x=3, [2..2], [2..6]
 </table>
 
 <p class='p_v2web'>
-<p></p><p>It is important to note that this analysis does not account for the dependencies that an associated usage constraint places on cardinality constraints. In <span style="font-size:16px">Table 5.12</span>, the usage reference point is O-optional. For a cardinality of [0..1], a valid constraint is [0..0] as indicated in row 2 &ndash; Valid Compliance column; additionally, [1..1] is also a valid constraint. In the context of a related usage, such constraints may not be valid. For example, for a cardinality of [0..1] and an associated usage of &ldquo;RE-required, but may be empty&rdquo;, the maximum cardinality must be 1 (allowing for appearance of the element). Likewise, if the usage is &ldquo;X-not-supported&rdquo;, then a cardinality setting of [0..0] is the only valid constraint of [0..1]. See <span style="font-size:16px">Section </span><span style="font-size:16px">5.2.1</span> for additional information on the dependencies between usage and cardinality. </p><p>Note that the set of constraints given in <span style="font-size:16px">Table 5.12</span> can be applied to any profile level in the hierarchy (i.e., the constraint table can be applied recursively). Additionally, once a constraint has been applied, only further (or the same) constraints can be specified in the (another) derived profile. For example, if the base profile &ldquo;A&rdquo; has a cardinality of [0..1] that is constrained to [1..1] in a derived profile &ldquo;B&rdquo;, then in derived profile &ldquo;C&rdquo; the cardinality constraint must remain as [1..1] (as indicated in row 5 of the Table). On the other hand, if the base profile &ldquo;A&rdquo; cardinality of [0..*] is constrained to [1..5] in a derived profile &ldquo;B&rdquo;, then in derived profile &ldquo;C&rdquo; the cardinality can be further constrained to [2..4]. In this example, the constraints transitioned from [0..*] (see row 4 of the Table) to [1..x] (see row 6 of the Table), and finally to [x..y] (see row 9 of the Table).</p>
+<p></p><p>It is important to note that this analysis does not account for the dependencies that an associated usage constraint places on cardinality constraints. In Table 5.12, the usage reference point is O-optional. For a cardinality of [0..1], a valid constraint is [0..0] as indicated in row 2 &ndash; Valid Compliance column; additionally, [1..1] is also a valid constraint. In the context of a related usage, such constraints may not be valid. For example, for a cardinality of [0..1] and an associated usage of &ldquo;RE-required, but may be empty&rdquo;, the maximum cardinality must be 1 (allowing for appearance of the element). Likewise, if the usage is &ldquo;X-not-supported&rdquo;, then a cardinality setting of [0..0] is the only valid constraint of [0..1]. See Section 5.2.1 for additional information on the dependencies between usage and cardinality. </p><p>Note that the set of constraints given in Table 5.12 can be applied to any profile level in the hierarchy (i.e., the constraint table can be applied recursively). Additionally, once a constraint has been applied, only further (or the same) constraints can be specified in the (another) derived profile. For example, if the base profile &ldquo;A&rdquo; has a cardinality of [0..1] that is constrained to [1..1] in a derived profile &ldquo;B&rdquo;, then in derived profile &ldquo;C&rdquo; the cardinality constraint must remain as [1..1] (as indicated in row 5 of the Table). On the other hand, if the base profile &ldquo;A&rdquo; cardinality of [0..*] is constrained to [1..5] in a derived profile &ldquo;B&rdquo;, then in derived profile &ldquo;C&rdquo; the cardinality can be further constrained to [2..4]. In this example, the constraints transitioned from [0..*] (see row 4 of the Table) to [1..x] (see row 6 of the Table), and finally to [x..y] (see row 9 of the Table).</p>
 </p>
 <h4>
 5.2.4 Cardinality Compatibility
 </h4>
 <p class='p_v2web'>
-<p>Compatibility is a measure that indicates whether two specifications (or systems that implement the same specification) have harmonized requirements. Compatibility is determined from the perspective of a receiver. <span style="font-size:16px">Table 5.13</span> presents an analysis of compatibility for a set of sender/receiver cardinality pairs. The analysis is a direct assessment of the sender/receiver pairs indicated and does not consider what pairs might actually be enacted for an element in a particular use case. For example, in the case of a sender cardinality of [1..1] and a receiver cardinality of [0..0], the receiver doesn&rsquo;t need the data element to be valued in order to operate. If the sender has an expectation that the receiver must process the data element, however, then this requirement is indicated in the use case, and, as such, the receiver must set the cardinality for the element to [1..1], which would be part of the profile/interface negotiations.</p>
+<p>Compatibility is a measure that indicates whether two specifications (or systems that implement the same specification) have harmonized requirements. Compatibility is determined from the perspective of a receiver. Table 5.13 presents an analysis of compatibility for a set of sender/receiver cardinality pairs. The analysis is a direct assessment of the sender/receiver pairs indicated and does not consider what pairs might actually be enacted for an element in a particular use case. For example, in the case of a sender cardinality of [1..1] and a receiver cardinality of [0..0], the receiver doesn&rsquo;t need the data element to be valued in order to operate. If the sender has an expectation that the receiver must process the data element, however, then this requirement is indicated in the use case, and, as such, the receiver must set the cardinality for the element to [1..1], which would be part of the profile/interface negotiations.</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -4132,13 +4174,63 @@ If n&gt;y.
 5.3 Data Type Specialization (Flavor)
 </h3>
 <p class='p_v2web'>
-<p>Data types and specializations of data types are core aspects of the HL7 v2.x standard and implementation guides. The HL7 v2.x standard provides a set of data types (referred to as the &ldquo;base&rdquo; data types). Typically, the base data types are not used &ldquo;as-is&rdquo; in implementation guides; instead they are constrained for a particular need in the profiling process. The specialization of the data type is referred to as a data type &ldquo;flavor&rdquo;. Each element in the data type can be constrained following the rules defined by the conformance constructs. The data type flavor is assigned a new identifier that can be referenced by other elements as part of the profiling process. </p><p>An example of data type specialization was given in <span style="font-size:16px">Section 4.4</span>. Additionally, a detailed discussion on data type specializations and on the HL7 v2 standardized data type library can be found in the HL7 Version 2 Specification: Data Type Specializations, Release 1 (currently in ballot resolution) and on the web site https:/v2.hl7.org/datatypeflavors (forthcoming). The goal of standardized data type flavors is to promote consistency and reuse of commonly used data type specializations.</p>
+<p>Data types and specializations of data types are core aspects of the HL7 v2.x standard and implementation guides. The HL7 v2.x standard provides a set of data types (referred to as the &ldquo;base&rdquo; data types). Typically, the base data types are not used &ldquo;as-is&rdquo; in implementation guides; instead they are constrained for a particular need in the profiling process. The specialization of the data type is referred to as a data type &ldquo;flavor&rdquo;. Each element in the data type can be constrained following the rules defined by the conformance constructs. The data type flavor is assigned a new identifier that can be referenced by other elements as part of the profiling process. </p><p>An example of data type specialization was given in Section 4.4. Additionally, a detailed discussion on data type specializations and on the HL7 v2 standardized data type library can be found in the HL7 Version 2 Specification: Data Type Specializations, Release 1 (currently in ballot resolution) and on the web site https:/v2.hl7.org/datatypeflavors (forthcoming). The goal of standardized data type flavors is to promote consistency and reuse of commonly used data type specializations.</p>
 </p>
 <h4>
 5.3.1 Root Data Type Substitution
 </h4>
 <p class='p_v2web'>
-<p>Under certain circumstances, a use case may require a data type substitution at the root level.  One example would be when an IS data type is replaced with a CWE data type. Root data type substitutions are promotions, that is, more functionality is specified. The following compliance and compatibility rules apply:</p><p>When a substitution is made, a data type in which all constituent parts and attributes are compatible must be specified. Many substitutions are possible, and specifiers should exercise caution when changing the root data type, as detecting non-compliance can be challenging. <span style="font-size:16px">Table 5.14</span> provides a few examples of root data type substitutions and an analysis of the substitution.</p><p></p>
+<p>Under certain circumstances, a use case may require a data type substitution at the root level.  One example would be when an IS data type is replaced with a CWE data type. Root data type substitutions are promotions, that is, more functionality is specified. The following compliance and compatibility rules apply:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+A primitive data type can replace a primitive data type at any level.
+
+
+</li>
+<li class='p_v2web'>
+
+A primitive data type must not replace a complex data type.
+
+
+</li>
+<li class='p_v2web'>
+
+A complex data type can replace a primitive data type but only at the field level.
+
+
+</li>
+<li class='p_v2web'>
+
+A complex data type can replace a complex data type at any level.
+
+
+</li>
+<li class='p_v2web'>
+
+A data type substitution must follow the conformance constructs compliance rules for all the constitute parts of the data type.
+
+
+</li>
+<li class='p_v2web'>
+
+The data type substitution must not reduce capabilities of the data type it is replacing
+
+
+</li>
+<li class='p_v2web'>
+
+The data type substitution must be backwards compatible with the data type it is replacing
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p>When a substitution is made, a data type in which all constituent parts and attributes are compatible must be specified. Many substitutions are possible, and specifiers should exercise caution when changing the root data type, as detecting non-compliance can be challenging. Table 5.14 provides a few examples of root data type substitutions and an analysis of the substitution.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -4388,7 +4480,7 @@ Contains the same sort of data. Allowable content differs.
 </div>
 
 <p class='p_v2web'>
-<p></p><p>Vocabulary constraints (coded values) are described in detail in <span style="font-size:16px">Section 6</span>.</p><p><strong>Fixed Value:</strong> A fixed value constrains the content to a single value, e.g., &ldquo;A08&rdquo; that indicates an update event type in ADT messages. The more detailed and specific a certain data exchange specification is, especially in the case of specific use cases, the fewer possible options are valid for a data element. In some cases, the options for an element are reduced to a single value, thus providing a fixed (constant) value. A Fixed Value is represented in the message profile by the fixed value constraint attribute or can be specified by a conformance statement (See <span style="font-size:16px">Section </span><span style="font-size:16px">5.7</span>).</p><p><strong>Pattern Restricted</strong><strong> Value</strong><strong>:</strong> A pattern-restricted value constrains the content of the element based on the specified pattern matching algorithm (e.g., a Medical Record Number format). A pattern-restricted value is specified using the conformance statement mechanism (See <span style="font-size:16px">Section 5.7</span>).</p><p><strong>Element Relationships:</strong> Elements may have relationship constraints that must be maintained. This includes dependency of data values. Element relationships are supported by the co-constraint construct (see <span style="font-size:16px">Section </span><span style="font-size:16px">5.8</span>) and conformance statements (<span style="font-size:16px">See Section </span><span style="font-size:16px">5.7</span>).</p>
+<p></p><p>Vocabulary constraints (coded values) are described in detail in Section 6.</p><p><strong>Fixed Value:</strong> A fixed value constrains the content to a single value, e.g., &ldquo;A08&rdquo; that indicates an update event type in ADT messages. The more detailed and specific a certain data exchange specification is, especially in the case of specific use cases, the fewer possible options are valid for a data element. In some cases, the options for an element are reduced to a single value, thus providing a fixed (constant) value. A Fixed Value is represented in the message profile by the fixed value constraint attribute or can be specified by a conformance statement (See Section 5.7).</p><p><strong>Pattern Restricted</strong><strong> Value</strong><strong>:</strong> A pattern-restricted value constrains the content of the element based on the specified pattern matching algorithm (e.g., a Medical Record Number format). A pattern-restricted value is specified using the conformance statement mechanism (See Section 5.7).</p><p><strong>Element Relationships:</strong> Elements may have relationship constraints that must be maintained. This includes dependency of data values. Element relationships are supported by the co-constraint construct (see Section 5.8) and conformance statements (See Section 5.7).</p>
 </p>
 <h3>
 5.5 Length
@@ -4546,7 +4638,7 @@ Element must have a minimum length of &ldquo;m&rdquo; and a maximum length of &l
 </table>
 
 <p class='p_v2web'>
-<p>Length compatibility (<span style="font-size:16px">Table 5.16</span>) is based on a single criterion, that the receiver&rsquo;s capabilities encompass the sender&rsquo;s capabilities.</p><p></p>
+<p>Length compatibility (Table 5.16) is based on a single criterion, that the receiver&rsquo;s capabilities encompass the sender&rsquo;s capabilities.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -5612,11 +5704,33 @@ rkJggg==
 <p class='p_v2web'>
 <p>The slicing type &ldquo;discriminator&rdquo; assigns a data type flavor to the field slice (occurrence) based on an evaluation of a discriminator value. The discriminator must be a primitive component within the field. For example, when PID-11.7 (address type) = ‘H&rsquo; then the data type flavor XAD_1 is assigned to the field slice (PID-11). PID-11.7 (address type) is the discriminator and ‘H&rsquo; is the discriminator value. The discriminator value can have three evaluation types:</p>
 </p>
+
+<ul>
+<li class='p_v2web'>
+
+Fixed Value, i.e., a literal value (e.g., PID-11.7 = ‘H&rsquo;)
+
+
+</li>
+<li class='p_v2web'>
+
+Exists, i.e., a Boolean value (Present or Non-presence)
+
+
+</li>
+<li class='p_v2web'>
+
+Pattern, i.e., a Regular Expression
+
+
+</li>
+
+</ul>
 <h5>
 5.6.1.1 FIXED VALUE DISCRIMINATOR SPECIFICATION AND EXAMPLES
 </h5>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 5.18</span> and <span style="font-size:16px">Table 5.19</span> show an example of slicing for the Patient Address field using the Fixed Value discriminator method. <span style="font-size:16px">Table 5.18</span> shows the field definition for PID-11 (Patient Address). The cardinality is defined as 0..*. The base data type is XAD and the default slice data type is set to the XAD_0 data type flavor. The discriminator is 7 (Address Type), which indicates a component position within the field.</p>
+<p>Table 5.18 and Table 5.19 show an example of slicing for the Patient Address field using the Fixed Value discriminator method. Table 5.18 shows the field definition for PID-11 (Patient Address). The cardinality is defined as 0..*. The base data type is XAD and the default slice data type is set to the XAD_0 data type flavor. The discriminator is 7 (Address Type), which indicates a component position within the field.</p>
 </p>
 
 <table class='center table_v2web1'>
@@ -5724,7 +5838,7 @@ rkJggg==
 </table>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Table 5.19</span> shows the definition for each slice. The discriminator indicates the actual value that triggers and defines a &ldquo;slice&rdquo;.  The first row in the table indicates that when (if) the discriminator contains the value of &ldquo;H&rdquo; then the field must conform to the requirements defined by the XAD_1 data type flavor. The field slice with these characteristics must appear in the message instance and only can appear once in the message instance. The requirements that dictate whether the field slice must appear are specified by the slice minimum and slice maximum parameters. Likewise, if the discriminator value contains &ldquo;M&rdquo; then the field instance follows the requirement indicated by the XAD_2 data type flavor. The field slice with this definition need not appear in the message (Slice Min = 0) or can appear more than once (Slice Max = *). Other discriminator values can also apply, but, since they are not explicitly listed, the default data type flavor defines the requirement for such field instances; in this case, XAD_0 is the data type flavor (see <span style="font-size:16px">Table 5.19</span>).</p>
+<p></p><p>Table 5.19 shows the definition for each slice. The discriminator indicates the actual value that triggers and defines a &ldquo;slice&rdquo;.  The first row in the table indicates that when (if) the discriminator contains the value of &ldquo;H&rdquo; then the field must conform to the requirements defined by the XAD_1 data type flavor. The field slice with these characteristics must appear in the message instance and only can appear once in the message instance. The requirements that dictate whether the field slice must appear are specified by the slice minimum and slice maximum parameters. Likewise, if the discriminator value contains &ldquo;M&rdquo; then the field instance follows the requirement indicated by the XAD_2 data type flavor. The field slice with this definition need not appear in the message (Slice Min = 0) or can appear more than once (Slice Max = *). Other discriminator values can also apply, but, since they are not explicitly listed, the default data type flavor defines the requirement for such field instances; in this case, XAD_0 is the data type flavor (see Table 5.19).</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -5856,7 +5970,7 @@ rkJggg==
 </table>
 
 <p class='p_v2web'>
-<p>Slicing is used most often for a field that has multiple occurrences. However, the discriminator method can be used for a field with a maximum cardinality of one. In this case, the field instance requirements vary based on the discriminator value, even though there can be only one instance of the field. For example, the discriminator could be the address type as in the previous example. If the address type is &ldquo;H&rdquo;, then the field instance would follow the requirements specified in the XAD_1 data type flavor. Likewise, if the address type is &ldquo;M&rdquo;, then the field instance would follow the requirements specified in the XAD_2 data type flavor. So, the field would follow one or the other definition based on the address type value (discriminator value) and in aggregate can only appear once, since the cardinality of the field is 1..1. Note, for this example, the default data type is not defined by specifier choice. <span style="font-size:16px">Table 5.20</span> and <span style="font-size:16px">Table 5.21</span> show the specification of this example.</p><p></p>
+<p>Slicing is used most often for a field that has multiple occurrences. However, the discriminator method can be used for a field with a maximum cardinality of one. In this case, the field instance requirements vary based on the discriminator value, even though there can be only one instance of the field. For example, the discriminator could be the address type as in the previous example. If the address type is &ldquo;H&rdquo;, then the field instance would follow the requirements specified in the XAD_1 data type flavor. Likewise, if the address type is &ldquo;M&rdquo;, then the field instance would follow the requirements specified in the XAD_2 data type flavor. So, the field would follow one or the other definition based on the address type value (discriminator value) and in aggregate can only appear once, since the cardinality of the field is 1..1. Note, for this example, the default data type is not defined by specifier choice. Table 5.20 and Table 5.21 show the specification of this example.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -6102,11 +6216,40 @@ A field of this definition need not appear and at most will appear once.
 <p class='p_v2web'>
 <p></p>
 </p>
+<div class='v2_tabs' id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-1'>
+<ul>
+<li>
+<a href='#HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-1-folder1'>
+XML
+</a>
+</li>
+
+</ul>
+<div id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-1-folder1'>
+<textarea class='codemirror-textarea-xml'><?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00000"/>
+  <name value="Primary key value - ZL7"/>
+  <itemNumber value="0"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+</DataElementDefinition>
+</textarea>
+<div>
+<a download='name-file.xml' href='name-file.xml' target='_blank' title='Download'>
+Download
+</a>
+</div>
+</div>
+
+</div>
+<p/>
+<p/>
 <h6>
 5.6.1.1.1 EXISTS DISCRIMINATOR SPECIFICATION AND EXAMPLES
 </h6>
 <p class='p_v2web'>
-<p>The &ldquo;Exists&rdquo; discriminator methods work much like the &ldquo;Fixed Value&rdquo; discriminator method except that the discriminator value can be either &ldquo;valued&rdquo; (True) or &ldquo;not-valued&rdquo; (False). Only those two possibilities exist. <span style="font-size:16px">Table 5.22</span> and <span style="font-size:16px">Table 5.23</span> provide examples. The field definition defines the minimum and maximum cardinality for the field and the discriminator. However, there is no default data type flavor since the slicing definition (<span style="font-size:16px">Table 5.23</span>) covers all possibilities.</p>
+<p>The &ldquo;Exists&rdquo; discriminator methods work much like the &ldquo;Fixed Value&rdquo; discriminator method except that the discriminator value can be either &ldquo;valued&rdquo; (True) or &ldquo;not-valued&rdquo; (False). Only those two possibilities exist. Table 5.22 and Table 5.23 provide examples. The field definition defines the minimum and maximum cardinality for the field and the discriminator. However, there is no default data type flavor since the slicing definition (Table 5.23) covers all possibilities.</p>
 </p>
 
 <table class='center table_v2web1'>
@@ -6336,7 +6479,7 @@ If PID-11.7 is not valued, then the requirements for this field are defined by t
 5.6.1.1.2 PATTERN DISCRIMINATOR SPECIFICATION AND EXAMPLES
 </h6>
 <p class='p_v2web'>
-<p>The &ldquo;Pattern&rdquo; discriminator method uses a pattern to determine the slice that is triggered. <span style="font-size:16px">Table 5.24</span> and <span style="font-size:16px">Table 5.25</span> illustrate an example. The use case in this scenario is that if a postal code is valid for the United States or Canada, then specific constraints are specified for the field instance. If the postal code is neither, then a default set of constraints are applied. Note that for the United States, two types of postal codes are acceptable, hence there are two separate slices that refer to the same data type flavor (XAD_1). The discriminator values are represented as a pattern, and the discriminator (position) is PID-11.5 (ZIP or Postal Code).</p><p></p>
+<p>The &ldquo;Pattern&rdquo; discriminator method uses a pattern to determine the slice that is triggered. Table 5.24 and Table 5.25 illustrate an example. The use case in this scenario is that if a postal code is valid for the United States or Canada, then specific constraints are specified for the field instance. If the postal code is neither, then a default set of constraints are applied. Note that for the United States, two types of postal codes are acceptable, hence there are two separate slices that refer to the same data type flavor (XAD_1). The discriminator values are represented as a pattern, and the discriminator (position) is PID-11.5 (ZIP or Postal Code).</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -6618,7 +6761,7 @@ The field slice need not appear or may appear an unlimited number of times.
 5.6.1.2 Slicing Using Ordering
 </h5>
 <p class='p_v2web'>
-<p>Ordered slicing defines specific requirements based on the order sequence in which the given field instance appears. That is, the order sequence in which the field instance appears is significant for the use case. <span style="font-size:16px">Table 5.26</span> illustrates a field definition for Patient Name (PID-5). <span style="font-size:16px">Table 5.27</span> defines the requirements (data type flavor) for the associated slice occurrence. For the first occurrence of PID-5 the data type definition is XPN_1, for the second occurrence of PID-5 the data type definition is XPN_2, and for any other occurrence of PID-5 the data type definition is XPN_0 (the default data type flavor assigned).</p><p></p>
+<p>Ordered slicing defines specific requirements based on the order sequence in which the given field instance appears. That is, the order sequence in which the field instance appears is significant for the use case. Table 5.26 illustrates a field definition for Patient Name (PID-5). Table 5.27 defines the requirements (data type flavor) for the associated slice occurrence. For the first occurrence of PID-5 the data type definition is XPN_1, for the second occurrence of PID-5 the data type definition is XPN_2, and for any other occurrence of PID-5 the data type definition is XPN_0 (the default data type flavor assigned).</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -6767,11 +6910,40 @@ XPN_2
 <p class='p_v2web'>
 <p>The occurrence value is not required to be specified for each field instance nor is an order sequence required. For example, if a specifier only wanted to assign a specific data type flavor to the second occurrence, then only the second occurrence would be specified. All other occurrences, including occurrence one, would follow the requirements defined by the default data type flavor for Patient Name.</p>
 </p>
+<div class='v2_tabs' id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-2'>
+<ul>
+<li>
+<a href='#HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-2-folder1'>
+XML
+</a>
+</li>
+
+</ul>
+<div id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-2-folder1'>
+<textarea class='codemirror-textarea-xml'><?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00009"/>
+  <name value="Message Type"/>
+  <itemNumber value="9"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/message-type"/>
+</DataElementDefinition>
+</textarea>
+<div>
+<a download='different-file.xml' href='different-file.xml' target='_blank' title='Download'>
+Download
+</a>
+</div>
+</div>
+
+</div>
+<p/>
+<p/>
 <h5>
 5.6.1.3 Non-Selective Slicing
 </h5>
 <p class='p_v2web'>
-<p>The &ldquo;Non-selective&rdquo; slicing method can be employed in cases where the specifier wishes the field instances to follow the constraints of one of a number of constraint sets (data type flavors).  <span style="font-size:16px">Table 5.28</span> and <span style="font-size:16px">Table 5.29</span> illustrate the use case.</p><p></p>
+<p>The &ldquo;Non-selective&rdquo; slicing method can be employed in cases where the specifier wishes the field instances to follow the constraints of one of a number of constraint sets (data type flavors).  Table 5.28 and Table 5.29 illustrate the use case.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -6889,17 +7061,114 @@ The field instance must adhere to the constraints specified in one of the specif
 <p class='p_v2web'>
 <p></p>
 </p>
+<div class='v2_tabs' id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3'>
+<ul>
+<li>
+<a href='#HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder1'>
+XML
+</a>
+</li>
+
+<li>
+<a href='#HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder2'>
+XML
+</a>
+</li>
+
+<li>
+<a href='#HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder3'>
+JPG
+</a>
+</li>
+
+</ul>
+<div id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder1'>
+<textarea class='codemirror-textarea-xml'><?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/00016"/>
+  <name value="Application Acknowledgment Type"/>
+  <itemNumber value="16"/>
+  <minLength value="2"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+</DataElementDefinition>
+</textarea>
+<div>
+<a download='this-file.xml' href='this-file.xml' target='_blank' title='Download'>
+Download
+</a>
+</div>
+</div>
+
+<div id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder2'>
+<textarea class='codemirror-textarea-xml'><?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/continuation-pointer-segment"/>
+  <name value="continuation pointer segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DSC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The DSC segment is used in the continuation protocol.</p>
+          <p>HL7 Attribute Table - DSC – Continuation Pointer</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00014"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01354"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>
+</textarea>
+<div>
+<a download='that-file.xml' href='that-file.xml' target='_blank' title='Download'>
+Download
+</a>
+</div>
+</div>
+
+<div class='center' id='HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder3'>
+<img src='/Users/mfaughn/projects/v2web/lib/HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019/images/HL7v2_Conformance_Methodology_R1_O1_Ballot_Revised_D9_-_September_2019_Constraints-tab_set5-6-1-3-folder3_kittens.jpg'>
+<div>
+<a download='kittens.jpg' href='kittens.jpg' target='_blank' title='Download'>
+Download
+</a>
+</div>
+</div>
+
+</div>
+<p/>
+<p/>
 <h3>
 5.7 Conformance Statement
 </h3>
 <p class='p_v2web'>
-<p>A conformance statement is a mechanism to express a constraint using a natural or computable language.  An example is: </p><p><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">&ldquo;I</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">F</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> RXA-18 (Substance/Treatment Refusal Reason) is valued </span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">THEN</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> RXA-20 (Completion Status) SHALL </span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">contain the value</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> &#39;RE&#39; (Refused)&rdquo;. </span></p><p>Conformance statements provide a catch-all mechanism for expressing a constraint that can&rsquo;t be defined by the constraint types provided by the other conformance constructs (e.g., usage). Conformance statements should not be used in place of the conformance constructs, i.e., do not use a conformance statement to constrain the usage of an element (e.g., &ldquo;PID-8 (Administrative Sex) is Required.&rdquo;).</p><p>The forms in which a conformance statement can be expressed vary and can appear as a text description or a computable expression. In both forms a specific syntax should be used to ensure that the requirement details are complete and to improve readability for the implementer. This specification does not require a specific method or language. However, a pseudo language specifically for HL7 v2 has been developed and is the recommended method for expressing conformance statements (See <span style="font-size:16px">Appendix </span><span style="font-size:16px">B</span>).</p>
+<p>A conformance statement is a mechanism to express a constraint using a natural or computable language.  An example is: </p><p><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">&ldquo;I</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">F</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> RXA-18 (Substance/Treatment Refusal Reason) is valued </span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">THEN</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> RXA-20 (Completion Status) SHALL </span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">contain the value</span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"> &#39;RE&#39; (Refused)&rdquo;. </span></p><p>Conformance statements provide a catch-all mechanism for expressing a constraint that can&rsquo;t be defined by the constraint types provided by the other conformance constructs (e.g., usage). Conformance statements should not be used in place of the conformance constructs, i.e., do not use a conformance statement to constrain the usage of an element (e.g., &ldquo;PID-8 (Administrative Sex) is Required.&rdquo;).</p><p>The forms in which a conformance statement can be expressed vary and can appear as a text description or a computable expression. In both forms a specific syntax should be used to ensure that the requirement details are complete and to improve readability for the implementer. This specification does not require a specific method or language. However, a pseudo language specifically for HL7 v2 has been developed and is the recommended method for expressing conformance statements (See Appendix B).</p>
 </p>
 <h3>
 5.8 Co-Constraints
 </h3>
 <p class='p_v2web'>
-<p>The co-constraint construct is a related constraint concept that is used to express dependencies among a set of data values. An HL7 v2 message in which observations are conveyed is one example of how co-constraints are used. Such constraints typically follow the form of &ldquo;if OBX-3.1 = LOINC code XXXXX-X then OBX-2 SHALL BE &ldquo;CE&rdquo; and OBX-5.1 SHALL contain a value from the value set YYY&rdquo; or a similar form. A co-constraint is not limited to use with observations, but it appears most frequently with observations. A convenient way to illustrate a set of co-constraints is to present them in a table format. <span style="font-size:16px">Table 5.30</span> illustrates an example for a set of immunization observations.</p><p></p>
+<p>The co-constraint construct is a related constraint concept that is used to express dependencies among a set of data values. An HL7 v2 message in which observations are conveyed is one example of how co-constraints are used. Such constraints typically follow the form of &ldquo;if OBX-3.1 = LOINC code XXXXX-X then OBX-2 SHALL BE &ldquo;CE&rdquo; and OBX-5.1 SHALL contain a value from the value set YYY&rdquo; or a similar form. A co-constraint is not limited to use with observations, but it appears most frequently with observations. A convenient way to illustrate a set of co-constraints is to present them in a table format. Table 5.30 illustrates an example for a set of immunization observations.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>

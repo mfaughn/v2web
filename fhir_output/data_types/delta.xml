@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/delta"/>
+  <name value="delta"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DLT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Describes the information that controls delta check warnings.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in section 8.8.4.9 – OM2-9, as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Normal Range"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the normal interval of the reference data.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric-range"/>
+  </component>
+  <component>
+    <name value="Numeric Threshold"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The numeric threshold of the change that is detected.</p>
+        <p>For example the threshold may be set to 10.</p>
+      </div>
+    </definition>
+    <confLength value="4"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Change Computation"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies if the change is computed as a percent change or as an absolute change. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70523"><em>HL7 Table 0523 - Computation Type</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0523/index.html"/>
+  </component>
+  <component>
+    <name value="Days Retained"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The length of time in days that the value is retained for computing delta checks.</p>
+      </div>
+    </definition>
+    <confLength value="4"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+</DataTypeDefinition>

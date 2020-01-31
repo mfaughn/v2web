@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01086"/>
+  <name value="Event Description from Original Reporter"/>
+  <itemNumber value="1086"/>
+  <confLength value="600"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/formatted-text-data"/>
+</DataElementDefinition>

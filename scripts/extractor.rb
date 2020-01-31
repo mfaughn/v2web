@@ -20,8 +20,15 @@
 require 'shellwords'
 require 'cgi'
 require_relative 'current_parent_hack'
-module V2Web
+require_relative 'make_gbp_file.rb'
+
+module V2Web  
   class DocXtractor
+    attr_reader :chapter
+    def initialize(chapter = nil)
+      @chapter = chapter.to_s if chapter
+    end
+    
     def extract_document(doc, title = 'Test')
       doc.remove_namespaces!
       ChangeTracker.start
@@ -33,20 +40,11 @@ module V2Web
       ChangeTracker.commit
       @current_depth = 0
       doc.children.each { |c| extract(c) }
-    end
-    
-    def get_mime_type(path)
-      `file --brief --mime-type - < #{Shellwords.shellescape(path)}`.strip
+      compact_content(@site)
     end
     
     def make_gbp_file(path)
-      ChangeTracker.start
-      f = Gui_Builder_Profile::File.create(:filename => path.split('/').last, :mime_type => get_mime_type(path))
-      bd = Gui_Builder_Profile::BinaryData.create(:data => File.binread(path))
-      f.binary_data = bd
-      f.save
-      ChangeTracker.commit
-      f
+      V2Web.make_gbp_file(path)
     end
     
     # def extract_footnotes(word_dir)
@@ -159,6 +157,8 @@ module V2Web
           if style =~ /Heading/
             # puts node.to_xml;puts
             header(node, style[-1].to_i)
+          # elsif style =~ /Header/
+          #   puts node.to_xml;puts
           else
             @caption = nil
             last_node_was_list = false
@@ -177,15 +177,12 @@ module V2Web
                 @current_text = nil # close preceeding text block
               end              
             when 'TOC1', 'TOC2', 'TOC3', 'TOC4', 'TOC5', 'TableofFigures'
-            when 'ListParagraph'
-              # puts Rainbow("List: #{extract_text(node)}").yellow
-
-            # Make these DRY
+              # Make these DRY
             when 'NormalListAlpha'
               start_list('letters') unless @list
               last_node_was_list = true
               add_list_item(node)
-            when 'Bullet', 'NormalListBullets'
+            when 'Bullet', 'NormalListBullets', 'ListParagraph'
               start_list('bullets') unless @list
               last_node_was_list = true
               add_list_item(node)
@@ -213,6 +210,7 @@ module V2Web
             when 'Table'
               # TODO What the heck is this?
             when 'Header'
+              special_header(node)
               # Just 'Acknowledgements'
             when 'NormalIndented'
               # HL7 v2.x Messaging Standard (www.hl7.org)
@@ -255,11 +253,18 @@ module V2Web
     def add_list_item(node)
       ChangeTracker.start
       text ||= V2Web::Text.create
-      text.content = Gui_Builder_Profile::RichText.create(:content => extract_text(node))
+      t = extract_text(node)
+      # remove_empty_paragraphs_from_html(t)
+      text.content = Gui_Builder_Profile::RichText.create(:content => t)
       text.save
       @list.add_item(text) # TODO only works for simple text content
       ChangeTracker.commit
     end
+    
+    # def remove_empty_paragraphs_from_html(t)
+    #   puts t
+    #   t.gsub!('<p></p>', '')
+    # end
     
     def make_xml_code(node)
       xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
@@ -269,7 +274,7 @@ module V2Web
     end
     
     def make_html_code(nodes)
-      html = Gui_Builder_Profile::Code.create(:content => nodes.map{ |n| n.to_html}.join("\n") )
+      html = Gui_Builder_Profile::Code.create(:content => nodes.map { |n| n.to_html}.join("\n") )
       html.language = 'HTML'
       html.save
       html
@@ -411,22 +416,53 @@ module V2Web
       runs = node.xpath('.//r')
       runs.each do |run|
         run_text = ''
-        texts = run.xpath('.//t')
-        texts.each { |t| run_text << CGI.escapeHTML(t) }
+        texts = run.xpath('.//t | .//noBreakHyphen')
+        texts.each do |t|
+          if t.name == 'noBreakHyphen'
+            run_text << '-'
+          else
+            run_text << CGI.escapeHTML(t)
+          end
+        end
         unless run_text.empty?
           parsed_text << style_text(run, run_text)
         end
       end
+      linkify(parsed_text) if parsed_text =~ url_matcher
+      emailify(parsed_text) if parsed_text =~ email_matcher
       parsed_text
+    end
+    
+    def url_matcher
+      # from https://stackoverflow.com/questions/6038061/regular-expression-to-find-urls-within-a-string/29288898#29288898
+            /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/im
+    end
+    
+    def linkify(text)
+      urls = url_matcher.match(text).to_a.uniq
+      # if urls.any?
+      #   puts text
+      # end
+      urls.each { |url| text.gsub!(url, "<a href=\"#{url}\">#{url}</a>") }
+    end
+    
+    def email_matcher
+      /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/i
+    end
+    
+    def emailify(text)
+      email_addresses = email_matcher.match(text)
+      email_addresses.to_a.uniq.each { |ea| text.gsub!(ea, "<a href=\"mailto:#{ea}\">#{ea}</a>") }
     end
     
     # Assuming that normal font size in docx is 11pt, which is specified in ooxml in 1/2pt units.
     # We're going with 15px downstream as the default size -- not sure how to scale things though....
-    def style_text(node, text, default_size: 22)
+    def style_text(node, text, default_size:22)
       styles = []
       str  = node.to_s
-      
+      hyperlink = str =~ /<rStyle val="Hyperlink"\/>/ # because MS Word is insane! The 'Hyperlink' style defines one set of font and size in the style pane, a different set of font and size in the OOXML, and the actual rendering in MS Word is yet another thing.  WTF!!!!
       size = (str.slice(/(?<=sz\sval=")\d+/) || default_size).to_i
+      size = default_size if hyperlink
       unless size == default_size
         styles << "font-size:#{size/2 + 4}px" # wild ass guess at getting size right
       end
@@ -436,7 +472,7 @@ module V2Web
         styles << "color:##{color.downcase}"
       end
       
-      font = str.slice(/(?<=rFonts ascii=").+?(?=")/)
+      font = str.slice(/(?<=rFonts ascii=").+?(?=")/) unless hyperlink
       # Assuming default is Times New Roman so we aren't recording it
       if font == 'Courier New'
         styles << 'font-family:Courier New,Courier,monospace'
@@ -519,6 +555,24 @@ module V2Web
       #   @current_depth -= 1 # This is WRONGGGGGGGG!!~!!!!! we don't know how far to go back up!
       # end
       ChangeTracker.commit
+    end
+    
+    # Note that this is a one off for the MS Word 'Header' style, which is different from the 'Heading' styles.
+    def special_header(node)
+      add_text(node)
+      c = @current_text.content.content
+      paragraphs = c.split(/(?<=\<\/p\>)/)
+      return if paragraphs[-1] == '<p></p>' # do nothing if it is empty
+      replacement = paragraphs.pop.sub('<p>', '<p><span style="font-size:22px"><strong>').sub('</p>', '</p></strong></span>')
+      paragraphs << replacement
+      ChangeTracker.start
+      html = Gui_Builder_Profile::RichText.create(:content => paragraphs.join)
+      html.markup_language = 'HTML'
+      html.save
+      @current_text.content = html
+      @current_text.save
+      ChangeTracker.commit
+      @current_text = nil
     end
   end
 end

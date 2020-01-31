@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/03422"/>
+  <name value="Remaining Benefit Amount"/>
+  <itemNumber value="3422"/>
+  <minLength value="20"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/money"/>
+</DataElementDefinition>

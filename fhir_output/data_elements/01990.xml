@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01990"/>
+  <name value="Internal Scaling Factor PP"/>
+  <itemNumber value="1990"/>
+  <confLength value="4"/>
+  <mayTruncate value="true"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+</DataElementDefinition>

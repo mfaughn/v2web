@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01099"/>
+  <name value="Generic Product"/>
+  <itemNumber value="1099"/>
+  <confLength value="1"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-user-defined-tables"/>
+</DataElementDefinition>

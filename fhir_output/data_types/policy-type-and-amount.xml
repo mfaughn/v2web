@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/policy-type-and-amount"/>
+  <name value="policy type and amount"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PTA"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies the policy type and amount covered by the insurance.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in section 6.5.7.29 IN2-29, as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Policy Type"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the policy type.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70147"><em>User-defined Table 0147 - Policy Type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0147/index.html"/>
+  </component>
+  <component>
+    <name value="Amount Class"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the amount quantity class.</p>
+        <p>Refer to <a href="C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary Internet Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70193"><em>User-defined Table 0193 - Amount Class</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0193/index.html"/>
+  </component>
+  <component><name value="Money or Percentage Quantity"/><sequenceNumber value="3"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The PTA.3 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.</em> Refer to <a href="#money-or-percentage-mop"><em>PTA.4</em></a> instead.</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component>
+    <name value="Money or Percentage"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: specifies an amount that may be either currency or a percentage.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/money-or-percentage"/>
+  </component>
+</DataTypeDefinition>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01393"/>
+  <name value="Requested Completion Time"/>
+  <itemNumber value="1393"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+</DataElementDefinition>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/person-location"/>
+  <name value="person location"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PL"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type is used to specify a patient location within a healthcare institution. Which components are valued depends on the needs of the site. For example for a patient treated at home, only the person location type is valued. It is most commonly used for specifying patient locations, but may refer to other types of locations within a healthcare setting.</p>
+      <p><strong>Note:</strong> This data type contains several location identifiers that should be thought of in the following order from the most general to the most specific: facility, building, floor, point of care, room, bed.<br/>
+Additional data about any location defined by these components can be added in the following components: person location type, location description and location status.</p>
+      <p>Example: Nursing Unit</p>
+      <blockquote>
+        <p>A nursing unit at Community Hospital: 4 East, room 136, bed B</p>
+      </blockquote>
+      <p>4E^136^B^CommunityHospital^^N^^^</p>
+      <p>Example: Clinic</p>
+      <blockquote>
+        <p>A clinic at University Hospitals: Internal Medicine Clinic located in the Briones building, 3<sup>rd</sup> floor.</p>
+      </blockquote>
+      <p>InternalMedicine^^^UniversityHospitals^^C^Briones^3^</p>
+      <p>Example: Home</p>
+      <blockquote>
+        <p>The patient was treated at his home.</p>
+      </blockquote>
+      <p>^^^^^H^^^</p>
+    </div>
+  </description>
+  <component>
+    <name value="Point of Care"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the point where patient care is administered. It is conditional on PL.6 Person Location Type (e.g., nursing unit or department or clinic). After floor, it is the most general patient location designation. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70302"><em>User-defined Table 0302 - Point of Care</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0302/index.html"/>
+  </component>
+  <component>
+    <name value="Room"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the patient's room. After point of care, it is the most general person location designation. Refer to <a href="C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary Internet Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70303"><em>User-defined Table 0303 - Room</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0303/index.html"/>
+  </component>
+  <component>
+    <name value="Bed"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the patient's bed. After room, it is the most general person location designation. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70304"><em>User-defined Table 0304 - Bed</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0304/index.html"/>
+  </component>
+  <component>
+    <name value="Facility"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component is subject to site interpretation but generally describes the highest level physical designation of an institution, medical center or enterprise. It is the most general person location designation.</p>
+        <p>See Section <em>2.A.33</em>, “<em>HD - hierarchic designator</em>” for discussion of data type.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be redefined (given a different user-defined table number and name) by the technical committee responsible for that segment.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+  </component>
+  <component>
+    <name value="Location Status"/>
+    <sequenceNumber value="5"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the status or availability of the location. For example, it may convey bed status. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70306"><em>User-defined Table 0306 - Location Status</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-user-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0306/index.html"/>
+  </component>
+  <component>
+    <name value="Person Location Type"/>
+    <sequenceNumber value="6"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Person location type is the categorization of the person’s location defined by facility, building, floor, point of care, room or bed. Although not a required field, when used, it may be the only populated field. It usually includes values such as nursing unit, department, clinic, SNF, physician’s office. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70305"><em>User-defined Table 0305 - Person location type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-user-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0305/index.html"/>
+  </component>
+  <component>
+    <name value="Building"/>
+    <sequenceNumber value="7"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the building where the person is located. After facility, it is the most general person location designation. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70307"><em>User-defined Table 0307 - Building</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0307/index.html"/>
+  </component>
+  <component>
+    <name value="Floor"/>
+    <sequenceNumber value="8"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the code for the floor where the person is located. After building, it is the most general person location designation. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70308"><em>User-defined Table 0308 - Floor</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0308/index.html"/>
+  </component>
+  <component>
+    <name value="Location Description"/>
+    <sequenceNumber value="9"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component describes the location in free text.</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Comprehensive Location Identifier"/>
+    <sequenceNumber value="10"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The unique identifier that represents the physical location as a whole without regard for the individual components. This accommodates sites that may have a different method of defining physical units or who may code at a less granular level. For example, point of care, room, and bed may be 1 indivisible code.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
+  </component>
+  <component>
+    <name value="Assigning Authority for Location"/>
+    <sequenceNumber value="11"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The entity that creates the data for the individual physical location components. If populated, it should be the authority for all components populated. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70363"><em>User-defined Table 0363 – Assigning Authority</em></a> for suggested values for the first sub-component of the HD component, &lt;namespace ID&gt;.</p>
+        <p>This component makes it possible for codes to be differentiated when the field in which this data type is used repeats.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.</p>
+        <p>By site agreement, implementors may continue to use <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first sub-component.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0363/index.html"/>
+  </component>
+</DataTypeDefinition>

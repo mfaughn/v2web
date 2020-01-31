@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/v2plus">
   <id value="DataElementDefinition"/>
-  <url value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataElementDefinition" />
+  <url value="http://hl7.org/v2plus/StructureDefinition/DataElementDefinition" />
   <version value="1st draft" />
   <name value="DataElementDefinition" />
   <title value="Definition of v2+ Data Elements" />
@@ -9,7 +9,7 @@
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataElementDefinition" />
+  <type value="http://hl7.org/v2plus/StructureDefinition/DataElementDefinition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
   <derivation value="specialization" />
   <differential>
@@ -86,7 +86,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/v2-in-FHIR/valueset-may-truncate.html" />
+        <valueSet value="http://hl7.org/v2plus/valueset-may-truncate.html" />
       </binding>
     </element>
     <element id="DataElementDefinition.datatype">
@@ -97,7 +97,7 @@
         <code value="canonical" />
         <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
         <!-- See comments at DataTypeDefinition.component.type -->
-        <!-- <targetProfile value="http://hl7.org/v2-in-FHIR/StructureDefinition/DataTypeDefinition" /> -->
+        <!-- <targetProfile value="http://hl7.org/v2plus/StructureDefinition/DataTypeDefinition" /> -->
         <aggregation value="referenced" />
       </type>
     </element>

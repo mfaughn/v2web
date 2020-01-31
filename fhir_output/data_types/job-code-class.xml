@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/job-code-class"/>
+  <name value="job code/class"/>
+  <withdrawn value="false"/>
+  <abbreviation value="JCC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Example 1: Codified job (where 1 represents the code for Administrator and F represents full time)</p>
+      <p>|1^F^Administrator|</p>
+      <p>Example 2: Uncodified job (where job codes are not codified and PT represents part time)</p>
+      <p>|^PT^Analyst|.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Job Code"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the person’s job code. <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70327"><em>User-defined Table 0327 - Job Code</em></a> is used as the HL7 identifier for the user-defined table of values for this component.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0327/index.html"/>
+  </component>
+  <component>
+    <name value="Job Class"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the person’s employee classification. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70328"><em>User-defined Table 0328 - Employee Classification</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0328/index.html"/>
+  </component>
+  <component>
+    <name value="Job Description Text"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the text of the job description. This will accommodate systems where job descriptions are not codified.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/text-data"/>
+  </component>
+</DataTypeDefinition>

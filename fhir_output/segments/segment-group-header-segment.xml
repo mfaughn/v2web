@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/segment-group-header-segment"/>
+  <name value="segment group header segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SGH"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The SGH segment is only used to provide information about the instantiated message structure to indicate that a new segment group begins and subsequent segments SHOULD be interpreted accordingly. It does not contain any patient related data.</p>
+          <p>It is expected that each SGH will be accompanied by an SGT, as depicted below in the abstract message diagram: WRP: Widget Reports</p>
+          <table>
+            <tbody>
+              <tr class="odd">
+                <td>Segments</td>
+                <td>Description</td>
+                <td>Status</td>
+                <td>Chapter</td>
+              </tr>
+              <tr class="even">
+                <td>
+                  <a href="#MSH">MSH</a>
+                </td>
+                <td>Message Header</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="odd">
+                <td>[{SFT}]</td>
+                <td>Software Segment</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="even">
+                <td>[UAC]</td>
+                <td>User Authentication Credential</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="odd">
+                <td>
+                  <a href="#MSA">MSA</a>
+                </td>
+                <td>Message Acknowledgment</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="even">
+                <td>[{ERR}]</td>
+                <td>Error Segment</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="odd">
+                <td>{</td>
+                <td>---Widget begin</td>
+                <td/>
+                <td/>
+              </tr>
+              <tr class="even">
+                <td>[SGH]</td>
+                <td>Segment Group Header</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="odd">
+                <td>WDN</td>
+                <td>Widget Description</td>
+                <td/>
+                <td>XX</td>
+              </tr>
+              <tr class="even">
+                <td>WPN</td>
+                <td>Widget Portion</td>
+                <td/>
+                <td>XX</td>
+              </tr>
+              <tr class="odd">
+                <td>[SGT}</td>
+                <td>Segment Group Trailer</td>
+                <td/>
+                <td>2</td>
+              </tr>
+              <tr class="even">
+                <td>}</td>
+                <td>---Widget end</td>
+                <td/>
+                <td/>
+              </tr>
+            </tbody>
+          </table>
+          <p>HL7 Attribute Table – SGH – Segment Group Header</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03389"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03390"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

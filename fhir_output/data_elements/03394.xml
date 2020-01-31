@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/03394"/>
+  <name value="Set ID – SGT"/>
+  <itemNumber value="3394"/>
+  <minLength value="4"/>
+  <mayTruncate value="not applicable"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/sequence-id"/>
+</DataElementDefinition>

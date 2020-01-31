@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/daily-deductible-information"/>
+  <name value="daily deductible information"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DDI"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies the detail information for the daily deductible.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in section 6.5.7.30 IN2-30, as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Delay Days"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The number of days after which the daily deductible begins.</p>
+      </div>
+    </definition>
+    <confLength value="3"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Monetary Amount"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The monetary amount of the deductible.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/money"/>
+  </component>
+  <component>
+    <name value="Number of Days"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The number of days to apply the deductible. If this component is not populated, it means that the number of days is indefinite.</p>
+      </div>
+    </definition>
+    <confLength value="4"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+</DataTypeDefinition>

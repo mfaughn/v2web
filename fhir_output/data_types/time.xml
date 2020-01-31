@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/time"/>
+  <name value="time"/>
+  <withdrawn value="false"/>
+  <abbreviation value="TM"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> Specifies the hour of the day with optional minutes, seconds, fraction of second using a 24-hour clock notation and time zone.</p>
+      <p>As of v 2.3, the number of characters populated (excluding the time zone specification) specifies the precision.</p>
+      <p>Format: HH[MM[SS[.S[S[S[S]]]]]][+/-ZZZZ]</p>
+      <p>Thus:</p>
+      <ol type="a">
+        <li>
+          <p>the first two are used to specify a precision of "hour”</p>
+        </li>
+      </ol>
+      <ol start="15" type="a">
+        <li>
+          <p>the first four are used to specify a precision of "minute”</p>
+        </li>
+        <li>
+          <p>the first six are used to specify a precision of "second”</p>
+        </li>
+        <li>
+          <p>the first eight are used to specify a precision of "one tenth of a second”</p>
+        </li>
+        <li>
+          <p>the first eleven are used to specify a precision of " one ten thousandths of a second”</p>
+        </li>
+      </ol>
+      <p>Example: |0630| specifies 6: 30 AM.</p>
+      <p>The fractional seconds could be sent by a transmitter who requires greater precision than whole seconds. Fractional representations of minutes, hours or other higher-order units of time are not permitted.</p>
+      <p><strong>Note:</strong> The time zone [+/-ZZZZ], when used, is restricted to legally-defined time zones and is represented in HHMM format.</p>
+      <p>The time zone of the sender may be sent optionally as an offset from the coordinated universal time (previously known as Greenwich Mean Time). Where the time zone is not present in a particular TM field but is included as part of the date/time field in the MSH segment, the MSH value will be used as the default time zone. Otherwise, the time is understood to refer to the local time of the sender.</p>
+      <p>Examples:</p>
+      <table>
+        <tbody>
+          <tr class="odd">
+            <td>Time</td>
+            <td>Description</td>
+          </tr>
+          <tr class="even">
+            <td>|0000|</td>
+            <td>midnight</td>
+          </tr>
+          <tr class="odd">
+            <td>|235959+1100|</td>
+            <td>1 second before midnight in a time zone eleven hours ahead of Universal Coordinated Time (i.e., East of Greenwich).</td>
+          </tr>
+          <tr class="even">
+            <td>|0800|</td>
+            <td>Eight AM, local time of the sender.</td>
+          </tr>
+          <tr class="odd">
+            <td>|093544.2312|</td>
+            <td>44.2312 seconds after Nine thirty‑five AM, local time of sender.</td>
+          </tr>
+          <tr class="even">
+            <td>|13|</td>
+            <td>1pm (with a precision of hours), local time of sender.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Prior to v 2.3, this data type was specified in the format HHMM[SS[.SSSS]][+/-ZZZZ]. As of v 2.3 minutes are no longer required. By site-specific agreement, HHMM[SS[.SSSS]][+/-ZZZZ] may be used where backward compatibility must be maintained.This corresponds a minimum length of 4.</p>
+      <p>The TM data type does not follow the normal truncation pattern, and the truncation character is never valid in the TM data type. Instead, the truncation behavior is based on the semantics of times.</p>
+      <p>Unless otherwise specified in the context where the DTM type is used, the DTM type may be truncated to a particular minute. When a TM is truncated, the truncated form SHALL still be a valid TM type. Refer to Chapter 2, section 2.5.5.2, "Truncation Pattern", for further information.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Time"/>
+    <sequenceNumber value=""/>
+    <minLength value="2"/>
+    <maxLength value="6"/>
+    <confLength value="13"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  </component>
+</DataTypeDefinition>

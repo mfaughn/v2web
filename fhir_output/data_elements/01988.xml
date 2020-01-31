@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/01988"/><name value="Number of TP"/>s PP'/&gt;
+  
+  <itemNumber value="1988"/><confLength value="6"/><mayTruncate value="true"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/></DataElementDefinition>

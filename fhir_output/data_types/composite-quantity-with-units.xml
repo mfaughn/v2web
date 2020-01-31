@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/composite-quantity-with-units"/>
+  <name value="composite quantity with units"/>
+  <withdrawn value="false"/>
+  <abbreviation value="CQ"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Note:</strong> CQ cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.</p>
+      <p>Examples:</p>
+      <p>|123.7^kg| kilograms is an ISO unit</p>
+      <p>|150^lb&amp;&amp;ANSI+| weight in pounds is a customary US unit defined within ANSI+.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Quantity"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the numeric quantity or amount of an entity.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Units"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component species the units in which the quantity is expressed. As of v2.7 the externally-defined Unified Code for Units of Measure (UCUM) case sensitive code is the required code for units of measure. Refer to the external table "Unified Code for Units of Measure" (UCUM) [<a href="http://aurora.rg.iupui.edu/UCUM" class="uri">http://aurora.rg.iupui.edu/UCUM</a>] for valid values. Local codes may be transmitted in addition to UCUM codes.</p>
+        <p>Refer to <a href="file:///D:\Eigene%20Dateien018\HL7\Standards\v2.9%20May\V281_CH02C_CodeTables.doc#HL70200"><em>user-defined Table 0794 - Units</em></a> in Chaper 2C, Code Tables, for valid values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0794/index.html"/>
+  </component>
+</DataTypeDefinition>

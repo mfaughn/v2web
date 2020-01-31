@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/role-segment"/>
+  <name value="Role Segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="ROL"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>
+            <em>
+              <strong>Attention: This segment is retained for backwards compatibility as of v 2.7. The reader is referred to the PRT segment described in Chapter 7.</strong>
+            </em>
+          </p>
+          <p>The role segment contains the data necessary to add, update, correct, and delete from the record persons involved, as well as their functional involvement with the activity being transmitted.</p>
+          <p>In general, the ROL segment is used to describe a person playing a particular role within the context of the message. In PM, for example, in the Grant Certificate/Permission message (B07), the ROL segment is used to describe the roles a person may perform pertinent to the certificate in the message.</p>
+          <p>The positional location of the ROL segment in ADT and Finance messages indicates the relationship. When the segment is used following the IN3 segment, and the role-ROL value is PP or FHCP, the PP or FHCP is related to the health plan. When the segment is used following the PID segment, and the role-ROL value is PP or FHCP, the PP or FHCP is related to the person. When the segment is used following the PV2 segment, and the role-ROL value is PCP or FHCP, the PP or FHCP is related to the patient visit.</p>
+          <p>HL7 Attribute Table - ROL <span id="ROL" class="anchor"/>- Role</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01206"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00816"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01197"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value=""/>
+    <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01198"/>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01199"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01200"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="7"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01201"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="8"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01205"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="9"/>
+    <mustSupport value=""/>
+    <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01510"/>
+  </field>
+  <field>
+    <sequenceNumber value="10"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01461"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="11"/>
+    <mustSupport value=""/>
+    <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00679"/>
+  </field>
+  <field>
+    <sequenceNumber value="12"/>
+    <mustSupport value=""/>
+    <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00678"/>
+  </field>
+  <field>
+    <sequenceNumber value="13"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02183"/>
+    </maxCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="14"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02377"/>
+    </maxCardinality>
+  </field>
+</SegmentDefinition>

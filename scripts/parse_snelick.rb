@@ -18,15 +18,18 @@
 require 'docx'
 load File.join(__dir__, 'nokogiri_extensions.rb')
 load File.join(__dir__, 'extractor.rb')
+load File.join(__dir__, 'compact_content.rb')
 load File.join(__dir__, 'clear_tables.rb')
 load File.join(__dir__, 'headers_footers.rb')
 load File.join(__dir__, 'headers_hack.rb')
+load File.join(__dir__, 'empty_sections_hack.rb')
 
 clear_tables
 # node.display_structure
 # puts; puts Rainbow(node.map_styles).green
 sources = []
-# sources << ['../test_data/HL7v2DataTypeSpecializationsBallot-May2018', 'HL7 v2 DataType Specializations Ballot-May2018']
+# sources << ['../test_data/testJan16_intro', 'Intro Test']
+
 sources << ['../test_data/V2_CONFORM_R1_O1_2019SEP_BALLOT-REVISED-D9', 'HL7v2 Conformance Methodology R1 O1 Ballot Revised D9 - September 2019']
 sources.each do |docx, title|
   extractor = V2Web::DocXtractor.new
@@ -39,3 +42,4 @@ sources.each do |docx, title|
   extractor.extract_document(doc.doc, title)
 end
 headers_hack
+empty_sections_hack

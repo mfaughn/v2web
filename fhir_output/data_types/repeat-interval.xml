@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/repeat-interval"/>
+  <name value="repeat interval"/>
+  <withdrawn value="false"/>
+  <abbreviation value="RI"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> contains the interval between repeated services.</p>
+      <p>Note: The reader is referred to the <a href="#_RPT_–_repeat_pattern"><em>RPT – Repeat pattern</em></a> data type, which provides a more rigorous framework for defining repeating time intervals.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Repeat Pattern"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The repeating frequency with which the treatment is to be administered. It is similar to the frequency and SIG code tables used in order entry systems.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70335"><em>User-defined Table 0335 - Repeat Pattern</em></a> for suggested values.</p>
+        <p>The first component may repeat, with repeat values separated by a space. The repeats are interpreted as connected by logical ANDs.</p>
+        <p>Example:</p>
+        <p>Twice per day, every other day: BID QOD</p>
+        <p>Three times per day, Monday Wednesday and Friday: TID QJ135</p>
+        <p>Because of this syntax, repeat values should never contain blanks.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0335/index.html"/>
+  </component>
+  <component>
+    <name value="Explicit Time Interval"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component explicitly lists the actual times referenced by the code in the first component, in the following format: HHMM,HHMM,HHMM,.... This second component will be used to clarify the first component in cases where the actual times vary within an institution. If the time of the order spans more than a single day, this new component is only practical if the same times of administration occur for each day of the order. If the actual start time of the order (as given by the fourth component of the quantity/timing field) is after the first explicit time, the first administration is taken to be the first explicit time after the start time. In the case where the patient moves to a location having a different set of explicit times, the existing order may be updated with a new quantity/timing field showing the changed explicit times.</p>
+        <p>Example: 2nd component of quantity/timing field:</p>
+        <p>|QID^0230,0830,1430,2030|</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+</DataTypeDefinition>

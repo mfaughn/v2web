@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/ub-value-code-and-amount"/>
+  <name value="UB value code and amount"/>
+  <withdrawn value="false"/>
+  <abbreviation value="UVC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> A code structure to relate amounts or values to identified data elements necessary to process this claim as qualified by the payer organization.</p>
+      <p>This data type is used to convey information defined by CMS or other regulatory agencies. It corresponds to UB fields 46A, 47A, 48A, 49A, 46B, 47B, 48B, and 49B and UB92 fields 39a, 39b, 39c, 39d, 40a, 40b, 40c, 40d, 41a, 41b, 41c, and 41d.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in sections 6.5.10.10 UB1-10 and 6.5.11.6 UB2-6, as of v 2.5.</p>
+      <p>The most common semi-private room rate is used in instances where the patient is placed in a private room at their request but their insurance only covers a semi-private room rate, which can be calculated using the 01-most common semi-private room rate.</p>
+      <p>Example:</p>
+      <p>|01&amp;most common semi private rate&amp;NUBC^750&amp;USD|</p>
+    </div>
+  </description>
+  <component>
+    <name value="Value Code"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the National Uniform Billing Committee (NUBC) code itself.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70153"><em>External Table 0153 – Value Code</em></a> for valid values. In the United States, values for this component need to come from National Uniform Billing Committee (NUBC); no extensions are allowed.</p>
+        <p>Other realms should determine the precise set appropriate for their realm.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0153/index.html"/>
+  </component>
+  <component>
+    <name value="Value Amount"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the numeric amount when needed to pair with the value when it is monetary.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/money"/>
+  </component>
+  <component>
+    <name value="Non-Monetary Value Amount / Quantity"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the numeric amount when needed to pair with the value when it is non-monetary.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Non-Monetary Value Amount / Units"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component species the units in which the non-monetary quantity is expressed. Refer to the Unified Code for Units of Measure (UCUM) for valid values [<a href="http://aurora.rg.iupui.edu/UCUM" class="uri">http://aurora.rg.iupui.edu/UCUM</a>].</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  </component>
+</DataTypeDefinition>

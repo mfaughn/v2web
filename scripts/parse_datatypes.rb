@@ -18,15 +18,17 @@
 require 'docx'
 load File.join(__dir__, 'nokogiri_extensions.rb')
 load File.join(__dir__, 'extractor.rb')
+load File.join(__dir__, 'extractor_helpers.rb')
 load File.join(__dir__, 'extract_datatypes.rb')
 load File.join(__dir__, 'clear_tables.rb')
 load File.join(__dir__, 'headers_footers.rb')
+HL7::DataType.delete
+HL7::Component.delete
 # clear_tables
 # node.display_structure
 # puts; puts Rainbow(node.map_styles).green
 sources = []
-sources << ['../test_data/V282_CH02A_DataTypes_strippedA']
-# sources << ['../test_data/HL7v2ConformanceMethodology_14052019_accepted_changes', 'test']
+sources << ['../test_data/v2.9_Dec16/datatypes']
 sources.each do |input|
   extractor = V2Web::DocXtractor.new
   docx_path = File.join(__dir__, input) + '.docx'

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/sort-order"/>
+  <name value="sort order"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SRT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Specifies those parameters by which the response will be sorted and by what method.</p>
+      <p>Example: In a tabular response query, where the return data is known by column name, the SRT might look like:</p>
+      <p>|LastName^A~FirstName^A|</p>
+      <p>Example: In a segment response query, where the return data is known by segment and offset, the SRT field would use segment field name notation:</p>
+      <p>|PID.3.1^A~PID.3.2|</p>
+    </div>
+  </description>
+  <component>
+    <name value="Sort-by Field"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Identifies the field by which the response will be sorted. In a tabular response, this will be the column name to sort by. In the Segment Pattern and the Display Response, this will be the segment field name to sort by. See QIP in Section <em>2.A.59.1</em>, "<em>Segment Field Name (ST)</em>" for segment field name definition.</p>
+        <p>See Chapter 5, "Query", for a complete discussion of queries and their responses.</p>
+      </div>
+    </definition>
+    <minLength value="6"/>
+    <maxLength value="2"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Sequencing"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Identifies how the field or parameter will be sorted; and, if sorted, whether the sort will be case sensitive (the default) or not. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70397"><em>HL7 Table 0397 – Sequencing</em></a> for valid values</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0397/index.html"/>
+  </component>
+</DataTypeDefinition>

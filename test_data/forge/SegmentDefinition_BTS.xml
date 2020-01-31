@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SegmentDefinition>
-  <url value='http://hl7.org/v2-in-FHIR/SegmentDefinition/batch-trailer-segment'/>
+  <url value='http://hl7.org/v2plus/SegmentDefinition/batch-trailer-segment'/>
   <name value='batch trailer segment'/>
   <withdrawn value='false'/>
   <abbreviation value='BTS'/>
@@ -17,7 +17,7 @@
      <may_truncate value='false'/>
      <optionality value='O'/>
      <itemNumber value='00093'/> <!-- This really does not need the padding   -->     
-     <type value=value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+     <type value=value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
    </field>
    <field>
      <name value='Batch Comment'/>
@@ -26,7 +26,7 @@
      <may_truncate value='ad defined by data type'/>
      <optionality value='O'/>
      <itemNumber value='00090'/> <!-- This really does not need the padding   -->
-     <type value=value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+     <type value=value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
    </field>
    <field>
      <name value='Batch Totals'/>
@@ -35,6 +35,6 @@
      <optionality value='O'/>
      <itemNumber value='00095'/> <!-- This really does not need the padding   -->
      <repitition value='Y'/>
-     <type value=value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/numeric'/>
+     <type value=value='https://www.hl7.org/v2plus/DataTypeDefinition/numeric'/>
    </field>
 </SegmentDefinition>  

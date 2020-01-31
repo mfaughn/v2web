@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/street-address"/>
+  <name value="street address"/>
+  <withdrawn value="false"/>
+  <abbreviation value="SAD"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies an entity's street address and associated detail.</p>
+      <p><strong>Note:</strong> Appears ONLY in the XAD data type</p>
+    </div>
+  </description>
+  <component>
+    <name value="Street or Mailing Address"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the street or mailing address of a person or institution. When referencing an institution, this first component is used to specify the institution name. When used in connection with a person, this component specifies the first line of the address.</p>
+      </div>
+    </definition>
+    <confLength value="120"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Street Name"/>
+    <sequenceNumber value="2"/>
+    <confLength value="50"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Dwelling Number"/>
+    <sequenceNumber value="3"/>
+    <confLength value="12"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+</DataTypeDefinition>

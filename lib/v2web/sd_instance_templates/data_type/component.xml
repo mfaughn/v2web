@@ -1,0 +1,15 @@
+<component>
+  <name value="NAME"/>
+  <sequenceNumber value="SEQUENCE_NUMBER"/>
+  DEFINITION
+  MUST_SUPPORT
+  MIN_LENGTH
+  MAX_LENGTH
+  CONF_LENGTH
+  <mayTruncate value="MAY_TRUNCATE"/>
+  COMMENTS
+  USAGE_NOTES
+  REQUIREMENTS
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/DATA_TYPE"/>
+  BINDING
+</component>

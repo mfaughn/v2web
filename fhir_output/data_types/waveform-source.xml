@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/waveform-source"/>
+  <name value="waveform source"/>
+  <withdrawn value="false"/>
+  <abbreviation value="WVS"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Attention: <em>Retained for backward compatibility only in v2.7.</em></strong> It is used only in the CD Channel Definition data type, which has been retained for backward compatibility only in v2.7.</p>
+      <p><strong>Definition:</strong> This data type identifies the source of the waveform connected to a channel.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in 7.14.1.4 OBX-5.2 where OBX-5 Observation value (*) is data type CD as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Source One Name"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component identifies the first input for the waveform source.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Source Two Name"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component identifies the second input for the waveform source if a differential input is used.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+</DataTypeDefinition>

@@ -1,2 +1,5 @@
-%div{:id => tab_content_id}
+%div.center{:id => tab_content_id}
   %img{:src => img_src}
+  %div
+    %a{ :href => "#{tab_file_url}", :title => "Download", :download => "#{tab_file_url}", :target => "_blank" }
+      Download

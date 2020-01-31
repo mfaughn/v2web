@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -724,7 +731,7 @@ RU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p><span style="font-size:16px">Figure 1</span><span style="font-size:16px">.1</span> (HL7 v2 Profiling Process) illustrates the process by which a standard defined message event (e.g., an ADT^A04 message) is refined for a desired use. The message profile definition can be documented in a natural language or in a computable representation. </p><p>An HL7 v2 Implementation Guide provides a broader context that may contain a detailed specification for an interoperability solution. <span style="font-size:16px">Figure </span><span style="font-size:16px">1.</span><span style="font-size:16px">2</span> (HL7 v2 Implementation Guide Sample Template) presents a sample outline of an implementation guide. An implementation guide can vary in the components it will contain. Some implementation guides may contain complete workflow requirements including actors and functional requirements while others will simply focus on the interoperability aspects of a set of related interactions. An implementation guide typically will contain a narrative part (upper part of <span style="font-size:16px">Figure </span><span style="font-size:16px">1.</span><span style="font-size:16px">2</span>) and a message definition (profile) part. <span style="font-size:16px">Section </span><span style="font-size:16px">3</span> provides additional insight on the content commonly given in implementation guides.</p>
+<p>Figure 1.1 (HL7 v2 Profiling Process) illustrates the process by which a standard defined message event (e.g., an ADT^A04 message) is refined for a desired use. The message profile definition can be documented in a natural language or in a computable representation. </p><p>An HL7 v2 Implementation Guide provides a broader context that may contain a detailed specification for an interoperability solution. Figure 1.2 (HL7 v2 Implementation Guide Sample Template) presents a sample outline of an implementation guide. An implementation guide can vary in the components it will contain. Some implementation guides may contain complete workflow requirements including actors and functional requirements while others will simply focus on the interoperability aspects of a set of related interactions. An implementation guide typically will contain a narrative part (upper part of Figure 1.2) and a message definition (profile) part. Section 3 provides additional insight on the content commonly given in implementation guides.</p>
 </p>
 
 <figure class='center'>
@@ -1689,7 +1696,7 @@ RU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p>The central aspect of an implementation guide is the constrained message definitions, i.e., the message profiles. <span style="font-size:16px">Figure </span><span style="font-size:16px">1.</span><span style="font-size:16px">3</span> illustrates the make-up of a message profile at a high-level. The message is embodied as a structured definition. Rules for an abstract message definition are specified in the HL7 v2 message framework, which is hierarchical and consists of building blocks generically called elements. These elements are segment groups, segments, fields, and data types (i.e., components and sub-components). The requirements for a message are defined by the message definition and the constraints placed on each element. The methods and rules for applying constraints are defined by the HL7 v2 conformance constructs (constraint mechanisms). The conformance constructs include usage, cardinality, length, vocabulary, content (non-coded), data type specialization, explicit conformance statements, co-constraints, and other constraint mechanisms. <span style="font-size:16px">Section </span><span style="font-size:16px">5</span> provides definitions of the conformance constructs.</p>
+<p>The central aspect of an implementation guide is the constrained message definitions, i.e., the message profiles. Figure 1.3 illustrates the make-up of a message profile at a high-level. The message is embodied as a structured definition. Rules for an abstract message definition are specified in the HL7 v2 message framework, which is hierarchical and consists of building blocks generically called elements. These elements are segment groups, segments, fields, and data types (i.e., components and sub-components). The requirements for a message are defined by the message definition and the constraints placed on each element. The methods and rules for applying constraints are defined by the HL7 v2 conformance constructs (constraint mechanisms). The conformance constructs include usage, cardinality, length, vocabulary, content (non-coded), data type specialization, explicit conformance statements, co-constraints, and other constraint mechanisms. Section 5 provides definitions of the conformance constructs.</p>
 </p>
 
 <figure class='center'>
@@ -2518,7 +2525,7 @@ FQHrfq2aw86YgAmYQM8J/P81fu5Z0beYQwAAAABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p>The message profile also includes the associated vocabulary bindings and definitions. Certain message elements can contain coded data. The element in the structured definition is bound to a vocabulary definition. Depending on the profile level and the specification need, this binding can be to a concept domain, code system, or value set. The vocabulary definition provides an identifier and the set of allowable content. <span style="font-size:16px">Section 6</span> defines the concepts and rules for vocabulary binding and profiling.</p><p>The goal of HL7 v2 is to provide a standardized protocol for exchanging healthcare related data between two systems. <span style="font-size:16px">Figure </span><span style="font-size:16px">1.</span><span style="font-size:16px">4</span> (Generic HL7 v2 Interaction Diagrams) provides the basic model upon which messages are used to exchange data. Two systems or applications (generically called Actors) exchange data; this conversation is referred to as an <strong>interaction</strong>. The content of what is exchanged is defined in the message profile. As such, an interaction has a one-to-one relationship with a message profile.</p>
+<p>The message profile also includes the associated vocabulary bindings and definitions. Certain message elements can contain coded data. The element in the structured definition is bound to a vocabulary definition. Depending on the profile level and the specification need, this binding can be to a concept domain, code system, or value set. The vocabulary definition provides an identifier and the set of allowable content. Section 6 defines the concepts and rules for vocabulary binding and profiling.</p><p>The goal of HL7 v2 is to provide a standardized protocol for exchanging healthcare related data between two systems. Figure 1.4 (Generic HL7 v2 Interaction Diagrams) provides the basic model upon which messages are used to exchange data. Two systems or applications (generically called Actors) exchange data; this conversation is referred to as an <strong>interaction</strong>. The content of what is exchanged is defined in the message profile. As such, an interaction has a one-to-one relationship with a message profile.</p>
 </p>
 
 <figure class='center'>
@@ -3014,7 +3021,7 @@ EQEREIHkEZAIJa/P1WIREAERiAyB/wcv3Dk2hn1phQAAAABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p>The lower part of <span style="font-size:16px">Figure </span><span style="font-size:16px">1.</span><span style="font-size:16px">4</span> illustrates a roundtrip conversation; this sequence of events is referred to as a <strong>transaction</strong>. As shown, for each interaction a corresponding message profile is associated. An example may be actor A sending a &ldquo;Register a Patient&rdquo; message to Actor B. Actor B responds with an &ldquo;Acknowledgement&rdquo; message. Interactions and transactions can be defined in a given context and documented in an implementation guide.</p>
+<p>The lower part of Figure 1.4 illustrates a roundtrip conversation; this sequence of events is referred to as a <strong>transaction</strong>. As shown, for each interaction a corresponding message profile is associated. An example may be actor A sending a &ldquo;Register a Patient&rdquo; message to Actor B. Actor B responds with an &ldquo;Acknowledgement&rdquo; message. Interactions and transactions can be defined in a given context and documented in an implementation guide.</p>
 </p>
 <h3>
 1.1 Purpose
@@ -3860,7 +3867,7 @@ wCgh8P8DFSEGMEYSkEUAAAAASUVORK5CYII=
 </figure>
 
 <p class='p_v2web'>
-<p><span style="font-size:16px">Figure </span><span style="font-size:16px">1.5</span> summarizes the profiling process and how this document is intended to be used. The specifier has at their disposal all message events for every HL7 v2 version. Based on their needs, they select a message event to constrain. Using this specification (Conformance Methodology) and use case requirements, they apply constraints to create a message profile. This document describes this process and additionally provides guidance on effective strategies for grouping message profiles for broader context and use in implementation guides.</p><p></p>
+<p>Figure 1.5 summarizes the profiling process and how this document is intended to be used. The specifier has at their disposal all message events for every HL7 v2 version. Based on their needs, they select a message event to constrain. Using this specification (Conformance Methodology) and use case requirements, they apply constraints to create a message profile. This document describes this process and additionally provides guidance on effective strategies for grouping message profiles for broader context and use in implementation guides.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -5583,13 +5590,99 @@ jIARMAJGwAgYASNgBIpH4P8B2L6RCpefKI8AAAAASUVORK5CYII=
 </figure>
 
 <p class='p_v2web'>
-<p></p><p>This specification can be used in implementation guides to document constraints on messages. It is intended to be used for new interfaces and re-specification of existing interfaces. Though use of the conformance methodology in the production setting is optional, its use is recommended. For any newly balloted HL7 v2 implementation guides, however, its inclusion is required. The specifier can choose to use as many of the constructs that are defined in this specification as they deem appropriate. Additionally, they can choose to specify profiles at a highly general (considerable openness) or very detailed level (no optionality). See <span style="font-size:16px">Figure 1.6</span>. The choices are dependent on the intended use of the implementation guide. Implementation guides that are too specific have reduced applicability but provide detailed requirements that allow implementations to move closer to achieving interoperability if applied faithfully. Implementation guides that are defined at a high-level with many optional aspects are more amenable for wide-spread use, but they fall far short of out-of-the-box interoperability and need further profiling for specific use. This difference presents the specifier with a tradeoff decision that is based on the intended purpose of the implementation guide. Either approach, and anything in between, is correct and appropriate.</p>
+<p></p><p>This specification can be used in implementation guides to document constraints on messages. It is intended to be used for new interfaces and re-specification of existing interfaces. Though use of the conformance methodology in the production setting is optional, its use is recommended. For any newly balloted HL7 v2 implementation guides, however, its inclusion is required. The specifier can choose to use as many of the constructs that are defined in this specification as they deem appropriate. Additionally, they can choose to specify profiles at a highly general (considerable openness) or very detailed level (no optionality). See Figure 1.6. The choices are dependent on the intended use of the implementation guide. Implementation guides that are too specific have reduced applicability but provide detailed requirements that allow implementations to move closer to achieving interoperability if applied faithfully. Implementation guides that are defined at a high-level with many optional aspects are more amenable for wide-spread use, but they fall far short of out-of-the-box interoperability and need further profiling for specific use. This difference presents the specifier with a tradeoff decision that is based on the intended purpose of the implementation guide. Either approach, and anything in between, is correct and appropriate.</p>
 </p>
 <h4>
 1.1.1 Relevant Specifications
 </h4>
 <p class='p_v2web'>
-<p>The HL7 Version 2 Conformance Methodology is intended to be used as the basis for creating implementation guides and message profiles for the following standards:</p><p>HL7 versions 2.1 and 2.2 have been purposely not included because the constructs are so immature that they are not subject to practical use of this specification and it is strongly recommended that any new implementation guide is not created using these versions. The Conformance Methodology is also applicable to the tables defined in the HL7 standard (Chapter 2C as of version 2.7) and any external vocabulary standards used in the specification of an implementation guide and message profile.</p>
+<p>The HL7 Version 2 Conformance Methodology is intended to be used as the basis for creating implementation guides and message profiles for the following standards:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+HL7 v2.3
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.3.1
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.4
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.5
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.5.1
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.6
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.7
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.7.1
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.8
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.8.1
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.8.2
+
+
+</li>
+<li class='p_v2web'>
+
+HL7 v2.9
+
+
+</li>
+<li class='p_v2web'>
+
+Any future HL7 v2 standard releases (e.g., HL7 v2.+)
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p>HL7 versions 2.1 and 2.2 have been purposely not included because the constructs are so immature that they are not subject to practical use of this specification and it is strongly recommended that any new implementation guide is not created using these versions. The Conformance Methodology is also applicable to the tables defined in the HL7 standard (Chapter 2C as of version 2.7) and any external vocabulary standards used in the specification of an implementation guide and message profile.</p>
 </p>
 <h4>
 1.1.2 Requisite Knowledge
@@ -5598,7 +5691,7 @@ jIARMAJGwAgYASNgBIpH4P8B2L6RCpefKI8AAAAASUVORK5CYII=
 1.1.3 Supplemental Resources
 </h4>
 <p class='p_v2web'>
-<p>An online version of this specification, along with additional informative information, can be accessed at https://v2.hl7.org/conformance (Forthcoming). The main tabs on the web site include an exact copy of this specification. Supplemental information, such as extended examples, historical insight, and constraint assessment tables, can be found on the sub-tabs for a given section.</p>
+<p>An online version of this specification, along with additional informative information, can be accessed at <a href="https://v2.hl7.org/conformance">https://v2.hl7.org/conformance</a> (Forthcoming). The main tabs on the web site include an exact copy of this specification. Supplemental information, such as extended examples, historical insight, and constraint assessment tables, can be found on the sub-tabs for a given section.</p>
 </p>
 <h3>
 1.2 Conventions and Definitions
@@ -5607,7 +5700,7 @@ jIARMAJGwAgYASNgBIpH4P8B2L6RCpefKI8AAAAASUVORK5CYII=
 1.2.1 Keywords
 </h4>
 <p class='p_v2web'>
-<p>The terms used to express requirements in this document follow the guidelines as described in RFC 2119 (adapted). <span style="font-size:16px">Table </span><span style="font-size:16px">1.1</span> provides a summary of keywords and how they are to be interpreted. The convention for keyword expression is to use non-bold lower case.</p><p></p>
+<p>The terms used to express requirements in this document follow the guidelines as described in RFC 2119 (adapted). Table 1.1 provides a summary of keywords and how they are to be interpreted. The convention for keyword expression is to use non-bold lower case.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -5719,7 +5812,7 @@ means that an item is truly optional. A specifier has the option to include or n
 </table>
 
 <p class='p_v2web'>
-<p></p><p>Note: the keywords presented in this section are used to state requirements in this document. A similar set of keywords that are recommended for use in an HL7 v2 Implementation Guide appear in <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">3.1.7</span>. This document seeks to distinguish the keywords used herein from those that might be used in implementation guides, but that distinction is not always possible.</p>
+<p></p><p>Note: the keywords presented in this section are used to state requirements in this document. A similar set of keywords that are recommended for use in an HL7 v2 Implementation Guide appear in Section 3.1.7. This document seeks to distinguish the keywords used herein from those that might be used in implementation guides, but that distinction is not always possible.</p>
 </p>
 <h4>
 1.2.2 Definitions
@@ -5731,7 +5824,7 @@ means that an item is truly optional. A specifier has the option to include or n
 1.2.3 Element Representation
 </h4>
 <p class='p_v2web'>
-<p>Message elements are addressable and represented in a standardized form and are dependent on the element context. The element representation presented here is used in this specification to identify the location of elements within a context. It is important to understand this nomenclature to interpret the representation of requirements.</p><p>Element contexts include the message, group, segment, or datatype. Depending on the context, a leaf element is referred to either by name or by a name and a position number. For message or group contexts, the leaf elements are accessed by name (e.g., MSH). For segment or datatype contexts, the leaf elements are accessed by a name and a position&nbsp;number (e.g., MSH-7).&nbsp;<span style="font-size:16px">Table 1.2</span> illustrates the grammar of the representation for a given context ([] indicates optional, * indicates multiple occurrences).</p>
+<p>Message elements are addressable and represented in a standardized form and are dependent on the element context. The element representation presented here is used in this specification to identify the location of elements within a context. It is important to understand this nomenclature to interpret the representation of requirements.</p><p>Element contexts include the message, group, segment, or datatype. Depending on the context, a leaf element is referred to either by name or by a name and a position number. For message or group contexts, the leaf elements are accessed by name (e.g., MSH). For segment or datatype contexts, the leaf elements are accessed by a name and a position&nbsp;number (e.g., MSH-7).&nbsp;Table 1.2 illustrates the grammar of the representation for a given context ([] indicates optional, * indicates multiple occurrences).</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -5832,7 +5925,7 @@ means that an item is truly optional. A specifier has the option to include or n
 1.3 Concepts and their Relationships
 </h3>
 <p class='p_v2web'>
-<p>Several core concepts related to standards development and implementation are depicted in <span style="font-size:16px">Figure 1.7</span>. It is important to understand these concepts and their relationships to better apply the notions in this specification.</p><p><strong>Profiling: </strong>is the process of placing additional constraints on a message definition in accordance with defined profiling compliance rules to meet requirements stated in a use case. The terms &ldquo;<strong>derived profile</strong>&rdquo; and, more generically, &ldquo;<strong>derived specification</strong>&rdquo; are used to denote a technical documentation that is based on another technical document. Profiling is an iterative process in which more detail is provided in each derived specification.</p><p><strong>Compliance:</strong> is the degree to which a derived specification adheres to the requirements defined in the foundational specification (standard); in other words, are the rules for adding constraints faithfully followed? Compliance rules for each of the conformance constructs are defined in subsequent sections. An example of a usage compliance rule is that a &ldquo;required&rdquo; element must remain &ldquo;required&rdquo; in any derived specifications (profiles).</p><p><strong>Conformance:</strong> is a relationship between a specification and an implementation and is an indication of how closely the software implements the requirements stated in the specification. The HL7 v2 standard and any subsequent profiling express the requirements, an implementation implements these requirements, and conformance is an objective measure of how closely an implementation satisfies the stated requirements. As such, conformance is associated with the recognition of formal testing to verify adherence to the standard. An example sequence is as follows, 1) an element is specified as &ldquo;required&rdquo;, an implementation either implements the requirement or not, and conformance is determined by a testing mechanism. </p><p></p>
+<p>Several core concepts related to standards development and implementation are depicted in Figure 1.7. It is important to understand these concepts and their relationships to better apply the notions in this specification.</p><p><strong>Profiling: </strong>is the process of placing additional constraints on a message definition in accordance with defined profiling compliance rules to meet requirements stated in a use case. The terms &ldquo;<strong>derived profile</strong>&rdquo; and, more generically, &ldquo;<strong>derived specification</strong>&rdquo; are used to denote a technical documentation that is based on another technical document. Profiling is an iterative process in which more detail is provided in each derived specification.</p><p><strong>Compliance:</strong> is the degree to which a derived specification adheres to the requirements defined in the foundational specification (standard); in other words, are the rules for adding constraints faithfully followed? Compliance rules for each of the conformance constructs are defined in subsequent sections. An example of a usage compliance rule is that a &ldquo;required&rdquo; element must remain &ldquo;required&rdquo; in any derived specifications (profiles).</p><p><strong>Conformance:</strong> is a relationship between a specification and an implementation and is an indication of how closely the software implements the requirements stated in the specification. The HL7 v2 standard and any subsequent profiling express the requirements, an implementation implements these requirements, and conformance is an objective measure of how closely an implementation satisfies the stated requirements. As such, conformance is associated with the recognition of formal testing to verify adherence to the standard. An example sequence is as follows, 1) an element is specified as &ldquo;required&rdquo;, an implementation either implements the requirement or not, and conformance is determined by a testing mechanism. </p><p></p>
 </p>
 
 <figure class='center'>
@@ -6750,7 +6843,7 @@ fwEy4JK0kyQ/AAAAAElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p><strong>Com</strong><strong>patibility:</strong> declares whether two specifications define sets of requirements that are harmonized with each other, allowing systems that implement them to work together, i.e., interoperate.</p><p><strong>Interoperability:</strong> is the ability of implementations to exchange data and to use that data as intended to accomplish a desired task. In theory, compatibility is a prerequisite for interoperability.</p><p><span style="font-size:16px">Figure 1.8</span> shows the concepts and their relationships in the context of HL7 v2. A &ldquo;specifier&rdquo; selects the ADT^A04 message event from HL7 v2.5.1, for example, and seeks to constrain the message definition for a given use. Using the constraint mechanisms, the &ldquo;specifier&rdquo; defines a message profile. The &ldquo;specifier&rdquo; may choose to create a single profile or create a different profile for the sender and receiver. In practice, often a single profile is defined for the sender and receiver, and if separate profiles are created, the differences usually are minor. Additionally, profiles can be created independently by separate entities, and the profiles can be compared for compatibility. Implementations will then develop to a given profile.</p><p></p>
+<p><strong>Com</strong><strong>patibility:</strong> declares whether two specifications define sets of requirements that are harmonized with each other, allowing systems that implement them to work together, i.e., interoperate.</p><p><strong>Interoperability:</strong> is the ability of implementations to exchange data and to use that data as intended to accomplish a desired task. In theory, compatibility is a prerequisite for interoperability.</p><p>Figure 1.8 shows the concepts and their relationships in the context of HL7 v2. A &ldquo;specifier&rdquo; selects the ADT^A04 message event from HL7 v2.5.1, for example, and seeks to constrain the message definition for a given use. Using the constraint mechanisms, the &ldquo;specifier&rdquo; defines a message profile. The &ldquo;specifier&rdquo; may choose to create a single profile or create a different profile for the sender and receiver. In practice, often a single profile is defined for the sender and receiver, and if separate profiles are created, the differences usually are minor. Additionally, profiles can be created independently by separate entities, and the profiles can be compared for compatibility. Implementations will then develop to a given profile.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -7755,7 +7848,7 @@ ZTH1AAAAAElFTkSuQmCC
 1.4.1 Profiling
 </h4>
 <p class='p_v2web'>
-<p>Profiling is a refinement to a specification in the form of constraints and extensions (See <span style="font-size:16px">Section 4.7</span> for a discussion on extensions). Initially, the refinement is to the base standard and subsequently to existing profiles in a layered approach. Conformance constructs are used to specify constraints on data elements and to provide a &ldquo;toolbox&rdquo; for authors to specify requirements. Each conformance construct (e.g., usage) has different levels of constraint specification. Profiling is the process of refining the constraint according to the rules of the conformance construct. The constraint rules provide the mechanism to make a requirement more specific (i.e., &ldquo;to tighten&rdquo; a requirement).</p><p><span style="font-size:16px">Figure 1.9</span> illustrates an overview of message profiling and a sample of the message constituent parts that can be constrained. A profile can be thought of as an overlay of constraints on an HL7 v2 message structure definition. On the left-hand side of the figure is a representation of a base message definition with initial element settings. On the right-hand side of the figure is a representation of the same message structure definition with additional constraints applied. Examples include changing the optional segment of NK1 to required and constraining the base standard HL70001 table to a value set and binding it to the field PID-8.</p>
+<p>Profiling is a refinement to a specification in the form of constraints and extensions (See Section 4.7 for a discussion on extensions). Initially, the refinement is to the base standard and subsequently to existing profiles in a layered approach. Conformance constructs are used to specify constraints on data elements and to provide a &ldquo;toolbox&rdquo; for authors to specify requirements. Each conformance construct (e.g., usage) has different levels of constraint specification. Profiling is the process of refining the constraint according to the rules of the conformance construct. The constraint rules provide the mechanism to make a requirement more specific (i.e., &ldquo;to tighten&rdquo; a requirement).</p><p>Figure 1.9 illustrates an overview of message profiling and a sample of the message constituent parts that can be constrained. A profile can be thought of as an overlay of constraints on an HL7 v2 message structure definition. On the left-hand side of the figure is a representation of a base message definition with initial element settings. On the right-hand side of the figure is a representation of the same message structure definition with additional constraints applied. Examples include changing the optional segment of NK1 to required and constraining the base standard HL70001 table to a value set and binding it to the field PID-8.</p>
 </p>
 
 <figure class='center'>
@@ -9926,7 +10019,7 @@ AABJRU5ErkJggg==
 1.4.2 Constraints
 </h4>
 <p class='p_v2web'>
-<p>The key mechanisms for profiling are the conformance constructs that are used for constraining. A high-level overview of the general constraint types is given in <span style="font-size:16px">Table 1.3</span>. (See <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">5</span> for in-depth definition and use).</p>
+<p>The key mechanisms for profiling are the conformance constructs that are used for constraining. A high-level overview of the general constraint types is given in Table 1.3. (See Section 5 for in-depth definition and use).</p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -10129,13 +10222,13 @@ Allows for refinement of the semantics of a data element based on the use case
 1.4.3 Profile Construction
 </h4>
 <p class='p_v2web'>
-<p>A message profile is normally thought of as a complete message structure definition with additional constraints applied to it as a &ldquo;whole&rdquo;. In some circumstances, however, it is convenient and efficient to employ a modular approach to profile construction. A <strong>profile component</strong> defines a part or a certain aspect of a message definition and is used to aggregate correlated requirements and/or to differentiate requirements from another profile. It provides a mechanism to support a set of reusable requirements. A profile component can be applied to any construct or section of a message definition. A <strong>core profile</strong> is used to document the common set of requirements across the set of related profiles. A <strong>composite profile</strong> is the composition of a profile or core profile and one or more profile components. In the end, a composite profile is a profile with the distinction that the profile was created by combining a profile or a core profile and one or more profile components. Profiles and profile components can be combined to develop and manage other profiles. A profile component in a family of profiles can be used to identify different levels of requirements for the same use case or to identify the differences in requirements for different, but closely related, use cases. </p><p>One example is the case of national and local requirements. A typical domain for which localization is needed is public health, where a national-level profile is created and additional requirements (constraints) are specified at the state- or jurisdictional-level. A profile for the national level is created for a particular interaction (e.g., send immunization record). State-level requirements could be expressed in a profile component. When combined with the national-level profile, the result expresses the complete requirements for the state.</p><p>More discussion on profile construction and scenarios for its use is given in <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">7.1</span>. </p>
+<p>A message profile is normally thought of as a complete message structure definition with additional constraints applied to it as a &ldquo;whole&rdquo;. In some circumstances, however, it is convenient and efficient to employ a modular approach to profile construction. A <strong>profile component</strong> defines a part or a certain aspect of a message definition and is used to aggregate correlated requirements and/or to differentiate requirements from another profile. It provides a mechanism to support a set of reusable requirements. A profile component can be applied to any construct or section of a message definition. A <strong>core profile</strong> is used to document the common set of requirements across the set of related profiles. A <strong>composite profile</strong> is the composition of a profile or core profile and one or more profile components. In the end, a composite profile is a profile with the distinction that the profile was created by combining a profile or a core profile and one or more profile components. Profiles and profile components can be combined to develop and manage other profiles. A profile component in a family of profiles can be used to identify different levels of requirements for the same use case or to identify the differences in requirements for different, but closely related, use cases. </p><p>One example is the case of national and local requirements. A typical domain for which localization is needed is public health, where a national-level profile is created and additional requirements (constraints) are specified at the state- or jurisdictional-level. A profile for the national level is created for a particular interaction (e.g., send immunization record). State-level requirements could be expressed in a profile component. When combined with the national-level profile, the result expresses the complete requirements for the state.</p><p>More discussion on profile construction and scenarios for its use is given in Section 7.1. </p>
 </p>
 <h4>
 1.4.4 Profile Role
 </h4>
 <p class='p_v2web'>
-<p>Message profiles are used to document interface capabilities of applications. The ultimate goal is to connect applications to allow exchange of data. These interactions include a sending application and a receiving application. The requirements or expectations of each application may, and often do, differ; hence, each application will take on a certain role in the interaction, e.g., the role of a sender or a receiver. As such, an interaction pair can be established in which the applications define their own message profiles depending on their role in the interaction. For a successful interface, the requirements for the sender and receiver must be compatible. Sender and receiver profiles can be paired in a variety of ways to satisfy a targeted use. The profile pairings may be closely aligned or disparate. In the case where&nbsp;the sender and receiver profiles are intended to be the same, the profile role is declared as &ldquo;both&rdquo;. <span style="font-size:16px">Section </span><span style="font-size:16px">8</span> defines in detail the most common profile pairings.</p>
+<p>Message profiles are used to document interface capabilities of applications. The ultimate goal is to connect applications to allow exchange of data. These interactions include a sending application and a receiving application. The requirements or expectations of each application may, and often do, differ; hence, each application will take on a certain role in the interaction, e.g., the role of a sender or a receiver. As such, an interaction pair can be established in which the applications define their own message profiles depending on their role in the interaction. For a successful interface, the requirements for the sender and receiver must be compatible. Sender and receiver profiles can be paired in a variety of ways to satisfy a targeted use. The profile pairings may be closely aligned or disparate. In the case where&nbsp;the sender and receiver profiles are intended to be the same, the profile role is declared as &ldquo;both&rdquo;. Section 8 defines in detail the most common profile pairings.</p>
 </p>
 <h4>
 1.4.5 Segment Flavors and Data Type Flavors
@@ -10147,7 +10240,7 @@ Allows for refinement of the semantics of a data element based on the use case
 1.5 Implementation Guides in Context of Use
 </h3>
 <p class='p_v2web'>
-<p>Implementation guides define requirements for specific use cases and are intended to be used by implementers to provide an interoperability solution. Implementation guides can also be used by testing programs to assess and certify implementations. <span style="font-size:16px">Figure </span><span style="font-size:16px">1.9</span> illustrates how implementation guides (and their message profiles) can be used to facilitate implementation, implementation claims, validation, and reaction to the findings of the validation. Point (1) indicates that an implementation guide includes a conformance clause (2) that defines the requirements, criteria, or conditions that must be satisfied by the implementation to claim conformance. The conformance clause identifies what must conform and how conformance can be met. A conformance claim is a declaration by an implementer (3) of the requirements in the conformance clause that their implementation satisfies.</p><p>The conformance clause typically indicates only the high-level conformance requirements. The requirements may be stated in terms of a profile or identifiable parts of a specification. Profiles are mechanisms that provide a structured approach to specifying requirements. The detailed requirements (4) are contained and delineated in the other parts of the specification (e.g., Segment definitions). For example, a conformance clause in an HL7 v2 implementation guide could indicate a set of profiles available to the implementer, and the profiles provide the map to the specific requirements. </p>
+<p>Implementation guides define requirements for specific use cases and are intended to be used by implementers to provide an interoperability solution. Implementation guides can also be used by testing programs to assess and certify implementations. Figure 1.9 illustrates how implementation guides (and their message profiles) can be used to facilitate implementation, implementation claims, validation, and reaction to the findings of the validation. Point (1) indicates that an implementation guide includes a conformance clause (2) that defines the requirements, criteria, or conditions that must be satisfied by the implementation to claim conformance. The conformance clause identifies what must conform and how conformance can be met. A conformance claim is a declaration by an implementer (3) of the requirements in the conformance clause that their implementation satisfies.</p><p>The conformance clause typically indicates only the high-level conformance requirements. The requirements may be stated in terms of a profile or identifiable parts of a specification. Profiles are mechanisms that provide a structured approach to specifying requirements. The detailed requirements (4) are contained and delineated in the other parts of the specification (e.g., Segment definitions). For example, a conformance clause in an HL7 v2 implementation guide could indicate a set of profiles available to the implementer, and the profiles provide the map to the specific requirements. </p>
 </p>
 
 <figure class='center'>
@@ -13332,7 +13425,7 @@ LrQZBAryAAAAAElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p>Implementers makes their conformance claims (3) based on their implementation (5). Implementations or aspects of an implementation (e.g., a message instance) can be validated (6) with respect to the declared implementer&rsquo;s conformance claim (7) that references the requirements set forth in (2) and (4). A Tester can analyze the results of the validation (8). In a testing program, an assessment will be made, and some level of recognition may be issued (9), e.g., a certification. In a testing program the pass/fail criteria are rigid—either the implementation meets a requirement or not. In a production environment, the response to a conformance violation is at the discretion of the receiver (10). The use of message profiles to determine conformance and the response to the conformance assessment is often misunderstood. This topic is expanded upon in the next section.</p>
+<p>Implementers makes their conformance claims (3) based on their implementation (5). Implementations or aspects of an implementation (e.g., a message instance) can be validated (6) with respect to the declared implementer&rsquo;s conformance claim (7) that references the requirements set forth in (2) and (4). A Tester can analyze the results of the validation (8). In a testing program, an assessment will be made, and some level of recognition may be issued (9), e.g., a certification. In a testing program the pass/fail criteria are rigid&ndash;either the implementation meets a requirement or not. In a production environment, the response to a conformance violation is at the discretion of the receiver (10). The use of message profiles to determine conformance and the response to the conformance assessment is often misunderstood. This topic is expanded upon in the next section.</p>
 </p>
 <h4>
 1.5.1 Validation and the Respopnse to Validation Results

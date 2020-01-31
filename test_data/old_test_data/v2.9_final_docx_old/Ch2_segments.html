@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Ch2_segments</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h3 id="add-addendum-segment">ADD ‑ addendum segment </h3>
+<p>The ADD segment is used to define the continuation of the prior segment in a continuation message. See Section <em>2.10.2</em>, &quot;<em>Continuation messages and segments</em>,&quot; for details.</p>
+<p>HL7 Attribute Table - ADD – Addendum</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C. Len</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1-n</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00066</td>
+<td>Addendum Continuation Pointer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-1-addendum-continuation-pointer-st-00066">ADD-1 Addendum Continuation Pointer (ST) 00066 </h4>
+<p>Definition: This field is used to define the continuation of the prior segment in a continuation message. See section <em>2.10.2</em>, &quot;<em>Continuation messages and segments</em>&quot; for details. When the ADD is sent after the segment being continued, it contains no fields. It is only a marker that the previous segment is being continued in a subsequent message. Thus fields 1‑N are not present. The sequence designation, 1‑N, means the remainder of the fields in the segment being continued. These remainder of the segment being continued fields are present only when the ADD is sent with a continuation message.</p>
+<h3 id="bhs-batch-header-segment">BHS ‑ batch header segment </h3>
+<p>The BHS segment defines the start of a batch.</p>
+<p>HL7 Attribute Table - BHS – Batch Header</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1..1</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00081</td>
+<td>Batch Field Separator</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>4..5</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00082</td>
+<td>Batch Encoding Characters</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00083</td>
+<td>Batch Sending Application</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00084</td>
+<td>Batch Sending Facility</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00085</td>
+<td>Batch Receiving Application</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00086</td>
+<td>Batch Receiving Facility</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00087</td>
+<td>Batch Creation Date/Time</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td>40=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00088</td>
+<td>Batch Security</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td>40=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00089</td>
+<td>Batch Name/ID/Type</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td></td>
+<td>80=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00090</td>
+<td>Batch Comment</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td></td>
+<td>20=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00091</td>
+<td>Batch Control ID</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td></td>
+<td>20=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00092</td>
+<td>Reference Batch Control ID</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>02271</td>
+<td>Batch Sending Network Address</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>02272</td>
+<td>Batch Receiving Network Address</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>C</td>
+<td></td>
+<td>0952</td>
+<td>02429</td>
+<td>Security Classification Tag</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>C</td>
+<td>Y</td>
+<td>0953</td>
+<td>02430</td>
+<td>Security Handling Instructions</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>C</td>
+<td>Y</td>
+<td></td>
+<td>02431</td>
+<td>Special Access Restriction Instructions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bhs-field-definitions">BHS field definitions</h4>
+<h4 id="bhs-1-batch-field-separator-st-00081">BHS-1 Batch Field Separator (ST) 00081</h4>
+<p>Definition: This field contains the separator between the segment ID and the first real field, BHS-2 Batch Encoding Characters. As such it serves as the separator and defines the character to be used as a separator for the rest of the message. Recommended value is | (ASCII 124).</p>
+<h4 id="bhs-2-batch-encoding-characters-st-00082">BHS-2 Batch Encoding Characters (ST) 00082</h4>
+<p>Definition: This field contains the five characters in the following order: the component separator, repetition separator, escape characters, subcomponent separator, and truncation character. Recommended values are ^~\&amp;# (ASCII 94, 126, 92, 38,and 35, respectively). See Section <em>2.5.4</em>, &quot;<a href="#_Message_delimiters"><em>Message delimiters</em></a>.&quot;</p>
+<h4 id="bhs-3-batch-sending-application-hd-00083">BHS-3 Batch Sending Application (HD) 00083</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field uniquely identifies the sending application among all other applications within the network enterprise. The network enterprise consists of all those applications that participate in the exchange of HL7 messages within the enterprise. Entirely site-defined.</p>
+<h4 id="bhs-4-batch-sending-facility-hd-00084">BHS-4 Batch Sending Facility (HD) 00084</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains the address of one of several occurrences of the same application within the sending system. Absent other considerations, the Medicare Provider ID might be used with an appropriate sub-identifier in the second component. Entirely site-defined.</p>
+<h4 id="bhs-5-batch-receiving-application-hd-00085">BHS-5 Batch Receiving Application (HD) 00085</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field uniquely identifies the receiving applications among all other applications within the network enterprise. The network enterprise consists of all those applications that participate in the exchange of HL7 messages within the enterprise. Entirely site-defined.</p>
+<h4 id="bhs-6-batch-receiving-facility-hd-00086">BHS-6 Batch Receiving Facility (HD) 00086</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field identifies the receiving application among multiple identical instances of the application running on behalf of different organizations. See comments <em>2.14.2.4</em>, &quot;<em>BHS-4 Batch Sending Facility (HD) 00084</em>.&quot; Entirely site-defined.</p>
+<h4 id="bhs-7-batch-creation-datetime-dtm-00087">BHS-7 Batch Creation Date/Time (DTM) 00087</h4>
+<p>Definition: This field contains the date/time that the sending system created the message. If the time zone is specified, it will be used throughout the message as the default time zone.</p>
+<h4 id="bhs-8-batch-security-st-00088">BHS-8 Batch Security (ST) 00088</h4>
+<p>Definition: In some applications of HL7, this field is used to implement security features. For codified expression of security tags using BHS-15 through BHS-17.</p>
+<h4 id="bhs-9-batch-nameidtype-st-00089">BHS-9 Batch Name/ID/Type (ST) 00089</h4>
+<p>Definition: This field can be used by the application processing the batch. It can have extra components if needed.</p>
+<p><strong>Note:</strong> the text regarding &quot;extra components&quot; has been retained for backward compatibilityas of V2.5, but it is not currently an accepted format for the ST data type.</p>
+<h4 id="bhs-10-batch-comment-st-00090">BHS-10 Batch Comment (ST) 00090</h4>
+<p>Definition: This field is a comment field that is not further defined in the HL7 protocol.</p>
+<h4 id="bhs-11-batch-control-id-st-00091">BHS-11 Batch Control ID (ST) 00091</h4>
+<p>Definition: This field is used to uniquely identify a particular batch. It can be echoed back in BHS-12 Reference Batch Control ID if an answering batch is needed.</p>
+<h4 id="bhs-12-reference-batch-control-id-st-00092">BHS-12 Reference Batch Control ID (ST) 00092</h4>
+<p>Definition: This field contains the value of BHS-11 Batch Control ID when this batch was originally transmitted. Not present if this batch is being sent for the first time. See definition for BHS-11 Batch Control ID.</p>
+<h4 id="bhs-13-batch-sending-network-address-hd-02271">BHS-13 Batch Sending Network Address (HD) 02271</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted from. Identified by an OID or text string (e.g., URI). The reader is referred to the &quot;Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations&quot;.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>As with the Sending/Receiving Responsible Organization, the Sending Network Address provides a more detailed picture of the source of the message. This information is lower than the application layer, but is often useful/necessary for routing and identification purposes. This field SHALL only be populated when the underlying communication protocol does not support identification of sending network locations.</p>
+<p>The specific values and usage must be site negotiated</p>
+<h4 id="bhs-14-batch-receiving-network-address-hd-02272">BHS-14 Batch Receiving Network Address (HD) 02272</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted to. Identified by an OID or text string. (e.g., URL).</p>
+<p>This is analogous with the Sending Network Address, however in the receiving role.</p>
+<p>This field SHALL only be populated when the underlying communication protocol does not support identification receiving network locations.</p>
+<h4 id="bhs-15-security-classification-tag-cwe-02429">BHS-15 Security Classification Tag (CWE) 02429</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field defines the security classification (as defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995) of an IT resource, in this case the message, which might be used to make access control decisions. It is conditionally required when MSH-27 or MSH-28 are used.</p>
+<p>Conditionality Predicate: Required if BHS-16 or BHS-17 or any contained FSH-16 or FSH-17 or MSH-26 or MSH-27 is valued, Optional if neither BHS-16 nor BHS-17 , nor any contained FSH-16 or FSH-17, nor MSH-26 nor MSH-27is valued.&quot;</p>
+<p>Use of this field supports the business requirement for declaring the level of confidentiality (classification) for a given message.</p>
+<p>Refer to Externally-defined HL7 Table 0952 – HL7 Confidentiality Code in Chapter 2C, Code Tables, for suggested values. Use of this table is recommended. The codes in this table are comprehensive, non-overlapping hierarchical codes: Very Restricted &gt; Restricted &gt; Normal &gt; Moderate &gt; Low &gt; Unrestricted. Restrictions to a comprehensive, non-overlapping set of codes is required for purposes of access control system algorithms such as Bell–LaPadula Mode, which isl used to adjudicate access requests against privacy policies.</p>
+<h4 id="bhs-16-security-handling-instructions-cwe-02430">BHS-16 Security Handling Instructions (CWE) 02430</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<blockquote>
+<p>Definition: This field is repeatable and conveys instructions to users and receivers for secure distribution, transmission, and storage; dictate obligations or mandated actions; specify any action prohibited by refrain policy such as dissemination controls; and stipulate the permissible purpose of use of an IT resource.</p>
+<p>Refer to HL7 Table 0953 – Security Control in Chapter 2C, Code Tables, for suggested values. –</p>
+</blockquote>
+<h4 id="bhs-17-special-access-restriction-instructions-st-02431">BHS-17 Special Access Restriction Instructions (ST) 02431</h4>
+<blockquote>
+<p>Definition: Used to convey specific instructions about the protection of the patient's data , which must be rendered to end users in accordance with patient consent directive, organizational policy, or jurisdictional law. For example, in US law 42 CFR Part 2, disclosed information made with patient consent must include a renderable “Prohibition on re-disclosure” warning (§ 2.32<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>) In addition, organizational policy MAY require that some or all of the ARV field privacy tag values be rendered to end users, e.g., marking a consult note with “Restricted Confidentiality” or with sensitivity tags such as “VIP” or “EMP” for employee of the organization.</p>
+<p>This field MAY also be used to specify instructions about the release of information to family and friends (e.g., &quot;Do not release information to patient's brother, Adam Everyman&quot;). These instructions could be in conjunction with other fields (as elected by the system).</p>
+</blockquote>
+<h3 id="bts-batch-trailer-segment">BTS ‑ batch trailer segment</h3>
+<p>The BTS segment defines the end of a batch.</p>
+<p>HL7 Attribute Table - BTS – Batch Trailer</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td>10=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00093</td>
+<td>Batch Message Count</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>80#</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00090</td>
+<td>Batch Comment</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td>Y</td>
+<td></td>
+<td>00095</td>
+<td>Batch Totals</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bts-field-definitions">BTS field definitions</h4>
+<h4 id="bts-1-batch-message-count-st-00093">BTS-1 Batch Message Count (ST) 00093</h4>
+<p>Definition: This field contains the count of the individual messages contained within the batch.</p>
+<h4 id="bts-2-batch-comment-st-00090">BTS-2 Batch Comment (ST) 00090</h4>
+<p>Definition: This field is a comment field that is not further defined in the HL7 protocol.</p>
+<h4 id="bts-3-batch-totals-nm-00095">BTS-3 Batch Totals (NM) 00095</h4>
+<p>Definition: We encourage new users of this field to use the HL7 Version 2.3 data type of NM and to define it as &quot;repeating.&quot; This field contains the batch total. If more than a single batch total exists, this field MAY be repeated.</p>
+<p>Prior to v2.5 this field might have been defined as a CM data type for backward compatibility with HL7 Versions 2.2 and 2.1 with each total being carried as a separate component. Each component in this case is an NM data type.</p>
+<h3 id="dsc---continuation-pointer-segment">DSC - continuation pointer segment</h3>
+<p>The DSC segment is used in the continuation protocol.</p>
+<p>HL7 Attribute Table - DSC – Continuation Pointer</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td>180=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00014</td>
+<td>Continuation Pointer</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>1..1</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70398">0398</a></td>
+<td>01354</td>
+<td>Continuation Style</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dsc-field-definitions">DSC field definitions</h4>
+<h4 id="dsc-1-continuation-pointer-st-00014">DSC-1 Continuation Pointer (ST) 00014</h4>
+<p>Definition: This field contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete indicator or not present, then there is no more data to fulfill any future continuation requests. For use with continuations of unsolicited messages, see chapter 5 and section <em>2.10.2</em>, &quot;<em>Continuation messages and segments</em>.&quot; Note that continuation protocols work with both display- and record-oriented messages.</p>
+<h4 id="dsc-2-continuation-style-id-01354">DSC-2 Continuation Style (ID) 01354</h4>
+<p>Definition: Indicates whether this is a fragmented message (see Section <em>2.10.2</em>, &quot;<em>Continuation messages and segments</em>&quot;), or if it is part of an interactive continuation message (see Section 5.6.3, &quot;Interactive continuation of response messages&quot;).</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\2016\HL7\Standards\V282_Word\V282_CH02C_CodeTables.doc#HL70398"><em>HL7 Table 0398 – Continuation Style Code</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h3 id="err-error-segment">ERR ‑ error segment </h3>
+<p>The ERR segment is used to add error comments to acknowledgment messages.</p>
+<p>Use Cases:</p>
+<p>Severity: A receiving application needs to communicate 2 &quot;error or exception statements.&quot; One is an &quot;error;&quot; the other is a &quot;warning&quot;. To accomplish this, an acknowledgment message with 2 ERR segments is sent. Upon receipt, the sending application can display both, including the appropriate severity, to the user.</p>
+<p>Application Error Code: A receiving application generates an error that reports an application error code and returns this information in its response. This code in turn is used by helpdesk staff to pinpoint the exact cause of the error, or by the application to prompt an appropriate response from the user. (Ex. Deceased date must be greater than or equal to birth date).</p>
+<p>Application Error Parameter: A receiving application encounters an error during processing of a transaction. In addition to an error code, the application provides an error parameter that gives greater detail as to the exact nature of the error. The receiving application looks up the message corresponding to the error code, substitutes in the parameter, and displays the resulting message to the user.</p>
+<p>Diagnostic Information: While processing a transaction, a receiving application encounters an exception. When the exception is thrown, it provides a volume of detailed information relating to the error encountered. The receiving application captures the information and sends it in its response. The user reports the error to the help desk, and on request, faxes a copy of the diagnostic information to assist analyzing the problem.</p>
+<p>User Message: A user executes an application function that generates a transaction that is sent to another application for further processing. During this processing, the receiving application encounters an error and, as part of the error handling routine, retrieves a User Message that it returns in its response. The originating application receives the error and displays it to the end user with the intent that the error condition can be resolved and the user can re-execute the function without error.</p>
+<p>Inform Person Code: After submitting a dispense transaction, a response is returned to the user indicating that the patient could be abusing drugs. Given the sensitivity of this warning, the error is returned with an indicator stating that the patient should not be informed of the error with the implication that steps should be taken to rule out or confirm the warning.</p>
+<p>Override Type: If a business rule states that a prescription on hold cannot be dispensed, an override type might be &quot;Dispense Held Prescription&quot; to allow the prescription to be dispensed in exception to the rule.</p>
+<p>Override Reason Codes: A patient is given a prescription; however, before completing the prescription, the remaining pills are spoiled. The patient returns to their pharmacy and explains the situation to their pharmacist. The pharmacist decides to replace the spoiled drugs; however, when attempting to record the event, a message is returned indicating that the dispense would exceed the maximum amount prescribed. The pharmacist overrides the rule and specifies an Override Reason Code indicating a replacement of lost product.</p>
+<p>Help Desk Contact: Help desk contact information is stored in a database. When an application error is encountered, the database is queried and the most current help desk contact information is returned in the error message. This is displayed to the user by the receiving application.</p>
+<p>Better Error Location Information: Receiving system detects an error with the 3rd repetition of the ROL.4 (Role Person - XCN).16 (Name Context – CE).4(Alternate Identifier – CWE). The application identifies the specific repetition and component when raising the error, simplifying diagnosis of the problem.</p>
+<p>Support for multiple Error Locations: Two fields are marked as conditional, with the condition that one of the two must be specified. The sending application leaves both blank. The receiving application detects the problem, and sends back a single error indicating that one of the fields must be filled in. The ERR segment identifies both positions within the message that relate to the error.</p>
+<p>HL7 Attribute Table - ERR – Error</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>W</td>
+<td></td>
+<td></td>
+<td>00024</td>
+<td>Error Code and Location</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td>ERL</td>
+<td>O</td>
+<td>Y</td>
+<td></td>
+<td>01812</td>
+<td>Error Location</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>R</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\2016\HL7\Standards\V282_Word\V282_CH02C_CodeTables.doc#HL70357">0357</a></td>
+<td>01813</td>
+<td>HL7 Error Code</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>1..1</td>
+<td></td>
+<td>ID</td>
+<td>R</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\2016\HL7\Standards\V282_Word\V282_CH02C_CodeTables.doc#HL70516">0516</a></td>
+<td>01814</td>
+<td>Severity</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\2016\HL7\Standards\V282_Word\V282_CH02C_CodeTables.doc#HL70533">0533</a></td>
+<td>01815</td>
+<td>Application Error Code</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td>80#</td>
+<td>ST</td>
+<td>O</td>
+<td>Y/10</td>
+<td></td>
+<td>01816</td>
+<td>Application Error Parameter</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td>2048#</td>
+<td>TX</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01817</td>
+<td>Diagnostic Information</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td>250#</td>
+<td>TX</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01818</td>
+<td>User Message</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td>Y</td>
+<td><a href="file:///D:\Eigene%20Dateien\2016\HL7\Standards\V282_Word\V282_CH02C_CodeTables.doc#HL70517">0517</a></td>
+<td>01819</td>
+<td>Inform Person Indicator</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70518">0518</a></td>
+<td>01820</td>
+<td>Override Type</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td>Y</td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70519">0519</a></td>
+<td>01821</td>
+<td>Override Reason Code</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td></td>
+<td></td>
+<td>XTN</td>
+<td>O</td>
+<td>Y</td>
+<td></td>
+<td>01822</td>
+<td>Help Desk Contact Point</td>
+</tr>
+</tbody>
+</table>
+<h4 id="err-field-definition">ERR field definition</h4>
+<h4 id="err-1-error-code-and-location-00024">ERR-1 Error Code and Location 00024</h4>
+<p>Attention: The ERR-1 field <strong>was deprecated in V2.4 and is withdrawn in V2.7</strong>. Please refer to ERR-2 and ERR-3 instead.</p>
+<h4 id="err-2-error-location-erl-01812">ERR-2 Error Location (ERL) 01812</h4>
+<p>Components: &lt;Segment ID (ST)&gt; ^ &lt;Segment Sequence (NM)&gt; ^ &lt;Field Position (NM)&gt; ^ &lt;Field Repetition (NM)&gt; ^ &lt;Component Number (NM)&gt; ^ &lt;Sub-Component Number (NM)&gt;</p>
+<p>Definition: Identifies the location in a message related to the identified error, warning or message. If multiple repetitions are present, the error results from the values in a combination of places.</p>
+<h4 id="err-3-hl7-error-code-cwe-01813">ERR-3 HL7 Error Code (CWE) 01813</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Identifies the HL7 (communications) error code. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70357"><em>HL7 Table 0357 – Message Error Condition Codes</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="err-4-severity-id-01814">ERR-4 Severity (ID) 01814</h4>
+<p>Definition: Identifies the severity of an application error. Knowing if something is Error, Warning or Information is intrinsic to how an application handles the content. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70516"><em>HL7 Table 0516 - Error Severity</em></a> in Chapter 2C, Code Tables, for valid values. If ERR-3 has a value of &quot;0&quot;, ERR-4 will have a value of &quot;I&quot;.</p>
+<p>Example: a Warning could be used to indicate that notes were present, but ignored because they could not be automatically processed, and therefore information could have been missed.</p>
+<p>Example of Information: When submitting a claim, a payor might indicate remaining coverage under limit.</p>
+<h4 id="err-5-application-error-code-cwe-01815">ERR-5 Application Error Code (CWE) 01815</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Application specific code identifying the specific error that occurred. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70533"><em>User-Defined Table 0533 – Application Error Code</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<p>If the message associated with the code has parameters, it is recommended that the message be indicated in the format of the java.text.MessageFormat approach.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> This style provides information on the parameter type to allow numbers, dates and times to be formatted appropriately for the language.</p>
+<h4 id="err-6-application-error-parameter-st-01816">ERR-6 Application Error Parameter (ST) 01816</h4>
+<p>Definition: Additional information to be used, together with the Application Error Code, to understand a particular error condition/warning/etc. This field can repeat to allow for up to 10 parameters.</p>
+<p>Example: If the application error code specified in ERR.5 corresponded with the English message &quot;The patient has a remaining deductible of {0, number, currency} for the period ending {1, date, medium}.&quot;, and the first two repetitions of ERR.6 were &quot;250&quot; and &quot;20021231&quot;, then a receiving application in the U.S. would display the message as &quot;The patient has a remaining deductible of $250.00 for the period ending Dec 31, 2002.&quot;</p>
+<h4 id="err-7-diagnostic-information-tx-01817">ERR-7 Diagnostic Information (TX) 01817</h4>
+<p>Definition: Information that MAY be used by help desk or other support personnel to diagnose a problem.</p>
+<h4 id="err-8-user-message-tx-01818">ERR-8 User Message (TX) 01818</h4>
+<p>Definition: The text message to be displayed to the application user.</p>
+<p>Example:</p>
+<p>|This program is having trouble communicating with another system. Please contact the help desk.|</p>
+<p>This differs from the actual error code and could provide more diagnostic information.</p>
+<h4 id="err-9-inform-person-indicator-cwe-01819">ERR-9 Inform Person Indicator (CWE) 01819</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: A code to indicate who (if anyone) SHOULD be informed of the error. This field MAY also be used to indicate that a particular person SHOULD NOT be informed of the error (e.g., Do not inform patient). Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70517"><em>User-defined table 0517- Inform Person Code</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<h4 id="err-10-override-type-cwe-01820">ERR-10 Override Type (CWE) 01820</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Identifies what type of override can be used to override the specific error identified. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70518"><em>User-defined Table 0518 - Override Type</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<h4 id="err-11-override-reason-code-cwe-01821">ERR-11 Override Reason Code (CWE) 01821</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Provides a list of potential override codes that can be used to override enforcement of the application rule that generated the error. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70519"><em>User-defined table 0519 – Override Reason</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<h4 id="err-12-help-desk-contact-point-xtn-01822">ERR-12 Help Desk Contact Point (XTN) 01822</h4>
+<p>Components: &lt;WITHDRAWN Constituent&gt; ^ &lt;Telecommunication Use Code (ID)&gt; ^ &lt;Telecommunication Equipment Type (ID)&gt; ^ &lt;Communication Address (ST)&gt; ^ &lt;Country Code (SNM)&gt; ^ &lt;Area/City Code (SNM)&gt; ^ &lt;Local Number (SNM)&gt; ^ &lt;Extension (SNM)&gt; ^ &lt;Any Text (ST)&gt; ^ &lt;Extension Prefix (ST)&gt; ^ &lt;Speed Dial Code (ST)&gt; ^ &lt;Unformatted Telephone number (ST)&gt; ^ &lt;Effective Start Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Expiration Reason (CWE)&gt; ^ &lt;Protection Code (CWE)&gt; ^ &lt;Shared Telecommunication Identifier (EI)&gt; ^ &lt;Preference Order (NM)&gt;</p>
+<p>Subcomponents for Expiration Reason (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Protection Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Shared Telecommunication Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Lists phone, e-mail, fax, and other relevant numbers for helpdesk support related to the specified error.</p>
+<h3 id="fhs-file-header-segment">FHS ‑ file header segment</h3>
+<p>The FHS segment is used to head a file (group of batches) as defined in Section <em>2.10.3</em>, &quot;<em>HL7 batch protocol</em>&quot;.</p>
+<p>HL7 Attribute Table - FHS - File Header</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1..1</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00067</td>
+<td>File Field Separator</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>4..5</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00068</td>
+<td>File Encoding Characters</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00069</td>
+<td>File Sending Application</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00070</td>
+<td>File Sending Facility</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00071</td>
+<td>File Receiving Application</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00072</td>
+<td>File Receiving Facility</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00073</td>
+<td>File Creation Date/Time</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td>40=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00074</td>
+<td>File Security</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td>20=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00075</td>
+<td>File Name/ID</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td></td>
+<td>80#</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00076</td>
+<td>File Header Comment</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td></td>
+<td>20=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00077</td>
+<td>File Control ID</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td></td>
+<td>20=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00078</td>
+<td>Reference File Control ID</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>02269</td>
+<td>File Sending Network Address</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>02270</td>
+<td>File Receiving Network Address</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>C</td>
+<td></td>
+<td>0952</td>
+<td>02429</td>
+<td>Security Classification Tag</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>C</td>
+<td>Y</td>
+<td>0953</td>
+<td>02430</td>
+<td>Security Handling Instructions</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>C</td>
+<td>Y</td>
+<td></td>
+<td>02431</td>
+<td>Special Access Restriction Instructions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fhs-field-definitions">FHS field definitions</h4>
+<h4 id="fhs-1-file-field-separator-st-00067">FHS-1 File Field Separator (ST) 00067</h4>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-2-file-encoding-characters-st-00068">FHS-2 File Encoding Characters (ST) 00068</h4>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-3-file-sending-application-hd-00069">FHS-3 File Sending Application (HD) 00069</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-4-file-sending-facility-hd-00070">FHS-4 File Sending Facility (HD) 00070</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-5-file-receiving-application-hd-00071">FHS-5 File Receiving Application (HD) 00071</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-6-file-receiving-facility-hd-00072">FHS-6 File Receiving Facility (HD) 00072</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-7-file-creation-datetime-dtm-00073">FHS-7 File Creation Date/Time (DTM) 00073</h4>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-8-file-security-st-00074">FHS-8 File Security (ST) 00074</h4>
+<p>Definition: This field has the same definition as the corresponding field in the MSH segment.</p>
+<h4 id="fhs-9-file-nameid-st-00075">FHS-9 File Name/ID (ST) 00075</h4>
+<p>Definition: This field can be used by the application processing file. Its use is not further specified.</p>
+<h4 id="fhs-10-file-header-comment-st-00076">FHS-10 File Header Comment (ST) 00076</h4>
+<p>Definition: This field contains the free text field, the use of which is not further specified.</p>
+<h4 id="fhs-11-file-control-id-st-00077">FHS-11 File Control ID (ST) 00077</h4>
+<p>Definition: This field is used to identify a particular file uniquely. It can be echoed back in FHS-12-reference file control ID.</p>
+<h4 id="fhs-12-reference-file-control-id-st-00078">FHS-12 Reference File Control ID (ST) 00078</h4>
+<p>Definition: This field contains the value of FHS-11-file control ID when this file was originally transmitted. Not present if this file is being transmitted for the first time.</p>
+<h4 id="fhs-13-file-sending-network-address-hd-02269">FHS-13 File Sending Network Address (HD) 02269</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted from. Identified by an OID or text string (e.g., URI). The reader is referred to the &quot;Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations&quot;.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<h4 id="fhs-14-file-receiving-network-address-hd-02270">FHS-14 File Receiving Network Address (HD) 02270</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted to. Identified by an OID or text string. (e.g., URL).</p>
+<p>This is analogous with the Sending Network Address, however in the receiving role.</p>
+<p>This field SHOULD only be populated when the underlying communication protocol does not support identification receiving network locations.</p>
+<h4 id="fsh-15-security-classification-tag-cwe-02429">FSH-15 Security Classification Tag (CWE) 02429</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field defines the security classification (as defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995) of an IT resource, in this case the message, which MAY be used to make access control decisions. It is conditionally required when MSH-27 or MSH-28 are used.</p>
+<p>Conditionality Predicate: Required if FHS-16 or FHS-17 is valued, or any contained MSH-26 is valued, Optional if neither FHS-16 nor FHS-17 or any contained MSH-26 is valued..&quot;</p>
+<p>Use of this field supports the business requirement for declaring the level of confidentiality (classification) for a given message.</p>
+<p>Note: This field is used to declare the ‘high watermark’, meaning the most restrictive handling that needs to be applied to the message based on its content requiring a certain security classification level and SHOULD be viewed as the v2 equivalent of the document header in CDA, in v3 models, and in FHIR Security Labels on Resources and Bundles. The use of confidentiality codes to classify message content and its inclusion in the high water mark in the header of message content is -described in the Guide to the HL7 Healthcare Privacy and Security Classification System, Release 1, which is platform independent.</p>
+<p>Refer to Externally-defined HL7 Table 0952 – HL7 Confidentiality Code in Chapter 2C, Code Tables, for suggested values. Use of this table is recommended. The codes in this table are comprehensive, non-overlapping hierarchical codes: Very Restricted &gt; Restricted &gt; Normal &gt; Moderate &gt; Low &gt; Unrestricted. Restrictions to a comprehensive, non-overlapping set of codes is required for purposes of access control system algorithms such as Bell–LaPadula Mode, which isl used to adjudicate access requests against privacy policies.</p>
+<h4 id="fsh-16-security-handling-instructions-cwe-02430">FSH-16 Security Handling Instructions (CWE) 02430</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<blockquote>
+<p>Definition: This field is repeatable and conveys instructions to users and receivers for secure distribution, transmission, and storage; dictate obligations or mandated actions; specify any action prohibited by refrain policy such as dissemination controls; and stipulate the permissible purpose of use of an IT resource.</p>
+<p>Refer to HL7 Table 0953 – Security Control in Chapter 2C, Code Tables, for suggested values. –</p>
+</blockquote>
+<h4 id="fsh-17-special-access-restriction-instructions-st-02431">FSH-17 Special Access Restriction Instructions (ST) 02431</h4>
+<blockquote>
+<p>Definition: Used to convey specific instructions about the protection of the patient's data , which must be rendered to end users in accordance with patient consent directive, organizational policy, or jurisdictional law. For example, in US law 42 CFR Part 2, disclosed information made with patient consent must include a renderable “Prohibition on re-disclosure” warning (§ 2.32<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>) In addition, organizational policy might require that some or all of the ARV field privacy tag values be rendered to end users, e.g., marking a consult note with “Restricted Confidentiality” or with sensitivity tags such as “VIP” or “EMP” for employee of the organization.</p>
+<p>This field MAY also be used to specify instructions about the release of information to family and friends (e.g., &quot;Do not release information to patient's brother, Adam Everyman&quot;). These instructions MAY be in conjunction with other fields (as elected by the system).</p>
+</blockquote>
+<h3 id="fts-file-trailer-segment">FTS ‑ file trailer segment </h3>
+<p>The FTS segment defines the end of a file.</p>
+<p>HL7 Attribute Table - FTS - File Trailer</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td>10#</td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00079</td>
+<td>File Batch Count</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>80#</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00080</td>
+<td>File Trailer Comment</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fts-field-definitions">FTS field definitions</h4>
+<h4 id="fts-1-file-batch-count-nm-00079">FTS-1 File Batch Count (NM) 00079</h4>
+<p>Definition: This field contains the number of batches contained in this file.</p>
+<h4 id="fts-2-file-trailer-comment-st-00080">FTS-2 File Trailer Comment (ST) 00080</h4>
+<p>Definition: The use of this free text field is not further specified.</p>
+<h3 id="msa-message-acknowledgment-segment">MSA ‑ message acknowledgment segment</h3>
+<p>The MSA segment contains information sent while acknowledging another message.</p>
+<p>HL7 Attribute Table - MSA<span id="MSA" class="anchor"></span> - Message Acknowledgment</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>2..2</td>
+<td></td>
+<td>ID</td>
+<td>R</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70008">0008</a></td>
+<td>00018</td>
+<td>Acknowledgment Code</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>1..199</td>
+<td>199=</td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00010</td>
+<td>Message Control ID</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>W</td>
+<td></td>
+<td></td>
+<td>00020</td>
+<td>Text Message</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00021</td>
+<td>Expected Sequence Number</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>W</td>
+<td></td>
+<td></td>
+<td>00022</td>
+<td>Delayed Acknowledgment Type</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td>W</td>
+<td></td>
+<td></td>
+<td>00023</td>
+<td>Error Condition</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01827</td>
+<td>Message Waiting Number</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>1..1</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70520">0520</a></td>
+<td>01828</td>
+<td>Message Waiting Priority</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msa-field-definitions">MSA field definitions</h4>
+<h4 id="msa-1-acknowledgment-code-id-00018">MSA-1 Acknowledgment Code (ID) 00018</h4>
+<p>Definition: This field contains an acknowledgment code, see message processing rules. Refer to <a href="file:///D:\Eigene%20Dateien\V27_CH02C_CodeTables.doc#HL70008"><em>HL7 Table 0008 - Acknowledgment Code</em></a> for valid values.</p>
+<h4 id="msa-2-message-control-id-st-00010">MSA-2 Message Control ID (ST) 00010</h4>
+<p>Definition: This field contains the message control ID of the message sent by the sending system. It allows the sending system to associate this response with the message for which it is intended.</p>
+<h4 id="msa-3-text-message-00020">MSA-3 Text Message 00020</h4>
+<p><strong>Attention: The <em>MSA-3</em> was deprecated as of v 2.4</strong> and the detail was withdrawn and removed from the standard as of v 2.7<strong>. The reader is referred to the ERR segment. The ERR segment allows for richer descriptions of the erroneous conditions.</strong></p>
+<h4 id="msa-4-expected-sequence-number-nm-00021">MSA-4 Expected Sequence Number (NM) 00021</h4>
+<p>Definition: This optional numeric field is used in the sequence number protocol.</p>
+<h4 id="msa-5-delayed-acknowledgment-type-00022">MSA-5 Delayed Acknowledgment Type 00022</h4>
+<p><strong>Attention: The <em>MSA-5</em> was deprecated as of v2.2</strong> and the detail was withdrawn and removed from the standard as of v 2.5.</p>
+<h4 id="msa-6-error-condition-00023">MSA-6 Error Condition 00023</h4>
+<p><strong>Attention: The <em>MSA-3</em> was deprecated as of v 2.4</strong> and the detail was withdrawn and removed from the standard as of v 2.7<strong>. The reader is referred to the ERR segment. The ERR segment allows for richer descriptions of the erroneous conditions.</strong></p>
+<h4 id="msa-7-message-waiting-number-nm-01827">MSA-7 Message Waiting Number (NM) 01827</h4>
+<p>Definition: If present, indicates the number of messages the Acknowledging Application has waiting on a queue for the Requesting Application. These messages would then need to be retrieved via a query. This facilitates receiving applications that cannot receive unsolicited message (i.e., polling).</p>
+<p>For example, if there are 3 low priority messages, 1 medium priority message and 1 high priority message, the message waiting number would be 5, because that is the total number of messages.</p>
+<p>Use Case: An application that is playing a &quot;requesting&quot; role has limited network access to a centralized application playing a receiving role. When the requesting application contacts the acknowledging application with a regular update or query message, the acknowledging application replies with the appropriate response message, along with an indication that there are urgent messages waiting. The requesting application submits a query to retrieve the queued messages.</p>
+<h4 id="msa-8-message-waiting-priority-id-01828">MSA-8 Message Waiting Priority (ID) 01828</h4>
+<p>Definition: If present, indicates that the Sending Application has messages waiting on a queue for the Receiving Application. These messages would then need to be retrieved via a query. This facilitates receiving applications that cannot receive unsolicited messages (i.e., polling). The code specified identifies how important the most important waiting message is (and can govern how soon the receiving application is required to poll for the message).</p>
+<p>For example, if there are 3 low priority messages, 1 medium priority message and 1 high priority message, the message waiting priority would be 'high', because that is the highest priority of any message waiting.</p>
+<p>With some applications, there is no guarantee that the sending application will be running. The receiving application is therefore unable to submit unsolicited messages. To mitigate this, a polling approach is used where the receiving application requests any queued messages when it is connected. To avoid the network overhead of continuous polling, the sending application needs a way to indicate that there are queued messages awaiting retrieval. It is also useful to provide an indication of the importance of those messages to indicate how quickly they must be retrieved.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70520"><em>HL7 Table 0520 - Message Waiting Priority</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<p>See MSA-7 above for Use Case.</p>
+<h3 id="msh-message-header-segment">MSH ‑ message header segment</h3>
+<p>The MSH segment defines the intent, source, destination, and some specifics of the syntax of a message.</p>
+<p>HL7 Attribute Table - MSH<span id="MSH" class="anchor"></span> - Message Header</p>
+<table>
+<thead>
+<tr class="header">
+<th>SEQ</th>
+<th>LEN</th>
+<th>C.LEN</th>
+<th>DT</th>
+<th>OPT</th>
+<th>RP/#</th>
+<th>TBL#</th>
+<th>ITEM #</th>
+<th>ELEMENT NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1..1</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00001</td>
+<td>Field Separator</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4..5</td>
+<td></td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00002</td>
+<td>Encoding Characters</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70361">0361</a></td>
+<td>00003</td>
+<td>Sending Application</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70362">0362</a></td>
+<td>00004</td>
+<td>Sending Facility</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70361">0361</a></td>
+<td>00005</td>
+<td>Receiving Application</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td>Y</td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70362">0362</a></td>
+<td>00006</td>
+<td>Receiving Facility</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00007</td>
+<td>Date/Time of Message</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td></td>
+<td>40=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00008</td>
+<td>Security</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td></td>
+<td></td>
+<td>MSG</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00009</td>
+<td>Message Type</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>1..199</td>
+<td>=</td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00010</td>
+<td>Message Control ID</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td></td>
+<td></td>
+<td>PT</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00011</td>
+<td>Processing ID</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td></td>
+<td></td>
+<td>VID</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>00012</td>
+<td>Version ID</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00013</td>
+<td>Sequence Number</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td></td>
+<td>180=</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00014</td>
+<td>Continuation Pointer</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>2..2</td>
+<td></td>
+<td>ID</td>
+<td>C</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70155">0155</a></td>
+<td>00015</td>
+<td>Accept Acknowledgment</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>2..2</td>
+<td></td>
+<td>ID</td>
+<td>C</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70155">0155</a></td>
+<td>00016</td>
+<td>Application Acknowledgment Type</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>3..3</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70399">0399</a></td>
+<td>00017</td>
+<td>Country Code</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>5..15</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td>Y</td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70211">0211</a></td>
+<td>00692</td>
+<td>Character Set</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td>0609</td>
+<td>00693</td>
+<td>Principal Language Of Message</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>3..13</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70356">0356</a></td>
+<td>01317</td>
+<td>Alternate Character Set Handling Scheme</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td></td>
+<td></td>
+<td>EI</td>
+<td>O</td>
+<td>Y</td>
+<td></td>
+<td>01598</td>
+<td>Message Profile Identifier</td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td></td>
+<td></td>
+<td>XON</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01823</td>
+<td>Sending Responsible Organization</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td></td>
+<td></td>
+<td>XON</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01824</td>
+<td>Receiving Responsible Organization</td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01825</td>
+<td>Sending Network Address</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01826</td>
+<td>Receiving Network Address</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>C</td>
+<td></td>
+<td>0952</td>
+<td>2429</td>
+<td>Security Classification Tag</td>
+</tr>
+<tr class="odd">
+<td>27</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td>Y</td>
+<td>0953</td>
+<td>2430</td>
+<td>Security Handling Instructions</td>
+</tr>
+<tr class="even">
+<td>28</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td>Y</td>
+<td></td>
+<td>2431</td>
+<td>Special Access Restriction Instructions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msh-field-definitions">MSH field definitions</h4>
+<h4 id="msh-1-field-separator-st-00001">MSH-1 Field Separator (ST) 00001</h4>
+<p>Definition: This field contains the separator between the segment ID and the first real field, MSH-2 Encoding Characters. As such it serves as the separator and defines the character to be used as a separator for the rest of the message. Recommended value is | (ASCII 124).</p>
+<h4 id="msh-2-encoding-characters-st-00002">MSH-2 Encoding Characters (ST) 00002</h4>
+<p>Definition: This field contains five characters in the following order: the component separator, repetition separator, escape character, subcomponent separator, and truncation character. Recommended values are ^~\&amp; #(ASCII 94, 126, 92, 38, and 35, respectively). See Section <em>2.5.4</em>, &quot;<em>Message delimiters</em>'.</p>
+<h4 id="msh-3-sending-application-hd-00003">MSH-3 Sending Application (HD) 00003</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field uniquely identifies the sending application among all other applications within the network enterprise. The network enterprise consists of all those applications that participate in the exchange of HL7 messages within the enterprise. Entirely site-defined. <em>User-defined Table 0361- Application</em> in Chapter 2C, Code Tables, is used as the user-defined table of values for the first component.</p>
+<p><strong>Note:</strong> By site agreement, implementers MAY continue to use <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> in Chapter 2C, Code Tables, for the first component.</p>
+<h4 id="msh-4-sending-facility-hd-00004">MSH-4 Sending Facility (HD) 00004</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field further describes the sending application, MSH-3 Sending Application. With the promotion of this field to an HD data type, the usage has been broadened to include not just the sending facility but other organizational entities such as a) the organizational entity responsible for sending application; b) the responsible unit; c) a product or vendor's identifier, etc. Entirely site-defined. <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70362"><em>User-defined Table 0362 - Facility</em></a> in Chapter 2C, Code Tables, is used as the HL7 identifier for the user-defined table of values for the first component.</p>
+<p><strong>Note:</strong> By site agreement, implementers MAY continue to use <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> in Chapter 2C, Code Tables, for the first component.</p>
+<h4 id="msh-5-receiving-application-hd-00005">MSH-5 Receiving Application (HD) 00005</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field uniquely identifies the receiving application among all other applications within the network enterprise. The network enterprise consists of all those applications that participate in the exchange of HL7 messages within the enterprise. Entirely site-defined <em><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70361">User-defined Table 0361- Application</a></em> in Chapter 2C, Code Tables, is used as the HL7 identifier for the user-defined table of values for the first component.</p>
+<p><strong>Note</strong>: By site agreement, implementers MAY continue to use <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> in Chapter 2C, Code Tables, for the first component.</p>
+<h4 id="msh-6-receiving-facility-hd-00006">MSH-6 Receiving Facility (HD) 00006</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field identifies the receiving application among multiple identical instances of the application running on behalf of different organizations. <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70362"><em>User-defined Table 0362 - Facility</em></a> in Chapter 2C, Code Tables, is used as the HL7 identifier for the user-defined table of values for the first component. Entirely site‑defined.</p>
+<p><strong>Note</strong>: By site agreement, implementers MAY continue to use <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> in Chapter 2C, Code Tables, for the first component.</p>
+<h4 id="msh-7-datetime-of-message-dtm-00007">MSH-7 Date/Time of Message (DTM) 00007</h4>
+<p>Definition: This field contains the date/time that the sending system created the message. If the time zone is specified, it will be used throughout the message as the default time zone.</p>
+<p><strong>Note:</strong> This field was made required in version 2.4. Messages with versions prior to 2.4 are not required to value this field. This usage supports backward compatibility.</p>
+<h4 id="msh-8-security-st-00008">MSH-8 Security (ST) 00008</h4>
+<p>Definition: In some applications of HL7, this field is used to implement security features. For codified expression of security tags use MSH-26 through MSH-29.</p>
+<h4 id="msh-9-message-type-msg-00009">MSH-9 Message Type (MSG) 00009 </h4>
+<p>Components: &lt;Message Code (ID)&gt; ^ &lt;Trigger Event (ID)&gt; ^ &lt;Message Structure (ID)&gt;</p>
+<p>Definition: This field contains the message type, trigger event, and the message structure ID for the message.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70076"><em>HL7 Table 0076 - Message Type</em></a> in Chapter 2C, Code Tables, for valid values for the message type code. This table contains values such as ACK, ADT, ORM, ORU etc.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70003"><em>HL7 Table 0003 – Event Type</em></a> in Chapter 2C, Code Tables, for valid values for the trigger event. This table contains values like A01, O01, R01 etc.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70354"><em>HL7 Table 0354 - Message Structure</em></a> in Chapter 2C, Code Tables, for valid values for the message structure. This table contains values such as ADT_A01, ORU_R01, SIU_S12, etc.</p>
+<p>The receiving system uses this field to recognize the data segments, and possibly, the application to which to route this message. For certain queries, which could have more than a single response event type, the second component MAY, in the response message, vary to indicate the response event type. See the discussion of the display query variants in chapter 5.</p>
+<h4 id="msh-10-message-control-id-st-00010">MSH-10 Message Control ID (ST) 00010</h4>
+<p>Definition: This field contains a number or other identifier that uniquely identifies the message. The receiving system echoes this ID back to the sending system in the Message acknowledgment segment (MSA).</p>
+<h4 id="msh-11-processing-id-pt-00011">MSH-11 Processing ID (PT) 00011</h4>
+<p>Components: &lt;Processing ID (ID)&gt; ^ &lt;Processing Mode (ID)&gt;</p>
+<p>Definition: This field is used to decide whether to process the message as defined in HL7 Application (level 7) Processing rules.</p>
+<h4 id="msh-12-version-id-vid-00012">MSH-12 Version ID (VID) 00012</h4>
+<p>Components: &lt;Version ID (ID)&gt; ^ &lt;Internationalization Code (CWE)&gt; ^ &lt;International Version ID (CWE)&gt;</p>
+<p>Subcomponents for Internationalization Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for International Version ID (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field is matched by the receiving system to its own version to be sure the message will be interpreted correctly. Beginning with Version 2.3.1, it has two additional &quot;internationalization&quot; components, for use by HL7 international affiliates. The &lt;internationalization code&gt; is CE data type (using the ISO country codes where appropriate) which represents the HL7 affiliate. The &lt;internal version ID&gt; is used if the HL7 Affiliate has more than a single 'local' version associated with a single US version. The &lt;international version ID&gt; has a CE data type, since the table values vary for each HL7 Affiliate. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70104"><em>HL7 Table 0104 – Version ID</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="msh-13-sequence-number-nm-00013">MSH-13 Sequence Number (NM) 00013</h4>
+<p>Definition: A non‑delete indicator value in this field implies that the sequence number protocol is in use. This numeric field is incremented by one for each subsequent value.</p>
+<h4 id="msh-14-continuation-pointer-st-00014">MSH-14 Continuation Pointer (ST) 00014</h4>
+<p>Definition: This field is used to define continuations in application-specific ways.</p>
+<p>Only the sender of a fragmented message values this field.</p>
+<h4 id="msh-15-accept-acknowledgment-type-id-00015">MSH-15 Accept Acknowledgment Type (ID) 00015</h4>
+<p>Definition: This field identifies the conditions under which accept acknowledgments are required to be returned in response to this message. Conditionality: Either both MSH-15 and MSH-16 SHALL be populated OR both SHALL be empty.. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70155"><em>HL7 Table 0155 - Accept/Application Acknowledgment Conditions</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="msh-16-application-acknowledgment-type-id-00016">MSH-16 Application Acknowledgment Type (ID) 00016</h4>
+<p>Definition: This field contains the conditions under which application acknowledgments are required to be returned in response to this messageEither both MSH-15 and MSH-16 SHALL be populated OR both SHALL be empty..Required for enhanced acknowledgment mode.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70155"><em>HL7 Table 0155 - Accept/Application Acknowledgment Conditions</em></a> in Chapter 2C, Code Tables, for valid values for MSH-15 Accept Acknowledgment Type and MSH-16 Application Acknowledgment Type.</p>
+<p><strong>Note:</strong> If <em>MSH-15-accept acknowledgment type</em> and <em>MSH-16-application acknowledgment type</em> are omitted (or are both empty ), the original acknowledgment mode rules are used.-</p>
+<h4 id="msh-17-country-code-id-00017">MSH-17 Country Code (ID) 00017</h4>
+<p>Definition: This field contains the country of origin for the message. It will be used primarily to specify default elements, such as currency denominations. The values to be used are those of ISO 3166,.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.</p>
+<p>Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70399"><em>External Table 0399 - Country Code</em></a> in Chapter 2C, Code Tables, for the 3-character codes as defined by ISO 3166-1.</p>
+<h4 id="msh-18-character-set-id-00692">MSH-18 Character Set (ID) 00692</h4>
+<p>Definition: This field contains the character set for the entire message. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70211"><em>HL7 Table 0211 - Alternate Character Sets</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<p>An HL7 message uses field MSH-18 Character Set to specify the character set(s) in use. Valid values for this field are specified in <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70211"><em>HL7 Table 0211 - Alternate Character Sets</em></a>. MSH-18 Character Set MAY be left blank, or MAY contain one or more values delimited by the repetition separator. If the field is left blank, the character set in use is understood to be the 7-bit ASCII set, decimal 0 through decimal 127 (hex 00 through hex 7F). This default value MAY also be explicitly specified as <strong>ASCII</strong>.</p>
+<p>More than one character set MAY be used in a message. The first occurrence, if supplied, of the MSH-18 SHALL indicate the default encoding of the message. The second and subsequent occurrences of MSH-18-character set are used to specify additional character sets that are used.</p>
+<p>The repetitions of this field to specify different character sets apply only to fields of the FT, ST and TX data types. See also section <em>2.7.3,</em> &quot;<em>Escape sequences supporting multiple character sets</em>&quot;.</p>
+<p>Any encoding system, single-byte or multi-byte, MAY be specified as the default character encoding in MSH-18 Character Set. If the default encoding is other than 7-bit ASCII, sites SHALL document this usage in the dynamic conformance profile or other implementation agreement. This is particularly effective in promoting interoperability between nations belonging to different HL7 Affiliates, while limiting the amount of testing required to determine the encoding of a message.</p>
+<p>By using built-in language functions for string and character manipulation, parsers and applications need not be concerned whether a single or double byte character set is in use, provided it is applied to the entire message. Using a built in function to extract the fourth CHARACTER will always yield the field separator character, regardless of coding set. On the other hand, if the parser looks at the fourth BYTE, it is then limited to single byte character sets, since the fourth byte would contain the low order 8 bits of the character S in a double-byte system.</p>
+<p><strong>Note:</strong> When describing encoding rules, this standard always speaks in terms of character position, not byte offset. Similarly, comparisons SHOULD be done on character values, not their byte equivalents. For this reason, delimiter characters SHOULD always have representation in the standard 7-bit ASCII character set, regardless of the actual character set being used, so that a search for the character CR (carriage return) can be performed.</p>
+<ol type="a">
+<li><p>if the field is not valued, the default single-byte character set (ASCII (&quot;ISO IR6&quot;)) SHOULD be assumed. No other character sets are allowed in the message.</p></li>
+<li><p>if the field repeats, but the first element is empty(I.e. unvalued), the single-byte ASCII (&quot;ISO IR6&quot;) is assumed as the default character set.</p></li>
+<li><p>elements in the remainder of the sequence (i.e., elements 2..n) are alternate character sets that MAY be used.</p></li>
+</ol>
+<p>The reader is referred to the following references for background information on character sets and encodings:</p>
+<p>Unicode Technical Report #17 - Character Encoding Model (<a href="http://www.unicode.org/unicode/reports/tr17/" class="uri">http://www.unicode.org/unicode/reports/tr17/</a>)</p>
+<p>Extensible Markup Language (XML) 1.0 (Second Edition), Section F Autodetection of Character Encodings (<a href="http://www.w3.org/TR/REC-xml#sec-guessing" class="uri">http://www.w3.org/TR/REC-xml#sec-guessing</a>)</p>
+<h5 id="alphabetic-languages-other-than-english">Alphabetic Languages Other Than English</h5>
+<p>The first occurrence of <a href="#_MSH-18___Character Set   (ID)   006">MSH-18 Character Set</a> MAY reference a character set other than 7-bit ASCII. Western alphabetic languages other than English are accommodated by the ISO 8859 series of character encodings. For example, if MSH-18 Character Set is valued <strong>8859/1</strong>, the ISO character set commonly known as &quot;8-bit ASCII&quot; is in use in the message. This includes all values from decimal 0 through decimal 127 (hex 00 through hex 7F), plus an additional 128 values from decimal 128 through decimal 255 (hex 80 through hex FF). The latter values include the accented Latin letters used in common Western European languages, plus some symbolic values such as the paragraph mark (¶) and the trademark symbol (™).</p>
+<p>Other ISO character sets in the 8859 series accommodate non-Latin character sets. For example, MSH-18 Character Set could be valued <strong>8859/2</strong> to specify the default character encoding in use in Eastern Europe, while <strong>8859/6</strong> indicates the use of the Arabic alphabet.</p>
+<p>The ASCII and ISO character sets all allow the specification of any character in a single byte.</p>
+<h5 id="non-alphabetic-languages">Non-Alphabetic Languages</h5>
+<p>HL7 Table 0211 includes values for languages that do not use alphabets. These include ideographic written languages, such as the Japanese Graphic Character Set which is specified as <strong>ISO IR87</strong>.</p>
+<p>There are non-alphabetic encoding systems for which HL7 Table 0211 does not provide specific entries. One of these is the Traditional Chinese character set, CNS 11643, which is used in Taiwan. This character set can, however, be encoded using the Unicode Standard, which does have a value in HL7 0211.</p>
+<p>The Unicode Standard (which is now coordinated with ISO 10646) permits the specification of multiple-byte characters in a much larger range than is available in a single-byte ASCII or ISO character set. Unicode Version 3.1 (http://www.unicode.org) includes almost 100,000 characters, including many Chinese, Japanese, and Korean ideographs. This is particularly valuable to implementers who need to encode messages in more than one character set, as for example to accommodate the use of both alphabetic and ideographic characters.</p>
+<p>Non-alphabetic encoding systems do not restrict characters to a length of one byte. Unicode incorporates three encoding forms that allow for the use of multiple bytes to encode a message. The most flexible Unicode encoding form is UTF-8, which uses high-order bits to specify the number of bytes (from one to six) used to encode each character.</p>
+<p>Interestingly, Unicode UTF-8 incorporates the 7-bit ASCII character set as single-byte codes. This means that a message encoded in 7-bit ASCII can be submitted to a destination using Unicode UTF- 8 with no modification.</p>
+<h4 id="msh-19-principal-language-of-message-cwe-00693">MSH-19 Principal Language of Message (CWE) 00693</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field contains the principal language of the message. Codes come from ISO 639. Refer to Table 0609 - Principal Language Of Message in Chapter 2C for valid values.</p>
+<h4 id="msh-20-alternate-character-set-handling-scheme-id-01317">MSH-20 Alternate Character Set Handling Scheme (ID) 01317</h4>
+<p>Definition: When any alternative character sets are used (as specified in the second or later iterations of <a href="#_MSH-18___Character Set   (ID)   006">MSH-18 Character Set</a>), and if any special handling scheme is needed, this component is to specify the scheme used, according to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70356"><em>HL7 Table 0356- Alternate Character Set Handling Scheme</em></a> as defined in Chapter 2C, Code Tables,.</p>
+<h4 id="msh-21-message-profile-identifier-ei-01598">MSH-21 Message Profile Identifier (EI) 01598</h4>
+<p>Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Sites MAY use this field to assert adherence to, or reference, a message profile. Message profiles contain detailed explanations of grammar, syntax, and usage for a particular message or set of messages. See section 2B, &quot;Conformance Using Message Profiles&quot;.</p>
+<p>Repetition of this field allows more flexibility in creating and naming message profiles. Using repetition, this field can identify a set of message profiles that the message conforms to. For example, the first repetition could reference a vendor's message profile. The second could reference another compatible provider's profile or a later version of the first vendor profile.</p>
+<p>As of v2.5, the HL7 message profile identifiers might be used for conformance claims and/or publish/subscribe systems. Refer to sections 2B.1.1&quot;Message profile identifier&quot; and 2.B.1.2, &quot;Message profile publish/subscribe topics&quot; for details of the message profile identifiers. Refer to sections 2.B.4.1, &quot;Static definition identifier&quot; and 2.B.4.2, &quot;Static definition publish/subscribe topics&quot; for details of the static definition identifiers.</p>
+<p>Prior to v2.5, the field was called Conformance Statement ID. For backward compatibility, the Conformance Statement ID can be used here. Examples of the use of Conformance Statements appear in Chapter 5, &quot;Query.&quot;</p>
+<h4 id="msh-22-sending-responsible-organization-xon-01823">MSH-22 Sending Responsible Organization (XON) 01823</h4>
+<p>Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;</p>
+<p>Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Business organization that originated and is accountable for the content of the message.</p>
+<p>Currently, MSH provides fields to transmit both sending/receiving applications and facilities (MSH.3 – MSH.6). However, these levels of organization do not necessarily relate to or imply a legal entity such as a business organization. As such, multiple legal entities (organizations) mightshare a service bureau, with the same application and facility identifiers. Another level of detail is required to delineate the various organizations using the same service bureau.</p>
+<p>Therefore, the Sending Responsible Organization field provides a complete picture from the application level to the overall business level. The Business Organization represents the legal entity responsible for the contents of the message.</p>
+<p>Use Case #1: A centralized system responsible for recording and monitoring instances of communicable diseases enforces a stringent authentication protocol with external applications that have been certified to access its information base. In order to allow message exchange, the centralized system mandates that external applications must provide the identity of the business organization sending the message (<strong>Sending Responsible Organization</strong>), the organization it is sending the message to (<strong>Receiving Responsible Organization</strong>, in this case the &quot;owner&quot; of the communicable diseases system), the network address from which the message has originated (<strong>Sending Network Address</strong>), the network address the message is being transmitted to (<strong>Receiving Network Address</strong>). The organization responsible for protecting the information stored within the communicable disease system requires this authentication due to the sensitive nature of the information it contains.</p>
+<h4 id="msh-23-receiving-responsible-organization-xon-01824">MSH-23 Receiving Responsible Organization (XON) 01824</h4>
+<p>Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;</p>
+<p>Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Business organization that is the intended receiver of the message and is accountable for acting on the data conveyed by the transaction.</p>
+<p>This field has the same justification as the Sending Responsible Organization except in the role of the Receiving Responsible Organization. The receiving organization has the legal responsibility to act on the information in the message.</p>
+<p>See MSH-22 above for Use Case.</p>
+<h4 id="msh-24-sending-network-address-hd-01825">MSH-24 Sending Network Address (HD) 01825</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted from. Identified by an OID or text string (e.g., URI). The reader is referred to the &quot;Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations&quot;.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>As with the Sending/Receiving Responsible Organization, the Sending Network Address provides a more detailed picture of the source of the message. This information is lower than the application layer, but is often useful/necessary for routing and identification purposes. This field SHOULD only be populated when the underlying communication protocol does not support identification of sending network locations.</p>
+<p>An agreement about the specific values and usage must exist among messaging partners. Use Case:</p>
+<p>Dr. Hippocrates works for the ''Good Health Clinic&quot; (Sending facility) with a laptop running application XYZ (Sending App). He needs to talk to the provincial pharmacy system. He dials in and is assigned a network address. He then sends a message to the pharmacy system, which transmits a response back to him. Because the underlying network protocol does not have a place to communicate the sender and receiver network addresses, it therefore requires these addresses to be present in a known position in the payload.</p>
+<p>There might be many doctors running application XYZ. In addition, the network address assigned to the laptop might change with each dial-in. This means there is not a 1..1 association between either the facility or the application and the network address.</p>
+<p>MSH||RX|GHC|||||OMP^O09^OMP_O09||||||||||||||||05782|</p>
+<p>Example 1: The Lone Tree Island satellite clinic transmits a notification of patient registration to its parent organization Community Health and Hospitals. The communication protocol does not support the identification of sending network location, so the sending network location is identified in the message by using its enterprise-wide network identifier &quot;HNO2588&quot;.</p>
+<p>MSH||Reg|Lone|||||ADT^A04^ADT_A04||||||||||||||||HN02588|</p>
+<p>Example 2: The Stone Mountain satellite clinic transmits a notification of patient registration to its parent organization Community Health and Hospitals. The sending network location is identified by using its URI.</p>
+<p>MSH||Reg|Stone|||||ADT^A04^ADT_A04|||||||||||||||| ^ftp://www.goodhealth.org/somearea/someapp^URI|</p>
+<p>Example 3: The Three Rivers satellite clinic transmits a notification of patient registration to its parent organization Community Health and Hospitals. The sending network location is identified by using its Ipv4 address, port 5123 at node 25.152.27.69. The following example shows how to represent a port and DNS address using HD as the scheme</p>
+<p>MSH||Reg|TRC||||| ADT^A04^ADT_A04||||||||||||||||5123^25.152.27.69^DNS|</p>
+<p>Example 4: The Bayview satellite clinic transmits a notification of patient registration to its parent organization Community Health and Hospitals. The sending network location is identified by using &quot;4086::132:2A57:3C28&quot; its IPv6 address.</p>
+<p>MSH||REG|BAY||||| ADT^A04^ADT_A04||||||||||||||||^4086::132:2A57:3C28^IPv6|</p>
+<h4 id="msh-25-receiving-network-address-hd-01826">MSH-25 Receiving Network Address (HD) 01826</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Identifier of the network location the message was transmitted to. Identified by an OID or text string (e.g., URL).</p>
+<p>This is analogous with the Sending Network Address, however in the receiving role.</p>
+<p>This field SHOULD only be populated when the underlying communication protocol does not support identification receiving network locations</p>
+<h4 id="msh-26-security-classification-tag-cwe-2429">MSH-26 Security Classification Tag (CWE) 2429</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field defines the security classification (as defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995) of an IT resource, in this case the message, which MAY be used to make access control decisions.</p>
+<p>Conditionality Predicate: Required if MSH-27 or MSH-28 is valued, Optional if neither MSH-27 nor MSH-28 is valued.&quot;Use of this field supports the business requirement for declaring the level of confidentiality (classification) for a given message.</p>
+<p>Note: This field is used to declare the ‘high watermark’, meaning the most restrictive handling that needs to be applied to the message based on its content requiring a certain security classification level and SHOULD be viewed as the v2 equivalent of the document header in CDA, in v3 models, and in FHIR Security Labels</p>
+<p>the high water mark in the header of message content is -described in the Guide to the HL7 Healthcare Privacy and Security Classification System, Release 1, which is platform independent.</p>
+<p>Refer to Externally-defined HL7 Table 0952 – HL7 Confidentiality Code in Chapter 2C, Code Tables, for suggested values. Use of this table is recommended. The codes in this table are comprehensive, non-overlapping hierarchical codes: Very Restricted &gt; Restricted &gt; Normal &gt; Moderate &gt; Low &gt; Unrestricted. Restrictions to a comprehensive, non-overlapping set of codes is required for purposes of access control system algorithms such as Bell–LaPadula Mode, which is used to adjudicate access requests against privacy policies.</p>
+<h4 id="msh-27-security-handling-instructions-cwe-2430">MSH-27 Security Handling Instructions (CWE) 2430</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field is repeatable and conveys instructions to users and receivers for secure distribution, transmission, and storage; dictate obligations or mandated actions; specify any action prohibited by refrain policy such as dissemination controls; and stipulate the permissible purpose of use of an IT resource.</p>
+<p>Refer to Externally define HL7 Table 0953 – Security Control in Chapter 2C, Code Tables, for suggested values.</p>
+<h4 id="msh-28-special-access-restriction-instructions-st-2431">MSH-28 Special Access Restriction Instructions (ST) 2431 ? </h4>
+<p>Definition: Used to convey specific instructions about the protection of the patient's data, which must be rendered to end users in accordance with patient consent directive, organizational policy, or jurisdictional law. For example, in US law 42 CFR Part 2, disclosed information made with patient consent must include a renderable “Prohibition on re-disclosure” warning (§ 2.32<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>) In addition, organizational policy might require that some or all of the ARV field privacy tag values be rendered to end users, e.g., marking a consult note with “Restricted Confidentiality” or with sensitivity tags such as “VIP” or “EMP” for employee of the organization.</p>
+<p>This field MAY also be used to specify instructions about the release of information to family and friends (e.g., &quot;Do not release information to patient's brother, Adam Everyman&quot;). These instructions MAY be in conjunction with other fields (as elected by the system).</p>
+<h3 id="nte-notes-and-comments-segment">NTE ‑ notes and comments segment</h3>
+<p>The NTE segment is defined here for inclusion in messages defined in other chapters. It is commonly used for sending notes and comments.</p>
+<p>The work groups define the meaning of the NTE segments within the context of the messages in their chapters. For each NTE, the description in the message attribute table SHOULD include an indication of the segment associated with the NTE, for example &quot;Notes and Comments for the PID&quot;.</p>
+<p>NOTE: While sending of segments with no content has been historically used for display messages to indicate blank lines this is not best practice. Senders SHOULD NOT send empty NTEs to indicate blank lines. When blank lines are required senders SHOULD use the functionality of the FT datatype in section <a href="#_Formatting_codes">Formatting codes</a>.</p>
+<p>HL7 Attribute Table - NTE - Notes and Comments</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM #</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td>SI</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00096</td>
+<td>Set ID - NTE</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>1..1</td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70105">0105</a></td>
+<td>00097</td>
+<td>Source of Comment</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>FT</td>
+<td>C</td>
+<td>Y</td>
+<td></td>
+<td>00098</td>
+<td>Comment</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70364">0364</a></td>
+<td>01318</td>
+<td>Comment Type</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>XCN</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00224</td>
+<td>Entered By</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>00661</td>
+<td>Entered Date/Time</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01004</td>
+<td>Effective Start Date</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>02185</td>
+<td>Expiration Date</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td>Y</td>
+<td>0611</td>
+<td>03495</td>
+<td>Coded Comment</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nte-field-definitions">NTE field definitions</h4>
+<h4 id="nte-1-set-id-nte-si-00096">NTE-1 Set ID ‑ NTE (SI) 00096</h4>
+<p>Definition: This field MAY be used where multiple NTE segments are included in a message. Their numbering must be described in the application message definition.</p>
+<h4 id="nte-2-source-of-comment-id-00097">NTE-2 Source of Comment (ID) 00097</h4>
+<p>Definition: This field is used when source of comment must be identified. This table MAY be extended locally during implementation. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70105"><em>HL7 Table 0105 - Source of Comment</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="nte-3-comment-ft-00098">NTE-3 Comment (FT) 00098</h4>
+<p>Definition: This field contains the comment contained in the segment.</p>
+<p>Conditionality Predicate: In support of backwards compatibility, when NTE-9 is populated, the sending system SHALL also populate a human-readable version of the comment in NTE-3. When NTE-9 is not populated then NTE-3 MAY be populated.</p>
+<p><strong>Note: NTE-3 has been left blank for the use cases where legacy systems are sending a blank NTE as a line feed.</strong></p>
+<p><strong>Note:</strong> As of v2.2, this field uses the FT rather than a TX data type. Since there is no difference between an FT data type without any embedded formatting commands, and a TX data type, this change is compatible with the previous version.</p>
+<h4 id="nte-4-comment-type-cwe-01318">NTE-4 Comment Type (CWE) 01318</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field contains a value to identify the type of comment text being sent in the specific comment record. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70364"><em>User-Defined Table 0364 - Comment Type</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<p>Note: A field already exists on the NTE record that identifies the Sources of Comment (e.g., ancillary, placer, other). However some applications need to support other types of comment text (e.g., instructions, reason, remarks, etc.). A separate NTE segment can be used for each type of comment (e.g., instructions are on one NTE and remarks on another NTE).</p>
+<h4 id="nte-5-entered-by-xcn-00224">NTE-5 Entered By (XCN) 00224</h4>
+<p>Components: &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ <strong>&lt;DEPRECATED-Source Table (CWE)&gt;</strong> ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;</p>
+<p>Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;</p>
+<p>Subcomponents for Source Table (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field contains the identity of the person who actually keyed the comment into the application. It provides an audit trail in case the comment is entered incorrectly and the ancillary department needs to clarify the comment. By local agreement, either the ID number or name component MAY be omitted.</p>
+<h4 id="nte-6-entered-datetime-dtm-00661">NTE-6 Entered Date/Time (DTM) 00661</h4>
+<p>Definition: This field contains the actual date the comment was keyed into the application.</p>
+<h4 id="nte-7-effective-start-date-dtm-01004">NTE-7 Effective Start Date (DTM) 01004</h4>
+<p>Definition: This field contains the date the comment becomes or became effective.</p>
+<h4 id="nte-8-expiration-date-dtm-02185">NTE-8 Expiration Date (DTM) 02185</h4>
+<p>Definition: This field contains the date the comment becomes or became non-effective.</p>
+<h4 id="nte-9-coded-comment-cwe-03495">NTE-9 Coded Comment (CWE) 03495</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field contains a value to identify a codified comment being sent in the specific comment record. If this field is valued, NTE-3 will be populated with text from this field. In support of backwards compatibility, when NTE-9 is populated, the sending system SHALL also populate a human-readable version of the comment in NTE-3. Refer to Table 0611 - Coded Comment in Chapter 2C for valid values.</p>
+<h3 id="ovr-override-segment">OVR – override segment</h3>
+<p>Definition: This segment allows a sender to override specific receiving application's business rules to allow for processing of a message that would normally be rejected or ignored.</p>
+<p>In many instances, business rules will be set as guidelines relative to patient care. In some instances it is in the patient's better interest to circumvent these guidelines. In other cases, business rules might exist to support normal process flow, but which couldbe bypassed or ignored under certain special circumstances. This segment is linked to the proposed ERR segment changes in that the first attempt to process a transaction that violates a business rule could result in an error that must be overridden. The ERR provides a mechanism to identify errors that MAY be overridden, as well as the allowed override codes.</p>
+<p>Use case #1: A patient has received a prescription with a duration of 30 days and receives the full amount at their pharmacy. While at home the patient accidentally spills the container and spoils a significant proportion of the prescription. The patient returns to their pharmacy and explains the situation to the pharmacy technician. The technician consults with their supervising pharmacist. Knowing the patient, the pharmacist decides to override the business rule stating that the dispensed amount for a prescription can not exceed the prescribed amount. In recording the decision, the pharmacy technician specifies that the <strong>Override Type</strong> is a &quot;Compassionate Refill&quot; and that the <strong>Override Code</strong>, or reason for the override, is &quot;Spoilage&quot;. The technician also provides <strong>Override Comments</strong> to provide an explanation of the situation for future reference. While recording the decision, the technician's user ID is automatically stored in an <strong>Override Recorded By</strong> field. The pharmacist's ID is stored in the <strong>Override Responsible Provider</strong> field.</p>
+<p>Use case #2:A hospital wishes to submit an invoice to an insurer who is providing secondary coverage. The invoice is being submitted over a week after the service was performed, which is outside the insurer's normal accept time window. The insurer would normally reject the invoice. However, the submitter includes an <strong>Override Type</strong> of &quot;late submission&quot; as well as an <strong>Override Code</strong> indicating that the invoice is late due to delays with the primary payor. The secondary insurer examines the override reason and accepts the invoice.</p>
+<p>Usage Note: The override segment SHOULD be included in messages adjacent to the segment(s) containing the information that would trigger the business rule(s) that needs to be overridden. The segment SHOULD be optional (you shouldn't always need to override business rules), and SHOULD be allowed to repeat in circumstances where there can be more than one business rule overridden at the same time. Committees MAY wish to provide suggested values for override types or codes for use with the OVR segment in different messages.</p>
+<p>The following is an example of how the OVR segment might be used in a dispense message (RDS_O13):</p>
+<p>MSH PID PV1 {ORC RXE {RXR} RXD {RXR} &lt;RXC&gt; &lt;NTE&gt; &lt;FT1&gt; &lt;OVR&gt;}</p>
+<p>HL7 Attribute Table – OVR – Override Segment</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70518">0518</a></td>
+<td>01829</td>
+<td>Business Rule Override Type</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>O</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70521">0521</a></td>
+<td>01830</td>
+<td>Business Rule Override Code</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>200#</td>
+<td>TX</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01831</td>
+<td>Override Comments</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>XCN</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01832</td>
+<td>Override Entered By</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>XCN</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01833</td>
+<td>Override Authorized By</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ovr-field-definitions">OVR field definitions</h4>
+<h4 id="ovr-1-business-rule-override-type-cwe-01829">OVR-1 Business Rule Override Type (CWE) 01829</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Identifies what type of business rule override is being performed. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70518"><em>User-defined Table 0518 - Override Type</em></a> in Chapter 2C, Code Tables, for suggested values. Given that an application provides end users with the ability to override business rules, there must be a way to communicate what business rule is being overridden.</p>
+<h4 id="ovr-2-business-rule-override-code-cwe-01830">OVR-2 Business Rule Override Code (CWE) 01830</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Indicates the reason for the business rule override. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70521"><em>User-defined Table 0521 – Override Code</em></a> in Chapter 2C, Code Tables, for suggested values.</p>
+<p>If users are allowed to override business rules in an application, the user will typically need to provide a reason why the rule is being overridden. The Override Code field in this segment will provide the mechanism to transmit a coded reason.</p>
+<h4 id="ovr-3-override-comments-tx-01831">OVR-3 Override Comments (TX) 01831</h4>
+<p>Definition: Additional descriptive comments detailing the circumstances of the override.</p>
+<p>When overriding a business rule there might be special circumstances that require a further explanation of the override action. The Override Comments field will allow users to provide more specific information in a free text format.</p>
+<h4 id="ovr-4-override-entered-by-xcn-01832">OVR-4 Override Entered By (XCN) 01832</h4>
+<p>Components: &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ <strong>&lt;DEPRECATED-Source Table (CWE)&gt;</strong> ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;</p>
+<p>Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;</p>
+<p>Subcomponents for Source Table (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Identifies the user entering the override in the system.</p>
+<p>When a business rule is overridden, an application must be able to link the override with the user who made it in order to provide a complete audit history of the transaction, especially when there might be a risk associated with the override. In situations where the original message was submitted by batch, the overriding user MAY be different than the original author of the message.</p>
+<h4 id="ovr-5-override-authorized-by-xcn-01833">OVR-5 Override Authorized By (XCN) 01833</h4>
+<p>Components: &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ <strong>&lt;DEPRECATED-Source Table (CWE)&gt;</strong> ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;</p>
+<p>Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;</p>
+<p>Subcomponents for Source Table (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: Identifies the health services provider who accepts professional responsibility for overriding the business rule. This field SHOULD be left empty if the recording and responsible health care provider is the same as who entered the override.</p>
+<p>In some cases, a business rule override might be entered by a data entry clerk on behalf of a health service provider who carries professional responsibility for the decision to override the rule. In order to represent this scenario, the segment must have a field identifying who is responsible for the override decision, in addition to the person recording the override.</p>
+<h3 id="sft-software-segment">SFT – software segment</h3>
+<p>Definition: This segment provides additional information about the software product(s) used as a Sending Application. The primary purpose of this segment is for diagnostic use. There MAY be additional uses per site-specific agreements.</p>
+<p>Implementers are encouraged to use message profile identifiers (as found in <em>2.14.9.21</em>, &quot;<em>MSH-21 Message Profile Identifier (EI) 01598</em>&quot;) to control the behavior of the receiving application rather than relying on application or version information in the SFT segment.</p>
+<p>For example, if software product A has versions 9 and 10 deployed in different Enterprise locations, the fact that they use different message types, segments, or fields SHOULD be reflected via their message profiles (see section 2B, &quot;Conformance Using Message Profiles&quot;). If there is an upgrade from version 10 to 10.1, this would be reflected in the SFT segment, but changes to the message contents SHOULD be reflected via a new/different conformance profile.</p>
+<p>Use Case: An external application has been customized to communicate with a centralized patient drug history system. However, due to certain, known characteristics of the external software package, the centralized system must modify its behavior in order to process transactions correctly. In one example, the external application could have multiple versions in production. As such, the centralized application will need to know the name of the <strong>Software Vendor Organization</strong>, the <strong>Software Release Number</strong>, the <strong>Software Product Name</strong>, and the <strong>Software Binary ID</strong> so that it can correctly identify the software submitting the transaction and modify its behavior appropriately.</p>
+<p>While preparing a transaction for submission to a centralized system the sending application specifies its <strong>Software Install Date</strong> and its configuration settings (<strong>Software Product Information</strong>). While processing the transaction, the centralized system encounters an error. Upon examination of the error, install date and configuration of the software that sent the message, helpdesk staff are able to determine the sending application has not been updated to reflect recent application changes.</p>
+<p>Use Case: In circumstances where a message is manipulated or modified by multiple systems, a repetition of this segment MAY be appended by each system.</p>
+<p>Example:</p>
+<p>MSH</p>
+<p>[{ SFT }]</p>
+<p>...</p>
+<p>HL7 Attribute Table – SFT – Software Segment</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td>XON</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>01834</td>
+<td>Software Vendor Organization</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>15#</td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>01835</td>
+<td>Software Certified Version or Release Number</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>20#</td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>01836</td>
+<td>Software Product Name</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td>20#</td>
+<td>ST</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>01837</td>
+<td>Software Binary ID</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>TX</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01838</td>
+<td>Software Product Information</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01839</td>
+<td>Software Install Date</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sft-field-definitions">SFT field definitions</h4>
+<h4 id="sft-1-software-vendor-organization-xon-01834">SFT-1 Software Vendor Organization (XON) 01834</h4>
+<p>Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;</p>
+<p>Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: Organization identification information for the software vendor that created this transaction. The purpose of this field, along with the remaining fields in this segment, is to provide a more complete picture of applications that are sending HL7 messages. The Software Vendor Organization field would allow the identification of the vendor who is responsible for maintaining the application.</p>
+<h4 id="sft-2-software-certified-version-or-release-number-st-01835">SFT-2 Software Certified Version or Release Number (ST) 01835</h4>
+<p>Definition: Latest software version number of the sending system that has been compliance tested and accepted. Software Certified Version or Release Number helps to provide a complete picture of the application that is sending/receiving HL7 messages. Versions are important in identifying a specific 'release' of an application. In some situations, the receiving application validates the Software Certified Version or Release Number against a list of &quot;certified&quot; versions/releases of the particular software to determine if the sending application adheres to specific business rules required by the receiving application.</p>
+<p>Alternatively, the software MAY perform different processing depending on the version of the sending software</p>
+<h4 id="sft-3-software-product-name-st-01836">SFT-3 Software Product Name (ST) 01836</h4>
+<p>Definition: The name of the software product that submitted the transaction. A key component in the identification of an application is its Software Product Name. This is a key piece of information in identifying an application.</p>
+<h4 id="sft-4-software-binary-id-st-01837">SFT-4 Software Binary ID (ST) 01837</h4>
+<p>Definition: Issued by a vendor for each unique software version instance to distinguish between like versions of the same software e.g., a checksum.</p>
+<p>Software Binary Ids are issued for each unique software version instance. As such, this information helps to differentiate between differing versions of the same software. Identical Primary IDs indicate that the software is identical at the binary level (configuration settings mmightdiffer).</p>
+<h4 id="sft-5-software-product-information-tx-01838">SFT-5 Software Product Information (TX) 01838</h4>
+<p>Definition: Software identification information that can be supplied by a software vendor with their transaction. Might include configuration settings, etc.</p>
+<p>This field would contain any additional information an application provides with the transaction it has submitted. This information could be used for diagnostic purposes and provides greater flexibility in identifying a piece of software. Possibilities include setup or configuration parameter information.</p>
+<p>This field SHOULD NOT be sent unless performing diagnostics.</p>
+<h4 id="sft-6-software-install-date-dtm-01839">SFT-6 Software Install Date (DTM) 01839</h4>
+<p>Definition: Date the submitting software was installed at the sending site.</p>
+<p>A Software Install Date on its own can often provide key information about the behavior of the application, and is necessary to provide a complete picture of the sending application.</p>
+<h3 id="sgh-segment-group-header">SGH – Segment Group Header</h3>
+<p>The SGH segment is only used to provide information about the instantiated message structure to indicate that a new segment group begins and subsequent segments SHOULD be interpreted accordingly. It does not contain any patient related data.</p>
+<p>It is expected that each SGH will be accompanied by an SGT, as depicted below in the abstract message diagram: WRP: Widget Reports</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Segments</td>
+<td>Description</td>
+<td>Status</td>
+<td>Chapter</td>
+</tr>
+<tr class="even">
+<td><a href="#MSH">MSH</a></td>
+<td>Message Header</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>[{SFT}]</td>
+<td>Software Segment</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>[UAC]</td>
+<td>User Authentication Credential</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><a href="#MSA">MSA</a></td>
+<td>Message Acknowledgment</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>[{ERR}]</td>
+<td>Error Segment</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+<td>---Widget begin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[SGH]</td>
+<td>Segment Group Header</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>WDN</td>
+<td>Widget Description</td>
+<td></td>
+<td>XX</td>
+</tr>
+<tr class="even">
+<td>WPN</td>
+<td>Widget Portion</td>
+<td></td>
+<td>XX</td>
+</tr>
+<tr class="odd">
+<td>[SGT}</td>
+<td>Segment Group Trailer</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>}</td>
+<td>---Widget end</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>HL7 Attribute Table – SGH – Segment Group Header</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4</td>
+<td></td>
+<td>SI</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>03389</td>
+<td>Set ID – SGH</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>60#</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>03390</td>
+<td>Segment Group Name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sgh-field-definitions">SGH field definitions</h4>
+<h4 id="sgh-1-set-id-sgh-si-03389">SGH-1 Set ID – SGH (SI) 03389</h4>
+<p>Definition: For the first segment group transmitted, the sequence number SHALL be 1; for the second , it SHALL be 2; and so on.</p>
+<h4 id="sgh-2-segment-group-name-st-03390">SGH-2 Segment Group Name (ST) 03390</h4>
+<p>Definition: This field contains the name of the segment group.</p>
+<h3 id="sgt-segment-group-trailer">SGT – Segment Group Trailer</h3>
+<p>The SGT segment is only used to provide information about the instantiated message structure to the parsing process to indicate that the segment group ends and subsequent segments SHOULD be interpreted accordingly. It does not contain any patient related data. The Segment Group Trailer is required if the segment group header exists.</p>
+<p>HL7 Attribute Table – SGT – Segment Group Trailer</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4</td>
+<td></td>
+<td>SI</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>03394</td>
+<td>Set ID – SGT</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>60#</td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>03395</td>
+<td>Segment Group Name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sgt-field-definitions">SGT field definitions</h4>
+<h4 id="sgt-1-set-id-sgt-si-03394">SGT-1 Set ID – SGT (SI) 03394</h4>
+<p>Definition: For the first segment group transmitted, the sequence number SHALL be 1; for the second , it SHALL be 2; and so on.</p>
+<h4 id="sgt-2-segement-group-name-st-03395">SGT-2 Segement Group Name (ST) 03395</h4>
+<p>Definition: This field contains the name of the segment group.</p>
+<h3 id="uac---user-authentication-credential-segment">UAC - User Authentication Credential Segment</h3>
+<p>Definition: This optional segment provides user authentication credentials, a Kerberos Service Ticket or SAML assertion, to be used by the receiving system to obtain user identification data. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70615"><em>HL7 Table 0615 - User Authentication Credential Type Code</em></a> in Chapter 2C, Code Tables. It is to be used in when the receiving application system requires the sending system to provide end-user identification for accountability or access control in interactive applications. Since user authentication implementations often limit the time period for validity of the session authentication credentials, this segment is not intended for use in non-interactive applications.</p>
+<p>It is possible that various user authentication credential standards' data mightbe communicated. Kerberos and SAML are two such standards. A user authentication credential is an encapsulated data (ED type) element, as defined by standards, with no HL7-relevant structure.</p>
+<p><strong>Note:</strong> The UAC segment is defined for use within simple protocols, such as MLLP, that do not have user authentication semantics. Implementations that use WSDL/SOAP, or similar protocols, to envelope HL7 SHOULD employ the user authentication semantics and data structures available within the scope of those protocols rather than the UAC segment.</p>
+<p>If the receiving system accepts the user credentials in the UAC segment, no specific acknowledgment is required. However, if the receiving system detects an error while processing the UAC segment, its acknowledgment message SHALL report it to the sender via an MSA and ERR segment pair:</p>
+<ul>
+<li><p>The ERR-3 (error code) field value is 207 to signify an application error</p></li>
+<li><p>The ERR-7 (diagnostic information) field reports the specific error. Examples of possible errors are:</p></li>
+</ul>
+<ul>
+<li><p>User credentials expected but not provided</p></li>
+<li><p>User credentials invalid</p></li>
+<li><p>User credentials expired</p></li>
+<li><p>User credentials from an unknown or untrusted source</p></li>
+<li><p>User unknown</p></li>
+<li><p>User not allowed to create or access data on the receiving system.</p></li>
+<li><p>User not allowed to initiate a processing function on the receiving system.</p></li>
+</ul>
+<p>When an MSA and ERR segment pair is reported to the sender, an application data response SHALL NOT occur. In such cases it is correct to assume that the sending application's user is not authorized to get the data.</p>
+<p>The processing rules for the ERR segment are outside of HL7's scope.</p>
+<p>HL7 Attribute Table – UAC - User Authentication Credential Segment</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>OPT</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>R</td>
+<td></td>
+<td><a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70615">0615</a></td>
+<td>02267</td>
+<td>User Authentication Credential Type Code</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td>ED</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>02268</td>
+<td>User Authentication Credential</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uac-field-definitions">UAC Field Definitions</h4>
+<h4 id="uac-1-user-authentication-credential-type-code-cwe-02267">UAC-1 User Authentication Credential Type Code (CWE) 02267</h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This an identifier code for the type of user authentication credential. Refer to <a href="file:///D:\Eigene%20Dateien\V281_CH02C_CodeTables.doc#HL70615"><em>HL7 Table 0615 – User Authentication Credential Type Code</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="uac-2-user-authentication-credential-ed-02268">UAC-2 User Authentication Credential (ED) 02268</h4>
+<p>Components: &lt;Source Application (HD)&gt; ^ &lt;Type of Data (ID)&gt; ^ &lt;Data Subtype (ID)&gt; ^ &lt;Encoding (ID)&gt; ^ &lt;Data (TX)&gt;</p>
+<p>Subcomponents for Source Application (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This is user credential data as supplied by the sender's operating platform. The content and structure of this is defined by other standards and contain no HL7-relevant data.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The URI is: <a href="http://www.ietf.org/rfc/rfc3305.txt" class="uri">http://www.ietf.org/rfc/rfc3305.txt</a>. Note: All IETF documents are available online, and RFCs are available through URIs using this format.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>§ 2.32 Prohibition on re-disclosure.</p>
+<p>(a)Notice to accompany disclosure. Each disclosure made with the patient's written consent must be accompanied by one of the following written statements:</p>
+<p>(1) This information has been disclosed to you from records protected by federal confidentiality rules ( 42 CFR part 2). The federal rules prohibit you from making any further disclosure of information in this record that identifies a patient as having or having had a substance use disorder either directly, by reference to publicly available information, or through verification of such identification by another person unless further disclosure is expressly permitted by the written consent of the individual whose information is being disclosed or as otherwise permitted by 42 CFR part 2. A general authorization for the release of medical or other information is NOT sufficient for this purpose (see § 2.31). The federal rules restrict any use of the information to investigate or prosecute with regard to a crime any patient with a substance use disorder, except as provided at §§ 2.12(c)(5) and 2.65; or</p>
+<p>(2) 42 CFR part 2 prohibits unauthorized disclosure of these records.</p>
+<p>From = https://www.gpo.gov/fdsys/pkg/CFR-2011-title38-vol1/xml/CFR-2011-title38-vol1-sec1-476.xml<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Details on MessageFormat can be found at <em>http://liveweb.archive.org/http://docs.oracle.com/javase/1.5.0/docs/api/java/text/MessageFormat.html</em>.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>The URI is: <a href="http://www.ietf.org/rfc/rfc3305.txt" class="uri">http://www.ietf.org/rfc/rfc3305.txt</a>. Note: All IETF documents are available online, and RFCs are available through URIs using this format.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>§ 2.32 Prohibition on re-disclosure.</p>
+<p>(a)Notice to accompany disclosure. Each disclosure made with the patient's written consent must be accompanied by one of the following written statements:</p>
+<p>(1) This information has been disclosed to you from records protected by federal confidentiality rules ( 42 CFR part 2). The federal rules prohibit you from making any further disclosure of information in this record that identifies a patient as having or having had a substance use disorder either directly, by reference to publicly available information, or through verification of such identification by another person unless further disclosure is expressly permitted by the written consent of the individual whose information is being disclosed or as otherwise permitted by 42 CFR part 2. A general authorization for the release of medical or other information is NOT sufficient for this purpose (see § 2.31). The federal rules restrict any use of the information to investigate or prosecute with regard to a crime any patient with a substance use disorder, except as provided at §§ 2.12(c)(5) and 2.65; or</p>
+<p>(2) 42 CFR part 2 prohibits unauthorized disclosure of these records.</p>
+<p>From = https://www.gpo.gov/fdsys/pkg/CFR-2011-title38-vol1/xml/CFR-2011-title38-vol1-sec1-476.xml<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>Available from ISO 1 Rue de Varembe, Case Postale 56, CH 1211, Geneve, Switzerland<a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>The URI is: <a href="http://www.ietf.org/rfc/rfc3305.txt" class="uri">http://www.ietf.org/rfc/rfc3305.txt</a>. Note: All IETF documents are available online, and RFCs are available through URIs using this format.<a href="#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>§ 2.32 Prohibition on re-disclosure.</p>
+<p>(a)Notice to accompany disclosure. Each disclosure made with the patient's written consent must be accompanied by one of the following written statements:</p>
+<p>(1) This information has been disclosed to you from records protected by federal confidentiality rules ( 42 CFR part 2). The federal rules prohibit you from making any further disclosure of information in this record that identifies a patient as having or having had a substance use disorder either directly, by reference to publicly available information, or through verification of such identification by another person unless further disclosure is expressly permitted by the written consent of the individual whose information is being disclosed or as otherwise permitted by 42 CFR part 2. A general authorization for the release of medical or other information is NOT sufficient for this purpose (see § 2.31). The federal rules restrict any use of the information to investigate or prosecute with regard to a crime any patient with a substance use disorder, except as provided at §§ 2.12(c)(5) and 2.65; or</p>
+<p>(2) 42 CFR part 2 prohibits unauthorized disclosure of these records.</p>
+<p>From = https://www.gpo.gov/fdsys/pkg/CFR-2011-title38-vol1/xml/CFR-2011-title38-vol1-sec1-476.xml<a href="#fnref8" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>

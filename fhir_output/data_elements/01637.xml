@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition>
+  <url value="http://hl7.org/v2plus/DataElementDefinition/01637"/>
+  <name value="Text instruction"/>
+  <itemNumber value="1637"/>
+  <confLength value="250"/>
+  <mayTruncate value="false"/>
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/text-data"/>
+</DataElementDefinition>

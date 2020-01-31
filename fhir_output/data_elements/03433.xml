@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/03433"/><name value="Replacement Producer"/>s Service/Test/Observation ID'/&gt;
+  
+  <itemNumber value="3433"/><mayTruncate value="not applicable"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/></DataElementDefinition>

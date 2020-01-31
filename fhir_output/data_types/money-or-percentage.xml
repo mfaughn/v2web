@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/money-or-percentage"/>
+  <name value="money or percentage"/>
+  <withdrawn value="false"/>
+  <abbreviation value="MOP"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type specifies an amount that may be either currency or a percentage. It is a variation on the MO data type that is limited to currency.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in section 6.5.8.5 IN3-5, as of v 2.5. This data type is restricted to this field.</p>
+      <p>Example: USD is the ISO 4217 code for the U.S. American dollar.</p>
+      <p>|AT^99.50^USD|</p>
+    </div>
+  </description>
+  <component>
+    <name value="Money or Percentage Indicator"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies whether the amount is currency or a percentage.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70148"><em>HL7 Table 0148 – Money or Percentage Indicato</em></a>r for valid values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0148/index.html"/>
+  </component>
+  <component>
+    <name value="Money or Percentage Quantity"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the currency or percentage quantity.</p>
+      </div>
+    </definition>
+    <confLength value=""/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Monetary Denomination"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: the denomination in which the quantity is expressed where the amount is currency. The values for the denomination component are the three-character codes specified in ISO-4217. See <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#ISO0913"><em>Externally-defined Table 0913 – Monetary Denomination Code</em></a>.</p>
+        <p>If the denomination is not specified, the context of the message or <em>MSH-17 Country Code</em>, in Chapter 2, section 2.14.9.17, is used to determine the default.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0913/index.html"/>
+  </component>
+</DataTypeDefinition>

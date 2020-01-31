@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/driver-s-license-number"/>
+  <name value="driver’s license number"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DLN"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This field contains the driver’s license information. For state or province refer to official postal codes for that country; for country refer to ISO 3166 for codes.</p>
+    </div>
+  </description>
+  <component>
+    <name value="License Number"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This field contains the driver’s license number.</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Issuing State, Province, Country"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Issuing authority for driver’s license. For state or province, refer to official postal codes for that country; for country, refer to ISO 3166 for codes. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code. <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70333"><em>User-defined Table 0333 - Driver’s License Issuing Authority</em></a> is used as the HL7 identifier for the user-defined table of values for this component.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0333/index.html"/>
+  </component>
+  <component>
+    <name value="Expiration Date"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Expiration date (DT) for driver’s license.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date"/>
+  </component>
+</DataTypeDefinition>

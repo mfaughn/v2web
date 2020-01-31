@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/continuation-pointer-segment"/>
+  <name value="continuation pointer segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="DSC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The DSC segment is used in the continuation protocol.</p>
+          <p>HL7 Attribute Table - DSC – Continuation Pointer</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00014"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/01354"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

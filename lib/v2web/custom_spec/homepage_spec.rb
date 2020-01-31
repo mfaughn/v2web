@@ -15,8 +15,9 @@ homepage_item :'FHIR::Section', :getter => 'fhir_sections'
 homepage_item :'FHIR::Narrative'
 homepage_item :'HL7::Event', :getter => 'events'
 homepage_item :'HL7::MessageDefinition', :getter => 'message_definitions'
-homepage_item :'HL7::SegmentType', :getter => 'segment_definitions'
+homepage_item :'HL7::SegmentDefinition', :getter => 'segment_definitions'
 homepage_item :'HL7::DataType', :getter => 'data_types'
+homepage_item :'HL7::DataElement', :getter => 'data_elements'
 homepage_item :'HL7::Component', :getter => 'components'
 homepage_item :'HL7::ValueSet', :getter => 'value_sets'
 homepage_item :'HL7::Value', :getter => 'values'
@@ -27,6 +28,7 @@ organizer(:Details, Home) {
   view_ref(:Summary, 'events', :label => 'Events')
   view_ref(:Summary, 'message_definitions', :label => 'Message Definitions')
   view_ref(:Summary, 'segment_definitions', :label => 'Segment Definitions')
+  view_ref(:Summary, 'data_elements', :label => 'Data Elements')
   view_ref(:Summary, 'data_types', :label => 'Data Type Definitions')
   view_ref(:Summary, 'components', :label => 'Data Type Components')
   view_ref(:Summary, 'value_sets', :label => 'Value Sets')

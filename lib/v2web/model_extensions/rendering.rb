@@ -9,6 +9,11 @@ module V2Web
     File.open(location, 'w+') { |f| f.puts page }
   end
   
+  def self.create_download_file(content, filename, root_dir)
+    location = File.join(root_dir, filename)
+    File.open(location, 'w+') { |f| f.puts content }
+  end
+  
   def self.template_dir
     @template_dir ||= File.join(__dir__, '../haml')
   end

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/00124"/><name value="Mother"/>s Identifier'/&gt;
+  
+  <itemNumber value="124"/><mayTruncate value="not applicable"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/extended-composite-id-with-check-digit"/></DataElementDefinition>

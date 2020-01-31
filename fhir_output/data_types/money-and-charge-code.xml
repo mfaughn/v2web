@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/money-and-charge-code"/>
+  <name value="money and charge code"/>
+  <withdrawn value="false"/>
+  <abbreviation value="MOC"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Transmits monetary information and the associated charge code for services performed.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Monetary Amount"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The amount and denomination of money associated with the charge code.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/money"/>
+  </component>
+  <component>
+    <name value="Charge Code"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The code identifying the charge to the ordering entity for the services performed.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  </component>
+</DataTypeDefinition>

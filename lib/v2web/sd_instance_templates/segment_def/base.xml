@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value='http://hl7.org/v2plus/SegmentDefinition/URL'/>
+  <name value='NAME'/>
+  <withdrawn value='WITHDRAWN'/>
+  <abbreviation value='ABBREVIATION'/>
+  <description>
+    <status value="additional"/>
+     <div>
+       DESCRIPTION
+     </div>
+   </description>
+   FIELDS
+</SegmentDefinition>  

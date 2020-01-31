@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -161,7 +168,7 @@ Appendix B: Conformance Statement Definition Language
 10.1 Document Definitions Layout
 </h3>
 <p class='p_v2web'>
-<p>The structure of the implementation guide, message profile, vocabulary definitions, and their descendants are expressed in a computable format using the XML schema language. Specific instances of each document type are expressed in XML. The document definitions are independent but have relationship among them. Additionally, ancillary documents are defined separately to facilitate document management and processing. The XML schema definitions can be accessed at <span style="font-size:16px">https://v2.hl7.org/conformance/profileschemas</span>. </p><p></p>
+<p>The structure of the implementation guide, message profile, vocabulary definitions, and their descendants are expressed in a computable format using the XML schema language. Specific instances of each document type are expressed in XML. The document definitions are independent but have relationship among them. Additionally, ancillary documents are defined separately to facilitate document management and processing. The XML schema definitions can be accessed at <a href="https://v2.hl7.org/conformance/profileschemas">https://v2.hl7.org/conformance/profileschemas</a>. </p><p></p>
 </p>
 
 <figure class='center'>
@@ -1739,7 +1746,7 @@ gAAEIAABCEAAAhMQ+D+gZnvJdW+t1QAAAABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.1</span> provides a high-level overview of the implementation guide document definition. The definition contains meta data and one or more message profiles. The implementation guide document definition contains references to other document definitions. This allows reuse of the fundamental building block components such as data type definitions.  </p><p>A message profile is normatively expressed as an XML instance document that contains the HL7 v2 message structure along with message element requirements. The XML instance document is governed by the message profile schema (XSD) document that provides the rules for expressing the requirements given in the normative clauses in this document.</p>
+<p></p><p>Figure 10.1 provides a high-level overview of the implementation guide document definition. The definition contains meta data and one or more message profiles. The implementation guide document definition contains references to other document definitions. This allows reuse of the fundamental building block components such as data type definitions.  </p><p>A message profile is normatively expressed as an XML instance document that contains the HL7 v2 message structure along with message element requirements. The XML instance document is governed by the message profile schema (XSD) document that provides the rules for expressing the requirements given in the normative clauses in this document.</p>
 </p>
 
 <figure class='center'>
@@ -3745,7 +3752,7 @@ AREQAREQAREQAREQAREQAREoaAISxgV9+TV5ERABERABERABERABERABERCB
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.2</span> illustrates the components of a message profile in the context of an implementation guide document definition. The message profiles contain segment groups and segments. The segment references segments definitions which in turn contains the fields along with constraint attributes.</p>
+<p></p><p>Figure 10.2 illustrates the components of a message profile in the context of an implementation guide document definition. The message profiles contain segment groups and segments. The segment references segments definitions which in turn contains the fields along with constraint attributes.</p>
 </p>
 
 <figure class='center'>
@@ -4579,7 +4586,7 @@ AABJRU5ErkJggg==
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.3</span> shows the definition of the data type library that is referenced in field and components. The data type library contains base level data types and data type flavors used in the implementation guide.</p><p></p>
+<p></p><p>Figure 10.3 shows the definition of the data type library that is referenced in field and components. The data type library contains base level data types and data type flavors used in the implementation guide.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -5604,7 +5611,7 @@ Kr8BCEAAAhCAAAQgAAEIQAACEEgiAfRqEq8KNkEAAhCAAAQgAAEIQAACEIDA
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.4</span> shows the value set library document definition. The value set library contains a list of value set definitions that provides the meta data and constraint attributes for each value set definition. Additionally, the value set definition contains the list of code values and their references to a code system.</p><p></p>
+<p></p><p>Figure 10.4 shows the value set library document definition. The value set library contains a list of value set definitions that provides the meta data and constraint attributes for each value set definition. Additionally, the value set definition contains the list of code values and their references to a code system.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -6518,7 +6525,7 @@ AElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure</span><span style="font-size:16px"> </span><span style="font-size:16px">10.5</span> shows the vocabulary binding document definition. The definition provides the link between the vocabulary definition and the element.</p>
+<p></p><p>Figure 10.5 shows the vocabulary binding document definition. The definition provides the link between the vocabulary definition and the element.</p>
 </p>
 
 <figure class='center'>
@@ -8262,7 +8269,7 @@ YII=
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.6</span> shows the document definition for the Condition Predicate, Conformance Statement, and Co-constraints. The definition provides a set of constraint types that can be applied to a given element at various levels in message profile structure definition (e.g., segment).</p><p></p>
+<p></p><p>Figure 10.6 shows the document definition for the Condition Predicate, Conformance Statement, and Co-constraints. The definition provides a set of constraint types that can be applied to a given element at various levels in message profile structure definition (e.g., segment).</p><p></p>
 </p>
 
 <figure class='center'>
@@ -9319,7 +9326,7 @@ Ac1PbT3M0JzQAAAAAElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.7</span> shows the relationships among the message profiles and how a message profile can be constructed. A complete document definition can be contained in a message profile. However, a message profile may be constructed using various parts. A core profile and one or more profile components can be combined to create a composite profile, which is a message profile.</p>
+<p></p><p>Figure 10.7 shows the relationships among the message profiles and how a message profile can be constructed. A complete document definition can be contained in a message profile. However, a message profile may be constructed using various parts. A core profile and one or more profile components can be combined to create a composite profile, which is a message profile.</p>
 </p>
 
 <figure class='center'>
@@ -10022,7 +10029,7 @@ BCDQAgGkWAuwSAoBCEAAAhCAAASyJfD/A/IDJS5cZrnpAAAAAElFTkSuQmCC
 </figure>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.8</span> shows the document definition for the Slicing mechanism. </p>
+<p></p><p>Figure 10.8 shows the document definition for the Slicing mechanism. </p>
 </p>
 <h3>
 10.2 Meta Data
@@ -10034,7 +10041,7 @@ BCDQAgGkWAuwSAoBCEAAAhCAAASyJfD/A/IDJS5cZrnpAAAAAElFTkSuQmCC
 10.2.1 Implementation Guide Meta Data
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 10.1</span> provides a list of the meta data and definition for an HL7 v2 implementation guide. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) Optional (O), or Conditional (C). Date Format is YYYYMMDD.</p><p></p>
+<p>Table 10.1 provides a list of the meta data and definition for an HL7 v2 implementation guide. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) Optional (O), or Conditional (C). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>
@@ -10385,7 +10392,7 @@ O
 </table>
 
 <p class='p_v2web'>
-<p></p><p><span style="font-size:16px">Figure 10.9</span> shows the life cycle of an implementation guide.</p><p></p>
+<p></p><p>Figure 10.9 shows the life cycle of an implementation guide.</p><p></p>
 </p>
 
 <figure class='center'>
@@ -10596,7 +10603,7 @@ SUVORK5CYII=
 10.2.2 Message Profile Meta Data
 </h4>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 10.2</span> provides a list of the meta data and definition for an HL7 v2 message profile. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R), Optional (O), or Conditional (C). Date Format is YYYYMMDD.</p><p></p>
+<p>Table 10.2 provides a list of the meta data and definition for an HL7 v2 message profile. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R), Optional (O), or Conditional (C). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
 <table class='center striped_rows table_v2web1'>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/extended-composite-name-and-identification-number-for-organizations"/>
+  <name value="extended composite name and identification number for organizations"/>
+  <withdrawn value="false"/>
+  <abbreviation value="XON"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>This data type is used in fields (e.g., PV2-23, NK1-13, PD1-3, OBR-44) to specify the name and ID number of an organization.</p>
+      <p>Example 1:</p>
+      <p>The ID for Good Health Hospital was assigned by the Community Health and Hospitals enterprise’s Hospital Master and was first issued at the Central Offices.</p>
+      <p>Good Health Hospital^L^716^9^M10^&amp;Hospital Master.Community Health and Hospitals&amp;L^XX^&amp;Central Offices.Community Health and Hospitals&amp;L^A</p>
+      <p>Example 2:</p>
+      <p>Good Health Hospital has another ID that was issued by CMS. Assigning Authority, CMS, values only the first HD component, an IS data type and assigning facility is not relevant. This information might be transmitted accordingly:</p>
+      <p>Good Health Hospital^L^4544^3^M10^CMS^XX^^A</p>
+    </div>
+  </description>
+  <component>
+    <name value="Organization Name"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The name of the specified organization.</p>
+      </div>
+    </definition>
+    <confLength value="50"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Organization Name Type Code"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code that represents the type of name i.e., legal name, display name. Refer to <a href="C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary Internet Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70204"><em>User-defined Table 0204 - Organizational Name Type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0204/index.html"/>
+  </component>
+  <component><name value="ID Number"/><sequenceNumber value="3"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The XON.3 component was deprecated as of v 2.5 and the detail was withdrawn and removed from the standard as of v 2.7.</em> Refer to <em>XON.10 Organization Identifier</em>.</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v 2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component><name value="Identifier Check Digit"/><sequenceNumber value="4"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The XON.4 component was deprecated as of v 2.5 and the detail was withdrawn and removed from the standard as of v 2.7.</em></p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v 2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component><name value="Check Digit Scheme"/><sequenceNumber value="5"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The XON.5 component was deprecated as of v 2.5 and the detail was withdrawn and removed from the standard as of v 2.7.</em> .</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v 2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component>
+    <name value="Assigning Authority"/>
+    <sequenceNumber value="6"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The assigning authority is a unique identifier of the system (or organization or agency or department) that creates the data. Assigning authorities are unique across a given HL7 implementation. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70363"><em>User-defined Table 0363 - Assigning Authority</em></a> for suggested values.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.<br/>
+<br/>
+By site agreement, implementers may continue to use <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first sub-component.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0363/index.html"/>
+  </component>
+  <component>
+    <name value="Identifier Type Code"/>
+    <sequenceNumber value="7"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the "Assigning authority" component. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70203"><em>HL7 Table 0203 - Identifier Type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <minLength value="2"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0203/index.html"/>
+  </component>
+  <component>
+    <name value="Assigning Facility"/>
+    <sequenceNumber value="8"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The place or location identifier where the identifier was first assigned to the person. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+  </component>
+  <component>
+    <name value="Name Representation Code"/>
+    <sequenceNumber value="9"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Different &lt;name/address types&gt; and representations of the same &lt;name/address&gt; should be described by repeating of this field, with different values of the &lt;name/address type&gt; and/or &lt;name/address representation&gt; component.</p>
+        <p><strong>Note:</strong> This new component remains in “alphabetic” representation with each repetition of the field using these data types, i.e. even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70465"><em>HL7 Table 0465 – Name/address Representation Code</em></a> for valid values.</p>
+        <p>In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0465/index.html"/>
+  </component>
+  <component>
+    <name value="Organization Identifier"/>
+    <sequenceNumber value="10"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the sequence of characters (the code) that uniquely identifies the item being referenced by <em>XON.1 Organization Name</em>. This component replaces <em>XON.3 ID Number</em> as of v 2.5.</p>
+        <p><strong>Note:</strong> The check digit and code identifying check digit scheme are null if Organization identifier is alphanumeric.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+</DataTypeDefinition>

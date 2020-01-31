@@ -9,11 +9,11 @@ require 'fileutils'
 def stub_folders(site)
   base = File.join( __dir__, '..','config/v2conformance')
   FileUtils.mkdir_p(base)
-  d.subsections.each { |sc| _stub_folders(sc, base, d) }
+  site.subsections.each { |ss| _stub_folders(ss, base, d) }
 end
 
-def _stub_folders(clawz, parent_dir, doc, depth = 0)
-  return if depth > 1
+def _stub_folders(section, parent_dir, doc, depth = 0)
+  # return if depth > 1
   # n = clawz.number(doc)
   nums = (clawz.containers + clawz.documents).collect do |container|
     container.subsections.index { |sc| sc.id == clawz.id }

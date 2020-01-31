@@ -10,6 +10,8 @@ require 'fileutils'
 def stub_xml(site)
   config_dir = File.join( __dir__, '..','config')
   FileUtils.mkdir_p(config_dir)
+  folder_dir = File.join( config_dir, 'v2conformance')
+  FileUtils.mkdir_p(folder_dir)
   csv = CSV.open(File.join(config_dir, 'v2conformance.csv'), 'w')
   csv << ['Header 1', 'Header 2', 'Header 3', 'Header 4', 'Header 5', 'Tab 1', 'Tab 2', 'Tab 3', 'Tab 4', 'Tab 5']
   f   = File.open(File.join(config_dir, 'v2conformance_config.xml'), 'w')
@@ -17,14 +19,14 @@ def stub_xml(site)
   f.puts "<standard title=#{site.title.inspect}>\n"
   site.subsections.each_with_index do |ss, i|
     # no tabsets at this level...
-    stub_section(ss, i + 1, f, csv, site)
+    stub_section(ss, i + 1, f, folder_dir, csv, site)
   end
   csv.close
   f.puts "</standard>\n"
   f.close
 end
 
-def stub_section(section, position, file, csv, parent, parent_section = nil)
+def stub_section(section, position, file, parent_folder_dir, csv, parent, parent_section = nil)
   csv_row = Array.new(10)
   depth = parent_section.to_s.split('.').count + 1
   if parent_section.nil?
@@ -32,8 +34,17 @@ def stub_section(section, position, file, csv, parent, parent_section = nil)
   else
     location = parent_section + '.' + position.to_s
   end
-  csv_row[depth - 1] = location + ' - ' + section.title
+  numbered_title = location + ' - ' + section.title.hl7
+  csv_row[depth - 1] = numbered_title
   csv << csv_row
+  # because Windoz can't handle long strings in paths...
+  if depth < 3
+    folder_title = numbered_title
+  else
+    folder_title = location
+  end
+  folder_dir = File.join(parent_folder_dir, folder_title)
+  FileUtils.mkdir_p(folder_dir)
   xml_content = section.content.select { |c| c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet) }
   
   entry = "<section location=#{location.inspect} title=#{section.title.inspect}"
@@ -47,7 +58,7 @@ def stub_section(section, position, file, csv, parent, parent_section = nil)
 
     xml_content.each do |xc, i|
       if xc.is_a?(V2Web::Section)
-        stub_section(xc, subsection_position, file, csv, section, location)
+        stub_section(xc, subsection_position, file, folder_dir, csv, section, location)
         subsection_position += 1
       else
         stub_tabset(xc, file, location)

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/diet-tray-instructions-segment"/>
+  <name value="diet tray instructions segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="ODT"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>This segment addresses tray instructions. These are independent of diet codes, supplements, and preferences and therefore get separate order numbers.</p>
+          <p>HL7 Attribute Table – ODT – Diet Tray Instructions</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00273"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="10">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00270"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00272"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

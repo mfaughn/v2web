@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataTypeDefinition>
-  <url value="http://hl7.org/v2-in-FHIR/DataTypeDefinition/address" />
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/address" />
   <name value='Address'/>
   <withdrawn value='false'/>
   <abbreviation value='AD'/>
@@ -28,7 +28,7 @@
     <c_length value='120'/>
     <mayTruncate value='as defined by data type'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
   <component>
     <name value='Other Designation'/>
@@ -43,7 +43,7 @@
     <c_length value='120'/>
     <mayTruncate value='as defined by data type'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
   <component>
     <name value='City'/>
@@ -58,7 +58,7 @@
     <c_length value='50'/>
     <mayTruncate value='as defined by data type'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
   <component>
     <name value='State or Province'/>
@@ -73,7 +73,7 @@
     <c_length value='50'/>
     <mayTruncate value='as defined by data type'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
   <component>
     <name value='Zip or Postal Code'/>
@@ -88,7 +88,7 @@
     <c_length value='12'/>
     <mayTruncate value='false'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
   <component>
     <name value='Country'/>
@@ -103,10 +103,10 @@
     <optionality value='O'/>
     <length value='3..3'/>
     <!--TODO This is a point to wonder about urls.  Should they be derived from the abbreviation or from the entire name? -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/id'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/id'/>
     <!-- Not sure what the URIs for v2 value sets (i.e. tables) should be.  Maybe they don't need the table number?  This is just a placeholder for now -->
     <!-- Note - This actually maps to an externally defined valueSet.  Not sure if that matters here. -->
-    <binding value='https://www.hl7.org/v2-in-FHIR/ValueSet/0399-CountryCode'/>
+    <binding value='https://www.hl7.org/v2plus/ValueSet/0399-CountryCode'/>
   </component>
   <component>
     <name value='Address Type'/>
@@ -119,9 +119,9 @@
     </definition>
     <optionality value='O'/>
     <length value='1..3'/>
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/id'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/id'/>
     <!-- Not sure what the URIs for v2 value sets (i.e. tables) should be.  Maybe they don't need the table number?  This is just a placeholder for now -->
-    <binding value='https://www.hl7.org/v2-in-FHIR/ValueSet/0190-AddressType'/>
+    <binding value='https://www.hl7.org/v2plus/ValueSet/0190-AddressType'/>
   </component>
   <component>
     <name value='Other Geographic Designation'/>
@@ -136,7 +136,7 @@
     <c_length value='50'/>
     <mayTruncate value='as defined by data type'/>
     <!--Note here that we are referencing the v2 String data type. -->
-    <type value='https://www.hl7.org/v2-in-FHIR/DataTypeDefinition/string'/>
+    <type value='https://www.hl7.org/v2plus/DataTypeDefinition/string'/>
   </component>
 </DataTypeDefinition>
 

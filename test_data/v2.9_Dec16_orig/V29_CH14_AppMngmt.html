@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>V29_CH14_AppMngmt</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p><img src="media/image1.jpeg" style="width:2.09849in;height:1.58333in" />V29_R1_2019NOV</p>
+<h1 id="application-management">.<br />
+Application Management</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td>Chapter Co-Chair and Editor</td>
+<td>Anthony Julian<br />
+Mayo Clinic</td>
+</tr>
+<tr class="even">
+<td>Chapter Co-Chair</td>
+<td><p>Nick Radov</p>
+<p>United Healthcare</p></td>
+</tr>
+<tr class="odd">
+<td>Chapter Co-Chair</td>
+<td>Sandra Stuart<br />
+Kaiser Permanente</td>
+</tr>
+<tr class="even">
+<td>Chapter Co-Chair</td>
+<td>Dave Shaver<br />
+Corepoint Health</td>
+</tr>
+<tr class="odd">
+<td>Sponsoring Work Group:</td>
+<td>Infrastructure and Messaging</td>
+</tr>
+<tr class="even">
+<td>List Server:</td>
+<td><a href="mailto:inm@lists.hl7.org">inm@lists.hl7.org</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-14-contents">chapter 14 contents</h2>
+<p><a href="#application-management">14 . Application Management 1</a></p>
+<p><a href="#_Toc25658691">14.1 chapter 14 contents 1</a></p>
+<p><a href="#introduction">14.2 Introduction 1</a></p>
+<p><a href="#trigger-events-and-message-definitions">14.3 Trigger Events and Message Definitions 2</a></p>
+<p><a href="#nmq---application-management-query-message-event-n01">14.3.1 NMQ - Application Management Query Message (Event N01) 2</a></p>
+<p><a href="#nmd---application-management-data-message-event-n02">14.3.2 NMD - Application Management Data Message (Event N02) 2</a></p>
+<p><a href="#message-segments">14.4 message segments 3</a></p>
+<p><a href="#nck-system-clock-segment">14.4.1 NCK ‑ System Clock Segment 3</a></p>
+<p><a href="#nsc-application-status-change-segment">14.4.2 NSC – Application Status Change Segment 4</a></p>
+<p><a href="#nst-application-control-level-statistics-segment">14.4.3 NST – Application Control-Level Statistics Segment 6</a></p>
+<p><a href="#outstanding-issues">14.5 outstanding issues 7</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The information in this chapter was relocated from Appendix C as of v2.4 of the standard. It had previously been entitled Network Management, and has been renamed to more accurately describe the purpose of the messages described herein. This chapter does not specify a protocol for managing networks, á la TCP/IP SNMP. Rather, its messages provide a means to manage HL7-supporting applications over a network.</p>
+<p>Because this chapter was originally named "Network Management," the messages and segments have labels beginning with the letter "N." These labels are retained for backward compatibility.</p>
+<p>As a technical chapter, this information is now normative with respect to the HL7 standard. It is anticipated that additional messages and message content will be added to this chapter in the near future.</p>
+<h2 id="trigger-events-and-message-definitions">Trigger Events and Message Definitions</h2>
+<h3 id="nmq---application-management-query-message-event-n01">NMQ - Application Management Query Message (Event N01)</h3>
+<p><em><strong>NOTE: The MFQ//MFR transaction was retained for backward compatibility as of v2.5 and has been withdrawn as of V2.7.</strong></em> See conformance based queries as defined in Chapter 5.</p>
+<h4 id="acknowledgement-choreography">Acknowledgement Choreography</h4>
+<p>None - Refer to Chapter 5 for generic query choreography.</p>
+<h3 id="nmd---application-management-data-message-event-n02">NMD - Application Management Data Message (Event N02)</h3>
+<p>The N02 event signifies when an unsolicited update (UU) Application Management Data message (NMD) is created by on application to transmit application management information to other applications. In this case, the initiating application sends an NMD message as an unsolicited update (UU) containing application management information to a receiving application, which responds with a generic acknowledgement message (ACK).</p>
+<p>For example, an application going down for backups (or starting up again after backups) might issue such a message to one or more other applications. An application switching to another CPU or file-server may also need to use this transaction to notify other systems.</p>
+<p>NMD^N02^NMD_N02: Application Management Data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Segments</th>
+<th>Description</th>
+<th>Status</th>
+<th>Chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MSH</td>
+<td>Message Header</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>[{ SFT }]</td>
+<td>Software</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>[ UAC ]</td>
+<td>User Authentication Credential</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>{</td>
+<td>--- CLOCK_AND_STATS_WITH_NOTES begin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[</td>
+<td>--- CLOCK begin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="#NCK">NCK</a></td>
+<td>System Clock</td>
+<td></td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>[{NTE}]</td>
+<td>Notes and Comments for NCK</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>]</td>
+<td>--- CLOCK end</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[</td>
+<td>--- APP_STATS begin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="#NST">NST</a></td>
+<td>Application control-level Statistics</td>
+<td></td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>[{NTE}]</td>
+<td>Notes and Comments for NST</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>]</td>
+<td>--- APP_STATS end</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[</td>
+<td>---APP_STATUS begin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="#NSC">NSC</a></td>
+<td>Application Status Change</td>
+<td></td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>[{NTE}]</td>
+<td>Notes and Comments for NSC</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>]</td>
+<td>---APP_STATUS end</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>}</td>
+<td>--- CLOCK_AND_STATS_WITH_NOTES end</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Acknowledgement Choreography</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NMD^N02^NMD_N02</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Field name</td>
+<td>Field Value: Original mode</td>
+<td>Field value: Enhanced mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MSH-15</td>
+<td>Blank</td>
+<td>AL, SU, ER</td>
+<td>NE</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>MSH-16</td>
+<td>Blank</td>
+<td>NE</td>
+<td>NE</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Immediate Ack</td>
+<td>ACK^N02^ACK</td>
+<td>ACK^N02^ACK</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Application Ack</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Because this message pair does not have an application acknowledgement, the value in MSH-16 does not affect the choreography</p>
+<p>ACK^N02^ACK: Generic Acknowledgement</p>
+<table>
+<thead>
+<tr class="header">
+<th>Segments</th>
+<th>Description</th>
+<th>Status</th>
+<th>Chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MSH</td>
+<td>Message Header</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>[{ SFT }]</td>
+<td>Software</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>[ UAC ]</td>
+<td>User Authentication Credential</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>MSA</td>
+<td>Message Acknowledgement</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>[{ ERR }]</td>
+<td>Error</td>
+<td></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Acknowledgement Choreography</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ACK^N02^ACK</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Field name</td>
+<td>Field Value: Original mode</td>
+<td>Field value: Enhanced mode</td>
+</tr>
+<tr class="odd">
+<td>MSH-15</td>
+<td>Blank</td>
+<td>AL, SU, ER, NE</td>
+</tr>
+<tr class="even">
+<td>MSH-16</td>
+<td>Blank</td>
+<td>AL, SU, ER, NE</td>
+</tr>
+<tr class="odd">
+<td>Immediate Ack</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Application Ack</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="message-segments">message segments</h2>
+<h3 id="nck-system-clock-segment">NCK ‑ System Clock Segment</h3>
+<p>The NCK segment is used to allow the various applications on the network to synchronize their system clocks (system date and time).</p>
+<p>Usage Notes: If this message is to be used to automatically reset/correct system clocks, it is recommended that the system or administrative personnel initiating the NMQ with the NCK segment have the authority to correct the clock (system date and time) for the other systems on the network. This is important in order to avoid the obvious confusion of multiple systems attempting to resynchronize each other's clocks.</p>
+<p>If this message is used only to gather information on the various systems' clocks, it is still important for an administrative procedure to be worked out to avoid conflicts when resetting clocks.</p>
+<p>HL7 Attribute Table – NCK<span id="NCK" class="anchor"></span> – System Clock</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>R/O</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4..24</td>
+<td></td>
+<td>DTM</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td>01172</td>
+<td>System Date/Time</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nck-field-definitions">NCK Field Definitions</h4>
+<h4 id="nck-1-system-datetime-dtm-01172">NCK-1 System Date/time (DTM) 01172</h4>
+<p>Definition: This field contains an HL7 time stamp. It is strongly recommended that seconds be included. If the message contains an NST or NSC segment, the NCK segment is optional. If the NCK segment is present, this field is required. If present in the NMQ message, or the unsolicited NMD message, it contains the system date/time of the sending system. If present in the NMR response message, it contains the responding system's date/time.</p>
+<h3 id="nsc-application-status-change-segment">NSC – Application Status Change Segment</h3>
+<p>The NSC segment is used to inform (NMR query response) or announce (NMD unsolicited update) the start‑up, shut‑down, and/or migration (to a different CPU or file‑server/file‑system) of a particular application.</p>
+<p><strong>Usage Notes:</strong> Fields 2-9. These are not applicable ("n/a") when the type of change being requested or reported is start-up or shut-down. If the change is of type "M", at least one of fields 2-5 must be different from its corresponding field in range 6-9.</p>
+<p>Fields 4-5, 8-9. See definitions for the MSH, message header segment, in Chapter 2, "Control Section," for fields 3-4, for system and facility. "Application" is available for interfacing with lower level protocols. "Facility" is entirely site-defined.</p>
+<p>Fields 2-3, 6-7: entirely site-defined.</p>
+<p>HL7 Attribute Table – NSC<span id="NSC" class="anchor"></span> – Application Status Change</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>R/O</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td>CWE</td>
+<td>R</td>
+<td></td>
+<td>0409</td>
+<td>01188</td>
+<td>Application Change Type</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01189</td>
+<td>Current CPU</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01190</td>
+<td>Current Fileserver</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70361">0361</a></td>
+<td>01191</td>
+<td>Current Application</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70362">0362</a></td>
+<td>01192</td>
+<td>Current Facility</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01193</td>
+<td>New CPU</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01194</td>
+<td>New Fileserver</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70361">0361</a></td>
+<td>01195</td>
+<td>New Application</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td></td>
+<td>HD</td>
+<td>O</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70362">0362</a></td>
+<td>01196</td>
+<td>New Facility</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nsc-field-definitions">NSC Field Definitions</h4>
+<h4 id="nsc-1-application-change-type-cwe-01188">NSC-1 Application Change Type (CWE) 01188 </h4>
+<p>Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;</p>
+<p>Definition: This field contains the type of change being requested (if NMR query) or announced (if NMD unsolicited update). Refer to <a href="V29_CH02C_Tables.docx#HL70409"><em>User-Defined Table 0409 - Application Change Type</em></a> in Chapter 2C, Code Tables, for suggested values. It is assumed that "new" version starts up with no loss or duplication of data as old one is shutting down (if possible).</p>
+<h4 id="nsc-2-current-cpu-st-01189">NSC-2 Current CPU (ST) 01189</h4>
+<p>Definition: This field contains a site-specific name for the current CPU.</p>
+<h4 id="nsc-3-current-fileserver-st-01190">NSC-3 Current Fileserver (ST) 01190</h4>
+<p>Definition: This field contains a site‑specific name for the current fileserver or file system used by this application.</p>
+<h4 id="nsc-4-current-application-hd-01191">NSC-4 Current Application (HD) 01191 </h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a site-specific name used to identify the "current" application process for interfacing with lower level protocols. To be used in conjunction with the sending/receiving system and facility values in the MSH. Entirely site-defined. <a href="V29_CH02C_Tables.docx#HL70361"><em>User-defined Table 0361-Sending/Receiving Application</em></a> is used as the user-defined table of values for the first component.</p>
+<p><strong>Note:</strong> By site agreement, implementors may continue to use <a href="V29_CH02C_Tables.docx#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first component.</p>
+<h4 id="nsc-5-current-facility-hd-01192">NSC-5 Current Facility (HD) 01192 </h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a site-specific name for the current facility used by this application. To be used in conjunction with the values for the sending/receiving system and facility values in the MSH. This field further describes the current application, <em>NSC-5 Current Application</em>. With the promotion of this field to an HD data type, the usage has been broadened to include not just the current facility but other organizational entities, such as: a) the organizational entity responsible for current application; b) the responsible unit; c) a product or vendor's identifier, etc. Entirely site‑defined. <a href="V29_CH02C_Tables.docx#HL70362"><em>User-defined Table 0362 – Sending/Receiving Facility</em></a> is used as the HL7 identifier for the user-defined table of values for the first component.</p>
+<blockquote>
+<p><strong>Note:</strong> By site agreement, implementors may continue to use <a href="V29_CH02C_Tables.docx#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first component.</p>
+</blockquote>
+<h4 id="nsc-6-new-cpu-st-01193">NSC-6 New CPU (ST) 01193 </h4>
+<p>Definition: This field contains a site-specific name for the new CPU.</p>
+<h4 id="nsc-7-new-fileserver-st-01194">NSC-7 New Fileserver (ST) 01194 </h4>
+<p>Definition: This field contains a site-specific name for the new fileserver or file system used by this application.</p>
+<h4 id="nsc-8-new-application-hd-01195">NSC-8 New Application (HD) 01195</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a site-specific name used to identify "new" application processes for interfacing with lower level protocols. To be used in conjunction with the sending/receiving system and facility values in the MSH. Entirely site-defined. <a href="V29_CH02C_Tables.docx#HL70361"><em>User-defined Table 0361-Sending/Receiving Application</em></a> is used as the user-defined table of values for the first component.</p>
+<blockquote>
+<p><strong>Note:</strong> By site agreement, implementors may continue to use <a href="V29_CH02C_Tables.docx#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first component.</p>
+</blockquote>
+<h4 id="nsc-9-new-facility-hd-01196">NSC-9 New Facility (HD) 01196</h4>
+<p>Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a site-specific name for the new facility used by this application. To be used in conjunction with the values for the sending/receiving system and facility values in the MSH.</p>
+<p>This field further describes the new application, <em>NSC-8 New Application</em>. With the promotion of this field to an HD data type, the usage has been broadened to include not just the new facility but other organizational entities, such as: a) the organizational entity responsible for new application; b) the responsible unit; c) a product or vendor's identifier, etc. Entirely site‑defined. <a href="V29_CH02C_Tables.docx#HL70362"><em>User-defined Table 0362 – Sending/Receiving Facility</em></a> is used as the HL7 identifier for the user-defined table of values for the first component.</p>
+<blockquote>
+<p><strong>Note:</strong> By site agreement, implementors may continue to use <a href="V29_CH02C_Tables.docx#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first component.</p>
+</blockquote>
+<h3 id="nst-application-control-level-statistics-segment">NST – Application Control-Level Statistics Segment</h3>
+<p>The NST segment allows application control-level statistical information to be passed between the various systems on the network. Some fields in this segment refer to portions of lower level protocols; they contain information that can be used by application management applications monitoring the state of various network links.</p>
+<p><strong>Usage Notes:</strong> Fields 2-15. These are all marked optional since the statistics kept on a particular link and negotiated between the two systems in question will vary. Not all values will apply to each system. Some values are concerned with the type of port, and some values pertain to the lower level protocol.</p>
+<p>HL7 Attribute Table – NST<span id="NST" class="anchor"></span> – Application control level statistics</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>SEQ</td>
+<td>LEN</td>
+<td>C.LEN</td>
+<td>DT</td>
+<td>R/O</td>
+<td>RP/#</td>
+<td>TBL#</td>
+<td>ITEM#</td>
+<td>ELEMENT NAME</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1..1</td>
+<td></td>
+<td>ID</td>
+<td>R</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70136">0136</a></td>
+<td>01173</td>
+<td>Statistics Available</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td>ST</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01174</td>
+<td>Source Identifier</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td>ID</td>
+<td>O</td>
+<td></td>
+<td><a href="V29_CH02C_Tables.docx#HL70332">0332</a></td>
+<td>01175</td>
+<td>Source Type</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01176</td>
+<td>Statistics Start</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td>DTM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01177</td>
+<td>Statistics End</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01178</td>
+<td>Receive Character Count</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01179</td>
+<td>Send Character Count</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01180</td>
+<td>Messages Received</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01181</td>
+<td>Messages Sent</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01182</td>
+<td>Checksum Errors Received</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01183</td>
+<td>Length Errors Received</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01184</td>
+<td>Other Errors Received</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01185</td>
+<td>Connect Timeouts</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01186</td>
+<td>Receive Timeouts</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td></td>
+<td></td>
+<td>NM</td>
+<td>O</td>
+<td></td>
+<td></td>
+<td>01187</td>
+<td>Application control-level Errors</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nst-field-definitions">NST Field Definitions</h4>
+<h4 id="nst-1-statistics-available-id-01173">NST-1 Statistics Available (ID) 01173 </h4>
+<p>Definition: This field indicates the availability of statistics. Refer to <a href="V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 - Yes/no Indicator</em></a> for valid values.</p>
+<p>N - the responding application does not keep any statistics. If the value "N" is specified, the response message is used to signify to the initiating application that the communication link between the initiating application and the responding application is operational (and fields 2‑15 are empty in the response message).</p>
+<p>Y - the responding application does keep statistics, fields 4 and 5 are required (and the response message contains one or more not empty or not unvalued fields in the range 2‑3, 6‑15).</p>
+<h4 id="nst-2-source-identifier-st-01174">NST-2 Source Identifier (ST) 01174</h4>
+<p>Definition: This field identifies a particular lower level link (e.g., a port number).</p>
+<h4 id="nst-3-source-type-id-01175">NST-3 Source Type (ID) 01175</h4>
+<p>Definition: This field identifies (in certain systems) whether a lower level source identifier is an initiate or accept type. Refer to <a href="V29_CH02C_Tables.docx#HL70332"><em>HL7 Table 0332 – Source Type</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<h4 id="nst-4-statistics-start-dtm-01176">NST-4 Statistics Start (DTM) 01176</h4>
+<p>Definition: This field contains the date/time stamp of the start of the collection of the statistics reported in fields 6‑15 of this segment. It is strongly recommended that this value include seconds.</p>
+<h4 id="nst-5-statistics-end-dtm-01177">NST-5 Statistics End (DTM) 01177</h4>
+<p>Definition: This field contains the date/time stamp of the end of the statistics collection period reported in fields 6‑15 of this segment. It is strongly recommended that this value include seconds.</p>
+<h4 id="nst-6-receive-character-count-nm-01178">NST-6 Receive Character Count (NM) 01178</h4>
+<p>Definition: This field contains the number of characters received.</p>
+<h4 id="nst-7-send-character-count-nm-01179">NST-7 Send Character Count (NM) 01179</h4>
+<p>Definition: This field contains the number of characters sent.</p>
+<h4 id="nst-8-messages-received-nm-01180">NST-8 Messages Received (NM) 01180</h4>
+<p>Definition: This field contains the number of messages received.</p>
+<h4 id="nst-9-messages-sent-nm-01181">NST-9 Messages Sent (NM) 01181</h4>
+<p>Definition: This field contains the number of messages sent.</p>
+<h4 id="nst-10-checksum-errors-received-nm-01182">NST-10 Checksum Errors Received (NM) 01182</h4>
+<p>Definition: This field contains the number of messages received with checksum errors.</p>
+<h4 id="nst-11-length-errors-received-nm-01183">NST-11 Length Errors Received (NM) 01183</h4>
+<p>Definition: This field contains the number of messages received with length errors.</p>
+<h4 id="nst-12-other-errors-received-nm-01184">NST-12 Other Errors Received (NM) 01184</h4>
+<p>Definition: This field contains the number of "other" invalid messages received (excluding length and checksum errors).</p>
+<h4 id="nst-13-connect-timeouts-nm-01185">NST-13 Connect Timeouts (NM) 01185</h4>
+<p>Definition: This field contains the number of connect timeout errors.</p>
+<h4 id="nst-14-receive-timeouts-nm-01186">NST-14 Receive Timeouts (NM) 01186</h4>
+<p>Definition: This field contains the number of timeouts while waiting for a response to an initiated message.</p>
+<h4 id="nst-15-application-control-level-errors-nm-01187">NST-15 Application Control-level Errors (NM) 01187</h4>
+<p>Definition: This field contains the number of application control-level errors in response to an initiated message.</p>
+<h2 id="outstanding-issues">outstanding issues</h2>
+<p>None.</p>
+</body>
+</html>

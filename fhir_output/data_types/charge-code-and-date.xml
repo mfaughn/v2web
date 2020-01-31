@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/charge-code-and-date"/>
+  <name value="charge code and date"/>
+  <withdrawn value="false"/>
+  <abbreviation value="CCD"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Specifies whether a charge action is based on an invocation event or is time-based.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Invocation Event"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies the code for the event precipitating/triggering the charge activity. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc.doc#HL70100"><em>HL7 Table 0100 - Invocation event</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0100/index.html"/>
+  </component>
+  <component>
+    <name value="Date/time"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The second component is used to express the exact time to charge for the ordered service; it is used only when the <em>CCD.1</em> value is T. When used, it is expressed as a DTM data type.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+</DataTypeDefinition>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/01993"/><name value="Number of TP"/>s Technical Part'/&gt;
+  
+  <itemNumber value="1993"/><confLength value="6"/><mayTruncate value="true"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/></DataElementDefinition>

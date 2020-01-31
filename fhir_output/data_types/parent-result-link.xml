@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/parent-result-link"/>
+  <name value="parent result link"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PRL"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Uniquely identifies the parent result’s OBX segment related to the current order, together with the information in <em>OBR-29 - Parent</em>.</p>
+      <p><strong>Usage Note:</strong> This data type is applied only to <em>OBR-26 - Parent Result</em> where it serves to make information available for other types of linkages (e.g., toxicology). This important information, together with the information in <em>OBR-29 - Parent</em>, uniquely identifies the parent result’s OBX segment related to this order. The value of this OBX segment in the parent result is the organism or chemical species about which this battery reports. For example, if the current battery is an antimicrobial susceptibility, the parent results identified OBX contains a result that identifies the organism on which the susceptibility was run. This indirect linkage is preferred because the name of the organism in the parent result may undergo several preliminary values prior to finalization.</p>
+      <p>We emphasize that this field does not take the entire result field from the parent. It is meant only for the text name of the organism or chemical subspecies identified. This field is included only to provide a method for linking back to the parent result for those systems that could not generate unambiguous Observation IDs and sub-IDs.</p>
+      <p>This field is present only when the parent result is identified by <em>OBR-29 - Parent</em> and the parent spawns child orders for each of many results. See Chapter 7, "Observations", for more details about this linkage.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in sections 4.5.3.26 - OBR-26 and 7.4.1.26 - OBR-26 as of v 2.5.</p>
+    </div>
+  </description>
+  <component><name value="Parent Observation Identifier"/><sequenceNumber value="1"/><definition><status value="additional"/><div><p>Definition: Contains the unique identifier of the parent observation as defined in the <em>OBX-3</em> of the parent result. The value is the same as the <em>OBX-3</em> of the parent.</p></div></definition><mayTruncate value="not applicable"/>
+  Defined in the OBX-3 of the parent result.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  
+</component>
+  <component><name value="Parent Observation Sub-identifier"/><sequenceNumber value="2"/><definition><status value="additional"/><div><p>Definition: Contains the sub-ID of the parent result as defined in the <em>OBX-4</em> of the parent result. The value is the same as the <em>OBX-4</em> of the parent.</p></div></definition><confLength value="20"/><mayTruncate value="false"/>
+  Defined in the OBX-4 of the parent result.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  
+</component>
+  <component><name value="Parent Observation Value Descriptor"/><sequenceNumber value="3"/><definition><status value="additional"/><div><p>Definition: Contains a descriptor of the parent observation value as specified in the <em>OBX-5</em> of the parent result.</p><p>As an example, the third component may be used to record the name of the microorganism identified by the parent result directly. The organism in this case should be identified exactly as it is in the parent culture.</p></div></definition><mayTruncate value="not applicable"/>
+  Taken from the OBX-5 of the parent result.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/text-data"/>
+  
+</component>
+</DataTypeDefinition>

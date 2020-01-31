@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/performing-person-time-stamp"/>
+  <name value="performing person time stamp"/>
+  <withdrawn value="false"/>
+  <abbreviation value="PPN"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>This data type is the equivalent of an XCN data type joined with a DTM data type. However, the XCN data type has been flattened to allow legal expression of its embedded complex data types HD, CWE and CWE.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Person Identifier"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component carries the Person Identifier itself. <em>PPN.1</em>, in conjunction with <em>PPN.9</em>, uniquely identifies the entity/person.</p>
+      </div>
+    </definition>
+    <confLength value="15"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Family Name"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component allows full specification of the surname of a person. Where appropriate, it differentiates the person's own surname from that of the person's partner or spouse, in cases where the person's name may contain elements from either name. It also permits messages to distinguish the surname prefix (such as "van" or "de") from the surname root. See section <em>2.A.30</em>, "<a href="#_FN_-_family_name"><em>FN – Family Name</em></a>".</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/family-name"/>
+  </component>
+  <component>
+    <name value="Given Name"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: First name.</p>
+      </div>
+    </definition>
+    <confLength value="30"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Second and Further Given Names or Initials Thereof"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Multiple middle names may be included by separating them with spaces.</p>
+      </div>
+    </definition>
+    <confLength value="30"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Suffix"/>
+    <sequenceNumber value="5"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Used to specify a name suffix (e.g., Jr. or III).</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Prefix"/>
+    <sequenceNumber value="6"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Used to specify a name prefix (e.g., Dr.).</p>
+      </div>
+    </definition>
+    <confLength value="20"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component><name value="Degree"/><sequenceNumber value="7"/><definition><status value="additional"/><div><p><strong>Attention: <em>The PPN.7 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7</em></strong> See <em>PPN.22 - Professional Suffix</em>.</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v2.7
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component><name value="Source Table"/><sequenceNumber value="8"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>Retained for backwards compatibility only as of v2.7 and withdrawn in V2.9.</em> The reader is referred to <em>PPN.9</em> instead.</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of V2.9
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  <binding value="www.hl7.org/fhir/v2/0297/index.html"/>
+
+</component>
+  <component>
+    <name value="Assigning Authority"/>
+    <sequenceNumber value="9"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The assigning authority is a unique identifier of the system (or organization or agency of department) that creates the data. It is a HD data type. <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70363"><em>User-defined Table 0363 – Assigning Authority</em></a> is used as the HL7 identifier for the user-defined table of values for the first sub-component of the HD component, &lt;namespace ID&gt;.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.</p>
+        <p>By site agreement, implementors may continue to use <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 – Namespace ID</em></a> for the first sub-component.</p>
+        <p><strong>Attention:</strong><em>As of v 2.7, the Assigning Authority is conditional.</em> It is required if <em>PPN.1</em> is populated and neither <em>PPN.23</em> nor <em>PPN.24</em> are populated. All 3 components may be populated. No assumptions can be safely made based on position or sequence. Best practice is to send an OID in this component when populated.</p>
+        <p>The reader is referred to the <em>PPN.23</em> and the <em>PPN.24</em> if there is a need to transmit values with semantic meaning for an assigning jurisdiction or assigning department or agency in addition to, or instead of, an assigning authority. However, all 3 components may be valued. If, in so doing, it is discovered that the values in <em>PPN.23</em> and/or <em>PPN.24</em> conflict with <em>PPN.9</em>, the user would look to the Message Profile or other implementation agreement for a statement as to which takes precedence.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+    <binding value="www.hl7.org/fhir/v2/0363/index.html"/>
+  </component>
+  <component>
+    <name value="Name Type Code"/>
+    <sequenceNumber value="10"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code that represents the type of name. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70200"><em>HL7 Table 0200 - Name Type</em></a> for valid values (see Section <em>2.A.89</em>, “<em>XPN - extended person name</em>”).</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0200/index.html"/>
+  </component>
+  <component>
+    <name value="Identifier Check Digit"/>
+    <sequenceNumber value="11"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A digit, or digits, exclusive of the identifier in <em>CX.1</em>, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier.</p>
+      </div>
+    </definition>
+    <confLength value="4"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Check Digit Scheme"/>
+    <sequenceNumber value="12"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Contains the code identifying the check digit scheme employed.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70061"><em>HL7 Table 0061 - Check Digit Scheme</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0061/index.html"/>
+  </component>
+  <component>
+    <name value="Identifier Type Code"/>
+    <sequenceNumber value="13"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code corresponding to the type of identifier. In some cases, this code may be used as a qualifier to the "Assigning authority" component. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70203"><em>HL7 Table 0203 - Identifier Type</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0203/index.html"/>
+  </component>
+  <component>
+    <name value="Assigning Facility"/>
+    <sequenceNumber value="14"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The place or location identifier where the identifier was first assigned to the patient. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.</p>
+        <p><strong>Note:</strong> When the HD data type is used in a given segment as a component of a field of another data type, <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70300"><em>User-defined Table 0300 - Namespace ID</em></a> (referenced by the first sub-component of the HD component) may be re-defined (given a different user-defined table number and name) by the technical committee responsible for that segment.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/hierarchic-designator"/>
+  </component>
+  <component>
+    <name value="Date/Time Action Performed"/>
+    <sequenceNumber value="15"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>This component describes when the activity was performed.</p>
+        <p><strong>Note:</strong> If this field is not null, both the performing person and the time stamp must be valued.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Name Representation Code"/>
+    <sequenceNumber value="16"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Different name/address types and representations of the same name/address should be described by repeating of this field, with different values of the Name/Address Type and/or Name/Address Representation component.</p>
+        <p><strong>Note:</strong> This new component remains in “alphabetic” representation with each repetition of the field using these data types. That is, even though the name may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.</p>
+        <p>In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0465/index.html"/>
+  </component>
+  <component>
+    <name value="Name Context"/>
+    <sequenceNumber value="17"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component is used to designate the context in which a name is used. The main use case is in Australian healthcare: indigenous patients who prefer to use different names when attending different healthcare institutions. Another use case occurs in the US where health practitioners can be licensed under slightly different names and the reporting of the correct name is vital for administrative purposes. Refer to chapter 3, section 3.4.2.6 for more detailed information on how to use this table. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70448"><em>User-defined Table 0448 – Name Context</em></a> for suggested values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0448/index.html"/>
+  </component>
+  <component><name value="Name Validity Range"/><sequenceNumber value="18"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The PPN.18 component was deprecated as of v2.5 and the detail was withdrawn and removed from the standard as of v 2.7.</em> Refer to <a href="#effective-date-dtm-2"><em>PPN.20 Effective Date</em></a> and <a href="#expiration-date-dtm"><em>PPN.21 Expiration Date</em></a>.</p></div></definition><mayTruncate value="not applicable"/>
+  withdrawn as of v2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component>
+    <name value="Name Assembly Order"/>
+    <sequenceNumber value="19"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code that represents the preferred display order of the components of this person name. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70444"><em>HL7 Table 0444 – Name Assembly Order</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0444/index.html"/>
+  </component>
+  <component>
+    <name value="Effective Date"/>
+    <sequenceNumber value="20"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The first date, if known, on which the person name is valid and active.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Expiration Date"/>
+    <sequenceNumber value="21"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The last date, if known, on which the person name is valid and active.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Professional Suffix"/>
+    <sequenceNumber value="22"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Used to specify an abbreviation, or a string of abbreviations, denoting qualifications that support the person’s profession, (e.g., licenses, certificates, degrees, affiliations with professional societies, etc.). The Professional Suffix normally follows the Family Name when the Person Name is used for display purposes. Please note that this component is an unformatted string and is used for display purposes only. Detailed information regarding the contents of Professional Suffix is obtained using appropriate segments in Chapter 15, "Personnel Management".</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Assigning Jurisdiction"/>
+    <sequenceNumber value="23"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The geo-political body that assigned the identifier in component 1.</p>
+        <p>See section <em>2.A.14.9</em>, "<em>Assigning Jurisdiction (CWE)</em>" for further detail.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  </component>
+  <component>
+    <name value="Assigning Agency or Department"/>
+    <sequenceNumber value="24"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The agency or department that assigned the identifier in component 1.</p>
+        <p>See section <em>2.A.14.10</em>, "<em>Assigning Agency or Department (CWE)</em>" for further details.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+  </component>
+  <component>
+    <name value="Security Check"/>
+    <sequenceNumber value="25"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component is used to communicate a version code that may be assigned to the value given in <em>PPN.1 - Person Identifier</em>.</p>
+      </div>
+    </definition>
+    <confLength value="4"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Security Check Scheme"/>
+    <sequenceNumber value="26"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.</p>
+        <p>Refer to <em><a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70904">HL7 Table 0904 - Security Check Scheme</a></em> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0904/index.html"/>
+  </component>
+</DataTypeDefinition>

@@ -1,4 +1,4 @@
-require 'open3'
+require_relative 'extractor_helpers'
 module V2Web
   class DocXtractor
     def clear_hl7
@@ -20,8 +20,8 @@ module V2Web
       @node_types = []
       @styles = []
       doc.remove_namespaces!
-      ChangeTracker.start
-      ChangeTracker.commit
+      # ChangeTracker.start
+      # ChangeTracker.commit
       @datatype = nil
       @datatypes = {}
       @component = nil
@@ -32,325 +32,6 @@ module V2Web
       # puts @styles.map { |x| x.to_s.slice(/(?<=<pStyle val=").+(?="\/>)/)}.uniq.sort
     end
     
-    def add_types_to_components
-      HL7::Component.all.each do |c|
-        dt = c.legacy_dt
-        if dt
-          type = HL7::DataType.where(:abbreviation => dt).first
-          if type
-            ChangeTracker.start
-            c.type = type
-            ChangeTracker.commit
-          else
-            puts Rainbow("Could not find datatype for #{c.owner.abbreviation}::#{c.name}").orange
-          end
-        end
-      end
-    end
-    
-    def find_datatypes
-      @html.at('body').children.each do |node|
-        if node.name == 'h3'
-          abbrv, name = split_dt_title(node.text)
-          @current_html_dt = name.strip
-          @html_dt[@current_html_dt] = []
-        end
-        next unless @current_html_dt
-        @html_dt[@current_html_dt] << node unless node.name == 'text'
-      end
-      # @html_dt.keys.sort.each {|k| p k}
-    end
-    
-    def check
-      return unless @datatype
-      names = Hash.new(0)
-      @datatype.components.each { |c| names[c.name] += 1 }
-      dupes = names.select { |_,v| v > 1 }
-      if dupes.any?
-        puts Rainbow(@datatype.abbreviation).green
-        puts dupes.keys
-        puts
-      end
-    end
-    
-    def split_dt_title(str)
-      ret = str.gsub(/WITHDRAWN\s+\(/, '')
-      ret.gsub!(')', '')
-      ret.split(/\s+[-|–]\s+/)
-    end
-    
-    def find_component_definitions(html_dt)
-      defns = {}
-      current = nil
-      html_dt.each do |node|
-        if node.name == 'h4'
-          t = node.text.strip
-          unless t.empty?
-            current = (t.slice(/.+(?=\()/)&.strip) || t
-            defns[current] = []
-          end
-        else
-          next unless current
-          defns[current] << node unless node.name == 'text' || node.text.strip.empty?
-        end
-      end
-      defns
-    end
-    
-    def extract_components(table, defns)
-      rows = table.at('tbody').children.reject { |n| n.name == 'text'}[1..-1]
-      unless (rows.count == defns.count) || defns.count == 0 
-        p defns.count.to_s + '  ' + defns.keys.join(', ')
-        puts Rainbow(@datatype.name).red
-      end
-      rows.each do |row|
-        entries = []
-        row.children.each do |td|
-          next if td.name == 'text'
-          entry = td.text.strip
-          entry = nil if entry.empty?
-          entries << entry
-        end
-        # @datatypes[@datatype.name][:components] << entries
-        seq, len, clen, dt, opt, tbl, name, comment, ref = entries
-        # puts Rainbow(clen).red if clen&.strip == '#' # there are none
-        # if clen # all values have either = or #
-        #   puts Rainbow(clen).orange unless clen =~ /=|#/
-        # end
-        if seq == '...'
-          ChangeTracker.start
-          @datatype.array_type = true
-          @datatype.save
-          ChangeTracker.commit
-          next
-        end
-        example = name.slice(/(?<=\(e\.g\., ).+(?=\))/)
-        name  = name.gsub(/ \(.*/, '').gsub(/\s+/, ' ')
-        _clen = clen&.delete('#=')
-        props = {
-          :legacy_seq => seq,
-          :length     => len,
-          :c_length   => _clen,
-          :legacy_dt  => dt,
-          :legacy_tbl => tbl,
-          :name       => name,
-          :comments   => comment,
-          :legacy_ref => ref
-        }
-        ChangeTracker.start
-        component = HL7::Component.create(props)
-        component.example = example if example
-        component.optionality = opt if opt
-        if clen =~ /=/
-          component.may_truncate = 'false'
-        elsif clen =~ /#/
-          component.may_truncate = 'true'
-        else
-          component.may_truncate = 'not applicable'
-        end
-        component.table_row_source = make_html_code([row])
-        if defns.any?
-          defn = defns[name]
-          if defn
-            component.definition = make_html_text([defn].flatten)
-          else
-            puts Rainbow("Can't find a definition for #{name}").yellow
-            pp defns.keys
-            puts defn.class
-          end
-        end
-        
-        # FIXME add definition stuff using defn[name] to get html -- this dumps all examples and everything straight in with no formatting but it is a good start
-        @datatype.add_component(component)
-        ChangeTracker.commit
-      end
-    end
-    
-    def create_datatype(node)
-      # check
-      txt = extract_text(node).strip
-      abbrv, name = split_dt_title(txt)
-      puts Rainbow("#{abbrv} - #{name}").magenta
-      html_dt = @html_dt[name]
-      puts Rainbow("FAIL: #{name.inspect}").red unless html_dt
-      ChangeTracker.start
-      @datatype = HL7::DataType.create(:name => name, :abbreviation => abbrv)
-      @datatype.html_source = make_html_code(html_dt)
-      @datatype.withdrawn = !!(txt =~ /WITHDRAWN/)
-      @datatype.save
-      ChangeTracker.commit
-      inner = html_dt[1..-1].take_while { |n| n.name != 'h4' }
-      inner.reject! { |n| n.text =~ /HL7 Component Table/ }
-      table = inner.find { |n| n.name == 'table' }
-      if table
-        defns = find_component_definitions(html_dt)
-        extract_components(table, defns)
-      end
-      ChangeTracker.start
-      @datatype.definition = make_html_text(inner.select {|n| n != table}) # everything that came before the component definitions, except for the table (and table caption which already removed)
-      @datatype.save
-      ChangeTracker.commit
-      @datatypes[name] = {:obj => @datatype, :components => []}
-      @component_num = 0
-      @component = nil
-    end
-    
-    def parse_components(node)
-      return
-      rows = node.xpath('.//tr')
-      return false unless rows.first.to_s =~ /ComponentTableHeader/
-      rows[1..-1].each do |row|
-        cells = row.xpath('.//tc')
-        entries = cells.map do |cell|
-          et = extract_text(cell).strip
-        end
-        entries = entries.map { |e| e.empty? ? nil : e.strip }
-        @datatypes[@datatype.name][:components] << entries
-        seq, len, clen, dt, opt, tbl, name, comment, ref = entries
-        # puts Rainbow(clen).red if clen&.strip == '#' # there are none
-        # if clen # all values have either = or #
-        #   puts Rainbow(clen).orange unless clen =~ /=|#/
-        # end
-        if seq == '...'
-          ChangeTracker.start
-          @datatype.array_type = true
-          @datatype.save
-          ChangeTracker.commit
-          next
-        end
-        example = name.slice(/(?<=\(e\.g\., ).+(?=\))/)
-        name = name.gsub(/ \(.*/, '').gsub(/\s+/, ' ')
-        _clen = clen&.delete('#=')
-        props = {
-          :legacy_seq => seq,
-          :length     => len,
-          :c_length   => _clen,
-          :legacy_dt  => dt,
-          :legacy_tbl => tbl,
-          :name       => name,
-          :comments   => comment,
-          :legacy_ref => ref
-        }
-        ChangeTracker.start
-        component = HL7::Component.create(props)
-        component.example = example if example
-        component.optionality = opt if opt
-        if clen =~ /=/
-          component.may_truncate = 'false'
-        elsif clen =~ /#/
-          component.may_truncate = 'true'
-        else
-          component.may_truncate = 'not applicable'
-        end
-        component.table_row_source = make_xml_code(node)
-        @datatype.add_component(component)
-        ChangeTracker.commit
-      end
-    end
-    
-    def add_to_component(node)
-      @component_num += 1
-      title = extract_text(node).gsub(/\(.*\)/, '').strip
-      @component = @datatype.components.find { |c| c.name.downcase == title.downcase }
-      msg = "#{@datatype.abbreviation}: #{@component_num} - #{title}"
-      if @component
-        # puts Rainbow(msg).green
-      else
-        p @datatype.components.map { |c| c.name }.sort
-        puts Rainbow(msg).red
-        puts node
-      end
-    end
-    
-    # def add_to_datatype_def(node)
-    #
-    #   elsif @datatype
-    #     puts Rainbow(t).green;puts
-    #   end
-    #   ChangeTracker.commit
-    # end
-    
-    def apply_style(html, style)
-      html = case style
-      when :example
-        html.gsub('<p', '<p class="hl7_example"')
-      when :note
-        html.gsub('<p', '<p class="hl7_note"')
-      when :table_caption
-        html.gsub('<p', '<p class="hl7_table_caption"')
-      else
-        puts Rainbow(style.to_s).yellow
-        puts html;puts
-        html
-      end
-      html
-    end
-    
-    def get_html(node)
-      input  = "docx_datatype.docx"
-      output = File.join(__dir__, "docx_datatype.html")
-      FileUtils.rm(input) if File.exist?(input)
-      FileUtils.rm(output) if File.exist?(output)
-      docx = Caracal::Document.new(input)
-      docx.raw_xml(node.to_s)
-      docx.save
-      stdout, stderr, status = Open3.capture3("pandoc -s #{input} -o #{output}")
-      puts stderr if stderr && !stderr =~ /WARNING/i
-      FileUtils.rm(input) if File.exist?(input)
-      html = File.open(output) { |f| Nokogiri::HTML(f) }.at('body').inner_html
-      FileUtils.rm(output) if File.exist?(output)
-      unless html =~ /^<p>/
-        puts Rainbow(html).red;puts
-      end
-      html
-    end
-    
-    def add_datatype_or_component_content(node, style = nil)
-return
-      obj    = @component || @datatype
-      text   = extract_text(node)
-      # html_text = get_html(node)
-      # html_text = apply_style(html_text, style) if style
-      add_datatype_or_component_definition(obj, html_text, node)
-      if node.to_s =~ /href=/
-        puts node.to_s
-        puts "*"*22
-        puts html_text
-        puts
-      end
-      # if text =~ /^(Definition|Attention)/
-      #   add_datatype_or_component_definition(obj, html_text, node)
-      # else
-      #   if @component
-      #     # puts Rainbow(text).yellow
-      #   else
-      #     add_datatype_or_component_definition(obj, html_text, node)
-      #   end
-      #   # puts
-      # end
-        
-    end
-    
-    
-    def add_datatype_or_component_definition(obj, text, node)
-      ChangeTracker.start
-      if obj.definition_source
-        obj.definition_source_content = obj.definition_source_content + "\n" + node.to_xml
-      else
-        obj.definition_source = make_xml_code(node)
-      end
-      if obj.definition
-        obj.definition_content = obj.definition_content + "\n" + text
-      else
-        obj.definition = Gui_Builder_Profile::RichText.create(:content => text)
-      end
-      obj.save
-      ChangeTracker.commit
-    end
-    
-    def other_table(node)
-    end
-    
     def _extract_datatypes(node)
       @node_types << node.name
       case node.name
@@ -359,7 +40,8 @@ return
       when 'document'
         node.children.each { |c| _extract_datatypes(c) }
       when 'tbl'
-        parse_components(node) || other_table(node)
+        # Hey, this ends up doing NOTHING!
+        # parse_components(node) || other_table(node)
       when 'bookmarkStart', 'bookmarkEnd'
         # TODO
       when 'sectPr'
@@ -450,6 +132,271 @@ return
         end
       end
     end
-
+    
+    def add_types_to_components
+      HL7::Component.all.each do |c|
+        dt = c.legacy_dt
+        if dt
+          type = HL7::DataType.where(:abbreviation => dt).first
+          if type
+            ChangeTracker.start
+            c.type = type
+            ChangeTracker.commit
+          else
+            puts Rainbow("Could not find datatype for #{c.owner.abbreviation}::#{c.name}").orange
+          end
+        end
+      end
+    end
+    
+    def find_datatypes
+      @html.at('body').children.each do |node|
+        if node.name == 'h3'
+          abbrv, name = split_title(node.text)
+          @current_html_dt = name.strip
+          @html_dt[@current_html_dt] = []
+        end
+        next unless @current_html_dt
+        @html_dt[@current_html_dt] << node unless node.name == 'text'
+      end
+      # @html_dt.keys.sort.each {|k| p k}
+    end
+    
+    def check
+      return unless @datatype
+      names = Hash.new(0)
+      @datatype.components.each { |c| names[c.name] += 1 }
+      dupes = names.select { |_,v| v > 1 }
+      if dupes.any?
+        puts Rainbow(@datatype.abbreviation).green
+        puts dupes.keys
+        puts
+      end
+    end
+      
+    def extract_components(table, defns)
+      rows = table.at('tbody').children.reject { |n| n.name == 'text'}[1..-1]
+      unless (rows.count == defns.count) || defns.count == 0 
+        p defns.count.to_s + '  ' + defns.keys.join(', ')
+        puts Rainbow(@datatype.name).red
+      end
+      rows.each do |row|
+        entries = []
+        row.children.each do |td|
+          next if td.name == 'text'
+          entry = td.text.strip
+          entry = nil if entry.empty?
+          entries << entry
+        end
+        # @datatypes[@datatype.name][:components] << entries
+        seq, len, clen, dt, opt, tbl, name, comment, ref = entries
+        # puts Rainbow(clen).red if clen&.strip == '#' # there are none
+        # if clen # all values have either = or #
+        #   puts Rainbow(clen).orange unless clen =~ /=|#/
+        # end
+        if seq == '...'
+          ChangeTracker.start
+          @datatype.array_type = true
+          @datatype.save
+          ChangeTracker.commit
+          next
+        end
+        example = name.slice(/(?<=\(e\.g\., ).+(?=\))/)
+        name  = name.gsub(/ \(.*/, '').gsub(/\s+/, ' ')
+        _clen = clen&.delete('#=')
+        min_length, max_length = len.to_s.split(/\.+./)
+        props = {
+          :sequence_number => seq,
+          :min_length => min_length,
+          :max_length => max_length,
+          :c_length   => _clen,
+          :legacy_dt  => dt,
+          :legacy_tbl => tbl,
+          :name       => name,
+          :legacy_ref => ref
+        }
+        ChangeTracker.start
+        component = HL7::Component.create(props)
+        component.add_comment(comment) if comment
+        component.add_example(example) if example
+        component.optionality = opt if opt
+        if clen =~ /=/
+          component.may_truncate = 'false'
+        elsif clen =~ /#/
+          component.may_truncate = 'true'
+        else
+          component.may_truncate = 'not applicable'
+        end
+        component.table_row_source = make_html_code([row])
+        if defns.any?
+          defn = defns[name.delete("’'")]
+          if defn
+            component.definition = make_html_text([defn].flatten)
+          else
+            puts Rainbow("Can't find a definition for #{name.inspect}").yellow
+            pp defns.keys
+            puts defn.class
+          end
+        end
+        
+        # FIXME add definition stuff using defn[name] to get html -- this dumps all examples and everything straight in with no formatting but it is a good start
+        @datatype.add_component(component)
+        ChangeTracker.commit
+        if tbl
+          tid = tbl.to_s.strip.to_i
+          vs = HL7::ValueSet.where(:table_id => tid).first
+          ChangeTracker.start
+          vs ||= HL7::ValueSet.create(:table_id => tid)
+          component.table = vs
+          ChangeTracker.commit
+        end
+      end
+    end
+    
+    def create_datatype(node)
+      # check
+      txt = extract_text(node).strip
+      abbrv, name = split_title(txt)
+      puts Rainbow("#{abbrv} - #{name}").magenta
+      html_dt = @html_dt[name]
+      puts Rainbow("FAIL: #{name.inspect}").red unless html_dt
+      ChangeTracker.start
+      @datatype = HL7::DataType.create(:name => name, :abbreviation => abbrv)
+      @datatype.html_source = make_html_code(html_dt)
+      @datatype.withdrawn = !!(txt =~ /WITHDRAWN/)
+      @datatype.save
+      ChangeTracker.commit
+      inner = html_dt[1..-1].take_while { |n| n.name != 'h4' }
+      inner.reject! { |n| n.text =~ /HL7 Component Table/ }
+      table = inner.find { |n| n.name == 'table' }
+      if table
+        defns = find_inner_definitions(html_dt)
+        extract_components(table, defns)
+      end
+      ChangeTracker.start
+      @datatype.description = make_html_text(inner.select {|n| n != table}) # everything that came before the component definitions, except for the table (and table caption which already removed)
+      @datatype.save
+      ChangeTracker.commit
+      @datatypes[name] = {:obj => @datatype, :components => []}
+      @component_num = 0
+      @component = nil
+    end
+    
+=begin
+    def parse_components(node)
+      return
+      rows = node.xpath('.//tr')
+      return false unless rows.first.to_s =~ /ComponentTableHeader/
+      rows[1..-1].each do |row|
+        cells = row.xpath('.//tc')
+        entries = cells.map do |cell|
+          et = extract_text(cell).strip
+        end
+        entries = entries.map { |e| e.empty? ? nil : e.strip }
+        @datatypes[@datatype.name][:components] << entries
+        seq, len, clen, dt, opt, tbl, name, comment, ref = entries
+        # puts Rainbow(clen).red if clen&.strip == '#' # there are none
+        # if clen # all values have either = or #
+        #   puts Rainbow(clen).orange unless clen =~ /=|#/
+        # end
+        if seq == '...'
+          ChangeTracker.start
+          @datatype.array_type = true
+          @datatype.save
+          ChangeTracker.commit
+          next
+        end
+        example = name.slice(/(?<=\(e\.g\., ).+(?=\))/)
+        name = name.gsub(/ \(.*/, '').gsub(/\s+/, ' ')
+        _clen = clen&.delete('#=')
+        props = {
+          :legacy_seq => seq,
+          :length     => len,
+          :c_length   => _clen,
+          :legacy_dt  => dt,
+          :legacy_tbl => tbl,
+          :name       => name,
+          :comments   => comment,
+          :legacy_ref => ref
+        }
+        ChangeTracker.start
+        component = HL7::Component.create(props)
+        component.example = example if example
+        component.optionality = opt if opt
+        if clen =~ /=/
+          component.may_truncate = 'false'
+        elsif clen =~ /#/
+          component.may_truncate = 'true'
+        else
+          component.may_truncate = 'not applicable'
+        end
+        component.table_row_source = make_xml_code(node)
+        @datatype.add_component(component)
+        ChangeTracker.commit
+      end
+    end
+=end
+    def add_to_component(node)
+      return
+      @component_num += 1
+      title = extract_text(node).gsub(/\(.*\)/, '').strip
+      @component = @datatype.components.find { |c| c.name.downcase == title.downcase }
+      msg = "#{@datatype.abbreviation}: #{@component_num} - #{title}"
+      if @component
+        # puts Rainbow(msg).green
+      else
+        p @datatype.components.map { |c| c.name }.sort
+        puts Rainbow(msg).red
+        puts node
+      end
+    end
+    
+    # FIXME ???? return ?
+    def add_datatype_or_component_content(node, style = nil)
+return
+      obj    = @component || @datatype
+      text   = extract_text(node)
+      # html_text = get_html(node)
+      # html_text = apply_style(html_text, style) if style
+      add_datatype_or_component_definition(obj, html_text, node)
+      if node.to_s =~ /href=/
+        puts node.to_s
+        puts "*"*22
+        puts html_text
+        puts
+      end
+      # if text =~ /^(Definition|Attention)/
+      #   add_datatype_or_component_definition(obj, html_text, node)
+      # else
+      #   if @component
+      #     # puts Rainbow(text).yellow
+      #   else
+      #     add_datatype_or_component_definition(obj, html_text, node)
+      #   end
+      #   # puts
+      # end
+        
+    end
+    
+    
+    def add_datatype_or_component_definition(obj, text, node)
+      ChangeTracker.start
+      if obj.definition_source
+        obj.definition_source_content = obj.definition_source_content + "\n" + node.to_xml
+      else
+        obj.definition_source = make_xml_code(node)
+      end
+      if obj.definition
+        obj.definition_content = obj.definition_content + "\n" + text
+      else
+        obj.definition = Gui_Builder_Profile::RichText.create(:content => text)
+      end
+      obj.save
+      ChangeTracker.commit
+    end
+    
+    def other_table(node)
+    end
+    
   end
 end

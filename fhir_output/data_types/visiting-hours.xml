@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/visiting-hours"/>
+  <name value="visiting hours"/>
+  <withdrawn value="false"/>
+  <abbreviation value="VH"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: This data type contains the hours when a patient location is open for visiting. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70267"><em>HL7 Table 0267 - Days of the Week</em></a> for valid values for the first two components.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Start Day Range"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Starting day of visiting hours range. See <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70267"><em>HL7 Table 0267 - Days of the Week</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0267/index.html"/>
+  </component>
+  <component>
+    <name value="End Day Range"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Ending day of visiting hours range. Starting day of visiting hours range. See <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70267"><em>HL7 Table 0267 - Days of the Week</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0267/index.html"/>
+  </component>
+  <component>
+    <name value="Start Hour Range"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Starting hour on starting day of visiting hours range. See first component, <em>2.A.81.1</em>, "<em>Start Day Range (ID)</em>".</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/time"/>
+  </component>
+  <component>
+    <name value="End Hour Range"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Ending hour on ending day of visiting hours range. See second component, <em>2.A.81.2</em>, "<em>End Day Range (ID)</em>".</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/time"/>
+  </component>
+</DataTypeDefinition>

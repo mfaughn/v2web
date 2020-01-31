@@ -11,6 +11,7 @@ class String
   def hl7
     self.gsub('–', '&ndash;')
         .gsub('–', '&ndash;')
+        .gsub('—', '&ndash;')
         .gsub('©', '&copy;')
         .gsub('®', '&reg;')
         .gsub('“', '&ldquo;')

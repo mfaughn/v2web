@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/table-row-definition-segment"/>
+  <name value="table row definition segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="RDF"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The RDF segment defines the content of the row data segments (RDT) in the tabular response (RTB).</p>
+          <p>As an optional segment in a query either a QBP or QBS, this segment can be used to limit the number of columns returned and to specify what column positions the fields occupy (where supported, these features can be used to override the defaults for the particular query). If omitted, all fields defined for the query are returned in their default column order.</p>
+          <p>As a required segment in a tabular response (RTB) to either a QBP or QBS, this segment defines the contents of the table row data (RDT) segments that follows. It is not necessarily an echo back of the segment as it appeared in the query.</p>
+          <p>HL7 Attribute Table – RDF<span id="RDF" class="anchor"/> – Table Row Definition</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00701"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/00702"/>
+    </minCardinality>
+  </field>
+</SegmentDefinition>

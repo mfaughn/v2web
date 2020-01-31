@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/entity-identifier-pair"/>
+  <name value="entity identifier pair"/>
+  <withdrawn value="false"/>
+  <abbreviation value="EIP"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p>Definition: Specifies an identifier assigned to an entity by either the placer or the filler system. If both components are populated the identifiers must refer to the same entity.</p>
+      <p><strong>Note:</strong> Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 – OBR-29, 7.3.1.29 – OBR-29, as of v 2.5.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Placer Assigned Identifier"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies an identifier assigned to an entity by the placer system.</p>
+        <p>For example, the component might be used to convey the following:</p>
+        <ol type="a">
+          <li>
+            <p>placer order number of the parent order.</p>
+          </li>
+        </ol>
+        <ol start="11" type="a">
+          <li>
+            <p>the specimen identifier as assigned by the placer.</p>
+          </li>
+          <li>
+            <p>a location identifier assigned (or used by) the placer.</p>
+          </li>
+        </ol>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
+  </component>
+  <component>
+    <name value="Filler Assigned Identifier"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Specifies an identifier assigned to an entity by the filler system.</p>
+        <p>For example, the component might convey the following:</p>
+        <ol type="a">
+          <li>
+            <p>filler order number of the parent order.</p>
+          </li>
+        </ol>
+        <ol start="13" type="a">
+          <li>
+            <p>the specimen identifier as assigned by the filler.</p>
+          </li>
+          <li>
+            <p>a location identifier assigned (or used by) the filler.</p>
+          </li>
+        </ol>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
+  </component>
+</DataTypeDefinition>

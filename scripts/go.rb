@@ -8,7 +8,8 @@ end
 t = Time.now
 load File.join(__dir__, 'parse_value_sets.rb')
 load File.join(__dir__, 'parse_datatypes.rb')
-load File.join(__dir__, 'parse_control_segments.rb')
+load File.join(__dir__, 'parse_segments.rb')
+load File.join(__dir__, 'parse_msgs.rb')
 
 HL7::Component.all.each do |c|
   if c.legacy_tbl

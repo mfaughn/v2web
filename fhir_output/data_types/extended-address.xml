@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDefinition>
+  <url value="http://hl7.org/v2plus/DataTypeDefinition/extended-address"/>
+  <name value="extended address"/>
+  <withdrawn value="false"/>
+  <abbreviation value="XAD"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <p><strong>Definition:</strong> This data type specifies the address of a person, place or organization plus associated information.</p>
+      <p><strong>Note:</strong> Replaces the AD data type as of v2.3.</p>
+      <p>Example of usage for US:</p>
+      <p>|1000 Hospital Lane^Ste. 123^Ann Arbor ^MI^99999^USA^B^^WA^|</p>
+      <p>This would be formatted for postal purposes as</p>
+      <p>1000 Hospital Lane</p>
+      <p>Ste. 123</p>
+      <p>Ann Arbor MI 99999</p>
+      <p>Example of usage for Australia:</p>
+      <p>|14th Floor^1000 Hospital Lane^Sidney^QLD^9999|</p>
+      <p>This would be formatted for postal purposes using the same rules as for the American example as</p>
+      <p>14th Floor</p>
+      <p>1000 Hospital Lane</p>
+      <p>Sidney QLD 9999</p>
+      <p><strong>International note:</strong> Countries typically have a standard method of formatting addresses. This data type does not specify the formatting usages, only the components of a postal address.</p>
+    </div>
+  </description>
+  <component>
+    <name value="Street Address"/>
+    <sequenceNumber value="1"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the house number, apartment number, street name, street direction, P.O. Box number, and similar address information.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/street-address"/>
+  </component>
+  <component>
+    <name value="Other Designation"/>
+    <sequenceNumber value="2"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component contains the second line of address. In US usage, it qualifies address. Examples: Suite 555 or Fourth Floor. When referencing an institution, this component specifies the street address.</p>
+      </div>
+    </definition>
+    <confLength value="120"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="City"/>
+    <sequenceNumber value="3"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the city, or district or place where the addressee is located depending upon the national convention for formatting addresses for postal usage.</p>
+      </div>
+    </definition>
+    <confLength value="50"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="State or Province"/>
+    <sequenceNumber value="4"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the state or province where the addressee is located. State or province should be represented by the official postal service codes for that country.</p>
+      </div>
+    </definition>
+    <confLength value="50"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Zip or Postal Code"/>
+    <sequenceNumber value="5"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the zip or postal code where the addressee is located. Zip or postal codes should be represented by the official codes for that country. In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9, and the Australian Postcode takes the form 9999.</p>
+      </div>
+    </definition>
+    <confLength value="12"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Country"/>
+    <sequenceNumber value="6"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the country where the addressee is located. HL7 specifies that the 3-character (alphabetic) form of ISO 3166 be used for the country code. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70399"><em>HL7 Table 0399 – Country Code</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="3"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0399/index.html"/>
+  </component>
+  <component>
+    <name value="Address Type"/>
+    <sequenceNumber value="7"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies the kind or type of address. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70190"><em>HL7 Table 0190 - Address Type</em></a> for valid values.</p>
+        <p><em>XAD.7</em> is required if there are multiple occurrences of XAD in a field.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0190/index.html"/>
+  </component>
+  <component>
+    <name value="Other Geographic Designation"/>
+    <sequenceNumber value="8"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This component specifies any other geographic designation. It includes county, bioregion, SMSA, etc.</p>
+      </div>
+    </definition>
+    <confLength value="50"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="County/Parish Code"/>
+    <sequenceNumber value="9"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A code that represents the county in which the specified address resides. <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70289"><em>User-defined Table 0289 - County/parish</em></a> is used as the HL7 identifier for the user-defined table of values for this component. When this component is used to represent the county (or parish), component 8 &lt;other geographic designation&gt; should not duplicate it (i.e., the use of &lt;other geographic designation&gt; to represent the county is allowed only for the purpose of backward compatibility, and should be discouraged in this and future versions of HL7).</p>
+        <p>Allowable values: codes defined by government.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0289/index.html"/>
+  </component>
+  <component>
+    <name value="Census Tract"/>
+    <sequenceNumber value="10"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <blockquote>
+          <p>Definition: A code that represents the census tract in which the specified address resides. <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70288"><em>User-defined Table 0288 - Census Tract</em></a> is used as the HL7 identifier for the user-defined table of values for this component.</p>
+        </blockquote>
+        <p>Allowable Values: codes defined by government.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0288/index.html"/>
+  </component>
+  <component>
+    <name value="Address Representation Code"/>
+    <sequenceNumber value="11"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Different &lt;name/address types&gt; and representations of the same name/address should be described by repeating of this field, with different values of the &lt;name/address type&gt; and/or &lt;name/address representation&gt; component.</p>
+        <p><strong>Note:</strong> Also note that this new component remains in "alphabetic" representation with each repetition of the fields using these data types. I.e. even though the address may be represented in an ideographic character set, this component will remain represented in an alphabetic character set.</p>
+        <p>Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70465"><em>HL7 Table 0465 – Name/address Representation</em></a> for valid values.</p>
+        <p>In general this component provides an indication of the representation provided by the data item. It does not necessarily specify the character sets used. Thus, even though the representation might provide an indication of what to expect, the sender is still free to encode the contents using whatever character set is desired. This component provides only hints for the receiver, so it can make choices regarding what it has been sent and what it is capable of displaying.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0465/index.html"/>
+  </component>
+  <component><name value="Address Validity Range"/><sequenceNumber value="12"/><definition><status value="additional"/><div><p><strong>Attention:</strong><em>The XAD.12 component was retained for backward compatibility as of v2.5 and the detail was withdrawn and removed from the standard as of v2.7.</em> Refer to <em>2.A.86.13</em>, "<em>Effective Date</em> (DTM)" and <em>2.A.86.14</em>, "<em>Expiration Date</em> (DTM)" components.</p></div></definition><mayTruncate value="not applicable"/>
+  Withdrawn as of v2.7.
+  
+  
+  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/>
+  
+</component>
+  <component>
+    <name value="Effective Date"/>
+    <sequenceNumber value="13"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The first date, if known, on which the address is valid and active for the ‘owning’ entity.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Expiration Date"/>
+    <sequenceNumber value="14"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: The last date, if known, on which the address is valid and active for the ‘owning’ entity.</p>
+      </div>
+    </definition>
+    <confLength value="8"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
+  </component>
+  <component>
+    <name value="Expiration Reason"/>
+    <sequenceNumber value="15"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This identifies why this address was marked as "ended". Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70616"><em>User-defined Table 0616 – Address Expiration Reason</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0616/index.html"/>
+  </component>
+  <component>
+    <name value="Temporary Indicator"/>
+    <sequenceNumber value="16"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: If "Y" this indicates that the address is considered temporary. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70136"><em>HL7 Table 0136 – Yes/No Indicator</em></a>.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0136/index.html"/>
+  </component>
+  <component>
+    <name value="Bad Address Indicator"/>
+    <sequenceNumber value="17"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: If "Y", this indicates that it is not possible to contact the "owning" entity at this address. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70136"><em>HL7 Table 0136 – Yes/No Indicator</em></a>.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0136/index.html"/>
+  </component>
+  <component>
+    <name value="Address Usage"/>
+    <sequenceNumber value="18"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: This indicates how the address is intended to be used. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70617"><em>User-defined Table 0617 – Address Usage</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <minLength value="1"/>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
+    <binding value="www.hl7.org/fhir/v2/0617/index.html"/>
+  </component>
+  <component>
+    <name value="Addressee"/>
+    <sequenceNumber value="19"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Identifies the name of the person or organization that should appear as part of the address. This is also known as the "Care of" or "C/O" line.</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Comment"/>
+    <sequenceNumber value="20"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Descriptive information about the use of the address.</p>
+        <p>Example: "Do not ring bell."</p>
+      </div>
+    </definition>
+    <confLength value="199"/>
+    <mayTruncate value="true"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
+  </component>
+  <component>
+    <name value="Preference Order"/>
+    <sequenceNumber value="21"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: For an entity having multiple addresses, indicates which is the 'most preferred' (lowest number) to 'least preferred' (highest number).</p>
+        <p>If the preference order is unique across all usages for a given type, then it indicates the preference across all usages, (e.g., first try my home address, then my business address). Otherwise, the preference order is assumed to only apply within a specific usage.</p>
+        <p>Preference order numbers need not be sequential (i.e., four addresses with the priority orders of 10, 1, 5 and 15 are legitimate). The preference order numbers must be non-negative.</p>
+      </div>
+    </definition>
+    <confLength value="2"/>
+    <mayTruncate value="false"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
+  </component>
+  <component>
+    <name value="Protection Code"/>
+    <sequenceNumber value="22"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: Identifies that an address needs to be treated with special care or sensitivity.</p>
+        <p>The specific set of codes and appropriate handling of such addresses will vary by jurisdiction and is subject to site-specific negotiation. For example, a provider address marked as 'unlisted' might not be printed in an internal address listing. Refer to <a href="file:///C:\AppData\Local\Microsoft\Windows\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Starting_Point_Word\V28_CH02C_CodeTables.doc#HL70618"><em>User-defined Table 0618 – Protection Code</em></a> for valid values.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
+    <binding value="www.hl7.org/fhir/v2/0618/index.html"/>
+  </component>
+  <component>
+    <name value="Address Identifier"/>
+    <sequenceNumber value="23"/>
+    <definition>
+      <status value="additional"/>
+      <div>
+        <p>Definition: A unique identifier for the address.</p>
+        <p>This component allows an address to be uniquely identified, and enables the linking of a single address to multiple people and contexts. For example, each member of a family living at the same location would share the same address, having the same identifier. A correction to the address of one family member could be automatically propagated to other members of the family.</p>
+      </div>
+    </definition>
+    <mayTruncate value="not applicable"/>
+    <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
+  </component>
+</DataTypeDefinition>

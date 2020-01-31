@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SegmentDefinition>
+  <url value="http://hl7.org/v2plus/SegmentDefinition/access-restrictions-segment"/>
+  <name value="Access Restrictions segment"/>
+  <withdrawn value="false"/>
+  <abbreviation value="ARV"/>
+  <description>
+    <status value="additional"/>
+    <div>
+      <description>
+        <status value="additional"/>
+        <div>
+          <p>The ARV segment is used to communicate the requested/required type of access restrictions from system to system, at both the person/patient and the encounter/visit level<em>.</em></p>
+          <p>The Access Restrictions segment (ARV) sent after the MSH acts as a manifest and declares the privacy and security classification (i.e the confidentiality level), the sensitivity (i.e. access restriction reason) and provides handling instructions (e.g. what the data can be used for, what must be done to protect it and what may not be done with the data). The segment is optional and can repeat.</p>
+          <p>Examples:</p>
+          <p>A person/patient may have the right to object to any or all of his/her information to be disclosed. In addition, the patient may request that protected information not be disclosed to family members or friends who may be involved in their care or for notification purposes.</p>
+          <p>A realm or organization may have certain privacy policies.</p>
+          <p>A patient may have the right to opt out of being included on facility directories.</p>
+          <p>In an international context, a physician may be culturally obligated to protect the patient's privacy.</p>
+          <p>Any "opt-in" or "opt-out" restrictions are communicated in <em>ARV-3 - Access Restriction Value.</em> This segment replaces PD1-12 and PV2-22, which have been deprecated in V2.6. The ARV segment is optional and as of 2.9 is sent immediately following the MSH segment to allow declaration of access restrictions for specific data elements (<em>ARV-9 – Access Restriction Message Location</em>), that are different from the overall security level declared in the Message Header Segment. The ARV segment can repeat, so that different security attributes across message elements can be declared.</p>
+          <p>
+            <strong>Usage Notes:</strong>
+          </p>
+          <p>The individual system security may want to utilize the Access Restriction Value along with the Access Restriction Reason and with the Confidentiality Code from Code defined in the Security Classification Tag (ARV-7)in order to implement the appropriate type of protection for the identified data. Each system has the flexibility to incorporate/map the access values into their security system appropriately; the actual implementation for access to protected data is determined by the individual system. The Access Restriction Values supported by an enterprise/system would be defined and determined by that organization.</p>
+          <p>It is expected that these access restriction values would be utilized in <span class="underline">combination with</span> other system security information (e.g., patient locations, user department, caregiver-patient relationships, other access restriction parameters) to determine user access.</p>
+          <p>System implementers should carefully control access to the restriction codes and values, as they themselves hold sensitive information.</p>
+          <p>HL7 Attribute Table - ARV - Access Restriction</p>
+        </div>
+      </description>
+    </div>
+  </description>
+  <field>
+    <sequenceNumber value="1"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02143"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="2"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02144"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="3"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02145"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="4"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02146"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="5"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02147"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="6"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02148"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="7"/>
+    <mustSupport value="true"/>
+    <minCardinality value="1">
+      <maxCardinality value="1">
+        <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03512"/>
+      </maxCardinality>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="8"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03513"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="9"/>
+    <mustSupport value="false"/>
+    <minCardinality value="0">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/03514"/>
+    </minCardinality>
+  </field>
+  <field>
+    <sequenceNumber value="10"/>
+    <mustSupport value=""/>
+    <maxCardinality value="1">
+      <dataElement value="https://www.hl7.org/v2plus/DataElementDefinition/02470"/>
+    </maxCardinality>
+  </field>
+</SegmentDefinition>

@@ -6,7 +6,7 @@ module V2Web
     
     derived_attribute(:identifying_text, ::String)
     def identifying_text
-      content_content[0..50]
+      Loofah.fragment(content_content).scrub!(:prune).text[0..50]
     end
     
     def web_content

@@ -1,7 +1,8 @@
 Dir.glob(File.join(__dir__, '../lib/v2web/model_extensions', '**', '*.rb'), &method(:load))
+require_relative 'make_gbp_file.rb'
 def indicate_page_linkages(site)
   # TODO do something with all the content that isn't a Clause
-  main_subsections = site.subsections
+  main_subsections = site&.subsections || []
   main_subsections.each { |sect| link_section(sect, true) }
 end
 
@@ -14,6 +15,12 @@ def link_section(sect, linked = false)
 end
 
 conformance = V2Web::Standard.where(Sequel.ilike(:title, '%Conformance Methodology%')).last
+# conformance = V2Web::Standard.where(Sequel.ilike(:title, '%test%')).last
+config_file = File.expand_path(File.join(__dir__, '../config/v2conformance_config.xml'))
+config_dir = File.expand_path(File.join(__dir__, '../config/v2conformance'))
+tab_files = {}
+Dir["#{config_dir}/**/*"].select { |f| File.file?(f) }.each { |f| tab_files[f.split('/').last] = f }
+conformance.configure_site(config_file, tab_files)
 indicate_page_linkages(conformance)
 conformance.to_hl7_site
 

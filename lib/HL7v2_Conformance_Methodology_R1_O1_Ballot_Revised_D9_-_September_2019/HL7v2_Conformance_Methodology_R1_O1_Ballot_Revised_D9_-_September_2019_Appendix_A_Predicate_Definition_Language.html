@@ -142,6 +142,13 @@ Appendix B: Conformance Statement Definition Language
 </nav>
 </div>
 </div>
+<div class='segment' id='v2draft'>
+<div class='container'>
+<h1>
+Draft Website - For Review Purposes Only
+</h1>
+</div>
+</div>
 <div class='segment' id='segment-breadcrumb'>
 <div class='container'>
 <ul class='breadcrumb'>
@@ -169,7 +176,63 @@ Appendix B: Conformance Statement Definition Language
 </div>
 
 <p class='p_v2web'>
-<p></p><p>The pseudo language for describing predicate definition is composed of building blocks that are linked together to create the predicates. The building blocks include:</p><p></p><p>An example template for the condition predicate builder follows this general pattern:</p>
+<p></p><p>The pseudo language for describing predicate definition is composed of building blocks that are linked together to create the predicates. The building blocks include:</p>
+</p>
+
+<ul>
+<li class='p_v2web'>
+
+Element Location
+
+
+</li>
+<li class='p_v2web'>
+
+Proposition Declarative Statements
+
+
+</li>
+<li class='p_v2web'>
+
+Occurrence
+
+
+</li>
+<li class='p_v2web'>
+
+Content
+
+
+</li>
+<li class='p_v2web'>
+
+Content Comparative
+
+
+</li>
+<li class='p_v2web'>
+
+Context
+
+
+</li>
+<li class='p_v2web'>
+
+Verbs
+
+
+</li>
+<li class='p_v2web'>
+
+Connectors
+
+
+</li>
+
+</ul>
+
+<p class='p_v2web'>
+<p></p><p>An example template for the condition predicate builder follows this general pattern:</p>
 </p>
 
 <div class='box_v2web gray_box'>
@@ -180,7 +243,7 @@ Appendix B: Conformance Statement Definition Language
 </div>
 
 <p class='p_v2web'>
-<p></p><p></p><p><span style="font-size:16px">Table 12.1</span> shows the template pattern broken up into its building-block parts. Additionally, a usage is given for each building block. Some building blocks are a part of all condition predicates (required), and others may be part of the condition predicates (optional). Subsequent sections explains the details for each of the building blocks.</p><p></p>
+<p></p><p></p><p>Table 12.1 shows the template pattern broken up into its building-block parts. Additionally, a usage is given for each building block. Some building blocks are a part of all condition predicates (required), and others may be part of the condition predicates (optional). Subsequent sections explains the details for each of the building blocks.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -419,7 +482,7 @@ Required
 12.2 Occurrence-Declarative Statement
 </h3>
 <p class='p_v2web'>
-<p>A condition predicate may refer to a specific instance of an element or to a group of element instances. Identifying an instance or instances is accomplished with the occurrence-declarative statement. <span style="font-size:16px">Table 12.2</span> shows the list of pre-defined occurrence-declarative statement patterns and their meanings.</p><p></p>
+<p>A condition predicate may refer to a specific instance of an element or to a group of element instances. Identifying an instance or instances is accomplished with the occurrence-declarative statement. Table 12.2 shows the list of pre-defined occurrence-declarative statement patterns and their meanings.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -554,13 +617,13 @@ All occurrences of
 12.3 Element Location
 </h3>
 <p class='p_v2web'>
-<p>The Element Location indicates the location in the message that is being addressed. The location can reference a group, segment, field, component, or sub-component and includes a description. For details of how an element location is represented, see <span style="font-size:16px">Section 1.2.3</span>.</p>
+<p>The Element Location indicates the location in the message that is being addressed. The location can reference a group, segment, field, component, or sub-component and includes a description. For details of how an element location is represented, see Section 1.2.3.</p>
 </p>
 <h3>
 12.4 Context
 </h3>
 <p class='p_v2web'>
-<p>The meaning of a condition predicate can be different depending on the context or scope to which it applies. <span style="font-size:16px">Table 12.3</span> shows the list of pre-defined context patterns and their meanings. Note that the context of &ldquo;LOCATION&rdquo; indicates the location at any level. To indicate a specific context, the condition predicate may be enhanced with the context provided in <span style="font-size:16px">Table 12.3</span>.</p><p></p>
+<p>The meaning of a condition predicate can be different depending on the context or scope to which it applies. Table 12.3 shows the list of pre-defined context patterns and their meanings. Note that the context of &ldquo;LOCATION&rdquo; indicates the location at any level. To indicate a specific context, the condition predicate may be enhanced with the context provided in Table 12.3.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -610,7 +673,7 @@ in the same <span style="color:#c00000">GROUP</span> group
 12.5 Verbs
 </h3>
 <p class='p_v2web'>
-<p><span style="font-size:16px">Table 12.4</span> indicates the set of verbs that can be used to construct predicate inquires. The verbs are paired with certain Proposition Content Declarative Statements or Content Comparison Declarative Statements.</p><p></p>
+<p>Table 12.4 indicates the set of verbs that can be used to construct predicate inquires. The verbs are paired with certain Proposition Content Declarative Statements or Content Comparison Declarative Statements.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -696,7 +759,7 @@ does not match
 12.6 Content-Declarative Statements
 </h3>
 <p class='p_v2web'>
-<p>Proposition content-declarative statements ask whether an element contains certain content. The values can be arbitrary values, coded values, or restricted values based on a format. The values may or may not contain an associated description. <span style="font-size:16px">Table 12.5</span> lists each of the statements along with the verbs they can be paired with.</p><p></p>
+<p>Proposition content-declarative statements ask whether an element contains certain content. The values can be arbitrary values, coded values, or restricted values based on a format. The values may or may not contain an associated description. Table 12.5 lists each of the statements along with the verbs they can be paired with.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -899,7 +962,7 @@ the regular expression <span style="color:#c00000">‘REGULAR EXPRESSION&rsquo;<
 12.7 Comparison-Content Declarative Statement
 </h3>
 <p class='p_v2web'>
-<p>Proposition comparison-content declarative statements ask whether the content of one element matches that of another element based on a comparator. <span style="font-size:16px">Table 1</span><span style="font-size:16px">2.6</span> lists each of the statements along with a description and examples. All Content Comparison Declarative Statement are paired with the verbs is/is not.</p><p></p>
+<p>Proposition comparison-content declarative statements ask whether the content of one element matches that of another element based on a comparator. Table 12.6 lists each of the statements along with a description and examples. All Content Comparison Declarative Statement are paired with the verbs is/is not.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -1258,7 +1321,7 @@ Date/Time: 20180305 is later than 201803040823-0600
 12.8 Complex Condition Predicates
 </h3>
 <p class='p_v2web'>
-<p>Condition predicate statements can be combined to make complex condition predicates with a set of connectors (See <span style="font-size:16px">Table 1</span><span style="font-size:16px">2.7</span>). Multiple connectors can be used.</p><p></p>
+<p>Condition predicate statements can be combined to make complex condition predicates with a set of connectors (See Table 12.7). Multiple connectors can be used.</p><p></p>
 </p>
 
 <table class='center table_v2web1'>
@@ -1325,7 +1388,7 @@ XOR
 
 <td class='table_v2web1' colspan='1'>
 <p class='p_v2web'>
-&nbsp;Exclusive OR—one predicate must be satisfied; both must not be satisfied
+&nbsp;Exclusive OR&ndash;one predicate must be satisfied; both must not be satisfied
 </p>
 
 </td>
