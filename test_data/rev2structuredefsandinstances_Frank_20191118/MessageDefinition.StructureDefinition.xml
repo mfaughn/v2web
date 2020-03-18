@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="MessageDefinition"/>
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+  <version value="1st draft" />
+  <name value="MessageDefinition" />
+  <title value="Definition of v2+ Messages" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="MessageDefinition">
+      <path value="MessageDefinition" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="MessageDefinition.name">
+      <path value="MessageDefinition.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="MessageDefinition.description">
+      <path value="MessageDefinition.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry">
+      <path value="MessageDefinition.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <orderMeaning value="The order of segmentEntry elements defines the structure of the HL7 V2 message.  Order SHALL be preserved by all implementations."
+      <constraint>    
+        <key value="v2md-1"/>
+        <severity value="error"/>
+        <human value="Each segmentEntry SHALL have exactly one of either sequence, choice, exampleSegment, or segment."/>
+        <expression value="sequence.exists() xor exampleSegment.exists() xor choice.exists() xor segment.exists()"/>
+      </constraint>
+    </element>
+    <element id="MessageDefinition.segmentEntry.mayRepeat">
+      <path value="MessageDefinition.mayRepeat" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry.optional">
+      <path value="MessageDefinition.optional" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry.status">
+      <path value="MessageDefinition.status" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry.description">
+      <path value="MessageDefinition.segmentEntry.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry.sequence">
+      <path value="MessageDefinition.segmentEntry.sequence" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageDefinition.segmentEntry.sequence.segmentEntry">
+      <path value="MessageDefinition.segmentEntry.sequence.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <orderMeaning value="The order of segmentEntry elements defines the structure of the HL7 V2 message.  Order SHALL be preserved by all implementations."
+      <contentReference value="#MessageDefinition.segmentEntry"/> 
+    </element>
+    <element id="MessageDefinition.segmentEntry.choice">
+      <path value="MessageDefinition.segmentEntry.choice" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageDefinition.segmentEntry.choice.segmentEntry">
+      <path value="MessageDefinition.segmentEntry.choice.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <orderMeaning value="The order of segmentEntry elements within a choice element is not absolutely critical to the definiti of the HL7 V2 message structure.  Order SHOULD be preserved by all implementations in order to reduce confusion and maintain clarity."
+      <contentReference value="#MessageDefinition.segmentEntry"/> 
+    </element> 
+    <element id="MessageDefinition.segmentEntry.exampleSegment">
+      <path value="MessageDefinition.segmentEntry.exampleSegment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageDefinition.segmentEntry.exampleSegment.name">
+      <path value="MessageDefinition.segmentEntry.exampleSegment.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="MessageDefinition.segmentEntry.segment">
+      <path value="MessageDefinition.segmentEntry.segment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/SegmentDefinition" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+  </differential>
+</StructureDefinition>

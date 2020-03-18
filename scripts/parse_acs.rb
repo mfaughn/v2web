@@ -2,13 +2,11 @@ require 'docx'
 load File.join(__dir__, 'nokogiri_extensions.rb')
 load File.join(__dir__, 'extractor.rb')
 load File.join(__dir__, 'extract_msgs.rb')
+load File.join(__dir__, 'extract_acs.rb')
 load File.join(__dir__, 'headers_footers.rb')
 load File.join(__dir__, 'extractor_helpers.rb')
 
-HL7::MessageDefinition.delete
-HL7::SegmentSequence.delete
-HL7::SegmentChoice.delete
-HL7::Segment.delete
+HL7::AcknowledgmentChoreography.delete
 
 this_dir = File.expand_path(File.dirname(__FILE__))
 source_dir = File.join(this_dir, '../test_data/v2.9_Dec16')
@@ -38,7 +36,7 @@ nil
 
 sources.each do |source|
   next if source == nil
-  puts Rainbow("## Parse Messages from #{source} ##").magenta
+  puts Rainbow("## Parse Acknowledgment Choreographies from #{source} ##").magenta
   chapter = source.slice(/(?<=CH)\d\dA?/)
   chapter.delete('0') if chapter[0] == '0' # get rid of leading zero
   extractor = V2Web::DocXtractor.new(chapter)
@@ -47,6 +45,6 @@ sources.each do |source|
   # stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
   # puts stderr if stderr && !stderr =~ /WARNING/i
   doc = Docx::Document.open(docx_path)
-  extractor.extract_messages(doc.doc, html_path)
+  extractor.extract_acs(doc.doc, html_path)
 end
 

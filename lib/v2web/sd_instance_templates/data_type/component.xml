@@ -10,6 +10,6 @@
   COMMENTS
   USAGE_NOTES
   REQUIREMENTS
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/DATA_TYPE"/>
+  <dataType value="https://www.v2.hl7.org/fhir/DataTypeDefinition/DATA_TYPE"/>
   BINDING
 </component>

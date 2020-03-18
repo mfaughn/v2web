@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SegmentDefinition>
-  <url value='http://hl7.org/v2plus/SegmentDefinition/batch-trailer-segment'/>
+  <url value='http://v2.hl7.org/fhir/SegmentDefinition/batch-trailer-segment'/>
   <name value='batch trailer segment'/>
   <withdrawn value='false'/>
   <abbreviation value='BTS'/>

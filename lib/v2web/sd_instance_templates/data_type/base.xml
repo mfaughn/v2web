@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataTypeDefinition>
-  <url value="http://hl7.org/v2plus/DataTypeDefinition/URL" />
+  <url value="http://v2.hl7.org/fhir/DataTypeDefinition/URL" />
   <name value="NAME"/>
   <withdrawn value="WITHDRAWN"/>
   <abbreviation value="ABBREVIATION"/>

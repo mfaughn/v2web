@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/v2plus">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="SegmentDefinition"/>
-  <url value="http://hl7.org/v2plus/StructureDefinition/SegmentDefinition" />
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/SegmentDefinition" />
   <version value="1st draft" />
   <name value="SegmentDefinition" />
   <title value="Definition of v2+ Segments" />
@@ -9,7 +9,7 @@
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="http://hl7.org/v2plus/StructureDefinition/SegmentDefinition" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/SegmentDefinition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
   <derivation value="specialization" />
   <differential>
@@ -84,7 +84,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/v2plus/valueset-segment-field-optionality.html" />
+        <valueSet value="http://v2.hl7.org/fhir/valueset-segment-field-optionality.html" />
       </binding>
     </element>
     <element id="SegmentDefinition.field.minCardinality">
@@ -112,7 +112,7 @@
       <type>
         <code value="canonical" />
         <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DataElementDefinition" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/DataElementDefinition" />
       </type>
     </element>
   </differential>

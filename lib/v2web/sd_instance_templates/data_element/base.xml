@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/URL" />
+  <url value="http://v2.hl7.org/fhir/DataElementDefinition/URL" />
   <name value='NAME'/>
   DESCRIPTION
   <itemNumber value="ITEM_NUMBER"/>
@@ -8,5 +8,5 @@
   MAX_LENGTH
   CONF_LENGTH
   <mayTruncate value="MAY_TRUNCATE"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/DATA_TYPE"/>
+  <dataType value="https://www.v2.hl7.org/fhir/DataTypeDefinition/DATA_TYPE"/>
 </DataElementDefinition>

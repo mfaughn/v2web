@@ -2,7 +2,6 @@ require 'docx'
 load File.join(__dir__, 'nokogiri_extensions.rb')
 load File.join(__dir__, 'extractor.rb')
 load File.join(__dir__, 'extract_segements.rb')
-load File.join(__dir__, 'clear_tables.rb')
 load File.join(__dir__, 'headers_footers.rb')
 load File.join(__dir__, 'extractor_helpers.rb')
 

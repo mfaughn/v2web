@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/v2plus">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DataTypeDefinition"/>
-  <url value="http://hl7.org/v2plus/StructureDefinition/DataTypeDefinition" />
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/DataTypeDefinition" />
   <version value="1st draft" />
   <name value="DataTypeDefinition" />
   <title value="Definition of v2+ DataTypes" />
@@ -9,7 +9,7 @@
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="http://hl7.org/v2plus/StructureDefinition/DataTypeDefinition" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/DataTypeDefinition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>
@@ -131,7 +131,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/v2plus/valueset-segment-field-optionality.html" />
+        <valueSet value="http://v2.hl7.org/fhir/valueset-segment-field-optionality.html" />
       </binding>
     </element>
     <element id="DataTypeDefinition.component.minLength">

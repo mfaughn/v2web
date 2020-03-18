@@ -4,18 +4,25 @@ module V2Web
     def extract_messages(doc, html)
       @html = File.open(html) { |f| Nokogiri::XML(f) }
       @html_msgs = {}
-      @current_html_msg = nil      
       find_messages
       doc.remove_namespaces!
-      @messages = {}
-      @message  = nil
-      @segment  = nil
-      @node_names = []
-      @node_types = []
       # TODO - get documentation and everything else....
-      @html_msgs.each { |name, tables| create_msg(name, tables) }
-      # doc.children.each { |c| _extract_messages(c) }
-      
+      @html_msgs.each { |name, tables| create_msg(name, tables) }      
+    end
+    
+    def locate_ac_table(node, msg_name, single_msg_name = nil)
+      nxt = node.next
+      if nxt.name == 'table'
+        cell = nxt.css('thead tr th').first&.text&.strip
+        ac_name = nxt.css('tbody tr td').first&.text&.strip
+        if cell =~ /^Acknowledge?ment Choreography$/ && (msg_name.split(':').first == ac_name || single_msg_name.to_s.split(':').first == ac_name)
+          {:name => ac_name, :table => nxt}
+        else
+          puts Rainbow("No AckChor table for #{msg_name} -- found #{cell} and #{ac_name}").red
+        end
+      else
+        locate_ac_table(nxt, msg_name)
+      end
     end
     
     def find_messages # events are tied in closely here.  we may want to get it all in one go.
@@ -32,15 +39,8 @@ module V2Web
             msg_name = node.text.strip
             msg_table = node.next
             @html_msgs[msg_name] = {:tbl => msg_table}
-            nxt = msg_table.next
-            if nxt.name == 'table'
-              cell = nxt.css('thead tr th').first&.text&.strip
-              if cell =~ /^Acknowledge?ment Choreography$/
-                @html_msgs[msg_name][:ac] = msg_table.next
-              else
-                puts Rainbow("No AckChor table for #{msg_name} -- found #{cell}").red
-              end
-            end
+            ac_table = locate_ac_table(msg_table, msg_name)
+            @html_msgs[msg_name][:ac] = ac_table if ac_table
           # this is pretty nasty and not very DRY....
           elsif node.text =~ /\w{3}\^\w.\d-\w.\d\,(\w{3},)+\w{3}\^\w{3}(_\w{3})?/
             # puts Rainbow(node.text).yellow
@@ -80,21 +80,18 @@ module V2Web
             puts 'Skipping ' + Rainbow(node.text).yellow + ' because it does not look like a message definition'
           end
           if msgs
+            msg_name = node.text.strip
             msg_table = node.next
             data = {:tbl => msg_table}
-            nxt = msg_table.next
-            if nxt.name == 'table'
-              cell = nxt.css('thead tr th').first&.text&.strip
-              if cell =~ /^Acknowledge?ment Choreography$/
-                data[:ac] = msg_table.next
-              else
-                puts Rainbow("No AckChor table for #{msg.first} -- found #{cell}").red
-              end
-            end            
+            # puts msg_name.inspect
+            first_single_msg_name = msg_name.sub(/.*(?=:)/, msgs.first)
+            ac_table = locate_ac_table(msg_table, msg_name, first_single_msg_name)
+            data[:ac] = ac_table if ac_table
             msgs.each do |msg|
-              msg_name  = node.text.strip
-              msg_name.sub(/.*(?=:)/, msg)
-              @html_msgs[msg_name] = data
+              msg_name = node.text.strip
+              single_msg_name = msg_name.sub(/.*(?=:)/, msg)
+              # puts "  #{single_msg_name}"
+              @html_msgs[single_msg_name] = data
             end
           end
         end
@@ -102,36 +99,34 @@ module V2Web
     end
     
     # TODO -- Get all of the documentation for MsgDefs.  This is simply creating the objects with no documentation.
-    
-    
-    
+
     def create_msg(name, tables)
       puts Rainbow("  # Create Message #{name}").orange
       tbl = tables[:tbl]
       ac  = tables[:ac]
+      existing_msg = HL7::MessageDefinition.where(:name => name).first
+      puts Rainbow("#{name} already exists").red if existing_msg
       ChangeTracker.start
-      @msg = HL7::MessageDefinition.create(:name => name, :origin => @chapter.to_s)
+      message_def = HL7::MessageDefinition.create(:name => name, :origin => @chapter.to_s)
       src = tbl.to_xml
-      src << ac.to_xml if ac
-      # @msg.source = make_html_code(src) # not including source here because we are getting it from HTML instead of OOXML.
+      if ac
+        src << ac[:table].to_xml
+        message_def.notes = "ac_table_title: '#{ac[:name]}'}"
+      end
+      # message_def.source = make_html_code(src) # not including source here because we are getting it from HTML instead of OOXML.
       ####### doing this for now...
       html = Gui_Builder_Profile::Code.create(:content => src )
       html.language = 'HTML'
       html.save
-      @msg.source = html
+      message_def.source = html
       #######
-      @msg.origin = chapter
-      @msg.save
-      @segment_parents = [@msg]
+      message_def.origin = chapter
+      message_def.save
+      @segment_parents = [message_def]
       ChangeTracker.commit
       extract_segments(tbl)
-      if ac
-        # TODO do the acknowledgement choreography stuff....
-      end
-      @messages[name] = {:obj => @msg, :segments => []}
-      @segment = nil
     end
-
+    
     # curly braces indicate repeating section
     # square brackets indicate optional
     # angle brackets and pipes are choice segments
