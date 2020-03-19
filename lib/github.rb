@@ -6,6 +6,7 @@ def github_test(name = nil, email = nil)
   email ||= 'mike.faughn@gmail.com'
   system "cd #{repo_dir}"
   system "git config user.email #{email} && git config user.name '#{name}'"
+  system "git checkout branch #{name}"
   system "touch test.txt"
   t = Time.now.utc
   system "echo 'Maps to commit by #{name} with email #{email} at #{t}' >> test.txt"
