@@ -6,11 +6,11 @@ def github_test(name = nil, email = nil)
   email ||= 'mike.faughn@gmail.com'
   system "cd #{repo_dir}"
   system "git config user.email #{email} && git config user.name '#{name}'"
-  system "git checkout branch #{name}"
+  system "git checkout -b #{name}"
   system "touch test.txt"
   t = Time.now.utc
   system "echo 'Maps to commit by #{name} with email #{email} at #{t}' >> test.txt"
   system "git add ."
   system "git commit -m 'test commit message at #{t}'"
-  puts system 'git push'
+  puts system 'git push -u origin ' + name
 end
