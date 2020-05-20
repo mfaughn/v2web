@@ -10,6 +10,7 @@
 /_cached_gem
 # lib/HL7v2_
 /IG/HL7*/temp
+/config/*
 
 # Other version control systems #
 #################################
