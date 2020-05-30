@@ -5,14 +5,14 @@
 
 p, li {
   font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
 }
 
 table p {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -34,7 +34,7 @@ table p {
   margin-right: auto;
   text-align: center;
   margin-bottom: 24px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -59,7 +59,7 @@ table p {
 }
 
 .table_v2web1 caption {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -100,12 +100,28 @@ table p {
 }
 
 .p_v2web {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .navbar_v2web {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
+/*  border: solid;*/
+  background: black;
+  margin: 1px;
+  width: auto;
+  border: 2px solid #a81332;
+  border-radius: 5px;
+}
+
+.navbar {
+
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
 }
 
 
