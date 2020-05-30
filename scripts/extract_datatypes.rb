@@ -137,13 +137,13 @@ module V2Web
       HL7::Component.all.each do |c|
         dt = c.legacy_dt
         if dt
-          type = HL7::DataType.where(:abbreviation => dt).first
+          type = HL7::DataType.where(:code => dt).first
           if type
             ChangeTracker.start
             c.type = type
             ChangeTracker.commit
           else
-            puts Rainbow("Could not find datatype for #{c.owner.abbreviation}::#{c.name}").orange
+            puts Rainbow("Could not find datatype for #{c.owner.code}::#{c.name}").orange
           end
         end
       end
@@ -168,7 +168,7 @@ module V2Web
       @datatype.components.each { |c| names[c.name] += 1 }
       dupes = names.select { |_,v| v > 1 }
       if dupes.any?
-        puts Rainbow(@datatype.abbreviation).green
+        puts Rainbow(@datatype.code).green
         puts dupes.keys
         puts
       end
@@ -261,7 +261,7 @@ module V2Web
       html_dt = @html_dt[name]
       puts Rainbow("FAIL: #{name.inspect}").red unless html_dt
       ChangeTracker.start
-      @datatype = HL7::DataType.create(:name => name, :abbreviation => abbrv)
+      @datatype = HL7::DataType.create(:name => name, :code => abbrv)
       @datatype.html_source = make_html_code(html_dt)
       @datatype.withdrawn = !!(txt =~ /WITHDRAWN/)
       @datatype.save
@@ -341,7 +341,7 @@ module V2Web
       @component_num += 1
       title = extract_text(node).gsub(/\(.*\)/, '').strip
       @component = @datatype.components.find { |c| c.name.downcase == title.downcase }
-      msg = "#{@datatype.abbreviation}: #{@component_num} - #{title}"
+      msg = "#{@datatype.code}: #{@component_num} - #{title}"
       if @component
         # puts Rainbow(msg).green
       else

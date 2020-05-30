@@ -30,7 +30,7 @@ clear_tables
 sources = []
 # sources << ['../test_data/testJan16_intro', 'Intro Test']
 
-sources << ['../test_data/V2_CONFORM_R1_O1_2019SEP_BALLOT-REVISED-D9', 'HL7v2 Conformance Methodology R1 O1 Ballot Revised D9 - September 2019']
+sources << ['../test_data/V2_CONFORM_R1_N1_PUBLISH_2020MAY', 'HL7v2 Conformance Methodology R1 N1 Publish - May 2020']
 sources.each do |docx, title|
   extractor = V2Web::DocXtractor.new
   path = File.join(__dir__, docx)

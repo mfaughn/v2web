@@ -26,7 +26,7 @@ module V2Web
   class DocXtractor
     attr_reader :chapter
     def initialize(chapter = nil)
-      @chapter = chapter.to_s if chapter
+      @chapter = chapter.to_s.gsub(/^0+/, '')
     end
     
     def extract_document(doc, title = 'Test')
@@ -242,11 +242,19 @@ module V2Web
       @current_text = nil
       ChangeTracker.start
       @list = V2Web::List.new
-      # FIXME turn these on after regeneration
-      # @list.ordered = true unless unordered
-      # @list.indicator = 'letters'
-      @list.item_indicator = 'letters' # turn off after regeneration
-      @current_section.add_content(@list)
+      @list.item_indicator = case indicator_kind
+      when 'NormalList'
+        'none'
+      when 'NormalListAlpha', 'letters'
+        'letters'
+      when 'NormalListBullets', 'bullets'
+        'bullets'
+      when 'NormalListNumbered'
+        'numbers'
+      else
+        raise "Unknown List Type #{indicator_kind}"
+      end
+      (@current_section || @section).add_content(@list)
       ChangeTracker.commit
     end
     
@@ -318,7 +326,7 @@ module V2Web
         @caption = nil
       end
       table.ooxml = make_xml_code(node)
-      @current_section.add_content(table)
+      (@current_section || @section).add_content(table)
       add_styles(node, table)
       ChangeTracker.commit
       ChangeTracker.start
@@ -357,7 +365,8 @@ module V2Web
         scell.ooxml = make_xml_code(cell)
         paragraphs = cell.xpath('.//p')
         paragraphs.each do |para|
-          text = Gui_Builder_Profile::RichText.create(:content => extract_text(para))
+          extracted_paragraph = extract_text(para, true)
+          text = Gui_Builder_Profile::RichText.create(:content => extracted_paragraph)
           stext = V2Web::Text.create
           stext.content = text
           scell.add_content(stext)
@@ -405,6 +414,16 @@ module V2Web
       end
     end
     
+    def add_styled_text(node, style, text_parent = (@current_section || @section))
+      # Start new Text if style changes
+      @current_text = nil if @current_text && @current_text.styles.first.to_s != style
+      add_text(node, text_parent)
+      return if @current_text.styles.map(&:value).include?(style)
+      ChangeTracker.start
+      @current_text.add_style(style)
+      ChangeTracker.commit
+    end
+    
     def extract_p(node)
       raise unless node.name == 'p'
       texts = extract_text(node, true)
@@ -416,10 +435,12 @@ module V2Web
       runs = node.xpath('.//r')
       runs.each do |run|
         run_text = ''
-        texts = run.xpath('.//t | .//noBreakHyphen')
+        texts = run.xpath('.//t | .//noBreakHyphen | .//br')
         texts.each do |t|
           if t.name == 'noBreakHyphen'
             run_text << '-'
+          elsif t.name == 'br'
+            run_text << "\n"
           else
             run_text << CGI.escapeHTML(t)
           end

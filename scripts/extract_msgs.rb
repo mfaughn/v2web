@@ -7,7 +7,26 @@ module V2Web
       find_messages
       doc.remove_namespaces!
       # TODO - get documentation and everything else....
+      # return
+      create_special_segment_defitions # create the HL7 wildcard segment....TODO is there a better way?
       @html_msgs.each { |name, tables| create_msg(name, tables) }      
+    end
+    
+    def create_special_segment_defitions
+      unless HL7::SegmentDefinition.where(:code => 'Hxx').first
+        ChangeTracker.start
+        hxx = HL7::SegmentDefinition.create(:code => 'Hxx', :name => 'Any HL7 Segment')
+        hxx.description = Gui_Builder_Profile::RichText.create(:content => 'A choice of any HL7 segment or segment group is allowed.')
+        hxx.save
+        ChangeTracker.commit
+      end
+      unless HL7::SegmentDefinition.where(:code => '...').first
+        ChangeTracker.start
+        dots = HL7::SegmentDefinition.create(:code => '...', :name => 'Variable Segment')
+        dots.description = Gui_Builder_Profile::RichText.create(:content => 'Variable segment.  Instances of usage are defined by the message structures in which this segment occurs.')
+        dots.save
+        ChangeTracker.commit
+      end
     end
     
     def locate_ac_table(node, msg_name, single_msg_name = nil)
@@ -18,7 +37,7 @@ module V2Web
         if cell =~ /^Acknowledge?ment Choreography$/ && (msg_name.split(':').first == ac_name || single_msg_name.to_s.split(':').first == ac_name)
           {:name => ac_name, :table => nxt}
         else
-          puts Rainbow("No AckChor table for #{msg_name} -- found #{cell} and #{ac_name}").red
+          # puts Rainbow("No AckChor table for #{msg_name} -- found #{cell} and #{ac_name}").red
         end
       else
         locate_ac_table(nxt, msg_name)
@@ -58,7 +77,6 @@ module V2Web
             msgs = nums.collect { |n| [msg_parts.first, letters + n.to_s.rjust(3 - letters.size, '0'), msg_parts.last].join('^') }
             # msgs.each { |m| puts Rainbow(m).cyan }
           elsif node.text =~ /\w{3}\^\w.\d-\w.\d\^\w{3}(_\w{3})?/
-            # puts Rainbow(node.text).yellow
             msg_parts = node.text.split('^')
             nums = msg_parts[1].split('-').collect { |e| e.slice(/\d+/).to_i }
             letters = msg_parts[1].split('-').first.slice(/[A-Z]+/)
@@ -88,10 +106,9 @@ module V2Web
             ac_table = locate_ac_table(msg_table, msg_name, first_single_msg_name)
             data[:ac] = ac_table if ac_table
             msgs.each do |msg|
-              msg_name = node.text.strip
-              single_msg_name = msg_name.sub(/.*(?=:)/, msg)
-              # puts "  #{single_msg_name}"
-              @html_msgs[single_msg_name] = data
+              # msg_name = node.text.strip
+              # single_msg_name = msg_name.sub(/.*(?=:)/, msg)
+              @html_msgs[msg] = data
             end
           end
         end
@@ -101,17 +118,22 @@ module V2Web
     # TODO -- Get all of the documentation for MsgDefs.  This is simply creating the objects with no documentation.
 
     def create_msg(name, tables)
-      puts Rainbow("  # Create Message #{name}").orange
+      # return unless name =~ /ACK\^J01\^ACK/
+      # puts Rainbow("  # Create Message #{name}").blue
       tbl = tables[:tbl]
       ac  = tables[:ac]
-      existing_msg = HL7::MessageDefinition.where(:name => name).first
+      existing_msg = HL7::Message.where(:name => name).first
       puts Rainbow("#{name} already exists").red if existing_msg
+
+      message_def = create_message_definition(name)
+      # existing_structure = get_message_structure(name)
+      structure = create_message_structure(name)
+
       ChangeTracker.start
-      message_def = HL7::MessageDefinition.create(:name => name, :origin => @chapter.to_s)
       src = tbl.to_xml
       if ac
         src << ac[:table].to_xml
-        message_def.notes = "ac_table_title: '#{ac[:name]}'}"
+        message_def.notes = "{ac_table_title: '#{ac[:name]}'}"
       end
       # message_def.source = make_html_code(src) # not including source here because we are getting it from HTML instead of OOXML.
       ####### doing this for now...
@@ -122,16 +144,88 @@ module V2Web
       #######
       message_def.origin = chapter
       message_def.save
-      @segment_parents = [message_def]
+      @segment_parents = [structure]
       ChangeTracker.commit
-      extract_segments(tbl)
+      extract_segments(tbl, name) unless structure.segments.any?
+      
+      if name =~ /QBP\^Q25\^QBP_Q21/
+        puts Rainbow("Handling the QBP^Q25^QBP_Q21 mess.").green
+        ChangeTracker.start
+        correct_structure = HL7::MessageStructure.where(:code => 'QBP_Q21').first
+        raise unless correct_structure
+        message_def.structure = correct_structure
+        ChangeTracker.commit
+        return
+      end
+      
+      identical_structures = get_identical_structures_for(structure)
+      if identical_structures.any?
+        if identical_structures.count > 1
+          raise "Whaaaattttt?"
+        else
+          existing_structure = identical_structures.first
+          if existing_structure.code =~ /_Z/ && structure.code !~ /_Z/
+            puts Rainbow("Replacing #{existing_structure.code} with #{structure.code}.  #{structure.code} ==> #{existing_structure.code}").green
+            ChangeTracker.start
+            existing_structure.messages.each { |msg| msg.structure = structure }
+            message_def.structure = structure
+            existing_structure.destroy
+            ChangeTracker.commit
+          else
+            unless existing_structure.code == structure.code
+              puts Rainbow("#{structure.code} should be replaced by #{existing_structure.code} from Chapter #{existing_structure.origin}.  #{existing_structure.code} ==> #{structure.code}").orange
+              # structure.simple_render
+              # puts '*'*10
+              # existing_structure.simple_render
+              # puts '%'*10
+            end
+            ChangeTracker.start
+            structure.destroy
+            message_def.structure = existing_structure
+            ChangeTracker.commit
+          end
+        end
+      else
+        structures_with_same_code = HL7::MessageStructure.where(:code => structure.code).all.reject { |s| s.id == structure.id }
+        if structures_with_same_code.any?
+          raise if structures_with_same_code.count > 1
+          puts Rainbow("Hold up! #{name} does not have the same structure as #{structures_with_same_code.map(&:code).join(' and ')}").red
+          diff_structures(structures_with_same_code.first, structure)
+          puts '%'*10
+          puts "Renaming #{structure.code} as #{rename_code(structure.code)}"
+          ChangeTracker.start
+          structure.code = rename_code(structure.code)
+          structure.save
+          ChangeTracker.commit
+        end
+        ChangeTracker.start
+        message_def.structure = structure
+        ChangeTracker.commit
+      end
     end
+    
+    def rename_code(code)
+      if code =~ /_/
+        if code =~ /[a-z]$/
+          code.succ
+        else
+          code + 'a'
+        end        
+      else
+        if code =~ /\d$/
+          code.succ
+        else
+          code + '1'
+        end
+      end
+    end
+      
     
     # curly braces indicate repeating section
     # square brackets indicate optional
     # angle brackets and pipes are choice segments
-    def extract_segments(table)
-      rows = table.at('tbody').children.reject { |n| n.name == 'text'}[1..-1]
+    def extract_segments(table, name)
+      rows = table.at('tbody').children.reject { |n| n.name == 'text'}
       rows.each do |row|
         entries = []
         row.children.each do |td|
@@ -141,56 +235,67 @@ module V2Web
           entries << entry
         end
         seg, desc, status, ch = entries
+        next if seg =~ /Segments?/
+        puts Rainbow(entries.inspect).red if seg =~ /[a-z\.]/ && seg != 'Hxx' && seg !~ /\.\.\./
         next if seg == '|'
+        add_parent = false
+        # puts Rainbow(seg).green
         if seg =~ /\w\w\w/
           segment = create_segment(seg, desc, status, ch)
-        elsif seg =~ /\.\.\./ # it is an example...
-          segment = create_segment(seg, desc, status, ch, :example)
+        elsif seg =~ /\.\.\./ 
+          segment = create_segment(seg, desc, status, ch)
         elsif seg =~ /</
           segment = create_segment_choice(seg, desc, status, ch)
-          @segment_parents << segment
+          add_parent = true
         elsif seg =~ /\[|\{/
           segment = create_segment_seq(seg, desc, status, ch)
-          @segment_parents << segment
+          add_parent = true
         elsif seg =~ /\]|\}|>/
           @segment_parents.pop
           next
-        elsif @segment_parents.last.name =~ /QBP\^Q25\^QBP_Q21/
+        elsif @segment_parents.last.code == "QBP_Q21" && @chapter.to_s == '15'
           next # Silly stuff in 15.3.7
         else
-          raise "Unexpected seg value #{seg} in #{@segment_parents.first.name}"
+          raise "Unexpected seg value #{seg} in #{@segment_parents.first.code} / #{name} / #{@chapter}"
         end      
         ChangeTracker.start
         @segment_parents.last.add_segment(segment)
+        # if @segment_parents.last.is_a?(HL7::SegmentChoice)
+        #   puts "Added #{segment.type.code} to SegmentChoice[#{@segment_parents.last.id}]"
+        # end
         ChangeTracker.commit
+        @segment_parents << segment if add_parent
       end
     end
     
     def obsolete_segs
-      ['QRD', 'QRF', 'URD', 'URS', 'Hxx']
+      ['QRD', 'QRF', 'URD', 'URS']
     end
     
     # We aren't going to worry about chapter (ch) because we already know that the only segment that is duplicated is OBR and we'll deal with that by hand.
     # What does status mean? TODO add to model and capture.
     def create_segment(seg, desc, status, ch, type = nil)
-      abbreviation = seg.slice(/[A-Z][A-Z][A-Z0-9]/)
-      abbreviation = 'Hxx' if seg == 'Hxx'
-      if obsolete_segs.include?(abbreviation)
-        s = HL7::ExampleSegment.where(:name => abbreviation).first
+      code = seg.slice(/[A-Z][A-Z][A-Z0-9]/)
+      code = '...' if seg =~ /\.\.\./
+      code = 'Hxx' if seg == 'Hxx'
+      if obsolete_segs.include?(code)
+        s = HL7::ExampleSegment.where(:name => code).first
         return s if s
         ChangeTracker.start
-        s = HL7::ExampleSegment.create(:name => abbreviation, :description => desc, :status => status)
+        s = HL7::ExampleSegment.create(:name => code, :description => desc, :status => status)
         ChangeTracker.commit
         return s
       end
       ChangeTracker.start
       s = HL7::Segment.create(:description => desc, :status => status)
+      seg = seg.sub('}}', '}]')
       s.repeat = !!(seg =~ /\{.*\}/)
       s.optional = !!(seg =~ /\[.*\]/)
-      seg_def = HL7::SegmentDefinition.where(:abbreviation => abbreviation).first
+      seg_def = HL7::SegmentDefinition.where(:code => code).first
+      puts Rainbow("SegmentDefinition #{code.inspect} #{desc} not found!").red unless seg_def
       unless type == :example
         unless seg_def 
-          raise "Could not find SegmentDefinition named #{seg} with abbreviation #{abbreviation.inspect}."
+          raise "Could not find SegmentDefinition named #{seg} with code #{code.inspect}."
         end
         s.type = seg_def
       end
@@ -202,18 +307,19 @@ module V2Web
     def create_segment_choice(seg, desc, status, ch)
       ChangeTracker.start
       s = HL7::SegmentChoice.create
-      s.repeat = !!(seg =~ /\{.*\}/)
-      s.optional = !!(seg =~ /\[.*\]/)
+      s.repeat = !!(seg =~ /\{/)
+      s.optional = !!(seg =~ /\[/)
       s.save
       ChangeTracker.commit
+      # puts Rainbow("Created SegmentChoice[#{s.id}]").cyan
       s
     end
     
     def create_segment_seq(seg, desc, status, ch)
       ChangeTracker.start
       s = HL7::SegmentSequence.create
-      s.repeat = !!(seg =~ /\{.*\}/)
-      s.optional = !!(seg =~ /\[.*\]/)
+      s.repeat = !!(seg =~ /\{/)
+      s.optional = !!(seg =~ /\[/)
       s.name = desc&.slice(/(?<=---).+(?=begin)/)&.strip
       s.save
       ChangeTracker.commit

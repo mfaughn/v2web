@@ -5,6 +5,7 @@ module V2Web
       @html = File.open(html) { |f| Nokogiri::XML(f) }
       @acs = {}
       find_acs
+      # puts "Found #{@acs.count} ACs"
       doc.remove_namespaces!
       # TODO - get documentation and everything else....
       @acs.each { |name, data| create_ac(name, data) }
@@ -57,7 +58,7 @@ module V2Web
     end
 
     def create_ac(name, data)
-      existing_root_msg = HL7::MessageDefinition.where(Sequel.like(:name, "#{name}%")).first
+      existing_root_msg = HL7::Message.where(Sequel.like(:name, "#{name}%")).first
       if existing_root_msg
         extract_ac(data, existing_root_msg)
       else
@@ -93,7 +94,6 @@ module V2Web
       
       enhanced_imm = {}
       enhanced_app = {}
-      
       msh15.each_with_index do |val, i|
         unless val == 'NE' || val == 'AL' || val.split(/,\s*/).sort == ['AL', 'ER', 'SU']
           if val == 'N/A'
@@ -108,13 +108,14 @@ module V2Web
         if enhanced_imm[val] && enhanced_imm[val] != ack
           puts Rainbow("Ack mismatch in enhance immediate for #{title}").red
         end
-        enhanced_imm[val] = ack unless ack.to_s.strip == '-' || ack.strip == 'N/A' || ack.empty?
+        enhanced_imm[val] = ack.gsub("\n", ' ') unless ack.to_s.strip == '-' || ack.strip == 'N/A' || ack.empty?
+        puts Rainbow("#{title}: MSH15 is #{val} but there is no message.").orange if val =~ /AL/ && enhanced_imm[val].nil?
       end
       
       # MSH-16
       orig_app = nil
       begin
-        app_ack = rows.shift.children.reject {|td| td.name == 'text'}[1..-1].map{|td| td.text.strip}
+        app_ack = rows.shift.children.reject {|td| td.name == 'text'}[1..-1].map{|td| td.text.strip.gsub("\n", ' ').gsub(/\s+/, ' ')}
         orig_app = app_ack.shift.strip
         puts Rainbow("#{title} has empty cells").cyan if orig_imm&.empty?
         orig_app = nil if orig_app == '-' || orig_app == ''
@@ -130,9 +131,14 @@ module V2Web
           end
           ack = app_ack[i]
           if enhanced_app[val] && enhanced_app[val] != ack
-            puts Rainbow("Ack mismatch in enhance application for #{title}").red
+            puts Rainbow("Ack mismatch in enhanced application for #{title}").red
+            puts "Enhanced app: #{enhanced_app[val].inspect}\nApplication ack: #{ack.inspect}"
           end
-          enhanced_app[val] = ack unless ack.to_s.strip == '-' || ack.strip == 'N/A' || ack.empty?
+          if orig_app && ack != '-' && orig_app != ack
+            puts Rainbow("Ack mismatch b/w original and enhanced application ack for #{title} -- #{orig_app.inspect} : #{ack.inspect}").yellow
+          end
+          enhanced_app[val] = ack.gsub("\n", ' ').gsub(/\s+/, ' ') unless ack.to_s.strip == '-' || ack.strip == 'N/A' || ack.empty?
+          puts Rainbow("#{title}: MSH16 is #{val} but there is no message.").orange if val =~ /AL/ && enhanced_app[val].nil?
         end
       rescue
         if title == 'RTB^Znn^RTB_Knn'
@@ -141,24 +147,36 @@ module V2Web
           raise
         end
       end
+      # weird = (enhanced_imm.values + enhanced_app.values).reject { |v| v =~ /^ACK/ }
+      # if weird.any?
+      #   puts "Message: #{title}"
+      #   enhanced_imm.each_value {|v| puts "Immediate: #{v}" unless v =~ /^ACK/ }
+      #   enhanced_app.each_value {|v| puts "Application ACK: #{v}" unless v =~ /^ACK/ }
+      #   puts
+      # end
       
       ChangeTracker.start
       ac_obj = HL7::AcknowledgmentChoreography.new
 
+
       # root_message = find_message(title)
       # raise unless root_message
+      # puts "Setting AC for #{msg_obj.name}"
       ac_obj.for = msg_obj
 
       ac_obj.ack_immediate = true if orig_imm
       ac_obj.save
       ChangeTracker.commit
       if orig_imm || orig_app
-        orig_msgs = find_or_create_messages(orig_app || orig_imm, msg_obj.name)
+        orig_msgs = find_or_create_messages(orig_imm || orig_app, msg_obj.name)
         ChangeTracker.start
         ac_obj.original_acks = orig_msgs
         ChangeTracker.commit
       end
       ChangeTracker.start
+      raise if orig_imm && orig_app
+      ac_obj.ack_immediate = true  if orig_imm
+      ac_obj.ack_immediate = false if orig_app
       ac_obj.msh15 = 'Never'  if enhanced_imm.keys == ['NE']
       ac_obj.msh15 = 'Always' if enhanced_imm.keys == ['AL']
       ac_obj.msh16 = 'Never'  if enhanced_app.keys == ['NE']
@@ -174,7 +192,7 @@ module V2Web
         mm = find_or_create_messages(enhanced_app.values.uniq.first, msg_obj.name)
         begin
           ChangeTracker.start
-          ac_obj.msh15_acks = mm
+          ac_obj.msh16_acks = mm
           ChangeTracker.commit
         rescue
           ChangeTracker.cancel
@@ -184,6 +202,41 @@ module V2Web
           raise
         end
       end
+      ChangeTracker.start
+      eiv = enhanced_imm.values
+      eav = enhanced_app.values
+      if orig_imm
+        if eiv.count == 1 && orig_imm == eiv.first
+          ac_obj.imm_ack_name = orig_imm
+        else
+          # puts Rainbow("#{orig_imm} & #{enhanced_imm.values.first}").cyan
+          ac_obj.imm_ack_name = "FIXME: #{orig_imm} & #{eiv.first}"
+        end
+      elsif eiv.any?
+        if eiv.count == 1
+          ac_obj.imm_ack_name = eiv.first
+        else
+          puts Rainbow("#{eiv.join(' & ')}").cyan
+          ac_obj.imm_ack_name = "FIXME: #{eiv.join(' & ')}"
+        end
+      end
+      if orig_app
+        if eav.count == 1 && orig_app == eav.first
+          ac_obj.app_ack_name = orig_app
+        else
+          puts Rainbow("#{orig_app} & #{eav.first}").blue
+          ac_obj.app_ack_name = "FIXME: #{orig_app} & #{eav.first}"
+        end
+      elsif eav.any?
+        if eav.count == 1
+          ac_obj.app_ack_name = eav.first
+        else
+          puts Rainbow("#{eav.join(' & ')}").blue
+          ac_obj.imm_ack_name = "FIXME: #{eav.join(' & ')}"
+        end
+      end
+      ac_obj.save
+      ChangeTracker.commit
       if enhanced_imm.values.uniq.count > 1
         puts Rainbow("#{title} has multiple values for enhanced_imm: #{enhanced_imm.values}").red
       end
@@ -233,6 +286,7 @@ module V2Web
           puts "  MSH-16      |  #{fv}#{' '*space}|  #{mg}"
         end
       end
+      # puts "Created AC for #{ac_obj.for.name}."
     end
     
     def find_or_create_messages(names, root_msg_name = nil)
@@ -241,7 +295,7 @@ module V2Web
         sname = singularize_message_name(name, root_msg_name)
         msg = find_message(sname)
         unless msg
-          msg = create_message_definition(sname)
+          msg = create_message_definition(fix_name(sname))
           puts "Created MessageDefinition for #{msg.name}" unless name =~ /^ACK.*ACK$/
         end
         msgs << msg
@@ -263,21 +317,18 @@ module V2Web
       fixed_ack_msg_name
     end
     
-    def create_message_definition(name)
-      ChangeTracker.start
-      msg_def = HL7::MessageDefinition.create(:name => fix_name(name))
-      ChangeTracker.commit
-      msg_def
-    end
-    
     def find_message(name)
       name = fix_name(name)
-      msg_def = HL7::MessageDefinition.where(Sequel.like(:name, "#{name}%")).first
+      msg_def = HL7::Message.where(Sequel.like(:name, "#{name}%")).first
       puts Rainbow("No existing MessageDefinition for #{name}").yellow if !msg_def && name !~ /^ACK.*ACK$/
       msg_def
     end
     
     def fix_name(name)
+      name = 'RSP^K24^RSP_K23' if name == 'RSP^K24^RSP_K24' || name == 'RSP^K2^4^RSP_K24'
+      name = 'ACK^O16^ACK' if name == 'ACK^ORG^ACK'
+      name = 'ACK^O31^ACK' if name == 'ACK^B31^ACK'
+      name = 'ACK^O32^ACK' if name == 'ACK^B32^ACK'
       name = 'RRE^O26^RRE_O12' if name == 'RRE^O26^RRE_O26'
       name = 'RRI^I12-I15^RRI_I12' if name == 'RPI^I12-I15^RPI_I12'
       name = 'RSP^K24^RSP_K24' if name == 'RSP^K2^4^RSP_K24'

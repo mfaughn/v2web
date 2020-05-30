@@ -1,5 +1,6 @@
+require_relative 'make_general_ack'
 acks = []
-HL7::MessageDefinition.each do |msg|
+HL7::Message.each do |msg|
   segs = msg.segments
   next unless segs[0].is_a?(HL7::Segment)
   next unless segs[1].is_a?(HL7::Segment)
@@ -28,33 +29,10 @@ end
 # puts acks.count
 
 
-ga = HL7::MessageDefinition.where(:name => 'General Acknowledgment').first
-unless ga
-  ChangeTracker.start
-  ga = HL7::MessageDefinition.create(:name => 'General Acknowledgment')
-  s1 = HL7::Segment.create
-  s1.type = HL7::SegmentDefinitions.where(:abbreviation => 'MSH').first
-  s2 = HL7::Segment.create
-  s2.optional = true
-  s2.repeat = true
-  s2.type = HL7::SegmentDefinitions.where(:abbreviation => 'SFT').first
-  s3 = HL7::Segment.creat3
-  s3.type = HL7::SegmentDefinitions.where(:abbreviation => 'UAC').first
-  s3.optional = true
-  s4 = HL7::Segment.create
-  s4.type = HL7::SegmentDefinitions.where(:abbreviation => 'MSA').first
-  s5 = HL7::Segment.create
-  s5.type = HL7::SegmentDefinitions.where(:abbreviation => 'ERR').first
-  s5.optional = true
-  s5.repeat = true
-  s1.save; s2.save; s3.save; s4.save; s5.save
-  ga.segments = [s1, s2, s3, s4, s5]
-  ga.save
-  ChangeTracker.commit
-end
-ChangeTracker.start
-ga.aliases = acks
-ChangeTracker.commit
-  
+# ChangeTracker.start
+# ga.aliases = acks
+# ChangeTracker.commit
+
+HL7::AcknowledgmentChoreography.exclude(:msh15_id => nil).all
 
   

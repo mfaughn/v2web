@@ -1,5 +1,5 @@
 def check_dt_depth(dt)
-  depth = [dt.abbreviation]
+  depth = [dt.code]
   dt.components.each do |c|
     cdt = c.type
     next unless cdt
@@ -13,7 +13,7 @@ def depth (a)
 end
 dts = {}
 HL7::DataType.each do |dt|
-  dts[dt.abbreviation] = check_dt_depth(dt)
+  dts[dt.code] = check_dt_depth(dt)
 end
 dts.each {|dt, arr|
   arr = Array.new(arr.select {|a| depth(a) > 3 })

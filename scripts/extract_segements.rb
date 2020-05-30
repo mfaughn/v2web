@@ -1,11 +1,6 @@
 require_relative 'extractor_helpers'
 module V2Web
   class DocXtractor
-    attr_reader :chapter
-    def initialize(chapter)
-      @chapter = chapter.to_s
-    end
-    
     def extract_segements(doc, html)
       @html = File.open(html) { |f| Nokogiri::XML(f) }
       @html_segs = {}
@@ -170,6 +165,9 @@ module V2Web
         # placeholder in case we want to skip these later.  They are defined in Ch8
       elsif name.to_s =~ /[s|S]egment\s*(\(Proposed Example Only\)|\(Fields That Apply to Most Observations(\/Services)?\))?$/
         # puts 'Creating ' + Rainbow("#{txt}").green
+      elsif name.to_s =~ /segment usage in vaccine messages/
+        # TODO how deal with what amounts to a profile on a segment definition
+        # this appears to be a one-off from Ch.4A
       else
         if txt =~ /\([E|e]vent.+\)/
         elsif txt =~ /[s|S]egment\s*$/
@@ -188,7 +186,7 @@ module V2Web
         puts node.to_s
       end
       ChangeTracker.start
-      @segment = HL7::SegmentDefinition.create(:name => name, :abbreviation => abbrv)
+      @segment = HL7::SegmentDefinition.create(:name => name, :code => abbrv)
       @segment.source = make_html_code(html_seg)
       @segment.withdrawn = !!(txt =~ /WITHDRAWN/)
       @segment.origin = chapter
@@ -271,7 +269,7 @@ module V2Web
         
         data_element = HL7::DataElement.where(:item_number => item_num).first
         if data_element
-          puts Rainbow("  #{seq} uses existing DataElement with item number #{item_num}").green
+          # puts Rainbow("  #{seq} uses existing DataElement with item number #{item_num}").green
         else
           data_element_props = {
             :item_number => item_num,
@@ -303,9 +301,9 @@ module V2Web
           end
           ChangeTracker.commit
           if dt
-            datatype = HL7::DataType.where(:abbreviation => dt).first
+            datatype = HL7::DataType.where(:code => dt).first
             ChangeTracker.start
-            datatype ||= HL7::DataType.create(:abbreviation => dt)
+            datatype ||= HL7::DataType.create(:code => dt)
             data_element.data_type = datatype
             ChangeTracker.commit
           end
@@ -392,7 +390,7 @@ module V2Web
               .gsub(/^[A-Z]+[-]\d+/, '')
               .strip
       @data_element = @segment.data_elements.find { |de| de.name.downcase == title.downcase }
-      msg = "#{@segment.abbreviation}: #{@data_element_num} - #{title}"
+      msg = "#{@segment.code}: #{@data_element_num} - #{title}"
       if @data_element
         # puts Rainbow(msg).green
       else

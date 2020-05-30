@@ -20,6 +20,9 @@ config_file = File.expand_path(File.join(__dir__, '../config/v2conformance_confi
 config_dir = File.expand_path(File.join(__dir__, '../config/v2conformance'))
 tab_files = {}
 Dir["#{config_dir}/**/*"].select { |f| File.file?(f) }.each { |f| tab_files[f.split('/').last] = f }
+pp tab_files.keys.sort
+puts 
+pp tab_files.values.sort
 conformance.configure_site(config_file, tab_files)
 indicate_page_linkages(conformance)
 conformance.to_hl7_site

@@ -51,3 +51,8 @@ sources.each do |source|
   doc = Docx::Document.open(docx_path)
   extractor.extract_segements(doc.doc, html_path)
 end
+ChangeTracker.start
+HL7::SegmentDefinition.all.select { |sd| sd.fields_count == 0 }.each do |sd|
+  sd.destroy
+end
+ChangeTracker.commit
