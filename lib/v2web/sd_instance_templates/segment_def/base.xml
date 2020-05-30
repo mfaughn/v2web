@@ -2,8 +2,8 @@
 <SegmentDefinition>
   <url value='http://v2.hl7.org/fhir/SegmentDefinition/URL'/>
   <name value='NAME'/>
-  <withdrawn value='WITHDRAWN'/>
   <abbreviation value='ABBREVIATION'/>
+  <withdrawn value='WITHDRAWN'/>
   <description>
     <status value="additional"/>
      <div>

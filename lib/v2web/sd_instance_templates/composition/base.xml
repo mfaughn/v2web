@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <url value='http://v2.hl7.org/fhir/Composition/URL' />
+  <status value="preliminary"/>
+  <type>
+    <text value='HL7 V2+ Standards Document'
+  </type>
+  <date value="YYYY-MM-DD"/>
+  <title value="TITLE"/>
+  <custodian>
+    <reference value="uri/for/an/instance/of/Organization/that/is/the/HL7/organization"
+  </custodian>
+  SECTIONS
+</Composition>

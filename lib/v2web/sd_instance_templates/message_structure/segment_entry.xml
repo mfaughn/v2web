@@ -1,0 +1,8 @@
+<segmentEntry>
+  <mayRepeat value="REPEAT"/>
+  <optional  value="OPTIONAL"/>
+  <anyHl7Segment value="ANY_SEGMENT"/>
+  STATUS
+  DESCRIPTION
+  SEGMENT
+</segmentEntry>
