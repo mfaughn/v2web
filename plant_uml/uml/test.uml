@@ -1,0 +1,51 @@
+@startuml
+partition "System A" {
+  (*) --> "Construct ADT^A01^ADT_A01"
+  --> "Open Channel (Channels?)"
+  partition " Channel 1" {
+    "Open Channel (Channels?)" --> "Send ADT^A01^ADT_A01"
+    "Receive Commit ACK" --> if "MSA-1" then
+      -left-> [CA] (*)
+    else
+      --> [<CE|CR>] "Construct ADT^A01^ADT_A01"
+    endif
+  }
+  partition "Channel 2" {
+    "Receive Application ACK" --> "Validate and Store ACK"
+    -->if "MSA-1" then
+      -left-> [AA] (*)
+    else
+      --> [<AE|AR>] "Unknown"
+    endif
+  }
+}
+
+
+partition "System B" #LightSkyBlue {
+  "Send ADT^A01^ADT_A01" --> "Receive ADT^A01^ADT_A01"
+  "Receive ADT^A01^ADT_A01" --> "Validate and Store ADT^A01^ADT_A01"
+  -->if "isStoredAndValid?" then
+    --> [true] if "MSH-15 = AL or SU?" then
+      -left-> [true] "Send ACK^A01^ACK:MSA-1=CA"
+      else
+      --> [false] "Application Processing"
+      --> if "processingSuccessful?" then
+        -left-> [true] "Send ACK^A01^ACK:MSA-1=AA"
+      else
+        --> [false] "Send ACK^A01^ACK:MSA-1=<AR|AE>"
+      endif
+    endif
+  else
+    -left-> [false] if "MSH-15 = AL or ER?" then
+      -left-> [true] "Send ACK^A01^ACK:MSA-1=CA"
+    else
+      --> [false] (*)
+    endif
+  endif
+  "Send ACK^A01^ACK:MSA-1=CA" -left-> "Receive Commit ACK"
+  "Send ACK^A01^ACK:MSA-1=<CR|CE>" -left-> "Receive Commit ACK"
+  "Send ACK^A01^ACK:MSA-1=AA" -left-> "Receive Application ACK"
+  "Send ACK^A01^ACK:MSA-1=<AR|AE>" -left-> "Receive Application ACK"
+}
+
+@enduml

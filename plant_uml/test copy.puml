@@ -1,0 +1,66 @@
+partition "System A" {
+  start
+  :Construct ADT^A01^ADT_A01;
+  :Open Channel (Channels?);
+  partition "Channel 1" {
+    :Open Channel (Channels?);
+    :Send ADT^A01^ADT_A01;
+    detach
+    :Receive Commit ACK;
+    if (MSA-1) then (CA)
+      stop
+    else (<CE|CR>)
+      :Construct ADT^A01^ADT_A01;
+    endif
+  }
+  partition "Channel 2" {
+    :Receive Application ACK;
+    :Validate and Store ACK;
+    if (MSA-1) then (AA)
+      stop
+    else (<AE|AR>)
+      :Unknown;
+    endif
+  }
+}
+
+
+partition "System B" {
+  :Send ADT^A01^ADT_A01;
+  :Receive ADT^A01^ADT_A01;
+  :Validate and Store ADT^A01^ADT_A01;
+  if "isStoredAndValid?" then (true)
+    if "MSH-15 = AL or SU?" then (true)
+      fork
+        :Send ACK^A01^ACK:MSA-1=CA;
+      fork again
+        :Application Processing;
+      end fork
+    else (false)
+      :Application Processing;
+      if "processingSuccessful?" then (true)
+        :Send ACK^A01^ACK:MSA-1=AA;
+      else (false)
+        :Send ACK^A01^ACK:MSA-1=<AR|AE>;
+      endif
+    endif
+  else (false)
+    if (MSH-15 = AL or ER) then (true)
+      :Send ACK^A01^ACK:MSA-1=CA;
+    else (false)
+      stop
+    endif
+  endif
+  detach
+  :Send ACK^A01^ACK:MSA-1=CA";
+  :Receive Commit ACK;
+  detach
+  :Send ACK^A01^ACK:MSA-1=<CR|CE>;
+  :Receive Commit ACK;
+  detach
+  :Send ACK^A01^ACK:MSA-1=AA;
+  :Receive Application ACK;
+  detach
+  :Send ACK^A01^ACK:MSA-1=<AR|AE>;
+  :Receive Application ACK;
+}
