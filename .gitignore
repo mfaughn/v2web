@@ -11,6 +11,10 @@
 # lib/HL7v2_
 /IG/HL7*/temp
 /config/*
+/config_generated/*
+/fhir_output/*
+/generated/*
+~$*
 
 # Other version control systems #
 #################################
