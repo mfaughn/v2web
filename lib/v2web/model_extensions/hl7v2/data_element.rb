@@ -20,11 +20,11 @@ module HL7
         begin
           xml.sub!('DATA_TYPE', data_type.local_url_name)
         rescue
-          puts Rainbow("Unable to create resource for data element (db id #{id}) because it has a bad data type.\n#{item_number} - #{name} found at sequence ##{field.sequence_number} of #{field.segment_definition.abbreviation} - #{field.segment_definition.name} in Chapter #{field.segment_definition.origin}\n").red
+          puts Rainbow("Unable to create resource for data element (db id #{id}) because it has a bad data type.\n#{item_number} - #{name} found at sequence ##{field.sequence_number} of #{field.segment_definition.code} - #{field.segment_definition.name} in Chapter #{field.segment_definition.origin}\n").red
           # FIXME see 5.5.4 for DT value of 'varies'
           # puts item_number.to_s + name.downcase.gsub(/[^A-Za-z\d]/, '-')
           # puts field.segment_definition.name
-          # puts field.segment_definition.abbreviation
+          # puts field.segment_definition.code
           # puts field.segment_definition.origin
         end
       else
@@ -34,18 +34,18 @@ module HL7
     end
     
     def resource_min_length
-      min_length ? HL7.get_instance_template(:data_element, 'min_length').sub('VALUE', min_length.to_s) : ''
+      min_length ? HL7.get_instance_template(:common, 'min_length').sub('VALUE', min_length.to_s) : ''
     end
     def resource_max_length
-      max_length ? HL7.get_instance_template(:data_element, 'max_length').sub('VALUE', max_length.to_s) : ''
+      max_length ? HL7.get_instance_template(:common, 'max_length').sub('VALUE', max_length.to_s) : ''
     end
     def resource_conf_length
-      c_length ? HL7.get_instance_template(:data_element, 'conf_length').sub('VALUE', c_length) : ''
+      c_length ? HL7.get_instance_template(:common, 'conf_length').sub('VALUE', c_length) : ''
     end
     
     def resource_description_content
        if description_content && description_content.strip[0]
-         HL7.get_instance_template(:data_element, 'description').sub('VALUE', description_content)
+         HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
        else
          ''
        end

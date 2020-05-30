@@ -28,7 +28,25 @@ module V2Web
       end
       html = html.join
       # puts html
-      V2Web.render_with_locals(:ul, {:content => html })
+      list_locals = { :content => html }
+      case item_indicator&.value.to_s.downcase
+      # when 'bullets', 'bullet'  
+      when 'letters', 'letter', 'alpha'
+        list_locals[:list_type] = 'lower-alpha'
+        V2Web.render_with_locals(:ol, list_locals)
+      when 'numbers', 'number', 'numbered'
+        list_locals[:list_type] = 'decimal'
+        V2Web.render_with_locals(:ol, list_locals)
+      when 'none'
+        list_locals[:list_type] = 'none'
+        V2Web.render_with_locals(:ul, list_locals)
+      else
+        V2Web.render_with_locals(:ul, list_locals)
+      end
+    end
+    
+    def to_v2_html_test(_ = nil)
+      to_hl7_site
     end
   end
 end

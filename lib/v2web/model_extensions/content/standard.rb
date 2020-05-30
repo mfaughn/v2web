@@ -5,6 +5,22 @@ load File.join(__dir__, 'ig_standard.rb')
 
 module V2Web
   class Standard
+    def to_composition
+      xml = HL7.get_instance_template(:composition, 'base')
+      xml.sub!('YYYY-MM-DD', Time.now.strftime("%F"))
+      xml.sub!('TITLE', title)      
+      sections_xml = []
+      subsections.each { |ss| sections_xml << ss.to_composition_section }
+      xml.sub!('SECTIONS', sections_xml.join)
+      Nokogiri::XML(xml,&:noblanks).to_s
+    end
+    
+    def local_url_name
+      #FIXME make better
+      # title.downcase.sub(/[^\W]/, '_')
+      url_title
+    end
+    
     def to_hl7_site_file(location = nil)
       payload = content.map { |c| c.to_hl7_site(:parent => self, :parent_number => nil) }.join("\n")
       V2Web.create_site_file(payload, location)
@@ -16,7 +32,8 @@ module V2Web
     def to_hl7_site
       # Make a place to put everything and copy js/css/image files that will be needed
       dir_name ||= title.gsub(/\s/, '_')
-      root_dir = relative("../../../#{dir_name}")
+      root_dir = relative("../../../../generated/#{Time.now.strftime('%B%d_%Y')}/#{dir_name}")
+      FileUtils.remove_dir(root_dir, true) if File.exist?(root_dir)
       FileUtils.mkdir_p(root_dir)
       copy_web_files(root_dir)
       
@@ -64,7 +81,7 @@ module V2Web
     end
     
     def link_title
-      title.gsub(/\s/, '_').hl7
+      title.gsub(/\s/, '-').hl7
     end
     
     def configure_site(config_file, tab_files)
@@ -72,5 +89,16 @@ module V2Web
       configure(config, tab_files)
     end
     
+    def to_v2_html_test(_ = nil)
+      html  = super(0)
+      # fname = title.gsub(/\s/, '_')
+      fname = 'test' + chapter.to_s
+      root_dir = relative("../../../v2plus_test")
+      FileUtils.mkdir_p(root_dir)
+      copy_web_files(root_dir)
+      main_location = File.join(root_dir, "#{fname}.html")
+      puts main_location
+      File.open(main_location, 'w+') { |f| f.puts html }
+    end
   end # Standard
 end

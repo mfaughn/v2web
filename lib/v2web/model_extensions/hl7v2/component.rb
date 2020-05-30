@@ -34,13 +34,13 @@ module HL7
        must_support == nil ? '' : HL7.get_instance_template(:data_type, 'must_support').sub('VALUE', must_support.to_s)
     end
     def resource_min_length
-      min_length ? HL7.get_instance_template(:data_type, 'min_length').sub('VALUE', min_length.to_s) : ''
+      min_length ? HL7.get_instance_template(:common, 'min_length').sub('VALUE', min_length.to_s) : ''
     end
     def resource_max_length
-      max_length ? HL7.get_instance_template(:data_type, 'max_length').sub('VALUE', max_length.to_s) : ''
+      max_length ? HL7.get_instance_template(:common, 'max_length').sub('VALUE', max_length.to_s) : ''
     end
     def resource_conf_length
-      c_length ? HL7.get_instance_template(:data_type, 'conf_length').sub('VALUE', c_length) : ''
+      c_length ? HL7.get_instance_template(:common, 'conf_length').sub('VALUE', c_length) : ''
     end
     def resource_comments
       return '' if comments.empty?

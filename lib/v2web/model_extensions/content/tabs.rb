@@ -27,7 +27,9 @@ module V2Web
       end
       new_tabs = []
       config.children.select{ |c| c.name == 'tab' }.each do |tab_config|
+        puts Rainbow(tab_config).yellow
         f = tab_files[tab_config['file']]
+        puts Rainbow(f.pretty_inspect).green
         gbp_file = V2Web.make_gbp_file(f)
         ChangeTracker.start
         t = V2Web::Tab.create(:title => tab_config['title'])

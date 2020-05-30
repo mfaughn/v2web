@@ -3,16 +3,23 @@ module HL7
   
   def get_instance_template(kind, template)
     dir = '../../sd_instance_templates'
-    dir = dir + case kind
-          when :data_element
-            '/data_element'
-          when :data_type
-            '/data_type'
-          when :segment_def
-            '/segment_def'
-          else
-            raise
-          end
+    dir = dir + '/' + kind.to_s
+          # case kind
+          # when :data_element
+          #   '/data_element'
+          # when :data_type
+          #   '/data_type'
+          # when :segment_def
+          #   '/segment_def'
+          # when :message
+          #   '/message'
+          # when :event
+          #   '/event'
+          # when :acknowledgment_choreography
+          #   '/acknowledgment_choreography'
+          # else
+          #   raise
+          # end
     file = File.join(__dir__, dir, template.to_s + '.xml')
     File.read(file)
   end
@@ -47,9 +54,61 @@ module HL7
   def write_messages(output_dir = nil)
     output_dir ||= File.expand_path('~/projects/v2web/fhir_output/messages')
     FileUtils.mkdir_p(output_dir)
-    DataType.all do |msg|
+    msgs = Message.all
+    # msgs = [Message.where(code:'ADT').first]
+    msgs.each do |msg|
       path = File.join(output_dir, msg.local_url_name + '.xml')
       File.open(path, 'w') { |f| f.puts msg.to_resource }
+    end
+  end
+  
+  def fsh(output_dir = nil)
+    output_dir ||= File.expand_path('~/projects/v2web/fsh')
+    FileUtils.mkdir_p(output_dir)
+    
+    # path = File.join(output_dir, 'messages.fsh')
+    # f = File.open(path, 'w')
+    # msgs = Message.all
+    # msgs.each do |msg|
+    #   f.puts msg.to_fsh
+    # end
+    # f.close
+
+    path = File.join(output_dir, 'message_structures.fsh')
+    f = File.open(path, 'w')
+    mss = MessageStructure.all
+    mss.each do |ms|
+      f.puts ms.to_fsh
+      f.puts "\n"
+    end
+    f.close
+  end
+  
+  def write_structures(output_dir = nil)
+    output_dir ||= File.expand_path('~/projects/v2web/fhir_output/message_structures')
+    FileUtils.mkdir_p(output_dir)
+    ms = MessageStructure.all
+    ms.each do |m|
+      path = File.join(output_dir, m.local_url_name + '.xml')
+      File.open(path, 'w') { |f| f.puts m.to_resource }
+    end
+  end
+  
+  def write_events(output_dir = nil)
+    output_dir ||= File.expand_path('~/projects/v2web/fhir_output/events')
+    FileUtils.mkdir_p(output_dir)
+    Event.all do |ev|
+      path = File.join(output_dir, ev.local_url_name + '.xml')
+      File.open(path, 'w') { |f| f.puts ev.to_resource }
+    end
+  end
+  
+  def write_acs(output_dir = nil)
+    output_dir ||= File.expand_path('~/projects/v2web/fhir_output/acknowledgment_choreographies')
+    FileUtils.mkdir_p(output_dir)
+    AcknowledgmentChoreography.all do |ac|
+      path = File.join(output_dir, ac.local_url_name + '.xml')
+      File.open(path, 'w') { |f| f.puts ac.to_resource }
     end
   end
 end

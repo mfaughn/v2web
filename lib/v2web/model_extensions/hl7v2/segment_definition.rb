@@ -10,7 +10,7 @@ module HL7
     def to_resource
       xml = HL7.get_instance_template(:segment_def, 'base')
       xml.sub!('URL', local_url_name)
-      [:name, :withdrawn, :abbreviation].each do |property|
+      [:name, :withdrawn, :code].each do |property|
         xml.sub!(property.to_s.upcase, send(property).to_s)
       end
       xml.sub!('DESCRIPTION', resource_description_content)
@@ -22,7 +22,7 @@ module HL7
     
     def resource_description_content
        if description_content && description_content.strip[0]
-         HL7.get_instance_template(:segment_def, 'description').sub('VALUE', description_content)
+         HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
        else
          ''
        end

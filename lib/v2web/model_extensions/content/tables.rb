@@ -16,6 +16,10 @@ module V2Web
       V2Web.render_with_locals(:table, locals)
     end
     
+    def to_v2_html_test(_ = nil)
+      to_hl7_site
+    end
+    
     derived_attribute(:identifying_text, ::String)
     def identifying_text
       t = if title

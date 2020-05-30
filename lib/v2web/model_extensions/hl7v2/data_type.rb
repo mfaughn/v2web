@@ -7,7 +7,7 @@ module HL7
     def to_resource
       xml = HL7.get_instance_template(:data_type, 'base')
       xml.sub!('URL', local_url_name)
-      [:name, :withdrawn, :abbreviation].each do |property|
+      [:name, :withdrawn, :code].each do |property|
         xml.sub!(property.to_s.upcase, send(property).to_s)
       end
       xml.sub!('DESCRIPTION', description_content)

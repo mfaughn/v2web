@@ -32,16 +32,60 @@ module V2Web
       # "<strong>#{title}</strong>"
       numbered_title
     end
+
+    def to_composition_section
+      xml = HL7.get_instance_template(:composition, 'section')
+      [:title].each do |methd|
+        xml.sub!(methd.to_s.upcase, send(methd).to_s)
+      end
+      xml.sub!('NARRATIVE', resource_narrative)
+      xml.sub!('ENTRY', '') # FIXME do we actually need to put something here? When?
+      xml.sub!('EMTPY_REASON', '') # FIXME do we actually need to put something here? When?
+      sections_xml = []
+      subsections.each { |ss| sections_xml << ss.to_composition_section }
+      xml.sub!('SECTIONS', sections_xml.join)
+      Nokogiri::XML(xml,&:noblanks).root.to_s
+    end
+    
+    def resource_narrative
+      html = to_hl7_section_header
+      # NOTE giant assumption that everything after the first Clause is also a Clause...
+      front_matter = content.take_while { |c| !(c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet))}
+      html += front_matter.map { |l| l.to_hl7_site }.join("\n")
+    end
     
     def numbered_title
       n = number
       n ? number + ' ' + title : title
     end
     
+    def chaptered_title
+      chapter + ' ' + title
+      # n ? n + ' ' + title : title
+    end
+    
     def guess_root(from = parents)
       return nil unless parents.any?
       from.find { |parent| parent.is_a?(V2Web::Standard) } || guess_root(from.map(&:parents).flatten.compact)
     end
+    
+    # this will have problems if the same section exists in multiple places in a single Document.
+    def chapter(root = guess_root)
+      return nil unless parents.any?
+      if parents.include?(root)
+        i = root.subsections.index { |c| c.id == self.id }
+        return "#{root.chapter}.#{i + 1}"
+      end
+      ret = nil
+      parents.find do |parent|
+        parent_chapter = parent.chapter(root)
+        if parent_chapter
+          i = parent.subsections.index { |c| c.id == self.id }
+          ret = "#{parent_chapter}.#{i + 1}"
+        end
+      end
+      ret
+    end #def chapter
     
     # this will have problems if the same section exists in multiple places in a single Document.
     def number(root = guess_root)
@@ -68,22 +112,25 @@ module V2Web
     end
     
     def hl7_page_link(root_dir, base_link)
+      raise
       link = File.join(root_dir, local_link(base_link))
       locals = {:link => link, :title => title, :depth => site_depth}
       V2Web.render_with_locals(:v2_section_link, locals)
     end
     
     def link_title(parent = nil)
-      parent ||= parents.first
-      parent.link_title + '_' + url_title
+      # parent ||= parents.first
+      # parent.link_title + '_' + url_title
+      url_title
     end
     
     def url_title
-      title.gsub(/\s/, '_').delete(':').hl7
+      title.gsub(/\s/, '-').delete(':').hl7
     end
     
     def local_link(base_link)
-      base_link + '_' + link_title + '.html'
+      # base_link + '_' + link_title + '.html'
+      link_title + '.html'
     end
     
     def hl7_page_content(root_dir, section_link)
@@ -199,5 +246,19 @@ module V2Web
     #   File.open(location, 'w+') { |f| f.puts page }
     #   [link, title.hl7]
     # end
+    
+    def toc(indent = 0)
+      puts "#{'  ' * indent}#{title}"
+      subsections.each { |ss| ss.toc(indent + 1) }
+    end
+    
+    def to_v2_html_test(depth = 0)
+      html = []
+      locals = { :content => chaptered_title.hl7, :link => nil }
+      # header
+      html << V2Web.render_with_locals("clause#{depth}", locals)
+      content.each { |c| html << c.to_v2_html_test(depth + 1) }
+      html.join("\n")
+    end
   end  
 end
