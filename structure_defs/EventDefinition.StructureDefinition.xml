@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="EventDefinition"/>
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/EventDefinition" />
+  <version value="1st draft" />
+  <name value="EventDefinition" />
+  <title value="Definition of v2+ Events" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/EventDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="EventDefinition">
+      <path value="EventDefinition" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="EventDefinition.name">
+      <path value="EventDefinition.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="EventDefinition.code">
+      <path value="EventDefinition.code" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Event Type Code"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0003"/>
+      </binding>
+    </element>
+    <element id="EventDefinition.description">
+      <path value="EventDefinition.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="EventDefinition.message">
+      <path value="EventDefinition.message" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <element id="EventDefinition.response">
+      <path value="EventDefinition.response" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <element id="EventDefinition.acknowledgement">
+      <path value="EventDefinition.acknowledgement" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+<!--TODO Add constraint that says either response or ack must be valued -->
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="MessageStructure"/>
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/MessageStructure" />
+  <version value="1st draft" />
+  <name value="MessageStructure" />
+  <title value="Message Structure Definition for v2+" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/MessageStructure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="MessageStructure">
+      <path value="MessageStructure" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="MessageStructure.code">
+      <path value="MessageStructure.code" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Message Structure Code"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0354"/>
+      </binding>
+    </element>
+    <element id="MessageStructure.segmentEntry">
+      <path value="MessageStructure.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <orderMeaning value="The order of segmentEntry elements defines the structure of the HL7 V2 message.  Order SHALL be preserved by all implementations."
+      <constraint>    
+        <key value="v2md-1"/>
+        <severity value="error"/>
+        <human value="If a segmentEntry indicates that any HL7 segment may be used then it SHALL not have sequence, exampleSegment, choice, or segment.  If a segmentEntry does not indicate that any HL7 may be used then it SHALL have exactly one of either sequence, choice, exampleSegment, or segment."/>
+        <expression value="(anyHl7Segment.exists() and anyHl7Segment) xor sequence.exists() xor exampleSegment.exists() xor choice.exists() xor segment.exists()"/>
+      </constraint>
+    </element>
+    <element id="MessageStructure.segmentEntry.mayRepeat">
+      <path value="MessageStructure.mayRepeat" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.optional">
+      <path value="MessageStructure.optional" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.anyHl7Segment">
+      <path value="MessageStructure.segmentEntry.anyHl7Segment" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.status">
+      <path value="MessageStructure.status" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.description">
+      <path value="MessageStructure.segmentEntry.description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.sequence">
+      <path value="MessageStructure.segmentEntry.sequence" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageStructure.segmentEntry.sequence.name">
+      <path value="MessageStructure.segmentEntry.sequence.name" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>  
+    <element id="MessageStructure.segmentEntry.sequence.segmentEntry">
+      <path value="MessageStructure.segmentEntry.sequence.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <orderMeaning value="The order of segmentEntry elements defines the structure of the HL7 V2 message.  Order SHALL be preserved by all implementations."
+      <contentReference value="#MessageStructure.segmentEntry"/> 
+    </element>
+    <element id="MessageStructure.segmentEntry.choice">
+      <path value="MessageStructure.segmentEntry.choice" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageStructure.segmentEntry.choice.segmentEntry">
+      <path value="MessageStructure.segmentEntry.choice.segmentEntry" />
+      <min value="1" />
+      <max value="*" />
+      <orderMeaning value="The order of segmentEntry elements within a choice element is not absolutely critical to the definiti of the HL7 V2 message structure.  Order SHOULD be preserved by all implementations in order to reduce confusion and maintain clarity."
+      <contentReference value="#MessageStructure.segmentEntry"/> 
+    </element> 
+    <element id="MessageStructure.segmentEntry.exampleSegment">
+      <path value="MessageStructure.segmentEntry.exampleSegment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+    <element id="MessageStructure.segmentEntry.exampleSegment.name">
+      <path value="MessageStructure.segmentEntry.exampleSegment.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="MessageStructure.segmentEntry.segment">
+      <path value="MessageStructure.segmentEntry.segment" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/SegmentDefinition" />
+      </type>
+      <condition value="v2md-1"/>
+    </element>
+  </differential>
+</StructureDefinition>

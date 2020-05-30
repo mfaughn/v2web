@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="AcknowledgmentChoreography"/>
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/AcknowledgmentChoreography" />
+  <version value="1st draft" />
+  <name value="AcknowledgmentChoreography" />
+  <title value="Definition of v2+ Acknowledgment Choreography" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/AcknowledgmentChoreography" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="AcknowledgmentChoreography">
+      <path value="AcknowledgmentChoreography" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="AcknowledgmentChoreography.subject">
+      <path value="AcknowledgmentChoreography.subject" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <element id="AcknowledgmentChoreography.originalModeAckType">
+      <path value="AcknowledgmentChoreography.originalModeAckType" />
+      <short value="none | immediate | application " />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://v2.hl7.org/fhir/valueset-original-ack-type.html" />
+      </binding>
+    </element>
+    <element id="AcknowledgmentChoreography.originalModeAcknowledgement">
+      <path value="AcknowledgmentChoreography.originalModeAcknowledgement" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <element id="AcknowledgmentChoreography.msh15AllowedValue">
+      <path value="AcknowledgmentChoreography.msh15AllowedValue">
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Accept/Application Acknowledgement Conditions"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0155"/>
+      </binding>
+    </element>
+    <element id="AcknowledgmentChoreography.enhancedModeImmediateAcknowledgment">
+      <path value="AcknowledgmentChoreography.enhancedModeImmediateAcknowledgment" />
+      <min value="0" />
+      <!-- max could probably be 1 -->
+      <max value="*" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <element id="AcknowledgmentChoreography.msh16AllowedValue">
+      <path value="AcknowledgmentChoreography.msh16AllowedValue">
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Accept/Application Acknowledgement Conditions"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-0155"/>
+      </binding>
+    </element>
+    <element id="AcknowledgmentChoreography.enhancedModeApplicationAcknowledgment">
+      <path value="AcknowledgmentChoreography.enhancedModeApplicationAcknowledgment" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/MessageDefinition" />
+      </type>
+    </element>
+    <!-- should we include notes? -->
+  </differential>
+</StructureDefinition>

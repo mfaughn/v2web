@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DataTypeDefinition"/>
+  <url value="http://v2.hl7.org/fhir/StructureDefinition/DataTypeDefinition" />
+  <version value="1st draft" />
+  <name value="DataTypeDefinition" />
+  <title value="Definition of v2+ DataTypes" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="http://v2.hl7.org/fhir/StructureDefinition/DataTypeDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="DataTypeDefinition">
+      <path value="DataTypeDefinition" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.name">
+      <path value="DataTypeDefinition.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.withdrawn">
+      <path value="DataTypeDefinition.withdrawn" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.abbreviation">
+      <path value="DataTypeDefinition.abbreviation" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.description">
+      <path value="DataTypeDefinition.description" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.note">
+      <path value="DataTypeDefinition.note" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.arrayType">
+      <path value="DataTypeDefinition.arrayType" />
+      <definition value="I'm not entirely sure what this was.  Have to go back and check..." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component">
+      <path value="DataTypeDefinition.component" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.name">
+      <path value="DataTypeDefinition.component.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.sequenceNumber">
+      <path value="DataTypeDefinition.component.sequenceNumber" />
+      <!-- min is 0 because primitive types (e.g. String) must have a component yet in v2 MS Word there isn't actually any value sequence number of the corresponding field (even though there is a row in the table of fields for each primitive data type).  Essentially v2 appears a bit flimsy here by not making adequate structural distinction between primitive data types and complex data types.  FHIR does attempt to make this distinction. -->
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="positiveInt" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/positiveInt" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.example">
+      <path value="DataTypeDefinition.component.example" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.definition">
+      <path value="DataTypeDefinition.component.definition" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Narrative" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Narrative" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.mustSupport">
+      <path value="DataTypeDefinition.component.mustSupport" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://v2.hl7.org/fhir/valueset-segment-field-optionality.html" />
+      </binding>
+    </element>
+    <element id="DataTypeDefinition.component.minLength">
+      <path value="DataTypeDefinition.component.minLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.maxLength">
+      <path value="DataTypeDefinition.component.maxLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.confLength">
+      <path value="DataTypeDefinition.component.confLength" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.mayTruncate">
+      <path value="DataTypeDefinition.component.mayTruncate" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.comments">
+      <path value="DataTypeDefinition.component.comments" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.usageNotes">
+      <path value="DataTypeDefinition.component.usageNotes" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.requirements">
+      <path value="DataTypeDefinition.component.requirements" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="DataTypeDefinition.component.datatype">
+      <comment value='This is the type of the component, e.g. String, Boolean, Address, etc.'
+      <path value="DataTypeDefinition.component.datatype" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <!-- If each v2 Data Type were defined as a profile on DataTypeDefinition (instead of as an instance of DataTypeDefinition), then the expression below could be used. This would be aligned to what is done in throughout the FHIR spec (*I think so, at least*).  Reference: https://www.hl7.org/fhir/elementdefinition.html.    ElementDefinition.type.code should come from http://hl7.org/fhir/ValueSet/defined-types.  All of the types defined in this list are defined by StructureDefinitions, not by FHIR instances.  I still contend that we (v2) should do the same. If we don't do this then A) another mechanism will be necessary in order to constrain the value of type to the uri of a v2 datatype, and B) we may be less likely to gain acceptance of our work by the FMG folks.  Perhaps item A) is of no consequence?? -->
+        <!-- <targetProfile value="http://hl7.org/fhir/StructureDefinition/DataTypeDefinition"/> -->
+      </type>
+    </element>
+    <!--Could be DataTypeDefinition.component.table if there was a strong desire to retain the language used in the v2 definition tables found in MS Word -->
+    <!--DataTypeDefinition.component essentially serves the same purpose the ElementDefinition does for FHIR.  ElementDefinition.binding is a backbone element in FHIR.  It has attributes for (binding) strength, description, and valueSet.  For the time being, DataTypeDefinition.component.binding is simply a reference to a valueSet. -->
+    <element id="DataTypeDefinition.component.binding">
+      <comment value='Bound value set'
+      <path value="DataTypeDefinition.component.binding" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ValueSet"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
