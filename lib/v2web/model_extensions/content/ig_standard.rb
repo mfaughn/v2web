@@ -50,7 +50,7 @@ module V2Web
     
     def make_menu_xml(root_dir)
       links = linked_sections.map do |s|
-        substitutions = {:href => "#{s.link_title}.html", :title => s.title.hl7}
+        substitutions = {:href => "#{s.url_title}.html", :title => s.title.hl7}
         V2IG.render('li.xml', substitutions)
       end
       menu = V2IG.render('menu.xml', :list_items => links.join("\n"))

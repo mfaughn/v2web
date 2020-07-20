@@ -1,6 +1,8 @@
-%h4
-  -if link
+-if link
+  %h4
     %a{:href => link}
       = content
-  - else
+- else
+  .id_anchor{:id => section_id }
+  %h4
     = content

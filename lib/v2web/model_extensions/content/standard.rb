@@ -38,25 +38,37 @@ module V2Web
       copy_web_files(root_dir)
       
       # Do this now so we have the links to put in the navbar
-      ls  = linked_sections.map { |s| ["#{s.link_title}.html", s.title.hl7, s] }
+      ls  = linked_sections.map { |s| [s.relative_url, s.numbered_title.hl7, s] }
       
       # FIXME ...if need be.  We are currently assuming that all of the main sections are going to be linked sections.  If any of the sections aren't linked, they are being lost here because we aren't doing anything with them.  This is only true for sections directly contained by the Standard obj.
       
       # create the main page
       page_content = front_matter.map { |l| l.to_hl7_site }.join("\n")
-      nav_bar_items = ls.map do |link, title, _| V2Web.render_with_locals(:navbar_item, {:link => link, :title => title.hl7})
+      nav_bar_items = ls.map do |link, title, section|
+        section_submenu_items = section.subsections.map do |subsection|
+          V2Web.render_with_locals(:navbar_dropdown, {:link => subsection.relative_url(link), :title => subsection.numbered_title.hl7})
+        end
+        navbar_template = section.subsections.any? ? :navbar_dropdown_with_subs : :navbar_dropdown
+        V2Web.render_with_locals(navbar_template, {:link => link, :title => title.hl7, :menu_items => section_submenu_items.join("\n") })
       end
-      # FIXME is there some way to introduce pipe chars or something between navbar items here?
       nav_bar_items = nav_bar_items.join("\n")
-      locals = {:content => page_content, :navbar_items => nav_bar_items, :title => title, :homepage_url => 'main.html'}
+      locals = {:content => page_content, :navbar_items => nav_bar_items, :title => title, :homepage_url => 'main.html', :toc_url => 'toc.html' }
       page = V2Web.render_with_locals(:v2_page, locals)
       
       main_location = File.join(root_dir, 'main.html')
       File.open(main_location, 'w+') { |f| f.puts page }
       
+      toc_entries = ls.map { |_,_,section| section.toc_entry }.join("\n")
+      locals = {:entries => toc_entries}
+      toc_page_content = V2Web.render_with_locals(:toc, locals)
+      locals = {:content => toc_page_content, :navbar_items => nav_bar_items, :title => title, :homepage_url => 'main.html', :toc_url => nil }
+      toc_page = V2Web.render_with_locals(:v2_page, locals)
+      toc_location = File.join(root_dir, 'toc.html')
+      File.open(toc_location, 'w+') { |f| f.puts toc_page }
+      
       ls.each do |link, _, section|
         content = section.hl7_page_content(root_dir, link)
-        linked_page_locals = locals.merge({:content => content, :title => section.title})
+        linked_page_locals = locals.merge({ :content => content, :title => section.title, :toc_url => 'toc.html' })
         V2Web.create_linked_page(linked_page_locals, root_dir, link)
       end
       
@@ -80,9 +92,9 @@ module V2Web
       end
     end
     
-    def link_title
-      title.gsub(/\s/, '-').hl7
-    end
+    # def link_title
+    #   title.gsub(/\s/, '-').hl7
+    # end
     
     def configure_site(config_file, tab_files)
       config = File.open(config_file) { |f| Nokogiri::XML(f) }.children.first

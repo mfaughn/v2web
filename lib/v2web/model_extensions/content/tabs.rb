@@ -49,7 +49,7 @@ module V2Web
     #   parent.subsets.select { |ss| ss.is_a?(WebDoc::TabSet) }.index { |ss| ss.id == id }
     # end
     # def hl7_page_content(parent)
-    #   tabs_id = parent.link_title + 'tab_set' + set_number(parent)
+    #   tabs_id = parent.url_title + 'tab_set' + set_number(parent)
     #   tabs_data = tabs.map { |t| t.to_hl7_site }
     #   tabs_labels = tabs_data.map { |t| t[:label] }
     #   tabs_content = tabs_data.map { |t| t[:content] }

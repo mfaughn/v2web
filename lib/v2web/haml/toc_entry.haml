@@ -1,0 +1,6 @@
+%li
+  %a{:href => url}
+    = entry
+  - if subentries
+    %ul{:style => "list-style-type:none"}
+      = subentries

@@ -29,51 +29,46 @@
     %meta{:content => "(C) Health Level Seven, Int. 2019", :name => "COPYRIGHT"}
     %meta{:content => "Michael Faughn", :name => "Developer"}
 
-  %body{:style => "padding-top: #{draft ? 210 : 160}px"}
-
-    %nav.navbar.navbar-inverse.navbar-fixed-top
+  %body{:style => ""}
+    #segment-header.segment
+      .container
+        %a#logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+          %img{:alt => "HL7 International", :src => "images/hl7-logo-header.png", :width => "120"}
+        #hl7-nav
+          %a#hl7-logo{:href => "http://v2.hl7.org/", "no-external" => "true"}
+            %img{:alt => "Visit the HL7 V2 website", :height => "50", :src => "images/HL7-v2-logo.png"}
+    #segment-navbar.segment
+      #stripe
       .container
         / HEADER CONTENT
-        #segment-header
-          .navbar-header
-            .container{:style => "padding-top:10px"}
-              %a#logo{:href => "http://www.hl7.org/", "no-external" => "true"}
-                %img{:alt => "HL7 International", :src => "images/hl7-logo-header.png", :width => "120"}
-              #hl7-nav
-                %a#hl7-logo{:href => "http://v2.hl7.org/", "no-external" => "true"}
-                  %img{:alt => "Visit the HL7 V2 website", :height => "50", :src => "images/HL7-v2-logo.png"}
-          %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
-        
-        #stripe
-        
-        #segment-navbar.navbar-nav-box
+        %nav.navbar.navbar-inverse.yamm
           .container
+            %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
             .nav-collapse.collapse.navbar-inverse-collapse
               %ul.nav.navbar-nav
                 %li.navbar-v2web
-                  %a{:href => homepage_url} V2 Conformance Home
+                  %a{:href => homepage_url} Home
                 %li.navbar-v2web.dropdown
                   %a.dropdown-toggle{:href => "#", :'data-toggle' => "dropdown"}
-                    Sections
+                    Chapters
                     %b{:class => 'caret'}
-                  %ul.dropdown-menu.multi-level
-                    = navbar_items
-                - if toc_url
-                  %li.navbar-v2web
-                    %a{:href => toc_url} Table of Contents
-        - if draft
-          .container
-            #v2draft
-              %h1
-                Draft Website - For Review Purposes Only
-      / #segment-breadcrumb.segment
-      /   .container
-      /     %ul.breadcrumb
-      /       %li
-      /         %b
-      /           %a{:href => homepage_url} Home
+                    %ul.dropdown-menu
+                      %li
+                        .yamm_content
+                          .row
+                            .panel-group                                
+                              = navbar_items
 
-
+    #v2draft.segment
+      .container
+        %h1
+          Draft Website - For Review Purposes Only
+    #segment-breadcrumb.segment
+      .container
+        %ul.breadcrumb
+          %li
+            %b
+              %a{:href => homepage_url} Home
 
     .container
       = content

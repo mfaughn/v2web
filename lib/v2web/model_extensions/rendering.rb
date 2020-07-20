@@ -1,7 +1,10 @@
 require 'base64'
 require_relative 'ig_rendering'
 module V2Web
-  
+  @@draft ||= false
+  def self.draft
+    @@draft = true
+  end
   # Maybe we should pass locals in instead of just passing content
   def self.create_linked_page(locals, root_dir, link)
     location = File.join(root_dir, link)
@@ -25,6 +28,7 @@ module V2Web
   end
 
   def self.render_with_locals(template_type, locals)
+    locals[:draft] = @@draft ? true : false
     engine = Haml::Engine.new(File.read(File.join(template_dir, (template_type.to_s + '.haml'))))
     output = engine.render(Object.new, locals)
   end
