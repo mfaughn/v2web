@@ -2,14 +2,11 @@ module V2Web
   class Figure
     derived_attribute(:identifying_text, ::String)
     def identifying_text
-      if title
-        title
-      elsif caption
-        caption
-      elsif file_filename
-        file_filename
-      end
+      caption ? caption : file_filename
     end
+    
+    derived_attribute(:title, ::String)
+    alias_method :title, :caption
     
     def to_hl7_site(_ = nil)
       # TODO don't embed Bin64 but instead save to folder with guaranteed unique filename and then use that filename for the value of :src
@@ -21,7 +18,16 @@ module V2Web
       else
         html = ['FILE MISSING!']
       end
-      V2Web.render_with_locals(:figure, {:content => html.join("\n") })
+      V2Web.render_with_locals(:figure, {:content => html.join("\n"), :figure_id => html_id })
+    end
+    
+    def html_id
+      "v2web_figure-#{id}"
+    end
+    
+    # FIXME how get footnotes into caption headers
+    def all_texts
+      []
     end
   end
 end

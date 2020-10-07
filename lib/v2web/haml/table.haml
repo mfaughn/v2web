@@ -1,3 +1,13 @@
-%table.center.table_v2web1{:class => classes}
+.id_anchor{:id => table_id }
+%table.center.table_v2web{:class => classes, :style => styles }
+  - if caption
+    %caption
+      = caption
+  - if column_widths
+    %colgroup
+      - column_widths.each do |cw|
+        %col{:span=>"1", :style=>"width: #{cw};"}
+  %thead
+    = headers
   %tbody
-    = content
+    = body

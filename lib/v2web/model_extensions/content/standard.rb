@@ -1,7 +1,7 @@
 require 'fileutils'
 
 # require_relative 'ig_standard'
-load File.join(__dir__, 'ig_standard.rb')
+# load File.join(__dir__, 'ig_standard.rb')
 
 module V2Web
   class Standard
@@ -40,6 +40,11 @@ module V2Web
       # Do this now so we have the links to put in the navbar
       ls  = linked_sections.map { |s| [s.relative_url, s.numbered_title.hl7, s] }
       
+      set_section_numbers
+      V2Web.store_tables(all_tables)
+      V2Web.store_figures(all_figures)
+      V2Web.store_footnotes(all_reordered_ckeditor_footnotes)
+      
       # FIXME ...if need be.  We are currently assuming that all of the main sections are going to be linked sections.  If any of the sections aren't linked, they are being lost here because we aren't doing anything with them.  This is only true for sections directly contained by the Standard obj.
       
       # create the main page
@@ -69,9 +74,18 @@ module V2Web
       ls.each do |link, _, section|
         content = section.hl7_page_content(root_dir, link)
         linked_page_locals = locals.merge({ :content => content, :title => section.title, :toc_url => 'toc.html' })
-        V2Web.create_linked_page(linked_page_locals, root_dir, link)
+        linked_page = V2Web.create_linked_page(linked_page_locals, root_dir, link)
+            
       end
       
+    end
+    
+    def set_section_numbers
+      V2Web.reset_sections
+      linked_sections.each_with_index do |sect, i|
+        sect.set_section_numbers((i+1).to_s)
+      end
+      # V2Web.sections_by_number.each { |n, sect| puts "#{n} -- #{sect.title}"}
     end
     
     def linked_sections

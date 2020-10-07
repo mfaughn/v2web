@@ -3,7 +3,7 @@
   <url value="http://v2.hl7.org/fhir/DataTypeDefinition/URL" />
   <name value="NAME"/>
   <withdrawn value="WITHDRAWN"/>
-  <abbreviation value="ABBREVIATION"/>
+  <abbreviation value="CODE"/>
   <description>
     <status value="additional"/>
     <div>

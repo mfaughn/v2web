@@ -5,6 +5,10 @@ module HL7
       code.downcase.gsub(/[^a-z\d]/, '-')
     end
     
+    def url_name
+      'http://v2.hl7.org/fhir/MessageStructure/' + local_url_name
+    end
+    
     def to_fsh
       fsh = []
       return fsh unless segments.any? # FIXME the QBP_Q21 message structure is bogus

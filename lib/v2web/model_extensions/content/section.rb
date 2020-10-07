@@ -8,7 +8,7 @@ module V2Web
 
   class Section
     attr_accessor :configuration
-    @@subsection_info = properties[:subsections]
+
     def immediate_aggregations_with_data
       {:subsections => {:value => subsections, :data => self.class.properties[:subsections] }}.to_a
     end
@@ -44,18 +44,22 @@ module V2Web
       sections_xml = []
       subsections.each { |ss| sections_xml << ss.to_composition_section }
       xml.sub!('SECTIONS', sections_xml.join)
-      Nokogiri::XML(xml,&:noblanks).root.to_s
+      # puts xml;puts '*********************************************************'
+      nxml = Nokogiri::XML(xml,&:noblanks).root.to_s
+      # puts nxml;puts '*********************************************************'
+      nxml
     end
     
     def resource_narrative
       html = to_hl7_section_header
       # NOTE giant assumption that everything after the first Clause is also a Clause...
       front_matter = content.take_while { |c| !(c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet))}
-      html += front_matter.map { |l| l.to_hl7_site }.join("\n")
+      html << front_matter.map { |item| item.to_hl7_site }.join("\n")
+      html
     end
     
     def numbered_title
-      return title if title =~ /^(Glossary|Appendix)/
+      # return title if title =~ /^(Glossary|Appendix)/
       n = number
       n ? number + ' ' + title : title
     end
@@ -64,10 +68,17 @@ module V2Web
       chapter + ' ' + title
       # n ? n + ' ' + title : title
     end
-    
+
+    # depth first...much less than an ideal way to determine this stuff.  completely unreliable if there are multiple parents    
     def guess_root(from = parents)
       return nil unless parents.any?
       from.find { |parent| parent.is_a?(V2Web::Standard) } || guess_root(from.map(&:parents).flatten.compact)
+    end
+    
+    # depth first...much less than an ideal way to determine this stuff.  completely unreliable if there are multiple parents
+    def guess_link_root(from = parents)
+      return nil unless parents.any?
+      from.find { |parent| parent.is_a?(V2Web::Section) && parent.render_as&.value == 'linked_page' } || guess_link_root(from.map(&:parents).flatten.compact)
     end
     
     # this will have problems if the same section exists in multiple places in a single Document.
@@ -96,14 +107,14 @@ module V2Web
         return (i + 1).to_s
       end
       ret = nil
-      parents.find do |parent|
-        appendix_val = parent.title.slice(/(?<=Appendix )[A-Z]+/) if parent.title =~ /^Appendix/
-        if appendix_val
-          i = parent.subsections.index { |c| c.id == self.id }
-          ret = appendix_val + '.' + (i + 1).to_s
-        end
-      end
-      return ret if ret
+      # parents.find do |parent|
+      #   appendix_val = parent.title.slice(/(?<=Appendix )[A-Z]+/) if parent.title =~ /^Appendix/
+      #   if appendix_val
+      #     i = parent.subsections.index { |c| c.id == self.id }
+      #     ret = appendix_val + '.' + (i + 1).to_s
+      #   end
+      # end
+      # return ret if ret
       parents.find do |parent|
         val = parent.number(root)
         if val
@@ -148,78 +159,40 @@ module V2Web
       numbered_title.gsub(/\W/, '-')
     end
     
-    # def base_page_parent
-    #   return nil unless parents.any?
-    #   base = parents.find do |parent|
-    #     parent.render_as&.value == 'linked_page'
-    #   end
-    #   base ||= parents.find
-    #   if val
-    #     i = parent.subsections.index { |c| c.id == self.id }
-    #     ret = val + '.' + (i + 1).to_s
-    #   end
-    #   ret
-    # end
-    #
-    # def lineages
-    #   if parents.any?
-    #     return parents.map { |parent| parent.lineages.map }
-    #   end
-    #   return nil unless parents.any?
-    #   base = parents.find do |parent|
-    #     parent.render_as&.value == 'linked_page'
-    #   end
-    #   base ||= parents.find
-    #   if val
-    #     i = parent.subsections.index { |c| c.id == self.id }
-    #     ret = val + '.' + (i + 1).to_s
-    #   end
-    #   ret
-    # end
-    #
-    # def array_dimension(a)
-    #   return 0 if a.class != Array
-    #   result = 1
-    #   a.each do |sub_a|
-    #     if sub_a.class == Array
-    #       dim = array_dimension(sub_a)
-    #       result = dim + 1 if dim + 1 > result
-    #     end
-    #   end
-    #   return result
-    # end
-    #
-    # def base_page_url
-    #   base_page_parent.local_link
-    # end
+    def front_matter
+      content.take_while { |c| !(c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet))}
+    end
 
-    def hl7_page_content(root_dir, section_link)
+    def hl7_page_content(root_dir, section_link)  
       linked_subsections = subsections.select { |s| s.is_a?(V2Web::Section) && s.render_as&.value == 'linked_page' }
       linked_subsections.each do |ss|
+        # FIXME if you ever need to....
+        raise "This section of code doesn't work because you aren't sending all of the variables necessary for the v2_page haml in the locals!"
         ss_link = ss.local_link(section_link)
         ss_content = ss.hl7_page_content(root_dir, ss_link)
-        V2Web.create_linked_page({:content => ss_content}, root_dir, ss_link)
+        V2Web.create_linked_page({:content => ss_content, :title => title}, root_dir, ss_link)
       end
       html = to_hl7_section_header
       # NOTE giant assumption that everything after the first Clause is also a Clause...
-      front_matter = content.take_while { |c| !(c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet))}
-      html += front_matter.map { |l| l.to_hl7_site }.join("\n")
+      html << front_matter.map { |l| l.to_hl7_site }.join("\n")
+      html = handle_ck_footnotes(html) # We are pretty much requiring that ALL footnotes be entered using ck_editor
+      html = link_references(html, section_link)
 
       # sections_and_tabs = content.select { |c| c.is_a?(V2Web::Section) || c.is_a?(V2Web::TabSet) }
       sections_and_tabs = content - front_matter
       sections_and_tabs.each_with_index do |ss, index|
         if ss.is_a?(V2Web::Section)
           if ss.render_as == 'linked_page'
-            html += ss.to_hl7_section_header(:link => section_link)
+            html << ss.to_hl7_section_header(:link => section_link)
           else
-            html += ss.hl7_page_content(root_dir, section_link)
+            html << ss.hl7_page_content(root_dir, section_link)
             # This helps to narrow down encoding errors
             # begin
             #   added = nil
             #   more  = ss.hl7_page_content(root_dir, section_link)
             #   more.split('<').each do |fragment|
             #     added = fragment
-            #     html += fragment + '<'
+            #     html << fragment + '<'
             #   end
             # rescue
             #   puts Rainbow('Problem in ' + number).red
@@ -228,25 +201,172 @@ module V2Web
             # end
           end
         else
-          html += ss.hl7_page_content(self, root_dir, section_link, index)
+          html << ss.hl7_page_content(self, root_dir, section_link, index)
         end
       end
       html
     end
+    
+    def link_references(html, base_link)
+      html = html.gsub(/<span style="color:#0000ff">(.*?)<\/span>/, '\1')
+      mentions = html.scan(/(....)\s*(Table|Figure|Section)\s*(\d+(?:\.\d+)+)(....)/im) + html.scan(/(....)(Section)\s*(\d+)([^\.]..)/)
+      if mentions.any?
+        # puts html
+        # puts '*'*33
+      end
+      mentions.reject! { |m| m.first =~ /ion>/ }
+      mentions.uniq.each do |leading,type,num,trailing|
+        key = "#{type} #{num}"
+        if type.downcase == 'table'          
+          table = V2Web.tables_by_number[num]
+          html.gsub!(/#{Regexp.escape(leading)}(\s*)#{type}\s*#{num}#{Regexp.escape(trailing)}/im, leading + '\1' + "<a href=#{base_link}##{table.html_id}>#{type} #{num}</a>#{trailing}")
+          # puts table.caption if table
+          puts Rainbow('no match for ' + key).red unless table
+        elsif type.downcase == 'figure'
+          # skip alt text
+          next if leading =~ /t = '/
+          # puts Rainbow(key).magenta
+          fig = V2Web.figures_by_number[num]
+          html.gsub!(/#{Regexp.escape(leading)}(\s*)#{type}\s*#{num}#{Regexp.escape(trailing)}/im, leading + '\1' + "<a href=#{base_link}##{fig.html_id}>#{type} #{num}</a>#{trailing}")
+          # puts fig.caption if fig
+          puts Rainbow('no match for ' + key).red unless fig
+        else # section
+          sect = V2Web.section_by_number(num)
+          sect ||= V2Web.section_by_number('6.5') if num == '6.1.5' # fix for typo in Conformance Doc footnotes
+          unless sect
+            puts Rainbow("Did not find #{type} #{num}! Skipping reference.").red
+            next
+          end
+          # puts Rainbow("Found #{sect.title} for #{num}").orange
+          html.gsub!(/#{Regexp.escape(leading)}(\s*)#{type}\s*#{num}#{Regexp.escape(trailing)}/im, leading + '\1' + "<a href=#{sect.reference_url}>#{type} #{num}</a>#{trailing}")
+          # puts sect.reference_url
+        end
+      end
+      html
+    end
+    
+    def handle_ck_footnotes(html)
+      lf = local_footnotes
+      # pp  local_footnotes.map { |x| x[:original_footnote] }
+      if lf.any?
+        fnotes = []
+        lf.each do |entry|
+          html = html.sub(entry[:original_reference], entry[:reference])
+          fnotes << entry[:footnote]
+        end
+        html.gsub!(/<section class="footnotes">.+?<\/section>/m, '')
+        html << V2Web.render_with_locals(:ck_footnotes, {:footnotes => fnotes} )
+      end
+      html
+    end
+    
+    def local_texts
+      texts = []
+      front_matter.map do |item|
+        if item.is_a?(V2Web::Text)
+          texts << item
+        else
+          texts << item.all_texts
+        end
+      end
+      texts.flatten
+    end
+    
+    def local_footnotes
+      local_texts.map(&:id).map { |txt_id| V2Web.footnotes.select { |entry| entry[:text_id] == txt_id }}.flatten
+    end
+    
+    # TODO move all lists into text.  move all footnotes into text using ck_editor footnotes
+    def all_ckeditor_footnotes
+      entries = []
+      all_texts.each do |txt|
+        c = txt.content_content
+        next unless c =~ /data-footnote-id/
+        body, fnote_section = c.split(/(?=<section class="footnotes">)/)
+        refs = body.scan(/<sup data-footnote-id.+?<\/sup>/m)
+        fnotes = fnote_section.scan(/<li data-footnote-id.+?<\/li>/m)
+        unless refs.count == fnotes.count
+          puts c
+          raise "References count != Footnotes count in Text[#{txt.id}]"
+        end
+        refs.zip(fnotes).each_with_index do |pair, i|
+          # NOTE hopefully we don't need :order_in_text
+          entries << {:text_id => txt.id, :original_reference => pair.first, :original_footnote => pair.last, :order_in_text => i}
+        end
+      end
+      entries
+    end
+    
+    def all_reordered_ckeditor_footnotes
+      counter = 1
+      reordered = all_ckeditor_footnotes
+      reordered.each do |entry|
+        entry[:counter] = counter
+        entry[:reference] = "<span class=\"id_anchor2\" id=\"footnote-marker-#{entry[:text_id]}-#{counter}\"></span>" + entry[:original_reference]
+          .sub(/href="#footnote-\d+"/, "href=\"#footnote-#{counter}\"")
+          .sub(/id="footnote-marker-\d+-\d+"/, '')
+          .sub(/>\[\d+\]</, ">#{counter}<")
+        entry[:footnote]  = "<div class=\"id_anchor\" id=\"footnote-#{counter}\"></div>" + entry[:original_footnote]
+          .sub(/id="footnote-\d+"/, '')
+          .sub(/href="#footnote-marker-\d+-\d+">.</, "href=\"#footnote-marker-#{entry[:text_id]}-#{counter}\">#{counter}<")
+          .sub('<li ', '<p.v2_footnote ')
+          .sub('</li>', '</p>')
+        counter += 1
+      end
+      reordered
+    end
+    
+    def all_texts
+      texts = []
+      front_matter.each do |item|
+        if item.is_a?(V2Web::Text)
+          texts << item
+        else
+          texts.concat(item.all_texts)
+        end
+      end
+      subsections.each { |ss| texts.concat(ss.all_texts) }
+      texts
+    end
+    
+    def all_tables
+      tables = []
+      front_matter.each do |item|
+        if item.is_a?(V2Web::Table)
+          tables << item
+        elsif item.is_a?(V2Web::Box)
+          tables.concat(item.all_tables)
+        else
+          # do nothing.  assuming that no other content types contain tables....which is bound to change...
+        end
+      end
+      subsections.each { |ss| tables.concat(ss.all_tables) }
+      tables
+    end
+    
+    def all_figures
+      figures = []
+      front_matter.each do |item|
+        if item.is_a?(V2Web::Figure)
+          figures << item
+        elsif item.is_a?(V2Web::Box)
+          figures.concat(item.all_figures)
+        else
+          # do nothing.  assuming that no other content types contain figures....which is bound to change...
+        end
+      end
+      subsections.each { |ss| figures.concat(ss.all_figures) }
+      figures
+    end
 
-    # FIXME!!!!!!! Fix what? This seems to never be called.  Get rid of it?
-    # def to_hl7_site(depth: 1, include_subsections: true, parent: nil, parent_number: nil, link: nil)
-    #   raise "Who called this!"
-    #   html = [to_hl7_section_header(depth, parent, parent_number)]
-    #   included_content = content
-    #   unless include_subsections
-    #     included_content = included_content.reject { |c| c.is_a?(V2Web::Section) }
-    #   end
-    #   html += content.map { |c| c.to_hl7_site(:depth => depth + 1, :parent => self, :parent_number => number) }
-    #   html.join("\n")
-    # end
-    # alias_method :hl7_page_content, :to_hl7_site
-
+    def set_section_numbers(val)
+      # puts "Setting #{val} as #{self.title}"
+      V2Web.set_section_number(self, val)
+      subsections.each_with_index do |sect, i|
+        sect.set_section_numbers("#{val}.#{i+1}")
+      end
+    end
+    
     def toc_entry(base_url = nil)
       # puts "toc_entry. base_url for #{numbered_title} is #{base_url}"
       url = relative_url(base_url)
@@ -268,7 +388,10 @@ module V2Web
       depth = depth_indicator.split('.').count # this is hacky but should work
       # puts "#{depth} -- #{nt}"
       # numbered_title = num + ' ' + title
-      locals = { :content => numbered_title.hl7, :link => link, :section_id => html_id }
+      
+      depth = depth - 1 if depth > 0 # HACK experimental
+      # locals = { :content => numbered_title.hl7, :link => link, :section_id => html_id }
+      locals = { :content => numbered_title.hl7, :number => number.hl7, :title => title.hl7, :link => link, :section_id => html_id }
       html = V2Web.render_with_locals("clause#{depth}", locals)
     end
     
@@ -277,6 +400,14 @@ module V2Web
         "#{base_url}##{html_id}"
       else
         url_title + '.html'
+      end
+    end
+    
+    def reference_url
+      if render_as&.value == 'linked_page'
+        url_title + '.html'
+      else
+        relative_url(guess_link_root.relative_url)
       end
     end
 
@@ -337,7 +468,8 @@ module V2Web
 
     def to_v2_html_test(depth = 0)
       html = []
-      locals = { :content => chaptered_title.hl7, :link => nil }
+      # locals = { :content => numbered_title.hl7, :link => link, :section_id => html_id }
+      locals = { :content => numbered_title.hl7, :number => number.hl7, :title => title.hl7, :link => link, :section_id => html_id }
       # header
       html << V2Web.render_with_locals("clause#{depth}", locals)
       content.each { |c| html << c.to_v2_html_test(depth + 1) }

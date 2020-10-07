@@ -1,4 +1,4 @@
-module FHIR
+module FHIR2Obj
   def self.write_compositions
     output_dir ||= File.expand_path('~/projects/v2web/fhir_output/compositions')
     FileUtils.mkdir_p(output_dir)
@@ -7,7 +7,9 @@ module FHIR
     stds.each do |standard|
       path = File.join(output_dir, standard.local_url_name + '.xml')
       File.open(path, 'w') { |f| f.puts standard.to_composition }
-      system "tidy -xml -indent -quiet -utf8 -o #{path}"
+      puts "Done with #{standard.title}"
+      # FileUtils.cp(path, File.join(output_dir, standard.local_url_name + '_raw.xml'))
+      # system "tidy -xml -indent -quiet -utf8 -o #{path}"
     end
   end
 end

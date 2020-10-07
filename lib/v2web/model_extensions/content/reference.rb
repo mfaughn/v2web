@@ -5,8 +5,10 @@ module V2Web
       ref.name
     end
     
+    # Wow, this should really be #to_composition, I think?? FIXME
     def to_hl7_site
-      "INSERT REFERENCE TO: #{identifying_text}"
+      # "INSERT REFERENCE TO: #{identifying_text}"
+      "<entry>\n  <reference value=#{ref.url_name.inspect}\>\n</entry>"
     end
     
     def to_v2_html_test(_ = nil)

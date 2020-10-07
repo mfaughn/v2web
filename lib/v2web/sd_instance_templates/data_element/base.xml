@@ -8,5 +8,5 @@
   MAX_LENGTH
   CONF_LENGTH
   <mayTruncate value="MAY_TRUNCATE"/>
-  <dataType value="https://www.v2.hl7.org/fhir/DataTypeDefinition/DATA_TYPE"/>
+  DATA_TYPE
 </DataElementDefinition>

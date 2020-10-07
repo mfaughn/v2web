@@ -20,7 +20,6 @@
 require 'shellwords'
 require 'cgi'
 require_relative 'current_parent_hack'
-require_relative 'make_gbp_file.rb'
 
 module V2Web  
   class DocXtractor
@@ -30,6 +29,7 @@ module V2Web
     end
     
     def extract_document(doc, title = 'Test')
+      @debug = false
       doc.remove_namespaces!
       ChangeTracker.start
       @site = V2Web::Standard.create(:title => title, :version => Time.now.strftime('%Y.%m.%d.%R'))
@@ -98,6 +98,11 @@ module V2Web
     end
     
     def extract(node)
+      # @debug = true if stuff == 'Segment Level Profiling'
+      # @quit = true if stuff == 'Data Type Profiling'
+      # return if @quit
+      # return unless @debug
+      
       # ntype = node.class.to_s
       # if ntype == 'Text'
       #   ChangeTracker.start
@@ -108,6 +113,7 @@ module V2Web
       #   ChangeTracker.commit
       #   return
       # end
+      
       case node.name
       when 'body'
         node.children.each { |c| extract(c) }
@@ -150,12 +156,29 @@ module V2Web
 
         # puts Rainbow(node.path).green
         styles = node.xpath('.//pPr/pStyle')
+        bullet_list = node.xpath('.//pPr/numPr').first
+        # puts Rainbow(styles.inspect).yellow if @debug
         puts Rainbow('Multiple Styles!').red if styles.count > 1
         if styles.first
           val_attr = styles.first.attributes.find { |a| a.first == 'val' }
           style = val_attr.last.value
+          
+          # HACK because Word is a POS...
+          if bullet_list
+            puts extract_text(node)
+            unless style == 'ListParagraph'
+              if style == 'NormalIndented'
+                style = 'ListParagraph'
+              else
+                puts extract_text node
+                puts
+                puts node.to_s
+                raise "List had style #{style} and I don't know how to handle that without some help."
+              end
+            end
+          end
+
           if style =~ /Heading/
-            # puts node.to_xml;puts
             header(node, style[-1].to_i)
           # elsif style =~ /Header/
           #   puts node.to_xml;puts
@@ -186,6 +209,7 @@ module V2Web
               start_list('bullets') unless @list
               last_node_was_list = true
               add_list_item(node)
+              puts 'Added to list: ' + extract_text(node) if @debug
 
 
             when 'Caption'
@@ -214,6 +238,7 @@ module V2Web
               # Just 'Acknowledgements'
             when 'NormalIndented'
               # HL7 v2.x Messaging Standard (www.hl7.org)
+              add_text(node)
             when 'NormalWeb'
               # This should probably have just been 'Normal' in most cases
               add_text(node)
@@ -226,13 +251,14 @@ module V2Web
             # @figure should only be preserved for the very next paragraph after the figure, then forget about it.
           end
         else
+          # puts Rainbow("No Style").magenta if @debug
           add_text(node)
         end
         @last_figure = nil
         @list = nil unless last_node_was_list # assumes that all items in a list occur in successive p elements
       else
         unless node.name == 'bookmarkStart' # not worrying about bookmarks in Word document
-          puts Rainbow(node.name).orange
+          puts Rainbow(node.name).magenta
           puts node.to_xml[0..1000]
         end
       end
@@ -309,11 +335,11 @@ module V2Web
     end
 
     def gray_box(node)
-      box(node, 'gray_box')
+      box(node, 'gray-box')
     end
 
     def pink_box(node)
-      box(node, 'pink_box')
+      box(node, 'pink-box')
     end
     
     def add_table(node)
@@ -334,7 +360,8 @@ module V2Web
       cols.each do |col|
         scol = V2Web::Column.create
         # TODO = capture original style and put it in here
-        table.add_column(scol)
+        # table.add_column(scol)
+        table.add_col(scol)
       end
       ChangeTracker.commit
       add_rows(table, node)
@@ -379,13 +406,13 @@ module V2Web
     # NOTE: This assumes that a UnitOfWork is already opened!
     def add_styles(node, model)
       if node.to_s =~ /fill="EECECC"/ && model.is_a?(V2Web::Cell)
-        model.add_style('emphasis_column')
+        model.add_style('emphasis-column')
       end
       if node.to_s =~ /fill="C96660"/ && model.is_a?(V2Web::Cell)
-        model.add_style('emphasis_header')
+        model.add_style('emphasis-header')
       end
       if node.to_s =~ /fill="F3E1E1"/ && model.is_a?(V2Web::Table)
-        model.add_style('striped_rows')
+        model.add_style('striped-rows')
       end
     end
     

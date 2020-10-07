@@ -1,2 +1,13 @@
-%th.table_v2web1.th_v2web{:class => classes, :colspan => colspan}
-  = content
+- if colspan && rowspan
+  %th.table_v2web{ :class => classes, :colspan => colspan, :rowspan => rowspan }
+    = content
+- elsif colspan
+  %th.table_v2web{ :class => classes, :colspan => colspan }
+    = content
+- elsif rowspan
+  %th.table_v2web{ :class => classes, :rowspan => rowspan }
+    = content
+- else
+  %th.table_v2web{:class => classes}
+    = content
+    

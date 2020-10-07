@@ -7,6 +7,10 @@ module HL7
       name.downcase.gsub(/[^A-Za-z\d]/, '-')
     end
     
+    def url_name
+      'http://v2.hl7.org/fhir/SegmentDefinition/' + local_url_name
+    end
+    
     def to_resource
       xml = HL7.get_instance_template(:segment_def, 'base')
       xml.sub!('URL', local_url_name)

@@ -15,11 +15,7 @@ module HL7
       xml.sub!('USAGE_NOTES', resource_usage_notes)
       xml.sub!('REQUIREMENTS', resource_requirements)
       xml.sub!('BINDING', resource_binding)
-      if type
-        xml.sub!('DATA_TYPE', type.local_url_name)
-      else
-        xml.sub!('DATA_TYPE', 'FIXME!')
-      end
+      xml.sub!('DATA_TYPE', resource_data_type)
       Nokogiri::XML(xml,&:noblanks).root.to_s
     end
     
@@ -30,6 +26,19 @@ module HL7
          ''
        end
     end
+    def resource_data_type
+      if type
+        HL7.get_instance_template(:data_type, 'component_data_type').sub('VALUE', type.local_url_name)
+      elsif optionality&.value == 'W'
+        ''
+      elsif owner.components_count == 1
+        # This component information constrains what is otherwise a primitive datatype.  This is kinda hinky but the HL7 folks apparently wanted it like this (instead of being reasonable and defining primitive data types....)
+        HL7.get_instance_template(:data_type, 'component_data_type').sub('VALUE', owner.local_url_name)
+      else
+        HL7.get_instance_template(:data_type, 'component_data_type').sub!('VALUE', 'FIXME!')
+      end
+    end
+    
     def resource_must_support
        must_support == nil ? '' : HL7.get_instance_template(:data_type, 'must_support').sub('VALUE', must_support.to_s)
     end

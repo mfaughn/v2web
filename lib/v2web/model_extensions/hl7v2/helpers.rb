@@ -1,6 +1,20 @@
 module HL7
   module_function
   
+  def write_fhir(output_dir = nil)
+    if output_dir
+      # FIXME
+    else
+      write_datatypes
+      write_data_elements
+      write_segments
+      write_structures
+      write_messages
+      write_acs
+      write_events
+    end
+  end
+  
   def get_instance_template(kind, template)
     dir = '../../sd_instance_templates'
     dir = dir + '/' + kind.to_s

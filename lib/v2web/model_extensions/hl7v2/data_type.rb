@@ -1,7 +1,16 @@
 module HL7
   class DataType
     def local_url_name
+      unless name
+        # FIXME do better than this...
+        puts "Datatype without name\n#{inspect}"
+        return ''
+      end
       name.downcase.gsub(/[^A-Za-z\d]/, '-')
+    end
+    
+    def url_name
+      'http://v2.hl7.org/fhir/DataTypeDefinition/' + local_url_name
     end
     
     def to_resource
@@ -10,7 +19,7 @@ module HL7
       [:name, :withdrawn, :code].each do |property|
         xml.sub!(property.to_s.upcase, send(property).to_s)
       end
-      xml.sub!('DESCRIPTION', description_content)
+      xml.sub!('DESCRIPTION', description_content.to_s)
       xml.sub!('ARRAY_TYPE', array_type.to_s)
       xml.sub!('NOTES', resource_notes)
       comps = []

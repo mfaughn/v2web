@@ -6,6 +6,10 @@ module HL7
       url_name.downcase.gsub(/[^a-z\d]/, '-')
     end
     
+    def url_name
+      'http://v2.hl7.org/fhir/MessageDefinition/' + local_url_name
+    end
+    
     def event_code
       (trigger_for || response_to.first || ack_to.first)&.code
     end

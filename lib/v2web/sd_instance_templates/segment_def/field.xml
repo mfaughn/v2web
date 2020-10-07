@@ -3,5 +3,5 @@
   <mustSupport value="MUST_SUPPORT"
   MIN_CARDINALITY
   MAX_CARDINALITY
-  <dataElement value="https://www.v2.hl7.org/fhir/DataElementDefinition/DATA_ELEMENT"/>
+  <dataElement value="http://v2.hl7.org/fhir/DataElementDefinition/DATA_ELEMENT"/>
 </field>

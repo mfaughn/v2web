@@ -1,0 +1,22 @@
+.box_v2web {
+  display: block;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.box_v2web p {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.box_v2web p:has(> strong) {
+  margin-bottom: 5px;
+}
+
+.gray-box {
+  background-color: #d9d9d9;
+}
+
+.pink-box {
+  background-color: #fedadb;
+}

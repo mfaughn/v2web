@@ -1,5 +1,12 @@
 module V2Web
   class List
+    def all_texts
+      # Assumes that all cell content is Text objects
+      items.map do |item|
+        item.is_a?(V2Web::Text) ? item : item.all_texts
+      end.flatten
+    end
+    
     derived_attribute(:identifying_text, ::String)
     def identifying_text
       title

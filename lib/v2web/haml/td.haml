@@ -1,2 +1,12 @@
-%td.table_v2web1{:class => classes, :colspan => colspan}
-  = content
+- if colspan && rowspan
+  %td.table_v2web{ :class => classes, :colspan => colspan, :rowspan => rowspan }
+    = content
+- elsif colspan
+  %td.table_v2web{ :class => classes, :colspan => colspan }
+    = content
+- elsif rowspan
+  %td.table_v2web{ :class => classes, :rowspan => rowspan }
+    = content
+- else
+  %td.table_v2web{:class => classes}
+    = content

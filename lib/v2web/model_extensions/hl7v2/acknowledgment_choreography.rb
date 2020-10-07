@@ -4,9 +4,10 @@ module HL7
       self.for.local_url_name
     end
     
-    def to_plantuml
+    def url_name
+      'http://v2.hl7.org/fhir/AcknowledgmentChoreography/' + local_url_name
     end
-        
+    
     def to_resource
       xml = HL7.get_instance_template(:acknowledgment_choreography, 'base')
       xml.sub!('URL'              , local_url_name)

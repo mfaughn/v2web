@@ -8,16 +8,27 @@ end
 
 HTMLEntities.new
 class String
+  unless const_defined?("HTML_ENTITY_CODES")
+    HTML_ENTITY_CODES = {
+      '–' => '&ndash;',
+      '—' => '&ndash;',
+      '©' => '&copy;',
+      '®' => '&reg;',
+      '“' => '&ldquo;',
+      '”' => '&rdquo;',
+      '’' => '&rsquo;',
+      " " => '&nbsp;',
+      "√" => '&check;',
+      '≤' => '&#8804;',
+      '≥' => '&#8805;',
+      "≠" => '&#8800;'#,
+      # Adding these completely messes up xml tags
+      # ">" => '&#62;',
+      # "<" => '&#60;'
+    }
+  end
+  
   def hl7
-    self.gsub('–', '&ndash;')
-        .gsub('–', '&ndash;')
-        .gsub('—', '&ndash;')
-        .gsub('©', '&copy;')
-        .gsub('®', '&reg;')
-        .gsub('“', '&ldquo;')
-        .gsub('”', '&rdquo;')
-        .gsub('’', '&rsquo;')
-        .gsub(" ", '&nbsp;')
-        .gsub("√", '&check;')
+    self.gsub(/#{HTML_ENTITY_CODES.keys.join('|')}/) { |m| HTML_ENTITY_CODES[m] }        
   end
 end

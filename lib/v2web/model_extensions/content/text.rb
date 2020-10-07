@@ -11,8 +11,6 @@ module V2Web
     
     def web_content
       content_content.hl7.strip.sub(/^<p>/, '').sub(/<\/p>$/, '')
-      
-      # V2Web.htmlize(content_content)
     end
   
     def to_hl7_site(_ = nil)
@@ -23,7 +21,6 @@ module V2Web
         locals[:css] = styles.map { |s| _css(s) }.compact.join
       end
       ret = V2Web.render_with_locals(:p, locals)
-      
     end
     
     def _css(style)
@@ -49,5 +46,6 @@ module V2Web
     def to_v2_html_test(_ = nil)
       to_hl7_site
     end
+
   end
 end

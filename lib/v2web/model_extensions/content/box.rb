@@ -10,5 +10,27 @@ module V2Web
       locals[:classes] = styles.map(&:value).join(' ')
       V2Web.render_with_locals(:box, locals)
     end
+    
+    def footnotes
+      content.map(&:footnotes).flatten
+    end
+    
+    def all_texts
+      texts = []
+      content.each { |item| texts << item if item.is_a?(V2Web::Text) }
+      texts
+    end
+    
+    def all_tables
+      tables = []
+      content.each { |item| tables << item if item.is_a?(V2Web::Table) }
+      tables
+    end
+    
+    def all_figures
+      figures = []
+      content.each { |item| tables << item if item.is_a?(V2Web::Figure) }
+      figures
+    end  
   end
 end

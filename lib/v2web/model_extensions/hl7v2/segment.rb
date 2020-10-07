@@ -8,7 +8,7 @@ module HL7
     
     def to_fsh
       fsh = []
-      fsh << "segment = \"https://www.v2.hl7.org/fhir/SegmentDefinition/#{type.local_url_name}\""
+      fsh << "segment = \"https://v2.hl7.org/fhir/SegmentDefinition/#{type.local_url_name}\""
       fsh
     end
     

@@ -46,7 +46,7 @@ module V2Web
     end
   
     # def set_number(parent)
-    #   parent.subsets.select { |ss| ss.is_a?(WebDoc::TabSet) }.index { |ss| ss.id == id }
+    #   parent.subsets.select { |ss| ss.is_a?(V2Web::TabSet) }.index { |ss| ss.id == id }
     # end
     # def hl7_page_content(parent)
     #   tabs_id = parent.url_title + 'tab_set' + set_number(parent)
