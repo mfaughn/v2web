@@ -1,0 +1,14 @@
+%tr.segment
+  %td
+    - icons.each do |file_name|
+      %img{:src => "images/#{file_name}"}
+    %img{:src => "images/#{icon}"}  
+    %img{:src => "images/icon_reference.png"}
+    %a{:href => seg_url}
+      = code
+  %td
+    = cardinality
+  %td
+    = must_implement
+  %td
+    = status

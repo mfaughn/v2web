@@ -9245,32 +9245,32 @@ BCDQAgGkWAuwSAoBCEAAAhCAAASyJfD/A/IDJS5cZrnpAAAAAElFTkSuQmCC
 <p><span style="font-size:16px">Table 10.1</span> provides a list of the meta data and definition for an HL7 v2 implementation guide. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) or Optional (O). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 10.1: Implementation Guide Meta Data</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Attribute</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Definition</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Type</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Use</strong>
 </p>
@@ -9280,7 +9280,7 @@ BCDQAgGkWAuwSAoBCEAAAhCAAASyJfD/A/IDJS5cZrnpAAAAAElFTkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Name</strong>
 </p>
@@ -9311,7 +9311,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>IG Version</strong>
 </p>
@@ -9342,7 +9342,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Organization</strong>
 </p>
@@ -9373,7 +9373,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Author</strong>
 </p>
@@ -9404,7 +9404,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>HL7 Version</strong>
 </p>
@@ -9435,7 +9435,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Create Date</strong>
 </p>
@@ -9466,7 +9466,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Last Update Date</strong>
 </p>
@@ -9497,7 +9497,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Status</strong>
 </p>
@@ -9528,7 +9528,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Publish Date</strong>
 </p>
@@ -9559,7 +9559,7 @@ C
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
@@ -9598,32 +9598,32 @@ O
 <p><span style="font-size:16px">Table 10.2</span> provides a list of the meta data and definition for an HL7 v2 message profile. The attribute name, definition, type, and use are given. Type indicates how the value of the attribute is represented. Use indicates whether the meta data is Required (R) or Optional (O). Date Format is YYYYMMDD.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 10.2: Message Profile Meta Data</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Attribute</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Definition</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Type</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Use</strong>
 </p>
@@ -9633,7 +9633,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Name</strong>
 </p>
@@ -9664,7 +9664,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>HL7 Version</strong>
 </p>
@@ -9695,7 +9695,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Organization</strong>
 </p>
@@ -9726,7 +9726,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Author</strong>
 </p>
@@ -9757,7 +9757,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Code</strong>
 </p>
@@ -9788,7 +9788,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Trigger Event</strong>
 </p>
@@ -9819,7 +9819,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Structure</strong>
 </p>
@@ -9850,7 +9850,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Level</strong>
 </p>
@@ -9881,7 +9881,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Role</strong>
 </p>
@@ -9912,7 +9912,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Create Date</strong>
 </p>
@@ -9943,7 +9943,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Last Update Date</strong>
 </p>
@@ -9974,7 +9974,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Status</strong>
 </p>
@@ -10005,7 +10005,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Publish Date</strong>
 </p>
@@ -10036,7 +10036,7 @@ C
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
@@ -10067,7 +10067,7 @@ O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Profile Identifier</strong>
 </p>
@@ -10098,7 +10098,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Profile Type</strong>
 </p>

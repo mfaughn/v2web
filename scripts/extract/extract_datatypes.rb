@@ -30,6 +30,15 @@ module V2Web
       # puts @node_types.uniq.sort
       # puts
       # puts @styles.map { |x| x.to_s.slice(/(?<=<pStyle val=").+(?="\/>)/)}.uniq.sort
+      create_varies_datatype
+    end
+    
+    # TODO there has got to be a better way to deal with data elements that may have different datatypes
+    # I would suggest defining multiple data elements and having an OR for those...
+    def create_varies_datatype
+      ChangeTracker.start
+      @datatype = HL7::DataType.create(:name => 'Varies', :code => 'Varies')
+      ChangeTracker.commit
     end
     
     def _extract_datatypes(node)
@@ -219,7 +228,11 @@ module V2Web
         component = HL7::Component.create(props)
         component.add_comment(comment) if comment
         component.add_example(example) if example
-        component.optionality = opt if opt
+        if opt
+          component.optionality = opt
+        else
+          # puts "No optionality for #{seq}\n#{rows}"
+        end
         if clen =~ /=/
           component.may_truncate = 'false'
         elsif clen =~ /#/
@@ -258,7 +271,9 @@ module V2Web
       txt = extract_text(node).strip
       abbrv, name = split_title(txt)
       puts Rainbow("#{abbrv} - #{name}").magenta
+      # print Rainbow("#{abbrv} ").magenta
       html_dt = @html_dt[name]
+      puts Rainbow("NO NAME: #{txt.inspect}").red unless name.to_s.strip[0]
       puts Rainbow("FAIL: #{name.inspect}").red unless html_dt
       ChangeTracker.start
       @datatype = HL7::DataType.create(:name => name, :code => abbrv)

@@ -82,9 +82,18 @@
         <code value="boolean" />
         <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
       </type>
+    </element>
+    <element id="SegmentDefinition.field.flags">
+      <path value="SegmentDefinition.field.flags" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://v2.hl7.org/fhir/valueset-segment-field-optionality.html" />
+        <valueSet value="http://v2.hl7.org/fhir/valueset-segment-field-flags.html" />
       </binding>
     </element>
     <element id="SegmentDefinition.field.minCardinality">
@@ -105,9 +114,19 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
       </type>
     </element>
+    <!-- <element id="SegmentDefinition.field.typeVaries">
+      <path value="SegmentDefinition.field.typeVaries" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="canonical" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/canonical" />
+        <targetProfile value="http://v2.hl7.org/fhir/StructureDefinition/DataElementDefinition" />
+      </type>
+    </element> -->
     <element id="SegmentDefinition.field.dataElement">
       <path value="SegmentDefinition.field.dataElement" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="canonical" />

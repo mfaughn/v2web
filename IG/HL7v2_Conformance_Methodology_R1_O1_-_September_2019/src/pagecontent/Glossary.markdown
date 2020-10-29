@@ -5,24 +5,24 @@
 <p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:18px"><strong>Term</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:18px"><strong>Context</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:18px"><strong>Definition</strong></span>
 </p>
@@ -32,7 +32,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Data Type</strong>
 </p>
@@ -56,7 +56,7 @@ The HL7 base datatype for the field as defined in Chapter 2 of the base standard
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Standard</strong>
 </p>
@@ -80,7 +80,7 @@ The base HL7 v2 standard.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>C</strong><strong>ardinality</strong>
 </p>
@@ -104,7 +104,7 @@ Indicates the number of occurrences for an element by specifying the minimum and
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Co-Constraint</strong>
 </p>
@@ -128,7 +128,7 @@ A rule (constraint) used to express dependencies among a set of data values.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Coded Data Element</strong>
 </p>
@@ -152,7 +152,7 @@ An element with a data type definition that supports coded concepts. Examples in
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Code System</strong>
 </p>
@@ -176,7 +176,7 @@ A managed collection of codes that represent concepts used in a particular busin
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Compatibility</strong>
 </p>
@@ -200,7 +200,7 @@ Declaration as to whether two specifications define sets of requirements that ar
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Compliance</strong>
 </p>
@@ -224,7 +224,7 @@ The degree to which a derived specification adheres to the requirements defined 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -239,7 +239,7 @@ The degree to which a derived specification adheres to the requirements defined 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Composite Data Type</strong>
 </p>
@@ -260,7 +260,7 @@ A data type that contains more than one element which can be another composite d
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Composite Profile </strong>
 </p>
@@ -284,7 +284,7 @@ A profile created by combining a core profile component and one or more profile 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Concept Domain</strong>
 </p>
@@ -308,7 +308,7 @@ An abstract notion that refers to a set of related ideas (concepts) that serve t
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Conformance</strong>
 </p>
@@ -332,7 +332,7 @@ The relationship between a specification and an implementation; is an indication
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Conformance </strong><strong>Clause</strong>
 </p>
@@ -356,7 +356,7 @@ Defines the requirements, criteria, or conditions that must be satisfied by an i
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Conformance</strong><strong> Constructs</strong>
 </p>
@@ -380,7 +380,7 @@ The key mechanisms for profiling; include usage, cardinality, data type, vocabul
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Conformance Statement</strong>
 </p>
@@ -404,7 +404,7 @@ An explicit declaration conveyed in text or as a testable expression that define
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Constraint</strong>
 </p>
@@ -428,7 +428,7 @@ A rule that is applied to narrow or focus the use of an  element in accordance w
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Content</strong>
 </p>
@@ -452,7 +452,7 @@ Defines the rules related to the data (value) for an element, such as a vocabula
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Constrainable Profile</strong>
 </p>
@@ -476,7 +476,7 @@ Is derived from either the standard profile or another constrainable profile; it
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Core Profile Component</strong>
 </p>
@@ -500,7 +500,7 @@ Is used to document the common set of requirements for a profile across the set 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Data Type</strong>
 </p>
@@ -524,7 +524,7 @@ Defines the data element structure and, at the primitive level, the type of data
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Data Type Flavor</strong>
 </p>
@@ -548,7 +548,7 @@ The mechanism for building on a data type for constraining components and sub-co
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Position</strong>
 </p>
@@ -572,7 +572,7 @@ The location of the discriminator element(s). The path is relative to the base d
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Value</strong>
 </p>
@@ -596,7 +596,7 @@ The content of the discriminator element. For a fixed value, the evaluation is b
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Exception</strong>
 </p>
@@ -620,7 +620,7 @@ Is a general term to indicate that a conformance violation has occurred. The res
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Extensibility</strong>
 </p>
@@ -644,7 +644,7 @@ Indicates whether the value set definition can be extended (added to) or not in 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Implementation</strong><strong> Profile</strong>
 </p>
@@ -672,7 +672,7 @@ All interfaces deployed in a production setting are implementable profiles wheth
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Interoperability</strong>
 </p>
@@ -696,7 +696,7 @@ The ability of implementations to exchange data and to use that data as intended
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Known Data</strong>
 </p>
@@ -720,7 +720,7 @@ Content that exists and is available for a given element.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Length</strong>
 </p>
@@ -744,7 +744,7 @@ Defines the number of characters that may be present in one occurrence of an ele
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Non-empty Value</strong>
 </p>
@@ -768,7 +768,7 @@ A value in which at least one-character is a non-whitespace character. Two doubl
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Optionality</strong>
 </p>
@@ -796,7 +796,7 @@ Sometimes used interchangeably with &ldquo;usage&rdquo;.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Process</strong>
 </p>
@@ -820,7 +820,7 @@ A general term to indicate that an action must be performed and is important con
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Profile Component</strong>
 </p>
@@ -844,7 +844,7 @@ Defines a part or a certain aspect of a profile; is used to aggregate correlated
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Profiling</strong>
 </p>
@@ -868,7 +868,7 @@ The process of placing additional constraints on a message definition in accorda
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Profile</strong>
 </p>
@@ -892,7 +892,7 @@ A complete message structure definition with additional constraints applied to i
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Interaction</strong>
 </p>
@@ -916,7 +916,7 @@ The process by which a message is sent from a Sender application to a Receiver a
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Message Transaction</strong>
 </p>
@@ -940,7 +940,7 @@ The process by which a message is sent from a Sender application to a Receiver a
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Min</strong>
 </p>
@@ -964,7 +964,7 @@ An attribute that determines the minimum number of occurrences that must contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Max</strong>
 </p>
@@ -988,7 +988,7 @@ An attribute that determines the maximum number of occurrences that must contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Slicing</strong>
 </p>
@@ -1012,7 +1012,7 @@ Defines a set of different constraints that are possible for a field instance (o
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Specifier</strong>
 </p>
@@ -1036,7 +1036,7 @@ A person who is creating the implementation guide or message profile.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Stability</strong>
 </p>
@@ -1060,7 +1060,7 @@ Indicates whether the content of a value set might change (often the value set i
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Standard Profile</strong>
 </p>
@@ -1084,7 +1084,7 @@ Represents the base standard definitions and constraints as-is and establishes t
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Table</strong>
 </p>
@@ -1121,7 +1121,7 @@ User Table: provides a list of suggested values that could be used, or, alternat
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Usage</strong>
 </p>
@@ -1149,7 +1149,7 @@ Sometimes used interchangeably with &ldquo;optionality&rdquo;.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Use Case</strong>
 </p>
@@ -1177,7 +1177,7 @@ Can be considered a container that organizes the pieces needed to specify a syst
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Value (verb)</strong>
 </p>
@@ -1198,7 +1198,7 @@ To place a non-empty value (noun) in an element location.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>V</strong><strong>alue Set</strong>
 </p>
@@ -1227,7 +1227,7 @@ A value set draws codes from one (usually) or more code systems; the result is a
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Vocabulary</strong>
 </p>

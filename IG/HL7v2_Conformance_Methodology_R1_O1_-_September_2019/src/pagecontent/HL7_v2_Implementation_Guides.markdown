@@ -1298,32 +1298,32 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 <p></p><p><span style="font-size:16px">Figure 3.1</span> illustrates a generic logical organization of an Implementation Guide. There are no definitive rules for what constitutes an implementation guide. For example, some implementation guides will focus on interoperability definitions and include limited application functional requirements (mostly implied); whereas others will include functional requirements to a greater degree.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 3.1: Immunization Implementation Guide List of Message Profiles</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Profile Identifier</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Message Definition</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Profile</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Related Profiles</strong></span>
 </p>
@@ -1333,7 +1333,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z22</strong></span>
 </p>
@@ -1364,7 +1364,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z23</strong></span>
 </p>
@@ -1395,7 +1395,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z34</strong></span>
 </p>
@@ -1426,7 +1426,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z44</strong></span>
 </p>
@@ -1457,7 +1457,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z31</strong></span>
 </p>
@@ -1488,7 +1488,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z32</strong></span>
 </p>
@@ -1519,7 +1519,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z42</strong></span>
 </p>
@@ -1550,7 +1550,7 @@ zoMJmIAJmIAJmIAJmIAJlJbA/w+EoEmyc6LBiQAAAABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Z33</strong></span>
 </p>

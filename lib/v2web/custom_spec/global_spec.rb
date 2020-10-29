@@ -1,6 +1,7 @@
 global_spec_modifier do |view|
   view.hide('ooxml') if view.view_name.to_s == 'Summary'
   view.reorder('ooxml', :to_end => true)
+  view.hide('ooxml')
   kontent = view.content
   view_classifier = view.data_classifier
   content_index = nil

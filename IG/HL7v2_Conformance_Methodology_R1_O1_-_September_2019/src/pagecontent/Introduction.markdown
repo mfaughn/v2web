@@ -5425,18 +5425,18 @@ AAAAAElFTkSuQmCC
 <p>The terms used to express requirements in this document follow the guidelines as described in RFC 2119 (adapted). <span style="font-size:16px">Table </span><span style="font-size:16px">1.1</span> provides a summary of keywords and how they are to be interpreted. The convention for keyword expression is to use non-bold lower case.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 1.1: Keywords</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Keyword
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Definition
 </p>
@@ -5446,7 +5446,7 @@ Definition
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 must
 </p>
@@ -5463,7 +5463,7 @@ means that the definition is an absolute requirement of the specification. Synon
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 must not
 </p>
@@ -5480,7 +5480,7 @@ means that the definition is an absolute prohibition of the specification. Synon
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 should
 </p>
@@ -5497,7 +5497,7 @@ means that there is strong preference that a statement is applied. Valid reasons
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 should not
 </p>
@@ -5514,7 +5514,7 @@ means that there is a strong preference that a statement is not applied. Valid r
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 may
 </p>
@@ -5549,18 +5549,18 @@ means that an item is truly optional. A specifier has the option to include or n
 <p>Message elements are addressable and represented in a standardized form and are dependent on the element context. The element representation presented here is used in this specification to identify the location of elements within a context. It is important to understand this nomenclature to interpret the representation of requirements.</p><p>Element contexts include the message, group, segment, or datatype. Depending on the context, a leaf element is referred to either by name or by a name and a position number. For message or group contexts, the leaf elements are accessed by name (e.g., MSH). For segment or datatype contexts, the leaf elements are accessed by a name and a position&nbsp;number (e.g., MSH-7).&nbsp;<span style="font-size:16px">Table 1.2</span> illustrates the grammar of the representation for a given context ([] indicates optional, * indicates multiple occurrences).</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 1.2: Element Representation Grammars</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Context</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Grammar</strong></span>
 </p>
@@ -5570,7 +5570,7 @@ means that an item is truly optional. A specifier has the option to include or n
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Data Type</strong></span>
 </p>
@@ -5587,7 +5587,7 @@ means that an item is truly optional. A specifier has the option to include or n
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Segment</strong></span>
 </p>
@@ -5604,7 +5604,7 @@ means that an item is truly optional. A specifier has the option to include or n
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Group</strong></span>
 </p>
@@ -5621,7 +5621,7 @@ means that an item is truly optional. A specifier has the option to include or n
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Message</strong></span>
 </p>
@@ -9744,18 +9744,18 @@ AABJRU5ErkJggg==
 <p>The key mechanisms for profiling are the conformance constructs that are used for constraining. A high-level overview of the general constraint types is given in <span style="font-size:16px">Table 1.3</span>. (See <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">5</span> for in-depth definition and use).</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 1.3: General Constraint Types</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Constraint Type</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Description</strong></span>
 </p>
@@ -9765,7 +9765,7 @@ AABJRU5ErkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Usage</strong></span>
 </p>
@@ -9782,7 +9782,7 @@ Indicates requirements for the presence (appearance) of an element.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Cardinality</strong></span>
 </p>
@@ -9799,7 +9799,7 @@ Indicates the number of occurrences for an element by specifying the minimum and
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Data Type</strong></span>
 </p>
@@ -9816,7 +9816,7 @@ Defines the data element structure and, at the primitive level, the type of data
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Vocabulary</strong></span>
 </p>
@@ -9833,7 +9833,7 @@ Defines the vocabulary binding and vocabulary definitions. Indicates the allowab
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Length</strong></span>
 </p>
@@ -9850,7 +9850,7 @@ Defines a constraint on the number of characters that may be present in one occu
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Content</strong></span><span style="font-family:Arial,Helvetica,sans-serif"><strong> (non-coded)</strong></span>
 </p>
@@ -9867,7 +9867,7 @@ Defines constraints on data (content), such as a fixed value or adherence to a s
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Conformance Statement</strong></span>
 </p>
@@ -9884,7 +9884,7 @@ A method of expressing content constraints. An explicit statement expressed in t
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Co-Constraint</strong></span>
 </p>
@@ -9901,7 +9901,7 @@ Content constraints used to express dependencies among a set of data values.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Slicing</strong></span>
 </p>
@@ -9918,7 +9918,7 @@ Allows for occurrences of a field to be defined with different constraints.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Arial,Helvetica,sans-serif"><strong>Semantic Refinement</strong></span>
 </p>

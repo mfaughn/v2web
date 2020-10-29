@@ -1,0 +1,15 @@
+%tr.segment.segment_sequence
+  %td
+    - icons.each do |file_name|
+      %img{:src => "images/#{file_name}"}
+    %img{:src => "images/#{icon}", :onclick => 'tableRowAction(this)'}  
+    %img{:src => "images/folder_icon.gif"}
+      %b
+        = name
+  %td
+    = cardinality
+  %td
+    = must_implement
+  %td
+    = status
+= segment_rows

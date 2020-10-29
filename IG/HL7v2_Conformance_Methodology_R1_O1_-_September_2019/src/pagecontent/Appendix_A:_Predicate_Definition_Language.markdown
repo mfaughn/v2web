@@ -5,7 +5,7 @@
 <p>Elements assigned with a declared conditional usage require an associated predicate that is computable and based on other elements in the message. The conformance methodology specification does not prescribe a language to define the predicate. A recommended pseudo language that provides the mechanisms to construct predicate statements is given in this section. The language is HL7 v2-specific and is grounded on predicate definitions that have emerged over time in the specification of HL7 v2 implementation guides. The goal is to provide specifiers with a simple language that affords consistency within and across HL7 v2 implementation guides, the readability of a natural language, and be machine computable. The language is not comprehensive (nor formal) and is intended for use in HL7 v2 for convenience.</p><p></p>
 </p>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Examples of Condition Predicates</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span></p><p></p><p><span style="font-family:Arial,Helvetica,sans-serif">IF </span><span style="font-family:Arial,Helvetica,sans-serif">CWE.1 (Identifier) is valued.</span></p><p></p><p><span style="font-family:Arial,Helvetica,sans-serif">I</span><span style="font-family:Arial,Helvetica,sans-serif">F</span><span style="font-family:Arial,Helvetica,sans-serif"> RXA-20 (Completion Status)</span><span style="font-family:Arial,Helvetica,sans-serif"> contains one of the values in the list</span><span style="font-family:Arial,Helvetica,sans-serif">: </span><span style="font-family:Arial,Helvetica,sans-serif">{</span><span style="font-family:Arial,Helvetica,sans-serif">&#39;CP&#39;,</span><span style="font-family:Arial,Helvetica,sans-serif"> </span><span style="font-family:Arial,Helvetica,sans-serif">&#39;PA&#39;</span><span style="font-family:Arial,Helvetica,sans-serif">}</span><span style="font-family:Arial,Helvetica,sans-serif">.</span></p>
 </p>
@@ -16,7 +16,7 @@
 <p></p><p>The pseudo language for describing predicate definition is composed of building blocks that are linked together to create the predicates. The building blocks include:</p><p></p><p>An example template for the condition predicate builder follows this general pattern:</p>
 </p>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Condition Predicate Example</strong></span><span style="color:#000000"><strong> using a template pattern</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span></p><p><span style="font-family:Arial,Helvetica,sans-serif">IF </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">LOCATION (DESCRIPTION) </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">VERB </span><span style="font-family:Arial,Helvetica,sans-serif">one of the value</span><span style="font-family:Arial,Helvetica,sans-serif">s</span><span style="font-family:Arial,Helvetica,sans-serif"> in the list</span><span style="font-family:Arial,Helvetica,sans-serif">: </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">{‘VALUE 1&rsquo;, ‘VALUE 2&rsquo;, ‘VALUE N&rsquo;}. </span></p><p></p><p><strong>Example:</strong></p><p><span style="font-family:Arial,Helvetica,sans-serif">IF </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">RXA-20 (Completion Status) contains </span><span style="font-family:Arial,Helvetica,sans-serif">one of the values in the list: </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">{&#39;CP&#39;, &#39;PA&#39;}.</span></p>
 </p>
@@ -31,28 +31,28 @@
 <tbody>
 <caption>Table 12.1: Condition Predicate Template</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Example Template Pattern</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Template Example</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Example</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Usage</strong>
 </p>
@@ -93,28 +93,28 @@ Required
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Occurrence Declarative Statement
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 N/A
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 N/A
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Optional
 </p>
@@ -155,28 +155,28 @@ Required
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Context
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 N/A
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 N/A
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Optional
 </p>
@@ -217,28 +217,28 @@ Required
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Content Declarative Statement OR Content Comparison Declarative Statement
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 contains the value one of the values in the list: {<span style="color:#c00000">‘VALUE</span><span style="color:#c00000"> 1</span><span style="color:#c00000">&rsquo;</span><span style="color:#c00000"> ‘VALUE 2&rsquo;, ‘VALUE N&rsquo;}</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 one of the values in the list: {&#39;CP&#39;, &#39;PA&#39;}.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Required
 </p>
@@ -270,14 +270,14 @@ Required
 <tbody>
 <caption>Table 12.2: Occurrence-Declarative Statement</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Occurrence</strong><strong>-</strong><strong>Declarative Statement</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
@@ -304,14 +304,14 @@ at least one occurrence of
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 the <span style="color:#c00000">&#39;INSTANCE&#39;</span> occurrence of
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">The occurrence indicated by the INSTANCE of a repeating element </span><span style="color:#000000">must </span><span style="color:#000000">satisf</span><span style="color:#000000">y</span><span style="color:#000000"> the predicate. Other instances may also satisfy the predicate.</span>
 </p>
@@ -338,14 +338,14 @@ no occurrence of
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 exactly one occurrence of
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">One and only one occurrence of a repeating element </span><span style="color:#000000">can </span><span style="color:#000000">satisf</span><span style="color:#000000">y</span><span style="color:#000000"> the predicate.</span>
 </p>
@@ -372,14 +372,14 @@ exactly one occurrence of
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 All occurrences of
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">All occurrences of a repeating element </span><span style="color:#000000">must </span><span style="color:#000000">satisfy the predicate.</span>
 </p>
@@ -411,14 +411,14 @@ All occurrences of
 <tbody>
 <caption>Table 12.3: Condition Predicate Context</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Context (Scope/Location)
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 &nbsp;Description
 </p>
@@ -428,14 +428,14 @@ Context (Scope/Location)
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 in the same <span style="color:#c00000">GROUP</span> group
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 &quot;same group&quot;, e.g., &ldquo;in the same ORDER group&rdquo;
 </p>
@@ -461,7 +461,7 @@ in the same <span style="color:#c00000">GROUP</span> group
 <tbody>
 <caption>Table 12.4: Condition Predicate Verbs</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Verbs
 </p>
@@ -481,7 +481,7 @@ is
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 is not
 </p>
@@ -501,7 +501,7 @@ contains
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 does not contain
 </p>
@@ -511,7 +511,7 @@ does not contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 matches
 </p>
@@ -521,7 +521,7 @@ matches
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 does not match
 </p>
@@ -547,14 +547,14 @@ does not match
 <tbody>
 <caption>Table 12.5: Content-Declarative Statement</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Declarative Statement
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 &nbsp;Verb Pairs
 </p>
@@ -598,14 +598,14 @@ contains/does not contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 the value <span style="color:#c00000">‘VALUE&rsquo; (DESCRIPTION)</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 contains/does not contain
 </p>
@@ -632,14 +632,14 @@ contains/does not contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 the value <span style="color:#c00000">‘VALUE&rsquo; (DESCRIPTION) </span>drawn from the code system <span style="color:#c00000">&#39;CODE SYSTEM&#39;</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 contains/does not contain
 </p>
@@ -666,14 +666,14 @@ contains/does not contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 one of the values in the list: <span style="color:#c00000">{ ‘VALUE 1&rsquo;</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000">, &#39;VALUE 2&#39;</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000">, &#39;VALUE N&#39;</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000"> }</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 contains/does not contain
 </p>
@@ -700,14 +700,14 @@ contains/does not contain
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 one of the values in the list: <span style="color:#c00000">{ ‘VALUE 1&rsquo;</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000">, &#39;VALUE 2</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000">&#39;, &#39;VALUE N&#39;</span><span style="color:#c00000"> (DESCRIPTION)</span><span style="color:#c00000"> }</span> drawn from the code system <span style="color:#c00000">&#39;CODE SYSTEM&#39;</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 contains/does not contain
 </p>
@@ -750,21 +750,21 @@ the regular expression <span style="color:#c00000">‘REGULAR EXPRESSION&rsquo;<
 <tbody>
 <caption>Table 12.6: Content Comparison Declarative Statement</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Comparative Statement 
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 &nbsp;Description
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Examples
 </p>
@@ -810,21 +810,21 @@ be identical to <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 be earlier than <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">Applies to date/time content only and indicates a date/time that occurs before the date/time of the element it is compared to. The comparison is a &ldquo;meaning&rdquo; comparison.</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">Date/Time: 201803041021-0400 is earlier than 201803040823-0600</span>
 </p>
@@ -862,21 +862,21 @@ be earlier than <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">be truncated earlier than </span><span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">Applies to date/time content only and indicates a date/time that occurs before the date/time of the element it is compared to. The comparison is a &ldquo;meaning&rdquo; comparison and is at the coarsest level (i.e., the more detailed element is truncated to the resolution of the less detailed element).</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -904,21 +904,21 @@ be earlier than <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 be equivalent to <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">Content is the same in meaning but not representation. Applies to general, coded values, and data/time content. This concept can also be applied at the complex element level (e.g., compare ORC-12 and OBX-16).</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">General: 3.00 is equivalent to 3.</span>
 </p>
@@ -968,18 +968,18 @@ be truncated equivalent to <span style="color:#c00000">LOCATION 2 (DESCRIPTION)<
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">be equivalent to or later than </span><span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -1010,18 +1010,18 @@ be later than <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">be truncated equivalent to or truncated later than </span><span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span><span style="color:#000000">.</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -1062,14 +1062,14 @@ be later than <span style="color:#c00000">LOCATION 2 (DESCRIPTION)</span>.
 <tbody>
 <caption>Table 12.7: Condition Predicate Connectors</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Connectors
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 &nbsp;Description
 </p>
@@ -1096,14 +1096,14 @@ AND
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 OR
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 &nbsp;One predicate must be satisfied; both may be satisfied
 </p>
@@ -1136,7 +1136,7 @@ XOR
 <p></p><p>An example of a complex condition predicate is:</p>
 </p>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><strong>Example:</strong></p><p><span style="font-family:Arial,Helvetica,sans-serif">If </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">RXA-9.1</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif"> </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">(Identifier) contain</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">s</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif"> </span><span style="font-family:Arial,Helvetica,sans-serif">the value </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">&#39;00&#39;</span><span style="font-family:Arial,Helvetica,sans-serif"> AND </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">RXA-20</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif"> </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">(Completion Status) contain</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">s</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif"> </span><span style="font-family:Arial,Helvetica,sans-serif">one of the values in the list: </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">{CP,</span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif"> </span><span style="color:#c00000; font-family:Arial,Helvetica,sans-serif">PA}</span><span style="font-family:Arial,Helvetica,sans-serif">.</span></p>
 </p>

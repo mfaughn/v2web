@@ -1,21 +1,22 @@
 require 'docx'
-
+load File.expand_path(File.join(__dir__, '../../lib/v2web/model_extensions.rb'))
 paths = ['nokogiri_extensions.rb', 'headers_footers.rb', 'clear_tables.rb', 'compact_content.rb', 'headers_hack.rb', 'empty_sections_hack.rb']
 paths.each do |path|
-  load path
+  load File.expand_path(File.join(__dir__, path))
   # require_relative path
 end
 
-extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_msgs.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_chapters.rb']
-extractors.each do |name|
+extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_msgs.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_segments.rb', 'extract_chapters.rb']
+extractors.each do |file|
   path = File.expand_path(File.join(__dir__, '../extract', file))
   load path
   # require path
 end
 
 module HL7Parse
+  module_function
   def test_data_dir
-    File.expand_path(File.join(__dir__, '../../test_data/v2.9_Dec16'))
+    File.expand_path(File.join(__dir__, '../../test_data'))
   end
   
   def source_dir
@@ -42,7 +43,7 @@ module HL7Parse
     get_source(path, dir)
   end
     
-  def self.data_sources
+  def data_sources
     [
       'V29_CH03_PatientAdmin',
       'v29_CH04_Orders',

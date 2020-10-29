@@ -32,6 +32,8 @@ module V2Web
   extend App_MetaInfo_Behaviors
     
   DEFAULT_APP_OPTIONS = {
+    :port             => 7000,
+    # :puma_ctl_port    => 9295,
     :spec_name        => 'v2_web_generated.rb',
     :spec_module      => 'V2WebGenerated',
     :spec_title       => 'V2 Web Editor',
@@ -51,7 +53,7 @@ module V2Web
     # :custom_home_page             => {:url => '/hl7v2/prototype', :name => 'Documents'},
     :load_all_controllers         => true,
     :show_advanced_view           => false,
-    :favicon                      => '/images/hl7.ico',
+    :favicon                      => '/images/new_v2.ico'
     # :custom_pages => {
     #   # :proto => {
     #   #   :name => "Document Components",
@@ -62,7 +64,7 @@ module V2Web
     #     :name => "Generate Documents",
     #     :url => "hl7v2/prototype",
     #     :show_in_nav_bar => true
-    :nothing => nil
+    # :nothing => nil
   }
   
 end

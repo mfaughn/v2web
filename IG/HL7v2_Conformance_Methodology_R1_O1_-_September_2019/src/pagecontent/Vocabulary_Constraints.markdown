@@ -5,7 +5,7 @@
 <p>The purpose of vocabulary profiling is to narrow the allowable content of data elements that are bound to coded data types such as ID, IS, CE, CWE, and CNE.  Vocabulary is a term used to describe, in general, the mechanics of defining, maintaining, and using codes to represent concepts in healthcare data exchange. An understanding of the vocabulary terms and principles is necessary before describing vocabulary profiling. A number of key concepts are defined:</p><p><strong>Coded Data Element:</strong> is an element with a data type definition that supports coded concepts. Examples include IS, ID, CE, CWE, and CNE and any data type flavors of coded data type definitions (e.g., CWE_01).</p><p><strong>Code System</strong><strong>:</strong> is a managed collection of codes that represent concepts used in a particular business or technical area and in which often there are relationships between the coded concepts. Code systems are developed to provide a set of coded concepts for a particular domain, and they are designed for one or many specific or general business uses. A code system may be a simple list of coded concepts, or it may be designed with one or more explicit relationships between the coded concepts (at least hierarchical, and often many other types of relationships in a multi-dimensional fashion). As an example, a concept domain of &ldquo;Administrative Gender&rdquo; can contain a concept &ldquo;male&rdquo;, and a code &ldquo;M&rdquo; that represents the concept &ldquo;male&rdquo; within the context of the code system.</p><p><strong>Value Set</strong><strong>:</strong> is a collection of codes targeted for a specific use. A value set draws codes from one (usually) or more code systems; the result is a set of codes that constrains the possible content of a data element. A key distinction between a value set and a code system is that a code system is used as a reference source of coded meaning, whereas a value set is a specific constraint for a set of explicit business uses. Ultimately, binding of data elements to value sets is required for implementation.</p><p> </p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Value Set </strong></span><span style="color:#000000"><strong>Examples:</strong></span><span style="color:#000000"> </span>The Logical Observation Identifiers Names and Codes (LOINC) is a code system that has tens of thousands of observations. It is widely used in healthcare data exchange standards to specify all existing laboratory tests in current use internationally as well as the most common clinical observations. Two examples of value sets that draw from the LOINC code system are the set of codes that specify radiology study types and the set of codes that just specify laboratory observations. Another example value set that draws from the LOINC code system is the NIP003 value set that contains immunization observations such as &ldquo;30963-3&rdquo; for &ldquo;Vaccine Funding Source&rdquo;. The NIP003 value set includes only a few dozen codes out of the tens of thousands of LOINC codes.</p>
 </p>
@@ -22,11 +22,11 @@
 <p>At a high level, the process of defining vocabulary requirements can be divided into two distinct aspects: (1) Binding and (2) Vocabulary Definition. </p><p>Binding consists of the following parts:</p><p>The Vocabulary Definition consists of the following parts:</p><p>In a specification, not all aspects of vocabulary constraints need to be defined, and often their definition will depend on the profile level. For example, a constrainable profile can bind an element to a concept domain. It is expected that a derived profile would further define the vocabulary constraints.</p><p><strong>Binding:</strong> is the association of a coded data element to a vocabulary. Depending on the level of the specification, the binding can be to a concept domain, code system, or value set. The HL7 v2 tables can represent any of these three vocabulary types depending on how the table is defined and used. At each specification (profile) level, the binding becomes increasingly specific, refining the data semantics of the element by limiting the vocabulary&rsquo;s content to a particular set of coded values. For example, at the base standard level just a concept domain may be specified, and at the profile level a value set containing explicit codes for an implementation may be specified. In profiling, the HL7 v2 tables often are the starting point for value set creation.</p><p><span style="font-size:16px">Table 6.1</span> illustrates a binding of the coded data element PID-8 (Administrative Sex) to the vocabulary identifier by &ldquo;HL70001_EX&rdquo;. The vocabulary definition referenced by &ldquo;HL70001_EX&rdquo; reveals the details of the binding. Likewise, PID-10 (&ldquo;Race&rdquo;) is bound to the vocabulary definition identified by &ldquo;HL70005&rdquo;. In these examples, &ldquo;HL70001_EX&rdquo; is a modified set of codes that is based on the standard set of codes specified in the HL70001 table, and &ldquo;HL70005&rdquo; is used as-is.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 6.1: Binding Examples</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='5'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='5'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Patient Identification (PID) Segment Definition Excerpt</strong></span>
 </p>
@@ -36,35 +36,35 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>SEQ</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Name</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>DT</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Usage</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Vocabulary</strong></span>
 </p>
@@ -299,11 +299,11 @@
 <p></p><p><strong>Binding Strength</strong>: indicates the conformance of the binding, that is, whether the vocabulary must be used or not. There are two possible values: Required (R) and Suggested (S) (Recommended). All bindings are eventually required in implementations, and a suggested binding can be specified in a constrainable profile (i.e., the specification needs to be further constrained before implementation). The bound vocabulary definition with a binding strength of &ldquo;Suggested&rdquo; can be used as-is, modified, or replaced by an alternative code set in derived profiles. Bindings to concept domains and code systems always have a binding strength of &ldquo;Suggested&rdquo;,  because at the implementation level, all vocabulary bindings are to value sets (i.e., a definitive set of codes have been selected). <span style="font-size:16px">Table 6.2</span> shows a required binding strength for HL70001_EX to PID-8 and a suggested binding strength for HL70005 for PID-10.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 6.2: Binding Examples with Binding Strength</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='6'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='6'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Patient Identification (PID) Segment Definition Excerpt</strong></span>
 </p>
@@ -313,42 +313,42 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>SEQ</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Name</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>DT</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Usage</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Vocabulary</strong></span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px"><strong>Strength</strong></span>
 </p>
@@ -613,7 +613,7 @@
 <p></p><p>In constrainable profiles, the binding strength can initially be left unspecified (in essence, a binding strength of suggested) and then set once the use case or implementation requirements are better known. For implementation profiles, the binding strength must be set to required.</p><p>It is important in profiles to set the binding strength explicitly to required when the intent is to require a set of codes for use. This declaration is necessary to avoid confusion related to the implications of the underlying data type of the element with which the binding is associated. For example, the &ldquo;IS&rdquo; data type indicates that the element is associated with a User Table, but this association is not the desired specification in the profile.</p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p>No aspects of binding should be specified for coded elements with a usage of X (Cardinality of 0..0), as they are of no consequence.</p>
 </p>
@@ -624,7 +624,7 @@
 <p></p><p><strong>Binding Parameters:</strong> define allowable options for code set modifications in derived profiles. Binding parameters include <strong>extensibility</strong> and <strong>stability</strong>.</p><p><strong>Extensibility</strong><strong>:</strong> indicates whether the value set definition can be extended or not in a derived (profiled) version of the specification. The extensibility of a value set definition can be either open or closed. Open means that more values can be added to the value set in a derived specification. Closed means that no more values can be added to the value set in a derived specification.</p><p><strong>Stability</strong><strong>:</strong> indicates whether the content of a value set can change outside of the definition of the value set or the specification in which it is bound to one or more data elements. Often the value set is dependent on an external code system that may be updated or replaced after publication of the interoperability specification. Stability can have one of two values: static or dynamic. Static indicates that for this version of the specification the value set is completely fixed, both its definition and the expanded list of codes. If the value set needs to be modified, then a new value set and an updated version of the specification must be created. Dynamic means that a value set can change outside of the definition of the specification (and thereby becoming, in essence, a new value set that may be managed and referred to in various ways). In some instances, dynamic value sets are entire code systems that periodically are updated.</p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Implementation Note</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span>The CVX code system (used for immunization messaging in the US) or the German PZN (pharmaceutical central numbers) are good examples of when value sets with dynamic stability would be included in a specification. A new vaccine may be developed or an existing one deprecated and replaced with another. Another good example is the set of codes used for diagnoses. In Germany, a new code system for this purpose is released every year (e.g., &ldquo;ICD-10 German Modification Release 2016&rdquo;). In order to avoid the need for an updated release of the specification each year, the binding to a value set with dynamic stability is established. Under these circumstances the latest version of the value set should be used. How trading partners convey the use of the updated value set varies in practice. In some cases, it may be critical for them to be in harmony with the latest version immediately, while in others it may not be. When a prior agreement about this harmonization is not negotiated, the use of the conformance claim is helpful. The Message Profile Identifier element (MSH-21) can declare the value set being used (the value set can be managed as a profile component).</p>
 </p>
@@ -4589,7 +4589,7 @@ CEAAAgUT+P8BIj3NhVBYiV4AAAAASUVORK5CYII=
 <p>Other value sets that contain independent concepts can have a stability of &ldquo;dynamic&rdquo;. For example, ICD-10 codes could be updated and published periodically (as a new version or a new code system). This update is outside the scope of the published version of the specification that references the ICD-10 code system as a value set. Tagging the value set as dynamic, however, is a notification to implementers that the value set can change and that they should check for and make their updates accordingly.</p><p>Certain real-world circumstances necessitate communication of an unknown code. An example might be when a new strain of a virus is detected that must be reported to public health agencies. A code for this virus could be established (without formal recognition of a code system steward) and reportable lab result messages with this code could be sent immediately, even though the receiver may not know how to handle the new code. If the code can be handled by &ldquo;generic&rdquo; processing, however, a complete understanding of it by the receiver may not be necessary. Also, when the code and the associated concept are published officially, receivers that update to this new value set can then process this information in a meaningful way (if so desired). This circumstance is indicated in the &ldquo;Operational Space&rdquo; as an &ldquo;Unexpected Code may be Sent&rdquo;. </p><p>In this circumstance, there is no pre-coordinated agreement about this code, but there can be a pre-coordinated agreement that an unknown code is possible for a given element. It is important that standards provide an explicit and distinct mechanism to support this notion such that it is not conflated with other mechanisms, which dilutes the specification and lessens the capabilities for validation. HL7 v2 introduced the concept of <strong>Implementation Tolerance</strong> that allows for unknown (undocumented) codes to be exchanged at runtime with impunity, because the complete code set is not known to the implementers. For a binding that supports implementation tolerance, an implementation must process unknown codes without raising an exception.</p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Implementation Tolerance</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span>There are certain use cases that necessitate sending unknown codes. A profile can declare implementation tolerance for a given vocabulary binding.</p>
 </p>
@@ -4606,32 +4606,32 @@ CEAAAgUT+P8BIj3NhVBYiV4AAAAASUVORK5CYII=
 <p>Similar to, but not equivalent to, usage for data elements is the concept of usage for the codes in a value set. Vocabulary usage is a mechanism for defining and setting the scope of the concepts to be included, considered for inclusion (or exclusion), or excluded in a value set definition.</p><p><span style="font-size:16px">Table 6.3</span> defines usage indicators for profiling vocabulary. Required (R) usage indicates that the code must be supported (and thus can be used); Permitted (P) indicates that the code can be profiled to R, P, or E in a derived profile; and Excluded (E) indicates that the code must not be supported (and thus cannot be used) for the given element. The Permitted usage indicator is only applicable to constrainable profiles, i.e., it cannot appear in an implementation profile (it must become an R or an E). Permitted usage can be included in a closed value set (at the constrainable profile level). In this situation, the set of all known concepts are defined, but some concepts are left to be profiled at the implementation level based on local requirements/needs. </p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 6.3: Vocabulary Profiling Usage</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Usage</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Name</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Conformance</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Allowable Usage</strong>
 </p>
@@ -4641,7 +4641,7 @@ CEAAAgUT+P8BIj3NhVBYiV4AAAAASUVORK5CYII=
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>R</strong>
 </p>
@@ -4672,7 +4672,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>P</strong>
 </p>
@@ -4703,7 +4703,7 @@ R, P, E
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>E</strong>
 </p>
@@ -11319,35 +11319,35 @@ Gj/WJgESIAESIAES8CuB/w/bWWfyI96vMgAAAABJRU5ErkJggg==
 <tbody>
 <caption>Table 6.4: Compatibility Analysis for Vocabulary</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Sender</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Relation</strong><strong>ship</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Receiver</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Com</strong><strong>patible</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -11433,39 +11433,39 @@ The sender can send a code that the receiver does not understand.
 <p>The base HL7 standard defines four types of tables:</p><p>Certain rules that are defined for these tables in the base standard must be adhered to in the constraint of the table. These rules are the starting point for placing constraints as described in the previous sections on vocabulary profiling.</p><p><strong>User</strong><strong>-</strong><strong>Defined Table:</strong> A user-defined table provides an initial table identifier and, in some cases, suggested code values. These are recommendations and, therefore, place no initial requirements on the vocabulary definition. In a message profile, a specifier may use, extend, modify, or replace the suggested codes and descriptions. Once the vocabulary definition is defined, a specifier may bind the vocabulary definition to a data element and designate the binding strength as &ldquo;required&rdquo;, as prescribed in <span style="font-size:16px">Section </span><span style="font-size:16px">6.1.1</span>. That is, the specifier considers the data semantics associated with the data element, determines a suitable vocabulary definition, and declares that definition required. The status of the binding is required at this point, even though the underlying data type is ‘IS&rsquo;. A specifier can promote the data type to ‘ID&rsquo;, however, the implications of the initial data type are of little consequences once the vocabulary requirements are specified in a message profile.</p><p><strong>HL7</strong><strong>-</strong><strong>Defined Table:</strong> An HL7-defined table provides an initial table identifier, code values, and certain base standard requirements. Code values defined in an HL7 table must not be redefined in a message profile; and if a concept needed for a use case is not defined, the table definition can be extended. Below is a list of rules for constraining HL7-defined tables:</p><p>Beyond the initial set of rules imposed by HL7-defined tables in the base standard, constraints are applied as described earlier in this section. </p><p><strong>External Tables: </strong>An external table is a vocabulary definition created, maintained, and published by another standards organization. A specifier may reference an external table (code system) and bind that table to a data element in a message profile. The base standard may bind a code system or a set of code systems to a data element. In cases of a CNE data type, this binding is the starting point for profiling. </p><p><strong>Local Tables:</strong> The HL7 base standard provides no requirements or guidance for local tables. A local table is a table with a non-HL7 assigned table identifier that contains a set of locally or site defined values. Local tables are typically used for elements with a CWE data type. During the process of profiling, a specifier will create and bind local tables. The mechanisms described for specifying vocabulary requirements in this section must be used for defining local tables.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 6.5: Implied Vocabulary Binding Parameters for Base Data Type</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Replaced</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Bind. Str.</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Ext.</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Stability</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Comments</strong></span>
 </p>
@@ -11475,7 +11475,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>IS</strong></span>
 </p>
@@ -11513,7 +11513,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>ID</strong></span>
 </p>
@@ -11551,7 +11551,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CE</strong></span>
 </p>
@@ -11589,7 +11589,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CF</strong></span>
 </p>
@@ -11627,7 +11627,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CWE</strong></span>
 </p>
@@ -11665,7 +11665,7 @@ The sender can send a code that the receiver does not understand.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CNE</strong></span>
 </p>

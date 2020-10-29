@@ -5,53 +5,53 @@
 <p>A message profile is based on a message structure defined in the HL7 v2 standard and specifies refined requirements according to its intended context of use. The message profile identifies the message code (e.g., ADT), trigger event (e.g., A04), and message structure (e.g., ADT_A01) and other meta data as shown in <span style="font-size:16px">Table 10.2</span>. Constraints are placed at various levels and objects in the message template. <span style="font-size:16px">Table </span><span style="font-size:16px">4.1</span> summaries the types of constraints and the message objects for which they apply. In the sub-sections to follow, the constraint types that apply at each level of profiling are explained. In <span style="font-size:16px">Section </span><span style="font-size:16px">5</span> (Constraints), each constraint type is described in detail.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.1: Summary of Constraint Types and Where They Apply</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='2'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">Constraint</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">M</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">SG</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">S</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='3'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='3'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">F</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='3'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='3'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">C</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">SC</span>
 </p>
@@ -61,51 +61,51 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_header table_v2web1' colspan='2'>
+<td class='emphasis-header table_v2web1' colspan='2'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='2'>
+<td class='emphasis-header table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">Cx</span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">P</span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='2'>
+<td class='emphasis-header table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">Cx</span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">P</span>
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">P</span>
 </p>
@@ -115,7 +115,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Usage</strong></span>
 </p>
@@ -178,7 +178,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Cardinality</strong></span>
 </p>
@@ -232,7 +232,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Data Type Specialization</strong></span>
 </p>
@@ -289,7 +289,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Vocabulary</strong></span>
 </p>
@@ -346,7 +346,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Length</strong></span>
 </p>
@@ -397,7 +397,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Conformance Length</strong></span>
 </p>
@@ -448,7 +448,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Content</strong></span>
 </p>
@@ -499,7 +499,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Conformance Statement</strong></span>
 </p>
@@ -565,7 +565,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Co-constraints</strong></span>
 </p>
@@ -610,7 +610,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Slicing</strong></span>
 </p>
@@ -655,7 +655,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='2'>
+<td class='emphasis-column table_v2web1' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Semantic Refinement</strong></span>
 </p>
@@ -728,7 +728,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif">Key</span>
 </p>
@@ -766,7 +766,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -3367,7 +3367,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p></p><p>The left-hand side of <span style="font-size:16px">Figure </span><span style="font-size:16px">4.</span><span style="font-size:16px">1</span> shows the message profile identifier as meta data that models the Entity Identifier (EI) data type. The field definition for MSH-21 is contained in the body of the message profile; the definitions in the meta data and the field must be compatible. The right-hand side of <span style="font-size:16px">Figure </span><span style="font-size:16px">4.</span><span style="font-size:16px">1</span> shows a message instance in which MSH-21 is claiming conformance to the message profile definition on the left-hand side of <span style="font-size:16px">Figure </span><span style="font-size:16px">4.</span><span style="font-size:16px">1</span>.</p><p>The message profile identifier is not limited to just the message profile; it can reference any of the following profile building blocks:</p><p>message profile (including a pre-coordinated profile identifier)</p><p>profile component (including the core profile component and differential component)</p><p>composite profile</p><p>value set library</p><p>In principle, all of these items can be managed the same way. The message profile identifier can be a list of any of these profile building blocks. For example, the specifier may wish to separate the message profile and the value set library. The message profile identifier in this case will contain two occurrences. The totality of both occurrences indicates the claim of conformance. Likewise, a complete profile can be described as a collection of profile components. For example, three profile components can be indicated in which one of the components is the core profile component and the others are profile components. See <span style="font-size:16px">S</span><span style="font-size:16px">ection </span><span style="font-size:16px">7.1</span> for more details on how profiles can be constructed.</p><p>The EI data type consists of the four components. EI.1 indicates the identifier of the profile artifact. EI.2 or (EI.3 and EI.4) establish the assigning authority for the identifier given in EI.1. This scheme gives the identifier uniqueness. EI.2 describes the common name of what is defined by EI.3 and EI.4 (and vice-versa). EI.2 alone, or EI.3 and EI.4, or all three elements can be used to specify the assigning authority of the identifier. If all three are defined, then EI.2 and the combination of EI.3 and EI.4 should refer to an equivalent concept. Typically, EI.3 is an OID that defines the assigning authority of the identifier.</p><p>Below is an example that shows the message profile identifier definition for a profile that consists of a national level profile with a separate identifier for the value set library. Together the two identifiers indicate the national level requirements for a message. Additionally, the example shows that a state (local) entity further constrained the profile for their refined use case. Together, all three identifiers indicate the complete set of requirements. The example also shows how a system could value MSH-21 in the message instance to convey the content of the message.</p><p></p>
 </p>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><strong>Profile Definition</strong><strong>:</strong></p><p><span style="font-family:Courier New,Courier,monospace">&lt;MessageProfile&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&lt;CoreProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Profile_National_Level</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_XYZ</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; &lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.5</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; &lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; &lt;/CoreProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;ValueSetLibraryID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">VS_Library</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_XYZ</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.5</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;/ValueSetLibraryID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; &lt;ProfileComponentID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">State_Profile&nbsp;_Component</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_ABC</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; &lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.6</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; &lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; &lt;/ProfileComponentID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&lt;/MessageProfile&gt;&nbsp;</span></p><p><strong>Message Instance</strong><strong>:</strong></p><p><span style="font-family:Courier New,Courier,monospace">Profile_National_Level^Domain_XYZ^1.2.3.4.5^ISO~</span><span style="font-family:Courier New,Courier,monospace">VS_Library</span><span style="font-family:Courier New,Courier,monospace">^Domain_</span><span style="font-family:Courier New,Courier,monospace">XYZ</span><span style="font-family:Courier New,Courier,monospace">^1.2.3.4.</span><span style="font-family:Courier New,Courier,monospace">5</span><span style="font-family:Courier New,Courier,monospace">^ISO</span><span style="font-family:Courier New,Courier,monospace">~</span><span style="font-family:Courier New,Courier,monospace">State_Profile_Component^Domain_ABC^1.2.3.4.6^ISO</span></p>
 </p>
@@ -3378,7 +3378,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p>The above example illustrates the grouping of three profile building blocks with an implied AND connector. The message profile identifier mechanism also supports an implied OR connector with the PreCoordinatedProfile element. For example, the above illustration also could have defined a single pre-coordinated identifier that refers to these three profile building blocks. See the illustration below.</p><p></p>
 </p>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><strong>Profile Definition</strong><strong>:</strong></p><p><span style="font-family:Courier New,Courier,monospace">&lt;MessageProfile&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;PreCoordinatedProfile&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; &lt;PreCoordinatedProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">State_Profile</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_ABC</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.6</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/PreCoordinatedProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;CoreProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Profile_National_Level</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_XYZ</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.5</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;/CoreProfileID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;ValueSetLibraryID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; </span><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">VS_Library</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_XYZ</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.5</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">    </span><span style="font-family:Courier New,Courier,monospace">&lt;/ValueSetLibraryID&gt;&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;ProfileComponentID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;EntityIdentifier&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">State_Profile&nbsp;_Component</span><span style="font-family:Courier New,Courier,monospace">&lt;/EntityIdentifier&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;NamespaceID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">Domain_ABC</span><span style="font-family:Courier New,Courier,monospace">&lt;/NamespaceID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalID&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">1.2.3.4.6</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalID&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp;&nbsp;&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;UniversalIDType&gt;</span><span style="color:#c00000; font-family:Courier New,Courier,monospace">ISO</span><span style="font-family:Courier New,Courier,monospace">&lt;/UniversalIDType&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&nbsp; </span><span style="font-family:Courier New,Courier,monospace">  </span><span style="font-family:Courier New,Courier,monospace">&lt;/ProfileComponentID&gt;</span></p><p><span style="font-size:13px">  </span><span style="font-family:Courier New,Courier,monospace">&lt;PreCoordinatedProfile&gt;</span><span style="font-family:Courier New,Courier,monospace">&nbsp;</span></p><p><span style="font-family:Courier New,Courier,monospace">&lt;/MessageProfile&gt;&nbsp;</span></p><p><strong>Message Instance</strong><strong>:</strong></p><p><span style="font-family:Courier New,Courier,monospace">State_Profile^Domain_ABC^1.2.3.4.6^ISO</span></p><p><span style="font-family:Courier New,Courier,monospace"><strong>OR</strong></span></p><p><span style="font-family:Courier New,Courier,monospace">Profile_National_Level^Domain_XYZ^1.2.3.4.5^ISO~</span><span style="font-family:Courier New,Courier,monospace">VS_Library</span><span style="font-family:Courier New,Courier,monospace">^Domain_</span><span style="font-family:Courier New,Courier,monospace">XYZ</span><span style="font-family:Courier New,Courier,monospace">^1.2.3.4.</span><span style="font-family:Courier New,Courier,monospace">5</span><span style="font-family:Courier New,Courier,monospace">^ISO</span><span style="font-family:Courier New,Courier,monospace">~</span><span style="font-family:Courier New,Courier,monospace">State_Profile_Component^Domain_ABC^1.2.3.4.6</span><span style="font-family:Courier New,Courier,monospace">^ISO</span></p>
 </p>
@@ -3395,32 +3395,32 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p><span style="font-size:16px">Table 4.2</span> illustrates an abbreviated specification of a message definition as given in the base standard. <span style="font-size:16px">Table 4.3</span> shows an example of a profiled version of that message definition.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.2: Example of Base Standard Message Level Definition</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:12px; font-family:Courier New,Courier,monospace"><strong>Segments</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:12px; font-family:Courier New,Courier,monospace"><strong>Description</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:12px; font-family:Courier New,Courier,monospace"><strong>Status</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:12px; font-family:Courier New,Courier,monospace"><strong>Chapter</strong></span>
 </p>
@@ -4028,46 +4028,46 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p>The <strong>Segment column</strong> represents the abstract message definition as defined in the base standard, not the profiled definition. Specifiers may choose to represent the segment columns differently but must maintain the original list of segments. A second column may be added to include segment flavors. For example, if an optional segment in the abstract message definiton is constrained to required with a cardinality of 1…1, then the identifier of the segment flavor is given. The specfier may choose to mark segments that need to be supported in bold. A segment flavor indicates that the segment definition has been constrained. The segment-flavor identifier provides a convenient mechanism to manage and reference segments. If the segment was not constrained, then the base standard segment identifier is given.</p><p>The Usage column must be included and reflect the usage of the segment or segment group for this message-structured definition.</p><p>The Cardinality column must be included and reflect the minimum and maximum number of occurences allowed for the segment or segment group for the message-structured definition.</p><p><strong>Additional</strong> column headings, such as Referenced Chapter or Comments, may be specified. Conformance Statements and Condition Predicates (if any) also may be included as a column heading or be specified as separate tables immediately following the message-structured defintion table. <span style="font-size:16px">Table 4.</span><span style="font-size:16px">4</span> shows conformance statement defintions.</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.3: Example of Profiled Message Level Definition</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace"><strong>Segment</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace">Segment Flavor</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace">Description</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace">Usage</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace">Cardinality</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Courier New,Courier,monospace">Chapter</span>
 </p>
@@ -5014,7 +5014,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <tbody>
 <caption>Table 4.4: Example of Profiled Conformance Statement &ndash; Message Level</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='2'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace"><strong>Message Level Conformance Statements</strong></span>
 </p>
@@ -5024,7 +5024,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace">IZ</span><span style="font-size:13px; font-family:Courier New,Courier,monospace">-</span><span style="font-size:13px; font-family:Courier New,Courier,monospace">205</span>
 </p>
@@ -5041,7 +5041,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace">IZ-206</span>
 </p>
@@ -5073,67 +5073,67 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p><span style="font-size:16px">Table 4.5</span> shows the RXA segment definition as it appears in the HL7 v2.8.2 standard. <span style="font-size:16px">Table 4.6</span> shows an example of how the profiled segment definition (RXA_IZ_01) can be displayed. The segment flavor (specialization) identifier (RXA_IZ_01) is used in the message definition to indicate that this specialization of the RXA segment is to be used.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.5: Example Base Segment Definition &ndash; RXA Segment</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">SEQ</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">LEN</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">C.LEN</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">DT</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">OPT</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">RP/#</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">TBL#</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">ITEM #</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">ELEMENT NAME</span>
 </p>
@@ -6744,67 +6744,67 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <h4>
 4.3.1 
 </h4>
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.6: Sample Profile Segment Definition &ndash; RXA Segment (RXA_IZ)</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">SEQ</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">ELEMENT NAME</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">D</span><span style="font-family:Courier New,Courier,monospace">ata Type</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">Usage</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">Card.</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">Vocab</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">LEN</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">C.LEN</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-family:Courier New,Courier,monospace">Comments</span>
 </p>
@@ -8436,11 +8436,11 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 </tbody>
 </table>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.7: Example of Profiled Condition Predicate &ndash; Segment Level</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='3'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='3'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace"><strong>Condition Predicates</strong></span>
 </p>
@@ -8696,11 +8696,11 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p></p><p><span style="font-size:16px">Table 4.8</span> shows the list of conformance statements associated with the segment. <span style="font-size:16px">Appendix B</span> provides an example (and recommended) conformance statement language.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.8: Example of Profiled Conformance Statement &ndash; Segment Level</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='2'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='2'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace"><strong>Conformance Statements</strong></span>
 </p>
@@ -8831,7 +8831,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 </tbody>
 </table>
 
-<div class='box_v2web gray_box'>
+<div class='box_v2web gray-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>…</strong></span></p><p><span style="color:#000000"><strong>RXA-3: Date/Time Start of Administration (DTM_IZ02)</strong></span></p><p><span style="color:#000000">The date this vaccination occurred. In the case of a contraindication, refusal</span><span style="color:#000000">,</span><span style="color:#000000"> or deferral, this is the date the action occurred.</span></p><p><span style="color:#000000"><strong>RXA-4: Date/Time End of Administration (DTM_IZ02)</strong></span></p><p><span style="color:#000000">This field is specified as required in the HL7 base standard. An immunization is given at a point in time, and</span><span style="color:#000000">,</span><span style="color:#000000"> in the context of immunization, the End date/time is equivalent to the Start date/time. For this reason, this document has required this field to be equal to RXA-3.</span></p><p><span style="color:#000000"><strong>RXA-5: Administered Code (CWE_IZ01)</strong></span></p><p><span style="color:#000000">This field identifies the medical substance administered. If the substance administered is a vaccine, CVX and NDC codes </span><span style="color:#000000">typically </span><span style="color:#000000">are used for historical and new administrations respectively. The second set of three components may be used to represent the same vaccine using a different coding system.</span></p><p><span style="color:#000000"><strong>RXA-6: Administered Amount (NM)</strong></span></p><p><span style="color:#000000">This field records the amount of vaccine administered. The units are expressed in the next field, RXA-7. When the administered amount is unknown, this field should be populated with the value &quot;999&quot;.</span></p><p><span style="color:#000000"><strong>RXA-9: Administration Notes (CWE_IZ01)</strong></span></p><p><span style="color:#000000">This field is used to indicate whether this immunization record is based on a historical record or is being reported by the administering provider.</span></p><p><span style="font-family:Arial,Helvetica,sans-serif"><strong>…</strong></span></p>
 </p>
@@ -8844,7 +8844,7 @@ QuBMCfz/3qWVxb6FP/MAAAAASUVORK5CYII=
 <p>Components and sub-components are constrained in the context of data type specializations; that is, a component or sub-component should not be constrained directly in their context of use. Rather, they are constrained in the context of a data type specialization, and that specialization is used in context, either at the field level or as a complex data type.</p><p>Data type profiling entails constraining the components of a data type. The two cases where this profiling applies are related to primitive components and complex components:</p><p></p><p>The data type specification is displayed in a table form. <span style="font-size:16px">Table 4.9</span> shows a data type definition (XON) as given in the base standard. <span style="font-size:16px">Table 4.10</span> shows an example of the data type specialization (XON_IZ01) of the XON data type.  </p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.9: XON Data Type Definition in Base Standard</caption>
 <tr class='tr_v2web'>
@@ -9482,7 +9482,7 @@ SEC.REF.
 <p></p><p>As shown, the specifier did not include all columns as given in the base standard. If constraints are unspecified in the profile, then the requirements, or associated information of the profile from which it was derived, apply (in this case, the base standard). </p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.10: XON Data Type Definition Constrained in Profile</caption>
 <tr class='tr_v2web'>
@@ -9884,11 +9884,11 @@ Vocab
 <p></p><p><span style="font-size:16px">Table 4.11</span> shows the list of condition predicates for the data type specialization. The implementation guide and the message profile can define multiple data type specializations for the same data type.</p><p> </p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 4.11: XON Data Type Definition Constrained in Profile</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='3'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='3'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Courier New,Courier,monospace"><strong>Condition Predicates</strong></span>
 </p>

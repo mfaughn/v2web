@@ -11,7 +11,7 @@
 <p>Usage rules govern the expected behavior of the sending application and the receiving application with respect to an element. The usage indicators expand/clarify the optionality indicators defined in the HL7 base standard.  Usage determines, from an implementation perspective, whether an element must be supported. Additionally, from an operational perspective, usage determines whether the element must be present, can be present, or must not be present in a message instance for the sender. For the receiver, usage influences the processing of the element. </p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Optionality and Usage:</strong></span><span style="color:#000000"> </span>Optionality and Usage often refer to the same concept. Optionality is a term that has been used historically in the HL7 v2 base standard. Usage is the term that is used in the HL7 v2 conformance specification.</p>
 </p>
@@ -22,25 +22,25 @@
 <p></p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">1</span> provides an overview of the allowable usage indicators in message profiles (i.e., for constrainable and implementable profiles). While the base standard allows for all optionality indicators in some capacity, message-profile usage indicators have restricted use for a profile level.</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.1: Conformance Usage Indicators and Definitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Name</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Description</strong></span>
 </p>
@@ -50,7 +50,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>R</strong></span>
 </p>
@@ -74,7 +74,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>RE</strong></span>
 </p>
@@ -98,7 +98,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -123,7 +123,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C(a/b)</strong></span>
 </p>
@@ -147,7 +147,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>O</strong></span>
 </p>
@@ -171,7 +171,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>X</strong></span>
 </p>
@@ -195,7 +195,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>B</strong></span>
 </p>
@@ -225,7 +225,7 @@
 <p></p><p>Conditional usage in the base standard often is under-specified in terms of explicitly defining a predicate and the true and false outcomes. Additionally, in many cases such a complete declaration is not possible, since the specific use requirements are unknown at the base standard level; only at the profile level can they be fully determined. Observing this reality, the conformance methodology specification henceforth recognizes this unadorned conditional usage designation as an undeclared conditional usage that can be used in constrainable message profiles. Undeclared conditional usage is distinguished from a declared conditional usage that is fully defined. The introduction of the undeclared conditional usage along with the declared conditional usage allows for multiple types of conditional usage to co-exist in message profiles without ambiguity. Undeclared conditional usage asserts no implementation requirements, but declared conditional usage does.</p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>C(a/b) usage in the base standard</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span>C(a/b) usage replaced C usage in the base standard in version 2.8 and beyond. However, the construct is rarely used as intended, and, in many cases, it is not possible for it to be used at the base standard level, because the complete set of requirements are unknown. In nearly all cases, the unadorned C usage indicator is used for specifying conditional elements and not C(a/b). This specification considers elements specified as conditional in the base standard in essence as undeclared conditional elements and may be constrained as an undeclared conditional (C) or a declared conditional C(a/b) in message profiles.</p>
 </p>
@@ -242,32 +242,32 @@
 <p><span style="font-size:16px">Table 5.2</span> shows the usage rules requirements for a sending application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must provide in a message instance. What is provided is sometimes dependent on conditions and data availability. <span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">2</span> indicates what must be supported by the implementation and what must be provided in the message instance, not how it is accomplished.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.2: Usage Requirements Sending Applications</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Description</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Implementation Requirement</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Operational Requirement</strong></span>
 </p>
@@ -277,7 +277,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>R</strong></span>
 </p>
@@ -308,7 +308,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>RE</strong></span>
 </p>
@@ -339,7 +339,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -370,7 +370,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C(</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>a</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>/</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>b</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>)</strong></span>
 </p>
@@ -409,7 +409,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>X</strong></span>
 </p>
@@ -440,7 +440,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>O</strong></span>
 </p>
@@ -471,7 +471,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>B</strong></span>
 </p>
@@ -514,32 +514,32 @@
 <p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">3</span> shows the usage rules requirements for a receiving application. These requirements are expressed from the perspective of implementation and operational requirements. Usage implementation requirements indicate what the application must support for the element. Usage operational requirements indicate what the application must process in a message instance. The concept of &ldquo;must process in a meaningful way&rdquo; is intentionally vague at the interface level specification. Exactly what this means can be further defined in the profile definition in the context of a use case or in a functional requirements specification. The phrase &ldquo;process in a meaningful way&rdquo; can mean many things, as illustrated in the simple examples given below:</p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.</span><span style="font-size:16px">3</span> indicates what must be supported by the implementation and what must be processed by the implementation, but not how the processing is to be accomplished.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.3: Usage Rules Requirements for a Receiving Application</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Description</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Implementation Requirement</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Operational Requirement</strong></span>
 </p>
@@ -549,7 +549,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>R</strong></span>
 </p>
@@ -584,7 +584,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>RE</strong></span>
 </p>
@@ -619,7 +619,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -650,7 +650,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C(</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>a</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>/</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>b</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>)</strong></span>
 </p>
@@ -689,7 +689,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>X</strong></span>
 </p>
@@ -724,7 +724,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>O</strong></span>
 </p>
@@ -759,7 +759,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>B</strong></span>
 </p>
@@ -816,7 +816,7 @@
 <h5>
 5.1.3.3 Factoring Conditional Usage to Non-conditional Usage
 </h5>
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>C and CE Conformance Usage</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"> </span>Conditional (C) and Conditional, but maybe Empty (CE) usage indicators were introduced in the conformance specification in version 2.5 and deprecated in version 2.7.1. In version 2.7.1, C(a/b) was introduced, which subsumed C and CE. C equates to C(R/X) and CE equates to C(RE/X). Note, that the definition of &ldquo;C&rdquo; optionality in the base standard does not match the definition of &ldquo;C&rdquo; usage in various versions of conformance section/chapter.</p>
 </p>
@@ -827,60 +827,60 @@
 <p></p><p><span style="font-size:16px">Table </span><span style="font-size:16px">5.4</span> describes various use cases for profiling conditional usage. The examples employ an excerpt of the CWE data type (as of version 2.7). CWE.1 (Code) is the code identifier, CWE.2 (Text) is the text that describes the code concept, CWE.3 (Code System) is the name of the code system of which the code (CWE.1) is a member, and CWE.14 (Code System OID) is the OID of the code system of which the code (CWE.1) is a member. The BASE column indicates the specification as given in the base standard, in which the Code and Text are optional and the Code System and Code System OID are conditional. The conditions and relationships for the CWE definition are that if a code is provided, then either the code system or the code system OID must also be provided.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.4: Examples of Conditional Usage</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Element</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Name</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Base</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>DTF1</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>DTF2</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>DTF3</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>DTF4</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>DTF4 Predicate</strong></span>
 </p>
@@ -890,7 +890,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CWE.1</strong></span>
 </p>
@@ -946,7 +946,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CWE.2</strong></span>
 </p>
@@ -1005,7 +1005,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CWE.3</strong></span>
 </p>
@@ -1064,7 +1064,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>CWE.14</strong></span>
 </p>
@@ -1131,7 +1131,7 @@
 <h5>
 5.1.3.4 Predicate Definition
 </h5>
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><span style="color:#000000"><strong>Conditional Usage on the Event Type (MSH-9.2)</strong></span><span style="color:#000000"><strong>:</strong></span><span style="color:#000000"><strong> </strong></span><span style="color:#000000">Although not explicitly prohibited</span><span style="color:#000000">, the use of the event type as the basis of the conditional usage is not recommended. Specification of individual profiles is the preferred approach.</span></p>
 </p>
@@ -1148,46 +1148,46 @@
 <p><span style="font-size:16px">Table 5.5</span> presents the allowable transitions for each Usage code at each possible profile-level transition. The &ldquo;Usage Code&rdquo; column indicates the usage code for the &ldquo;starting&rdquo; profile level. The columns to the right of the Usage Code column indicate the possible usage code for the &ldquo;ending&rdquo; profile level. The &ldquo;starting&rdquo; profile level is indicated by the top line in the column heading, and the &ldquo;ending&rdquo; profile level is indicated by the bottom line in the column heading. For example, in the<span style="color:#ff0000"> </span>first row of the Usage Code column, the usage code is R, which is the usage of the<span style="color:#ff0000"> </span>element as defined in the Base standard. This usage code can only transition to R in a constrainable profile, as indicated by the Usage Code = R and Base-to-Constrainable coordinates.</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.5: Usage Compliance</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Usage Code</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Base-to-Constrainable</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Constrainable-to-Constrainable</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Base-to-Implementation</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Constrainable-to-Implementation</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>Implementation-to-Implementation</strong></span>
 </p>
@@ -1197,7 +1197,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>R</strong></span>
 </p>
@@ -1242,7 +1242,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>RE</strong></span>
 </p>
@@ -1287,7 +1287,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>O</strong></span>
 </p>
@@ -1332,7 +1332,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -1377,7 +1377,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>C(a/b)</strong></span>
 </p>
@@ -1422,7 +1422,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>X</strong></span>
 </p>
@@ -1467,7 +1467,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>B</strong></span>
 </p>
@@ -1512,7 +1512,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:13px; font-family:Arial,Helvetica,sans-serif"><strong>W</strong></span>
 </p>
@@ -1569,32 +1569,32 @@
 <p><span style="font-size:16px">Table </span><span style="font-size:16px">5.6</span> indicates the circumstances in which an undeclared conditional usage remains an undeclared conditional usage and the implications of that transition; and the circumstances in which an undeclared conditional is constrained to a declared conditional usage and the implications of that transition. Note, the conditional usage in the base standard is not referred to as an undeclared conditional usage. </p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.6: Use of Undeclared Conditional Usage</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Transition</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Resulting Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Comments</strong></span>
 </p>
@@ -1604,7 +1604,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -1639,7 +1639,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>C</strong></span>
 </p>
@@ -1688,25 +1688,25 @@
 <p></p><p>Elements with a conditional usage indicator require a separate examination, because a specialization allows for different combinations depending on the characteristics of the constraint.</p><p></p><p>Compliance assessment for elements with conditional usage (i.e., C(a/b)) is dependent on the respective true and false usage code specification. For example, if conditional usage for an element is specified as C(RE/O), the true usage code &ldquo;RE&rdquo; can be profiled to &ldquo;RE&rdquo; or &ldquo;R&rdquo; in a derived profile. The false usage code of &ldquo;O&rdquo; can be profiled to &ldquo;R&rdquo;, &ldquo;RE&rdquo;, &ldquo;O&rdquo;, or &ldquo;X&rdquo;. The conditional usage codes may collapse to a single non-conditional code if the usage codes are profiled to the same code. For example, if the &ldquo;RE&rdquo; and &ldquo;O&rdquo; usage are both profiled to &ldquo;R&rdquo;, then the usage code can be specified simply as &ldquo;R&rdquo; and not C(R/R). <span style="font-size:16px">Table 5.7</span> summarizes the possible constraints applicable to conditional usage.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.7: Summary of Compliance Rules for Constraining Conditional Usage</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Base Profile
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Derived Profile
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Comment
 </p>
@@ -1860,7 +1860,7 @@ If the condition is never met in a specific use case.
 <p></p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p><strong>A reasonable question is: should the condition predicate itself be allowed to change? </strong></p><p>The authors are unaware of any standard that provides guidance on this question. An example situation could be changing the condition from &ldquo;if the patient is male&rdquo; to &ldquo;if the patient is male and older than 18 years&rdquo;. Any change to a condition changes the result set as well. In the modified version of the condition in this example, some patients would be excluded because they are too young. In principle, such a change causes the application to evaluate the data in a different way, but it does not change the related usage of this element and, therefore, does not change the handling of this element. It is unclear whether this kind of change should be an allowable &ldquo;constraint&rdquo;. When changing a condition, careful consideration should be given to the potential impact on implementations.</p>
 </p>
@@ -1877,32 +1877,32 @@ If the condition is never met in a specific use case.
 <p><span style="font-size:16px">Table 5.8</span> provides a compatibility analysis of an element&rsquo;s usage in a sender profile to an element&rsquo;s usage in a receiver profile. For a pair of profiles to be compatible, all element pairs in the profiles must adhere to the profile compatibility rules. For example, if the sender profile specifies an element as required and the receiver profile also specifies the corresponding element as required, then the profiles are compatible for that element. If, however, the sender profile specifies an element as not-supported and the receiver profile specifies the corresponding element as required, then the profiles are not compatible for that element, since the receiver is expecting data that the sender will never provide.</p><p><span style="font-size:16px">Table 5.8</span> addresses implementable profiles where each element must be profiled; that is, no elements can be optional. <span style="font-size:16px">Table 5.9</span> addresses additional optionality choices available for constrainable profiles. <span style="font-size:16px">Tables 5.8</span> and <span style="font-size:16px">5.9</span> do not take conditional usage into account; an analogous analysis can be performed for each true and false outcome of the conditional usage.</p><p>Optional elements apply only to constrainable profiles. Often specifiers develop constrainable-level profiles for national specifications. Their goal is to specify elements that are needed to meet their use case requirements. Beyond that, they allow trading partners to negotiate among themselves regarding local customization of the remaining un-profiled (or optional) elements.</p><p>Defining compatibility among systems requires a comparison of the capabilities of the sending side to the requirements on the receiving side through the means of profiles. For assessing compatibility, use case requirements are defined in higher-level constrainable profiles and are thus not considered. For example, the assignment of &ldquo;R&rdquo; usage for an element on the sending side expresses the fact (or the intent) that this element is always valued in every message instance that is sent. &ldquo;RE&rdquo; usage expresses the intent that data will be present in messages if the data are entered into the system or are made available in some other way. In other words, these usage requirements identify what a receiver can expect in messages being sent to them. Statements for a receiver are clear expressions of their requirements. Therefore, a required element (&ldquo;R&rdquo; usage) indicates that the receiver must get this information in order to be able to process the message or a specific part of the message. Having said this, the pairing &ldquo;R  X&rdquo; is deemed compatible, since the receiver can ignore a data element for which the sender always provides data, although this behavior may not fulfill a certain use case or meet external expectations. Use case requirements must, therefore, be introduced as higher-level requirements (&ldquo;R&rdquo;) in the form of a constrainable profile that must be fulfilled by both sender and receiver, i.e., the implementable profiles must be compliant to this higher-level constrainable profile. Providing such a use case requirement would mean that the applications are compatible, although the receiver is not compliant (i.e., the receiver&rsquo;s implementable profile is not compliant with the constrainable profile). The receiver is conformant to its implementable profile, because this profile does not support the element; however, the fact that the receiver is not compliant prevents interoperability. In summary, specific aspects of compliance, compatibility, and conformance need to be met to enable interoperability.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.8: Sender/Receiver Pair Profile Compatibility Rules</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Sender
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Receiver
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Compatible
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Comment
 </p>
@@ -2226,32 +2226,32 @@ Sender and Receiver have the same expectations.
 <p></p><p>The analysis of optional elements for profile compatibility provides guidance for pairing potential implementable profiles derived from constrainable profiles. A definitive assessment of profile compatibility can&rsquo;t be made until implementation profiles are developed; however, the guidance provided here will aid in the specification of constrainable profiles. As is to be expected, profile compatibility of constrainable profiles is directly linked to the requirements of the compatibility rules of Implementable profiles.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.9: Compatibility Analysis for Optional Elements</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Sender
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Receiver
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Compatible
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Comment
 </p>
@@ -2496,25 +2496,25 @@ Compatibility can be achieved by following the rules for Implementation profiles
 <p>A data element often must occur more than once in the instance of a message. Cardinality is the conformance construct that is used to indicate this requirement. Cardinality controls the number of occurrences of an element an implementation must support and the number of instances of an element that can appear in a message. Some elements shall always be present (e.g., cardinality [1..1], [1..n]). Others shall never be present (i.e., cardinality [0..0]). Still other elements may or may not appear in the message instance, with zero or more occurrences (e.g., cardinality [0..n]). Cardinality identifies both the minimum and maximum number of occurrences that a message element must have in a conformant message and is expressed as an interval of a minimum-maximum pair of non-negative integers. A conformant message must always contain at least the minimum number of occurrences and shall not contain more than the maximum number of occurrences. As an example, a cardinality of &ldquo;[0..5]&rdquo; would indicate that the element need not occur in the instance at all or it may occur up to five times; an implementation must support up to five occurrences of an element.</p><p>Cardinality boundaries apply both to primitive data of a simple data type and a collection of data contained in a complex data type. An explicit cardinality range is required for segment groups, segments, and field elements.  Component and sub-component elements do not explicitly include a cardinality range, but a cardinality range is implicitly associated with each component and sub-component element.  The associated cardinality depends on the element&#39;s usage code.  For components and sub-components with a usage code of R, the associated cardinality range is [1..1]; for all elements with a usage code of RE or O, the associated cardinality is [0..1]; for all elements with a usage code of C(a/b), the associated cardinality is determined by the resultant usage based on the evaluation of the condition predicate; and for all elements with an X usage code, the associated cardinality is [0..0].</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.10: Cardinality</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Interpretation</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Valid Usage</strong>
 </p>
@@ -2524,7 +2524,7 @@ Compatibility can be achieved by following the rules for Implementation profiles
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[0..0]</strong>
 </p>
@@ -2548,7 +2548,7 @@ X
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[0..1]</strong>
 </p>
@@ -2572,7 +2572,7 @@ RE, C(a/b), O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[1..1]</strong>
 </p>
@@ -2596,7 +2596,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[0..n]</strong>
 </p>
@@ -2620,7 +2620,7 @@ RE, C(a/b), O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[1..n]</strong>
 </p>
@@ -2644,7 +2644,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[0..*]</strong>
 </p>
@@ -2668,7 +2668,7 @@ RE, C(a/b), O
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[1..*]</strong>
 </p>
@@ -2692,7 +2692,7 @@ R
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[m..n]</strong>
 </p>
@@ -2716,7 +2716,7 @@ R, RE
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>[m..*]</strong>
 </p>
@@ -2776,25 +2776,25 @@ If the profile author wishes to express a circumstance where an element will not
 
 </ul>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.11: Example Cardinality-Usage Combinations</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px">Cardinality</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px">Usage</span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:16px">Interpretation</span>
 </p>
@@ -2942,32 +2942,32 @@ If the profile author wishes to express a circumstance where an element will not
 <p><span style="font-size:16px">Table 5.12</span> lists the rules for constraining cardinality. The left-most column indicates the cardinality for an element as defined in the base standard. The combination of the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Valid Compliance Rule&rdquo; column indicates possible modifications of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides valid instances. Likewise, the information in the &ldquo;Derived Profile&rdquo; column (always m..n) and the &ldquo;Invalid Compliance Rule&rdquo; column indicate possible modifications (invalid in this case) of the cardinality constraint. The associated &ldquo;Example(s)&rdquo; column provides non-valid instances.</p><p>For instance, a cardinality defined in the base standard as [0..0] and then constrained to [0..0] (m=0 and n= 0) is a valid constraint (row 1 &ndash; valid column); however, if the cardinality is constrained to [1..4], it is invalid (row 1 &ndash; invalid column). In <span style="font-size:16px">Table 5.12</span> it is assumed that &ldquo;m&rdquo; is always less than or equal to &ldquo;n&rdquo;. Generally speaking, the cardinality range must be constrained by increasing the lower boundary and decreasing the upper boundary. The minimum cardinality has to be less than or equal to the maximum cardinality. Additionally, for some of the examples listed in <span style="font-size:16px">Table 5.12</span> a specific value for a variable is used to facilitate the explanation.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.12: Compliance Assessment for Constraining Cardinality</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Parent Profile
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Derived Profile
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='2'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='2'>
 <p class='p_v2web'>
 Valid Compliance
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='2'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='2'>
 <p class='p_v2web'>
 Invalid Compliance
 </p>
@@ -2977,36 +2977,36 @@ Invalid Compliance
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Rule
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Example(s)
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Rule
 </p>
 
 </td>
 
-<td class='emphasis_header table_v2web1' colspan='1'>
+<td class='emphasis-header table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Example(s)
 </p>
@@ -3478,32 +3478,32 @@ x=3, [2..2], [2..6]
 <p>Compatibility is a measure that indicates whether two specifications (or systems that implement the same specification) have harmonized requirements. Compatibility is determined from the perspective of a receiver. <span style="font-size:16px">Table 5.13</span> presents an analysis of compatibility for a set of sender/receiver cardinality pairs. The analysis is a direct assessment of the sender/receiver pairs indicated and does not consider what pairs might actually be enacted for an element in a particular use case. For example, in the case of a sender cardinality of [1..1] and a receiver cardinality of [0..0], the receiver doesn&rsquo;t need the data element to be valued in order to operate. If the sender has an expectation that the receiver must process the data element, however, then this requirement is indicated in the use case, and, as such, the receiver must set the cardinality for the element to [1..1], which would be part of the profile/interface negotiations.</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.13: Compatibility Analysis for Cardinality</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Sender
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Receiver
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Compatible
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 Comment
 </p>
@@ -3965,32 +3965,32 @@ If n&gt;y.
 <p>Under certain circumstances, a use case may require a data type substitution at the root level.  One example would be when an IS data type is replaced with a CWE data type. Root data type substitutions are promotions, that is, more functionality is specified. The following compliance and compatibility rules apply:</p><p>When a substitution is made, a data type in which all constituent parts and attributes are compatible must be specified. Many substitutions are possible, and specifiers should exercise caution when changing the root data type, as detecting non-compliance can be challenging. <span style="font-size:16px">Table 5.14</span> provides a few examples of root data type substitutions and an analysis of the substitution.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.14: Root Data Type Substitution</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Replaced</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Replaced By</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Analysis</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comments</strong>
 </p>
@@ -4000,14 +4000,14 @@ If n&gt;y.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>IS</strong>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>CWE</strong>
 </p>
@@ -4031,14 +4031,14 @@ Valid
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>CWE</strong>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>IS</strong>
 </p>
@@ -4062,14 +4062,14 @@ Data type demotion; fewer capabilities
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>TX</strong>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>FT</strong>
 </p>
@@ -4093,14 +4093,14 @@ Primitive data types; expands capabilities of text
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>CWE</strong>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>CNE</strong>
 </p>
@@ -4124,14 +4124,14 @@ Same structure, added usage constraint; in essence CNE is a data type flavor of 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>ST</strong>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>TX</strong>
 </p>
@@ -4179,7 +4179,7 @@ Contains the same sort of data. Allowable content differs.
 <p>Content is restricted based on a vocabulary definition that is bound to an element. The vocabulary definition may include a set of codes that can be used to populate an element in a message instance. The code set is associated with a specific element (which is known as &ldquo;binding&rdquo;), and the bound code set should only contain codes that are meaningful for that element in a given context (use case). The base standard does not and cannot provide the necessary granularity or depth of specification, because it is designed to have broad utility. Therefore, the base standard provides a starting point, which includes normative (HL7) tables or informative (User) tables or may merely include a placeholder (i.e., a concept domain). The process of profiling elements that are bound to code values includes providing the value set definition, the binding to the element, and the strength of that binding.</p><p></p>
 </p>
 
-<div class='box_v2web pink_box'>
+<div class='box_v2web pink-box'>
 <p class='p_v2web'>
 <p>Appropriate code set constraints should define and bind a code set containing only the values suitable for a particular data element; often, however, this rule is not followed. A common issue found in specifications is a single code set (e.g., an HL7 table) being applied to multiple elements for the sake of convenience, even though not all values in the value set are meaningful (suitable) for every element. The implementer is left to figure out which values in the given value set are appropriate for the data element in their particular use case.</p>
 </p>
@@ -4202,18 +4202,18 @@ Contains the same sort of data. Allowable content differs.
 <p>Length is expressed as either a minimum and maximum pair (e.g. 1..20) and indicates the number of characters an element may have. A constraint on length restricts the range and thus reduces the capabilities, e.g., [1..2048] to [1..1024]. In some sense the length constraint is a bit counterintuitive when compared to usage. Usage requires that an application add capabilities, whereas a constraint on length may mean reducing an application&rsquo;s current capability (as configured). The specific needs of a use case will dictate whether length constraints must be applied.</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.15: Minimum and Maximum Length</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Length</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Interpretation</strong>
 </p>
@@ -4223,7 +4223,7 @@ Contains the same sort of data. Allowable content differs.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>0..0</strong>
 </p>
@@ -4240,7 +4240,7 @@ Not supported element; minimum and maximum set to 0.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>1..1</strong>
 </p>
@@ -4257,7 +4257,7 @@ Element must have exactly one character
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>1..n</strong>
 </p>
@@ -4274,7 +4274,7 @@ Element may have up to n characters
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>n..n</strong>
 </p>
@@ -4291,7 +4291,7 @@ Element must have exactly &ldquo;n&rdquo; characters
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>1..*</strong>
 </p>
@@ -4308,7 +4308,7 @@ Element may have any length.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>m</strong><strong>..*</strong>
 </p>
@@ -4325,7 +4325,7 @@ Element may have any length which is greater than or equal to &ldquo;m&rdquo;, w
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>m..n</strong>
 </p>
@@ -4348,33 +4348,33 @@ Element must have a minimum length of &ldquo;m&rdquo; and a maximum length of &l
 <p>Length compatibility (<span style="font-size:16px">Table 5.16</span>) is based on a single criterion, that the receiver&rsquo;s capabilities are greater than the sender&rsquo;s capabilities.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.16: Testing Possible Combinations of Implemented Length</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Sender</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Receiver</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Compatible</strong>
 </p>
@@ -4384,7 +4384,7 @@ Element must have a minimum length of &ldquo;m&rdquo; and a maximum length of &l
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Implemented Minimum Length
 </p>
@@ -4422,7 +4422,7 @@ No
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -4457,7 +4457,7 @@ Yes
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -4492,7 +4492,7 @@ Yes
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 Implemented Maximum Length
 </p>
@@ -4530,7 +4530,7 @@ Yes
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -4565,7 +4565,7 @@ Yes
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
@@ -4615,32 +4615,32 @@ No
 <p>The conformance length can be indicated with truncation behavior requirements. In the base standard, &ldquo;=&rdquo; denotes that the content of the element must not be truncated, and the &ldquo;#&rdquo; denotes that the content of the element may be truncated, and, if truncated, the rules for indicating data truncation must be followed. </p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.17: Truncation Flag Setting Allowable Transitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Indicator</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Transition</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Allowed?</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Comments</strong></span>
 </p>
@@ -4650,7 +4650,7 @@ No
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>#</strong></span>
 </p>
@@ -4681,7 +4681,7 @@ No
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>#</strong></span>
 </p>
@@ -4712,7 +4712,7 @@ No
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>=</strong></span>
 </p>
@@ -4743,7 +4743,7 @@ No
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>=</strong></span>
 </p>
@@ -5422,42 +5422,42 @@ rkJggg==
 <tbody>
 <caption>Table 5.18: Field Definition of Patient Address (PID-11): Slice Type = Discriminator Fixed</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Default Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator</strong>
 </p>
@@ -5471,7 +5471,7 @@ rkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">PID-11 </span>
 </p>
@@ -5482,35 +5482,35 @@ rkJggg==
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">1</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">*</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">XAD</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">XAD_0</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">7 (Address Type)</span>
 </p>
@@ -5526,39 +5526,39 @@ rkJggg==
 <p></p><p><span style="font-size:16px">Table 5.19</span> shows the definition for each slice. The discriminator indicates the actual value that triggers and defines a &ldquo;slice&rdquo;.  The first row in the table indicates that when (if) the discriminator contains the value of &ldquo;H&rdquo; then the field must conform to the requirements defined by the XAD_1 data type flavor. The field slice with these characteristics must appear in the message instance and only can appear once in the message instance. The requirements that dictate whether the field slice must appear are specified by the slice minimum and slice maximum parameters. Likewise, if the discriminator value contains &ldquo;M&rdquo; then the field instance follows the requirement indicated by the XAD_2 data type flavor. The field slice with this definition need not appear in the message (Slice Min = 0) or can appear more than once (Slice Max = *). Other discriminator values can also apply, but, since they are not explicitly listed, the default data type flavor defines the requirement for such field instances; in this case, XAD_0 is the data type flavor (see <span style="font-size:16px">Table 5.19</span>).</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.19: Slice Definitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Value</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Min</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Max</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -5568,35 +5568,35 @@ rkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">&ldquo;H&rdquo; (Home)</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">XAD_1</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">1</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">1</span>
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="color:#000000">If PID-11.7 = &ldquo;H&rdquo;, then the requirements for this field slice are defined by XAD_1 data type flavor.</span>
 </p>
@@ -5662,46 +5662,46 @@ rkJggg==
 <tbody>
 <caption>Table 5.20: Field Definition of Patient Address (PID-11): Slice Type = Discriminator Fixed</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Default Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator (Position)</strong>
 </p>
@@ -5711,7 +5711,7 @@ rkJggg==
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 PID-11
 </p>
@@ -5722,39 +5722,39 @@ PID-11
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 NA
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 7 (Address Type)
 </p>
@@ -5770,39 +5770,39 @@ NA
 <p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.21: Slice Definitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Value</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Min</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Max</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -5812,35 +5812,35 @@ NA
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 &ldquo;H&rdquo; (Home)
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 If PID-11.7 = &ldquo;H&rdquo;, then the requirements for this field slice are defined by XAD_1 data type flavor.
 </p>
@@ -5912,42 +5912,42 @@ A field of this definition need not appear and at most will appear once.
 <tbody>
 <caption>Table 5.22: Field Definition of Patient Address (PID-11): Slice Type = Discriminator Exists</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Default Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator (Position)</strong>
 </p>
@@ -5957,42 +5957,42 @@ A field of this definition need not appear and at most will appear once.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 PID-11 (Patient Address)
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 NA
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 7 (Address Type)
 </p>
@@ -6008,39 +6008,39 @@ NA
 <p></p><p>If only one of the discriminator values is specified, then a default data type flavor is necessary (in essence, the default is specifying the requirements for the slice in which the discriminator value was indicated).</p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.23: Slice Definitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Value</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Min</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Max</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -6050,35 +6050,35 @@ NA
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 True
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 If PID-11.7 is valued, then the requirements for this field slice are defined by XAD_1 data type flavor.
 </p>
@@ -6150,42 +6150,42 @@ A field of this definition need not appear and at most will appear once.
 <tbody>
 <caption>Table 5.24: Field Definition of Patient Address (PID-11): Slice Type = Discriminator Pattern</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Default Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator (Position)</strong>
 </p>
@@ -6195,42 +6195,42 @@ A field of this definition need not appear and at most will appear once.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 PID-11 (Patient Address)
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 5 (ZIP or Postal Code)
 </p>
@@ -6246,39 +6246,39 @@ XAD_0
 <p></p><p>The above example shows how an application can handle different requirements of XAD based on the postal code. In most cases, a message is likely to contain only one type or the other, but both could be supported in the same message for a patient. This specification supports either configuration. Note that a similar result could be accomplished using conditional usage.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.25: Slice Definitions</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Discriminator Value</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Min</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Max</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -6288,7 +6288,7 @@ XAD_0
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 [0-9]{5}
 </p>
@@ -6296,28 +6296,28 @@ XAD_0
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 If PID-11.5 matches the five-digit pattern for United States zip code, then the requirements for this field slice are defined by XAD_1 data type flavor.
 </p>
@@ -6331,7 +6331,7 @@ The field slice need not appear or may appear an unlimited number of times.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 [0-9]{5}-[0-9]{4}
 </p>
@@ -6339,28 +6339,28 @@ The field slice need not appear or may appear an unlimited number of times.
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 If PID-11.5 matches the nine-digit pattern for United States zip code, then the requirements for this field slice are defined by XAD_1 data type flavor.
 </p>
@@ -6432,35 +6432,35 @@ The field slice need not appear or may appear an unlimited number of times.
 <tbody>
 <caption>Table 5.26: Field Definition of Patient Name (PID-5): Slice Type = Ordered</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Default Datatype</strong>
 </p>
@@ -6470,35 +6470,35 @@ The field slice need not appear or may appear an unlimited number of times.
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 PID-5 (Patient Name)
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XPN
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XPN_0
 </p>
@@ -6514,18 +6514,18 @@ XPN_0
 <p></p><p>This strategy can be combined with the data type flavors and constant values to specify particular occurrences of the type of patient name. For example, if it were necessary to constrain the Patient Name field tightly such that the first occurrence of the field is the legal name (PID-5.7 = ‘L&rsquo;), then the data type flavor, XPN_1 in this example, can set the XPN.7 (Name Type Code) to ‘L&rsquo; as a constant value. </p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.27: PID-5 Ordered Slicing Definition</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Occurrence</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype</strong>
 </p>
@@ -6535,14 +6535,14 @@ XPN_0
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 1
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XPN_1
 </p>
@@ -6585,28 +6585,28 @@ XPN_2
 <tbody>
 <caption>Table 5.28: Field Definition of Patient Address (PID-11): Slice Type = Non-selective</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Field</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Min Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Max Cardinality</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Base Datatype</strong>
 </p>
@@ -6616,28 +6616,28 @@ XPN_2
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 PID-11
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 0
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 *
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD
 </p>
@@ -6657,14 +6657,14 @@ XAD
 <tbody>
 <caption>Table 5.29: PID-5 Ordered Slicing Definition</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Slice Datatype List</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Comment</strong>
 </p>
@@ -6674,14 +6674,14 @@ XAD
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 XAD_1, XAD_2, XAD_3
 </p>
 
 </td>
 
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 The field instance must adhere to the constraints specified in one of the specified data type flavors (XAD_1, XAD_2 or XAD_3).
 </p>
@@ -6709,46 +6709,46 @@ The field instance must adhere to the constraints specified in one of the specif
 <p>The co-constraint construct is a related constraint concept that is used to express dependencies among a set of data values. An HL7 v2 message in which observations are conveyed is one example of how co-constraints are used. Such constraints typically follow the form of &ldquo;if OBX-3.1 = LOINC code XXXXX-X then OBX-2 SHALL BE &ldquo;CE&rdquo; and OBX-5.1 SHALL contain a value from the value set YYY&rdquo; or a similar form. A co-constraint is not limited to use with observations, but it appears most frequently with observations. A convenient way to illustrate a set of co-constraints is to present them in a table format. <span style="font-size:16px">Table 5.30</span> illustrates an example for a set of immunization observations.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 5.30: Excerpt of Co-Constraints of Immunization Observations</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>LOINC</strong><strong>(OBX-3)</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Data Type</strong><strong>(OBX-2)</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Data Type Flavor (OBX-2)</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Value Set</strong><strong>(OBX-5)</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Units (OBX-6)</strong>
 </p>
@@ -6758,7 +6758,7 @@ The field instance must adhere to the constraints specified in one of the specif
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 30973-2
 </p>
@@ -6803,7 +6803,7 @@ Not applicable
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 59782-3
 </p>
@@ -6848,7 +6848,7 @@ Not applicable
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 59783-1
 </p>
@@ -6890,7 +6890,7 @@ Local Value Set
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 30956-7
 </p>
@@ -6932,7 +6932,7 @@ CVX - Vaccine Group
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 30980-7
 </p>
@@ -6974,7 +6974,7 @@ Not applicable
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 59779-9
 </p>
@@ -7016,7 +7016,7 @@ ScheduleIdentifier
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 30963-3
 </p>

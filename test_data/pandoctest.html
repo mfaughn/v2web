@@ -1,0 +1,78 @@
+<h3 id="implementation-guide-meta-data">Implementation Guide Meta Data</h3>
+<p><a href="#_Toc40181945">Table 10.1</a> provides Date Format is YYYYMMDD.</p>
+<p><span id="_Toc40181945" class="anchor"></span>Table .: Implementation Guide Meta Data</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Attribute</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Use</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>The natural language name of the implementation guide. Commonly used as the title of the implementation guide.</td>
+<td>String</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td><strong>IG Version</strong></td>
+<td>The version of the implementation guide as decided by the author. There is no prescribed format.</td>
+<td>String</td>
+<td>O</td>
+</tr>
+<tr class="odd">
+<td><strong>Organization</strong></td>
+<td>The name/identification of the organization or owner of the implementation guide.</td>
+<td>String</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td><strong>Author</strong></td>
+<td>List of authors that created the implementation guide.</td>
+<td>String</td>
+<td>O</td>
+</tr>
+<tr class="odd">
+<td><strong>HL7 Version</strong></td>
+<td>List of HL7 profile versions included in the implementation guide. Generally, most implementation guides include message profiles of the same HL7 version.</td>
+<td>String</td>
+<td>O</td>
+</tr>
+<tr class="even">
+<td><strong>Create Date</strong></td>
+<td>The date the implementation guide was created.</td>
+<td>Date Format</td>
+<td>O</td>
+</tr>
+<tr class="odd">
+<td><strong>Last Update Date</strong></td>
+<td>The date the implementation guide was last updated.</td>
+<td>Date Format</td>
+<td>O</td>
+</tr>
+<tr class="even">
+<td><strong>Status</strong></td>
+<td>The status of the implementation guide. Can be draft, published, superseded, or withdrawn.</td>
+<td>Enum</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td><strong>Publish Date</strong></td>
+<td>If the status is “published”, this is the date the implementation guide was published. Once published, the IG version is static.</td>
+<td>Date Format</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td><strong>Description</strong></td>
+<td>Provides a short summary and intended use of the implementation guide.</td>
+<td>String</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#Figure_10_9">Figure 10.9</a> shows the life cycle of an implementation guide.</p>
+<p><img src="media/image1.png" style="width:5.02394in;height:1.45292in" /></p>
+<p><span id="Figure_10_9" class="anchor"></span>Figure .9: Implementation Guide Life Cycle</p>

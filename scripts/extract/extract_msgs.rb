@@ -146,7 +146,7 @@ module V2Web
       message_def.save
       @segment_parents = [structure]
       ChangeTracker.commit
-      extract_segments(tbl, name) unless structure.segments.any?
+      extract_segments_from_table(tbl, name) unless structure.segments.any?
       
       if name =~ /QBP\^Q25\^QBP_Q21/
         puts Rainbow("Handling the QBP^Q25^QBP_Q21 mess.").green
@@ -224,7 +224,7 @@ module V2Web
     # curly braces indicate repeating section
     # square brackets indicate optional
     # angle brackets and pipes are choice segments
-    def extract_segments(table, name)
+    def extract_segments_from_table(table, name)
       rows = table.at('tbody').children.reject { |n| n.name == 'text'}
       rows.each do |row|
         entries = []
@@ -241,9 +241,9 @@ module V2Web
         add_parent = false
         # puts Rainbow(seg).green
         if seg =~ /\w\w\w/
-          segment = create_segment(seg, desc, status, ch)
+          segment = create_segment_(seg, desc, status, ch)
         elsif seg =~ /\.\.\./ 
-          segment = create_segment(seg, desc, status, ch)
+          segment = create_segment_(seg, desc, status, ch)
         elsif seg =~ /</
           segment = create_segment_choice(seg, desc, status, ch)
           add_parent = true
@@ -274,7 +274,7 @@ module V2Web
     
     # We aren't going to worry about chapter (ch) because we already know that the only segment that is duplicated is OBR and we'll deal with that by hand.
     # What does status mean? TODO add to model and capture.
-    def create_segment(seg, desc, status, ch, type = nil)
+    def create_segment_(seg, desc, status, ch, type = nil)
       code = seg.slice(/[A-Z][A-Z][A-Z0-9]/)
       code = '...' if seg =~ /\.\.\./
       code = 'Hxx' if seg == 'Hxx'
@@ -309,6 +309,7 @@ module V2Web
       s = HL7::SegmentChoice.create
       s.repeat = !!(seg =~ /\{/)
       s.optional = !!(seg =~ /\[/)
+      s.name = desc&.slice(/(?<=---).+(?=begin)/)&.strip
       s.save
       ChangeTracker.commit
       # puts Rainbow("Created SegmentChoice[#{s.id}]").cyan

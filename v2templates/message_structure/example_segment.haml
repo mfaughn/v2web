@@ -1,0 +1,11 @@
+%tr.segment.example_segment
+  %td
+    - icons.each do |file_name|
+      %img{:src => "images/#{file_name}"}
+    %img{:src => "images/#{icon}"}  
+    %img{:src => "images/icon_reference.png"}
+    = name
+  %td
+  %td
+  %td
+    = description

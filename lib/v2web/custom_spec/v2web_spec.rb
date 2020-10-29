@@ -26,6 +26,16 @@ organizer(:Details, V2Web::Table) do
   relabel('fhir', 'FHIR Section')
   # message('html_simple')
   # reorder('html_simple', :to_beginning => true)
-  reorder('caption', 'style', 'columns', 'rows', :to_beginning => true)
+  reorder('caption', 'style', 'cols', 'rows', :to_beginning => true)
   reorder('ooxml', 'rendering_as', :to_end => true)
+end
+
+collection(:Summary, V2Web::Cell) do
+  string('identifying_text', :label => 'Content', :disable_search => true)
+  order('identifying_text', :to_beginning => true)
+end
+
+collection(:Summary, V2Web::Row) do
+  string('identifying_text', :label => 'Content', :disable_search => true)
+  order('identifying_text', :to_beginning => true)
 end

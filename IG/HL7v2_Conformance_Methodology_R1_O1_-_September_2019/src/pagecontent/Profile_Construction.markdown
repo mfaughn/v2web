@@ -11,18 +11,18 @@
 <p>A message profile is normally thought of as a complete message-structure definition with additional constraints applied to it as a &ldquo;whole&rdquo;. However, in some circumstances it is convenient and efficient to employ a modular approach to profile construction. A profile component defines a part or a certain aspect of a profile and is used to aggregate correlated requirements and/or to differentiate requirements from another profile or profile component. It provides a mechanism to support a set of reusable requirements. A profile component can be applied to any construct or section of a profile. Profiles and profile components can be combined to develop and manage other profiles. A profile component in a family of profiles can be used to identify different levels of requirements for the same use case or to identify the differences in requirements for different, but closely related, use cases. A core profile component is used to document the common set of requirements across the set of related definitions. A composite profile is the composition of the core profile component and one or more profile components. In the end, a composite profile is a profile with the distinction that the profile was created by combining a core profile component and one or more profile components. <span style="font-size:16px">Table 7.1</span> summarizes the profile building blocks.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 7.1: Profile Building Blocks</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Concept</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Definition</strong></span>
 </p>
@@ -32,7 +32,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Profile</strong></span>
 </p>
@@ -49,7 +49,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Core Profile Component</strong></span>
 </p>
@@ -66,7 +66,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Profile Component</strong></span>
 </p>
@@ -83,7 +83,7 @@
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Composite Profile</strong></span>
 </p>
@@ -3634,18 +3634,18 @@ AhCAAASqmACasoonD9MhAAEIQAACEIBAQgigKRMyEZgBAQhAAAIQgAAEqpjA
 <p><span style="font-size:16px">Figure 7.6</span> shows an example of Selective Pre-adoption. An implementation guide is produced in which the foundation profiles are created with version 2.5.1 message definitions. The figure also shows that a segment, field, and table are pre-adopted from version 2.8.2 and a data type is pre-adopted from version 2.7. The pre-adopted objects are used to replace or extend existing objects in the foundational profile (message) definition. Note, the figure does not show the relationship of the pre-adopted objects in the message profiles, because, depending on how the implementation guide is constructed, this relationship can vary.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 7.2: Selective Pre-adoption Examples</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Object</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Example</strong></span>
 </p>
@@ -3655,7 +3655,7 @@ AhCAAASqmACasoonD9MhAAEIQAACEIBAQgigKRMyEZgBAQhAAAIQgAAEqpjA
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Table</strong></span>
 </p>
@@ -3672,7 +3672,7 @@ AhCAAASqmACasoonD9MhAAEIQAACEIBAQgigKRMyEZgBAQhAAAIQgAAEqpjA
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Field</strong></span>
 </p>
@@ -3689,7 +3689,7 @@ AhCAAASqmACasoonD9MhAAEIQAACEIBAQgigKRMyEZgBAQhAAAIQgAAEqpjA
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Segment</strong></span>
 </p>
@@ -5734,18 +5734,18 @@ TkSuQmCC
 <p>The type and granularity of the objects (and their attributes) that can be adopted are limited. Below is a list of candidate objects:</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 7.3: Selective Adoption Candidate Objects</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>O</strong></span><span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>bject</strong></span>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Comments</strong></span>
 </p>
@@ -5755,7 +5755,7 @@ TkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Abstract Message Definition</strong></span>
 </p>
@@ -5772,7 +5772,7 @@ TkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Segment</strong></span>
 </p>
@@ -5793,7 +5793,7 @@ TkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Field</strong></span>
 </p>
@@ -5822,7 +5822,7 @@ TkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Data Type</strong></span>
 </p>
@@ -5851,7 +5851,7 @@ TkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <span style="font-size:14px; font-family:Arial,Helvetica,sans-serif"><strong>Tables</strong></span>
 </p>

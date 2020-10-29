@@ -1100,32 +1100,32 @@ QAIkEGICNOZC3HhUnQRIgARIgARIgAT+H1WZuV8CccRBAAAAAElFTkSuQmCC
 <p></p><p>Implementations (C) and (D) are conformant to profiles (E), (F), and (B) if the software implements the requirements as stated in the specification (shown as points 1, 3, 7, and 8 in <span style="font-size:16px">Figure 9.1</span>).</p><p>Finally, implementations (C) and (D) are said to be interoperable if they can exchange information and use the exchanged information as intended (shown as point 5).</p><p>Compliance and compatibility are terms that are used to indicate relationships between profiles (that is, its documentation). Conformance is a term that is used to indicate the relationship between a profile and an implementation. Interoperability is a term that is used when discussing the relationship between implementations. <span style="font-size:16px">Table 9.1</span> summarizes these relationships and the various assessments that can be made.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 9.1: Assessment of Profile and Implementation Relationships</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Test Type</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Dimension</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Artifact</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
@@ -1135,7 +1135,7 @@ QAIkEGICNOZC3HhUnQRIgARIgARIgAT+H1WZuV8CccRBAAAAAElFTkSuQmCC
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Profile Compliance</strong>
 </p>
@@ -1170,7 +1170,7 @@ Profiles are tested against each other to determine whether one is a constraint 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Implementation Conformance</strong>
 </p>
@@ -1205,7 +1205,7 @@ Provides an assessment of how well the application fulfills the requirements spe
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Profile Compatibility</strong>
 </p>
@@ -1240,7 +1240,7 @@ Profiles are tested against each other to determine whether the pair can be used
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Implementation Interoperability</strong>
 </p>
@@ -1287,18 +1287,18 @@ Applications are tested with each other to determine whether they can successful
 <p>A standard provides the foundation for implementers and includes many options, which can lead to multiple interpretations and implementations that exhibit different behaviors depending on the options chosen by the implementers. Given the possible variations in implementation behavior, it is essential that vendors&rsquo; claims for conformance to the standard are backed by documentation that clearly describes the capabilities supported. This documentation can be articulated in varying degrees of completeness and quality. To emphasize the importance of documentation, we describe characteristics of documentation quality. Some aspects are hierarchical in nature, forming levels of quality. Other aspects are necessary to ensure completeness. <span style="font-size:16px">Table 9.2</span> presents documentation quality levels.</p><p></p>
 </p>
 
-<table class='center striped_rows table_v2web1'>
+<table class='center striped-rows table_v2web1'>
 <tbody>
 <caption>Table 9.2: Documentation Quality Hierarchy</caption>
 <tr class='tr_v2web'>
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Documentation Claim</strong>
 </p>
 
 </th>
 
-<th class='emphasis_header table_v2web1 th_v2web' colspan='1'>
+<th class='emphasis-header table_v2web1 th_v2web' colspan='1'>
 <p class='p_v2web'>
 <strong>Description</strong>
 </p>
@@ -1308,7 +1308,7 @@ Applications are tested with each other to determine whether they can successful
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Undocumented Unsubstantiated Claim</strong>
 </p>
@@ -1325,7 +1325,7 @@ A developer of an implementation claims conformance to a given standard; however
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Documented Unsubstantiated Claim</strong>
 </p>
@@ -1346,7 +1346,7 @@ Note: For example, the provider of the documentation (e.g., a vendor) may copy p
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Documented Standard Unsubstantiated Claim</strong>
 </p>
@@ -1363,7 +1363,7 @@ The documentation fulfills the requirements of the conformance profiling mechani
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Documented Standard Machine Processable Unsubstantiated Claim</strong>
 </p>
@@ -1380,7 +1380,7 @@ The documentation is machine process-able, such as HL7 v2.x XML message profile 
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Documented Standard (Implementable Profile Level) Machine Process-able Unsubstantiated Claim</strong>
 </p>
@@ -1397,7 +1397,7 @@ The documentation is a message profile fulfilling the criteria for implementable
 </tr>
 
 <tr class='tr_v2web'>
-<td class='emphasis_column table_v2web1' colspan='1'>
+<td class='emphasis-column table_v2web1' colspan='1'>
 <p class='p_v2web'>
 <strong>Substantiated Claim</strong>
 </p>

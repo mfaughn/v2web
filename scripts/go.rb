@@ -7,10 +7,10 @@
 # end
 t = Time.now
 # load File.join(__dir__, 'parse_value_sets.rb')
-load File.join(__dir__, 'parse_datatypes.rb')
-load File.join(__dir__, 'parse_segments.rb')
-load File.join(__dir__, 'parse_msgs.rb')
-load File.join(__dir__, 'parse_acs.rb')
+load File.join(__dir__, 'parse/parse_datatypes.rb')
+load File.join(__dir__, 'parse/parse_segments.rb')
+load File.join(__dir__, 'parse/parse_msgs.rb')
+# load File.join(__dir__, 'parse/parse_acs.rb')
 # load File.join(__dir__, 'parse_text.rb')
 
 HL7::Component.all.each do |c|
@@ -32,12 +32,12 @@ end
 puts "That took #{Time.now - t} seconds"
 
 
-comps = HL7::Component.all;
-typeless = comps.select { |comp| comp.type.nil? };
-owners = {}
-typeless.each do |comp|
-  owners[comp.owner.code] ||= [comp.owner.components_count]
-  owners[comp.owner.code] << comp
-end;
-pp owners
+# comps = HL7::Component.all;
+# typeless = comps.select { |comp| comp.type.nil? };
+# owners = {}
+# typeless.each do |comp|
+#   owners[comp.owner.code] ||= [comp.owner.components_count]
+#   owners[comp.owner.code] << comp
+# end;
+# pp owners
   
