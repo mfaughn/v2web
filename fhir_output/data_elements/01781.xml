@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01781"/>
-  <name value="Subject-specific Consent Text"/>
-  <itemNumber value="1781"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/formatted-text-data"/>
-</DataElementDefinition>

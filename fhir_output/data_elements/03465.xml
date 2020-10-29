@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/03465"/>
-  <name value="Commercial Carrier Name and Address Required"/>
-  <itemNumber value="3465"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
-</DataElementDefinition>

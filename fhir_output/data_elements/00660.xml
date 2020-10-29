@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00660"/>
-  <name value="File-Level Event Code"/>
-  <itemNumber value="660"/>
-  <minLength value="3"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
-</DataElementDefinition>

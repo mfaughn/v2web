@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00201"/>
-  <name value="Next of Kin / Associated Parties Employee Number"/>
-  <itemNumber value="201"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/extended-composite-id-with-check-digit"/>
-</DataElementDefinition>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/02183"/><name value="Person"/>s Location'/&gt;
-  
-  <itemNumber value="2183"/><mayTruncate value="not applicable"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/person-location"/></DataElementDefinition>

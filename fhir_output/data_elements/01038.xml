@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01038"/>
-  <name value="Sponsor Patient ID"/>
-  <itemNumber value="1038"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/extended-composite-id-with-check-digit"/>
-</DataElementDefinition>

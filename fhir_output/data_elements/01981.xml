@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01981"/>
-  <name value="Days without Billing"/>
-  <itemNumber value="1981"/>
-  <confLength value="5"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
-</DataElementDefinition>

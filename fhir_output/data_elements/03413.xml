@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/03413"/>
-  <name value="Authorization Referral Type"/>
-  <itemNumber value="3413"/>
-  <minLength value="250"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
-</DataElementDefinition>

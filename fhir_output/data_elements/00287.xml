@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/00287"/><name value="Manufacturer"/>s Catalog'/&gt;
-  
-  <itemNumber value="287"/><confLength value="16"/><mayTruncate value="false"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/></DataElementDefinition>

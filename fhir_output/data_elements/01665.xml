@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01665"/>
-  <name value="Scheduled Station AE Title"/>
-  <itemNumber value="1665"/>
-  <confLength value="16"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

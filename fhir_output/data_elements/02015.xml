@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/02015"/>
-  <name value="Provider Product/Service Line Item Number Cross Reference"/>
-  <itemNumber value="2015"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/entity-identifier"/>
-</DataElementDefinition>

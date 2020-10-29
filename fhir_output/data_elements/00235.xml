@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00235"/>
-  <name value="Charge Type"/>
-  <itemNumber value="235"/>
-  <minLength value="2"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
-</DataElementDefinition>

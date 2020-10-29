@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01545"/>
-  <name value="Admission Level of Care Code"/>
-  <itemNumber value="1545"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
-</DataElementDefinition>

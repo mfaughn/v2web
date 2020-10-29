@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00667"/>
-  <name value="Primary Key Value - MFE"/>
-  <itemNumber value="667"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/DATA_TYPE"/>
-</DataElementDefinition>

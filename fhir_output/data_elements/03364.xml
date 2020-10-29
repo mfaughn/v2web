@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/03364"/>
-  <name value="Aphaeresis Type Machine"/>
-  <itemNumber value="3364"/>
-  <confLength value="75"/>
-  <mayTruncate value="true"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

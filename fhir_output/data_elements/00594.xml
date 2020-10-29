@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00594"/>
-  <name value="Preferred Report Name for the Observation"/>
-  <itemNumber value="594"/>
-  <confLength value="30"/>
-  <mayTruncate value="true"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

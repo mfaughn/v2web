@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01763"/>
-  <name value="Grouped Specimen Count"/>
-  <itemNumber value="1763"/>
-  <confLength value="6"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
-</DataElementDefinition>

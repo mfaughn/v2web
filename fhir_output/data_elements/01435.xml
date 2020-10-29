@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01435"/>
-  <name value="User Parameters"/>
-  <itemNumber value="1435"/>
-  <confLength value="256"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/DATA_TYPE"/>
-</DataElementDefinition>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/03488"/>
-  <name value="Equipment State Indicator Type Code"/>
-  <itemNumber value="3488"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-exceptions"/>
-</DataElementDefinition>

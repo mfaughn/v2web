@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01963"/>
-  <name value="Product/Service Code Description"/>
-  <itemNumber value="1963"/>
-  <confLength value="80"/>
-  <mayTruncate value="true"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

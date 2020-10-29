@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00843"/>
-  <name value="Anticipated Problem Resolution Date/Time"/>
-  <itemNumber value="843"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
-</DataElementDefinition>

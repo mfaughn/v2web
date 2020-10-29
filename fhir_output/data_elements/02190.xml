@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/02190"/>
-  <name value="Subject to Expiration Indicator"/>
-  <itemNumber value="2190"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-with-no-exceptions"/>
-</DataElementDefinition>

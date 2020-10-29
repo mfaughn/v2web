@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00176"/>
-  <name value="Current Patient Balance"/>
-  <itemNumber value="176"/>
-  <confLength value="12"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
-</DataElementDefinition>

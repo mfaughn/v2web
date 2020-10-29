@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00824"/>
-  <name value="Expected Goal Achieve Date/Time"/>
-  <itemNumber value="824"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
-</DataElementDefinition>

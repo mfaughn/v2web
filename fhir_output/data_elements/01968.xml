@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01968"/>
-  <name value="Number of Items per Unit"/>
-  <itemNumber value="1968"/>
-  <confLength value="10"/>
-  <mayTruncate value="true"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/numeric"/>
-</DataElementDefinition>

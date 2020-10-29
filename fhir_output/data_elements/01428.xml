@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/01428"/>
-  <name value="Substance Container Identifier"/>
-  <itemNumber value="1428"/>
-  <confLength value="200"/>
-  <mayTruncate value="false"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

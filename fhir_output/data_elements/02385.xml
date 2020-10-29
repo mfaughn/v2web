@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/02385"/>
-  <name value="Organization"/>
-  <itemNumber value="2385"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/extended-composite-name-and-identification-number-for-organizations"/>
-</DataElementDefinition>

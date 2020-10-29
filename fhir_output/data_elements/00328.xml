@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00328"/>
-  <name value="D/T of Most Recent Refill or Dose Dispensed"/>
-  <itemNumber value="328"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/date-time"/>
-</DataElementDefinition>

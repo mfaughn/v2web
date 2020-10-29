@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00650"/>
-  <name value="Normal Collection Volume"/>
-  <itemNumber value="650"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/composite-quantity-with-units"/>
-</DataElementDefinition>

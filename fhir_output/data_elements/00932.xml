@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00932"/>
-  <name value="Document Storage Status"/>
-  <itemNumber value="932"/>
-  <minLength value="2"/>
-  <mayTruncate value="not applicable"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/coded-value-for-hl7-defined-tables"/>
-</DataElementDefinition>

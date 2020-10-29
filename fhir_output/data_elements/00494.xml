@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition>
-  <url value="http://hl7.org/v2plus/DataElementDefinition/00494"/>
-  <name value="Special Coverage Approval Title"/>
-  <itemNumber value="494"/>
-  <confLength value="30"/>
-  <mayTruncate value="true"/>
-  <dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/string-data"/>
-</DataElementDefinition>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DataElementDefinition><url value="http://hl7.org/v2plus/DataElementDefinition/00305"/><name value="Ordering Provider"/>s DEA Number'/&gt;
-  
-  <itemNumber value="305"/><mayTruncate value="not applicable"/><dataType value="https://www.hl7.org/v2plus/DataTypeDefinition/FIXME!"/></DataElementDefinition>
