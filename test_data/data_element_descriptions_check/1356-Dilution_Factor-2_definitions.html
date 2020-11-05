@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #1356 - Dilution Factor</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 13 SAC.29 ----------</h4><p>Components: &lt;Comparator (ST)&gt; ^ &lt;Num1 (NM)&gt; ^ &lt;Separator/Suffix (ST)&gt; ^ &lt;Num2 (NM)&gt;</p>
+<p>Definition: This field identifies the factor of dilution already performed on the specimen. The equipment entity that changes the dilution is responsible for sending this information to other equipment. If the endogenous content of the test (analyte) in the diluent is required for the calculation of the test (analyte) concentration, then the test (analyte) specific values should be exchanged between the systems via Master Files or other means.</p>
+<p>Examples of use:</p>
+<p>|^1^:^5| - means dilution 1 to 5, i.e., 1 part sample, 4 parts diluent</p>
+<p>|^1^+| - sample is diluted, but the factor is unknown</p>
+<p>|^1^:^1| - not diluted sample</p>
+<p>|| - dilution not changed</p><br><h4>          ---------- 2nd Description: Ch. 17 SCD.35 ----------</h4><p>Components: &lt;Comparator (ST)&gt; ^ &lt;Num1 (NM)&gt; ^ &lt;Separator/Suffix (ST)&gt; ^ &lt;Num2 (NM)&gt;</p>
+<p>Definition: The dilution ratio of peracetic acid to water.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="unchanged"><span>&lt;p&gt;Components: &amp;lt;Comparator (ST)&amp;gt; ^ &amp;lt;Num1 (NM)&amp;gt; ^ &amp;lt;Separator/Suffix (ST)&amp;gt; ^ &amp;lt;Num2 (NM)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>is field identifies the factor of</strong> dilution <strong>already performed on the specimen. The equipment entity that changes the dilution is responsible for sending this information to other equipment. If the endogenous content of the test (analyte) in the diluent is required for the calculation of the test (analyte) concentration, then the test (analyte) specific values should be exchanged between the systems via Master Files or other means.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Examples of use:&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;|^1^:^5| - means dilution 1 to 5, i.e., 1 part sample, 4 parts diluent&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;|^1^+| - sample is diluted, but the factor is unknown&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;|^1^:^1| - not diluted sample&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;|| - dilution not changed</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>e</strong> dilution <strong>ratio of peracetic acid to water.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

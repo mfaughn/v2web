@@ -1,18 +1,19 @@
 module V2Plus
   class SegmentDefinition  
     
-    def self.make(data)
+    def self.make(nokogiri_doc)
       puts Rainbow("Warning! #{self.class}#make called from #{caller.first}").red unless caller.first =~ /make_and_cache/
       this = new
-      this.name        = data['name'].first['value']
-      this.code        = data['abbreviation'].first['value']
-      this.withdrawn   = data['withdrawn'].first['value']
-      this.description = data['description']
-      this.url         = data['url'].first['value']
-      this.fields      = data['field']&.map { |c| V2Plus::Field.make(c) } # fields are contained and are persisted with the SegmentDefinition so there is no need to cache them
+      nokogiri = nokogiri_doc.css('SegmentDefinition')
+      this.name        = nokogiri.css('name').attribute('value')&.value
+      this.code        = nokogiri.css('abbreviation').attribute('value')&.value
+      this.withdrawn   = nokogiri.css('withdrawn').attribute('value')&.value
+      this.description  = Gui_Builder_Profile::RichText.create(:content => nokogiri.css('description div')&.to_html) # gets the entire div
+      this.url         = nokogiri.css('url').attribute('value')&.value
+      this.fields      = nokogiri.css('field').map { |c| V2Plus::Field.make(c) } # fields are contained and are persisted with the SegmentDefinition so there is no need to cache them
       this
     end
-    
+        
     def to_web_pub
       # FIXME
       locals = {

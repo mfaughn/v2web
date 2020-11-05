@@ -1,10 +1,13 @@
-require_relative 'parse_common'
+# require_relative 'parse_common'
+load File.expand_path(File.join(__dir__, 'parse_common.rb'))
 
 HL7::SegmentDefinition.delete
 HL7::DataElement.delete
 HL7::Field.delete
 
-sources = ['V29_CH02_Control'] + HL7Parse.data_sources
+# HL7Parse.name_mismatchs.clear
+sources = HL7Parse.data_sources('2')
+# sources = HL7Parse.data_sources
 sources.each do |source|
   next if source == nil
   puts Rainbow('#####################################').orange
@@ -14,8 +17,10 @@ sources.each do |source|
   extractor = V2Web::DocXtractor.new(chapter)
   docx_path = HL7Parse.docx_path(source)
   html_path = HL7Parse.html_path(source)
-  stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
-  puts stderr if stderr && !stderr =~ /WARNING/i
+  unless File.exist?(html_path)
+    stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
+    puts stderr if stderr && !stderr =~ /WARNING/i
+  end
   doc = Docx::Document.open(docx_path)
   extractor.extract_segments_1(doc.doc, html_path)
 end
@@ -44,3 +49,5 @@ HL7::Field.all do |field|
     end
   end
 end
+
+# puts HL7Parse.name_mismatchs

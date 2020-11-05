@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #14 - Continuation Pointer</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 2 DSC.1 ----------</h4><p>Definition: This field contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete indicator or not present, then there is no more data to fulfill any future continuation requests. For use with continuations of unsolicited messages, see chapter 5 and section <em>2.10.2</em>, "<em>Continuation messages and segments</em>." Note that continuation protocols work with both display- and record-oriented messages.</p><br><h4>          ---------- 2nd Description: Ch. 2 MSH.14 ----------</h4><p>Definition: This field is used to define continuations in application-specific ways.</p>
+<p>Only the sender of a fragmented message values this field.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete indicator or not present, then there is no more data to fulfill any futur</strong>e continuation<strong> requests. For use with continu</strong>ation<strong>s of unsolicited messages, see chapter 5 and section &lt;em&gt;2.10.2&lt;/em&gt;, &quot;&lt;em&gt;Continuation messages and se</strong>gment<strong>s&lt;/em&gt;.&quot; Note that continuation protocols work with both display- and record-oriented messages</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>is used to defin</strong>e continuation<strong>s in applic</strong>ation<strong>-specific ways.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;Only the sender of a fra</strong>gment<strong>ed message values this field</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

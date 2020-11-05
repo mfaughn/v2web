@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #133 - Assigned Patient Location</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 3 PV1.3 ----------</h4><p>Components: &lt;Point of Care (HD)&gt; ^ &lt;Room (HD)&gt; ^ &lt;Bed (HD)&gt; ^ &lt;Facility (HD)&gt; ^ &lt;Location Status (IS)&gt; ^ &lt;Person Location Type (IS)&gt; ^ &lt;Building (HD)&gt; ^ &lt;Floor (HD)&gt; ^ &lt;Location Description (ST)&gt; ^ &lt;Comprehensive Location Identifier (EI)&gt; ^ &lt;Assigning Authority for Location (HD)&gt;</p>
+<p>Subcomponents for Point of Care (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Room (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Bed (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Building (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Floor (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Comprehensive Location Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Authority for Location (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains the patient's initial assigned location or the location to which the patient is being moved. The first component may be the nursing station for inpatient locations, or clinic or department, for locations other than inpatient. For canceling a transaction or discharging a patient, the current location (after the cancellation event or before the discharge event) should be in this field. If a value exists in the fifth component (location status), it supersedes the value in <em>PV1-40 - Bed Status</em>.</p><br><h4>          ---------- 2nd Description: Ch. 6 FT1.16 ----------</h4><p>Components: &lt;Point of Care (HD)&gt; ^ &lt;Room (HD)&gt; ^ &lt;Bed (HD)&gt; ^ &lt;Facility (HD)&gt; ^ &lt;Location Status (IS)&gt; ^ &lt;Person Location Type (IS)&gt; ^ &lt;Building (HD)&gt; ^ &lt;Floor (HD)&gt; ^ &lt;Location Description (ST)&gt; ^ &lt;Comprehensive Location Identifier (EI)&gt; ^ &lt;Assigning Authority for Location (HD)&gt;</p>
+<p>Subcomponents for Point of Care (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Room (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Bed (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Building (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Floor (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Comprehensive Location Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Assigning Authority for Location (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains the current patient location. This can be the location of the patient when the charge item was ordered or when the charged service was rendered. For the current assigned patient location, use <em>PV1-3 - Assigned Patient Location.</em></p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="unchanged"><span>&lt;p&gt;Components: &amp;lt;Point of Care (HD)&amp;gt; ^ &amp;lt;Room (HD)&amp;gt; ^ &amp;lt;Bed (HD)&amp;gt; ^ &amp;lt;Facility (HD)&amp;gt; ^ &amp;lt;Location Status (IS)&amp;gt; ^ &amp;lt;Person Location Type (IS)&amp;gt; ^ &amp;lt;Building (HD)&amp;gt; ^ &amp;lt;Floor (HD)&amp;gt; ^ &amp;lt;Location Description (ST)&amp;gt; ^ &amp;lt;Comprehensive Location Identifier (EI)&amp;gt; ^ &amp;lt;Assigning Authority for Location (HD)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Point of Care (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Room (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Bed (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Facility (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Building (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Floor (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Comprehensive Location Identifier (EI): &amp;lt;Entity Identifier (ST)&amp;gt; &amp;amp; &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;Subcomponents for Assigning Authority for Location (HD): &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</span></li>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>patient&#39;s initial assigned</strong> location<strong> or</strong> the location <strong>to which</strong> the patient <strong>is being moved. The first component may be</strong> the <strong>nursing station for inpatient locations, or clinic or department, for locations other than inpatient. For canceling a transaction or dis</strong>charg<strong>ing a patient, the current location (after the cancellation event or before</strong> the <strong>discharge event) should be in this field. If a value exists in the fifth compon</strong>ent <strong>(</strong>location<strong> status), it supersedes the value in</strong> &lt;em&gt;PV1-<strong>40 - Bed Status</strong>&lt;/em&gt;<strong>.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>current patient</strong> location<strong>. This can be</strong> the location <strong>of</strong> the patient <strong>when</strong> the <strong>charge item was ordered or when the </strong>charg<strong>ed service was rendered. For</strong> the <strong>current assigned pati</strong>ent location<strong>, use</strong> &lt;em&gt;PV1-<strong>3 - Assigned Patient Location.</strong>&lt;/em&gt;&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

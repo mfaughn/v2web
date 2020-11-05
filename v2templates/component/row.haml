@@ -1,6 +1,9 @@
 %tr.datatype_component
   %td
-    %img{:src => "images/tbl_vjoin_end.png"}
+    - if last
+      %img{:src => "images/tbl_vjoin_end.png"}
+    - else
+      %img{:src => "images/tbl_vjoin.png"}
     =sequence_number
   %td
     =name

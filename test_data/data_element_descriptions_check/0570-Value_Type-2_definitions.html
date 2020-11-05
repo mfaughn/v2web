@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #570 - Value Type</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 7 OBX.2 ----------</h4><p>Definition: This field defines the data type of OBX-5, Observation Value. If OBX-5, Observation Value, is valued then OBX-2, Value Type, SHALL be valued. When OBX-5, Observation Value, is not valued, OBX-2 Value Type MAY be valued to represent a data type used to value the observation expressed in OBX-3, Observation Identifier. See <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmcmail.mayo.edu%2Fowa%2FUrlBlockedError.aspx&amp;data=02%7C01%7CHans.Buitendijk%40Cerner.com%7C94563515a95347b47e2a08d56ca7de79%7C0ffca1dc22de4c19b786f0dbf79a3c2e%7C0%7C0%7C636534390612534684&amp;sdata=98cL%2B7xxtWw9ruy81%2FrxSZUwPIHr2uRIsEX2zsmJT%2BI%3D&amp;reserved=0"><em>HL7 Table 0125 &#x2013; Value Types</em></a> for valid values.</p>
+<blockquote>
+<p>Condition: This field is required if OBX-5, Observation Value, is valued.</p>
+</blockquote>
+<p>For example, if the value is 'CWE' then the result in OBX-5 must be a coded entry or text or both. As of v 2.7, the ST data type may not be used to transmit data that can be more precisely transmitted using other data types, e.g. SN when comparative symbols are needed.</p>
+<p>The RP value (reference pointer) must be used if the OBX-5 contains a pointer to the data e.g., a URL of an image. The receiving system can use this reference pointer whenever it needs access to the actual data through other interface standards, e.g., DICOM, or through appropriate data base servers.</p>
+<p>The structured numeric (SN) data type provides for reporting ranges (e.g., 3-5 or 10-20), titres (e.g., 1:10), and out-of-range indicators (e.g., &gt;50) in a structured and computer-interpretable way.</p>
+<p>We allow the FT data type in the OBX segment, but its use is discouraged. Formatted text usually implies a meaningful structure, e.g., a list of three independent diagnoses reported on different lines. But ideally, the structure in three independent diagnostic statements would be reported as three separate OBX segments.</p>
+<p>TX should <strong>not</strong> be used except to send large amounts of text. In the TX data type, the repeat delimiter can only be used to identify paragraph breaks. Use ST to send short, and possibly encodable, text strings.</p>
+<p>CDA documents are to be exchanged in the OBX segment in any message that can exchange documents (such as MDM or ORU). Within the OBX segment, the MIME package is encoded as an encapsulated (ED) data type.</p><br><h4>          ---------- 2nd Description: Ch. 8 OM3.7 ----------</h4><p>Definition: This field contains the allowed data type for a single categorical observation (code A or C in <em>OM1-18 - Nature of Observation</em>). Refer to <a href="V29_CH02C_Tables.docx#HL70125">HL7 Table 0125 &#x2013; Value Type</a> in Chapter 2C, Code Tables, for valid values.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>define</strong>s the data type <strong>of OBX-5, Observation Value. If OBX-5, O</strong>bservation <strong>Value, is valued then OBX-2, Value Type, SHALL be valued. When OBX-5,</strong> Observation<strong> Value, is not valued, OBX-2</strong> Value Type<strong> MAY be valued to represent a data type used to value the observation expressed in OBX-3, Observation Identifier. See &lt;a href=&quot;https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmcmail.mayo.edu%2Fowa%2FUrlBlockedError.aspx&amp;amp;data=02%7C01%7CHans.Buitendijk%40Cerner.com%7C94563515a95347b47e2a08d56ca7de79%7C0ffca1dc22de4c19b786f0dbf79a3c2e%7C0%7C0%7C636534390612534684&amp;amp;sdata=98cL%2B7xxtWw9ruy81%2FrxSZUwPIHr2uRIsEX2zsmJT%2BI%3D&amp;amp;reserved=0&quot;&gt;&lt;em&gt;HL7 Table 0125 &amp;#x2013; Value Types&lt;/em&gt;&lt;/a&gt; for valid values.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;blockquote&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition: This field is required if OBX-5, Observation Value, is valued.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/blockquote&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;For example, if the value is &#39;CWE&#39; then the result in OBX-5 must be a coded entry or text or both. As of v 2.7, the ST data type may not be used to transmit data that can be more precisely transmitted using other data types, e.g. SN when comparative symbols are needed.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;The RP value (reference pointer) must be used if the OBX-5 contains a pointer to the data e.g., a URL of an image. The receiving system can use this reference pointer whenever it needs access to the actual data through other interface standards, e.g., DICOM, or through appropriate data base servers.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;The structured numeric (SN) data type provides for reporting ranges (e.g., 3-5 or 10-20), titres (e.g., 1:10), and out-of-range indicators (e.g., &amp;gt;50) in a structured and computer-interpretable way.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;We allow the FT data type in the OBX segment, but its use is discouraged. Formatted text usually implies a meaningful structure, e.g., a list of three independent diagnoses reported on different lines. But ideally, the structure in three independent diagnostic statements would be reported as three separate OBX segments.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;TX should &lt;strong&gt;not&lt;/strong&gt; be used except to send large amounts of text. In the TX data type, the repeat delimiter can only be used to identify paragraph breaks. Use ST to send short, and possibly encodable, text strings.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;CDA documents are to be exchanged in the OBX segment in any message that can exchange documents (such as MDM or ORU). Within the OBX segment, the MIME package is encoded as an encapsulated (ED) data type.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contain</strong>s the <strong>allowed </strong>data type <strong>for a single categorical o</strong>bservation <strong>(code A or C in &lt;em&gt;OM1-18 - Nature of</strong> Observation<strong>&lt;/em&gt;). Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70125&quot;&gt;HL7 Table 0125 &amp;#x2013;</strong> Value Type<strong>&lt;/a&gt; in Chapter 2C, Code Tables, for valid values.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,6 +1,7 @@
 require 'active_support'
 require 'appellation'
 require 'fileutils'
+require_relative 'scrivener_query'
 
 module Scrivener
   def self.included(base)
@@ -67,19 +68,21 @@ module Scrivener
         puts caller
         raise
         return nil
-      
       end
       f = File.open(path)
       begin
-        hash = XmlSimple.xml_in(f)
+        # hash = XmlSimple.xml_in(f)
+        noko = Nokogiri::XML(f)
       rescue
         puts "#{path} failed"
         puts f.inspect
         puts f.read
+        f.close
         raise
       end
-      f.close      
-      obj = make(hash)
+      f.close
+      # obj = make(hash)
+      obj = make(noko)
       obj.cache
       obj
     end
@@ -92,19 +95,32 @@ module Scrivener
       Dir.glob(File.join(persistance_dir, '*' + Bartelby::PERSISTANCE_FILE_EXT)).map { |fn| fn.split('/').last.sub(Bartelby::PERSISTANCE_FILE_EXT, '') }
     end
   
-    def all(*args, &block)
-      if args.empty?
-        # first get the cached objects
-        objs = cached
+    def where(opts = {})
+      # FIXME
+      query = Scrivener::Query.new(self)
+      query.where(opts)
+    end
       
-        # next create objects from persistance for all objects that weren't cached
-        missing_obj_identifiers = persisted_identfiers - Bartelby.identifiers(self)
-        # puts missing_obj_identifiers.sort        
-        missing_obj_identifiers.each { |identifier| objs << make_and_cache(identifier) }
-        objs.compact!
-        objs.each { |obj| block.call(obj) } if block
-        objs
-      end
+  
+    def all(&block)
+      # first get the cached objects
+      objs = cached
+    
+      # next create objects from persistance for all objects that weren't cached
+      missing_obj_identifiers = persisted_identfiers - Bartelby.identifiers(self)
+      # puts missing_obj_identifiers.sort
+      missing_obj_identifiers.each { |identifier| objs << make_and_cache(identifier) }
+      objs.compact!
+      objs.each { |obj| block.call(obj) } if block
+      objs
+    end
+    
+    # This does NOT work like any #first method that a SQL ORM would give you.  It will give you the first obj in the cache or, if the cache is empty, the first obj pulled from file.  You are not guaranteed to get the same object every time even if the persisted objects don't change.
+    def first(&block)
+      # first get the cached objects
+      obj = cached.first
+      return obj if obj
+      make_and_cache(persisted_identfiers.first)
     end
   
     def file_key

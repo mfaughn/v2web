@@ -58,31 +58,6 @@ module V2Web
       html
     end
     
-    def find_inner_definitions(html, type = nil)
-      defns = {}
-      current = nil
-      html.each do |node|
-        return defns if ['h1', 'h2', 'h3'].include?(node.name) # in case we ran into the next section
-        if node.name == 'h4'
-          t = node.text.strip
-          # HACK because of stupid hidden crap in .docx
-          next if t =~ /\w{3}\s+[F|f]ield [D|d]efinitions?/
-          unless t.empty?
-            current = (t.slice(/.+(?=\()/)&.strip) || t
-            current.gsub!(/^[A-Z0-9]+[-]\d+/, '')
-            current.delete!("’'")
-            current.strip!
-            current = current.strip.gsub(/\d{5}$/, '').strip if type == :segment
-            defns[current] = []
-          end
-        else
-          next unless current
-          defns[current] << node unless node.name == 'text' || node.text.strip.empty?
-        end
-      end
-      defns
-    end
-    
     def create_message_definition(name)
       code, event_code, structure = name.slice(/\w{3}\^\w+\^\w{3}(_\w{3})?/).split('^')
       raise name unless code && event_code && structure

@@ -11,8 +11,8 @@ sources.each do |source|
   extractor = V2Web::DocXtractor.new
   docx_path = HL7Parse.docx_path(source)
   html_path = HL7Parse.html_path(source)
-  stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
-  puts stderr if stderr && !stderr =~ /WARNING/i  
+  # stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
+  # puts stderr if stderr && !stderr =~ /WARNING/i
   # extractor.extract_rels(path)
   # extractor.extract_headers(path)
   # extractor.extract_footers(path)

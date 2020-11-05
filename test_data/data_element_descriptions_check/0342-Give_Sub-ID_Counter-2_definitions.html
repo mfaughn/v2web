@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #342 - Give Sub-ID Counter</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 4A RXG.1 ----------</h4><p>Definition: Use if this RXG segment carries information about a single administration. This field must contain a unique number for the placer order number. This field along with the placer order number provides a unique reference to the specific scheduled give date/time transmitted by the pharmacy/treatment supplier for this order.</p>
+<p>If the RXG segment carries information about multiple administrations, this field's value is zero (0), since in this case a one-to-one matching with the RXA segment is ambiguous.</p><br><h4>          ---------- 2nd Description: Ch. 4A RXA.1 ----------</h4><p>Definition: Use this field if matching this RXA segment to its corresponding RXG segment. If the two applications are not matching RXG and RXA segments, this field's value is zero (0).</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Use <strong>if </strong>this <strong>RXG segment carries information about a single administration. T</strong>his <strong>field must contain a unique number for the placer order number. This field along with the placer order number provides a unique reference to the specific scheduled give date/time transmitted by</strong> the <strong>pharmacy/treatment su</strong>ppli<strong>er for this order.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;If the RXG segment carries information about multiple administration</strong>s, this field&#39;s value is zero (0)<strong>, since in this case a one-to-one matching with the RXA segment is ambiguous</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Use this <strong>field if matching t</strong>his <strong>RXA segment to its corresponding RXG segment. If</strong> the <strong>two a</strong>ppli<strong>cations are not matching RXG and RXA segment</strong>s, this field&#39;s value is zero (0).&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

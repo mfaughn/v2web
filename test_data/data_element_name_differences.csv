@@ -1,0 +1,148 @@
+Chapter,Field,ELEMENT NAME,Definition Title
+3,PID-6,Mother's Maiden Name,Mothers Maiden Name
+3,PID-20,Driver's License Number - Patient,Drivers License Number - Patient
+3,PID-21,Mother's Identifier,Mothers Identifier
+3,NK1-30,Contact Person's Name,Contact Persons Name
+3,NK1-31,Contact Person's Telephone Number,Contact Persons Telephone Number
+3,NK1-32,Contact Person's Address,Contact Persons Address
+3,NK1-33,Next of Kin/Associated Party's Identifiers,Next of Kin/Associated Partys Identifiers
+3,NK1-41,Contact Person's Telecommunication Information,Contact Persons Telecommunication Information
+4,ORC-13,Enterer's Location,Enterers Location
+4,ORC-27,Filler's Expected Availability Date/Time,Fillers Expected Availability Date/Time
+4,OBR-1,Set ID – OBR,Set ID - OBR
+4,OBR-7,Observation Date/Time #,Observation Date/Time
+4,OBR-8,Observation End Date/Time #,Observation End Date/Time
+4,OBR-9,Collection Volume *,Collection Volume
+4,OBR-10,Collector Identifier *,Collector Identifier
+4,OBR-11,Specimen Action Code *,Specimen Action Code
+4,OBR-14,Specimen Received Date/Time *,Specimen Received Date/Time
+4,OBR-20,Filler Field 1 +,Filler Field 1
+4,OBR-21,Filler Field 2 +,Filler Field 2
+4,OBR-22,Results Rpt/Status Chng – Date/Time +,Results Rpt/Status Chng - Date/Time
+4,OBR-23,Charge to Practice +,Charge to Practice
+4,OBR-25,Result Status +,Result Status
+4,OBR-26,Parent Result +,Parent Result
+4,OBR-29,Parent Results Observation Identifier,Parent Result Observation Identifier
+4,OBR-32,Principal Result Interpreter +,Principal Result Interpreter
+4,OBR-33,Assistant Result Interpreter +,Assistant Result Interpreter
+4,OBR-34,Technician +,Technician
+4,OBR-35,Transcriptionist +,Transcriptionist
+4,OBR-36,Scheduled Date/Time +,Scheduled Date/Time
+4,OBR-37,Number of Sample Containers *,Number of Sample Containers
+4,OBR-38,Transport Logistics of Collected Sample *,Transport Logistics of Collected Sample
+4,OBR-39,Collector's Comment *,Collectors Comment
+4,RQ1-3,Manufacturer's Catalog,Manufacturers Catalog
+4,BPO-1,Set ID – BPO,Set ID - BPO
+4,BPX-1,Set ID – BPX,Set ID - BPX
+4,BTX-1,Set ID – BTX,Set ID - BTX
+4,DON-13,Process Interruption Reason,- Process Interruption Reason
+4,BUI-1,Set ID – BUI,Set ID
+4A,RXO-6,Provider's Pharmacy/Treatment Instructions,Providers Pharmacy/Treatment Instructions
+4A,RXO-7,Provider's Administration Instructions,Providers Administration Instructions
+4A,RXO-14,Ordering Provider's DEA Number,Ordering Providers DEA Number
+4A,RXO-15,Pharmacist/Treatment Supplier's Verifier ID,Pharmacist/Treatment Suppliers Verifier ID
+4A,RXO-17,Requested Give Per,Requested Give Per (Time Unit)
+4A,RXE-22,Give Per,Give Per (Time Unit)
+4A,RXA-12,Administered Per,Administered Per (Time Unit)
+4A,RXA-21,Action Code – RXA,Action Code - RXA
+4A,RXA-27,Administer-at,Administered-At
+4A,RXA-29,Administered Tag Identifier,Administration Tag Identifier
+4A,RXV-1,Set ID - RXV,Set ID
+4A,CDO-1,Set ID – CDO,Set ID - CDO
+5,DSP-1,Set ID – DSP,Set ID - DSP
+6,FT1-44,DME Certificate of Medical Necessity Transmission Code,DME (Durable Medical Equipment) Certificate of Medical Necessity Transmission Code
+6,FT1-45,DME Certification Type Code,DME Certification Type
+6,FT1-46,DME Duration Value,DME Duration
+6,FT1-53,DME Frequency Code,DME Frequency
+6,FT1-55,DME Condition Indicator Code,DME Condition Indicator
+6,DG1-26,Present On Admission,Present On Admission (POA) Indicator
+6,GT1-6,Guarantor Ph Num – Home,Guarantor Ph Num - Home
+6,GT1-7,Guarantor Ph Num – Business,Guarantor Ph Num ‑ Business
+6,GT1-51,Guarantor Employer's Organization Name,Guarantor Employers Organization Name
+6,IN1-10,Insured's Group Emp ID,Insureds Group Emp ID
+6,IN1-11,Insured's Group Emp Name,Insureds Group Emp Name
+6,IN1-17,Insured's Relationship To Patient,Insureds Relationship to Patient
+6,IN1-18,Insured's Date Of Birth,Insureds Date of Birth
+6,IN1-19,Insured's Address,Insureds Address
+6,IN1-28,Pre-Admit Cert,Pre‑admit Cert (PAC)
+6,IN1-42,Insured's Employment Status,Insureds Employment Status
+6,IN1-43,Insured's Administrative Sex,Insureds Administrative Sex
+6,IN1-44,Insured's Employer's Address,Insureds Employers Address
+6,IN1-49,Insured's ID Number,Insureds ID Number
+6,IN1-52,Insured's Birth Place,Insureds Birth Place
+6,IN2-1,Insured's Employee ID,Insureds Employee ID
+6,IN2-2,Insured's Social Security Number,Insureds Social Security Number
+6,IN2-3,Insured's Employer's Name and ID,Insureds Employers Name and ID
+6,IN2-44,Insured's Employment Start Date,Insureds Employment Start Date
+6,IN2-52,Insured's Contact Person's Name,Insureds Contact Persons Name
+6,IN2-53,Insured's Contact Person Phone Number,Insureds Contact Person Phone Number
+6,IN2-54,Insured's Contact Person Reason,Insureds Contact Person Reason
+6,IN2-62,Guarantor's Relationship to Insured,Guarantors Relationship to Insured
+6,IN2-63,Insured's Phone Number - Home,Insureds Phone Number - Home
+6,IN2-64,Insured's Employer Phone Number,Insureds Employer Phone Number
+6,IN2-72,Patient's Relationship to Insured,Patients Relationship to Insured
+6,UB1-9,Non Covered Days,Non-Covered Days
+6,UB2-2,Co-Insurance Days,Co-Insurance Days (9)
+6,UB2-3,Condition Code,Condition Code (24-30)
+6,UB2-4,Covered Days,Covered Days (7)
+6,UB2-5,Non-Covered Days,Non-Covered Days (8)
+6,UB2-6,Value Amount & Code,Value Amount & Code (39-41)
+6,UB2-7,Occurrence Code & Date,Occurrence Code & Date (32-35)
+6,UB2-8,Occurrence Span Code/Dates,Occurrence Span Code/Dates (36)
+6,UB2-9,Uniform Billing Locator 2,UB92 Locator 2 (state)
+6,UB2-10,Uniform Billing Locator 11,UB92 Locator 11 (state)
+6,UB2-11,Uniform Billing Locator 31,UB92 Locator 31 (national)
+6,UB2-13,Uniform Billing Locator 49,UB92 Locator 49 (national)
+6,UB2-14,Uniform Billing Locator 56,UB92 Locator 56 (state)
+6,UB2-15,Uniform Billing Locator 57,UB92 Locator 57 (national)
+6,UB2-16,Uniform Billing Locator 78,UB92 Locator 78 (state)
+7,OBX-1,Set ID – OBX,Set ID ‑ OBX
+7,OBX-15,Producer's ID,Producers ID
+7,CSR-6,Date/Time of Patient Study Registration,Date/Time Patient of Patient Study Registration
+7,PEO-22,Primary Observer's Qualification,Primary Observers Qualification
+7,PEO-25,Primary Observer's identity May Be Divulged,Primary Observers Identity May Be Divulged
+7,PAC-1,Set Id – PAC,Set Id - PAC
+8,OM1-2,Producer's Service/Test/Observation ID,Producers Service/Test/Observation ID
+8,OM1-8,Other Names,Other Names (recognized by the producer for the observation)
+8,OM1-51,Other Names,Other Names (recognized by the producer for the observation)
+8,OM1-52,Replacement Producer's Service/Test/Observation ID,Replaced Producers Service/Test Observation ID
+8,OM1-53,Prior Resuts Instructions,Prior Results Instructions
+8,OM1-56,Observation/Identifier associated with Producer’s Service/Test/Observation ID,Observation/Identifier associated with Producers Service/Test/Observation ID
+8,OM2-6,Reference,Reference (Normal) Range for Ordinal and Continuous Observations
+8,OM4-17,Preferred Specimen/Attribture Sequence ID,Preferred Specimen/Attribute Sequence
+8,OM5-2,Test/Observations Included Within an Ordered Test Battery,Tests/Observations Included Within an Ordered Test Battery
+8,OMC-5,Collection Event/Process Step,Collection Event/Process Step Limit
+8,OMC-7,Answer Required,Answer Required to Complete the Test
+8,PM1-20,Workman's Comp Indicator,Workmans Comp Indicator
+8,MCP-3,Universal Service Price Range – Low Value,Universal Service Price Range - Low Value
+8,MCP-4,Universal Service Price Range – High Value,Universal Service Price Range - High Value
+8,MCP-5,Reason for Universal Service Cost Range,Reason for Universal Service Price Range
+8,CM0-10,Contact's Telephone Number,Contacts Telephone Number
+8,CM0-11,Contact's Address,Contacts Address
+8,CM2-1,Set ID- CM2,Set ID - CM2
+9,CON-1,Set ID - CON,Set ID -CON
+9,TXA-1,Set ID- TXA,Set ID - TXA
+9,TXA-22,Authentication Person, Time Stamp,Authentication Person, Time Stamp (set)
+9,TXA-23,Distributed Copies,Distributed Copies (Code and Name of Recipients(s))
+11,RF1-17,Number of Schedule Treatments/Units,Number of Scheduled Treatments/Units
+11,AUT-20,Number of Schedule Treatments/Units,Number of Scheduled Treatments/Units
+12,PRB-20,Probability of Problem,Probability of Problem (0-1)
+12,REL-1,Set ID –REL,Set ID - REL
+13,SAC-4,Primary,Primary (Parent) Container Identifier
+13,SAC-12,Tray Type – SAC,Tray Type - SAC
+15,AFF-1,Set ID – AFF,Set ID ‑ AFF
+15,CER-1,Set ID – CER,Set ID - CER
+15,EDU-1,Set ID – EDU,Set ID - EDU
+15,LAN-1,Set ID – LAN,Set ID - LAN
+15,ORG-1,Set ID – ORG,Set ID - ORG
+15,STF-1,Primary Key Value – STF,Primary Key Value - STF
+15,STF-9,Hospital Service – STF,Hospital Service - STF
+15,STF-22,Driver's License Number – Staff,Drivers License Number - Staff
+16,PYE-1,Set ID – PYE,Set ID - PYE
+16,PYE-3,Payee Relationship to Invoice,Payee Relationship to Invoice (Patient)
+16,PSL-34,Number of TP's PP,Number of TPs PP
+16,PSL-39,Number of TP's Technical Part,Number of TPs Technical Part
+17,ITM-32,Material Data Safety Sheet Number,Material Safety Data Sheet Number
+17,VND-1,Set Id – VND,Set ID - VND
+17,PCE-1,Set ID – PCE,Set ID - PCE
+17,IVT-1,Set Id – IVT,Set ID - IVT

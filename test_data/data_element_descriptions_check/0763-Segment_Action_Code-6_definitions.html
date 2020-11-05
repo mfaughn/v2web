@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #763 - Segment Action Code</h2><h3>6 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 8 OMC.2 ----------</h4><p>Definition:&#xA0; This field indicates whether this repetition of the segment is being added, changed or deleted.&#xA0; When using dynamic update mode (See Chapter 2, Section 2.23.4.2, "Action code/unique identifier mode update definition.")&#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the "unique key" and to determine the data subject to the action. Refer to HL7 Table 0206 &#x2013; Segment action code for valid values.</p>
+<p>If the transaction uses dynamic/action code messaging, the field must be valued.&#xA0;</p>
+<p>Condition Predicate: Required if OMC-3 is valued.</p><br><h4>          ---------- 2nd Description: Ch. 8 LCH.2 ----------</h4><p>Definition: This field indicates whether this repetition of the segment is being added, changed or deleted. The action code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is being added, changed or deleted. This and the following field are used to implement the "unique key" mode of updating repeating segments. (See Chapter 2, section 2.10.4.2, "Action code/unique identifier mode update definition.") Refer to <a href="V29_CH02C_Tables.docx#HL70206">HL7 Table 0206 - Segment Action Code</a> in Chapter 2C, Code Tables, for valid values.</p><br><h4 style='background-color:yellow'>Description from Ch.8: LRL.2 is the same as that from Ch.8: LCH.2</h4><br><h4>          ---------- 3rd Description: Ch. 10 RGS.2 ----------</h4><p>Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to <em><a href="V29_CH02C_Tables.docx#HL70206">HL7 Table 0206 - Segment Action Code</a></em> in Chapter 2C, Code Tables, for valid values.</p>
+<p>This field is conditionally required. It is required for all updating or modifying trigger events.</p><br><h4>          ---------- 4th Description: Ch. 10 AIS.2 ----------</h4><p>Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to <a href="V29_CH02C_Tables.docx#HL70206"><em>HL7 Table 0206 - Segment Action Code</em></a> in Chapter 2C, Code Tables, for valid values.</p>
+<p>This field is conditionally required. It is required for all updating or modifying trigger events.</p><br><h4>          ---------- 5th Description: Ch. 10 AIG.2 ----------</h4><p>Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to <a href="V29_CH02C_Tables.docx#HL70206"><em>HL7 Table 0206 - Segment Action Code</em></a> in Chapter 2, Code Tables, for valid values.</p>
+<p>This field is conditionally required. It is required for all updating or modifying trigger events.</p><br><h4>          ---------- 6th Description: Ch. 10 AIL.2 ----------</h4><p>Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to <a href="V29_CH02C_Tables.docx#HL70206"><em>HL7 Table 0206 - Segment Action Code</em></a> in Chapter 2C, Code Tables, for valid values</p>
+<p>This field is conditionally required. It is required for all updating or modifying trigger events.</p><br><h4 style='background-color:yellow'>Description from Ch.10: AIP.2 is the same as that from Ch.10: AIS.2</h4>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field indicates whether this repetition of the segment is being added, changed or deleted.<strong>&amp;#xA0; When using dynamic update mode (See Chapter 2, Section 2.23.4.2, &quot;Ac</strong>tion <strong>code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2</strong> and <strong>OMC-3 Segment Unique Key</strong> are used to <strong>establish</strong> the &quot;unique key&quot; <strong>and to determine the data subject to the ac</strong>tion. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>code for valid values.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;If the transaction uses dynamic/action c</strong>ode <strong>messaging, the field must be</strong> val<strong>ued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is </strong>value<strong>d</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field indicates whether this repetition of the segment is being added, changed or deleted.<strong> The action code adds a validation check to indicate, from the point of view of the sending system, whether this repeti</strong>tion <strong>of a segment is being added, changed or deleted. This</strong> and <strong>the following field</strong> are used to <strong>implement</strong> the &quot;unique key&quot; <strong>mode of updating repeating segments. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion.<strong>&quot;)</strong> Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/a&gt; in Chapter 2C, C</strong>ode <strong>Tables, for</strong> val<strong>id </strong>value<strong>s</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field indicates whether this repetition of the segment is being added, changed or deleted.<strong>&amp;#xA0; When using dynamic update mode (See Chapter 2, Section 2.23.4.2, &quot;Ac</strong>tion <strong>code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2</strong> and <strong>OMC-3 Segment Unique Key</strong> are used to <strong>establish</strong> the &quot;unique key&quot; <strong>and to determine the data subject to the ac</strong>tion. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>code for valid values.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;If the transaction uses dynamic/action c</strong>ode <strong>messaging, the field must be</strong> val<strong>ued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is </strong>value<strong>d</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field indicates whether this repetition of the segment is being added, changed or deleted.<strong> The action code adds a validation check to indicate, from the point of view of the sending system, whether this repeti</strong>tion <strong>of a segment is being added, changed or deleted. This</strong> and <strong>the following field</strong> are used to <strong>implement</strong> the &quot;unique key&quot; <strong>mode of updating repeating segments. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion.<strong>&quot;)</strong> Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/a&gt; in Chapter 2C, C</strong>ode <strong>Tables, for</strong> val<strong>id </strong>value<strong>s</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field <strong>indicates whether this repeti</strong>tion <strong>of the segment is being added, changed or deleted.&amp;#xA0; W</strong>hen u<strong>sing dynamic u</strong>pdat<strong>e mode (See Chapter 2, Section 2.23.4.2, &quot;Action code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the &quot;unique key&quot; and to determine the data subject to the </strong>action. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>c</strong>ode for valid values.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>If the transaction uses dynamic/ac</strong>tion<strong> code messaging, the field must be valued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is valued</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains the ac</strong>tion <strong>to be taken w</strong>hen updat<strong>ing or modifying information in this segment from previously sent interface trans</strong>action<strong>s</strong>. Refer to <strong>&lt;em&gt;&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/a&gt;&lt;/em&gt; in Chapter 2C, C</strong>ode <strong>Tables, </strong>for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>This field is condi</strong>tion<strong>ally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field <strong>indicates whether this repeti</strong>tion <strong>of the segment is being added, changed or deleted.&amp;#xA0; W</strong>hen u<strong>sing dynamic u</strong>pdat<strong>e mode (See Chapter 2, Section 2.23.4.2, &quot;Action code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the &quot;unique key&quot; and to determine the data subject to the </strong>action. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>c</strong>ode for valid values.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>If the transaction uses dynamic/ac</strong>tion<strong> code messaging, the field must be valued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is valued</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains the ac</strong>tion <strong>to be taken w</strong>hen updat<strong>ing or modifying information in this segment from previously sent interface trans</strong>action<strong>s</strong>. Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, C</strong>ode <strong>Tables, </strong>for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>This field is condi</strong>tion<strong>ally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field <strong>indicates whether this repeti</strong>tion <strong>of the segment is being added, changed or deleted.&amp;#xA0; W</strong>hen u<strong>sing dynamic u</strong>pdat<strong>e mode (See Chapter 2, Section 2.23.4.2, &quot;Action code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the &quot;unique key&quot; and to determine the data subject to the </strong>action. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>c</strong>ode for valid values.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>If the transaction uses dynamic/ac</strong>tion<strong> code messaging, the field must be valued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is valued</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains the ac</strong>tion <strong>to be taken w</strong>hen updat<strong>ing or modifying information in this segment from previously sent interface trans</strong>action<strong>s</strong>. Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/em&gt;&lt;/a&gt; in Chapter 2, C</strong>ode <strong>Tables, </strong>for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>This field is condi</strong>tion<strong>ally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field <strong>indicates whether this repeti</strong>tion <strong>of the segment is being added, changed or deleted.&amp;#xA0; W</strong>hen u<strong>sing dynamic u</strong>pdat<strong>e mode (See Chapter 2, Section 2.23.4.2, &quot;Action code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the &quot;unique key&quot; and to determine the data subject to the </strong>action. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>c</strong>ode for valid values<strong>.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>If the transaction uses dynamic/ac</strong>tion<strong> code messaging, the field must be valued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is valued</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains the ac</strong>tion <strong>to be taken w</strong>hen updat<strong>ing or modifying information in this segment from previously sent interface trans</strong>action<strong>s</strong>. Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, C</strong>ode <strong>Tables, </strong>for valid values&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>This field is condi</strong>tion<strong>ally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition:<strong>&amp;#xA0;</strong> This field <strong>indicates whether this repeti</strong>tion <strong>of the segment is being added, changed or deleted.&amp;#xA0; W</strong>hen u<strong>sing dynamic u</strong>pdat<strong>e mode (See Chapter 2, Section 2.23.4.2, &quot;Action code/unique identifier mode update definition.&quot;)&amp;#xA0; OMC-2 and OMC-3 Segment Unique Key are used to establish the &quot;unique key&quot; and to determine the data subject to the </strong>action. Refer to HL7 Table 0206 <strong>&amp;#x2013;</strong> Segment <strong>a</strong>ction <strong>c</strong>ode for valid values.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>If the transaction uses dynamic/ac</strong>tion<strong> code messaging, the field must be valued.&amp;#xA0;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;Condition Predicate: Required if OMC-3 is valued</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains the ac</strong>tion <strong>to be taken w</strong>hen updat<strong>ing or modifying information in this segment from previously sent interface trans</strong>action<strong>s</strong>. Refer to <strong>&lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;</strong>HL7 Table 0206 <strong>-</strong> Segment <strong>A</strong>ction <strong>Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, C</strong>ode <strong>Tables, </strong>for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>This field is condi</strong>tion<strong>ally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>indicates whether this repetition of the segment is being added, changed or deleted. T</strong>he action <strong>code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is be</strong>ing <strong>added, changed or deleted. This and the follow</strong>ing <strong>field are used to implement the &quot;unique key&quot; mode of updating repeating</strong> segment<strong>s. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion<strong>.&quot;)</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains t</strong>he action <strong>to be taken when updat</strong>ing <strong>or modify</strong>ing <strong>information in this</strong> segment<strong> from previously sent interface transac</strong>tion<strong>s.</strong> Refer to &lt;<strong>em&gt;&lt;</strong>a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt;<strong>&lt;/em&gt;</strong> in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong></strong></ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>indicates whether this repetition of the segment is being added, changed or deleted. T</strong>he action <strong>code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is be</strong>ing <strong>added, changed or deleted. This and the follow</strong>ing <strong>field are used to implement the &quot;unique key&quot; mode of updating repeating</strong> segment<strong>s. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion<strong>.&quot;)</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains t</strong>he action <strong>to be taken when updat</strong>ing <strong>or modify</strong>ing <strong>information in this</strong> segment<strong> from previously sent interface transac</strong>tion<strong>s.</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/</strong>a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong></strong></ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>indicates whether this repetition of the segment is being added, changed or deleted. T</strong>he action <strong>code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is be</strong>ing <strong>added, changed or deleted. This and the follow</strong>ing <strong>field are used to implement the &quot;unique key&quot; mode of updating repeating</strong> segment<strong>s. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion<strong>.&quot;)</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt; in Chapter 2<strong>C</strong>, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains t</strong>he action <strong>to be taken when updat</strong>ing <strong>or modify</strong>ing <strong>information in this</strong> segment<strong> from previously sent interface transac</strong>tion<strong>s.</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/</strong>a&gt; in Chapter 2, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong></strong></ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>indicates whether this repetition of the segment is being added, changed or deleted. T</strong>he action <strong>code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is be</strong>ing <strong>added, changed or deleted. This and the follow</strong>ing <strong>field are used to implement the &quot;unique key&quot; mode of updating repeating</strong> segment<strong>s. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion<strong>.&quot;)</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains t</strong>he action <strong>to be taken when updat</strong>ing <strong>or modify</strong>ing <strong>information in this</strong> segment<strong> from previously sent interface transac</strong>tion<strong>s.</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/</strong>a&gt; in Chapter 2C, Code Tables, for valid values<strong>&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field <strong>indicates whether this repetition of the segment is being added, changed or deleted. T</strong>he action <strong>code adds a validation check to indicate, from the point of view of the sending system, whether this repetition of a segment is be</strong>ing <strong>added, changed or deleted. This and the follow</strong>ing <strong>field are used to implement the &quot;unique key&quot; mode of updating repeating</strong> segment<strong>s. (See Chapter 2, section 2.10.4.2, &quot;Action code/unique identifier mode update defini</strong>tion<strong>.&quot;)</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field <strong>contains t</strong>he action <strong>to be taken when updat</strong>ing <strong>or modify</strong>ing <strong>information in this</strong> segment<strong> from previously sent interface transac</strong>tion<strong>s.</strong> Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/</strong>a&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong></strong></ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 3 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;<strong>em&gt;&lt;</strong>a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/<strong>a&gt;&lt;/em</strong>&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/a</strong>&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;<strong>em&gt;&lt;</strong>a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/<strong>a&gt;&lt;/em</strong>&gt; in Chapter 2<strong>C</strong>, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/a</strong>&gt; in Chapter 2, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;<strong>em&gt;&lt;</strong>a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/<strong>a&gt;&lt;/em</strong>&gt; in Chapter 2C, Code Tables, for valid values<strong>.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/a</strong>&gt; in Chapter 2C, Code Tables, for valid values&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;<strong>em&gt;&lt;</strong>a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;HL7 Table 0206 - Segment Action Code&lt;/<strong>a&gt;&lt;/em</strong>&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;<strong>&lt;em&gt;</strong>HL7 Table 0206 - Segment Action Code&lt;/<strong>em&gt;&lt;/a</strong>&gt; in Chapter 2C, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 5 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 4 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2<strong>C</strong>, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, Code Tables, for valid values<strong>.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, Code Tables, for valid values&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 8 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 5 and 6 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 5 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2, Code Tables, for valid values<strong>.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2<strong>C</strong>, Code Tables, for valid values&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 5 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2, Code Tables, for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2<strong>C</strong>, Code Tables, for valid values.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 6 and 7 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 6 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, Code Tables, for valid values&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the action to be taken when updating or modifying information in this segment from previously sent interface transactions. Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70206&quot;&gt;&lt;em&gt;HL7 Table 0206 - Segment Action Code&lt;/em&gt;&lt;/a&gt; in Chapter 2C, Code Tables, for valid values<strong>.</strong>&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;This field is conditionally required. It is required for all updating or modifying trigger events.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+</body>
+</html>

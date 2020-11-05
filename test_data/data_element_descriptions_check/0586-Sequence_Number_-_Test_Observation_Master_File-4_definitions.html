@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #586 - Sequence Number - Test/Observation Master File</h2><h3>4 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 8 OM1.1 ----------</h4><p>Definition: This field contains the first OM1 segment in a message and is described as 1, the second as 2, and so on.</p><br><h4>          ---------- 2nd Description: Ch. 8 OM2.1 ----------</h4><p>Definition: This field contains the same value as the sequence number of the associated OM1 segment. Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</p><br><h4>          ---------- 3rd Description: Ch. 8 OM3.1 ----------</h4><p>Definition: This field contains the same value as the sequence number of the associated OM1 segment.</p><br><h4>          ---------- 4th Description: Ch. 8 OM4.1 ----------</h4><p>Definition: The OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have the same value as illustrated in the example below. Because the OM4 segment can repeat, but needs to have a unique number for use with OM4-17, the sequence number must be appended with a sequence number as shown in the second example below.</p>
+<p><strong>OM4-1 Sequence Number &#x2013; Test/Observation Master File Example:</strong></p>
+<p>MSH|...&lt;cr&gt;</p>
+<p>// start MFE Test Begin group</p>
+<p>MFE|A|...&lt;cr&gt;</p>
+<p>OM1|1|...&lt;cr&gt;</p>
+<p>OM2|1|...&lt;cr&gt;</p>
+<p>OM3|1|...&lt;cr&gt;</p>
+<p>OM4|1|...&lt;cr&gt;</p>
+<p>// end MFE Test Begin group</p>
+<p>// start MFE_Test_Begin group</p>
+<p>MFE|A|...&lt;cr&gt;</p>
+<p>OM1|2|...&lt;cr&gt;</p>
+<p>OM2|2|...&lt;cr&gt;</p>
+<p>OM3|2|...&lt;cr&gt;</p>
+<p>OM4|2.1|...&lt;cr&gt;</p>
+<p>OM4|2.2|...&lt;cr&gt;</p>
+<p>//end MFE_Test_Begin group</p><br><h4 style='background-color:yellow'>Description from Ch.8: OM5.1 is the same as that from Ch.8: OM3.1</h4><br><h4 style='background-color:yellow'>Description from Ch.8: OM6.1 is the same as that from Ch.8: OM3.1</h4><br><h4 style='background-color:yellow'>Description from Ch.8: OM7.1 is the same as that from Ch.8: OM3.1</h4><br><h4 style='background-color:yellow'>Description from Ch.8: OMC.1 is the same as that from Ch.8: OM3.1</h4>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1, the second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of the associated OM1 segment. Refer to Table 0648 - Units of Measure in Chapter 2C for valid values</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1,</strong> the <strong>second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of</strong> the <strong>associated OM1 segment</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>is field</strong> contains <strong>the first OM1 segment</strong> in a <strong>message and is described as 1</strong>, the se<strong>cond as 2, and so on.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>e OM4-1</strong> contains <strong>a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1</strong> in a <strong>set will have the same value as illustrated in the example below. Because the OM4 segment can repeat, but needs to have a unique number for use with OM4-17</strong>, the se<strong>quence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1,</strong> the <strong>second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of</strong> the <strong>associated OM1 segment</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1,</strong> the <strong>second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of</strong> the <strong>associated OM1 segment</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1,</strong> the <strong>second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of</strong> the <strong>associated OM1 segment</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the <strong>first OM1 segment in a message and is described as 1,</strong> the <strong>second as 2, and so on</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the <strong>same value as the sequence number of</strong> the <strong>associated OM1 segment</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.<strong> Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as <strong>the sequence number of the associated OM1</strong> segment<strong>. Refer</strong> to <strong>Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in the example below. Because the OM4</strong> segment<strong> can repeat, but needs</strong> to <strong>have a unique number for use with OM4-17, the sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.<strong> Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.<strong> Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.<strong> Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.<strong> Refer to Table 0648 - Units of Measure in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the same value as the sequence number of the associated OM1 segment.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as the <strong>sequenc</strong>e number <strong>of the associated OM1 segment.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in </strong>the <strong>example below. Because the OM4 segment can repeat, but needs to have a uniqu</strong>e number <strong>for use with OM4-17, the sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 5 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 3 and 6 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 3 and 7 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 3 and 8 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 4 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in the example below. Because </strong>the <strong>OM4 segment can repeat, but needs to have a uniqu</strong>e number <strong>for use with OM4-17,</strong> the <strong>sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as the <strong>sequenc</strong>e number <strong>of</strong> the <strong>associated OM1 segment.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in the example below. Because </strong>the <strong>OM4 segment can repeat, but needs to have a uniqu</strong>e number <strong>for use with OM4-17,</strong> the <strong>sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as the <strong>sequenc</strong>e number <strong>of</strong> the <strong>associated OM1 segment.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 7 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in the example below. Because </strong>the <strong>OM4 segment can repeat, but needs to have a uniqu</strong>e number <strong>for use with OM4-17,</strong> the <strong>sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as the <strong>sequenc</strong>e number <strong>of</strong> the <strong>associated OM1 segment.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 8 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Th<strong>e OM4-1 contains a numeric value that indicates a unique set of OM1, OM2, OM3, and OM4 components; each OMn-1 in a set will have</strong> the same value as <strong>illustrated in the example below. Because </strong>the <strong>OM4 segment can repeat, but needs to have a uniqu</strong>e number <strong>for use with OM4-17,</strong> the <strong>sequence number must be appended with a sequence number as shown in the second example below.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;&lt;strong&gt;OM4-1 Sequence Number &amp;#x2013; Test/Observation Master File Example:&lt;/strong&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MSH|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// end MFE Test Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;// start MFE_Test_Begin group&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;MFE|A|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM1|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM2|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM3|2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.1|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;OM4|2.2|...&amp;lt;cr&amp;gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;//end MFE_Test_Begin group</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Th<strong>is field contains</strong> the same value as the <strong>sequenc</strong>e number <strong>of</strong> the <strong>associated OM1 segment.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

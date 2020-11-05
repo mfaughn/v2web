@@ -12,7 +12,7 @@ module Bartelby
     end
   end
   def clear_cache
-    @cache.each { |klass, collection| collection = {} }
+    @cache.each_key { |klass| @cache[klass] = {} } if @cache
   end
   def [](type)
     @cache[type]

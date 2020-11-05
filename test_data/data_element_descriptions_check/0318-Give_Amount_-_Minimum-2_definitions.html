@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #318 - Give Amount - Minimum</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 4A RXE.3 ----------</h4><p>Definition: This field contains the ordered amount as encoded by the pharmacy or treatment supplier. In a variable dose order, this is the minimum ordered amount. In a non-varying dose order, this is the exact amount of the order.</p>
+<p><strong>Note:</strong> This field is not a duplication of the first component of the quantity/timing field, since in non-pharmacy/treatment orders, that component can be used to specify multiples of an ordered amount.<br></br>
+<br></br>
+Another way to say this is that, for pharmacy/treatment orders, the quantity component of the quantity/timing field refers to what is to be given out at each service interval; thus, in terms of the RX order, that first component always defaults to 1. Hence, in the actual execution of the order, the value of 1 in the first component of the quantity/timing field always refers to one administration of the amount specified in this field (the requested Give Amount field).</p><br><h4>          ---------- 2nd Description: Ch. 4A RXG.5 ----------</h4><p>Definition: This field contains the ordered amount as encoded by the pharmacy/treatment supplier. In a variable dose order, this is the minimum ordered amount. In a non-varying dose order, this is the exact amount of the order.</p>
+<p><strong>Note:</strong> This field is not a duplication of the first component of the quantity/timing field, since in non-pharmacy/treatment orders, that component can be used to specify multiples of an ordered amount.</p>
+<p>Another way to say this is that, for pharmacy/treatment orders, the quantity component of the quantity/timing field refers to what is to be given out at each service interval; and thus, in terms of the RX order, that first component always defaults to 1. Hence, in the actual execution of the order, the value of 1 in the first component of the quantity/timing field always refers to one administration of the amount specified in this field (the requested Give Amount field).</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the ordered amount as encoded by the pharmacy<strong> or </strong>treatment supplier. In a variable dose order, this is the minimum ordered amount. In a non-varying dose order, this is the exact amount of the order.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This field is not a duplication of the first component of the quantity/timing field, since in non-pharmacy/treatment orders, that component can be used to specify multiples of an ordered amount.&lt;<strong>br&gt;&lt;/br&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;br&gt;&lt;/br&gt;</strong></del></li>
+    <li class="del"><del><strong></strong>Another way to say this is that, for pharmacy/treatment orders, the quantity component of the quantity/timing field refers to what is to be given out at each service interval; thus, in terms of the RX order, that first component always defaults to 1. Hence, in the actual execution of the order, the value of 1 in the first component of the quantity/timing field always refers to one administration of the amount specified in this field (the requested Give Amount field).&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the ordered amount as encoded by the pharmacy<strong>/</strong>treatment supplier. In a variable dose order, this is the minimum ordered amount. In a non-varying dose order, this is the exact amount of the order.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This field is not a duplication of the first component of the quantity/timing field, since in non-pharmacy/treatment orders, that component can be used to specify multiples of an ordered amount.&lt;<strong>/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;</strong>Another way to say this is that, for pharmacy/treatment orders, the quantity component of the quantity/timing field refers to what is to be given out at each service interval; <strong>and </strong>thus, in terms of the RX order, that first component always defaults to 1. Hence, in the actual execution of the order, the value of 1 in the first component of the quantity/timing field always refers to one administration of the amount specified in this field (the requested Give Amount field).&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

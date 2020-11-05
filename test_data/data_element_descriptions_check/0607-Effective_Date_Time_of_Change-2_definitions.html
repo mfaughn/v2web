@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #607 - Effective Date/Time of Change</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 8 OM1.22 ----------</h4><p>Definition: This field contains the date and time of the last change in the test procedure that would make previous results incompatible with new results, e.g., the last time that normal reference range or units changed for a numeric test/observation.</p>
+<p>We strongly suggest that observation producers never use the same observation ID when the measurement procedures change in such a way that results produced under the new procedure are clinically different from those produced with the old procedure. Rather, the producer should try to adjust the new procedure so that its values are clinically indistinguishable from the old. Failing that, one should create a new observation ID for the observation produced under the new procedure.</p>
+<p>In the rare circumstances when a procedure change occurs and neither of the above two options is viable, this field shall be used to transmit the effective date/time of the new procedure. The receiving system shall assume that any values that come across under this observation ID are under the new procedure after this date and take appropriate steps to distinguish the old from the new observations.</p>
+<p>This number is included to provide a means of communicating with the observation producing service when they have questions about particular observations or results.</p><br><h4>          ---------- 2nd Description: Ch. 8 OM7.19 ----------</h4><p>Definition: This field contains the date and time of the last change in the test procedure that would make previous results incompatible with new results.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the date and time of the last change in the test procedure that would make previous results incompatible with new results<strong>, e.g., the last time that normal reference range or units changed for a numeric test/observation.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;We strongly suggest that observation producers never use the same observation ID when the measurement procedures change in such a way that results produced under the new procedure are clinically different from those produced with the old procedure. Rather, the producer should try to adjust the new procedure so that its values are clinically indistinguishable from the old. Failing that, one should create a new observation ID for the observation produced under the new procedure.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;In the rare circumstances when a procedure change occurs and neither of the above two options is viable, this field shall be used to transmit the effective date/time of the new procedure. The receiving system shall assume that any values that come across under this observation ID are under the new procedure after this date and take appropriate steps to distinguish the old from the new observations.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;This number is included to provide a means of communicating with the observation producing service when they have questions about particular observations or results</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the date and time of the last change in the test procedure that would make previous results incompatible with new results.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

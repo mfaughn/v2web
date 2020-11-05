@@ -1,6 +1,6 @@
 require 'active_support'
 module V2Plus
-  FHIR_TYPE_NAMES = %w(DataType DataElement SegmentDefinition MessageStructure Message Event AcknowledgmentChoreography) unless defined?(FHIR_TYPE_NAMES)
+  FHIR_TYPE_NAMES = %w(DataType DataElement SegmentDefinition MessageStructure Message Event AcknowledgmentChoreography ValueSet) unless defined?(FHIR_TYPE_NAMES)
   
   SUPPORTING_TYPE_NAMES = %W(Field Component Segment SegmentSequence SegmentChoice ExampleSegment AbstractSegment)
   

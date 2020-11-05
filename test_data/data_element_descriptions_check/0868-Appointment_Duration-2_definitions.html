@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #868 - Appointment Duration</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 10 ARQ.9 ----------</h4><p>Definition: This field contains the amount of time being requested for the appointment. In cases of requests for repeating appointments, this field describes the duration of one instance of the appointment. If this field is unvalued, then the institution's standard duration for the type of appointment requested will be assumed.</p>
+<p>The appointment duration field must contain a positive, non-zero number. A negative number or zero (0) is nonsensical in the context of a duration.</p><br><h4>          ---------- 2nd Description: Ch. 10 SCH.9 ----------</h4><p><em><strong>As of version 2.5, this field was retained for backward compatibility only and withdrawn and removed as of v2.7.</strong></em> Refer to the TQ1 segment described in Chapter 4.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;<strong>Definition: This field contains the amount of time being requested for the appointment. In case</strong>s of <strong>requests for repeating appointments</strong>, this field <strong>describes the duration of one instance of the appointment. If this field is unvalued, then the institution&#39;s standard duration for the type of appointment requested will be assumed.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;The appointment duration field must contain a positive, non-zero number. A negative number or zero (0) is nonsensical</strong> in <strong>the context of a duration</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>&lt;em&gt;&lt;strong&gt;A</strong>s of <strong>version 2.5</strong>, this field <strong>was retained for backward compatibility only and withdrawn and removed as of v2.7.&lt;/strong&gt;&lt;/em&gt; Refer to the TQ1 segment described</strong> in <strong>Chapter 4</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

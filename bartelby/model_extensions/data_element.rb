@@ -1,22 +1,27 @@
 module V2Plus
-  class DataElement  
-    
-    def self.make(data)
+  class DataElement
+    def definitions=(value)
+      @definitions = value
+    end
+    alias_method :definition, :definitions
+    alias_method :definition=, :definitions=
+    def self.make(nokogiri_doc)
       puts Rainbow("Warning! #{self.class}#make called from #{caller.first}").red unless caller.first =~ /make_and_cache/
       this = new
-      this.name         = data['name'].first['value']
-      this.item_number  = data['itemNumber']&.first&.[]('value')
-      this.min_length   = data['minLength']&.first&.[]('value')
-      this.max_length   = data['maxLength']&.first&.[]('value')
-      this.c_length     = data['confLength']&.first&.[]('value')
-      this.may_truncate = data['mayTruncate']&.first&.[]('value')
-      this.description  = data['description']
-      this.url          = data['url'].first['value']
-      dt_url = data['dataType']&.first&.[]('value')
+      nokogiri = nokogiri_doc.css('DataElementDefinition')
+      this.name         = nokogiri.css('itemNumber').attribute('value')&.value
+      this.item_number  = nokogiri.css('minLength').attribute('value')&.value
+      this.min_length   = nokogiri.css('maxLength').attribute('value')&.value
+      this.max_length   = nokogiri.css('confLength').attribute('value')&.value
+      this.c_length     = nokogiri.css('mayTruncate').attribute('value')&.value
+      this.may_truncate = nokogiri.css('description').attribute('value')&.value
+      this.url          = nokogiri.css('url').attribute('value')&.value
+      this.definition   = Gui_Builder_Profile::RichText.create(:content => nokogiri.css('description div')&.to_html) # gets the entire div
+ 
+      dt_url = nokogiri.css('dataType').attribute('value')&.value
       if dt_url
-        dt_local_url = dt_url.split('/').last
-        this.data_type = V2Plus::DataType.get(dt_local_url)
-        this.data_type_varies = false # FIXME
+        dt_url = dt_url.split(/\//).last
+        this.data_type = DataType.get(dt_url)
         unless this.data_type
           puts Rainbow("DataElement with no DataType: #{this.item_number}").red
           puts HL7::DataElement.where(:item_number => this.item_number.to_i).first.field_info

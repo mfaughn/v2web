@@ -2,14 +2,14 @@ module V2Plus
   class Field
     attr_accessor :flags # not defined in v2.9 so added here (because Frank has introduced it)
     
-    def self.make(data)
+    def self.make(nokogiri)
       this = new
-      this.sequence_number = data['sequenceNumber'].first['value']
-      this.min_cardinality = data['minCardinality']&.first&.[]('value')
-      this.max_cardinality = data['maxCardinality']&.first&.[]('value')
-      this.must_support    = data['mustSupport']&.first&.[]('value') == 'true'
-      this.flags           = data['flags']&.first&.[]('value')
-      de_url = data['dataElement']&.first&.[]('value')
+      this.sequence_number = nokogiri.css('sequenceNumber').attribute('value')&.value
+      this.min_cardinality = nokogiri.css('minCardinality').attribute('value')&.value
+      this.max_cardinality = nokogiri.css('maxCardinality').attribute('value')&.value
+      this.must_support    = nokogiri.css('mustSupport').attribute('value')&.value.to_s == 'true'
+      this.flags           = nokogiri.css('flags').attribute('value')&.value
+      de_url = nokogiri.css('dataElement').attribute('value')&.value
       if de_url
         de_local_url = de_url.split('/').last
         this.data_element = DataElement.get(de_local_url)

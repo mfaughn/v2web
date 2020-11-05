@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #665 - MFN Control ID</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 8 MFE.2 ----------</h4><p>Definition: A number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if the MFI response level code requires responses at the record level (any value other than NE).</p>
+<p><strong>Note:</strong> Note that this segment does not contain a Set ID field. The <em>MFE-2 - MFN Control ID</em> implements a more general concept than the Set ID. It takes the place of the SET ID in the MFE segment.</p><br><h4>          ---------- 2nd Description: Ch. 8 MFA.2 ----------</h4><p>Definition: This field contains a number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. This field uniquely identifies the particular record (identified by the MFE segment) being acknowledged by this MFA segment. When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if <em>MFI-6 - Response Level Code</em> requires responses at the record level (any value other than NE).</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: <strong>A</strong> number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if <strong>the MFI r</strong>esponse <strong>l</strong>evel <strong>code</strong> requires responses at the record level (any value other than NE).&lt;/p&gt;</del></li>
+    <li class="del"><del><strong>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Note that this segment does not contain a Set ID field. The &lt;em&gt;MFE-2 - MFN Control ID&lt;/em&gt; implements a more general concept than the Set ID. It takes the place of the SET ID in the MFE segment.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong></strong></del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: <strong>This field contains a</strong> number or other identifier that uniquely identifies this change to this record from the point of view of the originating system. <strong>This field uniquely identifies the particular record (identified by the MFE segment) being acknowledged by this MFA segment. </strong>When returned to the originating system via the MFA segment, this field allows the target system to precisely identify which change to this record is being acknowledged. It is only required if <strong>&lt;em&gt;MFI-6 - R</strong>esponse <strong>L</strong>evel <strong>Code&lt;/em&gt;</strong> requires responses at the record level (any value other than NE).&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

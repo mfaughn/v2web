@@ -18,7 +18,7 @@ module DataElementMethods
     [:name, :item_number].each do |property|
       xml.gsub!(property.to_s.upcase, send(property).to_s)
     end
-    xml.sub!('DESCRIPTION', resource_description_content)
+    xml.sub!('DESCRIPTION', resource_definition_content)
     xml.sub!('MAY_TRUNCATE', may_truncate.value.to_s)
     xml.sub!('MIN_LENGTH', resource_min_length)
     xml.sub!('MAX_LENGTH', resource_max_length)
@@ -60,11 +60,15 @@ module DataElementMethods
     c_length ? HL7.get_instance_template(:common, 'conf_length').sub('VALUE', c_length) : ''
   end
   
-  def resource_description_content
-     if description_content && description_content.strip[0]
-       HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
-     else
-       ''
-     end
+  def resource_definition_content
+    return '' unless definitions_count > 0
+    content = []
+    if definitions_count > 1
+      definitions.each { |defn| content << "<p><strong>(Definition from #{defn.original_container} in Ch. #{defn.chapter})</strong></p><br>" + defn.definition_content }
+    else
+      content << definitions.first.definition_content
+    end
+    return '' if content.empty?
+    HL7.get_instance_template(:common, 'description').sub('VALUE', content.join("\n"))
   end
 end

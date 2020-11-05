@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #307 - Needs Human Review</h2><h3>4 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 4A RXO.16 ----------</h4><p>Definition: This field uses <a href="V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 - Yes/No Indicator</em></a> in Chapter 2C, Code Tables. The values have the following meaning for this field:</p>
+<p>Y Yes - Indicates that the pharmacist or non-pharmacist treatment supplier filling the order needs to pay special attention to the text in the <em>RXO-6-provider's pharmacy/treatment instructions</em>. A warning is present.</p>
+<p>N No - No warning is present. This is the equivalent default (null) value.</p>
+<p>An example of the use of this field is given by the following case:</p>
+<p>A <em>smart</em> Order Entry application knows of a possible drug or treatment interaction on a certain order, but the provider issuing the order wants to override the condition. In this case, the pharmacy or treatment application receiving the order will want to have a staff pharmacist or non-pharmacist treatment supplier review the interaction and contact the ordering physician.</p><br><h4>          ---------- 2nd Description: Ch. 4A RXE.20 ----------</h4><p>Definition: This field uses <a href="V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 - Yes/No Indicator</em></a> in Chapter 2C, Code Tables. The values have the following meaning for this field:</p>
+<p>Y Yes - Indicates that a warning is present. The application receiving the encoded order needs to warn the person administering the drug or treatment to pay attention to the text in <em>RXE-21-pharmacy/treatment special dispensing instructions</em>.</p>
+<p>N No - Indicates no warning is present. This is the equivalent default (null) value.</p><br><h4>          ---------- 3rd Description: Ch. 4A RXD.14 ----------</h4><p>Definition: Refer to <a href="V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 - Yes/no indicator</em></a> for valid values. The values have the following meaning for this field:</p>
+<p>Y Yes - Indicates that a warning is present. The application receiving the dispense order needs to warn the person dispensing/administering the drug or treatment to pay attention to the text in <em>RXD-15-Special dispensing instructions</em>.</p>
+<p>N No - Indicates no warning is present. This is the equivalent default (null) value.</p><br><h4>          ---------- 4th Description: Ch. 4A RXG.12 ----------</h4><p>Definition: Refer to <a href="V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 - Yes/No Indicator</em></a> for valid values. The values have the following meaning for this field:</p>
+<p>Y Yes - Indicates that a warning is present. The application receiving the dispense order needs to warn the person dispensing/administering the drug or treatment to pay attention to the text in <em>RXG-13-Special administration instructions</em>.</p>
+<p>N No - Indicates no warning is present. This is the equivalent default (null) value.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="unchanged"><span>&lt;p&gt;Definition: This field uses &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/No Indicator&lt;/em&gt;&lt;/a&gt; in Chapter 2C, Code Tables. The values have the following meaning for this field:&lt;/p&gt;</span></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that <strong>the pharmacist or non-pharmacist treatment su</strong>ppli<strong>er fill</strong>ing the order needs to <strong>pay special</strong> attention to the text in <strong>the </strong>&lt;em&gt;RX<strong>O-6-provider&#39;s p</strong>harmacy/treatment instructions&lt;/em&gt;.<strong> A warning is present.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;N No - <strong>N</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</del></li>
+    <li class="del"><del><strong>&lt;p&gt;An example of the use of this field is given by the following case:&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;A &lt;em&gt;smart&lt;/em&gt; Order Entry application knows of a possible drug or treatment interaction on a certain order, but the provider issuing the order wants to override the condition. In this case, the pharmacy or treatment application receiving the order will want to have a staff pharmacist or non-pharmacist treatment supplier review the interaction and contact the ordering physician.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong></strong></del></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that <strong>a warning is present. The a</strong>ppli<strong>cation receiv</strong>ing the <strong>encoded </strong>order needs to <strong>warn the person administering the drug or treatment to pay</strong> attention to the text in &lt;em&gt;RX<strong>E-21-p</strong>harmacy/treatment <strong>special dispensing </strong>instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;N No - <strong>Indicates n</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: <strong>This field uses</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>No I</strong>ndicator&lt;/em&gt;&lt;/a&gt; <strong>in Chapter 2C, Code Tabl</strong>es. The values have the following meaning for this field:&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that <strong>the pharmacist or non-pharmacist treatment su</strong>ppli<strong>er fill</strong>ing the order needs to <strong>pay special</strong> attention to the text in <strong>the </strong>&lt;em&gt;RX<strong>O-6-provider&#39;s pharmacy/treatment</strong> instructions&lt;/em&gt;.<strong> A warning is present.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;N No - <strong>N</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</del></li>
+    <li class="del"><del><strong>&lt;p&gt;An example of the use of this field is given by the following case:&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;A &lt;em&gt;smart&lt;/em&gt; Order Entry application knows of a possible drug or treatment interaction on a certain order, but the provider issuing the order wants to override the condition. In this case, the pharmacy or treatment application receiving the order will want to have a staff pharmacist or non-pharmacist treatment supplier review the interaction and contact the ordering physician.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong></strong></del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: <strong>Refer to</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>no i</strong>ndicator&lt;/em&gt;&lt;/a&gt; <strong>for valid valu</strong>es. The values have the following meaning for this field:&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that <strong>a warning is present. The a</strong>ppli<strong>cation receiv</strong>ing the <strong>dispense </strong>order needs to <strong>warn the person dispensing/administering the drug or treatment to pay</strong> attention to the text in &lt;em&gt;RX<strong>D-15-Special dispensing</strong> instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;N No - <strong>Indicates n</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: <strong>This field uses</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/No Indicator&lt;/em&gt;&lt;/a&gt; <strong>in Chapter 2C, Code Tabl</strong>es. The values have the following meaning for this field:&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that <strong>the pharmacist or non-pharmacist treatment su</strong>ppli<strong>er fill</strong>ing the order needs to <strong>pay special</strong> attention to the text in <strong>the </strong>&lt;em&gt;RX<strong>O-6-provider&#39;s pharmacy/treatment</strong> instructions&lt;/em&gt;.<strong> A warning is present.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;N No - <strong>N</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</del></li>
+    <li class="del"><del><strong>&lt;p&gt;An example of the use of this field is given by the following case:&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;A &lt;em&gt;smart&lt;/em&gt; Order Entry application knows of a possible drug or treatment interaction on a certain order, but the provider issuing the order wants to override the condition. In this case, the pharmacy or treatment application receiving the order will want to have a staff pharmacist or non-pharmacist treatment supplier review the interaction and contact the ordering physician.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong></strong></del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: <strong>Refer to</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/No Indicator&lt;/em&gt;&lt;/a&gt; <strong>for valid valu</strong>es. The values have the following meaning for this field:&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that <strong>a warning is present. The a</strong>ppli<strong>cation receiv</strong>ing the <strong>dispense </strong>order needs to <strong>warn the person dispensing/administering the drug or treatment to pay</strong> attention to the text in &lt;em&gt;RX<strong>G-13-Special administration</strong> instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;N No - <strong>Indicates n</strong>o warning is present. This is the equivalent default (null) value.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: <strong>This field uses</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>No I</strong>ndicator&lt;/em&gt;&lt;/a&gt; <strong>in Chapter 2C, Code Tabl</strong>es. The values have the following meaning for this field:&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the <strong>encoded</strong> order needs to warn the person administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>E-21-pharmacy/treatment s</strong>pecial dispensing instructions&lt;/em&gt;.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: <strong>Refer to</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>no i</strong>ndicator&lt;/em&gt;&lt;/a&gt; <strong>for valid valu</strong>es. The values have the following meaning for this field:&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the <strong>dispense</strong> order needs to warn the person <strong>dispensing/</strong>administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>D-15-S</strong>pecial dispensing instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;N No - Indicates no warning is present. This is the equivalent default (null) value.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: <strong>This field uses</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/No Indicator&lt;/em&gt;&lt;/a&gt; <strong>in Chapter 2C, Code Tabl</strong>es. The values have the following meaning for this field:&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the <strong>encoded</strong> order needs to warn the person administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>E-21-pharmacy/treatment s</strong>pecial <strong>dispensing</strong> instructions&lt;/em&gt;.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: <strong>Refer to</strong> &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/No Indicator&lt;/em&gt;&lt;/a&gt; <strong>for valid valu</strong>es. The values have the following meaning for this field:&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the <strong>dispense</strong> order needs to warn the person <strong>dispensing/</strong>administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>G-13-S</strong>pecial <strong>administration</strong> instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;N No - Indicates no warning is present. This is the equivalent default (null) value.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>no i</strong>ndicator&lt;/em&gt;&lt;/a&gt; for valid values. The values have the following meaning for this field:&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the dispense order needs to warn the person dispensing/administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>D-15</strong>-Special <strong>dispensing</strong> instructions&lt;/em&gt;.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: Refer to &lt;a href=&quot;V29_CH02C_Tables.docx#HL70136&quot;&gt;&lt;em&gt;HL7 Table 0136 - Yes/<strong>No I</strong>ndicator&lt;/em&gt;&lt;/a&gt; for valid values. The values have the following meaning for this field:&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Y Yes - Indicates that a warning is present. The application receiving the dispense order needs to warn the person dispensing/administering the drug or treatment to pay attention to the text in &lt;em&gt;RX<strong>G-13</strong>-Special <strong>administration</strong> instructions&lt;/em&gt;.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;N No - Indicates no warning is present. This is the equivalent default (null) value.&lt;/p&gt;</span></li>
+  </ul>
+</div>
+</body>
+</html>

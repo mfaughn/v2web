@@ -15,6 +15,10 @@ end
 
 module HL7Parse
   module_function
+  def name_mismatchs
+    @name_mismatchs ||= []
+  end
+  
   def test_data_dir
     File.expand_path(File.join(__dir__, '../../test_data'))
   end
@@ -43,8 +47,9 @@ module HL7Parse
     get_source(path, dir)
   end
     
-  def data_sources
-    [
+  def data_sources(add = nil)
+    add = [add].flatten.compact.map(&:to_s)
+    chapters = [
       'V29_CH03_PatientAdmin',
       'v29_CH04_Orders',
       'V29_CH04A_Orders',
@@ -63,5 +68,16 @@ module HL7Parse
       'V29_CH17_MaterialsMngmt',
       nil
     ]
+    
+    if add.include?('2a')
+      chapters.unshift('V29_CH02A_DataTypes')
+    end    
+    if add.include?('2')
+      chapters.unshift('V29_CH02_Control')
+    end    
+    if add.include?('1')
+      chapters.unshift('V29_CH01_Intro')
+    end
+    chapters
   end
 end

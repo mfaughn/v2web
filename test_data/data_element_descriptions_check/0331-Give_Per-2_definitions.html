@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #331 - Give Per</h2><h3>2 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 4A RXE.22 ----------</h4><p>Definition: This field contains the time unit to use to calculate the rate at which the pharmaceutical is to be administered.</p>
+<p>Format:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>S&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; seconds</td>
+</tr>
+<tr class="even">
+<td>M&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; minutes</td>
+</tr>
+<tr class="odd">
+<td>H&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; hours</td>
+</tr>
+<tr class="even">
+<td>D&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; days</td>
+</tr>
+<tr class="odd">
+<td>W&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; weeks</td>
+</tr>
+<tr class="even">
+<td>L&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; months</td>
+</tr>
+<tr class="odd">
+<td>T&lt;integer&gt;</td>
+<td>=</td>
+<td>at the interval and amount stated until a total of &lt;integer&gt; "DOSAGE" is accumulated. Units would be assumed to be the same as in the QUANTITY field.</td>
+</tr>
+<tr class="even">
+<td>INDEF</td>
+<td>=</td>
+<td>do indefinitely - also the default</td>
+</tr>
+</tbody>
+</table>
+<p>This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the "X" specification.</p>
+<p>This field is defined as conditional because it is required when the ordered substance is to be administered continuously at a prescribed rate (e.g., certain IVs). For example, if the "give amount/units" were 300 ml and the "give per" time unit were H1 (equivalent to one hour), the rate is 300ml/hr.</p><br><h4>          ---------- 2nd Description: Ch. 4A RXG.14 ----------</h4><p>Definition: This field contains the time unit to use to calculate the rate at which the pharmaceutical/treatment is to be administered.</p>
+<p>Format:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>S&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; seconds</td>
+</tr>
+<tr class="even">
+<td>M&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; minutes</td>
+</tr>
+<tr class="odd">
+<td>H&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; hours</td>
+</tr>
+<tr class="even">
+<td>D&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; days</td>
+</tr>
+<tr class="odd">
+<td>W&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; weeks</td>
+</tr>
+<tr class="even">
+<td>L&lt;integer&gt;</td>
+<td>=</td>
+<td>&lt;integer&gt; months</td>
+</tr>
+<tr class="odd">
+<td>T&lt;integer&gt;</td>
+<td>=</td>
+<td>at the interval and amount stated until a total of &lt;integer&gt; "DOSAGE" is accumulated. Units would be assumed to be the same as in the QUANTITY field.</td>
+</tr>
+<tr class="even">
+<td>INDEF</td>
+<td>=</td>
+<td>do indefinitely - also the default</td>
+</tr>
+</tbody>
+</table>
+<p>This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the "X" specification.</p>
+<p>Required when relevant (e.g., certain IVs). For example, if the "give amount/units" were 300 ml and the "give per" time unit were H1 (equivalent to one hour), the rate is 300ml/hr.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains the time unit to use to calculate the rate at which the pharmaceutical is to be administered.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains the time unit to use to calculate the rate at which the pharmaceutical<strong>/treatment</strong> is to be administered.&lt;/p&gt;</ins></li>
+    <li class="unchanged"><span>&lt;p&gt;Format:&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>&lt;table&gt;</span></li>
+    <li class="unchanged"><span>&lt;tbody&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;odd&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;S&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; seconds&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;even&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;M&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; minutes&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;odd&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;H&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; hours&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;even&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;D&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; days&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;odd&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;W&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; weeks&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;even&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;L&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;&amp;lt;integer&amp;gt; months&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;odd&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;T&amp;lt;integer&amp;gt;&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;at the interval and amount stated until a total of &amp;lt;integer&amp;gt; &quot;DOSAGE&quot; is accumulated. Units would be assumed to be the same as in the QUANTITY field.&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;tr class=&quot;even&quot;&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;INDEF&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;=&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;td&gt;do indefinitely - also the default&lt;/td&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/tbody&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+    <li class="unchanged"><span>&lt;p&gt;This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the &quot;X&quot; specification.&lt;/p&gt;</span></li>
+    <li class="del"><del>&lt;p&gt;<strong>This field is defined as conditional because it is r</strong>equired when <strong>the ordered substance is to be administered continuously at a prescribed rate</strong> (e.g., certain IVs). For example, if the &quot;give amount/units&quot; were 300 ml and the &quot;give per&quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>R</strong>equired when <strong>relevant</strong> (e.g., certain IVs). For example, if the &quot;give amount/units&quot; were 300 ml and the &quot;give per&quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 module V2Plus
   module_function
   def web_output_dir
-    File.expand_path('~/projects/v2web/v2pub')
+    File.expand_path('~/projects/v2demo/views')
   end
   def web_templates
     File.expand_path('~/projects/v2web/v2templates')

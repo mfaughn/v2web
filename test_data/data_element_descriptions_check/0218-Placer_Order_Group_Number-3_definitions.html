@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #218 - Placer Order Group Number</h2><h3>3 distinct definitions</h3><br>
+<h4>          ---------- 1st Description: Ch. 4 ORC.4 ----------</h4><p>Components: &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a unique identifier for an Order Group as referenced by the Placer application. An Order Group is a set of orders grouped together by the placer application.</p>
+<p>The first component is a string that uniquely identifies all order groups from the placer application. A limit of fifteen (15) characters is suggested but not required.</p>
+<p>The second through fourth components constitute a placer or filler application ID identical to the analogous components of ORC-3-filler order number . Order groups and how to use them are described in detail in Section <em>4.5.1</em>, "<em>ORC &#x2013; Common Order Segment</em>."</p><br><h4>          ---------- 2nd Description: Ch. 10 ARQ.4 ----------</h4><p>Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a unique identifier for the Placer Group as referenced by the Placer application. A Placer Order Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application.</p>
+<p>The second through fourth components contain the assigning authority identifying information.</p><br><h4>          ---------- 3rd Description: Ch. 10 SCH.4 ----------</h4><p>Components: &lt;Placer Assigned Identifier (EI)&gt; ^ &lt;Filler Assigned Identifier (EI)&gt;</p>
+<p>Subcomponents for Placer Assigned Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Subcomponents for Filler Assigned Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;</p>
+<p>Definition: This field contains a unique identifier for the Placer Group as referenced by the Placer application, the Filler application, or both. A Placer Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application and/or by the filler application.</p>
+<p>Within each of the two subcomponents, the first component is a string that identifies a group of appointment requests. It is assigned by the Placer or Filler application, and it identifies an appointment group uniquely among all such groups of requests from a particular requesting application.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Components: &amp;lt;Entity Identifier (ST)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Namespace ID (IS)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Universal ID (ST)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;Definition: This field contains a unique identifier for <strong>an Ord</strong>er Group as referenced by the Placer application. A<strong>n</strong> Order Group is a set of <strong>order</strong>s grouped together by the placer application<strong>.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;The first component is a string that unique</strong>ly identifie<strong>s all order groups from</strong> the placer application.<strong> A limit of fifteen (15) characters is suggested but not required.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;The second through fourth components con<strong>stitute a placer or filler application ID identical to</strong> the a<strong>nalogous components of ORC-3-filler order number . Order groups and how to use them are described in detail in Section &lt;em&gt;4.5.1&lt;/em&gt;, &quot;&lt;em&gt;ORC &amp;#x2013; Common Order Segment&lt;/em&gt;.&quot;</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Components: &amp;lt;Entity Identifier (ST)&amp;gt; <strong>^</strong> &amp;lt;Namespace ID (IS)&amp;gt; <strong>^</strong> &amp;lt;Universal ID (ST)&amp;gt; <strong>^</strong> &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;Definition: This field contains a unique identifier for <strong>the Plac</strong>er Group as referenced by the Placer application. A<strong> Placer</strong> Order Group is a set of <strong>appointment</strong>s grouped together by the placer application<strong>, and subsequent</strong>ly identifie<strong>d by</strong> the placer application.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;The second through fourth components con<strong>tain</strong> the a<strong>ssigning authority identifying information.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Components: &amp;lt;Entity Identifier (ST)&amp;gt; &amp;amp; &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>Definition: This field contains a unique i</strong>dentifier <strong>for an Order Group as referenced by the Placer application. An Order Group is a set of orders grouped together by the placer application.</strong>&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>The first component is a string that</strong> unique<strong>ly</strong> identifie<strong>s all order g</strong>roup<strong>s from</strong> the <strong>p</strong>lacer application<strong>. A limit of fifteen (15) characters</strong> is <strong>suggested but not required.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p&gt;The second through fourth components constitute a</strong> placer <strong>or </strong>filler application<strong> ID identical to</strong> the <strong>analogous </strong>components<strong> of ORC-3-filler order number . Order</strong> group<strong>s and how to use</strong> the<strong>m are described in detail in Section &lt;em&gt;4.5.1&lt;/em&gt;, &quot;&lt;em&gt;ORC &amp;#x2013; Common Order Segment&lt;/em&gt;.&quot;</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Components: &amp;lt;<strong>Placer Assigned Identifier (EI)&amp;gt; ^ &amp;lt;Filler Assigned Identifier (EI)&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;Subcomponents for Placer Assigned Identifier (EI): &amp;lt;</strong>Entity Identifier (ST)&amp;gt; &amp;amp; &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>Subcomponents for Filler Assigned Identifier (EI): &amp;lt;Entity I</strong>dentifier <strong>(ST)&amp;gt; &amp;amp; &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;</strong>&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>Definition: This field contains a</strong> unique identifie<strong>r for the Placer G</strong>roup<strong> as referenced by</strong> the <strong>P</strong>lacer application<strong>, the Filler application, or both. A Placer Group</strong> is <strong>a set of appointments grouped together by the placer application, and subsequently identified by the</strong> placer <strong>application and/or by the </strong>filler application<strong>.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;Within each of</strong> the <strong>two sub</strong>components<strong>, the first component is a string that identifies a</strong> group<strong> of appointment requests. It is assigned by</strong> the<strong> Placer or Filler application, and it identifies an appointment group uniquely among all such groups of requests from a particular requesting application.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p&gt;Components: &amp;lt;Entity Identifier (ST)&amp;gt; <strong>^</strong> &amp;lt;Namespace ID (IS)&amp;gt; <strong>^</strong> &amp;lt;Universal ID (ST)&amp;gt; <strong>^</strong> &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>Definition: This field contains a unique i</strong>dentifier <strong>for the Placer Grou</strong>p as referenced by the Placer application. A Placer <strong>Order </strong>Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application.&lt;/p&gt;</del></li>
+    <li class="del"><del>&lt;p&gt;<strong>The second through fourth</strong> component<strong>s contain the</strong> assign<strong>ing authority</strong> identif<strong>ying inform</strong>ation.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p&gt;Components: &amp;lt;<strong>Placer Assigned Identifier (EI)&amp;gt; ^ &amp;lt;Filler Assigned Identifier (EI)&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;Subcomponents for Placer Assigned Identifier (EI): &amp;lt;</strong>Entity Identifier (ST)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Namespace ID (IS)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Universal ID (ST)&amp;gt; <strong>&amp;amp;</strong> &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>Subcomponents for Filler Assigned Identifier (EI): &amp;lt;Entity I</strong>dentifier <strong>(ST)&amp;gt; &amp;amp; &amp;lt;Namespace ID (IS)&amp;gt; &amp;amp; &amp;lt;Universal ID (ST)&amp;gt; &amp;amp; &amp;lt;Universal ID Type (ID)&amp;gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p&gt;Definition: This field contains a unique identifier for the Placer Grou</strong>p as referenced by the Placer application<strong>, the Filler application, or both</strong>. A Placer Group is a set of appointments grouped together by the placer application, and subsequently identified by the placer application<strong> and/or by the filler application</strong>.&lt;/p&gt;</ins></li>
+    <li class="ins"><ins>&lt;p&gt;<strong>Within each of the two subcomponents, the first</strong> component<strong> is a string that identifies a group of appointment requests. It is</strong> assign<strong>ed by the Placer or Filler application, and it</strong> identif<strong>ies an appointment group uniquely among all such groups of requests from a particular requesting applic</strong>ation.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>
