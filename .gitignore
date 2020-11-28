@@ -15,6 +15,10 @@
 /fhir_output/*
 /generated/*
 ~$*
+/fhir_output/*
+/fhir_store/*
+/v2pub/*
+/test_data/data_element_descriptions_check
 
 # Other version control systems #
 #################################
