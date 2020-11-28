@@ -1,0 +1,300 @@
+4A  Chapter 4A - A.Order Entry: Pharmacy/Treatment, Vaccination
+  4A.1  Chapter 4A contents
+  4A.2  Purpose
+    4A.2.1  Preface (organization of this chapter)
+  4A.3  Pharmacy/Treatment Trigger Events & Messages
+    4A.3.1  Usage notes for pharmacy/treatment messages
+    4A.3.2  IV solution groups
+    4A.3.3  OMP - Pharmacy/Treatment Order Message (Event O09)
+    4A.3.4  ORP - Pharmacy/Treatment Order Acknowledgment (Event O10)
+    4A.3.5  RDE/RRE - pharmacy/treatment encoded order message (O01/O02)
+    4A.3.6  RDE - Pharmacy/Treatment Encoded Order Message (Event O11)
+    4A.3.7  RRE - Pharmacy/Treatment Encoded Order Acknowledgment (Event O12)
+    4A.3.8  RDS - Pharmacy/Treatment Dispense Message (Event O13)
+    4A.3.9  RRD - Pharmacy/Treatment Dispense Acknowledgement Message (Event O14)
+    4A.3.10  RGV/RRG - pharmacy/treatment give message (O01/O02)
+    4A.3.11  RGV - Pharmacy/Treatment Give Message (Event O15)
+    4A.3.12  RRG - Pharmacy/Treatment Give Acknowledgment Message (Event O16)
+    4A.3.13  RAS/RRA - pharmacy/treatment administration message (O01/O02)
+    4A.3.14  RAS - Pharmacy/Treatment Administration Message (Event O17)
+    4A.3.15  RRA - Pharmacy/Treatment Administration Acknowledgment Message (Event O18)
+    4A.3.16  RDE - Pharmacy/Treatment Refill Authorization Request Message (Event O25)
+    4A.3.17  RRE - Pharmacy/Treatment Refill Authorization Request Acknowledgment (Event O26)
+    4A.3.18  ROR - Pharmacy/Treatment Order Response
+    4A.3.19  RAR - Pharmacy/Treatment Administration Information
+    4A.3.20  RDR - Pharmacy/Treatment Dispense Information
+    4A.3.21  RER - Pharmacy/Treatment Encoded Order
+    4A.3.22  RGR - Pharmacy/Treatment Dose Information
+    4A.3.23  Pharmacy Query/Response Message Pair
+      4A.3.23.1  Example
+    4A.3.24  RDE - Pharmacy/Treatment Dispense Request Message (Event O49)
+    4A.3.25  RRE - Pharmacy/Treatment Encoded Order Acknowledgment (Event O50)
+    4A.3.26  RCV - Pharmacy/Treatment Dispense Message (Event O59)
+  4A.4  Pharmacy/Treatment Segments
+    4A.4.1  RXO - Pharmacy/Treatment Order Segment
+      4A.4.1.1  RXO-1   Requested Give Code   (CWE)   00292
+      4A.4.1.2  RXO-2   Requested Give Amount - Minimum   (NM)   00293
+      4A.4.1.3  RXO-3   Requested Give Amount - Maximum   (NM)   00294
+      4A.4.1.4  RXO-4   Requested Give Units   (CWE)   00295
+      4A.4.1.5  RXO-5   Requested Dosage Form   (CWE)   00296
+      4A.4.1.6  RXO-6   Provider's Pharmacy/Treatment Instructions   (CWE)   00297
+      4A.4.1.7  RXO-7   Provider's Administration Instructions   (CWE)   00298
+      4A.4.1.8  RXO-8   Deliver-to Location
+      4A.4.1.9  RXO-9   Allow Substitutions   (ID)   00300
+      4A.4.1.10  RXO-10   Requested Dispense Code   (CWE)   00301
+      4A.4.1.11  RXO-11   Requested Dispense Amount   (NM)   00302
+      4A.4.1.12  RXO-12   Requested Dispense Units   (CWE)   00303
+      4A.4.1.13  RXO-13   Number of Refills   (NM)   00304
+      4A.4.1.14  RXO-14   Ordering Provider's DEA Number
+      4A.4.1.15  RXO-15   Pharmacist/Treatment Supplier's Verifier ID   (XCN)   00306
+      4A.4.1.16  RXO-16   Needs Human Review   (ID)   00307
+      4A.4.1.17  RXO-17   Requested Give Per (Time Unit)   (ST)   00308
+      4A.4.1.18  RXO-18   Requested Give Strength   (NM)   01121
+      4A.4.1.19  RXO-19   Requested Give Strength Units   (CWE)   01122
+      4A.4.1.20  RXO-20   Indication   (CWE)   01123
+      4A.4.1.21  RXO-21   Requested Give Rate Amount   (ST)   01218
+      4A.4.1.22  RXO-22   Requested Give Rate Units   (CWE)   01219
+      4A.4.1.23  RXO-23   Total Daily Dose   (CQ)   00329
+      4A.4.1.24  RXO-24   Supplementary Code   (CWE)   01476
+      4A.4.1.25  RXO-25   Requested Drug Strength Volume   (NM)   01666
+      4A.4.1.26  RXO-26   Requested Drug Strength Volume Units   (CWE)   01667
+      4A.4.1.27  RXO-27   Pharmacy Order Type   (ID)   01668
+      4A.4.1.28  RXO-28   Dispensing Interval   (NM)   01669
+      4A.4.1.29  RXO-29   Medication Instance Identifier   (EI)   02149
+      4A.4.1.30  RXO-30   Segment Instance Identifier   (EI)   02150
+      4A.4.1.31  RXO-31   Mood Code   (CNE)   02151
+      4A.4.1.32  RXO-32   Dispensing Pharmacy
+      4A.4.1.33  RXO-33   Dispensing Pharmacy Address
+      4A.4.1.34  RXO-34   Deliver-to Patient Location   (PL)   01683
+      4A.4.1.35  RXO-35   Deliver-to Address   (XAD)   01684
+      4A.4.1.36  RXO-36   Pharmacy Phone Number   (XTN)   02309
+    4A.4.2  RXR - Pharmacy/Treatment Route Segment
+      4A.4.2.1  RXR-1   Route   (CWE)   00309
+      4A.4.2.2  RXR-2   Administration Site   (CWE)   00310
+      4A.4.2.3  RXR-3   Administration Device   (CWE)   00311
+      4A.4.2.4  RXR-4   Administration Method   (CWE)   00312
+      4A.4.2.5  RXR-5   Routing Instruction   (CWE)   01315
+      4A.4.2.6  RXR-6   Administration Site Modifier   (CWE)   01670
+    4A.4.3  RXC - Pharmacy/Treatment Component Order Segment
+      4A.4.3.1  RXC-1   RX Component Type   (ID)   00313
+      4A.4.3.2  RXC-2   Component Code   (CWE)   00314
+      4A.4.3.3  RXC-3   Component Amount   (NM)   00315
+      4A.4.3.4  RXC-4   Component Units   (CWE)   00316
+      4A.4.3.5  RXC-5   Component Strength   (NM)   01124
+      4A.4.3.6  RXC-6   Component Strength Units   (CWE)   01125
+      4A.4.3.7  RXC-7   Supplementary Code   (CWE)   01476
+      4A.4.3.8  RXC-8   Component Drug Strength Volume   (NM)   01671
+      4A.4.3.9  RXC-9   Component Drug Strength Volume Units   (CWE)   01672
+      4A.4.3.10  RXC-10   Dispense Amount   (NM)   03314
+      4A.4.3.11  RXC-11   Dispense Units   (CWE)   03315
+    4A.4.4  RXE - Pharmacy/Treatment Encoded Order Segment
+      4A.4.4.1  RXE-1   Quantity/Timing
+      4A.4.4.2  RXE-2   Give Code   (CWE)   00317
+      4A.4.4.3  RXE-3   Give Amount - Minimum   (NM)   00318
+      4A.4.4.4  RXE-4   Give Amount - Maximum   (NM)   00319
+      4A.4.4.5  RXE-5   Give Units   (CWE)   00320
+      4A.4.4.6  RXE-6   Give Dosage Form   (CWE)   00321
+      4A.4.4.7  RXE-7   Provider's Administration Instructions   (CWE)   00298
+      4A.4.4.8  RXE-8   Deliver-to Location
+      4A.4.4.9  RXE-9   Substitution Status   (ID)   00322
+      4A.4.4.10  RXE-10   Dispense Amount   (NM)   00323
+      4A.4.4.11  RXE-11   Dispense Units   (CWE)   00324
+      4A.4.4.12  RXE-12   Number of Refills   (NM)   00304
+      4A.4.4.13  RXE-13   Ordering Provider's DEA Number   (XCN)   00305
+      4A.4.4.14  RXE-14   Pharmacist/Treatment Supplier's Verifier ID   (XCN)   00306
+      4A.4.4.15  RXE-15   Prescription Number   (ST)   00325
+      4A.4.4.16  RXE-16   Number of Refills Remaining   (NM)   00326
+      4A.4.4.17  RXE-17   Number of Refills/Doses Dispensed   (NM)   00327
+      4A.4.4.18  RXE-18   D/T of Most Recent Refill or Dose Dispensed   (DTM)   00328
+      4A.4.4.19  RXE-19   Total Daily Dose   (CQ)   00329
+      4A.4.4.20  RXE-20   Needs Human Review   (ID)   00307
+      4A.4.4.21  RXE-21   Special Dispensing Instructions   (CWE)   00330
+      4A.4.4.22  RXE-22   Give Per (Time Unit)    (ST)   00331
+      4A.4.4.23  RXE-23   Give Rate Amount   (ST)   00332
+      4A.4.4.24  RXE-24   Give Rate Units   (CWE)   00333
+      4A.4.4.25  RXE-25   Give Strength   (NM)   01126
+      4A.4.4.26  RXE-26   Give Strength Units   (CWE)   01127
+      4A.4.4.27  RXE-27   Give Indication   (CWE)   01128
+      4A.4.4.28  RXE-28   Dispense Package Size   (NM)   01220
+      4A.4.4.29  RXE-29   Dispense Package Size Unit   (CWE)   01221
+      4A.4.4.30  RXE-30   Dispense Package Method   (ID)   01222
+      4A.4.4.31  RXE-31   Supplementary Code   (CWE)   01476
+      4A.4.4.32  RXE-32   Original Order Date/Time   (DTM)   01673
+      4A.4.4.33  RXE-33   Give Drug Strength Volume   (NM)   01674
+      4A.4.4.34  RXE-34   Give Drug Strength Volume Units   (CWE)   01675
+      4A.4.4.35  RXE-35   Controlled Substance Schedule   (CWE)   01676
+      4A.4.4.36  RXE-36   Formulary Status   (ID)   01677
+      4A.4.4.37  RXE-37   Pharmaceutical Substance Alternative   (CWE)   01678
+      4A.4.4.38  RXE-38   Pharmacy of Most Recent Fill   (CWE)   01679
+      4A.4.4.39  RXE-39   Initial Dispense Amount   (NM)   01680
+      4A.4.4.40  RXE-40   Dispensing Pharmacy   (CWE)   01681
+      4A.4.4.41  RXE-41   Dispensing Pharmacy Address   (XAD)   01682
+      4A.4.4.42  RXE-42   Deliver-To Patient Location   (PL)   01683
+      4A.4.4.43  RXE-43   Deliver-to Address   (XAD)   01684
+      4A.4.4.44  RXE-44   Pharmacy Order Type   (ID)   01685
+      4A.4.4.45  RXE-45   Pharmacy Phone Number   (XTN)   02310
+    4A.4.5  RXD - Pharmacy/Treatment Dispense Segment
+      4A.4.5.1  RXD-1   Dispense Sub-ID counter   (NM)   00334
+      4A.4.5.2  RXD-2   Dispense/Give Code   (CWE)   00335
+      4A.4.5.3  RXD-3   Date/Time Dispensed   (DTM)   00336
+      4A.4.5.4  RXD-4   Actual Dispense Amount   (NM)   00337
+      4A.4.5.5  RXD-5   Actual Dispense Units   (CWE)   00338
+      4A.4.5.6  RXD-6   Actual Dosage Form   (CWE)   00339
+      4A.4.5.7  RXD-7   Prescription Number   (ST)   00325
+      4A.4.5.8  RXD-8   Number of Refills Remaining   (NM)   00326
+      4A.4.5.9  RXD-9   Dispense Notes   (ST)   00340
+      4A.4.5.10  RXD-10   Dispensing Provider   (XCN)   00341
+      4A.4.5.11  RXD-11   Substitution Status   (ID)   00322
+      4A.4.5.12  RXD-12   Total Daily Dose   (CQ)   00329
+      4A.4.5.13  RXD-13   Dispense-to Location
+      4A.4.5.14  RXD-14   Needs Human Review   (ID)   00307
+      4A.4.5.15  RXD-15   Special Dispensing Instructions   (CWE)   00330
+      4A.4.5.16  RXD-16   Actual Strength   (NM)   01132
+      4A.4.5.17  RXD-17   Actual Strength Unit   (CWE)   01133
+      4A.4.5.18  RXD-18   Substance Lot Number   (ST)   01129
+      4A.4.5.19  RXD-19   Substance Expiration Date   (DTM)   01130
+      4A.4.5.20  RXD-20   Substance Manufacturer Name   (CWE)   01131
+      4A.4.5.21  RXD-21   Indication   (CWE)   01123
+      4A.4.5.22  RXD-22   Dispense Package Size   (NM)   01220
+      4A.4.5.23  RXD-23   Dispense Package Size Unit   (CWE)   01221
+      4A.4.5.24  RXD-24   Dispense Package Method   (ID)   01222
+      4A.4.5.25  RXD-25   Supplementary code   (CWE)   01476
+      4A.4.5.26  RXD-26   Initiating Location   (CWE)   01477
+      4A.4.5.27  RXD-27   Packaging/Assembly Location   (CWE)   01478
+      4A.4.5.28  RXD-28   Actual Drug Strength Volume   (NM)   01686
+      4A.4.5.29  RXD-29   Actual Drug Strength Volume Units   (CWE)   01687
+      4A.4.5.30  RXD-30   Dispense to Pharmacy   (CWE)   01688
+      4A.4.5.31  RXD-31   Dispense to Pharmacy Address   (XAD)   01689
+      4A.4.5.32  RXD-32   Pharmacy Order Type   (ID)   01690
+      4A.4.5.33  RXD-33   Dispense Type   (CWE)   01691
+      4A.4.5.34  RXD-34   Pharmacy Phone Number   (XTN)   02311
+      4A.4.5.35  RXD-35   Dispense Tag Identifier   (EI)   03392
+    4A.4.6  RXG - Pharmacy/Treatment Give Segment
+      4A.4.6.1  RXG-1   Give Sub-ID Counter   (NM)   00342
+      4A.4.6.2  RXG-2   Dispense Sub-ID Counter   (NM)   00334
+      4A.4.6.3  RXG-3   Quantity/Timing
+      4A.4.6.4  RXG-4   Give Code   (CWE)   00317
+      4A.4.6.5  RXG-5   Give Amount – Minimum   (NM)   00318
+      4A.4.6.6  RXG-6   Give Amount - Maximum   (NM)   00319
+      4A.4.6.7  RXG-7   Give Units   (CWE)   00320
+      4A.4.6.8  RXG-8   Give Dosage Form   (CWE)   00321
+      4A.4.6.9  RXG-9   Administration Notes   (CWE)   00351
+      4A.4.6.10  RXG-10   Substitution Status   (ID)   00322
+      4A.4.6.11  RXG-11   Dispense-to Location
+      4A.4.6.12  RXG-12   Needs Human Review   (ID)   00307
+      4A.4.6.13  RXG-13   Special Administration Instructions   (CWE)   00343
+      4A.4.6.14  RXG-14   Give Per (Time Unit)   (ST)   00331
+      4A.4.6.15  RXG-15   Give Rate Amount   (ST)   00332
+      4A.4.6.16  RXG-16   Give Rate Units   (CWE)   00333
+      4A.4.6.17  RXG-17   Give Strength   (NM)   01126
+      4A.4.6.18  RXG-18   Give Strength Units   (CWE)   01127
+      4A.4.6.19  RXG-19   Substance Lot Number   (ST)   01129
+      4A.4.6.20  RXG-20   Substance Expiration Date   (DTM)   01130
+      4A.4.6.21  RXG-21   Substance Manufacturer Name   (CWE)   01131
+      4A.4.6.22  RXG-22   Indication   (CWE)   01123
+      4A.4.6.23  RXG-23   Give Drug Strength Volume   (NM)   01692
+      4A.4.6.24  RXG-24   Give Drug Strength Volume Units   (CWE)   01693
+      4A.4.6.25  RXG-25   Give Barcode Identifier   (CWE)   01694
+      4A.4.6.26  RXG-26   Pharmacy Order Type   (ID)   01695
+      4A.4.6.27  RXG-27   Dispense to Pharmacy
+      4A.4.6.28  RXG-28   Dispense to Pharmacy Address
+      4A.4.6.29  RXG-29   Deliver-to Patient Location   (PL)   01683
+      4A.4.6.30  RXG-30   Deliver-to Address   (XAD)   01684
+      4A.4.6.31  RXG-31   Give Tag Identifier   (EI)   03393
+      4A.4.6.32  RXG-32   Dispense Amount   (NM)   03316
+      4A.4.6.33  RXG-33   Dispense Units   (CWE)   03317
+    4A.4.7  RXA - Pharmacy/Treatment Administration Segment
+      4A.4.7.1  RXA-1   Give Sub-ID Counter   (NM)   00342
+      4A.4.7.2  RXA-2   Administration Sub-ID Counter   (NM)   00344
+      4A.4.7.3  RXA-3   Date/Time Start of Administration   (DTM)   00345
+      4A.4.7.4  RXA-4   Date/Time End of Administration   (DTM)   00346
+      4A.4.7.5  RXA-5   Administered Code   (CWE)   00347
+      4A.4.7.6  RXA-6   Administered Amount   (NM)   00348
+      4A.4.7.7  RXA-7   Administered units   (CWE)   00349
+      4A.4.7.8  RXA-8   Administered Dosage Form   (CWE)   00350
+      4A.4.7.9  RXA-9   Administration Notes   (CWE)   00351
+      4A.4.7.10  RXA-10   Administering Provider
+      4A.4.7.11  RXA-11   Administered-at Location
+      4A.4.7.12  RXA-12   Administered Per (Time Unit)   (ST)   00354
+      4A.4.7.13  RXA-13   Administered Strength   (NM)   01134
+      4A.4.7.14  RXA-14   Administered Strength Units   (CWE)   01135
+      4A.4.7.15  RXA-15   Substance Lot Number   (ST)   01129
+      4A.4.7.16  RXA-16   Substance Expiration Date   (DTM)   01130
+      4A.4.7.17  RXA-17   Substance Manufacturer Name   (CWE)   01131
+      4A.4.7.18  RXA-18   Substance/Treatment Refusal Reason   (CWE)   01136
+      4A.4.7.19  RXA-19   Indication   (CWE)   01123
+      4A.4.7.20  RXA-20   Completion Status   (ID)   01223
+      4A.4.7.21  RXA-21   Action Code – RXA   (ID)   01224
+      4A.4.7.22  RXA-22   System Entry Date/Time   (DTM)   01225
+      4A.4.7.23  RXA-23   Administered Drug Strength Volume   (NM)   01696
+      4A.4.7.24  RXA-24   Administered Drug Strength Volume Units   (CWE)   01697
+      4A.4.7.25  RXA-25   Administered Barcode Identifier   (CWE)   01698
+      4A.4.7.26  RXA-26   Pharmacy Order Type   (ID)   01699
+      4A.4.7.27  RXA-27   Administered-At   (PL)   02264
+      4A.4.7.28  RXA-28   Administered-at Address   (XAD)   02265
+      4A.4.7.29  RXA-29   Administration Tag Identifier   (EI)   03396
+    4A.4.8  RXV - Pharmacy/Treatment Infusion Segment
+      4A.4.8.1  RXV-1   Set ID    (SI)   03318
+      4A.4.8.2  RXV-2   Bolus Type    (ID)   03319
+      4A.4.8.3  RXV-3   Bolus Dose Amount    (NM)   03320
+      4A.4.8.4  RXV-4   Bolus Dose Amount Units    (CWE)   03321
+      4A.4.8.5  RXV-5   Bolus Dose Volume    (NM)   03322
+      4A.4.8.6  RXV-6   Bolus Dose Volume Units    (CWE)   03323
+      4A.4.8.7  RXV-7   PCA Type    (ID)   03324
+      4A.4.8.8  RXV-8   PCA Dose Amount    (NM)   03325
+      4A.4.8.9  RXV-9   PCA Dose Amount Units    (CWE)   03326
+      4A.4.8.10  RXV-10   PCA Dose Amount Volume    (NM)   03327
+      4A.4.8.11  RXV-11   PCA Dose Amount Volume Units    (CWE)   03328
+      4A.4.8.12  RXV-12   Max Dose Amount    (NM)   03329
+      4A.4.8.13  RXV-13   Max Dose Amount Units    (CWE)   03330
+      4A.4.8.14  RXV-14   Max Dose Amount Volume    (NM)   03331
+      4A.4.8.15  RXV-15   Max Dose Amount Volume Units    (CWE)   03332
+      4A.4.8.16  RXV-16   Max Dose per Time    (CQ)   03333
+      4A.4.8.17  RXV-17   Lockout Interval    (CQ)   03334
+      4A.4.8.18  RXV-18   Syringe Manufacturer    (CWE)   03339
+      4A.4.8.19  RXV-19   Syringe Model Number    (CWE)   03385
+      4A.4.8.20  RXV-20   Syringe Size    (NM)   03386
+      4A.4.8.21  RXV-21   Syringe Size Units    (CWE)   03431
+      4A.4.8.22  RXV-22   Action Code    (ID)   00816
+    4A.4.9  CDO – Cumulative Dosage Segment
+      4A.4.9.1  CDO-1   Set ID – CDO   (SI)   03430
+      4A.4.9.2  CDO-2   Action Code   (ID)   00816
+      4A.4.9.3  CDO-3   Cumulative Dosage Limit   (CQ)   03397
+      4A.4.9.4  CDO-4   Cumulative Dosage Limit Time Interval   (CQ)   03398
+  4A.5  Pharmacy/Treatment Message Examples
+    4A.5.1  Example of various levels of coding in an order
+    4A.5.2  RXO segment field examples
+      4A.5.2.1  RXO segment field examples
+      4A.5.2.2  RXO-1 Requested Give code example
+      4A.5.2.3  RXO-18 and RXO-19 Requested Strength and Strength Unit examples
+    4A.5.3  RXD segment field examples
+      4A.5.3.1  RXD segment field examples
+      4A.5.3.2  RXD-4 and RXD-5 Dispense amount and Actual dispense units
+      4A.5.3.3  Actual dispense amount, Actual dispense units, Actual strength, Actual strength units
+      4A.5.3.4  Valuing the Dispense Package Size Unit
+    4A.5.4  RDS with FT1 segments example
+    4A.5.5  Alternating IV order messages
+    4A.5.6  Query examples
+  4A.6  Pharmacy/Treatment Transaction Flow Diagram
+    4A.6.1  OMP:
+    4A.6.2  RDE:
+    4A.6.3  RDS:
+    4A.6.4  RGV:
+    4A.6.5  RAS:
+  4A.7  Vaccine Trigger Events & Message Definitions
+    4A.7.1  Vaccine administration data
+    4A.7.2  Queries for immunization records (QRF Segments)
+    4A.7.3  XQ - Query for Vaccination Record (Event V01)
+    4A.7.4  VXX - RESPONSE TO VACCINATION QUERY RETURNING MULTIPLE PID MATCHES (EVENT V02)
+    4A.7.5  VXR - Vaccination Record Response (Event V03)
+    4A.7.6  VXU - Unsolicited Vaccination Record Update (Event V04)
+  4A.8  Vaccine Segments
+    4A.8.1  RXA - segment usage in vaccine messages
+      4A.8.1.1  Using RXA-5 in vaccine messages
+      4A.8.1.2  Using RXA-17 in vaccine messages
+  4A.9  Vaccination Message Examples
+    4A.9.1  VXQ - query for vaccination record
+    4A.9.2  VXX - response to vaccination query with multiple PID matches
+    4A.9.3  VXR - vaccination record response
+    4A.9.4  VXU - unsolicited vaccination record update
+    4A.9.5  Query acknowledgment with no records found

@@ -1,6 +1,7 @@
 <component>
   <name value="NAME"/>
   <sequenceNumber value="SEQUENCE_NUMBER"/>
+  <withdrawn value="WITHDRAWN"/>
   DEFINITION
   MUST_SUPPORT
   MIN_LENGTH

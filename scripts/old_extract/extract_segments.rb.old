@@ -1,0 +1,99 @@
+
+class OldSegmentExtractor
+  def remove_text_nodes(row)
+    entries = []
+    row.children.each do |td|
+      next if td.name == 'text'
+      entry = td.text.strip
+      entry = nil if entry.empty?
+      entries << entry
+    end
+    entries
+  end
+  
+  def find_field_definitions(html, type = nil)
+    # lets get everything after the table
+    table_seen = false
+    html = html.drop_while { |n| !(table_seen = n.name == 'table') } # drop everything before the table
+    html.shift # table is now first so drop that
+    defns = {}
+    seq_num = nil
+    html = html.take_while { |node| !(['h1', 'h2', 'h3'].include?(node.name)) }  # in case we ran into the next section
+    html.each do |node|
+      # return defns if ['h1', 'h2', 'h3'].include?(node.name)
+      if node.name == 'h4'
+        t = node.text.strip
+        return defns if t == 'hiddentext' # ARRGGHHH I hate MS Word.  I hope this is not a problem...
+        # puts t
+        # HACK because of stupid hidden crap in .docx
+        next if t =~ /\w{3}\s+.?\s?[F|f]ields? [D|d]efinitions?/
+        unless t.empty?
+          title    = (t.slice(/.+(?=\()/)&.strip) || t
+          title = title.gsub(/^CTR -/, 'CTR-')
+          title = title.gsub('–', '-')
+          field_id = title.slice(/^[A-Z0-9]+[-]\d+/)
+          unless field_id
+            puts title.inspect
+            pp html
+          end
+          seq_num = field_id.slice(/\d+$/)
+          title.gsub!(/^[A-Z0-9]+[-]\d+/, '')
+          title.delete!("’'")
+          title.strip!
+          title = title.strip.gsub(/\d{5}$/, '').strip if type == :segment
+          # puts t
+          # puts Rainbow(title).green
+          # puts Rainbow(field_id).yellow
+          # puts Rainbow(seq_num).cyan
+          raise unless seq_num
+          defns[seq_num.to_i] = { :title => title, :field_id => field_id, :seq_num => seq_num, :nodes => [] }
+        end
+      else
+        next unless seq_num
+        defns[seq_num.to_i][:nodes] << node unless node.name == 'text' || node.text.strip.empty?
+      end
+    end
+    defns
+  end
+  
+  def hack_fix_de_name_lookup
+    {
+      "Parent Results Observation Identifier" => "Parent Result Observation Identifier",
+      "Set ID – BUI" =>"Set ID",
+      "Requested Give Per" => "Requested Give Per (Time Unit)",
+      "Give Per" => "Give Per (Time Unit)",
+      "Administered Per" => "Administered Per (Time Unit)",
+      "Administer-at" => "Administered-At",
+      "Administered Tag Identifier" => "Administration Tag Identifier",
+      "Set ID - RXV" => "Set ID",
+      "Present On Admission" => "Present On Admission (POA) Indicator",
+      "Pre-Admit Cert" => "Pre‑admit Cert (PAC)",
+      "Co-Insurance Days" => "Co-Insurance Days (9)",
+      "Condition Code"  => "Condition Code (24-30)",
+      "Covered Days"  => "Covered Days (7)",
+        # => "Document Control Number",
+      "Non-Covered Days" => "Non-Covered Days (8)",
+      "Occurrence Code & Date" => "Occurrence Code & Date (32-35)",
+      "Occurrence Span Code/Dates"  => "Occurrence Span Code/Dates (36)",
+        # => "Set ID ‑ UB2",
+        # => "Special Visit Count",
+      "Uniform Billing Locator 11" => "UB92 Locator 11 (state)",
+      "Uniform Billing Locator 2" => "UB92 Locator 2 (state)",
+      "Uniform Billing Locator 31" => "UB92 Locator 31 (national)",
+      "Uniform Billing Locator 49" => "UB92 Locator 49 (national)",
+      "Uniform Billing Locator 56" => "UB92 Locator 56 (state)",
+      "Uniform Billing Locator 57" => "UB92 Locator 57 (national)",
+      "Uniform Billing Locator 78"  => "UB92 Locator 78 (state)",
+      "Value Amount & Code" => "Value Amount & Code (39-41)",
+      "Set ID - SPM" => "SPM -1 Set ID ‑ SPM",
+      "Date/Time of Patient Study Registration" => "Date/Time Patient of Patient Study Registration",
+      # "Marketing Basis" => ,
+      # "Other Names" => "Other Names (recognized by the producer for the observation)" # FIXME,
+      "Replacement Producer's Service/Test/Observation ID" => "Replaced Producers Service/Test Observation ID",
+      "Prior Resuts Instructions" => "Prior Results Instructions",
+      "Reference" => "Reference (Normal) Range for Ordinal and Continuous Observations",
+      "Preferred Specimen/Attribture Sequence ID" => "Preferred Specimen/Attribute Sequence",
+      "Test/Observations Included Within an Ordered Test Battery" => "Tests/Observations Included Within an Ordered Test Battery"
+    }
+  end
+end

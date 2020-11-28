@@ -26,3 +26,14 @@ module HL7
     c.include(const_get(c.name.split('::').last + 'Methods'))
   end
 end
+
+module FHIR
+  classes = [
+    Composition,
+    Section,
+    Basic
+  ]
+  classes.each do |c|
+    c.include(const_get(c.name.split('::').last + 'Methods'))
+  end
+end

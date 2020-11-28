@@ -1,0 +1,193 @@
+ABS - Abstract Segment
+ACC - Accident Segment
+ADD - addendum segment
+ADJ – Adjustment Segment
+AFF - Professional Affiliation Segment
+AIG - Appointment Information - General Resource Segment
+AIL - Appointment Information - Location Resource Segment
+AIP - Appointment Information - Personnel Resource Segment
+AIS - Appointment Information - Service Segment
+AL1 - Patient Allergy Information Segment
+APR - Appointment Preferences Segment
+ARQ - Appointment Request Segment
+ARV - Access Restrictions segment
+AUT - Authorization Information Segment
+BHS - batch header segment
+BLC - Blood Code Segment
+BLG – Billing Segment
+BPO – Blood Product Order Segment
+BPX – Blood Product Dispense Status Segment
+BTS - batch trailer segment
+BTX – Blood Product Transfusion/Disposition Segment
+BUI – Blood Unit information Segment
+CDM - Charge Description Master Segment
+CDO – Cumulative Dosage Segment
+CER - Certificate Detail Segment
+CM0 - Clinical Study Master Segment
+CM0 - Clinical Study Master Segment
+CM1 - Clinical Study Phase Master Segment
+CM1 - Clinical Study Phase Master Segment
+CM2 - Clinical Study Schedule Master Segment
+CM2 - Clinical Study Schedule Master Segment
+CNS – Clear Notification Segment
+CON – Consent Segment
+CSP - Clinical Study Phase Segment
+CSR - Clinical Study Registration Segment
+CSS - Clinical Study Data Schedule Segment
+CTD - Contact Data Segment
+CTI - Clinical Trial Identification Segment
+CTR – Contract Master Outbound Segment
+DB1 - Disability Segment
+DEV – Device Segment
+DG1 - Diagnosis Segment
+DMI - DRG Master File Information Segment
+DON – Donation Segment
+DPS – Diagnosis and Procedure Code Segment
+DRG - Diagnosis Related Group Segment
+DSC - continuation pointer segment
+DSP – display data segment
+DST – Transport Destination Segment
+ECD - Equipment Command Segment
+ECR - Equipment Command Response Segment
+EDU - Educational Detail Segment
+EQP - Equipment Log/Service Segment
+EQU - Equipment Detail Segment
+ERR - error segment
+EVN - Event Type Segment
+FAC - Facility Segment
+FHS - file header segment
+FT1 - Financial Transaction Segment
+FTS - file trailer segment
+GOL - Goal Detail Segment
+GP1 - Grouping/Reimbursement - Visit Segment
+GP2 - Grouping/Reimbursement - Procedure Line Item Segment
+GT1 - Guarantor Segment
+IAM - Patient Adverse Reaction Information Segment
+IAR - Allergy Reaction Segment
+IIM - Inventory Item Master Segment
+ILT – Material Lot Segment
+IN1 - Insurance Segment
+IN2 - Insurance Additional Information Segment
+IN3 - Insurance Additional Information, Certification Segment
+INV – Inventory Detail Segment
+IPC – Imaging Procedure Control Segment
+IPR – Invoice Processing Results Segment
+ISD – Interaction Status Detail Segment
+ITM - Material Item Segment
+IVC – Invoice Segment
+IVT – Material Location Segment
+LAN - Language Detail Segment
+LCC - Location Charge Code Segment
+LCH - Location Characteristic Segment
+LDP - Location Department Segment
+LOC - Location Identification Segment
+LRL - Location Relationship Segment
+MCP – Master File Coverage Policy Segment
+MFA - Master File Acknowledgment Segment
+MFE - Master File Entry Segment
+MFI - Master File Identification Segment
+MRG - Merge Patient Information Segment
+MSA - message acknowledgment segment
+MSH - message header segment
+NCK - System Clock Segment
+NDS - Notification Detail Segment
+NK1 - Next of Kin / Associated Parties Segment
+NPU - Bed Status Update Segment
+NSC – Application Status Change Segment
+NST – Application Control-Level Statistics Segment
+NTE - notes and comments segment
+OBR – Observation Request Segment
+OBR – Observation Request Segment
+OBX - Observation/Result Segment
+ODS - dietary orders, supplements, and preferences segment
+ODT - diet tray instructions segment
+OH1 - Person Employment Status segment
+OH2 - Past or Present Job segment
+OH3 - Usual Work segment
+OH4 - Combat Zone Work segment
+OM1 - General Segment (Fields That Apply to Most Observations)
+OM2 - Numeric Observation Segment
+OM3 - Categorical Service/Test/Observation Segment
+OM4 - Observations That Require Specimens Segment
+OM5 - Observation Batteries (Sets) Segment
+OM6 - Observations that are Calculated from Other Observations Segment
+OM7 - Additional Basic Attributes Segment (Fields That Apply to Most Observations/Services)
+OMC - Supporting Clinical Information Segment
+ORC – Common Order Segment
+ORG - Practitioner Organization Unit Segment
+OVR – override segment
+PAC – Shipment Package Segment
+PCE – Patient Charge Cost Center Exception Segment
+PCR - Possible Causal Relationship Segment
+PD1 - Patient Additional Demographic Segment
+PDA - Patient Death and Autopsy Segment
+PDC - Product Detail Country Segment
+PEO - Product Experience Observation Segment
+PES - Product Experience Sender Segment
+PID - Patient Identification Segment
+PKG - Packaging Segment
+PM1 – Payer Master File Segment
+PMT – Payment Information Segment
+PR1 - Procedures Segment
+PRA - Practitioner Detail Segment
+PRB - Problem Detail Segment
+PRC - Pricing Segment
+PRD - Provider Data Segment
+PRT – Participation Information Segment
+PSG – Product/Service Group Segment
+PSH - Product Summary Header Segment
+PSL – Product/Service Line Item Segment
+PSS – Product/Service Section Segment
+PTH - Pathway Segment
+PV1 - Patient Visit Segment
+PV2 - Patient Visit - Additional Information Segment
+PYE – Payee Information Segment
+QAK - query acknowledgment segment
+QID - query identification segment
+QPD – query parameter definition segment
+QRI – query response instance segment
+RCP – response control parameter segment
+RDF – table row definition segment
+RDT – table row data segment
+REL - Clinical Relationship Segment
+RF1 - Referral Information Segment
+RFI – Request for Information Segment
+RGS - Resource Group Segment
+RMI - Risk Management Incident Segment
+ROL - Role Segment
+RQ1 - Requisition Detail-1 Segment
+RQD - Requisition Detail Segment
+RXA - Pharmacy/Treatment Administration Segment
+RXA - segment usage in vaccine messages
+RXC - Pharmacy/Treatment Component Order Segment
+RXD - Pharmacy/Treatment Dispense Segment
+RXE - Pharmacy/Treatment Encoded Order Segment
+RXG - Pharmacy/Treatment Give Segment
+RXO - Pharmacy/Treatment Order Segment
+RXR - Pharmacy/Treatment Route Segment
+RXV - Pharmacy/Treatment Infusion Segment
+SAC – Specimen Container Detail Segment
+SCD – Anti-Microbial Cycle Data Segment
+SCH - Schedule Activity Information Segment
+SCP – Sterilizer Configuration Segment
+SDD - Sterilization Device Data Segment
+SFT – software segment
+SGH – segment group header segment
+SGT – segment group trailer segment
+SHP - Shipment Segment
+SID – Substance Identifier Segment
+SLT – Sterilization Lot Segment
+SPM – Specimen Segment
+STF - Staff Identification Segment
+STZ - Sterilization Parameter Segment
+TCC - Test Code Configuration Segment
+TCD - Test Code Detail Segment
+TQ1 – Timing/Quantity Segment
+TQ2 – Timing/Quantity Relationship Segment
+TXA - Transcription Document Header Segment
+UAC - user authentication credential segment
+UB1 - Uniform Billing 1 Segment
+UB2 - UB92 Data Segment
+VAR - Variance Segment
+VND – Purchasing Vendor Segment
+ZL7 - ZL7 Segment (Proposed Example Only)

@@ -1,0 +1,6 @@
+%div{:id => tab_content_id}
+  %textarea.codemirror-textarea-xml
+    = tab_content
+  %div
+    %a{ :href => "#{tab_file_url}", :title => "Download", :download => "#{tab_file_url}", :target => "_blank" }
+      Download

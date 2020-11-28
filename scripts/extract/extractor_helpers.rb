@@ -109,19 +109,7 @@ module V2Web
       msg_structure = HL7::MessageStructure.where(:code => structure).first
     end
         
-    def create_message_structure(name)
-      code, event_code, structure = name.slice(/\w{3}\^\w+\^\w{3}(_\w{3})?/).split('^')
-      raise name unless code && event_code && structure
-      if structure == 'PIN_I01'
-        puts Rainbow('Changing PIN_I01 to RQI_I01').green
-        structure = 'RQI_I01'
-      end
-      ChangeTracker.start
-      msg_structure = HL7::MessageStructure.create(:code => structure, :origin => @chapter)
-      # puts Rainbow("Create MessageStructure #{msg_structure.code}").magenta
-      ChangeTracker.commit
-      msg_structure
-    end
+
     
     def get_identical_structures_for(structure)
       # puts "Checking #{structure.code}"

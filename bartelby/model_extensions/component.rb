@@ -1,19 +1,21 @@
 module V2Plus
   class Component
     # attr_accessor :name, :sequence_number, :min_length, :conf_length, :may_truncate, :data_type, :table
-    def self.make(nokogiri, base = nil)
+    attr_accessor :withdrawn
+    def self.make(node, base = nil)
       this = new
-      # puts nokogiri.children.map(&:name)
-      this.name      = nokogiri.css('name').attribute('value')&.value
-      this.sequence_number = nokogiri.css('sequenceNumber').attribute('value')&.value
-      this.min_length      = nokogiri.css('minLength').attribute('value')&.value
-      this.max_length      = nokogiri.css('maxLength').attribute('value')&.value
-      this.c_length        = nokogiri.css('confLength').attribute('value')&.value
-      this.may_truncate    = nokogiri.css('mayTruncate').attribute('value')&.value.to_s == 'true'
-      this.definition      = Gui_Builder_Profile::RichText.create(:content => nokogiri.css('definition div')&.to_html) # gets the entire div
-      table_url            = nokogiri.css('binding').attribute('value')&.value
+      # puts nodeset.children.map(&:name)
+      this.name            = node.get_val('name')
+      this.sequence_number = node.get_val('sequenceNumber')
+      this.min_length      = node.get_val('minLength')
+      this.max_length      = node.get_val('maxLength')
+      this.c_length        = node.get_val('confLength')
+      this.may_truncate    = node.get_val('mayTruncate').to_s == 'true'
+      this.withdrawn       = node.get_val('withdrawn').to_s == 'true'
+      this.definition      = Gui_Builder_Profile::RichText.create(:content => node.at_css('definition div')&.to_html) # gets the entire div
+      table_url            = node.get_val('binding')
       this.table           = get_value_set(table_url) if table_url
-      dt_url = nokogiri.css('dataType').attribute('value')&.value
+      dt_url = node.get_val('dataType')
       if dt_url
         dt_url = dt_url.split(/\//).last
         this.type = DataType.get(dt_url) unless dt_url == base.local_url_name
@@ -31,14 +33,26 @@ module V2Plus
       vs.cache
       vs
     end
-      
+    
+    def html_sn
+      sn = sequence_number.to_s.strip
+      sn = '1' if sn.empty? 
+      sn
+    end
+    
+    def local_html_id
+      "#{owner.local_url_name}-#{html_sn}"
+    end
     
     def to_datatype_row(last = false)
       dtcode = type&.code
       locals = {
-        :sequence_number => sequence_number.to_s,
+        :sequence_number => html_sn,
+        :sequence_number_url => '#' + local_html_id,
         :name => name,
-        :must_support => must_support&.value.to_s =~ /R|C/ ? 'Yes' : '',
+        :implement => must_support&.value.to_s =~ /R|C/ ? 'Yes' : '',
+        :flags => html_table_flags,
+        :cardinality => cardinality,
         :length => length_string,
         :c_length => c_length_string,
         :value_set_url => table ? "http://www.hl7.eu/refactored/tab#{padded_table_id}.html" : '',
@@ -53,17 +67,23 @@ module V2Plus
     
     def to_web_definition(datatype_sequence_id)
       locals = {
-        :title => "#{datatype_sequence_id}: #{name} (#{type&.code || owner.code})",
+        :title => linked_web_def_title(datatype_sequence_id),
+        :html_id => local_html_id,
         :content => definition.content
       }
       V2Plus.render_with_locals(:component, :definition, locals)
     end
     
+    def linked_web_def_title(datatype_sequence_id)
+      dtcode = type&.code || owner.code
+      "#{datatype_sequence_id}: #{name} (<a href='data-type-#{dtcode}.html'>#{dtcode}</a>)"
+    end
+    
     def length_string
       if min_length && max_length
-        "#{min_length}..#{max_length}"
+        "[#{min_length}..#{max_length}]"
       elsif min_length
-        "#{min_length}.."
+        "[#{min_length}..]"
       else
         ''
       end
@@ -71,7 +91,21 @@ module V2Plus
     
     def c_length_string
       return '' unless c_length
-      may_truncate ? "#{c_length}#" : "#{c_length}="
+      ('&nbsp;'*(3 - c_length.size)) + c_length
+      # return '' unless c_length
+      # may_truncate ? "#{c_length}#" : "#{c_length}="
+    end
+
+    def html_table_flags
+      flags = []
+      if c_length && !c_length.empty?
+        flags << (may_truncate ? "#" : "=")
+      end
+      flags.join(' ')
+    end
+    
+    def cardinality
+      "[#{must_support ? '1' : '0'}..1]"
     end
     
     def padded_table_id

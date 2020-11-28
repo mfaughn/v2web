@@ -1,5 +1,6 @@
 module Bartelby
-  MAIN_FILE_STORE = File.expand_path('~/projects/v2web/fhir_store') unless defined?(MAIN_FILE_STORE)
+  # MAIN_FILE_STORE = File.expand_path('~/projects/v2web/fhir_store') unless defined?(MAIN_FILE_STORE)
+  MAIN_FILE_STORE = File.expand_path('~/projects/fhir_store') unless defined?(MAIN_FILE_STORE)
   PERSISTANCE_FILE_EXT = '.xml' unless defined?(PERSISTANCE_FILE_EXT)
   module_function
 
@@ -90,7 +91,7 @@ module Bartelby
   
   def define_count(klass,info)
     klass.class_eval do
-      define_method(info[:getter].to_s + '_count') do |val|
+      define_method(info[:getter].to_s + '_count') do
         instance_variable_get("@#{info[:getter]}").count
       end
     end

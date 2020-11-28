@@ -24,7 +24,7 @@ module DataTypeMethods
     xml.sub!('NOTES', resource_notes)
     comps = []
     components.each { |c| comps << c.to_resource }
-    xml.sub!('COMPONENTS', comps.join)
+    xml.sub!('COMPONENTS', comps.join("\n"))
     Nokogiri::XML(xml,&:noblanks).to_s
   end
   

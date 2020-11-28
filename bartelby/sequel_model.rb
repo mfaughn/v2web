@@ -7,6 +7,7 @@ module Sequel
       path = File.join(path, local_url_name + '.xml')
       puts Rainbow(inspect).yellow unless local_url_name
       # puts "Persisting #{path}"
+      # puts method(:to_resource).source_location if is_a?(HL7::DataElement)
       File.open(path, 'w') do |f|
         f.puts to_resource
       end

@@ -1,0 +1,95 @@
+%div.centered
+  %p
+    - if imm_ack
+      - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
+      - a_or_an2 = (imm_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
+      / = "Send #{imm_acks} when MSH-15 is #{msh15vals}"
+      = "When the MSH-15 value of #{a_or_an1} #{for_msg} message is #{msh15vals}, #{a_or_an2} #{imm_acks} message SHALL be sent as an immediate ack."
+      - if neg15
+        %p
+          = "When the MSH-15 value of #{a_or_an1} #{for_msg} message is #{neg15}, an application ack SHALL NOT be sent."
+    - else
+      = "Never send an immediate ack in enhanced mode."
+  %p
+    - if app_ack
+      - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
+      - a_or_an3 = (app_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
+      / = "Send #{app_acks} when MSH-15 is #{msh16vals}"
+      = "When the MSH-16 value of #{a_or_an1} #{for_msg} message is #{msh16vals}, #{a_or_an3} #{app_acks} message SHALL be sent as an application ack."
+      - if neg16
+        %p
+          = "When the MSH-16 value of #{a_or_an1} #{for_msg} message is #{neg16}, an application ack SHALL NOT be sent."
+    - else
+      = "Never send an application ack in enhanced mode."
+%br
+%table.v2.acknowledgment-choreography-enhanced-mode-table{:id => "#{html_id}-enhanced-mode-ack-chor-table"}
+  %tbody
+    %tr
+      %th
+        Field
+      %th
+        Value
+      %th
+        Send Response
+    - if imm_ack
+      - if neg15    
+        %tr
+          %td{:rowspan => 2, :style => "vertical-align: middle;"}
+            MSH-15
+          %td.centered
+            = msh15vals.split(' or ').join(', ')
+          %td.centered
+            = "immediate ack: " + imm_acks
+        %tr
+          %td.centered
+            = neg15.split(' or ').join(', ')
+          %td.centered
+            (none)
+      - else        
+        %tr
+          %td
+            MSH-15
+          %td.centered
+            = msh15vals.split(' or ').join(', ')
+          %td.centered
+            = "immediate ack: " + imm_acks
+    - else
+      %tr
+        %td
+          MSH-15
+        %td.centered
+          = msh15vals.split(' or ').join(', ')
+        %td.centered
+          (none)
+          
+    - if app_ack
+      - if neg16    
+        %tr
+          %td{:rowspan => 2, :style => "vertical-align: middle;"}
+            MSH-16
+          %td.centered
+            = msh16vals.split(' or ').join(', ')
+          %td.centered
+            = "application ack: " + app_acks
+        %tr
+          %td.centered
+            = neg16.split(' or ').join(', ')
+          %td.centered
+            (none)
+      - else        
+        %tr
+          %td
+            MSH-16
+          %td.centered
+            = msh16vals.split(' or ').join(', ')
+          %td.centered
+            = "application ack: " + app_acks
+    - else
+      %tr
+        %td
+          MSH-16
+        %td.centered
+          = msh16vals.split(' or ').join(', ')
+        %td.centered
+          (none)       
+%br

@@ -5,20 +5,20 @@ module V2Plus
     end
     alias_method :definition, :definitions
     alias_method :definition=, :definitions=
-    def self.make(nokogiri_doc)
+    def self.make(doc, identifier = nil)
       puts Rainbow("Warning! #{self.class}#make called from #{caller.first}").red unless caller.first =~ /make_and_cache/
       this = new
-      nokogiri = nokogiri_doc.css('DataElementDefinition')
-      this.name         = nokogiri.css('itemNumber').attribute('value')&.value
-      this.item_number  = nokogiri.css('minLength').attribute('value')&.value
-      this.min_length   = nokogiri.css('maxLength').attribute('value')&.value
-      this.max_length   = nokogiri.css('confLength').attribute('value')&.value
-      this.c_length     = nokogiri.css('mayTruncate').attribute('value')&.value
-      this.may_truncate = nokogiri.css('description').attribute('value')&.value
-      this.url          = nokogiri.css('url').attribute('value')&.value
-      this.definition   = Gui_Builder_Profile::RichText.create(:content => nokogiri.css('description div')&.to_html) # gets the entire div
+      nodeset = doc.css('DataElementDefinition')
+      this.name         = nodeset.get_val('name')
+      this.item_number  = nodeset.get_val('itemNumber')
+      this.min_length   = nodeset.get_val('minLength')
+      this.max_length   = nodeset.get_val('maxLength')
+      this.c_length     = nodeset.get_val('confLength')
+      this.may_truncate = nodeset.get_val('mayTruncate').to_s == 'true'
+      this.url          = nodeset.get_val('url')
+      this.definition   = Gui_Builder_Profile::RichText.create(:content => nodeset.css('description div')&.to_html) # gets the entire div
  
-      dt_url = nokogiri.css('dataType').attribute('value')&.value
+      dt_url = nodeset.get_val('dataType')
       if dt_url
         dt_url = dt_url.split(/\//).last
         this.data_type = DataType.get(dt_url)
@@ -42,12 +42,22 @@ module V2Plus
     end
     
     def c_length_string
-      return '' unless c_length
-      may_truncate ? "#{c_length}#" : "#{c_length}="
+      # return '' unless c_length&.[](0)
+      c_length.to_s
+      # may_truncate ? "#{c_length}#" : "#{c_length}="
+      # may_truncate ? "#{c_length}#" : "#{c_length}="
     end
     
     def padded_table_id
       table.table_id.to_s.rjust(4, "0")
+    end
+    
+    def flags
+      ff = ''
+      if c_length&.[](0)
+        ff << (may_truncate ? '#' : '=')
+      end
+      ff
     end
     
   end

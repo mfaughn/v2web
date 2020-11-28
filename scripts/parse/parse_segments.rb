@@ -1,13 +1,14 @@
 # require_relative 'parse_common'
 load File.expand_path(File.join(__dir__, 'parse_common.rb'))
 
-HL7::SegmentDefinition.delete
-HL7::DataElement.delete
-HL7::Field.delete
+# HL7::SegmentDefinition.delete
+# HL7::DataElement.delete
+# HL7::Field.delete
 
+HL7Parse.segment_titles.clear
 # HL7Parse.name_mismatchs.clear
-sources = HL7Parse.data_sources('2')
-# sources = HL7Parse.data_sources
+sources = HL7Parse.data_sources('2') # FIXME use this line
+# sources = ['V29_CH08_MasterFiles']
 sources.each do |source|
   next if source == nil
   puts Rainbow('#####################################').orange
@@ -16,14 +17,16 @@ sources.each do |source|
   chapter.delete('0') if chapter[0] == '0' # get rid of leading zero
   extractor = V2Web::DocXtractor.new(chapter)
   docx_path = HL7Parse.docx_path(source)
-  html_path = HL7Parse.html_path(source)
-  unless File.exist?(html_path)
-    stdout, stderr, status = Open3.capture3("pandoc -s #{docx_path} -o #{html_path}")
-    puts stderr if stderr && !stderr =~ /WARNING/i
-  end
   doc = Docx::Document.open(docx_path)
-  extractor.extract_segments_1(doc.doc, html_path)
+  extractor.extract_segments_definitions(doc.doc)
 end
+
+titles_path = File.join(__dir__, 'segment_titles.txt')
+File.open(titles_path, 'w+') { |f| HL7Parse.segment_titles.sort.each { |t| f.puts t } }
+titles_path = File.join(__dir__, 'segment_titles.bin')
+File.open(titles_path, 'wb+') {|f| f.write(Marshal.dump(HL7Parse.segment_titles))}
+
+
 ChangeTracker.start
 HL7::SegmentDefinition.all.select { |sd| sd.fields_count == 0 }.each do |sd|
   sd.destroy

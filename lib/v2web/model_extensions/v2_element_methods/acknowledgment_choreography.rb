@@ -1,5 +1,9 @@
 module AcknowledgmentChoreographyMethods
   def local_url_name
+    unless self.for
+      # puts Rainbow(self.inspect).cyan
+      return nil
+    end
     self.for.local_url_name
   end
   
@@ -22,9 +26,9 @@ module AcknowledgmentChoreographyMethods
   
   def resource_original_ack_type
     if original_acks.any?
-      'none'
-    else
       ack_immediate ? 'immediate' : 'application'
+    else
+      'none'
     end
   end
   
@@ -36,7 +40,7 @@ module AcknowledgmentChoreographyMethods
     elsif ack_type == 'Always'
       vals << 'AL'
     else
-      vals = ['NE', 'AL', 'ER', 'SU']
+      vals = ['AL', 'ER', 'SU']
     end
     xml = []
     vals.each do |val|
@@ -53,7 +57,7 @@ module AcknowledgmentChoreographyMethods
     elsif ack_type == 'Always'
       vals << 'AL'
     else
-      vals = ['NE', 'AL', 'ER', 'SU']
+      vals = ['AL', 'ER', 'SU']
     end
     xml = []
     vals.each do |val|

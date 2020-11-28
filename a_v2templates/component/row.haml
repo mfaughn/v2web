@@ -1,0 +1,27 @@
+%tr.datatype_component
+  %td
+    - if last
+      %img{:src => "images/tbl_vjoin_end.png"}
+    - else
+      %img{:src => "images/tbl_vjoin.png"}
+    %a{:href => sequence_number_url}
+      =sequence_number
+  %td
+    =name
+  %td.centered
+    =implement
+  %td.centered
+    =flags
+  %td.centered
+    =cardinality
+  %td.centered
+    =length
+  %td.centered
+    =c_length
+  %td.centered
+    %a{:href => value_set_url}
+      =value_set
+  %td.centered
+    %a{:href => type_url}
+      =type_code
+    

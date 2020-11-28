@@ -1,0 +1,23 @@
+:css
+  div[aria-hidden='true'] {
+     display: none;
+  }
+  div[aria-hidden='false'] {
+     display:block;
+  }
+
+.tabstest  
+  %ul.tablist{:role => 'tablist'}
+    %li#tab1.tab{:role => 'tab', :"aria-controls" => "panel1", :"aria-selected" => "true", :tabindex => "0"}
+      Prices
+    %li#tab2.tab{:role => 'tab', :"aria-controls" => "panel2", :"aria-selected" => "false", :tabindex => "0"}
+      Features
+  
+  #panel1.panel{:role => 'tabpanel', :"aria-labelledby" => "tab1", :"aria-hidden" => "false"}
+    %h3{:tabindex =>"0"}
+      Prices
+    List of prices   
+  #panel2.panel.hidden{:role => 'tabpanel', :"aria-labelledby" => "tab2", :"aria-hidden" => "true"}
+    %h3{:tabindex =>"0"}
+      Features
+    List of product features....

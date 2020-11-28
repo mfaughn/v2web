@@ -6,27 +6,16 @@
 #   end
 # end
 t = Time.now
-# load File.join(__dir__, 'parse_value_sets.rb')
-load File.join(__dir__, 'parse/parse_datatypes.rb')
+load File.join(__dir__, 'parse/parse_common.rb')
+# load File.join(__dir__, 'parse/parse_references.rb')
+# load File.join(__dir__, 'parse/parse_index.rb')
+    # load File.join(__dir__, 'parse_value_sets.rb')
+# load File.join(__dir__, 'parse/parse_datatypes.rb');# link_value_sets_to_components
 # load File.join(__dir__, 'parse/parse_segments.rb')
-# load File.join(__dir__, 'parse/parse_msgs.rb')
-# load File.join(__dir__, 'parse/parse_acs.rb')
-# load File.join(__dir__, 'parse_text.rb')
+# load File.join(__dir__, 'parse/parse_messages.rb')
+load File.join(__dir__, 'parse/parse_text.rb')
 
-HL7::Component.all.each do |c|
-  if c.legacy_tbl
-    vs = HL7::ValueSet.where(:table_id => c.legacy_tbl.to_i).first
-    if vs
-      ChangeTracker.start
-      c.table = vs
-      ChangeTracker.commit
-    else
-      puts "Could not find table #{c.legacy_tbl} for #{c.owner.name}.#{c.name}"
-    end
-  end
-end
-
-# load File.join(__dir__, 'parse_snelick.rb')
+# load File.join(__dir__, 'parse/parse_conformance.rb')
 # load File.join(__dir__, 'build_snelick.rb')
 
 puts "That took #{Time.now - t} seconds"

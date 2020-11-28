@@ -1,20 +1,36 @@
 require 'docx'
 load File.expand_path(File.join(__dir__, '../../lib/v2web/model_extensions.rb'))
-paths = ['nokogiri_extensions.rb', 'headers_footers.rb', 'clear_tables.rb', 'compact_content.rb', 'headers_hack.rb', 'empty_sections_hack.rb']
+paths = ['nokogiri_extensions.rb', 'headers_footers.rb', 'clear_tables.rb', 'compact_content.rb', 'headers_hack.rb', 'empty_sections_hack.rb', 'list_style_map.rb']
 paths.each do |path|
   load File.expand_path(File.join(__dir__, path))
   # require_relative path
 end
 
-extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_msgs.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_segments.rb', 'extract_chapters.rb']
+extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_events.rb', 'extract_events_ch10.rb', 'extract_messages.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_segments.rb', 'extract_chapters.rb', 'debug_tables.rb', 'extract_index.rb']
 extractors.each do |file|
   path = File.expand_path(File.join(__dir__, '../extract', file))
   load path
   # require path
 end
 
+doc2html = ['processor.rb', 'tables.rb', 'run.rb', 'list.rb', 'run_styler.rb']
+doc2html.each do |file|
+  path = File.expand_path(File.join(__dir__, '../docx2html', file))
+  load path
+  # require path
+end
+
 module HL7Parse
   module_function
+  
+  def segment_titles
+    @segs ||= []
+  end
+  
+  def datatype_titles
+    @dt_titles ||=[]
+  end
+  
   def name_mismatchs
     @name_mismatchs ||= []
   end
@@ -68,8 +84,9 @@ module HL7Parse
       'V29_CH17_MaterialsMngmt',
       nil
     ]
+    # return chapters # FIXME
     
-    if add.include?('2a')
+    if add.include?('2a') || add.include?('2A')
       chapters.unshift('V29_CH02A_DataTypes')
     end    
     if add.include?('2')
@@ -78,6 +95,6 @@ module HL7Parse
     if add.include?('1')
       chapters.unshift('V29_CH01_Intro')
     end
-    chapters
+    chapters.compact
   end
 end

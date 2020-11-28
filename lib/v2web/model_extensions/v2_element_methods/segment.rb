@@ -12,6 +12,11 @@ module SegmentMethods
   end
   
   def any_segment
+    unless type
+      puts inspect
+      puts segment_sequence.structure&.code.inspect
+      puts segment_sequence.structure&.origin.inspect
+    end
     type.name == 'Hxx'
   end
   

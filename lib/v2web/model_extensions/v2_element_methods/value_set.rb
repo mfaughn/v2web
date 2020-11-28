@@ -5,4 +5,7 @@ module ValueSetMethods
   def local_url_name
     table_id.to_s.rjust(4, '0')
   end
+  def to_resource
+    ''
+  end
 end

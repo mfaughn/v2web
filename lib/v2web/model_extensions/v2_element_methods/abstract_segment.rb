@@ -19,10 +19,10 @@ module AbstractSegmentMethods
     fsh << "mayRepeat = #{!!repeat}"
     fsh << "optional = #{!!optional}"
     fsh << "anyHl7Segment = #{!!any_segment}"
-    fsh << "status = \"#{status}\"" if status&.[](0)
+    fsh << "status = '#{status}'" if status&.[](0)
     if respond_to?(:description) && description && description.strip[0]
       fsh << "description.status = #additional"
-      fsh << "description.div = \"<p>#{description.strip.gsub('&', '&#38;')}</p>\""
+      fsh << "description.div = '<p>#{description.strip.gsub('&', '&#38;')}</p>'"
     end
     fsh += to_fsh
     fsh

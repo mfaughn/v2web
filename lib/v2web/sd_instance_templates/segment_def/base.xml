@@ -4,11 +4,6 @@
   <name value='NAME'/>
   <abbreviation value='CODE'/>
   <withdrawn value='WITHDRAWN'/>
-  <description>
-    <status value="additional"/>
-     <div>
-       DESCRIPTION
-     </div>
-   </description>
+   DESCRIPTION
    FIELDS
 </SegmentDefinition>  

@@ -80,7 +80,7 @@ module V2Web
         raise 'only files are supported for tabs at this time'# FIXME...other kind of content used
       end
       
-      locals = {:tabs_id => parent_id, :tab_title => code_type, :tab_index => tab_index, :selected => selected, :tab_content_id => tab_content_id, :tab_label_id => tab_label_id, :tab_url => tab_url, :tab_content_inner_id => (tab_content_id + '-inner'), :tab_content => tab_content}
+      locals = {:tabs_id => parent_id, :tab_title => title, :tab_index => tab_index, :selected => selected, :tab_content_id => tab_content_id, :tab_label_id => tab_label_id, :tab_url => tab_url, :tab_content_inner_id => (tab_content_id + '-inner'), :tab_content => tab_content}
       locals[:tab_file_url] = tab_file_url if tab_file_url
     
       content_html = case

@@ -1,0 +1,20 @@
+- if depth == 2
+  %h2{:id => html_id}
+    = title
+- if depth == 3  || depth.nil?
+  %h3{:id => html_id}
+    = title
+- if depth == 4
+  %h4{:id => html_id}
+    = title
+- if depth == 5
+  %h5{:id => html_id}
+    = title
+- if depth == 6
+  %h6{:id => html_id}
+    = title
+%div    
+  = content
+  %br
+  %div.v2_field_definitions  
+    = field_definitions

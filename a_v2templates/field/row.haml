@@ -1,0 +1,29 @@
+%tr.segment_definition_field
+  %td
+    - if last
+      %img{:src => "images/tbl_vjoin_end.png"}
+    - else
+      %img{:src => "images/tbl_vjoin.png"}
+    =sequence_number
+  %td
+    %a{ :href => field_def_link }
+      =data_element_id
+  %td
+    =name
+  %td.centered
+    =must_implement
+  %td.centered
+    =flags
+  %td.centered
+    =cardinality
+  %td.centered
+    =length
+  %td.centered
+    =c_length
+  %td.centered
+    %a{ :href => value_set_url }
+      =value_set
+  %td.centered
+    %a{ :href => type_url }
+      =type_code
+    

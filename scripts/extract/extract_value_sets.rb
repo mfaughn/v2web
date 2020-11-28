@@ -106,7 +106,7 @@ module V2Web
       when :note
         puts Rainbow(t).yellow
       else
-        puts Rainbow(t).orange
+        puts "Unknown type: " + Rainbow(t).orange
       end
     end
     

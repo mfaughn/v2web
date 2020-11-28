@@ -2,19 +2,15 @@ module V2Plus
 
   class Event 
     # How distinguish b/w response and ack ? FIXME
-    def self.make(data)
+    def self.make(doc, identifier = nil)
+      puts Rainbow("Warning! #{self.class}#make called from #{caller.first}").red unless caller.first =~ /make_and_cache/
       this = new
-      this.code = data['code'].first['value']
-      this.url  = data['url'].first['value']
-      this.name = data['name'].first['value']
-      FHIR2Obj.registry[:events][this.url][:obj] = this
-      this.trigger  = FHIR2Obj.get_message_definition(data['message'].first['value'])
-      this.response = data['acknowledgment']&.map do |ack|
-        msg_def = FHIR2Obj.get_message_definition(ack['value'])
-        puts "No definition for #{ack['value']}" unless msg_def
-        msg_def
-      end
-      puts info unless this.response
+      nodeset = doc.css('Event')
+      this.code = nodeset.get_val('code')
+      this.url  = nodeset.get_val('url')
+      this.name = nodeset.get_val('name')
+      # FIXME!!!!!!
+      this
     end
     
     def info

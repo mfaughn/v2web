@@ -56,4 +56,5 @@ module MessageStructureMethods
     segments.each { |seg| segs += seg.simple_render }
     segs
   end
+
 end

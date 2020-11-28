@@ -302,13 +302,13 @@ module V2Web
       reordered = all_ckeditor_footnotes
       reordered.each do |entry|
         entry[:counter] = counter
-        entry[:reference] = "<span class=\"id_anchor2\" id=\"footnote-marker-#{entry[:text_id]}-#{counter}\"></span>" + entry[:original_reference]
-          .sub(/href="#footnote-\d+"/, "href=\"#footnote-#{counter}\"")
+        entry[:reference] = "<span class='id_anchor2' id='footnote-marker-#{entry[:text_id]}-#{counter}'></span>" + entry[:original_reference]
+          .sub(/href="#footnote-\d+"/, "href='#footnote-#{counter}'")
           .sub(/id="footnote-marker-\d+-\d+"/, '')
           .sub(/>\[\d+\]</, ">#{counter}<")
-        entry[:footnote]  = "<div class=\"id_anchor\" id=\"footnote-#{counter}\"></div>" + entry[:original_footnote]
+        entry[:footnote]  = "<div class='id_anchor' id='footnote-#{counter}'></div>" + entry[:original_footnote]
           .sub(/id="footnote-\d+"/, '')
-          .sub(/href="#footnote-marker-\d+-\d+">.</, "href=\"#footnote-marker-#{entry[:text_id]}-#{counter}\">#{counter}<")
+          .sub(/href="#footnote-marker-\d+-\d+">.</, "href='#footnote-marker-#{entry[:text_id]}-#{counter}'>#{counter}<")
           .sub('<li ', '<p.v2_footnote ')
           .sub('</li>', '</p>')
         counter += 1

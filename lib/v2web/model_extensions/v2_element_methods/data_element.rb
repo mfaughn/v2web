@@ -15,9 +15,8 @@ module DataElementMethods
   def to_resource
     xml = HL7.get_instance_template(:data_element, 'base')
     xml.sub!('URL', local_url_name)
-    [:name, :item_number].each do |property|
-      xml.gsub!(property.to_s.upcase, send(property).to_s)
-    end
+    xml.sub!('NAME', name)
+    xml.sub!('ITEM_NUMBER', item_number.to_s)
     xml.sub!('DESCRIPTION', resource_definition_content)
     xml.sub!('MAY_TRUNCATE', may_truncate.value.to_s)
     xml.sub!('MIN_LENGTH', resource_min_length)
@@ -64,7 +63,11 @@ module DataElementMethods
     return '' unless definitions_count > 0
     content = []
     if definitions_count > 1
-      definitions.each { |defn| content << "<p><strong>(Definition from #{defn.original_container} in Ch. #{defn.chapter})</strong></p><br>" + defn.definition_content }
+      definitions.each do |defn|
+        seg_code, seq_num = defn.original_container.split('.').map(&:strip)
+        link = "segment-definition-#{seg_code}.html##{seg_code}-#{seq_num}" # this isn't exactly DRY with Field#local_html_id
+        content << "<p class='data-element-definition-marker'><strong>(Definition from <a href='#{link}'>#{defn.original_container}</a> in Ch. #{defn.chapter})</strong></p>" + defn.definition_content
+      end
     else
       content << definitions.first.definition_content
     end

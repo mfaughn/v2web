@@ -5,6 +5,7 @@ module ComponentMethods
       xml.sub!(property.to_s.upcase, send(property).to_s)
     end
     xml.sub!('MAY_TRUNCATE', may_truncate&.value.to_s)
+    xml.sub!('WITHDRAWN', withdrawn ? 'true' : 'false')
     xml.sub!('DEFINITION', resource_definition_content)
     xml.sub!('MUST_SUPPORT', resource_must_support)
     xml.sub!('MIN_LENGTH', resource_min_length)
@@ -16,6 +17,10 @@ module ComponentMethods
     xml.sub!('BINDING', resource_binding)
     xml.sub!('DATA_TYPE', resource_data_type)
     Nokogiri::XML(xml,&:noblanks).root.to_s
+  end
+  
+  def withdrawn
+    optionality&.value == 'W'
   end
   
   def resource_definition_content

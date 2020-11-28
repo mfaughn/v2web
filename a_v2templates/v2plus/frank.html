@@ -1,0 +1,387 @@
+<div class="container">  <!-- container -->
+<h1 class="self-link-parent">
+<span class="sectioncount">1<a name="1"> </a></span>
+HL7 v2+ - HL7 v2 refactored - Working Draft! (99.0)
+</h1>
+<p style="background-color: gold; border:1px solid maroon; padding: 5px; max-width: 790px;">
+This is the working draft for what is preliminary called <b>HL7v2+</b>.
+It is subject to change without any notice.
+Furthermore, it should be kept confidential. No distribution allowed.
+</p>
+<h1 class="self-link-parent">
+<span class="sectioncount">2<a name="2"> </a></span>
+Welcome to HL7 v2+® (99.0)
+</h1>
+<p>HL7 v2+ is a standard for health care data exchange, built as a successor of HL7 v2.x, and published by HL7®.</p>
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; max-width: 790px">
+<b>First time here?</b><br>See the full <a href="toc.html">Table of Contents</a>.
+</p>
+<div id="diagram">
+ <p class="level-text"><b>Introduction</b> to this standard (<a href="chapter.1.html">chapter 1</a>).</p>
+  <p class="content"><a href="ToC.html">Table of Contents</a>
+  </p>
+ <p class="level-text"><b>Level 1</b> Basic framework on which the specification is built.</p>
+ <div id="foundation" class="box_row box_more">
+  <div id="" class="box">
+  <p class="head">
+   <a style="background-image: url('foundation.png');" href="foundation-module.html">
+   <span>Foundation</span>
+   </a>
+ </p>
+  <p class="content"><span><a href="control.html">Control</a> (Messaging)</span> </p>
+ </div>
+  <div id="encoding" class="box">
+  <p class="head">
+    <a style="background-image: url('workflow.png');" href="encoding.html">
+    <span>Encoding</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="downloads.html">Abstract Message Syntax (AMS)</a>,
+	<a href="encoding01er7.html">Encoding Rules 7 (ER)</a>,
+	<a href="encoding02xml.html">XML-Encoding (v2.x)ml</a>
+  </p>
+ </div>
+  <div id="transport" class="box">
+  <p class="head">
+    <a style="background-image: url('linked-data.png');" href="transport.html">
+    <span>Transport</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="transport01hllp.html">HLLP</a>,
+    <a href="transport01mllp.html">MLLP</a>,
+    <a href="transport02http.html">HTTP</a>
+  </p>
+ </div>
+ </div>
+ <p class="level-text"><b>Level 2</b> Vocabulary</p>
+ <div id="foundation" class="box box_row box_one">
+  <p class="head">
+    <a style="background-image: url('terminology.png');" href="tab.html">
+    <span>Terminology (Tables)</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="tab.html">CodeSystem</a>,
+	<a href="tab.html">ValueSet</a>
+  </p>
+ </div>
+ <p class="level-text"><b>Level 3</b> Building Blocks</p>
+ <div id="foundation" class="box box_row box_one">
+  <p class="head">
+    <a style="background-image: url('index.png');" href="linked-data-module.html">
+    <span>Technical</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dt.html">Data Types</a> -&gt;
+    <a href="seg.html">Segments</a> -&gt;
+    <a href="msg.html">Message Structures</a>
+  </p>
+ </div>
+ <p class="level-text"><b>Level 4</b> Domains</p>
+ <div id="foundation" class="box_row box_more">
+  <div id="clinical" class="box">
+  <p class="head">
+    <a style="background-image: url('secpriv.jpg');" href="dom.html">
+    <span>Administrative</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dom07.html">Master Files</a>,<br>
+    <a href="dom05.html">Queries</a>, <br>
+    <a href="dom14.html">Personnel Mngmt</a>, <br>
+    <a href="dom13.html">Appl Mngmt</a>
+  </p>
+ </div>
+  <div id="clinical" class="box">
+  <p class="head">
+    <a style="background-image: url('administration.jpg');" href="dom.html">
+    <span>Patient</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dom01.html">ADT</a>,<br>
+    <a href="dom10.html">Referral</a>,<br>
+    <a href="dom09.html">Scheduling</a>,<br>
+    <a href="dom16.html">Materials Mngmt</a>
+  </p>
+ </div>
+  <div id="financial" class="box">
+  <p class="head">
+    <a style="background-image: url('financial.png');" href="dom.html">
+    <span>Financial</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dom02.html">Billing</a>, <br>
+	<a href="dom15.html">Claims &amp; Reimbursement</a>
+  </p>
+ </div>
+  <div id="clinical" class="box">
+  <p class="head">
+    <a style="background-image: url('clinical.png');" href="dom.html">
+    <span>Clinical</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dom03.html">General Orders</a>, <br>
+    <a href="dom03.html">Laboratory Orders</a>, <br>
+    <a href="dom03.html">Dietary Orders</a>, <br>
+    <a href="dom03.html">Supply</a>, <br>
+    <a href="dom04.html">Pharmacy/Treatment</a>, <br>
+    <a href="dom12.html">Lab Automation</a>
+  </p>
+ </div>
+  <div id="medication" class="box">
+  <p class="head">
+    <a style="background-image: url('medication.png');" href="dom.html">
+    <span>Medical</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="dom11.html">Patient Care</a>, <br>
+    <a href="dom08.html">Medical Record</a>
+  </p>
+ </div>
+ </div>
+ <p class="level-text"><b>Level 5</b> Conformance</p>
+ <div id="foundation" class="box box_row box_one">
+  <p class="head">
+    <a style="background-image: url('conformance.jpg');" href="profile.html">
+    <span>Conformance</span>
+   </a>
+ </p>
+   <p class="content">
+    <a href="profile.html">Profiling</a>
+  </p>
+ </div>
+ <p class="level-text"><b>Level 6</b> Implementable Technology Specification</p>
+ <p class="level-text"><b>Level 7</b> Core Profiles</p>
+ <div id="foundation" class="box_row box_more">
+  <div id="" class="box">
+  <p class="head">
+   <a style="background-image: url('index.png');" href="ig.html">
+   <span>Data Type Flavors</span>
+   </a>
+ </p>
+   <p class="content">
+</p><p class="content">TBD01390: This is where profile components like official data type flavors should be listed.</p>
+  <p></p>
+ </div>
+  <div id="" class="box">
+  <p class="head">
+   <a style="background-image: url('index.png');" href="ig.html">
+   <span>Implementation Guide Registry</span>
+   </a>
+ </p>
+   <p class="content">
+</p><p class="content">TBD01450: This is where implementations begin and guides should be listed. Maintaining the implementation guides on this platform will be too tedious, so that a list with hyperlinks should be sufficient.</p>
+  <p></p>
+ </div>
+ </div>
+</div>
+<h1 class="self-link-parent">
+<span class="sectioncount">3<a name="3"> </a></span>
+Complimentary Explanation on how this documentation is structured (99.0)
+</h1>
+<div id="tabs-1" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+ <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-1" aria-labelledby="ui-id-1" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Control</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Encoding</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Transport</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-4" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">Profile</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-5" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">Domains</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-6" aria-labelledby="ui-id-6" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">Message Structures</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-7" aria-labelledby="ui-id-7" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-7" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-7">Segments</a></li>
+  <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1-folder-8" aria-labelledby="ui-id-8" aria-selected="true" aria-expanded="true"><a href="#tabs-1-folder-8" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-8">Vocabulary</a></li>
+  <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1-folder-9" aria-labelledby="ui-id-9" aria-selected="false" aria-expanded="false"><a href="#tabs-1-folder-9" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-9">Data Types</a></li>
+ </ul>
+<div id="tabs-1-folder-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-1-inner"> 
+         <p><b>Control</b></p>
+         <p>Basics for HL7 v2.x</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-2-inner"> 
+   <p><b>Encoding</b></p>
+       <p>Encoding manages the transformation from the logical models to serialized data.</p>
+	  <ul>
+	  <li>AMS: Abstract Message Specification</li>
+	  <li>ER7: Encoding Rules 7 = vertical bar syntax</li>
+	  <li>v2.xml: Encoding using XML</li>
+  <li><font color="red">JSON: we need to think about that</font></li>
+	  </ul>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-3-inner"> 
+   <p><b>Transport</b></p>
+   <p>There are different means of transport:</p>
+<ul>
+<li>Files</li>
+<li>MLLP</li>
+<li>HTTP</li>
+</ul>
+   <p>TBD (00025)</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-4" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-4-inner"> 
+   <p><b>Profile</b></p>
+   <p>Text Profiles</p>
+  <p>Chapter 2B should go there!</p>
+   <p>TBD (00035)</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-5" aria-labelledby="ui-id-5" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-5-inner"> 
+   <p><b>Domain</b></p>
+   <p>The content (events message structures, etc.) will be organized into domains to get rid of the chapter view.</p>
+<p>The tricky thing is when generating the contents peresumably in a single step, which ssections should be left out and replaced by appropriate links? How to mark then? Also, for the skipped content we need a link back to where it is used. Here, if we see the message structures, we need a list of links telling us where this specific message structure is used.</p>
+
+   <p>TBD (00045)</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-6" aria-labelledby="ui-id-6" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-6-inner"> 
+   <p><b>Message Structure</b></p>
+   <p>Currently there is a list of the message structures with links to the details. Do we need context information within those pages? Or do we need to group them together, eg. By message type?</p>
+<p>TBD (00053)!</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-7" aria-labelledby="ui-id-7" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-7-inner"> 
+   <p><b>Segment</b></p>
+<p> This is a list of segments</p>
+   <p>TBD (00061)</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-8" aria-labelledby="ui-id-8" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">
+ <div id="tbl">
+  <div id="folder-1-8-inner"> 
+   <p><b>Vocabulary</b></p>
+   <p>Vocabulary will take care of the updated vocabulary model allowing for harmonizing with other product lines. We need to clarify</p>
+<ul>
+<li>Links/Names in segments and data types: what is that?</li>
+<li>How to represent: Vocabulary domains, value sets and code systems? We have enhanced/updated/corrected the representation and management of tables. We should not violate the work done!</li>
+</ul>
+   <p>TBD (00069)</p>
+  </div>
+ </div>
+</div>
+<div id="tabs-1-folder-9" aria-labelledby="ui-id-9" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+ <div id="tbl">
+  <div id="folder-1-9-inner"> 
+   <p><b>Data Types</b></p>
+   <p>List of all Data Types</p>
+   <p>TBD (00077)</p>
+  </div>
+ </div>
+</div>
+</div>
+<p>Please be aware, that this is an intermediate version. We need to add an explanation here telling readers what has been changed and why.</p>
+<p>The following changes were applied to improve the way the standard is written:</p>
+<ul>
+<li>Message Structures: tree structure, and Must Support and cardinality</li>
+</ul>
+<ul>
+<li>Segments: Must-Support and Cardinality instead of optionality and repetitions</li>
+</ul>
+<ul>
+<li>Domains: restructured into contents instead of chapters</li>
+</ul>
+<ul>
+<li>Encoding: incorporated into the standard instead of different documents</li>
+</ul>
+<ul>
+<li>Transport</li>
+</ul>
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="bootstrap.min.js"> </script>
+<script src="respond.min.js"> </script>
+
+<script src="fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+<script src="jquery/jquery.js"> </script>
+<script src="jquery/jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs-Extension' ).tabs({ 
+active: currentTabIndex, 
+activate: function( event, ui ) { store(ui.newTab.index()); } 
+});
+     
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs-Extension' ).tabs('option', 'active', currentTab);
+}
+</script>
+<ul class="columns-3">
+<li><a href="indexintro.html">Introduction</a><br></li>
+</ul>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="bootstrap.min.js"> </script>
+<script src="respond.min.js"> </script>
+<script src="fhir.js"> </script>
+  <!-- Analytics Below
+================================================== -->
+<script src="jquery/jquery.js"> </script>
+<script src="jquery/jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+ $( '#tabs-1' ).tabs({
+   active: currentTabIndex,
+   activate: function( event, ui ) { store(ui.newTab.index()); }
+ });
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){
+}
+ $( '#tabs' ).tabs('option', 'active', currentTab);
+}
+</script>
+</div>

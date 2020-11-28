@@ -8,6 +8,8 @@ module Scrivener
     base.send(:include, InstanceMethods)
     base.extend(ClassMethods)
   end
+  
+  class FetchError < StandardError; end
 
   module InstanceMethods
     delegate :persistance_dir, :to => :class
@@ -56,23 +58,23 @@ module Scrivener
     end
     
     def get(identifier)
-      cached_obj = Bartelby.get(self, identifier)
+      obj_id = identifier.split('/').last
+      cached_obj = Bartelby.get(self, obj_id)
+      # puts "get #{obj_id}: #{cached_obj}"
       return cached_obj if cached_obj
-      make_and_cache(identifier)
+      make_and_cache(obj_id)
     end
   
     def make_and_cache(identifier)
       path = File.join(Bartelby::MAIN_FILE_STORE, file_key, identifier + Bartelby::PERSISTANCE_FILE_EXT)
       unless File.exist?(path)
-        puts "No object with path #{path}"
-        puts caller
-        raise
+        raise FetchError, "No object with path #{path}"
         return nil
       end
       f = File.open(path)
       begin
         # hash = XmlSimple.xml_in(f)
-        noko = Nokogiri::XML(f)
+        doc = Nokogiri::XML(f)
       rescue
         puts "#{path} failed"
         puts f.inspect
@@ -81,8 +83,8 @@ module Scrivener
         raise
       end
       f.close
-      # obj = make(hash)
-      obj = make(noko)
+      # puts "make #{path}"
+      obj = make(doc, identifier)
       obj.cache
       obj
     end

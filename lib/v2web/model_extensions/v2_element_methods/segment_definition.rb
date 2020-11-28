@@ -20,7 +20,9 @@ module SegmentDefinitionMethods
     fields_xml = []
     fields.each { |f| fields_xml << f.to_resource }
     xml.sub!('FIELDS', fields_xml.join)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    # puts Rainbow(xml).cyan
+    # output = Nokogiri::XML(xml,&:noblanks).to_xml(save_with: Nokogiri::XML::Node::SaveOptions::AS_XML | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS | Nokogiri::XML::Node::SaveOptions::FORMAT)
+    output = Nokogiri::XML(xml,&:noblanks).to_xml
   end
   
   def resource_description_content

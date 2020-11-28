@@ -26,6 +26,7 @@ module V2Web
     attr_reader :chapter
     def initialize(chapter = nil)
       @chapter = chapter.to_s.gsub(/^0+/, '')
+      HL7Parse.set_list_styles(@chapter)
     end
     
     def extract_document(doc, title = 'Test')
@@ -308,14 +309,14 @@ module V2Web
     end
     
     def make_html_code(nodes)
-      html = Gui_Builder_Profile::Code.create(:content => nodes.map { |n| n.to_html}.join("\n") )
+      html = Gui_Builder_Profile::Code.create(:content => nodes.map { |n| n.to_html}.join )
       html.language = 'HTML'
       html.save
       html
     end
     
     def make_html_text(nodes)
-      html = Gui_Builder_Profile::RichText.create(:content => nodes.map { |n| n.to_html }.join("\n") )
+      html = Gui_Builder_Profile::RichText.create(:content => nodes.map { |n| n.to_html }.join )
       html.markup_language = 'HTML'
       html.save
       html
@@ -422,7 +423,7 @@ module V2Web
       @current_text ||= V2Web::Text.create
       if @current_text.content
         @current_text.content_content = @current_text.content_content + extract_p(node)
-        @current_text.ooxml_content = @current_text.ooxml_content + "\n" + node.to_xml
+        @current_text.ooxml_content = @current_text.ooxml_content + "\n" + node.to_xml # remove newline FIXME?
       else
         @current_text.content = Gui_Builder_Profile::RichText.create(:content => extract_p(node))
         xml = Gui_Builder_Profile::Code.create(:content => node.to_xml)
@@ -457,6 +458,11 @@ module V2Web
       '<p>' + texts + '</p>'
     end
     
+    def raw_text(node)
+      extract_plain_text(node)
+    end
+    
+    # Only being used to get titles
     def extract_text(node, preserve_style = false)
       parsed_text = ''
       runs = node.xpath('.//r')
@@ -468,6 +474,7 @@ module V2Web
             run_text << '-'
           elsif t.name == 'br'
             run_text << "\n"
+            # run_text << "<br>"
           else
             run_text << CGI.escapeHTML(t)
           end
@@ -481,6 +488,31 @@ module V2Web
       parsed_text
     end
     
+    def extract_plain_text(node)
+      parsed_text = ''
+      runs = node.xpath('.//r')
+      runs.each do |run|
+        run_text = ''
+        texts = run.xpath('.//t | .//noBreakHyphen | .//br')
+        texts.each do |t|
+          if t.name == 'noBreakHyphen'
+            run_text << '-'
+          elsif t.name == 'br'
+            run_text << "\n"
+          else
+            run_text << t#CGI.escapeHTML(t)
+          end
+        end
+        unless run_text.empty?
+          parsed_text << run_text
+        end
+      end
+      # linkify(parsed_text) if parsed_text =~ url_matcher
+      # emailify(parsed_text) if parsed_text =~ email_matcher
+      parsed_text
+    end
+    
+    
     def url_matcher
       # from https://stackoverflow.com/questions/6038061/regular-expression-to-find-urls-within-a-string/29288898#29288898
             /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/im
@@ -491,7 +523,7 @@ module V2Web
       # if urls.any?
       #   puts text
       # end
-      urls.each { |url| text.gsub!(url, "<a href=\"#{url}\">#{url}</a>") }
+      urls.each { |url| text.gsub!(url, "<a href='#{url}'>#{url}</a>") }
     end
     
     def email_matcher
@@ -500,7 +532,7 @@ module V2Web
     
     def emailify(text)
       email_addresses = email_matcher.match(text)
-      email_addresses.to_a.uniq.each { |ea| text.gsub!(ea, "<a href=\"mailto:#{ea}\">#{ea}</a>") }
+      email_addresses.to_a.uniq.each { |ea| text.gsub!(ea, "<a href='mailto:#{ea}'>#{ea}</a>") }
     end
     
     # Assuming that normal font size in docx is 11pt, which is specified in ooxml in 1/2pt units.
@@ -621,6 +653,81 @@ module V2Web
       @current_text.save
       ChangeTracker.commit
       @current_text = nil
+    end
+    
+    def show_cells(node)
+      node.css('tr').each do |row|
+        celltxts = row.children.select { |n| n.name == 'tc' }.map { |cell| Nokogiri::HTML(extract_raw_tc(cell)).text }
+        puts celltxts.inspect
+      end
+    end
+    
+    def is_ack_table?(node)
+      node.css('p').each do |paragraph|
+        return true if node_style(paragraph) == 'ACK-ChoreographyHeader'
+      end
+      false
+    end
+    
+    def ack_table_msg(node)
+      msg = node.css('tr')[1].children.select { |n| n.name == 'tc' }.map { |cell| Nokogiri::HTML(extract_raw_tc(cell)).text }.first
+      msg
+    end
+    
+    def is_msg_table?(node)
+      node.css('p').each do |paragraph|
+        return true if node_style(paragraph) == 'MsgTableHeader'
+      end
+      false
+    end
+    
+    def is_segment_table?(node)
+      node.css('p').each do |paragraph|
+        return true if node_style(paragraph) == 'AttributeTableHeader'
+      end
+      false
+    end
+    
+    def is_component_table?(node)
+      node.css('p').each do |paragraph|
+        return true if node_style(paragraph) == 'ComponentTableHeader'
+      end
+      false
+    end
+    
+    def node_style(node)
+      node.xpath('.//pPr/pStyle').first&.attribute('val')&.value
+    end
+    
+    def node_styles(node)
+      node.xpath('.//pPr/pStyle').map { |s| s.attribute('val')&.value }
+    end
+    
+    def parse_code_set(set)
+      parts = set.split(/\s*,\s*/)
+      parts.map { |part| part =~ /-/ ? expand_code_range(part) : part }.flatten
+    end
+    
+    def expand_code_range(range)
+      first, last = range.split(/\s*[-]\s*/).map(&:strip)
+      event_codes = [first]
+      code = first
+      until code == last
+        code = code.succ
+        event_codes << code
+      end
+      event_codes
+    end
+    
+    def clear_hl7
+      HL7.classes(:no_imports => true).each do |c|
+        next unless c < Sequel::Model
+        next if c.enumeration?
+        if DB.tables.include?(c.table_name)
+          c.delete
+        end
+      end
+      nil
     end
   end
 end

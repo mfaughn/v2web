@@ -1,0 +1,143 @@
+5  Chapter 5 - Query
+  5.1  CHAPTER 5 CONTENTS
+  5.2  INTRODUCTION
+    5.2.1  Query/response model
+    5.2.2  Evolution of the query standard
+    5.2.3  Query development methodology
+    5.2.4  Response format
+      5.2.4.1  Segment pattern response
+      5.2.4.2  Tabular response
+      5.2.4.3  Display response
+      5.2.4.4  Choosing among available response formats
+    5.2.5  Query specification formats
+      5.2.5.1  Expressing the same data using the variants
+        5.2.5.1.1  Expression as simple parameters
+        5.2.5.1.2  Expression as query by example
+        5.2.5.1.3  Expression as a complex expression
+    5.2.6  Summary chart of query/response pairs
+    5.2.7  Acknowledgment Choreography
+  5.3  QUERY/RESPONSE PROFILE
+    5.3.1  Using the Query Profile
+      5.3.1.1  Query with tabular response example
+      5.3.1.2  Example of Query Profile with tabular response
+    5.3.2  Formal specification of the Query Profile
+      5.3.2.1  Steps for developing a Query Profile
+      5.3.2.2  Query Profile introduction
+      5.3.2.3  Query grammar
+      5.3.2.4  Response grammar
+      5.3.2.5  Response grammar for display response
+      5.3.2.6  QPD input parameter specification
+      5.3.2.7  QPD input parameter field description and commentary
+      5.3.2.8  QBE input parameter specification
+      5.3.2.9  QBE input parameter field description and commentary
+      5.3.2.10  RCP input parameter field description and commentary
+      5.3.2.11  Input specification:  virtual table
+      5.3.2.12  Virtual table field description and commentary
+      5.3.2.13  Output specification for tabular response
+    5.3.3  Query Profile templates
+      5.3.3.1  Query Profile template for query with tabular response
+      5.3.3.2  Query Profile template for query with segment pattern response
+      5.3.3.3  Query Profile for query with display response
+      5.3.3.4  Query Profile table summaries
+  5.4  QUERY/RESPONSE MESSAGE PAIRS
+    5.4.1  QBP/RSP – query by parameter/segment pattern response (events vary)
+    5.4.2  QBP/RTB – query by parameter/tabular response (events vary)
+    5.4.3  QBP/RDY – query by parameter/display response (events vary)
+    5.4.4  QSB – Create subscription (Event Q16)
+    5.4.5  QVR – query for previous events (Event Q17)
+    5.4.6  QCN/ACK – cancel query/acknowledge message (Event J01)
+    5.4.7  QSX /ACK – cancel subscription/acknowledge message (Event J02)
+  5.5  QUERY/RESPONSE MESSAGE SEGMENTS
+    5.5.1  DSP – display data segment
+      5.5.1.1  DSP-1   Set ID – DSP   (SI)   00061
+      5.5.1.2  DSP-2   Display Level   (SI)   00062
+      5.5.1.3  DSP-3   Data Line   (TX)   00063
+      5.5.1.4  DSP-4   Logical Break Point   (ST)   00064
+      5.5.1.5  DSP-5   Result ID   (TX)   00065
+    5.5.2  QAK - query acknowledgment segment
+      5.5.2.1  QAK-1   Query Tag   (ST)   00696
+      5.5.2.2  QAK-2   Query Response Status   (ID)   00708
+      5.5.2.3  QAK-3   Message Query Name   (CWE)   01375
+      5.5.2.4  QAK-4   Hit Count Total   (NM)   01434
+      5.5.2.5  QAK-5   This Payload   (NM)   01622
+      5.5.2.6  QAK-6   Hits Remaining   (NM)   01623
+    5.5.3  QID - query identification segment
+      5.5.3.1  QID-1   Query Tag   (ST)   00696
+      5.5.3.2  QID-2   Message Query Name   (CWE)   01375
+    5.5.4  QPD – query parameter definition segment
+      5.5.4.1  QPD-1   Message Query Name   (CWE)   01375
+      5.5.4.2  QPD-2   Query Tag   (ST)   00696
+      5.5.4.3  QPD-3   User Parameters   (Varies)   01435
+        5.5.4.3.1  Note on QPD usage for query by example variant.
+    5.5.5  QRI – query response instance segment
+      5.5.5.1  QRI-1   Candidate Confidence   (NM)   01436
+      5.5.5.2  QRI-2   Match Reason Code   (CWE)   01437
+      5.5.5.3  QRI-3   Algorithm Descriptor   (CWE)   01438
+    5.5.6  RCP – response control parameter segment
+      5.5.6.1  RCP-1   Query Priority   (ID)   00027
+      5.5.6.2  RCP-2   Quantity Limited Request   (CQ)   00031
+      5.5.6.3  RCP-3   Response Modality   (CNE)   01440
+      5.5.6.4  RCP-4   Execution and Delivery Time   (DTM)   01441
+      5.5.6.5  RCP-5   Modify Indicator   (ID)   01443
+      5.5.6.6  RCP-6   Sort-by Field   (SRT)   01624
+      5.5.6.7  RCP-7   Segment Group Inclusion   (ID)   01594
+    5.5.7  RDF – table row definition segment
+      5.5.7.1  RDF-1   Number of Columns per Row   (NM)   00701
+      5.5.7.2  RDF-2   Column Description   (RCD)   00702
+    5.5.8  RDT – table row data segment
+      5.5.8.1  RDT-1   Column Value   (varies)   00703
+  5.6  AUXILIARY QUERY PROTOCOLS
+    5.6.1  Immediate vs. deferred response
+      5.6.1.1  Immediate response
+      5.6.1.2  Deferred response example
+    5.6.2  Query cancellation
+    5.6.3  Interactive continuation of response messages
+      5.6.3.1  Interactive continuation algorithm and rules
+      5.6.3.2  Use case
+      5.6.3.3  Example of interactive continuation protocol
+      5.6.3.4  Message fragmentation example
+    5.6.4  Batch message as a query response
+    5.6.5  Query error response
+  5.7  PUBLISH AND SUBSCRIBE
+    5.7.1  Introduction
+    5.7.2  Details
+    5.7.3  Examples
+      5.7.3.1  Example of a publish and subscribe Query Profile
+    5.7.4  Establishing a subscription
+    5.7.5  Canceling a subscription
+  5.8  QUERY IMPLEMENTATION CONSIDERATIONS
+  5.9  QUERY/RESPONSE MESSAGE EXAMPLES
+    5.9.1  Query by parameter (QBP) / segment pattern response (RSP)
+      5.9.1.1  Proposed dispense history example and Query Profile
+        5.9.1.1.1  Associated dispense history Query Profile
+      5.9.1.2  Comprehensive pharmacy information examples and Query Profile
+        5.9.1.2.1  Comprehensive pharmacy information Query Profile
+    5.9.2  Query using QSC variant / segment pattern response examples
+      5.9.2.1  Dispense information example and Query Profile
+        5.9.2.1.1  Associated dispense information Query Profile
+      5.9.2.2  Dispense information query showing different instantiation
+      5.9.2.3  Lab results history example
+      5.9.2.4  Lab results history Query Profile
+      5.9.2.5  Lab example different instantiation
+    5.9.3  Query by parameter (QBP) / tabular response (RTB)
+      5.9.3.1  MPI example
+        5.9.3.1.1  MPI Query Profile
+      5.9.3.2  Pharmacy example:
+        5.9.3.2.1  QBP/RTB dispense history Query Profile
+    5.9.4  Query using QSC variant / tabular response (RTB)
+      5.9.4.1  Pharmacy example
+        5.9.4.1.1  QBP/RTB dispense history Query Profile using QSC variant
+    5.9.5  Query by parameter (QBP) / display response (RDY)
+      5.9.5.1  Dispense history display Query Profile
+    5.9.6  Query using QSC variant (QBP) / display response (RDY)
+      5.9.6.1  Dispense history display Query Profile using QSC variant
+    5.9.7  Query by example (QBP) / tabular response (RTB)
+      5.9.7.1  MPI Query Profile using QBE variant
+      5.9.7.2  MPI Query Profile – Non query by example version
+  5.10  SUPERSEDED QUERY/RESPONSE TRIGGER EVENTS AND MESSAGE PAIRS
+    5.10.1  Display message
+      5.10.1.1  Display vs. record-oriented messages
+      5.10.1.2  UDM/ACK - unsolicited display update message (event Q05)
+      5.10.1.3  Continuation of unsolicited display update message
+    5.10.2  Original mode queries
+  5.11  OUTSTANDING ISSUES

@@ -1,9 +1,9 @@
 <section>
  <title value="TITLE"/>
- <code><!-- 0..1 CodeableConcept Classification of section (recommended) --></code>
- <text>
-   NARRATIVE
- </text>
+ <code>
+   <text value="CODE"/>
+ </code>
+ TEXT
  ENTRY
  EMTPY_REASON
  SECTIONS

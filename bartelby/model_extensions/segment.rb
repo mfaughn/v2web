@@ -1,19 +1,17 @@
 module V2Plus
   
-  def self.make_segment(data)
-    if data['segment']
-      V2Plus::Segment.make(data)
-    elsif data['sequence']
-      V2Plus::SegmentSequence.make(data)
-    elsif data['choice']
-      V2Plus::SegmentChoice.make(data)
-    elsif data['exampleSegment']
-      V2Plus::ExampleSegment.make(data)
+  def self.make_segment(node)
+    if node.xpath('./segment').any?
+      V2Plus::Segment.make(node)
+    elsif node.xpath('./sequence').any?
+      V2Plus::SegmentSequence.make(node)
+    elsif node.xpath('./choice').any?
+      V2Plus::SegmentChoice.make(node)
+    elsif node.xpath('./exampleSegment').first
+      V2Plus::ExampleSegment.make(node)
     else
-      raise "What is this?"
-      puts Rainbow(data.pretty_inspect).cyan
-      pp data
-      raise
+      puts node
+      raise "What is this #{node.class}?"
     end
   end
   
@@ -25,12 +23,12 @@ module V2Plus
     LINE      = 'tbl_vline.png'      unless defined?(LINE)
     JOIN_END_OPEN  = 'tbl_vjoin_end-open.png'  unless defined?(JOIN_END_OPEN)
     attr_accessor :any_hl7_segment
-    def self.make(data)
+    def self.make(node, identifier = nil)
       this = new
-      this.repeat   = data['mayRepeat']&.first&.[]('value') == 'true'
-      this.optional = data['optional']&.first&.[]('value') == 'true'
-      this.status   = data['status']&.first&.[]('value')
-      this.any_hl7_segment = data['anyHl7Segment']&.first&.[]('value') == 'true'
+      this.repeat   = node.get_val('mayRepeat') == 'true'
+      this.optional = node.get_val('optional')  == 'true'
+      this.status   = node.at_xpath('status')&.[]('value')
+      this.any_hl7_segment = node.get_val('anyHl7Segment') == 'true'
       this
     end
     
@@ -58,19 +56,30 @@ module V2Plus
       rows
     end
     
+    def row_id
+      begin
+        container.row_id + '-' + container.segments.index(self).succ.to_s
+      rescue
+        puts self.inspect
+        puts container.inspect
+        raise
+      end
+    end
+    
   end
   
   class Segment < AbstractSegment
-    def self.make(data)
-      this = super(data)
-      this.description  = data['description']
-      seg_url = data['segment']&.first&.[]('value')
+    def self.make(node, identifier = nil)
+      this = super(node)
+      # FIXME
+      this.description  = node.css('description > div')&.to_html
+      seg_url = node.get_val('segment')
       if seg_url
-        this.type = V2Plus::SegmentDefinition.get(seg_url.split('/').last)
+        this.type = V2Plus::SegmentDefinition.get(seg_url)
         raise "No segment definition for #{seg_url}" unless this.type
       else
         puts "No segment definition specified..."
-        pp data
+        pp node
       end
       this
     end
@@ -90,9 +99,10 @@ module V2Plus
     def to_message_row(is_last, icons = [])
       icon = is_last ? JOIN_END : JOIN
       locals = {
-        :icon  => icon,
-        :icons => icons,
-        :code  => type.code,
+        :row_id  => row_id,
+        :icon    => icon,
+        :icons   => icons,
+        :code    => type.code,
         :seg_url => "segment-definition-#{type.code}.html"
       }.merge(common_locals)
       puts caller if icons == false
@@ -101,11 +111,11 @@ module V2Plus
   end
   
   class SegmentSequence < AbstractSegment
-    def self.make(data)
-      this = super(data)
-      seq = data['sequence'].first
-      this.name     = seq['name']&.first&.[]('value')
-      this.segments = seq['segmentEntry'].map { |se| V2Plus.make_segment(se) }
+    def self.make(node, identifier = nil)
+      this = super(node)
+      seq = node.at_xpath('./sequence')
+      this.name = seq.get_val('name')
+      this.segments = seq.xpath('./segmentEntry').map { |se| V2Plus.make_segment(se) }
       this
     end
     def info
@@ -123,6 +133,7 @@ module V2Plus
     def to_message_row(is_last, icons = [])
       icon = is_last ? JOIN_END_OPEN : JOIN_OPEN
       locals = {
+        :row_id       => row_id,
         :icon         => icon,
         :icons        => icons,
         :name         => name,
@@ -133,10 +144,11 @@ module V2Plus
   end
   
   class SegmentChoice < AbstractSegment
-    def self.make(data)
-      this = super(data)
-      choice = data['choice'].first
-      this.segments = choice['segmentEntry'].map { |se| V2Plus.make_segment(se) }
+    def self.make(node, identifier = nil)
+      this = super(node)
+      choice = node.at_xpath('./choice')
+      this.name = choice.get_val('name')
+      this.segments = choice.xpath('./segmentEntry').map { |se| V2Plus.make_segment(se) }
       this
     end
     def info
@@ -147,8 +159,9 @@ module V2Plus
       # puts
       # puts Rainbow(info).green
       icon = is_last ? JOIN_END : JOIN
-      or_row_locals = {:icon => (is_last ? BLANK : LINE), :icons => icons}
+      or_row_locals = {:icon => (is_last ? BLANK : LINE), :icons => icons, :row_id => row_id+'or'}
       locals = {
+        :row_id       => row_id,
         :icon         => icon,
         :icons        => icons,
         :name         => name,
@@ -164,10 +177,10 @@ module V2Plus
   end
   
   class ExampleSegment < AbstractSegment
-    def self.make(data)
-      this = super(data)
-      this.name = data['exampleSegment'].first['name']&.first.[]('value')
-      this.description  = data['description']
+    def self.make(node, identifier = nil)
+      this = super(node)
+      this.name = node.get_val('exampleSegment')
+      this.description  = node.css('description > div')&.to_html
       this
     end
     def info
@@ -176,6 +189,7 @@ module V2Plus
     def to_message_row(is_last, icons = [])
       icon = is_last ? JOIN_END : JOIN
       locals = {
+        :row_id      => row_id,
         :icon        => icon,
         :icons       => icons,
         :name        => name,

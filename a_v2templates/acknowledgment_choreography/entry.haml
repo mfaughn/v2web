@@ -1,0 +1,39 @@
+%div.ack-chor-original-mode{:id => "#{html_id}-original"}
+  - title = "Original Mode Acknowledgement Choreography for #{msg_code}"
+  - if depth == 2
+    %h2
+      = title
+  - if depth == 3
+    %h3
+      = title
+  - if depth == 4
+    %h4
+      = title
+  - if depth == 5
+    %h5
+      = title
+  - if depth == 6
+    %h6
+      = title
+  %p
+    = o_ack
+
+%div.ack-chor-enhanced-mode{:id => "#{html_id}-enhanced"}
+  - title = "Enhanced Mode Acknowledgement Choreography for #{msg_code}"
+  - if depth == 2
+    %h2
+      = title
+  - if depth == 3
+    %h3
+      = title
+  - if depth == 4
+    %h4
+      = title
+  - if depth == 5
+    %h5
+      = title
+  - if depth == 6
+    %h6
+      = title
+  %div
+    = e_mode_table
