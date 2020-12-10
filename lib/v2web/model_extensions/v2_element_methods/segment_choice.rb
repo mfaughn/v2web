@@ -4,7 +4,7 @@ module SegmentChoiceMethods
     segments_xml = []
     segments.each { |seg| segments_xml << seg.to_segment_entry }
     xml.sub!('SEGMENT_ENTRIES', segments_xml.join)
-    Nokogiri::XML(xml,&:noblanks).root.to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
   end
   
   def to_fsh

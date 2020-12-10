@@ -1,32 +1,49 @@
 module Docx2HTML
   class Table
-    PAGE_TWIPS = 9360.0
+    # 1440 twips = 1 inch = 96 pixels
+    # 15 twips   = 1 pixel
+    # page is 6.5 inches b/w margins
+    PAGE_TWIPS = 9360.0 unless const_defined?('PAGE_TWIPS')
     
     attr_reader :tbl, :rows, :props, :twips, :col_widths, :chapter
     attr_accessor :html
 
     def initialize(tbl, opts = {})
+      # pp opts.reject { |k,v| [:links, :images, :embeds, :image_substitutions].include?(k) };puts
       @chapter = opts[:chapter]
       @tbl     = tbl
       @opts    = opts
       @props   = tbl.css('tblPr')
-      @border  = _tbl_borders(@props)
       @col_widths = tbl.css('tblGrid gridCol').map { |n| n['w'].to_i }
       @twips = calculate_twips(@col_widths)
+      @global_cell_borders = global_cell_borders(@props)
       @rows  = extract_rows
       create_grid
-      @html = ['<table class="v2">']
+      @html = []
     end
 
     def process
+      t_borders = tbl_borders(@props)
+      start = '<table class="v2"'
+      tbl_width
+      start << ' style="width: ' + tbl_width.to_s + '%; '  
+      start << t_borders if t_borders
+      start << '">'
+      @html << start
+      # puts Rainbow(html.join).magenta if t_borders
+      
       add_caption
       add_colgroup   
       rows.each_with_index { |row, i| html << process_row(row, i) }
-      @html << '</table>'
+      @html << '</table><br/>'
       # html.each { |e| puts e.is_a?(String) ? e.class.name : Rainbow(e.class.name).red }
       @html = @html.join
-      # puts Rainbow(html).magenta
       html
+    end
+    
+    def tbl_width
+      w = ((@col_widths.reduce(&:+)/PAGE_TWIPS) * 100).ceil
+      w > 100 ? 100 : w
     end
     
     def add_caption
@@ -34,8 +51,7 @@ module Docx2HTML
       return unless caption
       @html << "<caption>#{caption}</caption>"
     end
-      
-    
+          
     def extract_rows
       rows = []
       xml_rows = tbl.css('tr')
@@ -50,7 +66,7 @@ module Docx2HTML
           when 'tc'
             row.xml_cells << c
           when 'trPr'
-            row.html_props = extract_properties(c)
+            row.html_props = extract_row_properties(c)
           when 'bookmarkStart', 'bookmarkEnd'
             # ignore
           when 'tblPrEx'
@@ -138,9 +154,11 @@ module Docx2HTML
       cell.xml.each do |c|
         case c.name
         when 'p'
-          paragraphs << Docx2HTML::Processor.new(c, @opts).process(:debug => true, :raw => true, :chapter => @chapter)
+          pg = Docx2HTML::Processor.new(c, @opts).process(:debug => true, :raw => true, :chapter => @chapter)
+          # puts pg;puts
+          paragraphs << pg
         when 'tcPr'
-          html_props = extract_properties(c)
+          html_props = extract_cell_properties(c)
           # puts "html_props"
           # pp html_props
         when 'bookmarkEnd'
@@ -154,9 +172,11 @@ module Docx2HTML
         raise "Unknown elements in tc"
       end
       tx = first ? 'th' : 'td'
+      tx = 'td'
       start_tx = "<#{tx}"
       if html_props
         # puts Rainbow(html_props.inspect).orange
+        # puts Rainbow(@global_cell_borders).cyan
         props_str = html_props.map { |k,v| "#{k}='#{v}'" }.join(' ')
         start_tx << ' ' + props_str
       end
@@ -166,38 +186,16 @@ module Docx2HTML
       cell_html
     end
     
-    # <tcBorders>
-    #   <top val="double" sz="4" space="0" color="auto"/>
-    #   <left val="nil"/>
-    #   <bottom val="single" sz="4" space="0" color="auto"/>
-    #   <right val="nil"/>
-    # </tcBorders>
-    def extract_borders(node)
-      style = ''
-      hash = node2hash(node)
+    def extract_tc_borders(cell_node)
+      borders_hash = @global_cell_borders.dup
+      borders_node = cell_node.at_css('tcBorders')
+      borders_hash.merge!(node2hash(borders_node)) if borders_node
       # pp hash
-      hash.each do |k, v|
-        # pp v
-        v.each do |k1, v1|
-          next if v1 == 'nil'
-          case k1
-          when :val
-            unless v1 == 'single'
-              style << "border-#{k}-style:#{v1}; "
-            end
-          when :sz
-            width = (v1.to_i+3)/4
-            style << "border-#{k}-width:#{}px; " if width > 1
-          when :color
-            style << "border-#{k}-color:#{v1}; " unless v1 == 'auto'
-          when :space
-            puts "Border space is #{v1}" unless v1 == '0'
-          else
-            raise Rainbow(k.inspect).red
-          end
-        end
+      cell_style = []
+      borders_hash.each do |edge, data|
+        cell_style << tc_border(edge, data)
       end
-      style
+      cell_style.any? ? cell_style.join : nil
     end
   
     def node2hash(node)
@@ -211,29 +209,106 @@ module Docx2HTML
       pr
     end
     
-    def extract_properties(node)
-      pr = node2hash(node)
+    def extract_cell_properties(node)
+      html_props = {}
+      style = ''
+      classes = []
+      
+      cell_borders = extract_tc_borders(node)
+      style << cell_borders if cell_borders
+
+      tcPr = node2hash(node)
       deletables = [:cantSplit, :vMerge, :tcBorders]
+      deletables.each { |d| tcPr.delete(d) }
+
+      if tcPr[:gridSpan]
+        html_props['colspan'] = tcPr[:gridSpan][:val].to_s
+        tcPr.delete(:gridSpan)
+      end
+      if tcPr[:shd]
+        if tcPr.dig(:shd, :fill)
+          shdval = tcPr[:shd][:val]
+          fill   = tcPr[:shd][:fill]
+          if fill == 'FFFFFF'
+            case shdval
+            when 'nil'
+              # do nothing
+            when 'pct10'
+              style << "background-color: #E6E6E6; "
+            else
+              "What to do with grey shade val of #{shdval}?"
+            end
+          else
+            case shdval
+            when 'nil', 'clear'
+              style << "background-color:##{fill}; "
+              # do nothing
+            when 'pct10'
+              style << "background-color:#E1E1E1; "
+            when 'pct20'
+              style << "background-color:#CDCDCD; "
+            when 'pct50'
+              style << "background-color:gray; "
+            when 'diagStripe'
+              style << "background-color:#708090; " # replacing with slate gray for now
+              classes << 'stippled-gray-background' # maybe we can do something with this later...?
+            else
+              puts "What to do with non-grey shade val of #{tcPr[:shd][:val]}?"
+            end
+          end
+        end
+        # tcPr['background-color'] = tcPr[:shd][:fill] if tcPr.dig(:shd, :fill) && !tcPr[:shd][:fill] == 'FFFFFF'
+        style << "color:#{tcPr[:shd][:color]}; " if tcPr.dig(:shd, :color) && !tcPr[:shd][:color] == 'auto'
+        puts Rainbow("Table cell pattern is #{tcPr[:shd][:val]}") if tcPr.dig(:shd, :val) && !tcPr[:shd][:val] == 'clear'
+        tcPr.delete(:shd)
+      end
+      if tcPr[:tcW]
+        style << "width:#{col_twips_to_percentage(tcPr[:tcW][:w])}; " if tcPr[:tcW][:w]
+        puts Rainbow("Table cell width not dxa -- #{tcPr[:tcW][:type]}").orange unless tcPr.dig(:tcW, :type) == 'dxa'
+        tcPr.delete(:tcW)
+      end
+      if tcPr[:vAlign]
+        style << "vertical-align:#{tcPr[:vAlign][:val]}"
+        tcPr.delete(:vAlign)
+      end
+      if tcPr[:tcMar]
+        # ignore for now...
+        tcPr.delete(:tcMar)
+      end
+      if tcPr[:hideMark]
+        # ignore for now...
+        tcPr.delete(:hideMark)
+      end
+      if tcPr[:textDirection]
+        classes << 'rotate-text-270'
+        tcPr.delete(:textDirection)
+      end
+      unprocessed_keys = tcPr.keys.select { |k| k.is_a?(Symbol) }
+      unless unprocessed_keys.empty?
+        puts 'Unprocessed tcPr keys ' + Rainbow(unprocessed_keys).red 
+        puts node
+        raise
+      end
+      html_props['style'] = style unless style.empty?
+      html_props['class'] = classes.join(' ') if classes.any?
+      # pp html_props
+      html_props
+    end
+
+    def extract_row_properties(node)
+      pr = node2hash(node)
+      deletables = [:cantSplit]
       deletables.each { |d| pr.delete(d) }
       # consolidations = {:trHeight => :val}
       # consolidations.each { |key, val| pr[key] = pr[key][val] if pr[key] }
       html_props = {}
       style = ''
       classes = []
-  
-      cell_borders = node.css('tcBorders').first
-      if cell_borders
-        style << extract_borders(cell_borders)
-      end
-    
+
       if pr[:tblHeader]
         # puts node
         classes << 'v2-table-header'
         pr.delete(:tblHeader)
-      end
-      if pr[:gridSpan]
-        html_props['colspan'] = pr[:gridSpan][:val].to_s
-        pr.delete(:gridSpan)
       end
       if pr[:jc]
         # TODO do we need to do anything for this?
@@ -244,29 +319,6 @@ module Docx2HTML
         # pr['height'] = pr[:trHeight][:val] if pr.dig(:trHeight, :val) # FIXME OOXML spec says this value is twentieths of a point but vals from docx are way too small for this to be correct.  Omitting due to discrepency
         pr.delete(:trHeight)
       end
-      if pr[:shd]
-        pr['background-color'] = pr[:shd][:fill] if pr.dig(:shd, :fill) && !pr[:shd][:fill] == 'FFFFFF'
-        style << "color:#{pr[:shd][:color]}; " if pr.dig(:shd, :color) && !pr[:shd][:color] == 'auto'
-        puts Rainbow("Table cell pattern is #{pr[:shd][:val]}") if pr.dig(:shd, :val) && !pr[:shd][:val] == 'clear'
-        pr.delete(:shd)
-      end
-      if pr[:tcW]
-        style << "width:#{col_twips_to_percentage(pr[:tcW][:w])}; " if pr[:tcW][:w]
-        puts Rainbow("Table cell width not dxa -- #{pr[:tcW][:type]}").orange unless pr.dig(:tcW, :type) == 'dxa'
-        pr.delete(:tcW)
-      end
-      if pr[:vAlign]
-        style << "vertical-align:#{pr[:vAlign][:val]}"
-        pr.delete(:vAlign)
-      end
-      if pr[:tcMar]
-        # ignore for now...
-        pr.delete(:tcMar)
-      end
-      if pr[:hideMark]
-        # ignore for now...
-        pr.delete(:hideMark)
-      end
       if pr[:wAfter]
         # ignore for now...
         pr.delete(:wAfter)
@@ -275,34 +327,120 @@ module Docx2HTML
         # ignore for now...
         pr.delete(:gridAfter)
       end
+      if pr[:tblCellSpacing]
+        # can we ignore????
+        pr.delete(:tblCellSpacing)
+      end
+      if pr[:trPrChange]
+        # can we ignore????
+        pr.delete(:trPrChange)
+      end
       if pr[:textDirection]
         classes << 'rotate-text-270'
         pr.delete(:textDirection)
       end
       unprocessed_keys = pr.keys.select { |k| k.is_a?(Symbol) }
       unless unprocessed_keys.empty?
-        puts Rainbow(unprocessed_keys).red 
+        puts 'Unprocessed trPr keys ' + Rainbow(unprocessed_keys).red 
         puts node
         raise
       end
       html_props['style'] = style unless style.empty?
       html_props['class'] = classes.join(' ') if classes.any?
+      # pp html_props
       html_props
     end
-  
-    def _add_inline_style(property, value)
+
+    def tbl_borders(node)
+      borders_node = node.at_css('tblBorders')
+      return nil unless borders_node
+      hash = node2hash(borders_node).select { |edge,_| %i{top bottom left right}.include?(edge) }
+      border_style = []
+      hash.each do |edge, data|
+        border_style << tbl_border(edge, data)
+      end
+      border_style.any? ? border_style.join : nil
     end
-  
-    def _tbl_borders(node)
-      borders = {}
-      node.css('tblBorders').children.each do |b|
-        borders[b.name.to_sym] = {}
-        b.attributes.map do |name, battr|
-          borders[b.name.to_sym][battr.name.to_sym] = battr.value
+    
+    def global_cell_borders(node)
+      borders_node = node.at_css('tblBorders')
+      return {} unless borders_node
+      all_borders = node2hash(borders_node)
+      gcb = {}
+      if all_borders[:insideH]
+        gcb[:top]    = all_borders[:insideH]
+        gcb[:bottom] = all_borders[:insideH]
+      end
+      if all_borders[:insideV]
+        gcb[:right] = all_borders[:insideV]
+        gcb[:left]  = all_borders[:insideV]
+      end
+      gcb
+    end
+    
+    def tbl_border(edge, data)
+      sz = data[:sz]
+      width  = sz ? (sz.to_i+3)/4 : 1
+      border = "border-#{edge}: #{width}px "
+      style = data[:val]
+      if style && style != 'nil' && style != 'single'
+        puts Rainbow("Cell border style is #{style}").red unless style == 'double'
+        border << "#{style} "
+      else
+        border << 'solid '
+      end
+      color = data[:color]
+      if color && color != 'auto'
+        border << color
+      else
+        border << 'black'
+      end
+      border << '; '
+      # pp v
+      data.each do |k, v|
+        case k
+        when :val, :sz, :color
+        when :space
+          puts "Table border space is #{v}" unless v == '0'
+        else
+          raise Rainbow(k.inspect).red
         end
       end
+      border    
     end
-  
+    
+    def tc_border(edge, data)
+      style = data[:val]
+      return "border-#{edge}:none; " if style == 'nil'
+      sz    = data[:sz]
+      puts "Border size is #{sz}" if sz.to_i > 6
+      width = sz ? (sz.to_i+5)/6 : 1        
+      border = "border-#{edge}: #{width}px "
+      if style && style != 'single'
+        puts Rainbow("Cell border style is #{style}").red unless style == 'double'
+        border << "#{style} "
+      else
+        border << 'solid '
+      end
+      color = data[:color]
+      if color && color != 'auto' && color != '000000'
+        border << "##{color}; "
+      else
+        border << "black; "
+      end
+      # pp v
+      data.each do |k, v|
+        case k
+        when :val, :sz, :color
+        when :space
+          puts "Cell border space is #{v}" unless v == '0'
+        else
+          raise Rainbow(k.inspect).red
+        end
+      end
+      border
+    end
+    
     def col_width_percentages(cols)
       # 1440 twips = 1 inch
       # max width of table on page (inside margins) is 6.5 inch = 9360twips

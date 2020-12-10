@@ -2,7 +2,7 @@ module SegmentMethods
   def to_resource
     xml = HL7.get_instance_template(:message_structure, 'segment')
     xml.sub!('URL', type.local_url_name)
-    Nokogiri::XML(xml,&:noblanks).root.to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
   end
   
   def to_fsh
@@ -14,16 +14,21 @@ module SegmentMethods
   def any_segment
     unless type
       puts inspect
-      puts segment_sequence.structure&.code.inspect
-      puts segment_sequence.structure&.origin.inspect
+      puts containing_structure.code.inspect
+      puts containing_structure.origin.inspect
     end
     type.name == 'Hxx'
   end
   
   def resource_description
      if description && description.strip[0]
-       xml = HL7.get_instance_template(:common, 'description').sub('VALUE', "<p>#{description.strip}</p>")
-       Nokogiri::XML(xml,&:noblanks).root.to_s
+       xml = HL7.get_instance_template(:common, 'description').sub('VALUE', "<p>#{description.strip.hl7}</p>")
+       begin
+         Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
+       rescue
+         puts xml
+         raise
+       end
      else
        ''
      end

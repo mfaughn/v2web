@@ -10,7 +10,7 @@ module BasicMethods
   def to_resource
     xml = HL7.get_instance_template(:basic, 'base')
     xml.sub!('URL', local_url_name)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
 end

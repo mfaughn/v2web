@@ -25,7 +25,12 @@ module DataTypeMethods
     comps = []
     components.each { |c| comps << c.to_resource }
     xml.sub!('COMPONENTS', comps.join("\n"))
-    Nokogiri::XML(xml,&:noblanks).to_s
+    begin
+      Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
+    rescue
+      puts xml
+      raise
+    end
   end
   
   def resource_notes

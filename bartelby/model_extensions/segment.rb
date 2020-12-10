@@ -103,7 +103,7 @@ module V2Plus
         :icon    => icon,
         :icons   => icons,
         :code    => type.code,
-        :seg_url => "segment-definition-#{type.code}.html"
+        :seg_url => "/segment-definition/#{type.code}.html"
       }.merge(common_locals)
       puts caller if icons == false
       row = V2Plus.render_with_locals(:message_structure, :segment, locals)

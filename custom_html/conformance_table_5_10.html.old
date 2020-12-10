@@ -1,0 +1,250 @@
+<table class="center striped-rows table_v2web">
+  <colgroup>
+    <col span="1" style="width: 15%;">
+    <col span="1" style="width: 70%;">
+    <col span="1" style="width: 15%;">
+  </colgroup>
+
+<caption>Table 5.10: Cardinality</caption>
+<tbody><tr class="tr_v2web">
+<th class="emphasis-header table_v2web">
+<p class="p_v2web">
+<strong>Cardinality</strong>
+</p>
+
+</th>
+
+<th class="emphasis-header table_v2web">
+<p class="p_v2web">
+<strong>Interpretation</strong>
+</p>
+
+</th>
+
+<th class="emphasis-header table_v2web">
+<p class="p_v2web">
+<strong>Valid Usage</strong>
+</p>
+
+</th>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[0..0]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element is never present.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+X
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[0..1]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element may be omitted, and it can have at most one occurrence.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+RE, C(a/b), O
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[1..1]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element must have exactly one occurrence.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+R
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[0..n]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element may be omitted or may have up to <strong>n</strong> occurrences.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+RE, C(a/b), O
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[1..n]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element must appear at least once and may have up to <strong>n</strong> occurrences.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+R
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[0..*]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element may be omitted or may have an unlimited number of occurrences.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+RE, C(a/b), O
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[1..*]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element must appear at least once and may have an unlimited number of occurrences.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+R
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[m..n]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element must have at least <strong>m</strong> occurrences and may have at most <strong>n</strong> occurrences. When the usage indicator is RE, the element may be omitted (“zero occurrences”). <strong>m</strong> must be greater than 1 and <strong>n</strong> must be greater than or equal to <strong>m</strong>; the case where <strong>m</strong> equals 1 is addressed separately.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+R, RE
+</p>
+
+</td>
+
+</tr>
+
+<tr class="tr_v2web">
+<td class="emphasis-column table_v2web">
+<p class="p_v2web centered">
+<strong>[m..*]</strong>
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+Element must have at least "m" occurrences and may have an unlimited number of occurrences. When the usage indicator is RE, the element may be omitted (“zero occurrences”). <strong>m</strong> must be greater than 1; the case where <strong>m</strong> equals 1 is addressed separately.
+</p>
+
+</td>
+
+<td class="table_v2web">
+<p class="p_v2web">
+R, RE
+</p>
+
+</td>
+
+</tr>
+
+</tbody>
+</table>

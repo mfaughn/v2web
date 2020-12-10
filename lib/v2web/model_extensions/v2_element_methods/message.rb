@@ -48,13 +48,13 @@ module MessageMethods
     puts name unless self.structure
     xml.sub!('MESSAGE_STRUCTURE_URL', structure.local_url_name)
     xml.sub!('DESCRIPTION', resource_description_content)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
   def resource_description_content
      if description_content && description_content.strip[0]
        xml = HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
-       Nokogiri::XML(xml,&:noblanks).root.to_s
+       Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
      else
        ''
      end

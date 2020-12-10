@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+	<Relationship Id="rId142" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId143" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId144" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId145" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId146" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId147" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId148" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId149" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId180" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId181" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId182" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId40" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId41" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId42" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId43" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId44" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId45" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId46" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId47" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId48" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId49" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId183" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId184" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId185" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId186" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId187" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId188" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId189" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId220" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId221" Target="header3.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"/>
+	<Relationship Id="rId222" Target="header4.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"/>
+	<Relationship Id="rId223" Target="footer4.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"/>
+	<Relationship Id="rId80" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId81" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId82" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId83" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId84" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId85" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId86" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId87" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId88" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId89" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId224" Target="fontTable.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"/>
+	<Relationship Id="rId225" Target="theme/theme1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"/>
+	<Relationship Id="rId110" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId111" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId112" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId113" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId114" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId115" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId116" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId117" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId118" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId119" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId150" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId151" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId152" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId10" Target="media/image2.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId11" Target="embeddings/oleObject1.bin" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId12" Target="file:///D:\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\8CXE3V7V\V282_CH02C_CodeTables.doc" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId13" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId14" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId15" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId16" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId17" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId18" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId19" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId153" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId154" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId155" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId156" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId157" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId158" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId159" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId190" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId191" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId192" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId50" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId51" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId52" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId53" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId54" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId55" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId56" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId57" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId58" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId59" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId193" Target="http://iccbba.org/technicalspecification.pdf" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId194" Target="http://www.unitsofmeasure.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId195" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId196" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId197" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId198" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId199" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId90" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId91" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId92" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId93" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId94" Target="http://medical.nema.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId95" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId96" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId97" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId98" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId99" Target="media/image3.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId120" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId121" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId122" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId123" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId124" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId125" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId126" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId127" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId128" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId129" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId160" Target="media/image4.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId161" Target="embeddings/Microsoft_Word_97_-_2004_Document1.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId162" Target="media/image5.emf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId20" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId21" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId22" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId23" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId24" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId25" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId26" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId27" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId28" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId29" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId163" Target="embeddings/Microsoft_Word_97_-_2004_Document2.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId164" Target="media/image6.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId165" Target="embeddings/Microsoft_Word_97_-_2004_Document3.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId166" Target="media/image7.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId167" Target="embeddings/Microsoft_Word_97_-_2004_Document4.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId168" Target="media/image8.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId169" Target="embeddings/Microsoft_Word_97_-_2004_Document5.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId200" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId201" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId202" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId203" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId60" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId61" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId62" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId63" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId64" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId65" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId66" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId67" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId68" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId69" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId204" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId205" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId206" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId207" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId208" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId209" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId130" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId131" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId132" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId133" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId134" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId135" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId136" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId137" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId138" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId139" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId170" Target="media/image9.wmf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId171" Target="embeddings/Microsoft_Word_97_-_2004_Document6.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId172" Target="media/image10.emf" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId30" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId31" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId32" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId33" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId34" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId35" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId36" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId37" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId38" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId39" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId173" Target="embeddings/Microsoft_Word_97_-_2004_Document7.doc" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId174" Target="header1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"/>
+	<Relationship Id="rId175" Target="header2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"/>
+	<Relationship Id="rId176" Target="footer1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"/>
+	<Relationship Id="rId177" Target="footer2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"/>
+	<Relationship Id="rId178" Target="footer3.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"/>
+	<Relationship Id="rId179" Target="media/image11.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId210" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId211" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId212" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId213" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId70" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId71" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId72" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId73" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId74" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId75" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId76" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId77" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId78" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId79" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId214" Target="http://www.unitsofmeasure.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId215" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId216" Target="http://www.unitsofmeasure.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId217" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId218" Target="http://www.unitsofmeasure.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId219" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId1" Target="../customXml/item1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"/>
+	<Relationship Id="rId2" Target="numbering.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"/>
+	<Relationship Id="rId3" Target="styles.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"/>
+	<Relationship Id="rId4" Target="settings.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"/>
+	<Relationship Id="rId100" Target="embeddings/oleObject2.bin" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject"/>
+	<Relationship Id="rId101" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId102" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId103" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId104" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId105" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId106" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId107" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId108" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId109" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId5" Target="webSettings.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings"/>
+	<Relationship Id="rId6" Target="footnotes.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes"/>
+	<Relationship Id="rId7" Target="endnotes.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes"/>
+	<Relationship Id="rId8" Target="media/image1.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+	<Relationship Id="rId9" Target="mailto:ord@lists.hl7.org" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId140" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+	<Relationship Id="rId141" Target="V29_CH02C_Tables.docx" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"/>
+</Relationships>

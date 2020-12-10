@@ -1,0 +1,267 @@
+<table class='center striped-rows table_v2web'>
+<tbody>
+  <colgroup>
+     <col span="1" style="width: 5%;">
+     <col span="1" style="width: 15%;">
+     <col span="1" style="width: 40%;">
+     <col span="1" style="width: 40%;">
+  </colgroup>
+<caption>Table 5.2: Usage Requirements Sending Applications</caption>
+<tr class='tr_v2web'>
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Indicator</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Description</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Implementation Requirement</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Operational Requirement</strong>
+</p>
+
+</th>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>R</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Required
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ support an element with an &ldquo;R&rdquo; usage designation.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ value an element with an &ldquo;R&rdquo; usage designation.
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>RE</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Required, but may be empty
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ support an element with an &ldquo;RE&rdquo; usage designation.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ value an element with an &ldquo;RE&rdquo; designation if data is known for that element.
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>C</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Undeclared Conditional
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+specified.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Not Applicable.
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>)</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Conditional
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+The application must support the implementation requirements as indicated by the true (&ldquo;a&rdquo;) outcome and by the false (&ldquo;b&rdquo;) outcome usage indicators in the declared conditional definition.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+.
+</p>
+
+<p class='p_v2web' style=''>
+ or X&rdquo;:
+</p>
+
+<p class='p_v2web' style=''>
+ or X&rdquo;.
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>X</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Not supported
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+There are no implementation requirements.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ not value an element with an &ldquo;X&rdquo; usage designation.
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>O</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Optional
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+There are no implementation requirements. The &ldquo;O&rdquo; usage designation is a placeholder indicating that the usage for this element has not yet been specified.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Not Applicable. 
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>B</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Backwards Compatible
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+ Another usage indicator may be assigned in a derived profile.
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Not Applicable.
+</p>
+
+</td>
+
+</tr>
+
+</tbody>
+</table>

@@ -3,15 +3,32 @@ module AbstractSegmentMethods
     structure || segment_sequence || segment_choice
   end
   
+  def containing_structure
+    c = container
+    if c.class.name =~ /::MessageStructure/
+      c
+    else
+      c.containing_structure
+    end
+  end
+  
   def to_segment_entry
     xml = HL7.get_instance_template(:message_structure, 'segment_entry')
     [:repeat, :optional, :any_segment].each do |methd|
       xml.sub!(methd.to_s.upcase, send(methd).to_s)
     end
-    xml.sub!('STATUS', resource_status)
+    xml.sub!('REPEAT',      repeat.to_s)
+    xml.sub!('OPTIONAL',    optional.to_s)
+    xml.sub!('ANY_SEGMENT', any_segment.to_s)
+    xml.sub!('STATUS',      resource_status)
     xml.sub!('DESCRIPTION', resource_description)
-    xml.sub!('SEGMENT', to_resource)
-    Nokogiri::XML(xml,&:noblanks).root.to_s
+    xml.sub!('SEGMENT',     to_resource)
+    begin
+      Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
+    rescue
+      puts xml
+      raise
+    end
   end
   
   def to_segment_entry_fsh

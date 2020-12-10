@@ -36,7 +36,7 @@ module MessageStructureMethods
     segments_xml = []
     segments.each { |seg| segments_xml << seg.to_segment_entry }
     xml.sub!('SEGMENT_ENTRIES', segments_xml.join)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
   def diff(other)

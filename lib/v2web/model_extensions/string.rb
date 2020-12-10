@@ -32,7 +32,7 @@ class String
   end
   unless const_defined?("ENTITY_CODE_MAP")
     ENTITY_CODE_MAP = {
-      '&amp;'   => '&#38;',
+      # '&amp;'   => '&#38;', 
       '&ndash;' => '&#8211;',
       '&copy;'  => '&#169;',
       '&reg;'   => '&#174;',
@@ -44,9 +44,9 @@ class String
       '&check;' => '&#10003;', #"√"
       '&le;'    => '&#8804;', # '≤'
       '&ge;'    => '&#8805;', # '≥'
-      '&ne;'    => '&#8800;', # "≠"
-      '&gt;'    => '&#62;',
-      '&lt;'    => '&#60;'
+      '&ne;'    => '&#8800;' # "≠"
+      # '&gt;'    => '&#62;',
+      # '&lt;'    => '&#60;'
     }
   end
   def html_entity_code_to_entity_number

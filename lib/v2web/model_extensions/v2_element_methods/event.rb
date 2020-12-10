@@ -18,13 +18,13 @@ module EventMethods
     xml.sub!('MESSAGE_URL', trigger.local_url_name)
     xml.sub!('RESPONSE', resource_response)
     xml.sub!('ACKNOWLEDGMENT', resource_ack)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
   def resource_description_content
      if description_content && description_content.strip[0]
        xml = HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
-       Nokogiri::XML(xml,&:noblanks).root.to_s
+       Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
      else
        ''
      end
@@ -33,7 +33,7 @@ module EventMethods
   def resource_response
      if response
        xml = HL7.get_instance_template(:event, 'response').sub('MESSAGE_URL', response.local_url_name)
-       Nokogiri::XML(xml,&:noblanks).root.to_s
+       Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
      else
        ''
      end
@@ -42,7 +42,7 @@ module EventMethods
   def resource_ack
      if ack
        xml = HL7.get_instance_template(:event, 'acknowledgment').sub('MESSAGE_URL', ack.local_url_name)
-       Nokogiri::XML(xml,&:noblanks).root.to_s
+       Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
      else
        ''
      end

@@ -74,7 +74,7 @@ module Scrivener
       f = File.open(path)
       begin
         # hash = XmlSimple.xml_in(f)
-        doc = Nokogiri::XML(f)
+        doc = Nokogiri::XML(f, &:noent)
       rescue
         puts "#{path} failed"
         puts f.inspect

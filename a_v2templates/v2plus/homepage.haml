@@ -1,6 +1,6 @@
 .container
   / container
-  %h1.self-link-parent
+  %h1.self-link-parent.v2
     %span.sectioncount
       1
       %a{:name => "1"}
@@ -8,7 +8,7 @@
   %p{:style => "background-color: gold; border:1px solid maroon; padding: 5px;;"}
     This is the working draft for what is preliminary called
     %b HL7v2+
-  %h1.self-link-parent
+  %h1.self-link-parent.v2
     %span.sectioncount
       2
       %a{:name => "2"}
@@ -205,7 +205,7 @@
         %p.content
         %p.content TBD01450: This is where implementations begin and guides should be listed. Maintaining the implementation guides on this platform will be too tedious, so that a list with hyperlinks should be sufficient.
         %p
-  %h1.self-link-parent
+  %h1.self-link-parent.v2
     %span.sectioncount
       3
       %a{:name => "3"}
@@ -322,30 +322,29 @@
     %li Encoding: incorporated into the standard instead of different documents
   %ul
     %li Transport
-  / JS and analytics only.
-  /
-    Analytics Below
-    \==================================================
-  %script{:src => "js/jquery.js"} :cdata
-  %script{:src => "js/jquery-ui.min.js"} :cdata
-  %ul.columns-3
-    %li
-      %a{:href => "indexintro.html"} Introduction
-      %br/
-  /
-    Bootstrap core JavaScript
-    \==================================================
-  / Placed at the end of the document so the pages load faster
-  %script{:src => "js/jquery.js"} :cdata
-  / note keep space here, otherwise it will be transformed to empty tag -> fails
-  %script{:src => "js/bootstrap.min.js"} :cdata
-  %script{:src => "js/respond.min.js"} :cdata
-  %script{:src => "js/fhir.js"} :cdata
-  /
-    Analytics Below
-    \==================================================
-
-  %script{:src => "js/jquery-ui.min.js"} :cdata
+    
+    
+  - # / JS and analytics only.
+  - # /
+  - #   Analytics Below
+  - #   \==================================================
+  - # %script{:src => "js/jquery.js"} :cdata
+  - # %script{:src => "js/jquery-ui.min.js"} :cdata
+  - # 
+  - # /
+  - #   Bootstrap core JavaScript
+  - #   \==================================================
+  - # / Placed at the end of the document so the pages load faster
+  - # %script{:src => "js/jquery.js"} :cdata
+  - # / note keep space here, otherwise it will be transformed to empty tag -> fails
+  - # %script{:src => "js/bootstrap.min.js"} :cdata
+  - # %script{:src => "js/respond.min.js"} :cdata
+  - # %script{:src => "js/fhir.js"} :cdata
+  - # /
+  - #   Analytics Below
+  - #   \==================================================
+  - # 
+  - # %script{:src => "js/jquery-ui.min.js"} :cdata
   :javascript
     try {
        var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');

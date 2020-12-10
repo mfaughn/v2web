@@ -11,12 +11,19 @@ module V2Plus
       # this.focus = nodeset.get_val('focus')
       texts = []
       sections = []
+      # if this.title =~ /Segment groups/
+      #   puts Rainbow(node).cyan;puts
+      #   node.children.each do |child|
+      #     puts child.name
+      #   end
+      # end
       node.children.each do |child|
         sections << child if child.name == 'section'
         next unless child.name == 'text'
         next unless child.children.any?
         texts << child
       end
+      # puts "#{this.title} -- #{sections.count}"
       this.sections = sections.map { |s| V2Plus::Section.make(s, this) }
       raise if texts.count > 1
       unless texts.any?
@@ -30,7 +37,7 @@ module V2Plus
     end
         
     def to_composition_content(depth, html_id)
-      case code
+      output = case code
       when 'pre'
         text
       when 'clause'
@@ -39,7 +46,8 @@ module V2Plus
         obj_id  = entry.split('/').last
         begin
           seg_def = SegmentDefinition.get(obj_id)
-          seg_def.to_composition_clause(depth)
+          seg_content = seg_def.to_composition_clause(depth)
+          V2Plus.render_with_locals(:section, :wrapper_div, {:html_id => html_id, :depth => depth, :content => seg_content})      
         rescue Scrivener::FetchError => e
           # Doesn't get much dirtier than this ....
           return '' if e.message =~ /segment-usage-in-vaccine-messages/
@@ -48,10 +56,17 @@ module V2Plus
       when 'datatype-definition'
         obj_id = entry.split('/').last
         dt     = DataType.get(obj_id)
-        dt.to_composition_clause(depth)
+        dt_content = dt.to_composition_clause(depth)
+        V2Plus.render_with_locals(:section, :wrapper_div, {:html_id => html_id, :depth => depth, :content => dt_content})
       else
         puts "Section for #{code} -- #{entry}"
       end
+      # err = Nokogiri::XML(output).errors
+      # if err.any?
+      #   puts err
+      #   raise
+      # end
+      output
     end
     
     def to_composition_clause(depth, html_id)

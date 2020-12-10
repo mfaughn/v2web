@@ -1,7 +1,10 @@
 ---
 "~/projects":
 # - none
-- html_gui_builder
-- gui_director
-- gui_site
+# - html_gui_builder
+# - gui_director
+# - gui_site
 - sequel_specific_associations
+- sequel_change_tracker
+# - appellation
+# - prometheus_ckeditor

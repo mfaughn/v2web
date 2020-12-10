@@ -1,0 +1,120 @@
+<table class='center striped-rows table_v2web'>
+<tbody>
+  <colgroup>
+     <col span="1" style="width: 5%;">
+     <col span="1" style="width: 15%;">
+     <col span="1" style="width: 5%;">
+     <col span="1" style="width: 60%;">
+  </colgroup>
+<caption>Table 5.6: Use of Undeclared Conditional Usage</caption>
+<tr class='tr_v2web'>
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Indicator</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Transition</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Resulting Indicator</strong>
+</p>
+
+</th>
+
+<th class='emphasis-header table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>Comments</strong>
+</p>
+
+</th>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>C</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Base-to-Constrainable
+</p>
+
+<p class='p_v2web' style=''>
+Constrainable-to-Constrainable
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>C</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+implementation requirements are determined in a derived profile).
+</p>
+
+</td>
+
+</tr>
+
+<tr class='tr_v2web'>
+<td class='emphasis-column table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>C</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+Base-to-Constrainable
+</p>
+
+<p class='p_v2web' style=''>
+Constrainable-to-Constrainable
+</p>
+
+<p class='p_v2web' style=''>
+Base-to-Implementable
+</p>
+
+<p class='p_v2web' style=''>
+Constrainable-to-Implementable
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+<strong>C(a/b) with predicate</strong>
+</p>
+
+</td>
+
+<td class='table_v2web' colspan='1'>
+<p class='p_v2web' style=''>
+The message profile explicitly defines the true (a) and false (b) usage outcomes for the conditional usage based on the predicate statement. A predicate statement is required. This declaration defines explicit requirements for implementation.
+</p>
+
+</td>
+
+</tr>
+
+</tbody>
+</table>

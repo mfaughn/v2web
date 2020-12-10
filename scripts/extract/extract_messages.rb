@@ -1,14 +1,18 @@
 require_relative 'extractor_helpers'
 require_relative 'extract_acs'
 module V2Web
-  class DocXtractor    
-    def extract_messages(doc)
-      # return unless @chapter == '10'
-      doc.remove_namespaces!
+  class DocXtractor
+    def setup_for_messages(source)
+      puts Rainbow("### Parse Messages #{source} ### ").magenta
+      setup(source)
+    end
+      
+    def extract_messages(source)
+      doc = setup_for_messages(source)
       @docx = doc
       @hl7 = {}
       find_messages_and_acs_from_docx
-      create_special_segment_defitions # create the HL7 wildcard segment....TODO is there a better way?
+      create_special_segment_definitions # create the HL7 wildcard segment....TODO is there a better way?
       @hl7.each { |k, v| create_messages_and_acs(k,v) }
     end
         
@@ -290,7 +294,7 @@ module V2Web
       end
     end
     
-    def create_special_segment_defitions
+    def create_special_segment_definitions
       unless HL7::SegmentDefinition.where(:code => 'Hxx').first
         ChangeTracker.start
         hxx = HL7::SegmentDefinition.create(:code => 'Hxx', :name => 'Any HL7 Segment')

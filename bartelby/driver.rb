@@ -10,6 +10,7 @@ load File.join(__dir__, 'v2plus_toc.rb')
 Dir[File.join(__dir__, 'model_extensions', '*.rb')].each { |file| load file }
 load File.join(__dir__, '../lib/v2web/model_extensions.rb')
 
+=begin
 module BartelbyTest
   def self.clear
     @all_dt = nil
@@ -25,22 +26,23 @@ module BartelbyTest
     @test_datatype ||= all_data_types.find { |dt| dt.code == 'CF' }
   end
 end
+=end # BartelbyTest
 
-# Bartelby.clear_cache
+Bartelby.clear_cache
 V2Plus::V2PLUS_TYPES.each do |klass|
   klass.initialize_bartelby
   # klass.save_sequel  
 end
-# V2Plus::DataType.save_sequel
-# V2Plus::DataElement.save_sequel
-# V2Plus::SegmentDefinition.save_sequel
-# V2Plus::MessageStructure.save_sequel
-# V2Plus::Message.save_sequel
+# Bartelby.clear_cache(V2Plus::DataType) && V2Plus::DataType.save_sequel
+# Bartelby.clear_cache(V2Plus::DataElement) && V2Plus::DataElement.save_sequel
+# Bartelby.clear_cache(V2Plus::SegmentDefinition) && V2Plus::SegmentDefinition.save_sequel
+# Bartelby.clear_cache(V2Plus::MessageStructure) && V2Plus::MessageStructure.save_sequel
+# Bartelby.clear_cache(V2Plus::Message) && V2Plus::Message.save_sequel
 # # V2Plus::Event.save_sequel
-# V2Plus::AcknowledgmentChoreography.save_sequel
+# Bartelby.clear_cache(V2Plus::AcknowledgmentChoreography) && V2Plus::AcknowledgmentChoreography.save_sequel
 # # V2Plus::ValueSet.save_sequel
 # # V2Plus::Basic.save_sequel
-# V2Plus::Composition.save_sequel
+# Bartelby.clear_cache(V2Plus::Composition) && V2Plus::Composition.save_sequel
 
 V2Plus.build_site
 

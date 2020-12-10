@@ -24,8 +24,8 @@ module V2Plus
         :sections => web_sections
       }
       page = V2Plus.render_with_locals(:composition, :page, locals)
-      puts "Saving chapter-#{local_url_name}.html"
-      V2Plus.save_web_file("chapter-#{local_url_name}.html", page)
+      puts "Saving composition/#{local_url_name}.html"
+      V2Plus.save_web_file("composition/#{local_url_name}.html", page)
     end
     
     def web_sections

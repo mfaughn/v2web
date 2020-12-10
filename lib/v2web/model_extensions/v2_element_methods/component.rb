@@ -6,6 +6,7 @@ module ComponentMethods
     end
     xml.sub!('MAY_TRUNCATE', may_truncate&.value.to_s)
     xml.sub!('WITHDRAWN', withdrawn ? 'true' : 'false')
+    xml.sub!('FLAGS', resource_flags)
     xml.sub!('DEFINITION', resource_definition_content)
     xml.sub!('MUST_SUPPORT', resource_must_support)
     xml.sub!('MIN_LENGTH', resource_min_length)
@@ -16,11 +17,24 @@ module ComponentMethods
     xml.sub!('REQUIREMENTS', resource_requirements)
     xml.sub!('BINDING', resource_binding)
     xml.sub!('DATA_TYPE', resource_data_type)
-    Nokogiri::XML(xml,&:noblanks).root.to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
   end
   
   def withdrawn
     optionality&.value == 'W'
+  end
+  
+  def resource_flags
+    ff = []
+    ov = optionality&.value
+    if ['B', 'C', 'RE'].include?(ov)
+      ff << ov
+    end
+    if ff.any?
+      ff.map { |f| HL7.get_instance_template(:data_type, 'flag').sub('VALUE', f) }.join
+    else
+      ''
+    end
   end
   
   def resource_definition_content

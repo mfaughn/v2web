@@ -1,6 +1,6 @@
 module V2Plus
   class Component
-    # attr_accessor :name, :sequence_number, :min_length, :conf_length, :may_truncate, :data_type, :table
+    attr_accessor :flags
     attr_accessor :withdrawn
     def self.make(node, base = nil)
       this = new
@@ -21,6 +21,15 @@ module V2Plus
         this.type = DataType.get(dt_url) unless dt_url == base.local_url_name
         # FIXME insert FHIR datatype url for primitive V2 types as component base type ??
       end
+      flags = node.css('flag').map { |f| f['value'] }
+      if this.c_length && !this.c_length.empty?
+        if this.may_truncate
+          flags << '#'
+        else
+          flags << '='
+        end
+      end
+      this.flags = flags
       this
     end
     
@@ -41,26 +50,28 @@ module V2Plus
     end
     
     def local_html_id
-      "#{owner.local_url_name}-#{html_sn}"
+      "#{owner.code}-#{html_sn}"
     end
     
     def to_datatype_row(last = false)
       dtcode = type&.code
       locals = {
-        :sequence_number => html_sn,
+        :sequence_number     => html_sn,
         :sequence_number_url => '#' + local_html_id,
-        :name => name,
-        :implement => must_support&.value.to_s =~ /R|C/ ? 'Yes' : '',
-        :flags => html_table_flags,
-        :cardinality => cardinality,
-        :length => length_string,
-        :c_length => c_length_string,
-        :value_set_url => table ? "http://www.hl7.eu/refactored/tab#{padded_table_id}.html" : '',
+        :name                => name,
+        :implement           => implement_html,
+        :flags               => html_table_flags,
+        :cardinality         => cardinality,
+        :length              => length_string,
+        :c_length            => c_length_string,
+        # :value_set_url       => table ? "http://www.hl7.eu/refactored/tab#{padded_table_id}.html" : '',
+        :value_set_url       => table ? "https://www.hl7.org/fhir/v2/#{padded_table_id}/index.html" : '',
         # FIXME change to table.name
-        :value_set => table ? table.table_id : '',
-        :type_url => dtcode ? "data-type-#{dtcode}.html" : '',
-        :type_code => dtcode || '',
-        :last => last
+        :value_set           => table ? table.table_id : '',
+        :type_url            => dtcode ? "/data-type/#{dtcode}.html" : '',
+        :type_code           => dtcode || '',
+        :fat_row             => fatrow,
+        :last                => last
       }
       V2Plus.render_with_locals(:component, :row, locals)
     end
@@ -76,7 +87,7 @@ module V2Plus
     
     def linked_web_def_title(datatype_sequence_id)
       dtcode = type&.code || owner.code
-      "#{datatype_sequence_id}: #{name} (<a href='data-type-#{dtcode}.html'>#{dtcode}</a>)"
+      "#{datatype_sequence_id}: #{name} (<a href='/data-type/#{dtcode}.html'>#{dtcode}</a>)"
     end
     
     def length_string
@@ -97,15 +108,36 @@ module V2Plus
     end
 
     def html_table_flags
-      flags = []
-      if c_length && !c_length.empty?
-        flags << (may_truncate ? "#" : "=")
-      end
+      # flags = []
+      # if c_length && !c_length.empty?
+      #   flags << (may_truncate ? "#" : "=")
+      # end
       flags.join(' ')
     end
     
+    def implement_html
+      if flags.include?('C')
+        V2Plus.render_with_locals(:component, :may_implement, {})
+      else
+        if flags.include?('RE') || min_length.to_i > 0
+          'SHALL'
+        end
+      end
+    end
+    
+    def fatrow
+      flags.include?('C') ? 2 : 0
+    end
+    
+    
     def cardinality
-      "[#{must_support ? '1' : '0'}..1]"
+      if flags.include?('C')
+        '<br/>[1..1]<br/>[0..1]'
+      elsif flags.include?('RE')
+        '[0..1]'
+      else
+        "[#{must_support ? '1' : '0'}..1]"
+      end
     end
     
     def padded_table_id

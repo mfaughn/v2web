@@ -1,30 +1,21 @@
 # require_relative 'parse_common'
 load File.expand_path(File.join(__dir__, 'parse_common.rb'))
 
-# HL7::SegmentDefinition.delete
-# HL7::DataElement.delete
-# HL7::Field.delete
+HL7::SegmentDefinition.delete
+HL7::DataElement.delete
+HL7::Field.delete
 
 HL7Parse.segment_titles.clear
 # HL7Parse.name_mismatchs.clear
-sources = HL7Parse.data_sources('2') # FIXME use this line
-# sources = ['V29_CH08_MasterFiles']
-sources.each do |source|
-  next if source == nil
-  puts Rainbow('#####################################').orange
-  puts Rainbow(source).orange
-  chapter = source.slice(/(?<=CH)\d\dA?/)
-  chapter.delete('0') if chapter[0] == '0' # get rid of leading zero
-  extractor = V2Web::DocXtractor.new(chapter)
-  docx_path = HL7Parse.docx_path(source)
-  doc = Docx::Document.open(docx_path)
-  extractor.extract_segments_definitions(doc.doc)
-end
+sources = HL7Parse.data_sources('2')
+# sources = ['V29_CH03_PatientAdmin']
 
-titles_path = File.join(__dir__, 'segment_titles.txt')
-File.open(titles_path, 'w+') { |f| HL7Parse.segment_titles.sort.each { |t| f.puts t } }
-titles_path = File.join(__dir__, 'segment_titles.bin')
-File.open(titles_path, 'wb+') {|f| f.write(Marshal.dump(HL7Parse.segment_titles))}
+sources.compact.each { |source| V2Web::DocXtractor.new.extract_segments_definitions(source) }
+
+# titles_path = File.join(__dir__, 'segment_titles.txt')
+# File.open(titles_path, 'w+') { |f| HL7Parse.segment_titles.sort.each { |t| f.puts t } }
+# titles_path = File.join(__dir__, 'segment_titles.bin')
+# File.open(titles_path, 'wb+') {|f| f.write(Marshal.dump(HL7Parse.segment_titles))}
 
 
 ChangeTracker.start

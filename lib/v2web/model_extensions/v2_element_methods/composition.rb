@@ -13,7 +13,17 @@ module CompositionMethods
     xml.sub!('YYYY-MM-DD', Time.now.strftime("%F"))
     xml.sub!('TITLE', title)
     xml.sub!('SECTIONS', sections_xml)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    begin
+      nxml = Nokogiri::XML(xml) { |config| config.strict.noblanks.noent }.to_s
+    rescue Exception => e
+      e.message =~ /line (\d+)$/
+      the_line = $1
+      puts xml
+      puts title
+      puts the_line
+      raise
+    end
+    nxml
   end
   
   def sections_xml

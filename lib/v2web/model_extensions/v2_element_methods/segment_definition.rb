@@ -22,7 +22,8 @@ module SegmentDefinitionMethods
     xml.sub!('FIELDS', fields_xml.join)
     # puts Rainbow(xml).cyan
     # output = Nokogiri::XML(xml,&:noblanks).to_xml(save_with: Nokogiri::XML::Node::SaveOptions::AS_XML | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS | Nokogiri::XML::Node::SaveOptions::FORMAT)
-    output = Nokogiri::XML(xml,&:noblanks).to_xml
+    # output = Nokogiri::XML(xml,&:noblanks).to_xml
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
   def resource_description_content

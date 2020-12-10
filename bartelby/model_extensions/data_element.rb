@@ -15,8 +15,9 @@ module V2Plus
       this.max_length   = nodeset.get_val('maxLength')
       this.c_length     = nodeset.get_val('confLength')
       this.may_truncate = nodeset.get_val('mayTruncate').to_s == 'true'
+      this.table        = nodeset.get_val('table')
       this.url          = nodeset.get_val('url')
-      this.definition   = Gui_Builder_Profile::RichText.create(:content => nodeset.css('description div')&.to_html) # gets the entire div
+      this.definition   = Gui_Builder_Profile::RichText.create(:content => nodeset.css('description > div')&.to_html) # gets the entire div
  
       dt_url = nodeset.get_val('dataType')
       if dt_url
@@ -31,11 +32,27 @@ module V2Plus
       this
     end
     
+    
+    def to_web_pub
+      return unless item_number.to_s == '664'
+      return unless item_number
+      puts definition.content if item_number.to_s == '664'
+      dc  = data_type&.code || 'Null'
+      ttl = "Data Element (<a href='/data-type/#{dc}.html'>#{dc}</a>) #{item_number}"
+      locals = {
+        :title      => ttl,
+        :definition => definition.content,
+        :fields     => used_by_fields
+      }
+      page = V2Plus.render_with_locals(:data_element, :page, locals)
+      V2Plus.save_web_file("data-element/#{item_number.rjust(4,'0')}.html", page)
+    end
+    
     def length_string
       if min_length && max_length
-        "#{min_length}..#{max_length}"
+        "[#{min_length}..#{max_length}]"
       elsif min_length
-        "#{min_length}.."
+        "[#{min_length}..*]"
       else
         ''
       end
@@ -48,9 +65,14 @@ module V2Plus
       # may_truncate ? "#{c_length}#" : "#{c_length}="
     end
     
-    def padded_table_id
-      table.table_id.to_s.rjust(4, "0")
+    def used_by_fields
+      fields.uniq { |f| f.local_html_id }.sort_by { |f| f.local_html_id }
     end
+    
+    # No table objects in use
+    # def padded_table_id
+    #   table.table_id.to_s.rjust(4, "0")
+    # end
     
     def flags
       ff = ''

@@ -54,11 +54,19 @@ module V2Plus
     
     def to_composition_entry(depth)
       locals = {
-        :html_id => html_id,
-        :msg_code => code,
-        :depth => depth,
-        :o_ack => o_ack,
-        :e_mode_table => e_mode_table,
+        :html_id   => html_id,
+        :msg_code  => code,
+        :depth     => depth,
+        :o_ack     => o_ack,
+        :for_msg   => get_msg_code(self.for),
+        :imm_ack   => msh15 != ['NE'],
+        :imm_acks  => msh15_acks.map { |msg| get_msg_code(msg) }.join(' or '),
+        :msh15vals => msh15.join(' or '),
+        :neg15     => neg15,
+        :app_ack   => msh16 != ['NE'],
+        :app_acks  => msh16_acks.map { |msg| get_msg_code(msg) }.join(' or '),
+        :msh16vals => msh16.join(' or '),
+        :neg16     => neg16
       }
       html = V2Plus.render_with_locals(:acknowledgment_choreography, :entry, locals)
       html
@@ -106,9 +114,9 @@ module V2Plus
       when 'none'
         return 'An Acknowlegment is never sent in original mode.'
       when 'immediate', ''
-        return "Immediate Ack: #{original_acks.map { |msg| get_msg_code(msg) }}"
+        return "Immediate Ack: #{original_acks.map { |msg| get_msg_code(msg) }.join(' or ')}"
       when 'application'
-        return "Application Ack: #{original_acks.map { |msg| get_msg_code(msg) }}"
+        return "Application Ack: #{original_acks.map { |msg| get_msg_code(msg) }.join(' or ')}"
       else
         raise ack_immediate.inspect
       end

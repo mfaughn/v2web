@@ -1,0 +1,43 @@
+.inner-wrapper
+  .col-12
+    %h2.v2
+      Publication (Version) History
+    #intro
+      %p
+        This table provides a list of all the versions of v2+ that are available.
+    / ============CONTENT CONTENT===============
+    #history-data
+      / %p
+      /   The following versions of the v2+ Specification have been published:
+      %h3
+        Current Versions
+      %table.v2-history-grid
+        %thead
+          %tr
+            %th
+              Date
+            %th
+              Version
+            %th
+              Description
+        %tbody
+          %tr
+            %td
+              %a{:href => "http://v2.hl7.org/"}
+                (current)
+            %td
+              (last commit)
+            %td
+              Current Development build
+      
+      %br
+      %br
+      %h3.previous-v2-versions
+        Previous Releases
+      - prior_v2_versions.each do |version_number, version_link|
+        %p
+          %a{:href => version_link}
+            HL7 Messaging Standard Version 
+            = version_number
+          
+    %p

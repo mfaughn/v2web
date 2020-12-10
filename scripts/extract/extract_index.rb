@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'extractor_helpers'
 module V2Web
   class DocXtractor    
@@ -90,8 +91,13 @@ module HL7Parse
     end
     
     def to_toc_file(chapter)
-      path = File.expand_path(File.join('~/projects/v2web/test_data/chapter_indices', "Chapter #{chapter.rjust(2,'0')}"))
+      path = File.expand_path(File.join('~/projects/v2web/test_data/chapter_indices', "Chapter#{chapter.rjust(2,'0')}.txt"))
       File.open(path, 'w+') { |f| f.puts to_toc(chapter) }
+    end
+    
+    def to_json_index(chapter)
+      path = File.expand_path(File.join('~/projects/v2web/test_data/chapter_indices', "Chapter#{chapter}.json"))
+      File.open(path, 'w+') { |f| f.puts JSON.dump(to_index(chapter)) }
     end
     
     def to_toc(prefix)
@@ -103,6 +109,19 @@ module HL7Parse
       sections.each_with_index do |s, i|
         # next_prefix = [prefix,(i+1).to_s].join('.')
         entries += s.to_toc(prefix + '.' + (i+1).to_s)
+      end
+      entries
+    end
+    
+    def to_index(prefix, entries = {})
+      # puts Rainbow(prefix).red if depth == 0
+      txt = "#{prefix}  #{title}"
+      entry =  "  "*depth + txt
+      puts "#{title} already exists" if entries[title]
+      entries[title] = prefix 
+      sections.each_with_index do |s, i|
+        # next_prefix = [prefix,(i+1).to_s].join('.')
+        s.to_index(prefix + '.' + (i+1).to_s, entries)
       end
       entries
     end

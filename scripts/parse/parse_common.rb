@@ -1,19 +1,19 @@
 require 'docx'
 load File.expand_path(File.join(__dir__, '../../lib/v2web/model_extensions.rb'))
-paths = ['nokogiri_extensions.rb', 'headers_footers.rb', 'clear_tables.rb', 'compact_content.rb', 'headers_hack.rb', 'empty_sections_hack.rb', 'list_style_map.rb']
+paths = ['nokogiri_extensions.rb', 'headers_footers.rb', 'clear_tables.rb', 'compact_content.rb', 'headers_hack.rb', 'empty_sections_hack.rb', 'list_style_map.rb', 'image_substitutions.rb', 'links.rb']
 paths.each do |path|
   load File.expand_path(File.join(__dir__, path))
   # require_relative path
 end
 
-extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_events.rb', 'extract_events_ch10.rb', 'extract_messages.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_segments.rb', 'extract_chapters.rb', 'debug_tables.rb', 'extract_index.rb']
+extractors = ['extractor.rb', 'extractor_helpers.rb', 'extract_events.rb', 'extract_events_ch10.rb', 'extract_messages.rb', 'extract_acs.rb', 'extract_datatypes.rb', 'extract_segments.rb', 'extract_chapters.rb', 'debug_tables.rb', 'extract_index.rb', 'extract_extras.rb']
 extractors.each do |file|
   path = File.expand_path(File.join(__dir__, '../extract', file))
   load path
   # require path
 end
 
-doc2html = ['processor.rb', 'tables.rb', 'run.rb', 'list.rb', 'run_styler.rb']
+doc2html = ['processor.rb', 'tables.rb', 'run.rb', 'list.rb', 'note.rb', 'run_styler.rb', 'docx_extensions.rb']
 doc2html.each do |file|
   path = File.expand_path(File.join(__dir__, '../docx2html', file))
   load path

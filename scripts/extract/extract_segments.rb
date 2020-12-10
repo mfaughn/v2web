@@ -1,8 +1,14 @@
 require_relative 'extractor_helpers'
 module V2Web
   class DocXtractor
-    def extract_segments_definitions(docx)
-      create_segment_list(docx)
+    def setup_for_segments(source)
+      puts Rainbow("#### Parse Segments #{source} ###").orange      
+      setup(source)
+    end
+    
+    def extract_segments_definitions(source)
+      doc = setup_for_segments(source)
+      create_segment_list(doc)
       @docx_segs.each { |k, v| create_segment(k,v) }
     end
     
@@ -150,8 +156,9 @@ module V2Web
     end
 
     def create_segment(code_and_name, content)
+# return unless code_and_name =~ /MRG/
       # check
-      parts = code_and_name.split(/\s+[-|–]\s+/)
+      parts = code_and_name.split(/\s+[–|-]\s+/)
       code = parts.shift
       name = parts.join(' - ')
       # return unless code == 'TQ2'
@@ -189,13 +196,13 @@ module V2Web
       segment.origin = chapter
       description = ''
       if !content[:before_table].empty?
-        description << Docx2HTML::Processor.new(content[:before_table], :chapter => @chapter).process
+        description << Docx2HTML::Processor.new(content[:before_table], @processor_opts).process
       end
       if content[:table]
         description << "<div class='insert-segment-table' id='#{code}-attribute-table' style='display: none;'></div>"
       end
       if !content[:after_table].empty?
-        description << Docx2HTML::Processor.new(content[:after_table], :chapter => @chapter).process
+        description << Docx2HTML::Processor.new(content[:after_table], @processor_opts).process
       end
       # puts Rainbow(description).cyan
       segment.description = Gui_Builder_Profile::RichText.new(:content => description)
@@ -413,7 +420,7 @@ module V2Web
         ChangeTracker.start
         de_def = HL7::DefinitionText.create(:chapter => chapter, :original_container => segment_string)
         # de_def.definition = make_html_text(defn)
-        html = Docx2HTML::Processor.new(defn_content, :chapter => @chapter, :remove_headings => true).process
+        html = Docx2HTML::Processor.new(defn_content, @processor_opts).process(:remove_headings => true)
         de_def.definition = Gui_Builder_Profile::RichText.create(:content => html )
         if html =~ /Components: [<|&lt;|&gt;]/
           # Do not remove this check!

@@ -27,10 +27,11 @@ module V2Plus
   end # class TabSet
 
   class Tab
-    attr_accessor :tabset
-    def initialize(label, content)
+    attr_accessor :tabset, :file, :code_type
+    def initialize(label, content, opts = {})
       @content = content
       @label   = label
+      @file    = opts[:file]
     end
     
     def to_composition_content(index)
@@ -44,15 +45,6 @@ module V2Plus
       # tab_file_url = nil
       # # the file property of the Tab object supercedes any content that the Tab object has
       # # FIXME maybe it should be the other way around.
-      # if file
-      #   data = file.binary_data&.data
-      #   tab_content = data&.force_encoding(Encoding::UTF_8)
-      #   tab_file_url = file.filename
-      #   V2Web.create_download_file(data, tab_file_url, root_dir)
-      #   code_type ||= file.filename.split('.').last.upcase
-      # elsif
-      #   raise 'only files are supported for tabs at this time'# FIXME...other kind of content used
-      # end
       
       locals = {
         # :tabs_id        => tabset_id,
@@ -80,7 +72,17 @@ module V2Plus
       # else
       #   V2Plus.render_with_locals(:message, :tab_content, locals)
       # end
-      content_html = V2Plus.render_with_locals(:web_elements, :tab_content, locals)
+      @code_type = @file.split('.').last.upcase if @file
+      if @file
+        if code_type =~ /XML|XSD|FHIR Structure Definition/
+          locals[:tab_file_url] = @file
+          content_html = V2Plus.render_with_locals(:web_elements, :tab_content_xml, locals)
+        else
+          raise
+        end
+      else
+        content_html = V2Plus.render_with_locals(:web_elements, :tab_content, locals)
+      end
       label_html   = V2Plus.render_with_locals(:web_elements, :tab_label, locals)
       {:content => content_html, :label => label_html}
     end

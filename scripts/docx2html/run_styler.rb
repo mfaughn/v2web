@@ -1,37 +1,42 @@
 module Docx2HTML
       
   class RunStyler    
-    HYPERLINK_STYLES = ['HyperlinkText', 'ReferenceDataType', 'ReferenceAttribute', 'Hyperlink', 'ReferenceHL7Table', 'referencehl7table', 'ReferenceUserTable', 'HTMLCite']
+    def self.hyperlink_styles
+      ['HyperlinkText', 'ReferenceDataType', 'ReferenceAttribute', 'Hyperlink', 'ReferenceHL7Table', 'referencehl7table', 'ReferenceUserTable', 'HTMLCite']
+    end
     
     # FootnoteReference is handled earlier
     # HyperlinkTable is going to be automatically handled in the website builder for all value sets
-    IGNORED_STYLES = ['FootnoteReference', 'HyperlinkTable', 'AttributeTableBodyChar']    
+    def self.ignored_styles
+      ['FootnoteReference', 'HyperlinkTable', 'AttributeTableBodyChar', 'CharChar', 'FootnoteTextChar']
+    end
     
     def style(runs, opts)
+      @opts = opts
       current_styles = []
       output = ''
       runs.each do |r|
         r_styles = adjust_styles(r.styles, opts)
         completed_styles = current_styles - r_styles
-        completed_styles.each { |s| output << end_style(s) }
+        completed_styles.reverse.each { |s| output << end_style(s) }
         new_styles = r_styles - current_styles
         new_styles.each { |s| output << begin_style(s, r) }
         output << r.text
         current_styles = r_styles # I think...
       end
-      current_styles.each { |s| output << end_style(s) }
+      current_styles.reverse.each { |s| output << end_style(s) }
       output
     end
     
     def adjust_styles(styles, opts)
       return [] unless styles
-      styles = styles - IGNORED_STYLES
-      styles = styles - HYPERLINK_STYLES if opts[:suppress_links]
+      styles = styles - RunStyler.ignored_styles
+      styles = styles - RunStyler.hyperlink_styles if opts[:suppress_links]
       styles
     end
     
     def end_style(style)
-      if HYPERLINK_STYLES.include?(style)
+      if RunStyler.hyperlink_styles.include?(style)
         '</a>'
       else
         case style
@@ -49,7 +54,7 @@ module Docx2HTML
     end
     
     def begin_style(style, run)
-      if HYPERLINK_STYLES.include?(style)
+      if RunStyler.hyperlink_styles.include?(style)
         ret = begin_link(style, run)
         # puts ret
         return ret
@@ -72,16 +77,25 @@ module Docx2HTML
     end
     
     def begin_link(style, run)
-      anchor = run.is_a?(LinkedRun) ? run.link : "BROKEN#{run.text}"
+      if run.is_a?(LinkedRun)
+        anchor = run.link
+      else
+        anchor = HL7Parse.decrypt_link(run, run.text, @opts)
+      end
+      # puts caller[6]
+      # ret = '<a.v2-' + style.downcase + ' href="' + anchor + '">'
+      ret = '<a href="' + anchor + '">'
+      # puts "      #{ret}"
+      return ret
       case style
       when 'Hyperlink', 'HyperlinkText', 'HTMLCite'
-        "<a href='#{anchor}'>"
+        "<a.v2-#{style.downcase} href='#{anchor}'>"
       when 'ReferenceDataType'
-        "<a href='REFERENCE_DATATYPE#{anchor}'>"
+        "<a.v2-#{style.downcase} href='#{anchor}'>"
       when 'ReferenceAttribute'
-        "<a href='REFERENCE_ATTRIBUTE#{anchor}'>"
+        "<a.v2-#{style.downcase} href='#{anchor}'>"
       when 'ReferenceHL7Table', 'ReferenceUserTable', 'referencehl7table'
-        "<a href='REFERENCE_VALUE_SET#{anchor}'>"
+        "<a.v2-#{style.downcase} href='#{anchor}'>"
       end
     end
   end

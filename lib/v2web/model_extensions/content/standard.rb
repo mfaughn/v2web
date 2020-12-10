@@ -12,7 +12,9 @@ module V2Web
       sections_xml = []
       subsections.each { |ss| sections_xml << ss.to_composition_section }
       xml.sub!('SECTIONS', sections_xml.join)
-      Nokogiri::XML(xml,&:noblanks).to_s
+      # Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
+      Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
+      
     end
     
     def local_url_name

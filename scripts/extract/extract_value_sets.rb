@@ -88,7 +88,7 @@ module V2Web
       #   name = 'Repeat Pattern'
       #   id = 335
       else
-        id, name = t.split(/\s+[-|–]\s+/)
+        id, name = t.split(/\s+[–|-]\s+/)
       end
       return unless name
       # puts Rainbow("#{id} - #{name}").green

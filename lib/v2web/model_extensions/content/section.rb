@@ -45,7 +45,7 @@ module V2Web
       subsections.each { |ss| sections_xml << ss.to_composition_section }
       xml.sub!('SECTIONS', sections_xml.join)
       # puts xml;puts '*********************************************************'
-      nxml = Nokogiri::XML(xml,&:noblanks).root.to_s
+      nxml = Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
       # puts nxml;puts '*********************************************************'
       nxml
     end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AcknowledgmentChoreography>
-  <url value='http://v2.hl7.org/fhir/AcknowledgmentChoreography/URL' />
-  <subject value='http://v2.hl7.org/fhir/MessageDefinition/SUBJECT_URL' />
-  <originalModeAckType value='ORIGINAL_ACK_TYPE'/>
+  <url value="http://v2.hl7.org/fhir/AcknowledgmentChoreography/URL" />
+  <subject value="http://v2.hl7.org/fhir/MessageDefinition/SUBJECT_URL" />
+  <originalModeAckType value="ORIGINAL_ACK_TYPE"/>
   ORIGINAL_ACK
   MSH15VALUES
   IMMEDIATE_ACKS

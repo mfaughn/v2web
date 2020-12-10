@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EventDefinition>
-  <url value='http://v2.hl7.org/fhir/EventDefinition/URL'/>
-  <name value='NAME'/>
-  <code value='CODE'/>
+  <url value="http://v2.hl7.org/fhir/EventDefinition/URL"/>
+  <name value="NAME"/>
+  <code value="CODE"/>
   DESCRIPTION
-  <message value='http://v2.hl7.org/fhir/MessageDefinition/MESSAGE_URL' />
+  <message value="http://v2.hl7.org/fhir/MessageDefinition/MESSAGE_URL" />
   RESPONSE
   ACKNOWLEDGMENT
 </EventDefinition>  

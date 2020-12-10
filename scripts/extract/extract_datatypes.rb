@@ -1,8 +1,13 @@
 require_relative 'extractor_helpers'
 module V2Web
   class DocXtractor
+    def setup_for_datatypes(source)
+      puts Rainbow('#### Parse Data Types ####').magenta
+      source == 'datatypes' ? setup(source, '2A') : setup(source)
+    end
 
-    def extract_datatypes(doc)
+    def extract_datatypes(source)
+      doc = setup_for_datatypes(source)
       create_datatype_list(doc)
       @docx_dt.each { |code_and_name, content| create_datatype(code_and_name, content) }
       add_types_to_components
@@ -95,7 +100,7 @@ module V2Web
     # node is a nokogiri node from docx
     # it is only the node for the heading line
     def create_datatype(code_and_name, content)
-      code, name = code_and_name.split(/\s+[-|–]\s+/)
+      code, name = code_and_name.split(/\s+[–|-]\s+/)
       # return unless code == 'RFR'
       print Rainbow("#{code} - #{name} ").magenta
       raise unless name
@@ -114,7 +119,7 @@ module V2Web
         # puts "*"*10 + 'BEFORE' +  "*"*10
         # puts content[:before_table]
         # puts "*"*10 + 'EROFEB' +  "*"*10
-        description << Docx2HTML::Processor.new(content[:before_table], :chapter => @chapter).process
+        description << Docx2HTML::Processor.new(content[:before_table], @processor_opts).process
         # puts "-"*22
       end
       if content[:table]
@@ -124,7 +129,7 @@ module V2Web
         # puts "*"*10 + 'AFTER' +  "*"*10
         # puts content[:after_table]
         # puts "*"*10 + 'RETFA' +  "*"*10
-        description << Docx2HTML::Processor.new(content[:after_table], :chapter => @chapter).process
+        description << Docx2HTML::Processor.new(content[:after_table], @processor_opts).process
         # puts "-"*22
       end
       # puts Rainbow(description).cyan
@@ -219,14 +224,8 @@ module V2Web
         # component.table_row_source = rt
         # pp rt
         defn = nodes[i+1]
-        # if defns.any?
-          # defn = defns[name.delete("’'")]
-          # defn = defns[(seq || 1).to_i ] # primitive types tend not to have a sequence number
-          # puts Rainbow("Name mismatch: #{datatype.code}.#{seq} #{name} vs #{defn[:title]}").red unless name == defn[:title]
           if defn
-            content = Docx2HTML::Processor.new(defn, :chapter => @chapter, :remove_headings => true).process
-            
-            # puts content
+            content = Docx2HTML::Processor.new(defn, @processor_opts).process(:remove_headings => true)            
             component.definition = Gui_Builder_Profile::RichText.create(:content => content )
           else
             if nodes.any?

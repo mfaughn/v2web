@@ -31,7 +31,7 @@ module V2Plus
     end
     
     def to_tabs
-      tabset = V2Plus::TabSet.new(tabs1_id)
+      tabset = V2Plus::TabSet.new(tabset_id)
       tabset.add_tab(V2Plus::Tab.new('Message Structure', structure.to_table))
       # Dirty hack to deal with example message
       begin
@@ -39,13 +39,21 @@ module V2Plus
       rescue
         raise unless name =~ /#{z_messages.map { |zm| Regexp.escape(zm) }.join('|')}/
       end
-      tabset.to_composition_content
-      # locals = {
-      #   :tabs1_id => ,
-      #   :message_structure => structure.to_table,
-      #   :ack_chor => ack_chor_html
-      # }
-      # tabs = V2Plus.render_with_locals(:message, :tabs1, locals)
+      
+      # TODO do we have to hard-code location of XSD directory?
+      xsd_file_name = complete_code.split('^').last.upcase + '.xsd'
+      xsd_file = File.join(V2Plus.xsd_dir, xsd_file_name)
+      if File.exist?(xsd_file)
+        # puts xsd_file_name
+        tabset.add_tab(V2Plus::Tab.new('v2.xml XSD', File.read(xsd_file), :file => 'v2xsd/' + xsd_file_name))
+      else
+        puts Rainbow("Missing #{xsd_file}").yellow
+      end
+      locals = {
+        :tabs_caption => name,
+        :tabs_content => tabset.to_composition_content
+      }
+      V2Plus.render_with_locals(:message, :tabs_wrapper, locals)
     end
   
     def ack_chor_html
@@ -61,7 +69,7 @@ module V2Plus
       complete_code.downcase.gsub('^', '-')
     end
       
-    def tabs1_id
+    def tabset_id
       'tabs-' + html_id
     end
   end

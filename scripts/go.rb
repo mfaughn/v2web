@@ -9,11 +9,22 @@ t = Time.now
 load File.join(__dir__, 'parse/parse_common.rb')
 # load File.join(__dir__, 'parse/parse_references.rb')
 # load File.join(__dir__, 'parse/parse_index.rb')
-    # load File.join(__dir__, 'parse_value_sets.rb')
-# load File.join(__dir__, 'parse/parse_datatypes.rb');# link_value_sets_to_components
+# # load File.join(__dir__, 'parse_value_sets.rb')
+
+# load File.join(__dir__, 'parse/parse_datatypes.rb')
 # load File.join(__dir__, 'parse/parse_segments.rb')
 # load File.join(__dir__, 'parse/parse_messages.rb')
-load File.join(__dir__, 'parse/parse_text.rb')
+#
+# # # load File.join(__dir__, 'dt_comp_index.rb')
+# # # load File.join(__dir__, 'seg_field_index.rb')
+# # # load File.join(__dir__, 'message_index.rb')
+# # # # has to be done again after getting the datatypes
+# # # load File.join(__dir__, 'parse/parse_datatypes.rb')
+# # # load File.join(__dir__, 'parse/parse_segments.rb')
+# # # load File.join(__dir__, 'parse/parse_messages.rb')
+#
+# load File.join(__dir__, 'parse/parse_text.rb')
+load File.join(__dir__, 'parse/parse_extras.rb')
 
 # load File.join(__dir__, 'parse/parse_conformance.rb')
 # load File.join(__dir__, 'build_snelick.rb')

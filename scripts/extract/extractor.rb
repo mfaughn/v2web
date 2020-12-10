@@ -26,7 +26,40 @@ module V2Web
     attr_reader :chapter
     def initialize(chapter = nil)
       @chapter = chapter.to_s.gsub(/^0+/, '')
+      HL7Parse.set_list_styles(@chapter) if chapter
+    end
+    
+    def setup(source, chapter = nil)
+      chapter  ||= source.slice(/(?<=CH)\d\dA?/)
+      chapter  = chapter[1..-1] if chapter[0] == '0' # get rid of leading zero
+      @chapter = chapter
       HL7Parse.set_list_styles(@chapter)
+      docx_path = HL7Parse.docx_path(source)
+      zip_path  = HL7Parse.zip_path(source)
+      unzipped  = HL7Parse.unzip_path(source)
+
+      FileUtils.cp_r(docx_path, zip_path, :remove_destination => true) unless File.exist?(zip_path)
+      system "unzip -o #{zip_path} -d #{unzipped}" unless File.exist?("#{unzipped}/word/document.xml")
+
+      docx = Docx::Document.open(docx_path)
+      docx.setup(unzipped, chapter)
+      # @links     = docx.links
+      # @embeds    = docx.objects
+      # @images    = docx.images
+      @footnotes = docx.footnotes
+      @processor_opts = {
+        :client    => self,
+        :links     => docx.links,
+        :embeds    => docx.objects,
+        :images    => docx.images,
+        :chapter   => @chapter,
+        # :footnotes => docx.footnotes,
+        :raw       => true,
+        :image_substitutions => HL7Parse.image_substitutions[@chapter]
+      }
+      doc = docx.doc
+      doc.remove_namespaces!
+      doc
     end
     
     def extract_document(doc, title = 'Test')
@@ -474,7 +507,7 @@ module V2Web
             run_text << '-'
           elsif t.name == 'br'
             run_text << "\n"
-            # run_text << "<br>"
+            # run_text << "<br/>"
           else
             run_text << CGI.escapeHTML(t)
           end
@@ -700,7 +733,7 @@ module V2Web
     end
     
     def node_styles(node)
-      node.xpath('.//pPr/pStyle').map { |s| s.attribute('val')&.value }
+      node.xpath('.//pPr/pStyle').map { |s| s.attribute('val')&.value }.compact.uniq
     end
     
     def parse_code_set(set)

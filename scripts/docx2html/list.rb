@@ -60,7 +60,7 @@ module Docx2HTML
       else
         raise "Unknown list style #{style}"
       end
-      @classes << "v2-#{@style_type}-list-#{style}"
+      @classes << "v2-#{@style_type}-list v2-#{style}"
     end
     
     # these numbers aren't consistent across docx files. you have to set them for each file...

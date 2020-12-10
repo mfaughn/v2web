@@ -11,6 +11,7 @@ module V2Plus
       # puts doc.to_s
       nodeset   = doc.css('MessageStructure')
       this.code = nodeset.get_val('messageType')
+      # puts "Making MessageStructure #{this.code}"
       this.url  = nodeset.get_val('url')
       # nodeset.each { |n| puts n.name }
       seg_nodes = nodeset.children.select { |n| n.name == 'segmentEntry' }
@@ -39,14 +40,13 @@ module V2Plus
     
     def to_web_pub
       # table = to_composition_content
-      V2Plus.save_web_file("message-structure-#{code}.html", to_table)
+      V2Plus.save_web_file("message-structure/#{code}.html", to_table)
     end
         
     def to_table
-      # return @table if @table
       locals = {
         # FIXME
-        :message_structure_page => 'http://www.hl7.eu/refactored/msg.html#msgstruct',
+        :message_structure_page => 'message-structures.html',
         :caption      => "HL7 MessageStructure Table - #{code}",
         :code         => code,
         :table_id     => table_id,

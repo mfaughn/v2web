@@ -4,7 +4,13 @@ require_relative 'debug_tables'
 module V2Web
   class DocXtractor
 
-    def extract_chapter(docx)
+    def setup_for_chapter(source)
+      puts Rainbow("#### Parse Chapter #{source} ###").orange
+      setup(source)
+    end
+    
+    def extract_chapter(source)
+      doc = setup_for_chapter(source)
       @datatype_titles = Marshal.load(File.binread(File.join(__dir__, '../parse/datatype_titles.bin')))
       @segment_titles  = Marshal.load(File.binread(File.join(__dir__, '../parse/segment_titles.bin')))
       # @node_types = []
@@ -12,8 +18,7 @@ module V2Web
       @html_fragments = []
       @p_buffer       = []
       # @last_node = nil
-      docx.remove_namespaces!
-      docx.at('body').children.each { |c| _extract_chapter(c) }
+      doc.at('body').children.each { |c| extract_chapter_node(c) }
       fill_narrative # add text to last section
       # @composition.toc
       @composition
@@ -47,9 +52,28 @@ module V2Web
       # @composition.add_section(@section)
     end
     
+    def add_footnote(id)
+      @footnote_ids ||= []
+      @footnote_ids << id
+    end
+    
+    def add_footnotes
+      return unless @footnote_ids&.any?
+      @footnote_ids.each do |id|
+        @html_fragments << @footnotes[id]
+        # footnote_content = @footnotes[id]
+        # div = <<~HERE
+        # <div class="v2-footnote">#{footnote_content}</div>
+        # HERE
+        # @html_fragments << div
+      end
+      @footnote_ids = []
+    end
+    
     def fill_narrative
       return unless @section.is_a?(FHIR::Section)
       p_buffer_to_html
+      add_footnotes
       if @html_fragments.empty? 
         # puts Rainbow("@html_fragments EMPTY").lime
         return
@@ -73,8 +97,8 @@ module V2Web
     end
     
     def p_buffer_to_html
-      if @p_buffer.any?
-        html = Docx2HTML::Processor.new(@p_buffer, :chapter => @chapter).process(:raw => true)
+      if @p_buffer.any?        
+        html = Docx2HTML::Processor.new(@p_buffer, @processor_opts).process
         # processor returns what should be a proper html string
         @html_fragments << html
         # puts Rainbow("adding @p_buffer to @html_fragments: #{@html_fragments.last[0..100]}").yellow
@@ -97,7 +121,7 @@ module V2Web
           p_buffer_to_html # add the paragraphs to the buffer now.
           puts Rainbow("Unexpected #{node.name} in add_to_narrative").red unless html_or_node.name == 'tbl'
           # puts "adding TABLE to @html_fragments"
-          @html_fragments << Docx2HTML::Processor.new(html_or_node, opts.merge({:chapter => @chapter})).process(:raw => true)
+          @html_fragments << Docx2HTML::Processor.new(html_or_node, opts.merge(@processor_opts)).process
           # puts "TABLE END: #{@html_fragments.count}"
         end
       elsif html_or_node.is_a?(String)
@@ -146,8 +170,7 @@ module V2Web
       fill_narrative
       new_section = _create_section(title, depth, code, opts = {})
       ChangeTracker.start
-      narrative   = FHIR::Narrative.new
-      new_section.text = narrative
+      new_section.text = FHIR::Narrative.new
       ChangeTracker.commit
       insert_section(new_section, depth)
       @section = new_section
@@ -323,26 +346,19 @@ module V2Web
     #   styles.any? { |s| s =~ /List/i }
     # end
     
-    def _extract_chapter(node)
-      # @node_types << node.name
+    def extract_chapter_node(node)
       case node.name
-      # when 'body'
-      #   node.children.each { |c| _extract_chapter(c) }
-      # when 'document'
-      #   node.children.each { |c| _extract_chapter(c) }
       when 'tbl'
         extract_tbl(node) unless @skip
         @caption = nil
       when 'bookmarkStart', 'bookmarkEnd'
-        # TODO
+        # ignore
       when 'sectPr'
-        # TODO not sure what this is for...section properties
+        # not sure what this is for...section properties
       when 'p'
-        # last_node_was_list = is_list_item?(node.previous)
-        # puts Rainbow(node.path).green
-        styles = node_styles(node)#node.xpath('.//pPr/pStyle').map { |s| s['val'] }
-        styles.each { |s| @styles << s }
-        puts Rainbow('Multiple Styles!').red if styles.count > 1
+        styles = node_styles(node)
+        # styles.each { |s| @styles << s }
+        puts Rainbow('Multiple Styles! ' + styles.inspect).red if styles.count > 1
         if styles.any?
           style = styles.first
           if style =~ /Heading/
@@ -350,20 +366,23 @@ module V2Web
             when 'Heading1'
               start_composition(node)
             else
-              # fill_narrative
               txt = extract_text(node).strip
-              return if txt.empty?
+              return if txt.empty? || txt =~ /hiddentext/i
               depth = style[-1].to_i
               raise unless (2..6).include?(depth)
               if depth.to_i <= @section_depth
                 # puts Rainbow('UNSKIP!').red + " depth: #{depth}; section_depth: #{@section_depth}"
                 @skip = false
               end 
-              
-              if @datatype_titles.include?(txt)
+              if depth == 2 && txt =~ /Contents/i
+                @skip = true
+                puts Rainbow("    Skipping #{txt}").crimson
+              end
+               
+              if @datatype_titles&.include?(txt)
                 @skip = true
                 create_datatype_section(txt, depth)
-              elsif @segment_titles.include?(txt)
+              elsif @segment_titles&.include?(txt)
                 # puts Rainbow("SKIP #{txt}").green
                 @skip = true
                 create_segment_section(txt, depth)
@@ -397,7 +416,8 @@ module V2Web
             when 'NoteChar'
               etext = extract_text(node)
               if etext.strip&.[](0)
-                puts style + ' ' + Rainbow(etext).red
+                # Only in Ch. 6
+                # puts style + ' ' + Rainbow(etext).red
                 add_to_narrative(node, :style => style) 
               end
               # FIXME found in Ch6

@@ -1,0 +1,667 @@
+<table class='center striped-rows table_v2web'>
+  <tbody>
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 10%;">
+      <col span="1" style="width: 10%;">
+      <col span="1" style="width: 10%;">
+    </colgroup>
+    <caption>
+      Table 4.3: Example of Profiled Message Level Definition
+    </caption>
+    <tr class='tr_v2web'>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>Segment</strong>
+        </p>
+      </th>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Segment Flavor
+        </p>
+      </th>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Description
+        </p>
+      </th>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Usage
+        </p>
+      </th>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Cardinality
+        </p>
+      </th>
+      <th class='emphasis-header table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Chapter
+        </p>
+      </th>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          MSH
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>H_IZ</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Message Header Segment
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [1..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          2
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [{&nbsp;SFT&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          SFT
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Software
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          X
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [0..0]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          2
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [&nbsp;&nbsp;UAC&nbsp;&nbsp;]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          UAC
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          User Authentication Credential
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          2
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          PID
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>PID_IZ</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Patient Identification Segment
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [1..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [&nbsp;&nbsp;PD1&nbsp;&nbsp;]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>PD1_IZ_01</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Additional Demographics
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          E
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [{&nbsp;NK1&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>NK1_IZ</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Next of Kin/Associated Parties
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          RE
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>...</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [{
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- ORDER begin
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          7
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;ORC
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>ORC_IZ_01</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Common Order
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          2
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;[{&nbsp;PRT&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          PRT
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Participation (for ORC)
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [0..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;[{
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- TIMING begin
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TQ1
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          TQ1
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Timing/Quantity
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          7
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;[{&nbsp;TQ2&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          TQ2
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          uence
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          7
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- TIMING end
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;RXA
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>_IZ_01</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Pharmacy Administration Segment
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          4
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;RXR&nbsp;&nbsp;]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>_IZ</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Pharmacy Route
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          RE
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          [0..1]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          4
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;[{
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- OBSERVATION begin
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          RE
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBX
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          <strong>_IZ_02</strong>
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Observation/Result
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          R
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          7
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[{&nbsp;PRT&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          PRT
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Participation (for Observation)
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          7
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[{&nbsp;NTE&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          NTE
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          Notes (Regarding Immunization)
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          O
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          3
+        </p>
+      </td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          &nbsp;&nbsp;&nbsp;}]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- OBSERVATION end
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+    </tr>
+    <tr class='tr_v2web'>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          ]
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'>
+        <p class='p_v2web' style=''>
+          --- ORDER end
+        </p>
+      </td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+      <td class='table_v2web' colspan='1'></td>
+    </tr>
+  </tbody>
+</table>

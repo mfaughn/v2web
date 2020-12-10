@@ -1,6 +1,6 @@
 require_relative 'extractor_helpers'
 module V2Web
-  class DocXtractor    
+  class DocXtractor 
     def extract_messages(doc, html)
       @html = File.open(html) { |f| Nokogiri::XML(f) }
       @html_msgs = {}

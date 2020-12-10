@@ -15,15 +15,21 @@ module DataElementMethods
   def to_resource
     xml = HL7.get_instance_template(:data_element, 'base')
     xml.sub!('URL', local_url_name)
-    xml.sub!('NAME', name)
-    xml.sub!('ITEM_NUMBER', item_number.to_s)
-    xml.sub!('DESCRIPTION', resource_definition_content)
+    xml.sub!('NAME', name.hl7.gsub('"', '&#34;'))
+    xml.sub!('ITEM_NUMBER' , item_number.to_s)
+    xml.sub!('DESCRIPTION' , resource_definition_content)
     xml.sub!('MAY_TRUNCATE', may_truncate.value.to_s)
-    xml.sub!('MIN_LENGTH', resource_min_length)
-    xml.sub!('MAX_LENGTH', resource_max_length)
-    xml.sub!('CONF_LENGTH', resource_conf_length)
-    xml.sub!('DATA_TYPE', resource_data_type)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    xml.sub!('MIN_LENGTH'  , resource_min_length)
+    xml.sub!('MAX_LENGTH'  , resource_max_length)
+    xml.sub!('CONF_LENGTH' , resource_conf_length)
+    xml.sub!('TABLE'       , resource_table)
+    xml.sub!('DATA_TYPE'   , resource_data_type)
+    begin
+      Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
+    rescue
+      puts xml
+      raise
+    end
   end
 
   def resource_data_type
@@ -49,6 +55,15 @@ module DataElementMethods
     end
   end
   
+  def resource_table
+    tid = table&.table_id
+    if tid
+      HL7.get_instance_template(:data_element, 'table_id').sub('VALUE', tid.to_s.rjust(4, '0'))
+    else
+      ''
+    end
+  end
+  
   def resource_min_length
     min_length ? HL7.get_instance_template(:common, 'min_length').sub('VALUE', min_length.to_s) : ''
   end
@@ -65,7 +80,7 @@ module DataElementMethods
     if definitions_count > 1
       definitions.each do |defn|
         seg_code, seq_num = defn.original_container.split('.').map(&:strip)
-        link = "segment-definition-#{seg_code}.html##{seg_code}-#{seq_num}" # this isn't exactly DRY with Field#local_html_id
+        link = "/segment-definition/#{seg_code}.html##{seg_code}-#{seq_num}" # this isn't exactly DRY with Field#local_html_id
         content << "<p class='data-element-definition-marker'><strong>(Definition from <a href='#{link}'>#{defn.original_container}</a> in Ch. #{defn.chapter})</strong></p>" + defn.definition_content
       end
     else

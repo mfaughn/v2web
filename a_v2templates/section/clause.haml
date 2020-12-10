@@ -1,18 +1,18 @@
-%div{:class => "v2-composition-section-#{depth}"}  
+%div{:class => "v2-composition-section-#{depth}", :id => html_id}  
   - if depth == 2
-    %h2{:id => html_id}
+    %h2.v2
       = title
   - if depth == 3
-    %h3{:id => html_id}
+    %h3.v2
       = title
   - if depth == 4
-    %h4{:id => html_id}
+    %h4.v2
       = title
   - if depth == 5
-    %h5{:id => html_id}
+    %h5.v2
       = title
   - if depth == 6
-    %h6{:id => html_id}
+    %h6.v2
       = title
   = content
   %div{:class => "v2-composition-section-#{depth}-subsections"}

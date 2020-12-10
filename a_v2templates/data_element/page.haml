@@ -1,0 +1,16 @@
+%h3
+  =title
+.data-element-definition
+  = definition
+%br
+.fields_using_data_element
+  %h4
+    Utilized in these segments:
+  %ul
+    - fields.each do |field|
+      %li
+        %a{ :href => field.local_url }
+          = field.local_html_id.upcase
+    
+
+

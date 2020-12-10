@@ -1,16 +1,20 @@
 %tr.segment_definition_field
   %td
     - if last
-      %img{:src => "images/tbl_vjoin_end.png"}
+      %img{:src => "/images/tbl_vjoin_end.png"}
     - else
-      %img{:src => "images/tbl_vjoin.png"}
+      %img{:src => "/images/tbl_vjoin.png"}
     =sequence_number
+    - if !last
+      - fat_row.times do
+        %br
+        %img{:src => "/images/tbl_vline.png"}
   %td
     %a{ :href => field_def_link }
       =data_element_id
   %td
     =name
-  %td.centered
+  %td
     =must_implement
   %td.centered
     =flags
@@ -21,9 +25,11 @@
   %td.centered
     =c_length
   %td.centered
-    %a{ :href => value_set_url }
-      =value_set
+    %div.vocab-link
+      %a{ :href => value_set_url }
+        =value_set
+        %span.vocab-link-text
+          =value_set_hover
   %td.centered
     %a{ :href => type_url }
       =type_code
-    

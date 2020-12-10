@@ -33,7 +33,7 @@ module V2Plus
       de1.c_length     = nil
       de1.may_truncate = nil
       de1.data_type    = V2Plus::DataType.get('coded-with-exceptions')
-      de1.definition   = Gui_Builder_Profile::RichText.create(:content => '<p class="v2 v2_normalindented">Definition: This field contains HL7 table values for identifier and text encoded as a CWE data type.</p>')
+      de1.definition   = Gui_Builder_Profile::RichText.create(:content => '<p class="v2 v2-normalindented">Definition: This field contains HL7 table values for identifier and text encoded as a CWE data type.</p>')
       f[0].data_element = de1
       
       de2 = V2Plus::DataElement.new
@@ -44,43 +44,20 @@ module V2Plus
       de2.c_length     = 3
       de2.may_truncate = false
       de2.data_type    = V2Plus::DataType.get('numeric')
-      de2.definition   = Gui_Builder_Profile::RichText.create(:content => '<p class="v2 v2_normalindented">Definition: This field is used to specify a non-alphabetic ordering for display or print versions of a standard HL7 table.</p>')
+      de2.definition   = Gui_Builder_Profile::RichText.create(:content => '<p class="v2 v2-normalindented">Definition: This field is used to specify a non-alphabetic ordering for display or print versions of a standard HL7 table.</p>')
       f[1].data_element = de2
     end
 
     def to_web_pub
       page = to_composition_clause(3)
-      # locals = {
-      #   :caption => "HL7 Attribute Table - #{code} - #{name}",
-      #   # FIXME
-      #   :segment_list_page => "http://www.hl7.eu/refactored/seg.html",
-      #   :code => code,
-      #   :field_rows => field_rows
-      # }
-      # table = V2Plus.render_with_locals(:segment_definition, :table, locals)
-      # content = description&.content
-      # table_regexp = /<div class="insert-segment-table" id="...-attribute-table"><\/div>/
-      # # print code
-      # # print content.scan(table_regexp).count
-      # content = content.sub(table_regexp, table)
-      # # puts content.scan(table_regexp).count
-      # # <div class="insert-segment-table" id="BHS-attribute-table"></div>
-      #
-      # locals = {
-      #   :content => content,
-      #   :field_definitions => field_defintions_html,
-      #   :title => page_title
-      # }
-      # page = V2Plus.render_with_locals(:segment_definition, :page, locals)
-      V2Plus.save_web_file("segment-definition-#{code}.html", page)
+      V2Plus.save_web_file("/segment-definition/#{code}.html", page)
     end
     
     # TODO make dry w/ above.  Only difference may be depth variability and wrapping in page layout
     def to_composition_clause(depth)
       locals = {
         :caption => "HL7 Attribute Table - #{code} - #{name}",
-        # FIXME
-        :segment_list_page => "http://www.hl7.eu/refactored/seg.html",
+        :segment_list_page => "/segment-definitions.html",
         :code => code,
         :field_rows => field_rows
       }

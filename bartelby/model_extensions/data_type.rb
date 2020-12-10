@@ -20,7 +20,7 @@ module V2Plus
     def to_composition_clause(depth)
       locals = {
         :caption => "HL7 Component Table - #{code} - #{name}",
-        :datatype_control_page => "http://www.hl7.eu/refactored/dt.html", # FIXME
+        :datatype_control_page => "/data-types.html",
         :code => code,
         :component_rows => component_rows
       }
@@ -34,7 +34,6 @@ module V2Plus
       table_regexp = /<div class=.insert-component-table.\s+id=....?-component-table.+><\/div>/
       content = content.sub(table_regexp, table)
 
-
       locals = {
         :title => "#{code} - #{name}",
         :content => content,
@@ -43,19 +42,17 @@ module V2Plus
       V2Plus.render_with_locals(:datatype, :page, locals)
     end
     
-    
-    
     def to_web_pub
       page = to_composition_clause(3)
-      V2Plus.save_web_file("data-type-#{code}.html", page)
+      V2Plus.save_web_file("data-type/#{code}.html", page)
     end
     
     # HTML
     def component_string_html
       return nil unless components.count > 1
-      str = "<p class='v2_components'>Components: #{_components_string_html}</p>"
+      str = "<p class='v2-components'>Components: #{_components_string_html}</p>"
       subs_str = subcomponents.map do |sc|
-         "<p class='v2_components'>Subcomponents for #{sc.name} (#{sc.type.code}): #{sc.type._components_string_html(true)}</p>"
+         "<p class='v2-components'>Subcomponents for #{sc.name} (#{sc.type.code}): #{sc.type._components_string_html(true)}</p>"
        end
        str << subs_str.join("\n") if subs_str.any?
        str
@@ -73,6 +70,7 @@ module V2Plus
         if c.withdrawn
           array << "&#60;WITHDRAWN #{c.name}&#62;"
         else
+          puts self.code unless c.type
           # puts "Component for #{name}#{c.sequence_number || '1'} - #{c.name}"
           array << "&#60;#{c.name} (#{c.type.code})&#62;"
         end
@@ -91,6 +89,7 @@ module V2Plus
     def component_definitions_html
       html = []
       cc = components
+      return '' if cc.count < 2 #&& cc.first&.type == self
       cc.each_with_index { |comp, i| html << comp.to_web_definition("#{code}-#{i+1}") }
       html.join("\n")
     end

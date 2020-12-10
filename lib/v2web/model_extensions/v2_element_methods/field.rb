@@ -17,7 +17,7 @@ module FieldMethods
     else
       xml.sub!('DATA_ELEMENT', 'FIXME!')
     end
-    Nokogiri::XML(xml,&:noblanks).root.to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
   end
 
   def resource_min_cardinality
@@ -28,7 +28,7 @@ module FieldMethods
   end
   def resource_flags
     ov = optionality&.value
-    if ov && !(ov == 'R' || ov == 'O')
+    if ov && !(ov == 'R' || ov == 'O' || ov == '-')
       HL7.get_instance_template(:segment_def, 'flags').sub('VALUE', ov)
     else
       ''

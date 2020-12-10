@@ -21,7 +21,7 @@ module AcknowledgmentChoreographyMethods
     xml.sub!('IMMEDIATE_ACKS'   , resource_enhanced_imm_ack)
     xml.sub!('MSH16VALUES'      , resource_msh16values)
     xml.sub!('APPLICATION_ACKS' , resource_enhanced_app_ack)
-    Nokogiri::XML(xml,&:noblanks).to_s
+    Nokogiri::XML(xml) { |config| config.strict.noblanks }.to_s
   end
   
   def resource_original_ack_type

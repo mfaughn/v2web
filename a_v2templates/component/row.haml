@@ -1,14 +1,19 @@
 %tr.datatype_component
   %td
     - if last
-      %img{:src => "images/tbl_vjoin_end.png"}
+      %img{:src => "/images/tbl_vjoin_end.png"}
     - else
-      %img{:src => "images/tbl_vjoin.png"}
+      %img{:src => "/images/tbl_vjoin.png"}
     %a{:href => sequence_number_url}
       =sequence_number
+    - if !last
+      - fat_row.times do
+        %br
+        %img{:src => "/images/tbl_vline.png"}
+      
   %td
     =name
-  %td.centered
+  %td
     =implement
   %td.centered
     =flags
@@ -18,7 +23,7 @@
     =length
   %td.centered
     =c_length
-  %td.centered
+  %td
     %a{:href => value_set_url}
       =value_set
   %td.centered

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition>
-  <url value='http://v2.hl7.org/fhir/MessageDefinition/URL'/>
-  <name value='NAME'/>
-  <code value='CODE'/>
-  <structure value='http://v2.hl7.org/fhir/MessageStructure/MESSAGE_STRUCTURE_URL' />
+  <url value="http://v2.hl7.org/fhir/MessageDefinition/URL"/>
+  <name value="NAME"/>
+  <code value="CODE"/>
+  <structure value="http://v2.hl7.org/fhir/MessageStructure/MESSAGE_STRUCTURE_URL" />
   DESCRIPTION
 </MessageDefinition>  

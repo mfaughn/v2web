@@ -1,26 +1,52 @@
 %div.centered
-  %p
-    - if imm_ack
-      - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
-      - a_or_an2 = (imm_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
-      / = "Send #{imm_acks} when MSH-15 is #{msh15vals}"
-      = "When the MSH-15 value of #{a_or_an1} #{for_msg} message is #{msh15vals}, #{a_or_an2} #{imm_acks} message SHALL be sent as an immediate ack."
-      - if neg15
+  .ack-enhanced-immediate-text
+    %p
+      - if imm_ack
+        - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
+        - a_or_an2 = (imm_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
+        When the
+        %b
+          MSH-15
+        = "value of #{a_or_an1} #{for_msg} message is #{msh15vals}, #{a_or_an2} #{imm_acks} message"
+        %b
+          SHALL
+        be sent as an immediate ack.
+        - if neg15
+          %p
+            When the
+            %b
+              MSH-15
+            = "value of #{a_or_an1} #{for_msg} message is #{neg15}, an immediate ack"
+            %b
+              SHALL NOT
+            be sent.
+      - else
         %p
-          = "When the MSH-15 value of #{a_or_an1} #{for_msg} message is #{neg15}, an application ack SHALL NOT be sent."
-    - else
-      = "Never send an immediate ack in enhanced mode."
-  %p
-    - if app_ack
-      - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
-      - a_or_an3 = (app_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
-      / = "Send #{app_acks} when MSH-15 is #{msh16vals}"
-      = "When the MSH-16 value of #{a_or_an1} #{for_msg} message is #{msh16vals}, #{a_or_an3} #{app_acks} message SHALL be sent as an application ack."
-      - if neg16
+          Never send an immediate ack in enhanced mode.
+  .ack-enhanced-application-text
+    %p
+      - if app_ack
+        - a_or_an1 = (for_msg =~ /^[AEIOU]/ ) ? 'an' : 'a'
+        - a_or_an3 = (app_acks =~ /^[AEIOU]/ ) ? 'an' : 'a'
+        When the
+        %b
+          MSH-16
+        = "value of #{a_or_an1} #{for_msg} message is #{msh16vals}, #{a_or_an3} #{app_acks} message"
+        %b
+          SHALL
+        be sent as an application ack.
+        - if neg16
+          %p
+            When the
+            %b
+              MSH-16
+            = "value of #{a_or_an1} #{for_msg} message is #{neg16}, an application ack"
+            %b
+              SHALL NOT
+            be sent.
+      - else
         %p
-          = "When the MSH-16 value of #{a_or_an1} #{for_msg} message is #{neg16}, an application ack SHALL NOT be sent."
-    - else
-      = "Never send an application ack in enhanced mode."
+          Never send an application ack in enhanced mode.
 %br
 %table.v2.acknowledgment-choreography-enhanced-mode-table{:id => "#{html_id}-enhanced-mode-ack-chor-table"}
   %tbody

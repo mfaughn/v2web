@@ -14,6 +14,9 @@ titles_path = File.join(__dir__, 'segment_titles.txt')
 File.open(titles_path, 'w+') { |f| HL7Parse.segment_titles.sort.each { |t| f.puts t } }
 titles_path = File.join(__dir__, 'segment_titles.bin')
 File.open(titles_path, 'wb+') {|f| f.write(Marshal.dump(HL7Parse.segment_titles))}
+titles_path = File.join(__dir__, 'segment_titles.json')
+File.open(titles_path, 'wb+') {|f| f.write(JSON.dump(HL7Parse.segment_titles))}
+
 
 extractor = V2Web::DocXtractor.new('2A')
 docx_path = HL7Parse.docx_path('datatypes')
@@ -24,3 +27,5 @@ titles_path = File.join(__dir__, 'datatype_titles.txt')
 File.open(titles_path, 'w+') { |f| HL7Parse.datatype_titles.sort.each { |t| f.puts t } }
 titles_path = File.join(__dir__, 'datatype_titles.bin')
 File.open(titles_path, 'wb+') {|f| f.write(Marshal.dump(HL7Parse.datatype_titles))}
+titles_path = File.join(__dir__, 'datatype_titles.json')
+File.open(titles_path, 'wb+') {|f| f.write(JSON.dump(HL7Parse.datatype_titles))}

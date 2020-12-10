@@ -1,0 +1,106 @@
+!!! Strict
+%html{:lang => 'en'}
+  %head
+    %title
+      HL7 - REFACTORED
+    %meta{:name => "COPYRIGHT", :content =>"(C) Health Level Seven, Int. 2020"}
+    - # %meta{:name => "Generator", :content =>"HL7 Comprehensive Database"}
+    - # %meta{:name => "Author",    :content =>"Frank Oemig"}
+    %meta{:name => "Keywords",  :content =>"HL7, v2.x, v2+, v2plus"}
+
+    %style{:type => 'text/css' }
+      @import "/css/bootstrap.css";
+      @import "/css/codemirror.css";
+      @import "/css/hl7.css";
+      @import "/css/fhir.css";
+      / @import "css/bootstrap-fhir.css";
+      @import "/css/bootstrap-v2.css";
+      @import "/css/project.css";
+      @import "/css/pygments-manni.css";
+      @import "/css/jquery-ui.css";
+      @import "/css/modules.css";
+      @import "/css/v2.css";
+      
+    %script{:src => "/js/jquery.js"}
+    %script{:src => "/js/jquery-ui.min.js"}
+    %script{:src => "/js/bootstrap.min.js"}
+    %script{:src => "/js/respond.min.js"}
+    %script{:src => "/js/codemirror/codemirror.js"}
+    %script{:src => "/js/codemirror/mode/xml.js"}
+    %script{:src => "/js/v2.js"}
+    
+    %script{:type => 'text/javascript', :src => '/js/fhir-table-scripts.js'}
+    %script{:type => 'text/javascript', :src => '/js/format_xml.js'}
+    
+    %link{:rel => 'shortcut icon', :href => "/images/hl7.ico" }
+
+  %body
+    .segment#segment-header
+      .container
+        %a#logo{:"no-external" => "true", :href => "http://www.hl7.org/hl7v2+" }
+        #hl7-status
+          %img{:height => "50", :alt => "visit the hl7 website", :src => "/images/hl7-v2plus.gif"}
+          %b
+            The Demo site for our new HL7 Version 2+ (plus) Standard
+
+        #hl7-nav
+          %a#hl7-logo{:"no-external" => "true", :href => "http://www.hl7.org"}
+          %img{:alt => "visit the hl7 website", :src => "/images/hl7-logo.png"}
+   
+    .segment#segment-navbar
+      #stripe
+      .container
+        %nav.navbar.navbar-inverse
+          .container
+            %button.navbar-toggle{:'data-target' => ".navbar-inverse-collapse", :'data-toggle' => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+          %a.navbar-brand.hidden{:href => "/index.html"}
+            FHIR
+          .nav-collapse.collapse.navbar-inverse-collapse
+            %ul.nav.navbar-nav
+              - navbar_items.each do |nav_title, nav_href|
+                %li
+                  %a{:href => nav_href}
+                    = nav_title
+
+    - if draft
+      .container
+        #v2draft
+          %h1
+            Draft Website - For Review Purposes Only
+    
+    .segment#segment-breadcrumb
+      .container
+        %ul.breadcrumb
+          %li
+            %a{:href => "/index.html"}
+              Home
+
+    .container
+      = content
+
+    .segment#segment-footer
+      .container
+        .inner-wrapper
+          %p
+            ®© HL7.org 2019+. HL7 v2+ generated on
+            = Time.now.strftime("%B %d, %Y")
+          %p
+            %span{:style => "color: #FFFF77"}
+              Links:
+            %a{:href => "/history.html", :style => "color: #b8dcf9"} 
+              Version History
+            |
+            %a{:href => "https://jira.hl7.org/projects/V2/issues/V2-5?filter=allopenissues", :style => "color: #b8dcf9", :target => "_blank"}
+              Propose a change
+              %img{:src => "/images/external.png", :style => "text-align: baseline"}
+            |
+            %a{:href => "/license.html", :rel => "license", :style => "color: #b8dcf9"}
+              License
+              / %img{:alt => "CC0", :src => "/images/cc0.png", :style => "border-style: none;"}
+          
+    - # ==================================================
+    - # Placed at the end of the document so the pages load faster
