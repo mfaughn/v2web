@@ -86,3 +86,4 @@ HISTORY.txt
 *.mdxml.bak
 # vim swap files
 .*.sw?
+*.mdb
