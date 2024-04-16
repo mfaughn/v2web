@@ -1,0 +1,5665 @@
+[
+  {
+    "_id": "HL7AD--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Street Address",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "120",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Other Designation",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "120",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "City",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "State or Province",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Zip or Postal Code",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "12",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70399",
+        "datatype": "ID",
+        "name": "Country",
+        "position": 6,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70190",
+        "datatype": "ID",
+        "name": "Address Type",
+        "position": 7,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Other Geographic Designation",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "AD",
+    "description": "address",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7AUI--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Authorization Number",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Date",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Source",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "AUI",
+    "description": "authorization information",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CCD--V2-9",
+    "children": [
+      {
+        "table": "HL70100",
+        "datatype": "ID",
+        "name": "Invocation Event ",
+        "position": 1,
+        "usage": "R",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Date/time",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CCD",
+    "description": "charge code and date",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CCP--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Channel Calibration Sensitivity Correction Factor",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Channel Calibration Baseline",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Channel Calibration Time Skew",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CCP",
+    "description": "channel calibration parameters",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CD--V2-9",
+    "children": [
+      {
+        "datatype": "WVI",
+        "name": "Channel Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "WVS",
+        "name": "Waveform Source",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CSU",
+        "name": "Channel Sensitivity and Units",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CCP",
+        "name": "Channel Calibration Parameters",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Channel Sampling Frequency",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NR",
+        "name": "Minimum and Maximum Data Values",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CD",
+    "description": "channel definition",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CE--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "CE",
+    "description": "coded entry",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CF--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "FT",
+        "name": "Formatted Text",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Coding System",
+        "position": 3,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Identifier",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "FT",
+        "name": "Alternate Formatted Text",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Alternate Coding System",
+        "position": 6,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System Version ID",
+        "position": 7,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System Version ID",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Original Text",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Identifier",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "FT",
+        "name": "Second Alternate Formatted Text",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Second Alternate Coding System",
+        "position": 12,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System Version ID",
+        "position": 13,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System OID",
+        "position": 14,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Value Set OID",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Value Set Version ID",
+        "position": 16,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System OID",
+        "position": 17,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Value Set OID",
+        "position": 18,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Alternate Value Set Version ID",
+        "position": 19,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System OID",
+        "position": 20,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Value Set OID",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Second Alternate Value Set Version ID",
+        "position": 22,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CF",
+    "description": "coded element with formatted values",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CNE--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Identifier",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Text",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Coding System",
+        "position": 3,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Identifier",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Text",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Alternate Coding System",
+        "position": 6,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System Version ID",
+        "position": 7,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System Version ID",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Original Text",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Identifier",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Text",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Second Alternate Coding System",
+        "position": 12,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System Version ID",
+        "position": 13,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System OID",
+        "position": 14,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Value Set OID",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Value Set Version ID",
+        "position": 16,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System OID",
+        "position": 17,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Value Set OID",
+        "position": 18,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Alternate Value Set Version ID",
+        "position": 19,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System OID",
+        "position": 20,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Value Set OID",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Second Alternate Value Set Version ID",
+        "position": 22,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CNE",
+    "description": "coded with no exceptions",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CNN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "ID Number",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "15",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Family Name",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Given Name",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second and Further Given Names or Initials Thereof",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Suffix",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Prefix",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70360",
+        "datatype": "IS",
+        "name": "Degree",
+        "position": 7,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70297",
+        "datatype": "IS",
+        "name": "Source Table",
+        "position": 8,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "IS",
+        "name": "Assigning Authority - Namespace ID",
+        "position": 9,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Assigning Authority - Universal ID",
+        "position": 10,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70301",
+        "datatype": "ID",
+        "name": "Assigning Authority - Universal ID Type",
+        "position": 11,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "6",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CNN",
+    "description": "composite ID number and name simplified",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CP--V2-9",
+    "children": [
+      {
+        "datatype": "MO",
+        "name": "Price",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70205",
+        "datatype": "ID",
+        "name": "Price Type",
+        "position": 2,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "2",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "From Value",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "To Value",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Range Units",
+        "position": 5,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70298",
+        "datatype": "ID",
+        "name": "Range Type",
+        "position": 6,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CP",
+    "description": "composite price",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CQ--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Quantity",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70794",
+        "datatype": "CWE",
+        "name": "Units",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CQ",
+    "description": "composite quantity with units",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CSU--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Channel Sensitivity",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unit of Measure Identifier",
+        "position": 2,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unit of Measure Description",
+        "position": 3,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Unit of Measure Coding System",
+        "position": 4,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Identifier",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Description",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Alternate Unit of Measure Coding System",
+        "position": 7,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unit of Measure Coding System Version ID",
+        "position": 8,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Coding System Version ID",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Original Text",
+        "position": 10,
+        "usage": "O",
+        "minLength": "199",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Unit of Measure Identifier",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Unit of Measure Text",
+        "position": 12,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Second Alternate Unit of Measure Coding System",
+        "position": 13,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Unit of Measure Coding System Version ID",
+        "position": 14,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unit of Measure Coding System OID",
+        "position": 15,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unit of Measure Value Set OID",
+        "position": 16,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Unit of Measure Value Set Version ID",
+        "position": 17,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Coding System OID",
+        "position": 18,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Value Set OID",
+        "position": 19,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Alternate Unit of Measure Value Set Version ID",
+        "position": 20,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Coding System OID",
+        "position": 21,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Value Set OID",
+        "position": 22,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Unit of Measure Value Set Version ID",
+        "position": 23,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CSU",
+    "description": "channel sensitivity and units",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CWE--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Text",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Coding System",
+        "position": 3,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Identifier",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Text",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Alternate Coding System",
+        "position": 6,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System Version ID",
+        "position": 7,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System Version ID",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Original Text",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Identifier",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Text",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70396",
+        "datatype": "ID",
+        "name": "Name of Second Alternate Coding System",
+        "position": 12,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System Version ID",
+        "position": 13,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Coding System OID",
+        "position": 14,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Value Set OID",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Value Set Version ID",
+        "position": 16,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Coding System OID",
+        "position": 17,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Alternate Value Set OID",
+        "position": 18,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Alternate Value Set Version ID",
+        "position": 19,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Coding System OID",
+        "position": 20,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second Alternate Value Set OID",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Second Alternate Value Set Version ID",
+        "position": 22,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CWE",
+    "description": "coded with exceptions",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7CX--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "ID Number",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "15",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Identifier Check Digit",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70061",
+        "datatype": "ID",
+        "name": "Check Digit Scheme ",
+        "position": 3,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "HD",
+        "name": "Assigning Authority",
+        "position": 4,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70203",
+        "datatype": "ID",
+        "name": "Identifier Type Code",
+        "position": 5,
+        "usage": "R",
+        "minLength": "2",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Assigning Facility",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Effective Date",
+        "position": 7,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Expiration Date",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Jurisdiction",
+        "position": 9,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Agency or Department",
+        "position": 10,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Security Check",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70904",
+        "datatype": "ID",
+        "name": "Security Check Scheme",
+        "position": 12,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "CX",
+    "description": "extended composite ID with check digit",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DDI--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Delay Days",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "3",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "MO",
+        "name": "Monetary Amount",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Number of Days",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DDI",
+    "description": "daily deductible information",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DIN--V2-9",
+    "children": [
+      {
+        "datatype": "DTM",
+        "name": "Date",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70531",
+        "datatype": "CWE",
+        "name": "Institution Name",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DIN",
+    "description": "date and institution name",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DLD--V2-9",
+    "children": [
+      {
+        "table": "HL70113",
+        "datatype": "CWE",
+        "name": "Discharge to Location",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DLD",
+    "description": "discharge to location and date",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DLN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Driver's License Number",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70333",
+        "datatype": "CWE",
+        "name": "Issuing State, Province, Country",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Expiration Date",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DLN",
+    "description": "driver’s license number",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DLT--V2-9",
+    "children": [
+      {
+        "datatype": "NR",
+        "name": "Normal Range",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Numeric Threshold",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70523",
+        "datatype": "ID",
+        "name": "Change Computation",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Days Retained",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DLT",
+    "description": "delta",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DR--V2-9",
+    "children": [
+      {
+        "datatype": "DTM",
+        "name": "Range Start Date/Time",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Range End Date/Time",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DR",
+    "description": "date/time range",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DT--V2-9",
+    "children": [
+      {
+        "datatype": "DT",
+        "name": "Date",
+        "position": null,
+        "usage": "",
+        "minLength": "4",
+        "maxLength": "8",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "DT",
+    "description": "date",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DTM--V2-9",
+    "children": [
+      {
+        "datatype": "DTM",
+        "name": "Date/Time ",
+        "position": null,
+        "usage": "",
+        "minLength": "4",
+        "maxLength": "24",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "DTM",
+    "description": "date/time",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7DTN--V2-9",
+    "children": [
+      {
+        "table": "HL70149",
+        "datatype": "CWE",
+        "name": "Day Type",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Number of Days",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "3",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "DTN",
+    "description": "day type and number",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ED--V2-9",
+    "children": [
+      {
+        "datatype": "HD",
+        "name": "Source Application",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70834",
+        "datatype": "ID",
+        "name": "Type of Data",
+        "position": 2,
+        "usage": "R",
+        "minLength": "4",
+        "maxLength": "11",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70291",
+        "datatype": "ID",
+        "name": "Data Subtype",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70299",
+        "datatype": "ID",
+        "name": "Encoding",
+        "position": 4,
+        "usage": "R",
+        "minLength": "1",
+        "maxLength": "6",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TX",
+        "name": "Data",
+        "position": 5,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "ED",
+    "description": "encapsulated data",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7EI--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Entity Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "IS",
+        "name": "Namespace ID",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Universal ID",
+        "position": 3,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70301",
+        "datatype": "ID",
+        "name": "Universal ID Type",
+        "position": 4,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "6",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "EI",
+    "description": "entity identifier",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7EIP--V2-9",
+    "children": [
+      {
+        "datatype": "EI",
+        "name": "Placer Assigned Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "EI",
+        "name": "Filler Assigned Identifier",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "EIP",
+    "description": "entity identifier pair",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ELD--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "ELD",
+    "description": "error location and description",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ERL--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Segment ID",
+        "position": 1,
+        "usage": "R",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SI",
+        "name": "Segment Sequence",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SI",
+        "name": "Field Position",
+        "position": 3,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SI",
+        "name": "Field Repetition",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SI",
+        "name": "Component Number",
+        "position": 5,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SI",
+        "name": "Sub-Component Number",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "ERL",
+    "description": "Message location",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7FC--V2-9",
+    "children": [
+      {
+        "table": "HL70064",
+        "datatype": "CWE",
+        "name": "Financial Class Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "FC",
+    "description": "financial class",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7FN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Surname",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Own Surname Prefix",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Own Surname",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Surname Prefix from Partner/Spouse",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Surname from Partner/Spouse",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "FN",
+    "description": "family name",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7FT--V2-9",
+    "children": [
+      {
+        "datatype": "FT",
+        "name": "Formatted Text Data ",
+        "position": null,
+        "usage": "",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "FT",
+    "description": "formatted text data",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7GTS--V2-9",
+    "children": [
+      {
+        "datatype": "GTS",
+        "name": "General Timing Specification",
+        "position": null,
+        "usage": "",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "GTS",
+    "description": "general timing specification",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7HD--V2-9",
+    "children": [
+      {
+        "table": "HL70300",
+        "datatype": "IS",
+        "name": "Namespace ID",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Universal ID",
+        "position": 2,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70301",
+        "datatype": "ID",
+        "name": "Universal ID Type",
+        "position": 3,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "6",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "HD",
+    "description": "hierarchic designator",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ICD--V2-9",
+    "children": [
+      {
+        "table": "HL70150",
+        "datatype": "CWE",
+        "name": "Certification Patient Type",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70136",
+        "datatype": "ID",
+        "name": "Certification Required",
+        "position": 2,
+        "usage": "R",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Date/Time Certification Required",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "ICD",
+    "description": "insurance certification definition",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ID--V2-9",
+    "children": [
+      {
+        "datatype": "ID",
+        "name": "Coded Value for HL7-Defined Tables",
+        "position": null,
+        "usage": "",
+        "minLength": "1",
+        "maxLength": "",
+        "confLength": "15",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "ID",
+    "description": "coded value for HL7 defined tables",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7IS--V2-9",
+    "children": [
+      {
+        "datatype": "IS",
+        "name": "Coded Value for User-Defined Tables",
+        "position": null,
+        "usage": "",
+        "minLength": "1",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "IS",
+    "description": "coded value for user-defined tables",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7JCC--V2-9",
+    "children": [
+      {
+        "table": "HL70327",
+        "datatype": "CWE",
+        "name": "Job Code",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70328",
+        "datatype": "CWE",
+        "name": "Job Class",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TX",
+        "name": "Job Description Text",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "JCC",
+    "description": "job code/class",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7LA1--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "LA1",
+    "description": "location with address variation 1",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7LA2--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "LA2",
+    "description": "location with address variation 2",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7MA--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Sample Y From Channel 1",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Sample Y From Channel 2",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Sample Y From Channel 3",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Sample Y From Channel 4",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "MA",
+    "description": "multiplexed array",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7MO--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Quantity",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70913",
+        "datatype": "ID",
+        "name": "Denomination",
+        "position": 2,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "MO",
+    "description": "money",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7MOC--V2-9",
+    "children": [
+      {
+        "datatype": "MO",
+        "name": "Monetary Amount",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Charge Code",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "MOC",
+    "description": "money and charge code",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7MOP--V2-9",
+    "children": [
+      {
+        "table": "HL70148",
+        "datatype": "ID",
+        "name": "Money or Percentage Indicator",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Money or Percentage Quantity",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70913",
+        "datatype": "ID",
+        "name": "Monetary Denomination",
+        "position": 3,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "MOP",
+    "description": "money or percentage",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7MSG--V2-9",
+    "children": [
+      {
+        "table": "HL70076",
+        "datatype": "ID",
+        "name": "Message Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70003",
+        "datatype": "ID",
+        "name": "Trigger Event",
+        "position": 2,
+        "usage": "R",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70354",
+        "datatype": "ID",
+        "name": "Message Structure",
+        "position": 3,
+        "usage": "R",
+        "minLength": "3",
+        "maxLength": "7",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "MSG",
+    "description": "message type",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7NA--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Value1",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Value2",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Value3",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Value4",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "NA",
+    "description": "numeric array",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7NDL--V2-9",
+    "children": [
+      {
+        "datatype": "CNN",
+        "name": "Name",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Start Date/Time",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "End Date/Time",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70302",
+        "datatype": "IS",
+        "name": "Point of Care ",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70303",
+        "datatype": "IS",
+        "name": "Room ",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70304",
+        "datatype": "IS",
+        "name": "Bed",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Facility",
+        "position": 7,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70306",
+        "datatype": "IS",
+        "name": "Location Status ",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70305",
+        "datatype": "IS",
+        "name": "Patient Location Type",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70307",
+        "datatype": "IS",
+        "name": "Building ",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70308",
+        "datatype": "IS",
+        "name": "Floor",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "NDL",
+    "description": "name with date and location",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7NM--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Numeric",
+        "position": null,
+        "usage": "",
+        "minLength": "1",
+        "maxLength": "16",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "NM",
+    "description": "numeric",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7NR--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Low Value",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "High Value",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "NR",
+    "description": "numeric range",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7OCD--V2-9",
+    "children": [
+      {
+        "table": "HL70350",
+        "datatype": "CNE",
+        "name": "Occurrence Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Occurrence Date",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "OCD",
+    "description": "occurrence code and date",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7OG--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Original Sub-Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Group",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Sequence",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Identifier",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "OG",
+    "description": "observation grouper",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7OSD--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "OSD",
+    "description": "order sequence definition",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7OSP--V2-9",
+    "children": [
+      {
+        "table": "HL70351",
+        "datatype": "CNE",
+        "name": "Occurrence Span Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Occurrence Span Start Date",
+        "position": 2,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Occurrence Span Stop Date",
+        "position": 3,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "OSP",
+    "description": "occurrence span code and date",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PIP--V2-9",
+    "children": [
+      {
+        "table": "HL70525",
+        "datatype": "CWE",
+        "name": "Privilege",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70526",
+        "datatype": "CWE",
+        "name": "Privilege Class",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Expiration Date",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Activation Date",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "EI",
+        "name": "Facility",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PIP",
+    "description": "practitioner institutional privileges",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PL--V2-9",
+    "children": [
+      {
+        "table": "HL70302",
+        "datatype": "HD",
+        "name": "Point of Care",
+        "position": 1,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70303",
+        "datatype": "HD",
+        "name": "Room",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70304",
+        "datatype": "HD",
+        "name": "Bed",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Facility",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70306",
+        "datatype": "IS",
+        "name": "Location Status",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70305",
+        "datatype": "IS",
+        "name": "Person Location Type",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70307",
+        "datatype": "HD",
+        "name": "Building",
+        "position": 7,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70308",
+        "datatype": "HD",
+        "name": "Floor",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Location Description",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "EI",
+        "name": "Comprehensive Location Identifier",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "HD",
+        "name": "Assigning Authority for Location",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PL",
+    "description": "person location",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PLN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "ID Number",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70338",
+        "datatype": "CWE",
+        "name": "Type of ID Number",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "State/other Qualifying Information",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "62",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Expiration Date",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PLN",
+    "description": "practitioner license or other Id number",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PPN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Person Identifier",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "15",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "FN",
+        "name": "Family Name",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Given Name",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second and Further Given Names or Initials Thereof",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Suffix",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Prefix",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Degree",
+        "position": 7,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70297",
+        "datatype": "-",
+        "name": "Source Table",
+        "position": 8,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "HD",
+        "name": "Assigning Authority",
+        "position": 9,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70200",
+        "datatype": "ID",
+        "name": "Name Type Code",
+        "position": 10,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Identifier Check Digit",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70061",
+        "datatype": "ID",
+        "name": "Check Digit Scheme ",
+        "position": 12,
+        "usage": "C",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70203",
+        "datatype": "ID",
+        "name": "Identifier Type Code",
+        "position": 13,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Assigning Facility",
+        "position": 14,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Date/Time Action Performed",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70465",
+        "datatype": "ID",
+        "name": "Name Representation Code",
+        "position": 16,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70448",
+        "datatype": "CWE",
+        "name": "Name Context",
+        "position": 17,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Name Validity Range",
+        "position": 18,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70444",
+        "datatype": "ID",
+        "name": "Name Assembly Order",
+        "position": 19,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 20,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Expiration Date",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Professional Suffix",
+        "position": 22,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Jurisdiction",
+        "position": 23,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Agency or Department",
+        "position": 24,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Security Check ",
+        "position": 25,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70904",
+        "datatype": "ID",
+        "name": "Security Check Scheme",
+        "position": 26,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PPN",
+    "description": "performing person time stamp",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PRL--V2-9",
+    "children": [
+      {
+        "datatype": "CWE",
+        "name": "Parent Observation Identifier",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Parent Observation Sub-identifier",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TX",
+        "name": "Parent Observation Value Descriptor",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PRL",
+    "description": "parent result link",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PT--V2-9",
+    "children": [
+      {
+        "table": "HL70103",
+        "datatype": "ID",
+        "name": "Processing ID",
+        "position": 1,
+        "usage": "R",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70207",
+        "datatype": "ID",
+        "name": "Processing Mode",
+        "position": 2,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PT",
+    "description": "processing type",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7PTA--V2-9",
+    "children": [
+      {
+        "table": "HL70147",
+        "datatype": "CWE",
+        "name": "Policy Type",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70193",
+        "datatype": "CWE",
+        "name": "Amount Class",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Money or Percentage Quantity",
+        "position": 3,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "MOP",
+        "name": "Money or Percentage",
+        "position": 4,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "PTA",
+    "description": "policy type and amount",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7QIP--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Segment Field Name",
+        "position": 1,
+        "usage": "R",
+        "minLength": "6",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Values",
+        "position": 2,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "QIP",
+    "description": "query input parameter list",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7QSC--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Segment Field Name",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70209",
+        "datatype": "ID",
+        "name": "Relational Operator",
+        "position": 2,
+        "usage": "O",
+        "minLength": "2",
+        "maxLength": "2",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Value",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70210",
+        "datatype": "ID",
+        "name": "Relational Conjunction",
+        "position": 4,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "QSC",
+    "description": "query selection criteria",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RCD--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Segment Field Name",
+        "position": 1,
+        "usage": "O",
+        "minLength": "6",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70440",
+        "datatype": "ID",
+        "name": "HL7 Data Type",
+        "position": 2,
+        "usage": "O",
+        "minLength": "2",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Maximum Column Width",
+        "position": 3,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RCD",
+    "description": "row column definition",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RFR--V2-9",
+    "children": [
+      {
+        "datatype": "NR",
+        "name": "Numeric Range",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70001",
+        "datatype": "CWE",
+        "name": "Administrative Sex",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NR",
+        "name": "Age Range",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NR",
+        "name": "Gestational Age Range",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Species",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Race/subspecies",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TX",
+        "name": "Conditions",
+        "position": 7,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RFR",
+    "description": "reference range",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RI--V2-9",
+    "children": [
+      {
+        "table": "HL70335",
+        "datatype": "CWE",
+        "name": "Repeat Pattern",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Explicit Time Interval",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RI",
+    "description": "repeat interval",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RMC--V2-9",
+    "children": [
+      {
+        "table": "HL70145",
+        "datatype": "CWE",
+        "name": "Room Type",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70146",
+        "datatype": "CWE",
+        "name": "Amount Type",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Coverage Amount",
+        "position": 3,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "MOP",
+        "name": "Money or Percentage",
+        "position": 4,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RMC",
+    "description": "room coverage",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RP--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Pointer",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "999",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Application ID",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70834",
+        "datatype": "ID",
+        "name": "Type of Data",
+        "position": 3,
+        "usage": "O",
+        "minLength": "4",
+        "maxLength": "11",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70291",
+        "datatype": "ID",
+        "name": "Subtype",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RP",
+    "description": "reference pointer",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7RPT--V2-9",
+    "children": [
+      {
+        "table": "HL70335",
+        "datatype": "CWE",
+        "name": "Repeat Pattern Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70527",
+        "datatype": "ID",
+        "name": "Calendar Alignment",
+        "position": 2,
+        "usage": "O",
+        "minLength": "2",
+        "maxLength": "2",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Phase Range Begin Value",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Phase Range End Value",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Period Quantity",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Period Units",
+        "position": 6,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70136",
+        "datatype": "ID",
+        "name": "Institution Specified Time",
+        "position": 7,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70528",
+        "datatype": "ID",
+        "name": "Event",
+        "position": 8,
+        "usage": "O",
+        "minLength": "2",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Event Offset Quantity",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "10",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Event Offset Units",
+        "position": 10,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "GTS",
+        "name": "General Timing Specification",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "RPT",
+    "description": "repeat pattern",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SAD--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Street or Mailing Address",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "120",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Street Name",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Dwelling Number",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "12",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "SAD",
+    "description": "street address",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SCV--V2-9",
+    "children": [
+      {
+        "table": "HL70294",
+        "datatype": "CWE",
+        "name": "Parameter Class",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Parameter Value",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "SCV",
+    "description": "scheduling class value pair",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SI--V2-9",
+    "children": [
+      {
+        "datatype": "SI",
+        "name": "Sequence ID",
+        "position": null,
+        "usage": "",
+        "minLength": "1",
+        "maxLength": "4",
+        "confLength": "4",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "SI",
+    "description": "sequence ID",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Comparator",
+        "position": 1,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "2",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Num1",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Separator/Suffix",
+        "position": 3,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Num2",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "SN",
+    "description": "structured numeric",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SNM--V2-9",
+    "children": [
+      {
+        "datatype": "SNM",
+        "name": "String of telephone number digits",
+        "position": null,
+        "usage": "",
+        "minLength": "1",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "SNM",
+    "description": "string of telephone number digits",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SPD--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Specialty Name",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Governing Board",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70337",
+        "datatype": "ID",
+        "name": "Eligible or Certified",
+        "position": 3,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DT",
+        "name": "Date of Certification",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "SPD",
+    "description": "specialty description",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SPS--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "SPS",
+    "description": "specimen source",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7SRT--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Sort-by Field",
+        "position": 1,
+        "usage": "R",
+        "minLength": "6",
+        "maxLength": "12",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70397",
+        "datatype": "ID",
+        "name": "Sequencing",
+        "position": 2,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "2",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "SRT",
+    "description": "sort order",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7ST--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "String Data",
+        "position": null,
+        "usage": "",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "ST",
+    "description": "string data",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7TM--V2-9",
+    "children": [
+      {
+        "datatype": "TM",
+        "name": "Time",
+        "position": null,
+        "usage": "",
+        "minLength": "2",
+        "maxLength": "16",
+        "confLength": "13",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "TM",
+    "description": "time",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7TQ--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "TQ",
+    "description": "timing/quantity",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7TS--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "TS",
+    "description": "timestamp",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7TX--V2-9",
+    "children": [
+      {
+        "datatype": "TX",
+        "name": "Text Data",
+        "position": null,
+        "usage": "",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "primitive",
+    "name": "TX",
+    "description": "text data",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7UVC--V2-9",
+    "children": [
+      {
+        "table": "HL70153",
+        "datatype": "CWE",
+        "name": "Value Code",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "MO",
+        "name": "Value Amount",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Non-Monetary Value Amount / Quantity",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Non-Monetary Value Amount / Units ",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "UVC",
+    "description": "UB value code and amount",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7VH--V2-9",
+    "children": [
+      {
+        "table": "HL70267",
+        "datatype": "ID",
+        "name": "Start Day Range",
+        "position": 1,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70267",
+        "datatype": "ID",
+        "name": "End Day Range",
+        "position": 2,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TM",
+        "name": "Start Hour Range",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "TM",
+        "name": "End Hour Range",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "VH",
+    "description": "visiting hours",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7VID--V2-9",
+    "children": [
+      {
+        "table": "HL70104",
+        "datatype": "ID",
+        "name": "Version ID",
+        "position": 1,
+        "usage": "R",
+        "minLength": "3",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70399",
+        "datatype": "CWE",
+        "name": "Internationalization Code",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "International Version ID",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "VID",
+    "description": "version identifier",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7VR--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "First Data Code Value",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Last Data Code Value",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "VR",
+    "description": "value range",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7WVI--V2-9",
+    "children": [
+      {
+        "datatype": "NM",
+        "name": "Channel Number",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Channel Name ",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "17",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "WVI",
+    "description": "channel identifier",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7WVS--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Source One Name",
+        "position": 1,
+        "usage": "R",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Source Two Name",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "WVS",
+    "description": "waveform source",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7XAD--V2-9",
+    "children": [
+      {
+        "datatype": "SAD",
+        "name": "Street Address",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Other Designation",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "120",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "City",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "State or Province",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Zip or Postal Code",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "12",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70399",
+        "datatype": "ID",
+        "name": "Country",
+        "position": 6,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70190",
+        "datatype": "ID",
+        "name": "Address Type",
+        "position": 7,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Other Geographic Designation",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70289",
+        "datatype": "CWE",
+        "name": "County/Parish Code",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70288",
+        "datatype": "CWE",
+        "name": "Census Tract",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70465",
+        "datatype": "ID",
+        "name": "Address Representation Code",
+        "position": 11,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Address Validity Range",
+        "position": 12,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 13,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Expiration Date",
+        "position": 14,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70616",
+        "datatype": "CWE",
+        "name": "Expiration Reason",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70136",
+        "datatype": "ID",
+        "name": "Temporary Indicator",
+        "position": 16,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70136",
+        "datatype": "ID",
+        "name": "Bad Address Indicator",
+        "position": 17,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70617",
+        "datatype": "ID",
+        "name": "Address Usage",
+        "position": 18,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Addressee",
+        "position": 19,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Comment",
+        "position": 20,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Preference Order",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "2",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70618",
+        "datatype": "CWE",
+        "name": "Protection Code",
+        "position": 22,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "EI",
+        "name": "Address Identifier",
+        "position": 23,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "XAD",
+    "description": "extended address",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7XCN--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Person Identifier",
+        "position": 1,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "15",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "FN",
+        "name": "Family Name",
+        "position": 2,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Given Name",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second and Further Given Names or Initials Thereof",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Suffix",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Prefix",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Degree",
+        "position": 7,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70297",
+        "datatype": "CWE",
+        "name": "Source Table",
+        "position": 8,
+        "usage": "B",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "HD",
+        "name": "Assigning Authority",
+        "position": 9,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70200",
+        "datatype": "ID",
+        "name": "Name Type Code",
+        "position": 10,
+        "usage": "C",
+        "minLength": "1",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Identifier Check Digit",
+        "position": 11,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "4",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70061",
+        "datatype": "ID",
+        "name": "Check Digit Scheme",
+        "position": 12,
+        "usage": "C",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70203",
+        "datatype": "ID",
+        "name": "Identifier Type Code",
+        "position": 13,
+        "usage": "C",
+        "minLength": "2",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Assigning Facility",
+        "position": 14,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70465",
+        "datatype": "ID",
+        "name": "Name Representation Code",
+        "position": 15,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70448",
+        "datatype": "CWE",
+        "name": "Name Context",
+        "position": 16,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Name Validity Range",
+        "position": 17,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70444",
+        "datatype": "ID",
+        "name": "Name Assembly Order",
+        "position": 18,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 19,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Expiration Date",
+        "position": 20,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "8",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Professional Suffix",
+        "position": 21,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Jurisdiction",
+        "position": 22,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "CWE",
+        "name": "Assigning Agency or Department",
+        "position": 23,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Security Check ",
+        "position": 24,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70904",
+        "datatype": "ID",
+        "name": "Security Check Scheme",
+        "position": 25,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "XCN",
+    "description": "extended composite ID number and name for persons",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7XON--V2-9",
+    "children": [
+      {
+        "datatype": "ST",
+        "name": "Organization Name",
+        "position": 1,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "50",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70204",
+        "datatype": "CWE",
+        "name": "Organization Name Type Code",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "ID Number",
+        "position": 3,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Identifier Check Digit",
+        "position": 4,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Check Digit Scheme ",
+        "position": 5,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70363",
+        "datatype": "HD",
+        "name": "Assigning Authority",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70203",
+        "datatype": "ID",
+        "name": "Identifier Type Code",
+        "position": 7,
+        "usage": "O",
+        "minLength": "2",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "HD",
+        "name": "Assigning Facility",
+        "position": 8,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70465",
+        "datatype": "ID",
+        "name": "Name Representation Code",
+        "position": 9,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Organization Identifier",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "XON",
+    "description": "extended composite name and identification number for organizations",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7XPN--V2-9",
+    "children": [
+      {
+        "datatype": "FN",
+        "name": "Family Name",
+        "position": 1,
+        "usage": "RE",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Given Name",
+        "position": 2,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Second and Further Given Names or Initials Thereof",
+        "position": 3,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Suffix",
+        "position": 4,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Prefix",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "20",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Degree",
+        "position": 6,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70200",
+        "datatype": "ID",
+        "name": "Name Type Code",
+        "position": 7,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "5",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70465",
+        "datatype": "ID",
+        "name": "Name Representation Code",
+        "position": 8,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70448",
+        "datatype": "CWE",
+        "name": "Name Context",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "-",
+        "name": "Name Validity Range",
+        "position": 10,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70444",
+        "datatype": "ID",
+        "name": "Name Assembly Order",
+        "position": 11,
+        "usage": "O",
+        "minLength": "1",
+        "maxLength": "1",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Date",
+        "position": 12,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Expiration Date",
+        "position": 13,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Professional Suffix",
+        "position": 14,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Called By",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "30",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "XPN",
+    "description": "extended person name",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7XTN--V2-9",
+    "children": [
+      {
+        "datatype": "-",
+        "name": "Telephone Number",
+        "position": 1,
+        "usage": "W",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70201",
+        "datatype": "ID",
+        "name": "Telecommunication Use Code",
+        "position": 2,
+        "usage": "O",
+        "minLength": "3",
+        "maxLength": "3",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70202",
+        "datatype": "ID",
+        "name": "Telecommunication Equipment Type",
+        "position": 3,
+        "usage": "R",
+        "minLength": "2",
+        "maxLength": "8",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Communication Address",
+        "position": 4,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SNM",
+        "name": "Country Code",
+        "position": 5,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "3",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SNM",
+        "name": "Area/City Code",
+        "position": 6,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "3",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SNM",
+        "name": "Local Number",
+        "position": 7,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "9",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "SNM",
+        "name": "Extension",
+        "position": 8,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "5",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Any Text",
+        "position": 9,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Extension Prefix",
+        "position": 10,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "4",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Speed Dial Code",
+        "position": 11,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "6",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "ST",
+        "name": "Unformatted Telephone Number ",
+        "position": 12,
+        "usage": "C",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "199",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Effective Start Date",
+        "position": 13,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "DTM",
+        "name": "Expiration Date",
+        "position": 14,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70868",
+        "datatype": "CWE",
+        "name": "Expiration Reason",
+        "position": 15,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "table": "HL70618",
+        "datatype": "CWE",
+        "name": "Protection Code",
+        "position": 16,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "EI",
+        "name": "Shared Telecommunication Identifier",
+        "position": 17,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "",
+        "version": "2.9.0"
+      },
+      {
+        "datatype": "NM",
+        "name": "Preference Order",
+        "position": 18,
+        "usage": "O",
+        "minLength": "",
+        "maxLength": "",
+        "confLength": "2",
+        "version": "2.9.0"
+      }
+    ],
+    "type": "complex",
+    "name": "XTN",
+    "description": "extended telecommunication number",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  },
+  {
+    "_id": "HL7Varies--V2-9",
+    "children": [
+
+    ],
+    "type": "primitive",
+    "name": "Varies",
+    "description": "Varies",
+    "version": "2.9",
+    "_class": "gov.nist.hit.hl7.data.domain.Datatype"
+  }
+]

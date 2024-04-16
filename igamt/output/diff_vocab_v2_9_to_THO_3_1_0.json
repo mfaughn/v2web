@@ -1,0 +1,6164 @@
+{
+  "HL70003": {
+    "concepts_count": {
+      "v2.9": 367,
+      "UTG": 384
+    },
+    "concepts": {
+      "X01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "varies": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R0R": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R05": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R06": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RAR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RDR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Q04": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RER": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RGR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Q07": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Q08": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Q09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R03": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R07": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R08": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70005": {
+    "concepts_count": {
+      "v2.9": 6,
+      "UTG": 5
+    },
+    "concepts": {
+      "1002-5": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2028-9": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2054-5": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2076-8": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2106-3": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2131-1": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "B": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "C": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "H": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "R": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70006": {
+    "concepts_count": {
+      "v2.9": 85,
+      "UTG": 95
+    },
+    "concepts": {
+      "A": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "B": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "C": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "E": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "J": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "L": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "M": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "N": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "P": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "QUA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70010": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70018": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70019": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70021": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70022": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70023": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70024": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70032": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70042": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70043": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70044": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70045": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70046": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70049": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70050": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70051": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70055": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70056": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70059": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70064": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70065": {
+    "concepts_count": {
+      "v2.9": 7,
+      "UTG": 8
+    },
+    "concepts": {
+      "C": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70066": {
+    "concepts_count": {
+      "v2.9": 11,
+      "UTG": 15
+    },
+    "concepts": {
+      "F": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "P": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "D": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70068": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70072": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70073": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70074": {
+    "concepts_count": {
+      "v2.9": 41,
+      "UTG": 45
+    },
+    "concepts": {
+      "IMG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PAR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PAT": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "URN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70076": {
+    "concepts_count": {
+      "v2.9": 147,
+      "UTG": 159
+    },
+    "concepts": {
+      "ARD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CNQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ERQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EDR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EQQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ERP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MCF": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ROC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ROD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RQQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SPQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "VQQ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70084": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70086": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70087": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70093": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "N": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "Y": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70099": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70104": {
+    "concepts_count": {
+      "v2.9": 16,
+      "UTG": 17
+    },
+    "concepts": {
+      "2.3.2": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70110": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70111": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70112": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70113": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70114": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70115": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70117": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70118": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70125": {
+    "concepts_count": {
+      "v2.9": 78,
+      "UTG": 0
+    },
+    "concepts": {
+      "AUI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CCD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CCP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CF": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CNE": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CNN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CSU": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CWE": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "CX": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DDI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DIN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DLD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DLN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DLT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DR": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DTM": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DTN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ED": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "EI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "EIP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ERL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "FC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "FT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "GTS": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "HD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ICD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "IS": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "JCC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "LA1": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "LA2": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MA": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MO": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MOC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MOP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MSG": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "NA": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "NDL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "NM": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "NR": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "OCD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "OSP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PIP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PLN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PPN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PRL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PTA": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "QIP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "QSC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RCD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RFR": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RMC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RPT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SCV": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SNM": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SPD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SRT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ST": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "TM": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "TX": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "UVC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "VH": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "VID": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "VR": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "WVI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "WVS": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "XAD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "XCN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "XON": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "XPN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "XTN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70129": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70131": {
+    "concepts_count": {
+      "v2.9": 8,
+      "UTG": 12
+    },
+    "concepts": {
+      "BP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70132": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70133": {
+    "hl7TableType": {
+      "v2.9": "undefined",
+      "UTG": "User"
+    },
+    "concepts_count": {
+      "v2.9": 0,
+      "UTG": 9
+    },
+    "concepts": {
+      "AN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CM": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "AS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70136": {
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 0
+    },
+    "concepts": {
+      "N": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "Y": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70139": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70143": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70151": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70152": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70153": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    }
+  },
+  "HL70163": {
+    "concepts_count": {
+      "v2.9": 54,
+      "UTG": 56
+    },
+    "concepts": {
+      "LNB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "LV": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70171": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70172": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70175": {
+    "concepts_count": {
+      "v2.9": 16,
+      "UTG": 26
+    },
+    "concepts": {
+      "OM1": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM2": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM3": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM4": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM5": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM6": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CM0": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CM1": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CM2": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OM1-OM6": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70182": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70184": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70186": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70188": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70191": {
+    "concepts_count": {
+      "v2.9": 10,
+      "UTG": 13
+    },
+    "concepts": {
+      "Image": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Audio": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "Application": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70200": {
+    "concepts_count": {
+      "v2.9": 22,
+      "UTG": 24
+    },
+    "concepts": {
+      "O": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70201": {
+    "concepts_count": {
+      "v2.9": 9,
+      "UTG": 10
+    },
+    "concepts": {
+      "DSM": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70203": {
+    "concepts_count": {
+      "v2.9": 135,
+      "UTG": 137
+    },
+    "concepts": {
+      "CAAI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "L&I": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70207": {
+    "concepts_count": {
+      "v2.9": 5,
+      "UTG": 6
+    },
+    "concepts": {
+      "not present": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70210": {
+    "concepts": {
+      "OR": {
+        "v2.9": {
+          "value": "OR",
+          "name": "",
+          "codeSystem": "HL70210",
+          "codeSystemOid": "2.16.840.1.113883.18.115"
+        },
+        "UTG": {
+          "value": "OR",
+          "name": null,
+          "codeSystem": "HL70210",
+          "codeSystemOid": "2.16.840.1.113883.18.115"
+        }
+      }
+    }
+  },
+  "HL70211": {
+    "concepts_count": {
+      "v2.9": 21,
+      "UTG": 25
+    },
+    "concepts": {
+      "JAS2020": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "JIS X 0202": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "UNICODE UTF-16": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "UNICODE UTF-32": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70212": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70218": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70219": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70222": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70223": {
+    "concepts_count": {
+      "v2.9": 5,
+      "UTG": 8
+    },
+    "concepts": {
+      "D": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "WU": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70227": {
+    "concepts_count": {
+      "v2.9": 0,
+      "UTG": 55
+    },
+    "concepts": {
+      "AB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "AD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "AR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "AVB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "AVI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BAH": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BAY": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BPC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MIP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CNJ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CMP": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CEN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CHI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CON": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DVC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EVN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "GEO": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SKB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "GRE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "IAG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "IUS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "KGC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "LED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MBL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MSD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "IM": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MIL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NAB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NYB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NAV": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NOV": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NVX": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OTC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORT": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PWJ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PRX": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PMC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "JPN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SCL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SOL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TAL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "USA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "VXG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "WA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "WAL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ZLB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OTH": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "UNK": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70229": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70233": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70244": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70245": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70246": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70249": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70264": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70272": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 9
+    },
+    "concepts": {
+      "1": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "2": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "3": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "UC": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "VR": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70277": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 6
+    },
+    "concepts": {
+      "COMPLETE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NORMAL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TENTATIVE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70278": {
+    "concepts_count": {
+      "v2.9": 12,
+      "UTG": 21
+    },
+    "concepts": {
+      "BLOCKED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BOOKED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CANCELLED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "COMPLETE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DELETED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OVERBOOK": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PENDING": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "STARTED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "WAITLIST": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70279": {
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 8
+    },
+    "concepts": {
+      "CONFIRM": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NO": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "NOTIFY": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "YES": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70281": {
+    "concepts_count": {
+      "v2.9": 6,
+      "UTG": 12
+    },
+    "concepts": {
+      "HOM": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "LAB": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PSY": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RAD": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SKN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70285": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70288": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70289": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70291": {
+    "concepts_count": {
+      "v2.9": 15,
+      "UTG": 17
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "…": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70292": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    }
+  },
+  "HL70293": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70294": {
+    "concepts_count": {
+      "v2.9": 9,
+      "UTG": 18
+    },
+    "concepts": {
+      "PREFSTART": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PREFEND": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MON": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TUE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "WED": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "THU": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "FRI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SAT": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SUN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70295": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70296": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70297": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70300": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70302": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70303": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70304": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70306": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70307": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70308": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70312": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70313": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70319": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70320": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70327": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70328": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70333": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70338": {
+    "concepts_count": {
+      "v2.9": 12,
+      "UTG": 0
+    },
+    "concepts": {
+      "CY": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "DEA": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "GL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "L&I": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "LI": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MCD": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "MCR": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "QA": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "SL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "TAX": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "TRL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "UPIN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70340": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 0
+    },
+    "concepts": {
+      "CPTM": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "HPC": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70341": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70342": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70343": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70345": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70346": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70350": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70351": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70354": {
+    "concepts_count": {
+      "v2.9": 261,
+      "UTG": 316
+    },
+    "concepts": {
+      "ADR_A19": {
+        "v2.9": {
+          "value": "ADR_A19",
+          "name": "",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        },
+        "UTG": {
+          "value": "ADR_A19",
+          "name": "A19",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        }
+      },
+      "ADT_A18": {
+        "v2.9": {
+          "value": "ADT_A18",
+          "name": "",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        },
+        "UTG": {
+          "value": "ADT_A18",
+          "name": "A18",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        }
+      },
+      "ADT_A30": {
+        "v2.9": {
+          "value": "ADT_A30",
+          "name": "",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        },
+        "UTG": {
+          "value": "ADT_A30",
+          "name": "A30, A34, A35, A36, A46, A47, A48, A49",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        }
+      },
+      "DOC_T12": {
+        "v2.9": {
+          "value": "DOC_T12",
+          "name": "",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        },
+        "UTG": {
+          "value": "DOC_T12",
+          "name": "T12",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        }
+      },
+      "MFN_M01": {
+        "v2.9": {
+          "value": "MFN_M01",
+          "name": "",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        },
+        "UTG": {
+          "value": "MFN_M01",
+          "name": "M01",
+          "codeSystem": "HL70354",
+          "codeSystemOid": "2.16.840.1.113883.18.214"
+        }
+      },
+      "OMD_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OMN_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OMS_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORD_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORN_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORS_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RDO_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RRO_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ADT_A28": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ARD_A19": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BRP_030": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MFD_P09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DSR_Q01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DSR_P04": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DSR_Q03": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORF_R02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EDR_R07": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "EQQ_Q04": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORM_Q06": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ERP_R09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORR_Q06": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PIN_I07": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "MFD_MFA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RAS_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RAS_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RDS_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RGV_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RPI_I0I": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RQC_I06": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RQI_I0I": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RRD_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RRE_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RRG_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORU_R31": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SRM_T12": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORU_R32": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SRR_T12": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "QRY_P04": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RDE_O01": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RQQ_Q09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RRA_O02": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "SPQ_Q08": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RDY_K11": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RSP_K24": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TBR_R08": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TBR_R09": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "VQQ_Q07": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "QBP_Z73": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RSP_Z82": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RSP_Z86": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RSP_Z88": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RSP_Z90": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RTB_Knn": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RTB_Z74": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "QBP_Qnn": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70358": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70359": {
+    "concepts_count": {
+      "v2.9": 5,
+      "UTG": 8
+    },
+    "concepts": {
+      "2 and higher": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "2 ...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70361": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70362": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70363": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70365": {
+    "concepts_count": {
+      "v2.9": 18,
+      "UTG": 20
+    },
+    "concepts": {
+      "…": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70366": {
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 4
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "…": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70367": {
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 6
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "…": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70378": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70379": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70380": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70381": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70382": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70385": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70386": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70391": {
+    "concepts_count": {
+      "v2.9": 132,
+      "UTG": 148
+    },
+    "concepts": {
+      "ADMINISTRATION": {
+        "v2.9": {
+          "value": "ADMINISTRATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ADMINISTRATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ALLERGY": {
+        "v2.9": {
+          "value": "ALLERGY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ALLERGY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "APP_STATS": {
+        "v2.9": {
+          "value": "APP_STATS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "APP_STATS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "APP_STATUS": {
+        "v2.9": {
+          "value": "APP_STATUS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "APP_STATUS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ASSOCIATED_PERSON": {
+        "v2.9": {
+          "value": "ASSOCIATED_PERSON",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ASSOCIATED_PERSON",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ASSOCIATED_RX_ADMIN": {
+        "v2.9": {
+          "value": "ASSOCIATED_RX_ADMIN",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ASSOCIATED_RX_ADMIN",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ASSOCIATED_RX_ORDER": {
+        "v2.9": {
+          "value": "ASSOCIATED_RX_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ASSOCIATED_RX_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "AUTHORIZATION": {
+        "v2.9": {
+          "value": "AUTHORIZATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "AUTHORIZATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "AUTHORIZATION_CONTACT": {
+        "v2.9": {
+          "value": "AUTHORIZATION_CONTACT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "AUTHORIZATION_CONTACT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CERTIFICATE": {
+        "v2.9": {
+          "value": "CERTIFICATE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CERTIFICATE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CLOCK": {
+        "v2.9": {
+          "value": "CLOCK",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CLOCK",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CLOCK_AND_STATISTICS": {
+        "v2.9": {
+          "value": "CLOCK_AND_STATISTICS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CLOCK_AND_STATISTICS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CLOCK_AND_STATS_WITH_NOTES": {
+        "v2.9": {
+          "value": "CLOCK_AND_STATS_WITH_NOTES",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CLOCK_AND_STATS_WITH_NOTES",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CLOCK_AND_STATS_WITH_NOTES_ALT": {
+        "v2.9": {
+          "value": "CLOCK_AND_STATS_WITH_NOTES_ALT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CLOCK_AND_STATS_WITH_NOTES_ALT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "COMMAND": {
+        "v2.9": {
+          "value": "COMMAND",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "COMMAND",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "COMMAND_RESPONSE": {
+        "v2.9": {
+          "value": "COMMAND_RESPONSE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "COMMAND_RESPONSE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "COMMON_ORDER": {
+        "v2.9": {
+          "value": "COMMON_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "COMMON_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "COMPONENT": {
+        "v2.9": {
+          "value": "COMPONENT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "COMPONENT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "COMPONENTS": {
+        "v2.9": {
+          "value": "COMPONENTS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "COMPONENTS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "CONTAINER": {
+        "v2.9": {
+          "value": "CONTAINER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "CONTAINER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "DEFINITION": {
+        "v2.9": {
+          "value": "DEFINITION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "DEFINITION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "DIET": {
+        "v2.9": {
+          "value": "DIET",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "DIET",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "DISPENSE": {
+        "v2.9": {
+          "value": "DISPENSE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "DISPENSE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ENCODED_ORDER": {
+        "v2.9": {
+          "value": "ENCODED_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ENCODED_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ENCODING": {
+        "v2.9": {
+          "value": "ENCODING",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ENCODING",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "EXPERIENCE": {
+        "v2.9": {
+          "value": "EXPERIENCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "EXPERIENCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL": {
+        "v2.9": {
+          "value": "FINANCIAL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_COMMON_ORDER": {
+        "v2.9": {
+          "value": "FINANCIAL_COMMON_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_COMMON_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_INSURANCE": {
+        "v2.9": {
+          "value": "FINANCIAL_INSURANCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_INSURANCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_OBSERVATION": {
+        "v2.9": {
+          "value": "FINANCIAL_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_ORDER": {
+        "v2.9": {
+          "value": "FINANCIAL_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_PROCEDURE": {
+        "v2.9": {
+          "value": "FINANCIAL_PROCEDURE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_PROCEDURE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "FINANCIAL_TIMING_QUANTITY": {
+        "v2.9": {
+          "value": "FINANCIAL_TIMING_QUANTITY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "FINANCIAL_TIMING_QUANTITY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GENERAL_RESOURCE": {
+        "v2.9": {
+          "value": "GENERAL_RESOURCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GENERAL_RESOURCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GIVE": {
+        "v2.9": {
+          "value": "GIVE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GIVE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GOAL": {
+        "v2.9": {
+          "value": "GOAL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GOAL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GOAL_OBSERVATION": {
+        "v2.9": {
+          "value": "GOAL_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GOAL_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GOAL_PATHWAY": {
+        "v2.9": {
+          "value": "GOAL_PATHWAY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GOAL_PATHWAY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GOAL_ROLE": {
+        "v2.9": {
+          "value": "GOAL_ROLE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GOAL_ROLE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "GUARANTOR_INSURANCE": {
+        "v2.9": {
+          "value": "GUARANTOR_INSURANCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "GUARANTOR_INSURANCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "INSURANCE": {
+        "v2.9": {
+          "value": "INSURANCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "INSURANCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "LOCATION_RESOURCE": {
+        "v2.9": {
+          "value": "LOCATION_RESOURCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "LOCATION_RESOURCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MERGE_INFO": {
+        "v2.9": {
+          "value": "MERGE_INFO",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MERGE_INFO",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF": {
+        "v2.9": {
+          "value": "MF",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_CDM": {
+        "v2.9": {
+          "value": "MF_CDM",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_CDM",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_CLIN_STUDY": {
+        "v2.9": {
+          "value": "MF_CLIN_STUDY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_CLIN_STUDY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_CLIN_STUDY_SCHED": {
+        "v2.9": {
+          "value": "MF_CLIN_STUDY_SCHED",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_CLIN_STUDY_SCHED",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_INV_ITEM": {
+        "v2.9": {
+          "value": "MF_INV_ITEM",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_INV_ITEM",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_LOC_DEPT": {
+        "v2.9": {
+          "value": "MF_LOC_DEPT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_LOC_DEPT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_LOCATION": {
+        "v2.9": {
+          "value": "MF_LOCATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_LOCATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_OBS_ATTRIBUTES": {
+        "v2.9": {
+          "value": "MF_OBS_ATTRIBUTES",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_OBS_ATTRIBUTES",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_PHASE_SCHED_DETAIL": {
+        "v2.9": {
+          "value": "MF_PHASE_SCHED_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_PHASE_SCHED_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_QUERY": {
+        "v2.9": {
+          "value": "MF_QUERY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_QUERY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_SITE_DEFINED": {
+        "v2.9": {
+          "value": "MF_SITE_DEFINED",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_SITE_DEFINED",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_STAFF": {
+        "v2.9": {
+          "value": "MF_STAFF",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_STAFF",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST": {
+        "v2.9": {
+          "value": "MF_TEST",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_BATT_DETAIL": {
+        "v2.9": {
+          "value": "MF_TEST_BATT_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_BATT_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_BATTERIES": {
+        "v2.9": {
+          "value": "MF_TEST_BATTERIES",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_BATTERIES",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_CALC_DETAIL": {
+        "v2.9": {
+          "value": "MF_TEST_CALC_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_CALC_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_CALCULATED": {
+        "v2.9": {
+          "value": "MF_TEST_CALCULATED",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_CALCULATED",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_CAT_DETAIL": {
+        "v2.9": {
+          "value": "MF_TEST_CAT_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_CAT_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_CATEGORICAL": {
+        "v2.9": {
+          "value": "MF_TEST_CATEGORICAL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_CATEGORICAL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "MF_TEST_NUMERIC": {
+        "v2.9": {
+          "value": "MF_TEST_NUMERIC",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "MF_TEST_NUMERIC",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "NK1_TIMING_QTY": {
+        "v2.9": {
+          "value": "NK1_TIMING_QTY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "NK1_TIMING_QTY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "NOTIFICATION": {
+        "v2.9": {
+          "value": "NOTIFICATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "NOTIFICATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "OBSERVATION": {
+        "v2.9": {
+          "value": "OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "OBSERVATION_PRIOR": {
+        "v2.9": {
+          "value": "OBSERVATION_PRIOR",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "OBSERVATION_PRIOR",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "OBSERVATION_REQUEST": {
+        "v2.9": {
+          "value": "OBSERVATION_REQUEST",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "OBSERVATION_REQUEST",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "OMSERVATION": {
+        "v2.9": {
+          "value": "OMSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "OMSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER": {
+        "v2.9": {
+          "value": "ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_CHOICE": {
+        "v2.9": {
+          "value": "ORDER_CHOICE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_CHOICE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_DETAIL": {
+        "v2.9": {
+          "value": "ORDER_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_DETAIL_SUPPLEMENT": {
+        "v2.9": {
+          "value": "ORDER_DETAIL_SUPPLEMENT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_DETAIL_SUPPLEMENT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_DIET": {
+        "v2.9": {
+          "value": "ORDER_DIET",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_DIET",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_ENCODED": {
+        "v2.9": {
+          "value": "ORDER_ENCODED",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_ENCODED",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_OBSERVATION": {
+        "v2.9": {
+          "value": "ORDER_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_PRIOR": {
+        "v2.9": {
+          "value": "ORDER_PRIOR",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_PRIOR",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ORDER_TRAY": {
+        "v2.9": {
+          "value": "ORDER_TRAY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ORDER_TRAY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATHWAY": {
+        "v2.9": {
+          "value": "PATHWAY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATHWAY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATHWAY_ROLE": {
+        "v2.9": {
+          "value": "PATHWAY_ROLE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATHWAY_ROLE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATIENT": {
+        "v2.9": {
+          "value": "PATIENT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATIENT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATIENT_PRIOR": {
+        "v2.9": {
+          "value": "PATIENT_PRIOR",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATIENT_PRIOR",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATIENT_RESULT": {
+        "v2.9": {
+          "value": "PATIENT_RESULT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATIENT_RESULT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATIENT_VISIT": {
+        "v2.9": {
+          "value": "PATIENT_VISIT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATIENT_VISIT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PATIENT_VISIT_PRIOR": {
+        "v2.9": {
+          "value": "PATIENT_VISIT_PRIOR",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PATIENT_VISIT_PRIOR",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PERSONNEL_RESOURCE": {
+        "v2.9": {
+          "value": "PERSONNEL_RESOURCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PERSONNEL_RESOURCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PEX_CAUSE": {
+        "v2.9": {
+          "value": "PEX_CAUSE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PEX_CAUSE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PEX_OBSERVATION": {
+        "v2.9": {
+          "value": "PEX_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PEX_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PRIOR_RESULT": {
+        "v2.9": {
+          "value": "PRIOR_RESULT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PRIOR_RESULT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROBLEM": {
+        "v2.9": {
+          "value": "PROBLEM",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROBLEM",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROBLEM_OBSERVATION": {
+        "v2.9": {
+          "value": "PROBLEM_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROBLEM_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROBLEM_PATHWAY": {
+        "v2.9": {
+          "value": "PROBLEM_PATHWAY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROBLEM_PATHWAY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROBLEM_ROLE": {
+        "v2.9": {
+          "value": "PROBLEM_ROLE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROBLEM_ROLE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROCEDURE": {
+        "v2.9": {
+          "value": "PROCEDURE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROCEDURE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PRODUCT": {
+        "v2.9": {
+          "value": "PRODUCT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PRODUCT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PRODUCT_STATUS": {
+        "v2.9": {
+          "value": "PRODUCT_STATUS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PRODUCT_STATUS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROVIDER": {
+        "v2.9": {
+          "value": "PROVIDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROVIDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PROVIDER_CONTACT": {
+        "v2.9": {
+          "value": "PROVIDER_CONTACT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "PROVIDER_CONTACT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "QBP": {
+        "v2.9": {
+          "value": "QBP",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "QBP",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "QRY_WITH_DETAIL": {
+        "v2.9": {
+          "value": "QRY_WITH_DETAIL",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "QRY_WITH_DETAIL",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "QUERY_RESPONSE": {
+        "v2.9": {
+          "value": "QUERY_RESPONSE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "QUERY_RESPONSE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "QUERY_RESULT_CLUSTER": {
+        "v2.9": {
+          "value": "QUERY_RESULT_CLUSTER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "QUERY_RESULT_CLUSTER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "REQUEST": {
+        "v2.9": {
+          "value": "REQUEST",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "REQUEST",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESOURCE": {
+        "v2.9": {
+          "value": "RESOURCE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESOURCE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESOURCES": {
+        "v2.9": {
+          "value": "RESOURCES",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESOURCES",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESPONSE": {
+        "v2.9": {
+          "value": "RESPONSE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESPONSE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESULT": {
+        "v2.9": {
+          "value": "RESULT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESULT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESULTS": {
+        "v2.9": {
+          "value": "RESULTS",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESULTS",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RESULTS_NOTES": {
+        "v2.9": {
+          "value": "RESULTS_NOTES",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RESULTS_NOTES",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "ROW_DEFINITION": {
+        "v2.9": {
+          "value": "ROW_DEFINITION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "ROW_DEFINITION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RX_ADMINISTRATION": {
+        "v2.9": {
+          "value": "RX_ADMINISTRATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RX_ADMINISTRATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "RX_ORDER": {
+        "v2.9": {
+          "value": "RX_ORDER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "RX_ORDER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "SCHEDULE": {
+        "v2.9": {
+          "value": "SCHEDULE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "SCHEDULE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "SERVICE": {
+        "v2.9": {
+          "value": "SERVICE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "SERVICE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "SPECIMEN": {
+        "v2.9": {
+          "value": "SPECIMEN",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "SPECIMEN",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "SPECIMEN_CONTAINER": {
+        "v2.9": {
+          "value": "SPECIMEN_CONTAINER",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "SPECIMEN_CONTAINER",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "STAFF": {
+        "v2.9": {
+          "value": "STAFF",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "STAFF",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "STUDY": {
+        "v2.9": {
+          "value": "STUDY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "STUDY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "STUDY_OBSERVATION": {
+        "v2.9": {
+          "value": "STUDY_OBSERVATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "STUDY_OBSERVATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "STUDY_PHASE": {
+        "v2.9": {
+          "value": "STUDY_PHASE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "STUDY_PHASE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "STUDY_SCHEDULE": {
+        "v2.9": {
+          "value": "STUDY_SCHEDULE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "STUDY_SCHEDULE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TEST_CONFIGURATION": {
+        "v2.9": {
+          "value": "TEST_CONFIGURATION",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TEST_CONFIGURATION",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING": {
+        "v2.9": {
+          "value": "TIMING",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_DIET": {
+        "v2.9": {
+          "value": "TIMING_DIET",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_DIET",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_ENCODED": {
+        "v2.9": {
+          "value": "TIMING_ENCODED",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_ENCODED",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_GIVE": {
+        "v2.9": {
+          "value": "TIMING_GIVE",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_GIVE",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_PRIOR": {
+        "v2.9": {
+          "value": "TIMING_PRIOR",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_PRIOR",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_QTY": {
+        "v2.9": {
+          "value": "TIMING_QTY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_QTY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_QUANTITY": {
+        "v2.9": {
+          "value": "TIMING_QUANTITY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_QUANTITY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TIMING_TRAY": {
+        "v2.9": {
+          "value": "TIMING_TRAY",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TIMING_TRAY",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "TREATMENT": {
+        "v2.9": {
+          "value": "TREATMENT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "TREATMENT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "VISIT": {
+        "v2.9": {
+          "value": "VISIT",
+          "name": "",
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        },
+        "UTG": {
+          "value": "VISIT",
+          "name": null,
+          "codeSystem": "HL70391",
+          "codeSystemOid": "2.16.840.1.113883.18.242"
+        }
+      },
+      "PIDG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OBRG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ORCG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RXAG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RXDG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RXEG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "RXOG": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "etc": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CLOCK_AND_STATS_WITH_NOTE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ENCODED ORDER": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "FINANCIAL_COMMON ORDER": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "FINANCIAL_TIMING QUANTITY": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "GENERAL RESOURCE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "LOCATION RESOURCE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PATIENT VISIT": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "PERSONNEL RESOURCE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70396": {
+    "concepts_count": {
+      "v2.9": 215,
+      "UTG": 250
+    },
+    "concepts": {
+      "General code": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2012": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2013": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2014": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2015": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2016": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2012": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2013": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2014": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2015": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2016": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2012": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2013": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2014": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2015": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2016": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "99zzz or L": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2010": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ALPHAID2011": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DCL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "DQL": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "CE (obsolete)": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "FDAUDI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "GMDC2009": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "GS1UDI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "HIBUDI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "IBTnnnn": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICCUDI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2010": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ICD10GM2011": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ISOnnnn (deprecated)": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "ISO": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2010": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "OPS2011": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "X12Dennnn": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70399": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70405": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70411": {
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 0
+    },
+    "concepts": {
+      "CG": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "NDBS": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70412": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70413": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70414": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70418": {
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 5
+    },
+    "concepts": {
+      "…": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70440": {
+    "concepts_count": {
+      "v2.9": 95,
+      "UTG": 96
+    },
+    "concepts": {
+      "CNS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70446": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70447": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70448": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70451": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "ALL": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70455": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70456": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70459": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 0
+    },
+    "concepts": {
+      "0": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "1": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "3": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70460": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 0
+    },
+    "concepts": {
+      "0": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "1": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "2": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70461": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70462": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70463": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70464": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70471": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70474": {
+    "concepts_count": {
+      "v2.9": 5,
+      "UTG": 7
+    },
+    "concepts": {
+      "L": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "M": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70476": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70479": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70487": {
+    "concepts_count": {
+      "v2.9": 313,
+      "UTG": 315
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "BONE": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70492": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 4
+    },
+    "concepts": {
+      "??": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70509": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70512": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70513": {
+    "concepts_count": {
+      "v2.9": 5,
+      "UTG": 7
+    },
+    "concepts": {
+      "RA": {
+        "v2.9": {
+          "value": "RA",
+          "name": "Returned unused/no longer needed",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        },
+        "UTG": {
+          "value": "RA",
+          "name": "Returned unused and unlinked",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        }
+      },
+      "RL": {
+        "v2.9": {
+          "value": "RL",
+          "name": "Returned unused/keep linked to patient for possible use later",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        },
+        "UTG": {
+          "value": "RL",
+          "name": "Returned unused but linked",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        }
+      },
+      "TR": {
+        "v2.9": {
+          "value": "TR",
+          "name": "Transfused with adverse reaction",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        },
+        "UTG": {
+          "value": "TR",
+          "name": "Transfusion Ended with Reactions",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        }
+      },
+      "TX": {
+        "v2.9": {
+          "value": "TX",
+          "name": "Transfused",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        },
+        "UTG": {
+          "value": "TX",
+          "name": "Transfusion Ended",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        }
+      },
+      "WA": {
+        "v2.9": {
+          "value": "WA",
+          "name": "Wasted (product no longer viable)",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        },
+        "UTG": {
+          "value": "WA",
+          "name": "Wasted",
+          "codeSystem": "HL70513",
+          "codeSystemOid": "2.16.840.1.113883.18.335"
+        }
+      },
+      "TI": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "TS": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70515": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70519": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70521": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70525": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70526": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70531": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70533": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70537": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70539": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70541": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70542": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70543": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70544": {
+    "concepts_count": {
+      "v2.9": 21,
+      "UTG": 22
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70549": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70550": {
+    "concepts_count": {
+      "v2.9": 443,
+      "UTG": 446
+    },
+    "concepts": {
+      "CHEST": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      " ": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      },
+      "KIDN": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70552": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70560": {
+    "concepts": {
+      "DY": {
+        "v2.9": {
+          "value": "DY",
+          "name": "Days",
+          "codeSystem": "HL70560",
+          "codeSystemOid": ""
+        },
+        "UTG": {
+          "value": "DY",
+          "name": "Days",
+          "codeSystem": "HL70560",
+          "codeSystemOid": "2.16.840.1.113883.18.455"
+        }
+      },
+      "FL": {
+        "v2.9": {
+          "value": "FL",
+          "name": "Units",
+          "codeSystem": "HL70560",
+          "codeSystemOid": ""
+        },
+        "UTG": {
+          "value": "FL",
+          "name": "Units",
+          "codeSystem": "HL70560",
+          "codeSystemOid": "2.16.840.1.113883.18.455"
+        }
+      },
+      "HS": {
+        "v2.9": {
+          "value": "HS",
+          "name": "Hours",
+          "codeSystem": "HL70560",
+          "codeSystemOid": ""
+        },
+        "UTG": {
+          "value": "HS",
+          "name": "Hours",
+          "codeSystem": "HL70560",
+          "codeSystemOid": "2.16.840.1.113883.18.455"
+        }
+      },
+      "MN": {
+        "v2.9": {
+          "value": "MN",
+          "name": "Month",
+          "codeSystem": "HL70560",
+          "codeSystemOid": ""
+        },
+        "UTG": {
+          "value": "MN",
+          "name": "Month",
+          "codeSystem": "HL70560",
+          "codeSystemOid": "2.16.840.1.113883.18.455"
+        }
+      },
+      "YY": {
+        "v2.9": {
+          "value": "YY",
+          "name": "Years",
+          "codeSystem": "HL70560",
+          "codeSystemOid": ""
+        },
+        "UTG": {
+          "value": "YY",
+          "name": "Years",
+          "codeSystem": "HL70560",
+          "codeSystemOid": "2.16.840.1.113883.18.455"
+        }
+      }
+    }
+  },
+  "HL70567": {
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 0
+    },
+    "concepts": {
+      "[lb_av]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "[oz_av]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "g": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "kg": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70568": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 0
+    },
+    "concepts": {
+      "[pt_us]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "l": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ml": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70725": {
+    "concepts_count": {
+      "v2.9": 9,
+      "UTG": 0
+    },
+    "concepts": {
+      "APT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ARQ": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "EVN": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "EVN.CRT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "EXP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "INT": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PRMS": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "PRP": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "RQO": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70771": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70809": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70811": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70836": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70838": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70865": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70879": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70880": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70908": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70910": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70913": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    },
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70915": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70916": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 4
+    },
+    "concepts": {
+      "FNA": {
+        "v2.9": "NULL",
+        "UTG": "Present"
+      }
+    }
+  },
+  "HL70929": {
+    "concepts_count": {
+      "v2.9": 4,
+      "UTG": 0
+    },
+    "concepts": {
+      "[lb_av]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "[oz_av]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "g": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "kg": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70930": {
+    "concepts_count": {
+      "v2.9": 3,
+      "UTG": 0
+    },
+    "concepts": {
+      "[pt_us]": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "l": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "ml": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70931": {
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 0
+    },
+    "concepts": {
+      "Cel": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "degF": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70932": {
+    "concepts_count": {
+      "v2.9": 2,
+      "UTG": 0
+    },
+    "concepts": {
+      "min": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      },
+      "s": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70934": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70941": {
+    "concepts_count": {
+      "v2.9": 1,
+      "UTG": 0
+    },
+    "concepts": {
+      "...": {
+        "v2.9": "Present",
+        "UTG": "NULL"
+      }
+    }
+  },
+  "HL70952": {
+    "hl7TableType": {
+      "v2.9": "External",
+      "UTG": "Externally defined"
+    }
+  }
+}

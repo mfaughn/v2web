@@ -1,0 +1,956 @@
+{
+  "HL70008": {
+    "name": {
+      "v2.9": "Acknowledgment Code",
+      "UTG": "AcknowledgmentCodes"
+    }
+  },
+  "HL70038": {
+    "name": {
+      "v2.9": "Order status",
+      "UTG": "OrderStatus"
+    }
+  },
+  "HL70080": {
+    "name": {
+      "v2.9": "Nature of Abnormal Testing",
+      "UTG": "NatureOfAbnormalTesting"
+    }
+  },
+  "HL70092": {
+    "name": {
+      "v2.9": "Re-Admission Indicator",
+      "UTG": "ReAdmissionIndicator"
+    }
+  },
+  "HL70098": {
+    "name": {
+      "v2.9": "Type of Agreement",
+      "UTG": "TypeOfAgreement"
+    }
+  },
+  "HL70100": {
+    "name": {
+      "v2.9": "Invocation event",
+      "UTG": "InvocationEvent"
+    }
+  },
+  "HL70103": {
+    "name": {
+      "v2.9": "Processing ID",
+      "UTG": "ProcessingId"
+    }
+  },
+  "HL70105": {
+    "name": {
+      "v2.9": "Source of Comment",
+      "UTG": "SourceOfComment"
+    }
+  },
+  "HL70130": {
+    "name": {
+      "v2.9": "Visit User Code",
+      "UTG": "VisitUserCodes"
+    }
+  },
+  "HL70135": {
+    "name": {
+      "v2.9": "Assignment of Benefits",
+      "UTG": "AssignmentOfBenefits"
+    }
+  },
+  "HL70148": {
+    "name": {
+      "v2.9": "Money or Percentage Indicator",
+      "UTG": "MoneyOrPercentageIndicator"
+    }
+  },
+  "HL70155": {
+    "name": {
+      "v2.9": "Accept/Application Acknowledgment Conditions",
+      "UTG": "AcceptApplicationAcknowledgmentConditions"
+    }
+  },
+  "HL70162": {
+    "name": {
+      "v2.9": "Route of Administration",
+      "UTG": "RouteOfAdministration"
+    }
+  },
+  "HL70166": {
+    "name": {
+      "v2.9": "RX Component Type",
+      "UTG": "RxComponentType"
+    }
+  },
+  "HL70173": {
+    "name": {
+      "v2.9": "Coordination of Benefits",
+      "UTG": "CoordinationOfBenefits"
+    }
+  },
+  "HL70174": {
+    "name": {
+      "v2.9": "Nature of Service/Test/Observation",
+      "UTG": "NatureOfServiceTestObservation"
+    }
+  },
+  "HL70177": {
+    "name": {
+      "v2.9": "Confidentiality Code",
+      "UTG": "ConfidentialityCodes"
+    }
+  },
+  "HL70178": {
+    "name": {
+      "v2.9": "File Level Event Code",
+      "UTG": "FileLevelEvent"
+    }
+  },
+  "HL70181": {
+    "name": {
+      "v2.9": "MFN Record-level Error Return",
+      "UTG": "MfnRecordLevelErrorReturn"
+    }
+  },
+  "HL70183": {
+    "name": {
+      "v2.9": "Active/Inactive",
+      "UTG": "ActiveInactive"
+    }
+  },
+  "HL70185": {
+    "name": {
+      "v2.9": "Preferred Method of Contact",
+      "UTG": "PreferredMethodOfContact"
+    }
+  },
+  "HL70206": {
+    "name": {
+      "v2.9": "Segment Action Code",
+      "UTG": "SegmentAction"
+    }
+  },
+  "HL70213": {
+    "name": {
+      "v2.9": "Purge Status Code",
+      "UTG": "PurgeStatus"
+    }
+  },
+  "HL70214": {
+    "name": {
+      "v2.9": "Special Program Code",
+      "UTG": "SpecialProgram"
+    }
+  },
+  "HL70215": {
+    "name": {
+      "v2.9": "Publicity Code",
+      "UTG": "Publicity"
+    }
+  },
+  "HL70216": {
+    "name": {
+      "v2.9": "Patient Status Code",
+      "UTG": "PatientStatus"
+    }
+  },
+  "HL70217": {
+    "name": {
+      "v2.9": "Visit Priority Code",
+      "UTG": "VisitPriority"
+    }
+  },
+  "HL70232": {
+    "name": {
+      "v2.9": "- Insurance Company Contact Reason",
+      "UTG": "InsuranceCompanyContactReason"
+    }
+  },
+  "HL70242": {
+    "name": {
+      "v2.9": "Primary Observer's Qualification",
+      "UTG": "PrimaryObserverQualification"
+    }
+  },
+  "HL70247": {
+    "name": {
+      "v2.9": "Status of Evaluation",
+      "UTG": "StatusOfEvaluation"
+    }
+  },
+  "HL70251": {
+    "name": {
+      "v2.9": "Action Taken in Response to the Event",
+      "UTG": "ActionTakenInResponseToTheEvent"
+    }
+  },
+  "HL70254": {
+    "name": {
+      "v2.9": "Kind of Quantity",
+      "UTG": "KindOfQuantity"
+    }
+  },
+  "HL70257": {
+    "name": {
+      "v2.9": "Nature of Challenge",
+      "UTG": "NatureOfChallenge"
+    }
+  },
+  "HL70263": {
+    "name": {
+      "v2.9": "Level of Care",
+      "UTG": "LevelOfCare"
+    }
+  },
+  "HL70267": {
+    "name": {
+      "v2.9": "Days of the Week",
+      "UTG": "DaysOfTheWeek"
+    }
+  },
+  "HL70276": {
+    "name": {
+      "v2.9": "Appointment reason codes",
+      "UTG": "AppointmentReason"
+    }
+  },
+  "HL70287": {
+    "name": {
+      "v2.9": "Problem/Goal Action Code",
+      "UTG": "ProblemGoalAction"
+    }
+  },
+  "HL70298": {
+    "name": {
+      "v2.9": "CP Range Type",
+      "UTG": "CpRangeType"
+    }
+  },
+  "HL70301": {
+    "name": {
+      "v2.9": "Universal ID Type",
+      "UTG": "UniversalIdType"
+    }
+  },
+  "HL70315": {
+    "name": {
+      "v2.9": "Living Will Code",
+      "UTG": "LivingWillCodes"
+    }
+  },
+  "HL70316": {
+    "name": {
+      "v2.9": "Organ Donor Code",
+      "UTG": "OrganDonorCodes"
+    }
+  },
+  "HL70324": {
+    "name": {
+      "v2.9": "Location Characteristic ID",
+      "UTG": "LocationCharacteristic"
+    }
+  },
+  "HL70325": {
+    "name": {
+      "v2.9": "Location Relationship ID",
+      "UTG": "LocationRelationship"
+    }
+  },
+  "HL70334": {
+    "name": {
+      "v2.9": "Disabled Person Code",
+      "UTG": "DisabilityInformationRelationship"
+    }
+  },
+  "HL70339": {
+    "name": {
+      "v2.9": "Advanced Beneficiary Notice Code",
+      "UTG": "AdvancedBeneficiaryNotice"
+    }
+  },
+  "HL70344": {
+    "name": {
+      "v2.9": "Patient's Relationship to Insured",
+      "UTG": "PatientsRelationshipToInsured"
+    }
+  },
+  "HL70353": {
+    "name": {
+      "v2.9": "CWE statuses",
+      "UTG": "CweStatuses"
+    }
+  },
+  "HL70357": {
+    "name": {
+      "v2.9": "Message Error Condition Codes",
+      "UTG": "MessageErrorCondition"
+    }
+  },
+  "HL70360": {
+    "name": {
+      "v2.9": "Degree/License/Certificate",
+      "UTG": "DegreeLicenseCertificate"
+    }
+  },
+  "HL70371": {
+    "name": {
+      "v2.9": "Additive/Preservative",
+      "UTG": "AdditivePreservative"
+    }
+  },
+  "HL70376": {
+    "name": {
+      "v2.9": "Special Handling Code",
+      "UTG": "SpecialHandling"
+    }
+  },
+  "HL70377": {
+    "name": {
+      "v2.9": "Other Environmental Factors",
+      "UTG": "EnvironmentalFactors"
+    }
+  },
+  "HL70398": {
+    "name": {
+      "v2.9": "Continuation Style Code",
+      "UTG": "ContinuationStyle"
+    }
+  },
+  "HL70415": {
+    "name": {
+      "v2.9": "Transfer Type",
+      "UTG": "DrgTransferType"
+    }
+  },
+  "HL70416": {
+    "name": {
+      "v2.9": "Procedure DRG Type",
+      "UTG": "ProcedureDrgType"
+    }
+  },
+  "HL70417": {
+    "name": {
+      "v2.9": "Tissue Type Code",
+      "UTG": "TissueType"
+    }
+  },
+  "HL70421": {
+    "name": {
+      "v2.9": "Severity of Illness Code",
+      "UTG": "SeverityOfIllness"
+    }
+  },
+  "HL70422": {
+    "name": {
+      "v2.9": "Triage Code",
+      "UTG": "TriageType"
+    }
+  },
+  "HL70423": {
+    "name": {
+      "v2.9": "Case Category Code",
+      "UTG": "CaseCategory"
+    }
+  },
+  "HL70424": {
+    "name": {
+      "v2.9": "Gestation Category Code",
+      "UTG": "GestationCategory"
+    }
+  },
+  "HL70425": {
+    "name": {
+      "v2.9": "Newborn Code",
+      "UTG": "NewbornType"
+    }
+  },
+  "HL70426": {
+    "name": {
+      "v2.9": "Blood Product Code",
+      "UTG": "BloodProduct"
+    }
+  },
+  "HL70427": {
+    "name": {
+      "v2.9": "Risk Management Incident Code",
+      "UTG": "RiskManagementIncident"
+    }
+  },
+  "HL70428": {
+    "name": {
+      "v2.9": "Incident Type Code",
+      "UTG": "IncidentType"
+    }
+  },
+  "HL70429": {
+    "name": {
+      "v2.9": "Production Class Code",
+      "UTG": "ProductionClass"
+    }
+  },
+  "HL70430": {
+    "name": {
+      "v2.9": "Mode of Arrival Code",
+      "UTG": "ArrivalMode"
+    }
+  },
+  "HL70431": {
+    "name": {
+      "v2.9": "Recreational Drug Use Code",
+      "UTG": "RecreationalDrugType"
+    }
+  },
+  "HL70432": {
+    "name": {
+      "v2.9": "Admission Level of Care Code",
+      "UTG": "AdmissionLevelOfCare"
+    }
+  },
+  "HL70433": {
+    "name": {
+      "v2.9": "Precaution Code",
+      "UTG": "Precaution"
+    }
+  },
+  "HL70434": {
+    "name": {
+      "v2.9": "Patient Condition Code",
+      "UTG": "PatientCondition"
+    }
+  },
+  "HL70435": {
+    "name": {
+      "v2.9": "Advance Directive Code",
+      "UTG": "AdvanceDirective"
+    }
+  },
+  "HL70436": {
+    "name": {
+      "v2.9": "Sensitivity to Causative Agent Code",
+      "UTG": "SensitivityToCausativeAgent"
+    }
+  },
+  "HL70437": {
+    "name": {
+      "v2.9": "Alert Device Code",
+      "UTG": "AlertDevice"
+    }
+  },
+  "HL70442": {
+    "name": {
+      "v2.9": "Location Service Code",
+      "UTG": "LocationServiceType"
+    }
+  },
+  "HL70445": {
+    "name": {
+      "v2.9": "Identity Reliability Code",
+      "UTG": "IdentityReliability"
+    }
+  },
+  "HL70457": {
+    "name": {
+      "v2.9": "Overall Claim Disposition Code",
+      "UTG": "OverallClaimDisposition"
+    }
+  },
+  "HL70458": {
+    "name": {
+      "v2.9": "HL7 created table of codes that identify the edits that result from processing the HCPCS/CPT procedures for \r\na record after evaluating all the codes, revenue codes, and modifiers.  The codes listed as examples are not an exhaustive or current list, refer to OPPS Final Rule.  OCE (Outpatient Code Editor) edits also \r\nexist at the pre-procedure level. The code values are defined by CMS in the United States.  Note that some listed codes may no longer be existing or correct; refer to the source of truth of the codes \r\nsystem for the full set of correct codes.",
+      "UTG": "OCE Edit Code"
+    }
+  },
+  "HL70465": {
+    "name": {
+      "v2.9": "Name/Address Representation",
+      "UTG": "NameAddressRepresentation"
+    }
+  },
+  "HL70466": {
+    "name": {
+      "v2.9": "Ambulatory Payment Classification Code",
+      "UTG": "AmbulatoryPaymentClassification"
+    }
+  },
+  "HL70468": {
+    "name": {
+      "v2.9": "Payment Adjustment Code",
+      "UTG": "PaymentAdjustmentInformation"
+    }
+  },
+  "HL70469": {
+    "name": {
+      "v2.9": "Packaging Status Code",
+      "UTG": "PackagingStatus"
+    }
+  },
+  "HL70470": {
+    "name": {
+      "v2.9": "Reimbursement Type Code",
+      "UTG": "ReimbursementType"
+    }
+  },
+  "HL70472": {
+    "name": {
+      "v2.9": "TQ Conjunction ID",
+      "UTG": "TqConjunctionId"
+    }
+  },
+  "HL70477": {
+    "name": {
+      "v2.9": "Controlled Substance Schedule*",
+      "UTG": "ControlledSubstanceSchedule"
+    }
+  },
+  "HL70489": {
+    "name": {
+      "v2.9": "Risk Codes",
+      "UTG": "Risks"
+    }
+  },
+  "HL70501": {
+    "name": {
+      "v2.9": "Consent Non-Disclosure Reason",
+      "UTG": "ConsentNonDisclosureReason"
+    }
+  },
+  "HL70502": {
+    "name": {
+      "v2.9": "Non-Subject Consenter Reason",
+      "UTG": "NonSubjectConsenterReason"
+    }
+  },
+  "HL70503": {
+    "name": {
+      "v2.9": "Sequence/Results Flag",
+      "UTG": "SequenceResultsFlag"
+    }
+  },
+  "HL70504": {
+    "name": {
+      "v2.9": "Sequence Condition Code",
+      "UTG": "SequenceCondition"
+    }
+  },
+  "HL70505": {
+    "name": {
+      "v2.9": "Cyclic Entry/Exit Indicator",
+      "UTG": "CyclicEntryExitIndicator"
+    }
+  },
+  "HL70511": {
+    "name": {
+      "v2.9": "BP Observation Status Codes Interpretation",
+      "UTG": "BpObservationStatusCodesInterpretation"
+    }
+  },
+  "HL70517": {
+    "name": {
+      "v2.9": "Inform Person Code",
+      "UTG": "InformInstructions"
+    }
+  },
+  "HL70530": {
+    "name": {
+      "v2.9": "Organization, Agency, Department",
+      "UTG": "OrganizationAgencyDepartment"
+    }
+  },
+  "HL70532": {
+    "name": {
+      "v2.9": "Expanded Yes/no Indicator",
+      "UTG": "ExpandedYesNoIndicator"
+    }
+  },
+  "HL70534": {
+    "name": {
+      "v2.9": "Notify Clergy Code",
+      "UTG": "ClergyNotificationType"
+    }
+  },
+  "HL70535": {
+    "name": {
+      "v2.9": "Signature Code",
+      "UTG": "SignatureType"
+    }
+  },
+  "HL70540": {
+    "name": {
+      "v2.9": "Inactive Reason Code",
+      "UTG": "InactiveReason"
+    }
+  },
+  "HL70548": {
+    "name": {
+      "v2.9": "Signatory's Relationship to Subject",
+      "UTG": "SignatorysRelationshipToSubject"
+    }
+  },
+  "HL70553": {
+    "name": {
+      "v2.9": "Invoice Control Code",
+      "UTG": "InvoiceControl"
+    }
+  },
+  "HL70554": {
+    "name": {
+      "v2.9": "Invoice Reason Codes",
+      "UTG": "InvoiceReason"
+    }
+  },
+  "HL70558": {
+    "name": {
+      "v2.9": "Payee Relationship to Invoice",
+      "UTG": "PayeeRelationshipToInvoice"
+    }
+  },
+  "HL70559": {
+    "name": {
+      "v2.9": "Product/Service Status",
+      "UTG": "ProductServiceStatus"
+    }
+  },
+  "HL70561": {
+    "name": {
+      "v2.9": "Product/Services Clarification Codes",
+      "UTG": "ProductServicesClarification"
+    }
+  },
+  "HL70562": {
+    "name": {
+      "v2.9": "Processing Consideration Codes",
+      "UTG": "ProcessingConsideration"
+    }
+  },
+  "HL70564": {
+    "name": {
+      "v2.9": "Adjustment Category Code",
+      "UTG": "AdjustmentCategory"
+    }
+  },
+  "HL70565": {
+    "name": {
+      "v2.9": "Provider Adjustment Reason Code",
+      "UTG": "ProviderAdjustmentReason"
+    }
+  },
+  "HL70570": {
+    "name": {
+      "v2.9": "Payment Method Code",
+      "UTG": "PaymentMethod"
+    }
+  },
+  "HL70572": {
+    "name": {
+      "v2.9": "Tax status",
+      "UTG": "TaxStatus"
+    }
+  },
+  "HL70615": {
+    "name": {
+      "v2.9": "User Authentication Credential Type Code",
+      "UTG": "UserAuthenticationCredentialType"
+    }
+  },
+  "HL70618": {
+    "name": {
+      "v2.9": "Protection Code",
+      "UTG": "Protection"
+    }
+  },
+  "HL70625": {
+    "name": {
+      "v2.9": "Item Status Codes",
+      "UTG": "ItemStatus"
+    }
+  },
+  "HL70634": {
+    "name": {
+      "v2.9": "Item Importance Codes",
+      "UTG": "ItemImportance"
+    }
+  },
+  "HL70642": {
+    "name": {
+      "v2.9": "Reorder Theory Codes",
+      "UTG": "ReorderTheory"
+    }
+  },
+  "HL70728": {
+    "name": {
+      "v2.9": "CCL Value",
+      "UTG": "CclValue"
+    }
+  },
+  "HL70731": {
+    "name": {
+      "v2.9": "DRG Diagnosis Determination Status",
+      "UTG": "DrgDiagnosisDeterminationStatus"
+    }
+  },
+  "HL70739": {
+    "name": {
+      "v2.9": "DRG Status Patient",
+      "UTG": "DrgStatusPatient"
+    }
+  },
+  "HL70742": {
+    "name": {
+      "v2.9": "DRG Status Financial Calculation",
+      "UTG": "DrgStatusFinancialCalculation"
+    }
+  },
+  "HL70749": {
+    "name": {
+      "v2.9": "DRG Grouping Status",
+      "UTG": "DrgGroupingStatus"
+    }
+  },
+  "HL70755": {
+    "name": {
+      "v2.9": "Status Weight At Birth",
+      "UTG": "DrgstatusWeightAtBirth"
+    }
+  },
+  "HL70757": {
+    "name": {
+      "v2.9": "DRG Status Respiration Minutes",
+      "UTG": "DrgStatusRespirationMinutes"
+    }
+  },
+  "HL70759": {
+    "name": {
+      "v2.9": "Status Admission",
+      "UTG": "DrgstatusAdmission"
+    }
+  },
+  "HL70761": {
+    "name": {
+      "v2.9": "DRG Procedure Determination Status",
+      "UTG": "DrgProcedureDeterminationStatus"
+    }
+  },
+  "HL70763": {
+    "name": {
+      "v2.9": "DRG Procedure Relevance",
+      "UTG": "DrgProcedureRelevance"
+    }
+  },
+  "HL70834": {
+    "name": {
+      "v2.9": "MIME Types",
+      "UTG": "MimeTypes"
+    }
+  },
+  "HL70871": {
+    "name": {
+      "v2.9": "Supply Risk Codes",
+      "UTG": "SupplyRisk"
+    }
+  },
+  "HL70894": {
+    "name": {
+      "v2.9": "Side of body",
+      "UTG": "SideOfBody"
+    }
+  },
+  "HL70895": {
+    "name": {
+      "v2.9": "Externally defined table of codes specifying a present on admission indicator for a particular diagnosis. US reimbursement formulas for some states and Medicare have mandated that each diagnosis code be flagged as to whether it was present on admission or not.  In the US, may be used in the UB form locator 67, Present on Admission (POA) Indicator.  The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html",
+      "UTG": "NubcPresentOnAdmissionCs"
+    }
+  },
+  "HL70906": {
+    "name": {
+      "v2.9": "ActPriority",
+      "UTG": "Actpriority"
+    }
+  },
+  "HL70918": {
+    "name": {
+      "v2.9": "PCA Type",
+      "UTG": "PcaType"
+    }
+  },
+  "HL70920": {
+    "name": {
+      "v2.9": "Preferred Specimen/Attribute Status",
+      "UTG": "PreferredSpecimenAttributeStatus"
+    }
+  },
+  "HL70921": {
+    "name": {
+      "v2.9": "Certification Type Code",
+      "UTG": "CertificationType"
+    }
+  },
+  "HL70922": {
+    "name": {
+      "v2.9": "Certification Category Code",
+      "UTG": "CertificationCategory"
+    }
+  },
+  "HL70924": {
+    "name": {
+      "v2.9": "Cumulative Dosage Limit UoM",
+      "UTG": "CumulativeDosageLimitUom"
+    }
+  },
+  "HL70937": {
+    "name": {
+      "v2.9": "Observation Sub-Type",
+      "UTG": "ObservationSubtype"
+    }
+  },
+  "HL70938": {
+    "name": {
+      "v2.9": "Collection Event/Process Step Limit",
+      "UTG": "CollectionEvent"
+    }
+  },
+  "HL70940": {
+    "name": {
+      "v2.9": "Limitation Type Codes",
+      "UTG": "LimitationTypeCode"
+    }
+  },
+  "HL70942": {
+    "name": {
+      "v2.9": "HL7-defined table of codes that specify the type of measurement of the state of an automated laboratory instrument.",
+      "UTG": "EquipmentStateIndicator"
+    }
+  },
+  "HL70943": {
+    "name": {
+      "v2.9": "Table of codes that identify the destination for transport of a specific container.  No suggested values.",
+      "UTG": "Transport Destination"
+    }
+  },
+  "HL70944": {
+    "name": {
+      "v2.9": "Table of codes that identify the route for transport of a specific container.   No suggested values.",
+      "UTG": "Transport Route"
+    }
+  },
+  "HL70945": {
+    "name": {
+      "v2.9": "Vendor-defined codes of the pre?configured dilution to be applied on the instrument, which can be used instead of a numeric declaration.",
+      "UTG": "AutoDilutionType"
+    }
+  },
+  "HL70946": {
+    "name": {
+      "v2.9": "User-defined table of codes that identifies the type of supplier that will distribute the supply items associated to a contract number.",
+      "UTG": "SupplierType"
+    }
+  },
+  "HL70947": {
+    "name": {
+      "v2.9": "Table of codes that represent the purchasing channel the contract is associated with such as Hospital, Retail, etc.",
+      "UTG": "Class of Trade"
+    }
+  },
+  "HL70948": {
+    "name": {
+      "v2.9": "HL7-defined table of codes specifying the type of relationship identified by Relationship Instance Identifier (REL-3) that is established between the Source Information Instance (REL-4)  and the Target Information Instance (REL-5).",
+      "UTG": "V2CSRelationshipType"
+    }
+  },
+  "HL70949": {
+    "name": {
+      "v2.9": "HL7-defined table of codes that describe reasons for the chosen order control codes – this table is extensible; while these codes are intended to be generally useful, they were developed to cover situations for replacement orders (ORC-1 = RO) and recommendations for replacement orders (ORC-1 = RP)",
+      "UTG": "OrderControlCodeReason"
+    }
+  },
+  "HL70950": {
+    "name": {
+      "v2.9": "HL7-defined table of codes used to further define the status identified in ORC-5",
+      "UTG": "OrderStatusModifier"
+    }
+  },
+  "HL70951": {
+    "name": {
+      "v2.9": "HL7-defined table of codes that provide additional information to the universal service identifier on why a test, study or review was ordered. Current suggested values are in support of the IHE LCC LAB-7 transaction.",
+      "UTG": "ReasonForStudy"
+    }
+  },
+  "HL70959": {
+    "name": {
+      "v2.9": "A patient's employment type as defined by work classification (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.).For the list of codes in the table, see the Hl7 Webpage rendering.",
+      "UTG": "Work Classification ODH"
+    }
+  },
+  "HL70960": {
+    "name": {
+      "v2.9": "Used to specify why the normally expected content of the data element is missing.  Note that this content is maintained in the FHIR product family.",
+      "UTG": "Data Absent Reason"
+    }
+  },
+  "HL70961": {
+    "name": {
+      "v2.9": "Domain of concepts describing what kind a particular device is. Focus here is on devices used in the medical field.",
+      "UTG": "Device Type"
+    }
+  },
+  "HL70962": {
+    "name": {
+      "v2.9": "The domain describing the availability status of a device.",
+      "UTG": "Device Status"
+    }
+  },
+  "HL70963": {
+    "name": {
+      "v2.9": "The domain describing safety characteristics of medical devices.",
+      "UTG": "Device Safety"
+    }
+  },
+  "HL70964": {
+    "name": {
+      "v2.9": "",
+      "UTG": "Service Reason"
+    }
+  },
+  "HL70965": {
+    "name": {
+      "v2.9": "The domain of possible values describing the scope of contracts in a masterfile, e.g.:\r\n•\tLocal\r\n•\tRegional\r\n•\tGlobal",
+      "UTG": "Contract Type"
+    }
+  },
+  "HL70966": {
+    "name": {
+      "v2.9": "The domain of possible values describing the declared level of pricing for a particular product under a contract, usually based on a discount for larger orders under the contract – often assigned numerically, e.g.:\r\n•\tTier 1\r\n•\tTier 2\r\n•\tTier 3",
+      "UTG": "Pricing Tier Level"
+    }
+  },
+  "HL70967": {
+    "name": {
+      "v2.9": "The domain of possible values describing shape or type of the container, e.g.:\r\n•\tTube/vial\r\n•\tJar\r\n•\tBag\r\n•\tBlock\r\n•\tSlide",
+      "UTG": "Container Form"
+    }
+  },
+  "HL70968": {
+    "name": {
+      "v2.9": "The domain of possible values describing the material a container is made of or indication that the container may be a virtual type, e.g.:\r\n•\tGlass\r\n•\tPlastic\r\n•\tWhole Slide Image",
+      "UTG": "Container Material"
+    }
+  },
+  "HL70969": {
+    "name": {
+      "v2.9": "Codes created by an organization as a shorthand way to express a combination of container attributes; for example the combination of SAC-47 (Container Form) of “Tube/vial” + SAC-48 (Container Material) of “Glass” + SAC-27 (Additive) of “EDTA” may be referenced commonly in an organization as a “Lavender Top”, e.g.:\r\n•\tLavender Top\r\n•\tWet Mount (slides for parasitology)\r\n•\tLJ plate (for Mycobacterium cultures)",
+      "UTG": "Container Common Name"
+    }
+  },
+  "HL70970": {
+    "name": {
+      "v2.9": "",
+      "UTG": "OnlineVerificationResult"
+    }
+  },
+  "HL70971": {
+    "name": {
+      "v2.9": "",
+      "UTG": "OnlineVerificationResultErrorCodes"
+    }
+  }
+}
