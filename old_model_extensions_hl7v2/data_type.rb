@@ -15,7 +15,7 @@ module HL7
     end
     
     def to_resource
-      xml = HL7.get_instance_template(:data_type, 'base')
+      xml = HL7::V2.get_instance_template(:data_type, 'base')
       xml.sub!('URL', local_url_name)
       [:name, :withdrawn, :code].each do |property|
         xml.sub!(property.to_s.upcase, send(property).to_s)
@@ -32,7 +32,7 @@ module HL7
     def resource_notes
       return '' if notes.empty?
       output = notes.each do |c|
-        HL7.get_instance_template(:data_type, 'usageNotes').sub('VALUE', c)
+        HL7::V2.get_instance_template(:data_type, 'usageNotes').sub('VALUE', c)
       end
       output
     end

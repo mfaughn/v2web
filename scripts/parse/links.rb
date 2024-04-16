@@ -267,12 +267,12 @@ module HL7Parse
       if adjusted_link =~ /((\d+\.)+\d+)/
         ch = LinkDecrypter.chapter_num_to_link_title($1.split('.').first)
         sections = $1.split('.')[1..-1].join('-')
-        return "/composition/#{ch}.html##{ch}-#{sections}" if ch
+        return " /domain/#{ch}.html##{ch}-#{sections}" if ch
       end
     
       if adjusted_link =~ /^(\d)A?\.?$/
         ch = LinkDecrypter.chapter_num_to_link_title($1.delete('.'))
-        return "/composition/#{ch}.html" if ch
+        return " /domain/#{ch}.html" if ch
       end
     end
     

@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>IVC</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>IVC</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_ivc_invoice_segment">IVC &ndash; Invoice Segment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ivc_1_provider_invoice_number_ei_01914">IVC-1 Provider Invoice Number (EI) 01914</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_2_payer_invoice_number_ei_01915">IVC-2 Payer Invoice Number (EI) 01915</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_3_contractagreement_number_ei_01916">IVC-3 Contract/Agreement Number (EI) 01916</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_4_invoice_control_cwe_01917">IVC-4 Invoice Control (CWE) 01917</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_5_invoice_reason_cwe_01918">IVC-5 Invoice Reason (CWE) 01918</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_6_invoice_type_cwe_01919">IVC-6 Invoice Type (CWE) 01919</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_7_invoice_datetime_dtm_01920">IVC-7 Invoice Date/Time (DTM) 01920</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_8_invoice_amount_cp_01921">IVC-8 Invoice Amount (CP) 01921</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_9_payment_terms_st_01922">IVC-9 Payment Terms (ST) 01922</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_10_provider_organization_xon_01923">IVC-10 Provider Organization (XON) 01923</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_11_payer_organization_xon_01924">IVC-11 Payer Organization (XON) 01924</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_12_attention_xcn_01925">IVC-12 Attention (XCN) 01925</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_13_last_invoice_indicator_id_01926">IVC-13 Last Invoice Indicator (ID) 01926</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_14_invoice_booking_period_dtm_01927">IVC-14 Invoice Booking Period (DTM) 01927</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_15_origin_st_01928">IVC-15 Origin (ST) 01928</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_16_invoice_fixed_amount_cp_01929">IVC-16 Invoice Fixed Amount (CP) 01929</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_17_special_costs_cp_01930">IVC-17 Special Costs (CP) 01930</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_18_amount_for_doctors_treatment_cp_01931">IVC-18 Amount for Doctors Treatment (CP) 01931</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_19_responsible_physician_xcn_01932">IVC-19 Responsible Physician (XCN) 01932</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_20_cost_center_cx_01933">IVC-20 Cost Center (CX) 01933</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_21_invoice_prepaid_amount_cp_01934">IVC-21 Invoice Prepaid Amount (CP) 01934</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_22_total_invoice_amount_without_prepaid_amount_cp_01935">IVC-22 Total Invoice Amount without Prepaid Amount (CP) 01935</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_23_total_amount_of_vat_cp_01936">IVC-23 Total-Amount of VAT (CP) 01936</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_24_vat_rates_applied_nm_01937">IVC-24 VAT-Rates applied (NM) 01937</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_25_benefit_group_cwe_01938">IVC-25 Benefit group (CWE) 01938</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_26_provider_tax_id_st_02038">IVC-26 Provider Tax ID (ST) 02038</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_27_payer_tax_id_st_02039">IVC-27 Payer Tax ID (ST) 02039</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_28_provider_tax_status_cwe_02040">IVC-28 Provider Tax Status (CWE) 02040</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_29_payer_tax_status_cwe_02041">IVC-29 Payer Tax Status (CWE) 02041</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ivc_30_sales_tax_id_st_02042">IVC-30 Sales Tax ID (ST) 02042</h3>
+<p class="v2">
+Definition: The Tax ID specific to Sales Tax
+</p>
+<p class="v2">
+This segment is used to define payee information.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; PYE &ndash; Payee Information
+</p>
+<p class="v2">
+Definition: Sequence Number.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Type of Payee (e.g., Organization, Person). Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70557"><em>User-defined Table 0557 &ndash; Payee Type</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Conditional or empty: if Payee Type in list ("PERS", "PPER"), then Required, else Not Permitted.
+</p>
+<p class="v2">
+For Person Payee Types, the relationship to Invoice. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70558"><em>User-defined Table 0558 &ndash; Payee Relationship to Invoice</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Conditional or empty: if Payee Type in list ("PPER", "ORG"), then Required, else Not Permitted.
+</p>
+<p class="v2">
+Payee or Business Arrangement identification information; up to 5; defined by Payer/Provider agreement.
+</p>
+<p class="v2">
+Components: &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Called By (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Conditional or empty: if Payee Type = ("PERS", "PPER), then Required, else Not Permitted.
+</p>
+<p class="v2">
+Individual&#8217;s name; may be a patient&#8217;s name or other individual.
+</p>
+<p class="v2">
+Components: &lt;Street Address (SAD)&gt; ^ &lt;Other Designation (ST)&gt; ^ &lt;City (ST)&gt; ^ &lt;State or Province (ST)&gt; ^ &lt;Zip or Postal Code (ST)&gt; ^ &lt;Country (ID)&gt; ^ &lt;Address Type (ID)&gt; ^ &lt;Other Geographic Designation (ST)&gt; ^ &lt;County/Parish Code (CWE)&gt; ^ &lt;Census Tract (CWE)&gt; ^ &lt;Address Representation Code (ID)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Expiration Reason (CWE)&gt; ^ &lt;Temporary Indicator (ID)&gt; ^ &lt;Bad Address Indicator (ID)&gt; ^ &lt;Address Usage (ID)&gt; ^ &lt;Addressee (ST)&gt; ^ &lt;Comment (ST)&gt; ^ &lt;Preference Order (NM)&gt; ^ &lt;Protection Code (CWE)&gt; ^ &lt;Address Identifier (EI)&gt;
+</p>
+<p class="v2">
+Subcomponents for Street Address (SAD): &lt;Street or Mailing Address (ST)&gt; &amp; &lt;Street Name (ST)&gt; &amp; &lt;Dwelling Number (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for County/Parish Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Census Tract (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Expiration Reason (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Protection Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Address Identifier (EI): &lt;Entity Identifier (ST)&gt; &amp; &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Conditional or empty: if Payee Type = ("PERS", "PPER), then Required, else Not Permitted.
+</p>
+<p class="v2">
+Address for payee. If not specified, then Payer will use address on file for this Payee, if applicable. If Payee is an individual, then this address can be used to send a check.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: For Payee organizations that have more than one payment method.
+</p>
+<p class="v2">
+If for individual, then we may also need to indicate EFT, bank info, etc.
+</p>
+<p class="v2">
+Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70570"><em>User-defined Table 0570 &ndash; Payment Method Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+The Product/Service Section segment is used to form a logical grouping of Product/Service Group segments, Patients and Response Summaries for a particular Invoice.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; PSS &ndash; Product/Service Section
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Section Number assigned by the Provider Application.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Section Number assigned by the Payer Application.
+</p>
+<p class="v2">
+Definition: Unique sequence number for the Product/Service Section (3) &ndash; starts with 1, then 2, etc. for each unique Product/Service Section in this Invoice.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Section.
+</p>
+<p class="v2">
+Definition: Section description or heading.
+</p>
+<p class="v2">
+The Product/Service Group segment is used to form a logical grouping of Product/Service Line Items, Patients and Response Summaries for a particular Invoice. For example, a Product/Service Group can be used to group all Product/Service Line Items that must be adjudicated as a group in order to be paid.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; PSG &ndash; Product/Service Group
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Group Number assigned by the Provider Application.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Group Number assigned by the Payer Application
+</p>
+<p class="v2">
+Definition: Unique sequence number for the Product/Service Group (3) &ndash; starts with 1, then 2, etc. for each unique Product/Service Group in this Invoice.
+</p>
+<p class="v2">
+Definition: Adjudicate all Product/Service Line Items together as a group (IPRs will be reported against the Product/Service Group). Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 &ndash; Yes/No Indicator</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Sum of all Product/Service Billed Amounts for all Product/Service Line Items for this Product/Service Group.
+</p>
+<p class="v2">
+Definition: Product/Service Group description or heading
+</p>
+<p class="v2">
+The Product/Service Line Item segment is used to identify individual product/service items that typically are aggregated into an Invoice. Each instance of a Product/Service Line Item corresponds to a unique product delivered or service rendered.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; PSL &ndash; Product/Service Line Item
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Line Item Number assigned by the Provider Application.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Product/Service Line Item Number assigned by the Payer Application.
+</p>
+<p class="v2">
+Definition: Unique sequence number for the Product/Service Line Item &ndash; starts with 1, then 2, etc. for each unique Product/Service Line Item in this Invoice.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Identifier for this Product/Service Line Item assigned by the Provider Application. This will be echoed on all interactions between participants for this Product/Service Line Item.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Identifier for this Product/Service Line Item assigned by the Payer Application. This will be echoed on all interactions between participants for this Product/Service Line Item.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Processing status for the Product/Service Code. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70559"><em>User-defined Table 0559 &ndash; Product/Service Status</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Code describing the service that was delivered/received. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70879"><em>User-defined Table 0879 &ndash; Product/Service Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Additional optional modifier(s) for the Product/Service Code (e.g., after hours &ndash; evening, after hours &ndash; weekend); repeats up to 5 times. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70880"><em>User-defined Table 0880 &ndash; Product/Service Code Modifier</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Text describing Product/Service Code in PSL.
+</p>
+<p class="v2">
+Definition: [ Start ] Date/Time product/service was delivered/received.
+</p>
+<p class="v2">
+Definition: [ End ] Date/Time product/service was delivered/received. If specified, must be greater than or equal to Product/Service Effective Date.
+</p>
+<p class="v2">
+Components: &lt;Quantity (NM)&gt; ^ &lt;Units (CWE)&gt;
+</p>
+<p class="v2">
+Subcomponents for Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Amount that has been negotiated for this Product/Service Code on PSL between a Provider and Payer for each unit. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70560"><em>User-defined Table 0560 &ndash; Quantity Units</em></a> in Chapter 2C, Code Tables, for valid values.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: This field contains the cost per unit either in monetary amount or in points.
+</p>
+<p class="v2">
+Examples:
+</p>
+<div class="quoteblock">
+<blockquote>
+<p class="v2">
+1. Qty * cost/unit = gross amount
+</p>
+<p class="v2">
+2. Qty * cost/unit * factor = gross amount
+</p>
+<p class="v2">
+3. Qty * cost/point * factor * points = gross amount
+</p>
+</blockquote>
+</div>
+<p class="v2">
+Definition: Number of items in each unit &ndash; for Services, this should be set to 1.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: = Product/Service Quantity * Product/Service Unit Cost
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Amount that is being billed for this Product/Service Code on PSL, = Product/Service Gross Amount + sum of all Product/Service Adjustments on ADJ for this Product/Service Line Item.
+</p>
+<p class="v2">
+\= Product/Service Gross Amount + sum of all Product/Service Adjustments on ADJ
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Additional codes describing the Product/Service Code on PSL &ndash; examples are Northern Allowance, Data Center Numbers, Sequence Numbers; repeats with Product/Service Clarification Code Value. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70561"><em>User-defined Table 0561 &ndash; Product/Services Clarification Codes</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Actual value for Product/Service Clarification Code Type (40) &ndash; examples are "Y", "N" for Northern Allowance, an actual number for a Data Center Number; repeats with Product/Service Clarification Code Type.
+</p>
+<p class="v2">
+Repeats with Product/Service Clarification Code Type.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Health Documents (electronic or paper) that support this Product/Service Line Item. This includes such health documents as forms used to register a claim with a Payer, reports, medical images, etc.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Codes indicating special processing requested of Payer for this Product/Service Line Item (e.g., hold until paper supporting documentation is received by Payer). Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70562"><em>User-defined Table 0562 &ndash; Processing Consideration Codes</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Set to "Yes" if information on this invoice should be treated with increased confidentiality/security. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70532"><em>User-defined Table 0532 &ndash; Expanded Yes/No Indicator</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Two Product /Service Line Items (PSL-7) may be in a relation to each other. One could be an addition to another. In this case this field contains the Code of PSL-7 of the "master" Product/Service Line Item. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70879"><em>User-defined Table 0879 &ndash; Product/Service Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Monetary Amount of product/service item which is for the physician.
+</p>
+<p class="v2">
+Definition: Factor to increase the billed amount.
+</p>
+<p class="v2">
+Components: &lt;ID Number (ST)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Effective Date (DT)&gt; ^ &lt;Expiration Date (DT)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Cost centers are organizational units or activities that provide goods and services. In this context, it would be the department which delivered the Service/Product Line Item, e.g., Radiology, Emergency Room.
+</p>
+<p class="v2">
+Components: &lt;Range Start Date/Time (DTM)&gt; ^ &lt;Range End Date/Time (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Begin and end of billing period.
+</p>
+<p class="v2">
+Definition: Number of Days for which no invoice is created.
+</p>
+<p class="v2">
+Definition: Several line items may be grouped to a session.
+</p>
+<p class="v2">
+Components: &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Source Table (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: ID of the physician who is providing the Service, e.g., executing the radiology-exam (EAN ID = European Article Numbering).
+</p>
+<p class="v2">
+Components: &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Family Name (FN): &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Source Table (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Name Context (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: ID of the physician who is responsible for the Service.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Account role of the physician, for example only billing for the professional part, the technical part or both. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70881"><em>User-defined Table 0881 &ndash; Role Executing Physician</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: The role of the Physician ("self-employed" or "employed"). Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70882"><em>User-defined Table 0882 &ndash; Medical Role Executing Physician</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Left / right. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70894"><em>User-defined Table 0894 &ndash; Side of Body</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Cost of the service "professional part" expressed in "points".
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Monetary Value of one "point" for the professional part of the service.
+</p>
+<p class="v2">
+Definition: Internal Scaling Factor for the amount of the professional part of the service.
+</p>
+<p class="v2">
+Definition: External Scaling Factor for the amount of the professional part of the service.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Total Amount for the professional part of this service.
+</p>
+<p class="v2">
+Definition: Cost of the service (Technical Part) expressed in "points".
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Monetary Value of one "point" for the technical part of the service.
+</p>
+<p class="v2">
+Definition: Internal Scaling Factor for the amount of the technical part of the service.
+</p>
+<p class="v2">
+Definition: External Scaling Factor for the amount of the technical part of the service.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Total Amount for the technical part of this service.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Total Amount of the cost of this service (Professional plus technical part)
+</p>
+<p class="v2">
+Definition: VAT&ndash;Rate Applied on the total amount of this service.
+</p>
+<p class="v2">
+Definition: Main service.
+</p>
+<p class="v2">
+Definition: Service line item has passed an approved validator software (yes/no). For reason see PSL-48. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70136"><em>HL7 Table 0136 &ndash; Yes/No Indicator</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Reason why the service line item has not passed the validator software.
+</p>
+<p class="v2">
+This segment describes Provider and/or Payer adjustments to a Product/Service Line Item or Response Summary. These include surcharges such as tax, dispensing fees and mark ups.
+</p>
+<p class="v2">
+X12 REF: Similar to CAS segment, with a few new fields.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; ADJ &ndash; Adjustment
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Adjustment Number assigned by the Provider Application.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Adjustment Number assigned by the Payer Application.
+</p>
+<p class="v2">
+Definition: Unique sequence number for this adjustment &ndash; starts with 1, then 2, etc., for each unique adjustment for the Product/Service Line Item.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Indicates the category of adjustment and is used to assist in determining which table is used for Adjustment Reason. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70564"><em>User-defined Table 0564 &ndash; Adjustment Category Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Adjustment amount, such as taxes, deductibles, previously paid amount.
+</p>
+<p class="v2">
+Components: &lt;Quantity (NM)&gt; ^ &lt;Units (CWE)&gt;
+</p>
+<p class="v2">
+Subcomponents for Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Adjustment quantity.
+</p>
+<p class="v2">
+X12 REF: table 673 Quantity Qualifier. New values from X12 673 can be added as required. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70560"><em>User-defined Table 0560 &ndash; Quantity Units</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Reason for this adjustment. Codes used to explain a Provider adjustment to a Product/Service Group or Product/Service Line Item by a Provider. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70565"><em>User-defined Table 0565 &ndash; Provider Adjustment Reason Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Description of adjustment, such as client instructions.
+</p>
+<p class="v2">
+Definition: Original value of data item noted in this adjustment.
+</p>
+<p class="v2">
+Definition: Substituted value of data item noted in this adjustment.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Action requested of party that receives this adjustment. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70569"><em>User-defined Table 0569 &ndash; Adjustment Action</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Provider Adjustment Number assigned by the Provider Application that is referenced by this Payer Adjustment.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Provider Product/Service Line Item Number assigned by the Provider Application that is referenced by this Payer Adjustment; used for groups with multiple line items that need to be singled out by a Payer Adjustment.
+</p>
+<p class="v2">
+Definition: Date/Time adjustment was made. May also be synonymous with Adjudication Date.
+</p>
+<p class="v2">
+Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Business organization that is responsible for the adjustment (e.g., Payer organization); can be used for a Payment/Remittance Advice for 1 Payee from multiple Payers.
+</p>
+<p class="v2">
+This segment contains information that describes a payment made by a Payer organization.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; PMT &ndash; Payment Information
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique Payment/Remittance Advice number for the sending Network Application ID.
+</p>
+<p class="v2">
+Definition: [ Start ] Date/Time for this Payment/Remittance Advice.
+</p>
+<p class="v2">
+Definition: [ End ] Date/Time for this Payment/Remittance Advice.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Code identifying the method for the movement of payment. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70570"><em>User-defined Table 0570 &ndash; Payment Method Code</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+Definition: Date Payment/Remittance Advice was paid, which might not be the same as Date/Time of Message on MSH.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Sum total of all Product/Service Paid Amount on PSL for this Payment/Remittance Advice, net of any Adjustments to Payee.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique check number from the Payer&#8217;s application system.
+</p>
+<p class="v2">
+Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Identification of Payee&#8217;s financial contact, e.g., name of the bank .
+</p>
+<p class="v2">
+Definition: Personal ID of the payee used in financial transaction.
+</p>
+<p class="v2">
+Components: &lt;ID Number (ST)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Effective Date (DT)&gt; ^ &lt;Expiration Date (DT)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Jurisdiction (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Agency or Department (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Id of Payee&#8217;s Bank account.
+</p>
+<p class="v2">
+Components: &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;
+</p>
+<p class="v2">
+Subcomponents for Organization Name Type Code (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Authority (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Assigning Facility (HD): &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Organization identifier that made the Payment/Remittance Advice; could be a Payer, Insurance Company, TPA, Drug Company.
+</p>
+<p class="v2">
+Definition: Invoice Reference used with electronic banking methods.
+</p>
+<p class="v2">
+The Invoice Processing Results (IPR) segment provides summary information about an adjudicated Product/Service Group or Product/Service Line Item.
+</p>
+<p class="v2">
+HL7 Attribute Table &ndash; IPR &ndash; Invoice Processing Results
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Unique IPR Number assigned by the Payer Application.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Cross reference to Provider Product/Service Group Number or Provider Product/Service Line Item Number from original Invoice.
+</p>
+<p class="v2">
+Components: &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+<p class="v2">
+Definition: Cross reference to Payer Product/Service Group Number or Payer Product/Service Line Item Number from original Invoice.
+</p>
+<p class="v2">
+Components: &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Processing status for the Product/Service Group (if Adjudicate as Group = "Y") or Product/Service Line Item. Refer to <a href="file:///E:\V2\v2.9%20final%20Nov%20from%20Frank\V29_CH02C_Tables.docx#HL70571"><em>User-defined Table 0571 &ndash; Invoice Processing Results Status</em></a> in Chapter 2C, Code Tables, for suggested values.
+</p>
+<p class="v2">
+The referenced status codes represent status codes for an IPR (Invoice Processing Result).
+</p>
+<p class="v2">
+Definition: Date/Time IPR was created.
+</p>
+<p class="v2">
+Components: &lt;Price (MO)&gt; ^ &lt;Price Type (ID)&gt; ^ &lt;From Value (NM)&gt; ^ &lt;To Value (NM)&gt; ^ &lt;Range Units (CWE)&gt; ^ &lt;Range Type (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Price (MO): &lt;Quantity (NM)&gt; &amp; &lt;Denomination (ID)&gt;
+</p>
+<p class="v2">
+Subcomponents for Range Units (CWE): &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p class="v2">
+Definition: Adjudicated Amount for the Product/Service Group or Product/Service Line Item, which could be 0 = sum of all Payer adjustments (Adjustment Amount on ADJ).
+</p>
+<p class="v2">
+Definition: Date payment is expected for this IPR.
+</p>
+<p class="v2">
+Definition: Conditional, if Status = "Accepted", then Required, else Not Permitted.
+</p>
+<p class="v2">
+The field contains a checksum generated by the first Payer (referenced by Payer Organization in the IVC Segment) to ensure that the contents of IPR have not been altered before sending to subsequent Payers.
+</p>
+<p class="v2">
+The following items are being discussed in the Financial Management committee for addition to future versions of HL7:
+</p>
+<p class="v2">
+Events E10 (Edit/Adjudication Response), E24 (Authorization Response) and E12 (Request Additional Information) assume that the Payer application is able to process the requests on-line. Future versions of the Standard would include provisions for deferred responses where the Payer responds to the request once it has processed the request offline. In this use case, the Payer would either send the response as unsolicited results, or store the responses on a queue for the Provider application. If left on a queue for the Provider application, then the QVR<sup>Q17</sup>QVR_Q17 (Query for previous events) message might be used by the Provider application to poll the Payer application.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 15:59:52 -0600
+</div>
+</div>
+</body>
+</html>

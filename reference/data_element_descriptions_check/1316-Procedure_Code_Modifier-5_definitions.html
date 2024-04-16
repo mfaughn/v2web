@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #1316 - Procedure Code Modifier</h2><h3>5 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 4 OBR.45 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the procedure code modifier to the procedure code reported in <a href="REFERENCE_ATTRIBUTEBROKENOBR-44-procedure code">OBR-44-procedure code</a>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. In the USA, this is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement.  Refer to <a href="HL70340">Externally- defined table 0340 &ndash; Procedure code modifier</a> in Chapter 2C, Code Tables, for suggested values.</p><p class="v2 v2_normalindented">Usage Rule: This field can only be used if <a href="REFERENCE_ATTRIBUTEBROKENOBR-44 &ndash; procedure code">OBR-44 &ndash; procedure code</a> contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise. </p><p class="v2 v2_normalindented">As of version 2.6, applicable external coding systems include those in the referenced table. If the code set used is in the referenced table, then the coding scheme designation in the table shall be used.</p><br/><h4>          ---------- 2nd Description: Ch. 6 FT1.26 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the procedure code modifier to the procedure code reported in <a href="FT1_25">FT1-25 - Procedure Code</a>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. This is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. Refer to <a href="HL70340">Externally-defined Table 0340 - Procedure Code Modifier</a> in Chapter 2C, Code Tables, for suggested values.</p><p class="v2 v2_normalindented">Usage Rule: This field can only be used if <a href="FT1_25">FT1-25 - Procedure Code</a> contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.</p><p class="v2 v2_normalindented">As of v 2.6, the known applicable external coding systems include those in the table below.  If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Procedure Code Modifier Coding Systems (From HL7 Table 0396) </p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 12.92%;"/>
+    <col span="1" style="width: 25.44%;"/>
+    <col span="1" style="width: 61.62%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="border-top-width:px; border-bottom-width:px; width:12.92%; ">
+      <p class="v2 v2_othertableheader">Code</p>
+    </th>
+    <th style="border-top-width:px; border-bottom-width:px; width:25.44%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="border-top-width:px; border-bottom-width:px; width:61.62%; ">
+      <p class="v2 v2_othertableheader">Comment / Source</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:12.92%; ">
+      <p class="v2 v2_othertablebody">CPTM</p>
+    </td>
+    <td style="width:25.44%; ">
+      <p class="v2 v2_othertablebody">CPT Modifier Code</p>
+    </td>
+    <td style="width:61.62%; ">
+      <p class="v2 v2_othertablebody">Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:12.92%; ">
+      <p class="v2 v2_othertablebody">HPC</p>
+    </td>
+    <td style="width:25.44%; ">
+      <p class="v2 v2_othertablebody">CMS (formerly HCFA )Procedure Codes (HCPCS)</p>
+    </td>
+    <td style="width:61.62%; ">
+      <p class="v2 v2_othertablebody">Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:12.92%; ">
+      <p class="v2 v2_othertablebody">I10P</p>
+    </td>
+    <td style="width:25.44%; ">
+      <p class="v2 v2_othertablebody">ICD-10  Procedure Codes</p>
+    </td>
+    <td style="width:61.62%; ">
+      <p class="v2 v2_othertablebody">Procedure Coding System (ICD-10-PCS.)  See <a href="">http://www/hcfa.gov/stats/icd10.icd10.htm</a> for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:12.92%; ">
+      <p class="v2 v2_othertablebody">I9C</p>
+    </td>
+    <td style="width:25.44%; ">
+      <p class="v2 v2_othertablebody">ICD-9CM </p>
+    </td>
+    <td style="width:61.62%; ">
+      <p class="v2 v2_othertablebody">Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:12.92%; ">
+      <p class="v2 v2_othertablebody">ICD10AM</p>
+    </td>
+    <td style="width:25.44%; ">
+      <p class="v2 v2_othertablebody">ICD-10 Australian modification</p>
+    </td>
+    <td style="width:61.62%; ">
+      <p class="v2 v2_othertablebody"></p>
+    </td>
+  </tr>
+  <tr>
+    <td style="border-bottom-width:px; width:12.92%; ">
+      <p class="v2 v2_othertablebody">ICD10CA</p>
+    </td>
+    <td style="border-bottom-width:px; width:25.44%; ">
+      <p class="v2 v2_othertablebody">ICD-10 Canada</p>
+    </td>
+    <td style="border-bottom-width:px; width:61.62%; ">
+      <p class="v2 v2_othertablebody"></p>
+    </td>
+  </tr>
+</table>
+<p class="v2 v2_normalindented"></p><br/><h4>          ---------- 3rd Description: Ch. 6 PR1.16 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the procedure code modifier to the procedure code reported in field 3, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <span class="v2-normal-indented-char">CMS</span> and the AMA.  Multiple modifiers may be reported.  Refer to <a href="HL70340">Externally-defined Table 0340 - Procedure Code Modifier</a> in Chapter 2C, Code Tables, for suggested values.</p><br/><h4 style='background-color:yellow'>Description from Ch.7: OBR.45 is the same as that from Ch.4: OBR.45 and has been eliminated.</h4><br/><h4>          ---------- 4th Description: Ch. 17 IIM.15 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the procedure code modifier to the procedure code reported in <a href="REFERENCE_ATTRIBUTEBROKENIIM-14 Procedure Code">IIM-14 Procedure Code</a>, when applicable.  Procedure code modifiers are defined by USA regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  Refer to <a href="HL70340">Externally defined Table 0340 - Procedure Code Modifier</a> in Chapter 2C, Code Tables, for suggested values.  </p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><br/><h4>          ---------- 5th Description: Ch. 17 ITM.28 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the procedure code modifier to the procedure code reported in <a href="REFERENCE_ATTRIBUTEBROKENITM-27, Procedure Code">ITM-27, Procedure Code</a>, when applicable.  Procedure code modifiers are defined by USA regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  Refer to <a href="HL70340">Externally-defined Table 0340 - Procedure Code Modifier</a> in Chapter 2C, Code Tables, for suggested values.  </p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENOBR-44-procedure code&quot;&gt;OBR-44-p</strong>rocedure <strong>c</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. <strong>In the USA, t</strong>his is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. <strong> </strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-<strong> </strong>defined <strong>t</strong>able 0340 <strong>&amp;ndash;</strong> Procedure <strong>c</strong>ode <strong>m</strong>odifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; p</strong>rocedure <strong>c</strong>ode&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.<strong> </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v<strong>ersion</strong> 2.6, applicable external coding systems include those in the <strong>referenced </strong>table<strong>. </strong>If the code set <strong>used</strong> is in th<strong>e referenced</strong> table, then <strong>the coding scheme </strong>designation<strong> in the </strong>table<strong> shall be used.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 - P</strong>rocedure <strong>C</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. <strong>T</strong>his is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined <strong>T</strong>able 0340 <strong>-</strong> Procedure <strong>C</strong>ode <strong>M</strong>odifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 - P</strong>rocedure <strong>C</strong>ode&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v 2.6, <strong>the known </strong>applicable external coding systems include those in the table<strong> below.  </strong>If the code set <strong>you are using</strong> is in th<strong>is</strong> table, then <strong>you must use that </strong>designation<strong>.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Procedure Code Modifier Coding Systems (From HL7 Table 0396) &lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;colgroup&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 12.92%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 25.44%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 61.62%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/colgroup&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Code&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment / Source&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPTM&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPT Modifier Code&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HPC&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CMS (formerly HCFA )Procedure Codes (HCPCS)&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I10P&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10  Procedure Codes&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Procedure Coding System (ICD-10-PCS.)  See &lt;a href=&quot;&quot;&gt;http://www/hcfa.gov/stats/icd10.icd10.htm&lt;/a&gt; for more information.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I9C&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-9CM &lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10AM&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Australian modification&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;border-bottom-width:px; width:12.92%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10CA&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;border-bottom-width:px; width:25.44%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_other</strong>table<strong>body&quot;&gt;ICD-10 Canada&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;border-bottom-width:px; width:61.62%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;/table&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44-procedure code&quot;&gt;OBR-44-procedure code&lt;/a&gt;</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>CMS</strong> and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. In the USA, this is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally- defined table 0340 &amp;ndash; Procedure code modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; procedure code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise. &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of version 2.6, applicable external coding systems include those in the referenced table. If the code set used is in the referenced table, then the coding scheme designation in the table shall be used</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>field 3</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>&lt;span class=&quot;v2-normal-indented-char&quot;&gt;CMS&lt;/span&gt;</strong> and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 1 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKEN<strong>OBR-44-p</strong>rocedure <strong>c</strong>ode&quot;&gt;<strong>OBR-44-p</strong>rocedure <strong>c</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. In the USA, this is a requirement of the UB and the 1500 claim forms. Multiple m</strong>odifier<strong>s are allowed and the order placed on the</strong> for<strong>m affects reimbursement.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally- defined table 0340 &amp;ndash; Procedure code modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; procedure code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise. </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v<strong>ersion </strong>2.6, applicable external coding systems include those in the <strong>referenced </strong>table. If the code set <strong>used</strong> is in th<strong>e referenced</strong> table, then <strong>the coding scheme </strong>designation<strong> in the table shall be used</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKEN<strong>IIM-14 P</strong>rocedure <strong>C</strong>ode&quot;&gt;<strong>IIM-14 P</strong>rocedure <strong>C</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally defined Table 0340 - Procedure Code M</strong>odifier<strong>&lt;/a&gt; in Chapter 2C, Code Tables,</strong> for<strong> suggested values.  </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, <strong>the known </strong>applicable external coding systems include those in the table<strong> below</strong>. If the code set <strong>you are using</strong> is in th<strong>is</strong> table, then <strong>you must use that </strong>designation.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKEN<strong>OBR-44-p</strong>rocedure <strong>c</strong>ode&quot;&gt;<strong>OBR-44-p</strong>rocedure <strong>c</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. In the USA, this is a requirement of the UB and the 1500 claim forms. Multiple m</strong>odifier<strong>s are allowed and the order placed on the form affects reimbursement.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally- defined table 0340 &amp;ndash; Procedure code modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; procedure code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise. &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of version 2.6, applicable external coding systems include those in the referenced table. If the code set used is in the referenced table, then the coding scheme designation in the table shall be used.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKEN<strong>ITM-27, P</strong>rocedure <strong>C</strong>ode&quot;&gt;<strong>ITM-27, P</strong>rocedure <strong>C</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code M</strong>odifier<strong>&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.  </strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>&lt;a href=&quot;FT1_25&quot;&gt;FT1-25 - Procedure Code&lt;/a&gt;</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>CMS</strong> and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. This is a requirement of the UB and the 1500 claim</strong> for<strong>ms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested v</strong>alues.&lt;/p&gt;<strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;FT1_25&quot;&gt;FT1-25 - Procedure Code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v 2.6, the known applicable external coding systems include those in the table below.  If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Procedure Code Modifier Coding Systems (From HL7 Table 0396) &lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 12.92%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 25.44%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 61.62%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment / Source&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPTM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPT Modifier Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HPC&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CMS (formerly HCFA )Procedure Codes (HCPCS)&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I10P&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10  Procedure Codes&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Procedure Coding System (ICD-10-PCS.)  See &lt;a href=&quot;&quot;&gt;http://www/hcfa.gov/stats/icd10.icd10.htm&lt;/a&gt; for more information.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I9C&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-9CM &lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10AM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Australian modification&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10CA&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Canada&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>field 3</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>&lt;span class=&quot;v2-normal-indented-char&quot;&gt;CMS&lt;/span&gt;</strong> and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables,</strong> for<strong> suggested v</strong>alues.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 - P</strong>rocedure <strong>C</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. <strong>T</strong>his is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined <strong>T</strong>able 0340 <strong>-</strong> Procedure <strong>C</strong>ode <strong>M</strong>odifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 - P</strong>rocedure <strong>C</strong>ode&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v 2.6, <strong>the known </strong>applicable external coding systems include those in the table<strong> below.  </strong>If the code set <strong>you are using</strong> is in th<strong>is</strong> table, then <strong>you must use that</strong> designation<strong>.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Procedure Code Modifier Coding Systems (From HL7 Table 0396) &lt;/p&gt;&lt;</strong>table <strong>class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 12.92%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 25.44%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 61.62%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment / Source&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPTM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPT Modifier Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HPC&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CMS (formerly HCFA )Procedure Codes (HCPCS)&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I10P&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10  Procedure Codes&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Procedure Coding System (ICD-10-PCS.)  See &lt;a href=&quot;&quot;&gt;http://www/hcfa.gov/stats/icd10.icd10.htm&lt;/a&gt; for more information.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I9C&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-9CM &lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10AM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Australian modification&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10CA&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Canada&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENOBR-44-procedure code&quot;&gt;OBR-44-p</strong>rocedure <strong>c</strong>ode&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry. <strong>In the USA, t</strong>his is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement. <strong> </strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-<strong> </strong>defined <strong>t</strong>able 0340 <strong>&amp;ndash;</strong> Procedure <strong>c</strong>ode <strong>m</strong>odifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; p</strong>rocedure <strong>c</strong>ode&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.<strong> </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v<strong>ersion</strong> 2.6, applicable external coding systems include those in the <strong>referenced </strong>table<strong>. </strong>If the code set <strong>used</strong> is in th<strong>e referenced</strong> table, then <strong>the coding scheme</strong> designation<strong> in the </strong>table <strong>shall be used.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 -</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. This is a requirement of the UB and the 1500 claim forms. Multiple m</strong>odifier<strong>s are allowed and the order placed on the</strong> for<strong>m affects reimbursement. Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for sugg</strong>ested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;<strong>Usage Rule: This field can only be used if &lt;a href=&quot;FT1_25&quot;&gt;FT1-25 - Procedure Code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS</strong> code<strong>s that require a modifier to be precise.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v 2.6, the known applic</strong>able<strong> external coding systems include those in the table below.  If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Procedure Code Modifier Coding Systems (From HL7 Table 0396) &lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 12.92%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 25.44%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 61.62%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment / Source&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPTM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPT Modifier Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HPC&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CMS (formerly HCFA )Procedure Codes (HCPCS)&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I10P&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10  Procedure Codes&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Procedure Coding System (ICD-10-PCS.)  See &lt;a href=&quot;&quot;&gt;http://www/hcfa.gov/stats/icd10.icd10.htm&lt;/a&gt; for more information.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I9C&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-9CM &lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10AM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Australian modification&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10CA&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Canada&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENIIM-14 Procedure Code&quot;&gt;IIM-14</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally defined Table 0340 - Procedure Code M</strong>odifier<strong>&lt;/a&gt; in Chapter 2C, Code Tables,</strong> for<strong> sugg</strong>ested values.<strong>  </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;<strong>As of v2.6, the known applicable external coding systems include those in the table below. If the</strong> code<strong> set you are using is in this t</strong>able<strong>, then you must use that designation.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>FT1_25&quot;&gt;FT1-25 -</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. This is a requirement of the UB and the 1500 claim forms. Multiple m</strong>odifier<strong>s are allowed and the order placed on the</strong> for<strong>m affects reimbursement. Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggest</strong>ed values.<strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;FT1_25&quot;&gt;FT1-25 - Procedure Code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v 2.6, the known applicable external coding systems include those in the table below.  If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Procedure Code Modifier Coding Systems (From HL7 Table 0396) &lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 12.92%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 25.44%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 61.62%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;border-top-width:px; border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment / Source&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPTM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CPT Modifier Code&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Available for the AMA at the address listed for CPT above. These codes are found in Appendix A of CPT 2000 Standard Edition. (CPT 2000 Standard Edition, American Medical Association, Chicago, IL).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HPC&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;CMS (formerly HCFA )Procedure Codes (HCPCS)&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Health Care Financing Administration (HCFA) Common Procedure Coding System (HCPCS) including modifiers.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I10P&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10  Procedure Codes&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Procedure Coding System (ICD-10-PCS.)  See &lt;a href=&quot;&quot;&gt;http://www/hcfa.gov/stats/icd10.icd10.htm&lt;/a&gt; for more information.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;I9C&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-9CM &lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;Commission on Professional and Hospital Activities, 1968 Green Road, Ann Arbor, MI 48105 (includes all procedures and diagnostic tests).&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10AM&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Australian modification&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:12.92%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD10CA&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:25.44%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ICD-10 Canada&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;border-bottom-width:px; width:61.62%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;<strong>REFERENCE_ATTRIBUTEBROKENITM-27, Procedure Code&quot;&gt;ITM-27,</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code M</strong>odifier<strong>&lt;/a&gt; in Chapter 2C, Code Tables,</strong> for<strong> suggest</strong>ed values.<strong>  </strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>field 3</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>&lt;span class=&quot;v2-normal-indented-char&quot;&gt;CMS&lt;/span&gt;</strong> and the AMA.  Multiple modifiers may be reported.  <strong>Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values</strong>.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44-procedure code&quot;&gt;OBR-44-procedure code&lt;/a&gt;</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>CMS</strong> and the AMA.  Multiple modifiers may be reported.  <strong>The modifiers are sequenced in priority according to user entry. In the USA, this is a requirement of the UB and the 1500 claim forms. Multiple modifiers are allowed and the order placed on the form affects reimbursement.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally- defined table 0340 &amp;ndash; Procedure code modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Usage Rule: This field can only be used if &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENOBR-44 &amp;ndash; procedure code&quot;&gt;OBR-44 &amp;ndash; procedure code&lt;/a&gt; contains certain procedure codes that require a modifier in order to be billed or performed.  For example, HCPCS codes that require a modifier to be precise. &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of version 2.6, applicable external coding systems include those in the referenced table. If the code set used is in the referenced table, then the coding scheme designation in the table shall be used</strong>.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>field 3</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>&lt;span class=&quot;v2-normal-indented-char&quot;&gt;CMS&lt;/span&gt;</strong> and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally<strong>-</strong>defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENIIM-14 Procedure Code&quot;&gt;IIM-14 Procedure Code&lt;/a&gt;</strong>, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as <strong>CMS</strong> and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally<strong> </strong>defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.<strong>  &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>field 3</strong>, when applicable.  Procedure code modifiers are defined by regulatory agencies such as <strong>&lt;span class=&quot;v2-normal-indented-char&quot;&gt;CMS&lt;/span&gt;</strong> and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENITM-27, Procedure Code&quot;&gt;ITM-27, Procedure Code&lt;/a&gt;</strong>, when applicable.  Procedure code modifiers are defined by <strong>USA </strong>regulatory agencies such as <strong>CMS</strong> and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally-defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.<strong>  </strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 5 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 4 and 6 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENI<strong>IM-14</strong> Procedure Code&quot;&gt;I<strong>IM-14</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by USA regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally<strong> </strong>defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.  &lt;/p&gt;<strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;</strong></del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the procedure code modifier to the procedure code reported in &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENI<strong>TM-27,</strong> Procedure Code&quot;&gt;I<strong>TM-27,</strong> Procedure Code&lt;/a&gt;, when applicable.  Procedure code modifiers are defined by USA regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  Refer to &lt;a href=&quot;HL70340&quot;&gt;Externally<strong>-</strong>defined Table 0340 - Procedure Code Modifier&lt;/a&gt; in Chapter 2C, Code Tables, for suggested values.  &lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 5 and 6 ----------</h4><div class="diff"></div>
+</body>
+</html>

@@ -1,0 +1,5300 @@
+{
+  "0001": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "X": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0003": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "X01",
+            "display": "PEX - Product experience",
+            "status": "A"
+          },
+          {
+            "code": "varies",
+            "display": "MFQ/MFR - Master files query (use event same as asking for e.g., M05 - location)",
+            "status": "D"
+          },
+          {
+            "code": "R0R",
+            "display": "R0R - Pharmacy prescription order query response",
+            "status": "D"
+          },
+          {
+            "code": "R05",
+            "display": "QRY/DSR - query for display results (See Q01)",
+            "status": "A"
+          },
+          {
+            "code": "R06",
+            "display": "UDM - unsolicited update/display results (See Q05)",
+            "status": "A"
+          },
+          {
+            "code": "RAR",
+            "display": "RAR - Pharmacy administration information query response",
+            "status": "A"
+          },
+          {
+            "code": "RDR",
+            "display": "RDR - Pharmacy dispense information query response",
+            "status": "A"
+          },
+          {
+            "code": "Q04",
+            "display": "EQQ - Embedded query language query",
+            "status": "A"
+          },
+          {
+            "code": "RER",
+            "display": "RER - Pharmacy encoded order information query response",
+            "status": "A"
+          },
+          {
+            "code": "RGR",
+            "display": "RGR - Pharmacy dose information query response",
+            "status": "A"
+          },
+          {
+            "code": "Q07",
+            "display": "VQQ - Virtual table query",
+            "status": "A"
+          },
+          {
+            "code": "Q08",
+            "display": "SPQ - Stored procedure request",
+            "status": "A"
+          },
+          {
+            "code": "Q09",
+            "display": "RQQ - event replay query",
+            "status": "A"
+          },
+          {
+            "code": "R03",
+            "display": "QRY/DSR Display-oriented results, query/unsol. update (for backward compatibility only) (Replaced by Q05)",
+            "status": "A"
+          },
+          {
+            "code": "R07",
+            "display": "EDR - Enhanced Display Response",
+            "status": "A"
+          },
+          {
+            "code": "R08",
+            "display": "TBR - Tabular Data Response",
+            "status": "A"
+          },
+          {
+            "code": "R09",
+            "display": "ERP - Event Replay Response",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "O51": {
+            "status": "THO: N; v2: "
+          },
+          "O52": {
+            "status": "THO: N; v2: "
+          },
+          "O53": {
+            "status": "THO: N; v2: "
+          },
+          "O54": {
+            "status": "THO: N; v2: "
+          },
+          "O55": {
+            "status": "THO: N; v2: "
+          },
+          "O56": {
+            "status": "THO: N; v2: "
+          },
+          "O58": {
+            "status": "THO: N; v2: "
+          },
+          "O59": {
+            "status": "THO: N; v2: "
+          },
+          "R42": {
+            "status": "THO: N; v2: "
+          },
+          "R43": {
+            "status": "THO: N; v2: "
+          },
+          "S38": {
+            "status": "THO: N; v2: "
+          },
+          "S39": {
+            "status": "THO: N; v2: "
+          },
+          "S40": {
+            "status": "THO: N; v2: "
+          },
+          "S41": {
+            "status": "THO: N; v2: "
+          },
+          "S42": {
+            "status": "THO: N; v2: "
+          },
+          "S43": {
+            "status": "THO: N; v2: "
+          },
+          "S44": {
+            "status": "THO: N; v2: "
+          },
+          "S45": {
+            "status": "THO: N; v2: "
+          },
+          "S46": {
+            "status": "THO: N; v2: "
+          },
+          "S47": {
+            "status": "THO: N; v2: "
+          },
+          "S48": {
+            "status": "THO: N; v2: "
+          },
+          "S49": {
+            "status": "THO: N; v2: "
+          },
+          "S50": {
+            "status": "THO: N; v2: "
+          },
+          "S51": {
+            "status": "THO: N; v2: "
+          },
+          "S52": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0005": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but THO includes CodeSystem resource",
+      "Ch2c table is 'concept domain only' but THO includes ValueSet resource"
+    ],
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.6.238 != ",
+      "v2-cs-uri::cs_info-utg_url": "urn:oid:2.16.840.1.113883.6.238 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.114222.4.11.6065 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0005 != ",
+      "v2-cld::vs_version_info-cld": "enumerated per table content != ",
+      "v2-binding::binding_info-realm": "Us Realm != ",
+      "vs.title::vs_info-symbolic_name": "PHVS_Race_HL7_2x != ",
+      "vs.description::vs_info-description": "This race value set is based upon CDC check-digit codes, but using the HL7 table 0005. HL7 adopted the CDC Race and Ethnicity codes in HL7 Table 0005 in 2005. This value set has been created for backward compatibility and some historic Implementation guides (E.g. Immunization). Recommend using Race Category value set based upon CDC Race & Ethnicity code system. != "
+    }
+  },
+  "0006": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "A",
+            "display": "Atheist",
+            "status": "A"
+          },
+          {
+            "code": "B",
+            "display": "Baptist",
+            "status": "A"
+          },
+          {
+            "code": "C",
+            "display": "Catholic",
+            "status": "A"
+          },
+          {
+            "code": "E",
+            "display": "Episcopalian",
+            "status": "A"
+          },
+          {
+            "code": "J",
+            "display": "Judaism",
+            "status": "A"
+          },
+          {
+            "code": "L",
+            "display": "Lutheran",
+            "status": "A"
+          },
+          {
+            "code": "M",
+            "display": "Church of Latter Day Saints (Mormon)",
+            "status": "A"
+          },
+          {
+            "code": "N",
+            "display": "Hindu",
+            "status": "A"
+          },
+          {
+            "code": "P",
+            "display": "Protestant",
+            "status": "A"
+          },
+          {
+            "code": "QUA",
+            "display": "Christian: Friends",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0010": {
+    "errors": [
+      "Ch2c does not include Concept Domain Information table.  Therefore, it does not indicate whether it is concept domain only or not.",
+      "There is no concept domain entry in THO for 0010"
+    ]
+  },
+  "0027": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0055": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0062": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0064": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0065": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "C",
+            "display": "Cancel order for battery or tests named",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0066": {
+    "diff": {
+      "concept_domain.code::concept_domain_info-symbolic_name": "EmploymentStatusV2 != EmploymentStatus",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "F",
+            "display": "Full Time",
+            "status": "A"
+          },
+          {
+            "code": "...",
+            "display": "see chapter 6",
+            "status": "D"
+          },
+          {
+            "code": "P",
+            "display": "Part Time",
+            "status": "A"
+          },
+          {
+            "code": "D",
+            "display": "Per Diem",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0074": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "IMG",
+            "display": "Diagnostic Imaging",
+            "status": "A"
+          },
+          {
+            "code": "PAR",
+            "display": "Parasitology",
+            "status": "A"
+          },
+          {
+            "code": "PAT",
+            "display": "Pathology (gross & histopath, not surgical)",
+            "status": "A"
+          },
+          {
+            "code": "URN",
+            "display": "Urinalysis",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0076": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "ARD",
+            "display": "Ancillary RPT (display) (for backward compatibility only)",
+            "status": "A"
+          },
+          {
+            "code": "CNQ",
+            "display": "Cancel query",
+            "status": "A"
+          },
+          {
+            "code": "ERQ",
+            "display": "Event replay query",
+            "status": "A"
+          },
+          {
+            "code": "EDR",
+            "display": "Enhanced display response",
+            "status": "A"
+          },
+          {
+            "code": "EQQ",
+            "display": "Embedded query language query",
+            "status": "A"
+          },
+          {
+            "code": "ERP",
+            "display": "Event replay response",
+            "status": "A"
+          },
+          {
+            "code": "MCF",
+            "display": "Delayed Acknowledgment (Retained for backward compatibility only)",
+            "status": "A"
+          },
+          {
+            "code": "ROC",
+            "display": "Request clinical information",
+            "status": "A"
+          },
+          {
+            "code": "ROD",
+            "display": "Request pateint demographics",
+            "status": "A"
+          },
+          {
+            "code": "RQQ",
+            "display": "Event replay query",
+            "status": "A"
+          },
+          {
+            "code": "SPQ",
+            "display": "Stored procedure request",
+            "status": "A"
+          },
+          {
+            "code": "VQQ",
+            "display": "Virtual table query",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "SET": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0078": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation, which has concepts that could be included in Ch2c."
+    ],
+    "diff": {
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation != ",
+      "cs.title::cs_id_info-symbolic_name": "ObservationInterpretation != observationInterpretation",
+      "cs.description::cs_id_info-description": "One or more codes providing a rough qualitative interpretation of the observation, such as \"normal\" / \"abnormal\", \"low\" / \"high\", \"better\" / \"worse\", \"resistant\" / \"susceptible\", \"expected\" / \"not expected\". The value set is intended to be for ANY use where coded representation of an interpretation is needed. != HL7-defined code system of concepts which specify a categorical assessment of an observation value. Used in HL7 Version 2.x messaging in the OBX segment. Notes: This is being communicated in v2.x in OBX-8, in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR Observation.interpretation.",
+      "cs.version::cs_id_info-version": "2.1.0 != 2.4.0"
+    }
+  },
+  "0093": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but v2.9.1 includes codes anyway",
+      "V2.9.1 indicates concept domain only but includes codes"
+    ]
+  },
+  "0104": {
+    "diff": {
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "2.9.1",
+            "display_name": "Draft 2.9.1",
+            "definition": "Draft 2.9.1",
+            "comment": "Sept. 2022",
+            "status": ""
+          }
+        ],
+        "tho_cs_only": [
+          {
+            "code": "2.3.2",
+            "display": "Release 2.3.2",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "2.9": {
+            "display": "THO: Draft 2.9; v2: Release 2.9",
+            "definition": "THO: Draft 2.9; v2: Release 2.9",
+            "status": "THO: N; v2: ",
+            "comment": "THO: Sep. 2017; v2: Sept. 2019"
+          }
+        }
+      }
+    }
+  },
+  "0112": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.438 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0112 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.459 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0112 != ",
+      "v2-cld::vs_version_info-cld": "all codes != "
+    }
+  },
+  "0113": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0114": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0115": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0116": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0118": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0119": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "CH": {
+            "comment": "THO: Placer or Filler Applications.; v2: Placer or Filler Applications. Usage Note: Used in conjunction with the PA - Parent order control code. Refer to PA order control code for discussion."
+          },
+          "CR": {
+            "comment": "THO: Filler or Placer Applications.; v2: Filler or Placer Applications. Usage Note: A response by the filler or placer application that a request to cancel (CA by the placer application) was performed successfully."
+          },
+          "DR": {
+            "comment": "THO: Filler or Placer Applications.; v2: Filler or Placer Applications. Usage Note: The filler or placer, in response to a request to discontinue (DC from the placer or filler application), has discontinued the order/service."
+          },
+          "FU": {
+            "comment": "THO: Filler Applications.; v2: Filler Applications. Usage Note: FU notifies the placer that the filler issued a refill for the order at the patient's request."
+          },
+          "HD": {
+            "comment": "THO: Placer Applications.; v2: Placer Applications. Usage Note: Typical responses include, but are not limited to, CR - Cancelled as requested, UC - Unable to Cancel."
+          },
+          "LI": {
+            "comment": "THO: Placer or Filler Applications.; v2: Placer or Filler Applications. Usage Note: Refer to Chapter 12 Patient Care for complete discussion."
+          },
+          "MC": {
+            "comment": "THO: applies to DFT^P03^DFT_P03 and DFT^P11^DFT_P11; v2: applies to DFT^P03^DFT_P03 and DFT^P11^DFT_P11 Usage Note: applies to DFT^P03^DFT_P03 and DFT^P11^DFT_P11"
+          },
+          "NW": {
+            "comment": "THO: Placer Applications.; v2: Placer Applications. Usage Note: See comments for NA - Number Assigned."
+          },
+          "OF": {
+            "comment": "THO: Filler Applications.; v2: Filler Applications. Usage Note: OF directly responds to the placer system's request for a refill."
+          },
+          "OK": {
+            "comment": "THO: Filler Applications.; v2: Filler Applications. Usage Note: See comments for NA - Number Assigned."
+          },
+          "PY": {
+            "comment": "THO: Placer Applications.; v2: Placer Applications. Usage Note: See comments for OP - Notification of order for outside dispense."
+          },
+          "RA": {
+            "status": "THO: N; v2: "
+          },
+          "RC": {
+            "status": "THO: N; v2: "
+          },
+          "RD": {
+            "status": "THO: N; v2: "
+          },
+          "SN": {
+            "comment": "THO: Placer Applications.; v2: Placer Applications. Usage Note: See comments for NA - Number Assigned."
+          },
+          "SQ": {
+            "status": "THO: N; v2: "
+          },
+          "SU": {
+            "status": "THO: N; v2: "
+          },
+          "UF": {
+            "comment": "THO: Filler Applications.; v2: Filler Applications. Usage Note: Negative response to RF Refill order/service request, indicating that the receiving application was not able to complete the refill request."
+          },
+          "UN": {
+            "comment": "THO: Placer or Filler Applications.; v2: Placer or Filler Applications. Usage Note: Refer to Chapter 12 Patient Care for complete discussion."
+          }
+        }
+      }
+    }
+  },
+  "0123": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "Y": {
+            "comment": "THO: ; v2: Usage Note: Used only on queries"
+          },
+          "Z": {
+            "comment": "THO: ; v2: Usage Note: Used only on queries"
+          },
+          "N": {
+            "comment": "THO: ; v2: Usage Note: Transitions/Relationships: OBR-25 Valid preceding state (... to N): O, I, S. Succeeding state (N to ...): P, A, R, F, X OBX-11 No OBX segments can be present where OBX-29 = RSLT"
+          }
+        }
+      }
+    }
+  },
+  "0125": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "AD",
+            "display": "Address",
+            "status": "A"
+          },
+          {
+            "code": "CE",
+            "display": "Coded element",
+            "status": "A"
+          },
+          {
+            "code": "CK",
+            "display": "Composite ID with check digit",
+            "status": "A"
+          },
+          {
+            "code": "CM",
+            "display": "Composite",
+            "status": "A"
+          },
+          {
+            "code": "CN",
+            "display": "Composite ID number and name",
+            "status": "A"
+          },
+          {
+            "code": "CNS",
+            "display": "Composite ID number and name simplified",
+            "status": "A"
+          },
+          {
+            "code": "CQ",
+            "display": "Composite quantity with units",
+            "status": "A"
+          },
+          {
+            "code": "ELD",
+            "display": "Error location and description",
+            "status": "A"
+          },
+          {
+            "code": "FN",
+            "display": "Family name",
+            "status": "A"
+          },
+          {
+            "code": "ID",
+            "display": "Coded values for HL7 tables",
+            "status": "A"
+          },
+          {
+            "code": "OSD",
+            "display": "Order sequence definition",
+            "status": "A"
+          },
+          {
+            "code": "PN",
+            "display": "Person name",
+            "status": "A"
+          },
+          {
+            "code": "SAD",
+            "display": "Street Address",
+            "status": "A"
+          },
+          {
+            "code": "SI",
+            "display": "Sequence ID",
+            "status": "A"
+          },
+          {
+            "code": "SPS",
+            "display": "Specimen source",
+            "status": "A"
+          },
+          {
+            "code": "TN",
+            "display": "Telephone number",
+            "status": "A"
+          },
+          {
+            "code": "TQ",
+            "display": "Timing/quantity",
+            "status": "A"
+          },
+          {
+            "code": "TS",
+            "display": "Time stamp",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "AUI": {
+            "comment": "THO: Replaces the CM data type used in sections 6.5.6.14 IN1-14, as of v 2.5.; v2: "
+          },
+          "CCD": {
+            "comment": "THO: Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v 2.5.; v2: "
+          },
+          "CCP": {
+            "comment": "THO: Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5Observation value (*) is data type CD as of v 2.5.; v2: "
+          },
+          "CD": {
+            "comment": "THO: For waveform data only;.; v2: "
+          },
+          "CNN": {
+            "comment": "THO: Restores the original data type CN as was initially implementable in the CM used in sections 4.5.3.32 and 7.4.1.32-(OBR-32), 4.5.3.33 and 7.4.1.33 - (OBR-33) 4.5.3.34 and 7.4.1.34 - (OBR-34) 4.5.3.35 and 7.4.1.35 - (OBR-35). Components 7 and 8, however, have been promoted to data type IS to be consistent with current practice without violating backward compatibility.; v2: "
+          },
+          "CP": {
+            "comment": "THO: .; v2: "
+          },
+          "CSU": {
+            "comment": "THO: Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5Observation value (*) is data type CD as of v 2.5.; v2: "
+          },
+          "DDI": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.7.30 IN2-30, as of v 2.5.; v2: "
+          },
+          "DIN": {
+            "comment": "THO: Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5.; v2: "
+          },
+          "DLD": {
+            "comment": "THO: Replaces the CM data type used in section 8.8.4.9 - OM2-9, as of v 2.5; v2: "
+          },
+          "DTN": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.8.11 IN3-11, as of v 2.5.; v2: "
+          },
+          "ED": {
+            "comment": "THO: Supports ASCII MIME-encoding of binary data.; v2: "
+          },
+          "EIP": {
+            "comment": "THO: Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 - OBR-29, 7.3.1.29 - OBR-29, as of v 2.5.; v2: "
+          },
+          "ICD": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.8.20 IN3-20, as of v 2.5.; v2: "
+          },
+          "IS": {
+            "status": "THO: A; v2: B",
+            "comment": "THO: ; v2: This code has been marked for backwards compatibility use only as of V2.9."
+          },
+          "LA1": {
+            "status": "THO: B; v2: D",
+            "comment": "THO: Datatype has been withdrawn from the Standard; the segments RXO-8 and RXE-8 were deprecated, and kept for backward compatibility only as of v2.5, and as of v2.9 they have been witdrawn so the code for the datapyt is here marked as backwars-compatible use (for historical records only); v2: Datatype has been Withdrawn from the Standard."
+          },
+          "LA2": {
+            "status": "THO: B; v2: D",
+            "comment": "THO: Datatype has been withdrawn from the Standard; the segments RXD-13, RXG-11 and RXA-11 were deprecated, and kept for backward compatibility only as of v2.5, and as of v2.9 they have been withdrawn so the code for the datatype is here marked as backwards-compatible use (for historical records only); v2: Datatype has been Withdrawn from the Standard."
+          },
+          "MA": {
+            "comment": "THO: For waveform data only; v2: "
+          },
+          "MOC": {
+            "comment": "THO: Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5.; v2: "
+          },
+          "MOP": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.8.5 IN3-5, as of v 2.5. This data type is restricted to this field.; v2: "
+          },
+          "MSG": {
+            "comment": "THO: Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5.; v2: "
+          },
+          "NA": {
+            "comment": "THO: For waveform data only; v2: "
+          },
+          "NDL": {
+            "comment": "THO: Replaces the CM data type used in sections 4.5.3.32 and 7.4.1.32-( OBR-32) , 4.5.3.33 and 7.4.1.33 - ( OBR-33) 4.5.3.34 and 7.4.1.34 - ( OBR-34) 4.5.3.35 and 7.4.1.35 - ( OBR-35) as of v 2.5.; v2: "
+          },
+          "NR": {
+            "comment": "THO: Replaces the CM data type used in sections 8.8.4.6.1- OM2-6.1, 8.8.4.6.3- OM2-6.3and 8.8.4.6.4- OM2-6.4, as of v 2.5.; v2: "
+          },
+          "OCD": {
+            "comment": "THO: Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.; v2: "
+          },
+          "OSP": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.11.8 UB2-8, as of v 2.5.; v2: "
+          },
+          "PIP": {
+            "comment": "THO: Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5.; v2: "
+          },
+          "PLN": {
+            "comment": "THO: Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5.; v2: "
+          },
+          "PPN": {
+            "comment": "THO: equivalent of an XCN joined with a TS; v2: "
+          },
+          "PRL": {
+            "comment": "THO: Replaces the CM data type used in sections 4.5.3.26 - OBR-26 and 7.4.1.26 - OBR-26 as of v 2.5.; v2: "
+          },
+          "PTA": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.7.29 IN2-29, as of v 2.5.; v2: "
+          },
+          "RFR": {
+            "comment": "THO: Replaces the CM data type used in sections 8.8.4.6 - OM2-6, 8.8.4.7 - OM2-7 and8.8.4.8 - OM2-8 as of v 2.5.; v2: "
+          },
+          "RMC": {
+            "comment": "THO: Replaces the CM data type used in section 6.5.7.28 IN2-28, as of v 2.5.; v2: "
+          },
+          "SCV": {
+            "comment": "THO: For scheduling data only. See Chapter 10; v2: "
+          },
+          "SNM": {
+            "comment": "THO: Definition: a string whose characters are limited to \"+\" and the decimal digits 0 through 9. As a string, leading zeros are always considered significant. Maximum length: Not specified for the type. May be specified in the context of use.; v2: "
+          },
+          "SPD": {
+            "comment": "THO: Replaces the CM data type used in 15.4.5.5 PRA-5 as of v 2.5.; v2: "
+          },
+          "UVC": {
+            "comment": "THO: Replaces the CM data type used in sections 6.5.10.10 UB1-10 and 6.5.11.6 UB2-6, as of v 2.5.; v2: "
+          },
+          "VR": {
+            "comment": "THO: Replaces the CM data type used in 5.10.5.3.11 QRD-11 as of v 2.5.; v2: "
+          },
+          "WVI": {
+            "comment": "THO: Replaces the CM data type used in 7.14.1.3.1 OBX-5.1 where OBX-5 Observation value (*) is data type CD as of v 2.5.; v2: "
+          },
+          "WVS": {
+            "comment": "THO: Replaces the CM data type used in 7.14.1.4 OBX-5.2 where OBX-5 Observation value (*) is data type CD as of v 2.5.; v2: "
+          },
+          "XAD": {
+            "comment": "THO: Replaces AD as of v 2.3; v2: "
+          },
+          "XCN": {
+            "comment": "THO: Replaces CN as of v 2.3; v2: "
+          },
+          "XPN": {
+            "comment": "THO: Replaces PN as of v 2.3.; v2: "
+          },
+          "XTN": {
+            "comment": "THO: Replaces TN as of v 2.3; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0129": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA",
+      "v2-where-used::metadata-where_used": "PV2-2, LCC-3 != LCC-3, PV2-2"
+    }
+  },
+  "0131": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "BP",
+            "display": "Billing contact person",
+            "status": "A"
+          },
+          {
+            "code": "CP",
+            "display": "Contact person",
+            "status": "A"
+          },
+          {
+            "code": "EP",
+            "display": "Emergency contact person",
+            "status": "A"
+          },
+          {
+            "code": "PR",
+            "display": "Person preparing referral",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0133": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but THO includes CodeSystem resource",
+      "Ch2c table is 'concept domain only' but THO includes ValueSet resource",
+      "There is no concept domain entry in THO for 0133"
+    ],
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.59 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0133 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.70 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0133 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "v2-table-type::metadata-type": "User != undefined",
+      "v2-binding::binding_info-realm": "Example != ",
+      "v2-version-tbl-introduced::metadata-version_introduced": "2.2 != ",
+      "vocab-domain::concept_domain_info-symbolic_name": " != ProcedurePractitionerIdentifierCodeType",
+      "vs.title::vs_info-symbolic_name": "hl7VS-procedurePractitionerType != ",
+      "vs.description::vs_info-description": "Value Set of codes of concepts which specify the different types of practitioners associated with this procedure. This set of codes is known to be incomplete. != "
+    }
+  },
+  "0136": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "Y": {
+            "definition": "THO(from CS): ; v2: Yes"
+          },
+          "N": {
+            "definition": "THO(from CS): ; v2: No"
+          }
+        }
+      }
+    }
+  },
+  "0141": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.63 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0141 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.75 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0141 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "v2-binding::binding_info-realm": "Example != "
+    }
+  },
+  "0145": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0146": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0147": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0148": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0149": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0150": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0153": {
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0163": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "LNB",
+            "display": "Nebulized",
+            "status": "D"
+          },
+          {
+            "code": "LV",
+            "display": "Left Vastus Lateralis",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0170": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0174": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO",
+      "concepts": {
+        "diff": {
+          "P": {
+            "comment": "THO: can be associated with one or more OM4 (specimen) segments<p>See comment for value S; v2: can be associated with one or more OM4 (specimen) segments See comment for value S"
+          },
+          "F": {
+            "comment": "THO: can be associated with one or more OM4 (specimen) segments<p>See comment for value S; v2: can be associated with one or more OM4 (specimen) segments See comment for value S"
+          },
+          "A": {
+            "comment": "THO: can be associated with one or more OM4 (specimen) segments<p>a single direct observation and would usually be associated with an OM2 and/or OM3 segments; v2: can be associated with one or more OM4 (specimen) segments a single direct observation and would usually be associated with an OM2 and/or OM3 segments"
+          },
+          "S": {
+            "display": "THO: Superset-a set of batteries or procedures ordered under a single code unit but processed as separate batteries (e.g., routines = CBC, UA, electrolytes)<p>This set indicates that the code being described is used to order multiple service/test/observation b; v2: Superset-a set of batteries or procedures ordered under a single code unit but processed as separate batteries (e.g., routines = CBC, UA, electrolytes) This set indicates that the code being described is used to order multiple service/test/observation b"
+          },
+          "C": {
+            "comment": "THO: can be associated with one or more OM4 (specimen) segments<p>a derived quantity and would usually be associated with an OM6 segment; v2: can be associated with one or more OM4 (specimen) segments a derived quantity and would usually be associated with an OM6 segment"
+          }
+        }
+      }
+    }
+  },
+  "0175": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "OM1",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "OM2",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "OM3",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "OM4",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "OM5",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "OM6",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "A"
+          },
+          {
+            "code": "CM0",
+            "display": "Clinical study master",
+            "status": "A"
+          },
+          {
+            "code": "CM1",
+            "display": "Clinical study phase master",
+            "status": "A"
+          },
+          {
+            "code": "CM2",
+            "display": "Clinical study Data Schedule Master",
+            "status": "A"
+          },
+          {
+            "code": "OM1-OM6",
+            "display": "Observation text master file segments (e.g., Lab)",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0178": {
+    "diff": {
+      "cs.description::cs_id_info-description": "HL7-defined code system of concepts specifying file-level events for master files. Used in HL7 Version 2 messaging in the MFI segment.  != HL7-defined code system of concepts specifying file-level events for master files. Used in HL7 Version 2 messaging in the MFI segment."
+    }
+  },
+  "0180": {
+    "diff": {
+      "display::metadata-symbolic_name": "Record-level Event Code != Masterfile Action Code",
+      "vocab-domain::concept_domain_info-symbolic_name": "MasterfileActionCode != Masterfile Action Code",
+      "concept_domain.code::concept_domain_info-symbolic_name": "MasterfileActionCode != Masterfile Action Code"
+    }
+  },
+  "0188": {
+    "errors": [
+      "Ch2c does not include Concept Domain Information table.  Therefore, it does not indicate whether it is concept domain only or not.",
+      "There is no concept domain entry in THO for 0188"
+    ]
+  },
+  "0191": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "Image",
+            "display": "Image data  (HL7 V2.3 and later)",
+            "status": "D"
+          },
+          {
+            "code": "Audio",
+            "display": "Audio data  (HL7 V2.3 and later)",
+            "status": "D"
+          },
+          {
+            "code": "Application",
+            "display": "Other application data, typically uninterpreted binary data  (HL7 V2.3 and later)",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0193": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0200": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "O",
+            "display": "Other",
+            "status": "A"
+          },
+          {
+            "code": "...",
+            "display": "No suggested values defined",
+            "status": "D"
+          }
+        ],
+        "diff": {
+          "B": {
+            "comment": "THO: A name that a person had shortly after being born. Usually for family names but may be used to mark given names at birth that may have changed later.<p>This is not for temporary names assigned at birth while a newborn is not yet named; v2: A name that a person had shortly after being born. Usually for family names but may be used to mark given names at birth that may have changed later. This is not for temporary names assigned at birth while a newborn is not yet named"
+          },
+          "L": {
+            "comment": "THO: The formal name as registered in an official (government) registry, but which name might not be commonly used. May correspond to legal name<p>For many people, customary name is also their official name; v2: The formal name as registered in an official (government) registry, but which name might not be commonly used. May correspond to legal name For many people, customary name is also their official name"
+          },
+          "NAV": {
+            "comment": "THO: Information is not available at this time but it is expected that it will be available later.<p>Includes John or Jane Doe situations; v2: Information is not available at this time but it is expected that it will be available later. Includes John or Jane Doe situations"
+          },
+          "R": {
+            "comment": "THO: (animals only)<p>Retained for backwards compatibility only as of v2.7. Use \"L\" instead - has same meaning; v2: (animals only) Retained for backwards compatibility only as of v2.7. Use \"L\" instead - has same meaning"
+          }
+        }
+      }
+    }
+  },
+  "0201": {
+    "diff": {
+      "cs.version::cs_id_info-version": "3.0.0 != 2.3.0",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "DSM",
+            "display": "Direct Secure Messaging",
+            "status": "N"
+          }
+        ]
+      }
+    }
+  },
+  "0202": {
+    "diff": {
+      "cs.version::cs_id_info-version": "2.3.0 != 2.4.0",
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "DSM",
+            "display_name": "Direct Secure Messaging",
+            "definition": "Direct Secure Messaging",
+            "comment": "",
+            "status": "N"
+          }
+        ]
+      }
+    }
+  },
+  "0203": {
+    "diff": {
+      "cs.version::cs_id_info-version": "2.9.0 != 2.10.0",
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "GKV",
+            "display_name": "insured's ID with public insurance",
+            "definition": "insured's ID with public insurance",
+            "comment": "Class: Insurance",
+            "status": "N"
+          },
+          {
+            "value": "KZVA",
+            "display_name": "dentist office number",
+            "definition": "dentist office number",
+            "comment": "Class: Insurance",
+            "status": "N"
+          },
+          {
+            "value": "PKV",
+            "display_name": "insured's ID with private insurance",
+            "definition": "insured's ID with private insurance",
+            "comment": "Class: Insurance",
+            "status": "N"
+          },
+          {
+            "value": "ZANR",
+            "display_name": "dentist identifier",
+            "definition": "dentist identifier",
+            "comment": "Class: Insurance",
+            "status": "N"
+          }
+        ],
+        "tho_cs_only": [
+          {
+            "code": "L&I",
+            "display": "Labor and industries number",
+            "status": "D"
+          }
+        ],
+        "diff": {
+          "AC": {
+            "status": "THO: N; v2: "
+          },
+          "AIN": {
+            "status": "THO: N; v2: "
+          },
+          "ANC": {
+            "comment": "THO: Class: Financial<p>Sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.<p>Kreditorenkontonummer; v2: Class: Financial Sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor. Kreditorenkontonummer"
+          },
+          "AND": {
+            "comment": "THO: Class: Financial<p>Sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor.<p>Debitorenkontonummer; v2: Class: Financial Sometimes two distinct account numbers must be transmitted in the same message, one as the creditor, the other as the debitor. Debitorenkontonummer"
+          },
+          "BC": {
+            "comment": "THO: Class: Financial<p>Replaces AM, DI, DS, MS, and VS beginning in v 2.5.; v2: Class: Financial Replaces AM, DI, DS, MS, and VS beginning in v 2.5."
+          },
+          "BCFN": {
+            "status": "THO: N; v2: "
+          },
+          "CAAI": {
+            "status": "THO: N; v2: "
+          },
+          "CC": {
+            "comment": "THO: Class: Financial<p>Use Case: needed especially for transmitting information about invoices.; v2: Class: Financial Use Case: needed especially for transmitting information about invoices."
+          },
+          "DSG": {
+            "status": "THO: N; v2: "
+          },
+          "FDR": {
+            "status": "THO: N; v2: "
+          },
+          "FDRFN": {
+            "status": "THO: N; v2: "
+          },
+          "FGN": {
+            "status": "THO: N; v2: "
+          },
+          "GIN": {
+            "status": "THO: N; v2: "
+          },
+          "JHN": {
+            "comment": "THO: Class: Insurance<p>2 uses: a) UK jurisdictional CHI number; b) Canadian provincial health card number:; v2: Class: Insurance 2 uses: a) UK jurisdictional CHI number; b) Canadian provincial health card number:"
+          },
+          "NII": {
+            "comment": "THO: Class: Insurance In Germany a national identifier for an insurance company. It is printed on the insurance card (health card). It is not to be confused with the health card number itself.<p>Krankenkassen-ID der KV-Karte; v2: Class: Insurance In Germany a national identifier for an insurance company. It is printed on the insurance card (health card). It is not to be confused with the health card number itself. Krankenkassen-ID der KV-Karte"
+          },
+          "NIIP": {
+            "comment": "THO: Class: Insurance In Germany the insurance identifier addressed as the payor.<p>Krankenkassen-ID des Rechnungsempfängers<p>Use case: a subdivision issues the card with their identifier, but the main division is going to pay the invoices.; v2: Class: Insurance In Germany the insurance identifier addressed as the payor. Krankenkassen-ID des Rechnungsempfängers Use case: a subdivision issues the card with their identifier, but the main division is going to pay the invoices."
+          },
+          "NNxxx": {
+            "status": "THO: A; v2: D"
+          },
+          "OBI": {
+            "status": "THO: N; v2: "
+          },
+          "PGN": {
+            "status": "THO: N; v2: "
+          },
+          "PHC": {
+            "status": "THO: N; v2: "
+          },
+          "PHE": {
+            "status": "THO: N; v2: "
+          },
+          "PHO": {
+            "status": "THO: N; v2: "
+          },
+          "PIN": {
+            "status": "THO: N; v2: "
+          },
+          "PPIN": {
+            "comment": "THO: Class: Insurance; v2: Class: Insurance Usage Note: Class: Insurance"
+          },
+          "SAMN": {
+            "status": "THO: N; v2: "
+          },
+          "SNBSN": {
+            "status": "THO: N; v2: "
+          },
+          "SRX": {
+            "status": "THO: N; v2: "
+          },
+          "STN": {
+            "status": "THO: N; v2: "
+          },
+          "TRL": {
+            "status": "THO: N; v2: "
+          },
+          "XV": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: Also referred to as HPID (Health Plan Identifier).; v2: Also referred to as HPID (Health Plan Identifier). Usage Note: The code value ‘XV’ is used in CMS mandated Health Insurance Portability and Accountability Act (HIPAA) transactions."
+          }
+        }
+      }
+    }
+  },
+  "0206": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "S": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0207": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "not present",
+            "display": "Not present (the default, meaning current  processing)",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0208": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "TM": {
+            "status": "THO: N; v2: "
+          },
+          "PD": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0210": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "OR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0211": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "JAS2020",
+            "display": "A subset of ISO2020 used for most Kanjii transmissions",
+            "status": "A"
+          },
+          {
+            "code": "JIS X 0202",
+            "display": "ISO 2022 with escape sequences for Kanjii",
+            "status": "A"
+          },
+          {
+            "code": "UNICODE UTF-16",
+            "display": "UCS Transformation Format, 16-bit form",
+            "status": "A"
+          },
+          {
+            "code": "UNICODE UTF-32",
+            "display": "UCS Transformation Format, 32-bit form",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "UNICODE": {
+            "comment": "THO: Deprecated. Retained for backward compatibility only as v 2.5. Replaced by specific Unicode encoding codes.; v2: Deprecated. Retained for backward compatibility only as v 2.5. Replaced by specific Unicode encoding codes. Usage Note: Available from The Unicode Consortium, P.O. Box 700519, San Jose, CA 95170-0519. See http://www.unicode.org/unicode/consortium/consort.html"
+          }
+        }
+      }
+    }
+  },
+  "0223": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "D",
+            "display": "Spouse dependent",
+            "status": "A"
+          },
+          {
+            "code": "WU",
+            "display": "Walk up",
+            "status": "A"
+          },
+          {
+            "code": "CB",
+            "display": "Common Bath",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0227": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references a CodeSystem fragment (content = fragment)"
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Manufacturers of Vaccines (code=MVX) != PH_ManufacturersOfVaccinesMVX_CDC_NIP",
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.12.227 != ",
+      "cs.version::cs_id_info-version": "2.ext.0 != 2..0"
+    }
+  },
+  "0232": {
+    "diff": {
+      "display::metadata-symbolic_name": "- Insurance Company Contact Reason != Insurance Company Contact Reason"
+    }
+  },
+  "0254": {
+    "diff": {
+      "vs.description::vs_info-description": "Value Set of codes that describe the underlying kind of property represented by an observation. The categories distinguish concentrations from total amounts, molar concentrations from mass concentrations, partial pressures from colors, and so  != Value Set of codes that describe the underlying kind of property represented by an observation. The categories distinguish concentrations from total amounts, molar concentrations from mass concentrations, partial pressures from colors, and so",
+      "concepts": {
+        "diff": {
+          "CACT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "CNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "CCNT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "CFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "CRAT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ENT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ENTSUB": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ENTCAT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ENTNUM": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ENTVOL": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MASS": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MCRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MINC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MRAT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "MRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "NUM": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "NCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "NCNT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "NFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "NRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SUB": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SCRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SCNT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SCNTR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SCNCIN": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SRAT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VOL": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VCNT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VRAT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RLMCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RLSCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "THRMCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "THRSCNC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TIME": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TMDF": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TMSTP": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TRTO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RCRLTM": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RLTM": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ACT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "ARB": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "CNST": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "COEF": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "DIFF": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "KINV": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "LINC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "LIQ": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "OSMOL": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "PRES": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RANGE": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RATIO": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "RDEN": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "REL": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SATFR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "SUSC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TEMP": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TEMPDF": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TEMPIN": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TITR": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "TYPE": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VEL": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VELRT": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          },
+          "VISC": {
+            "comment": "THO: ; v2: Usage Note: Adopted from the IUPAC Silver Book 1995” to the code"
+          }
+        }
+      }
+    }
+  },
+  "0255": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO",
+      "concepts": {
+        "diff": {
+          "*": {
+            "comment": "THO: Used for blood products.; v2: Used for blood products. Usage Note: Deprecated March 2016; use code LU instead."
+          },
+          "LU": {
+            "comment": "THO: ; v2: Usage Note: In a master file update for blood products, no specific duration value can be specified (see OM1-43 “Point Versus Interval” field definition)."
+          }
+        }
+      }
+    }
+  },
+  "0256": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0257": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0258": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0259": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.154 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0259 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.166 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0259 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "steward::metadata-steward": "oo != InM/OO",
+      "v2-binding::binding_info-realm": "Representative != "
+    }
+  },
+  "0260": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0261": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0262": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0263": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0264": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0265": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0267": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0268": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0269": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0270": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0271": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0272": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "1",
+            "display": "ASTM Level 1",
+            "status": "A"
+          },
+          {
+            "code": "2",
+            "display": "ASTM Level 2",
+            "status": "A"
+          },
+          {
+            "code": "3",
+            "display": "ASTM Level 3",
+            "status": "A"
+          },
+          {
+            "code": "RE",
+            "display": "Restricted",
+            "status": "A"
+          },
+          {
+            "code": "UC",
+            "display": "Usual control",
+            "status": "A"
+          },
+          {
+            "code": "VR",
+            "display": "Very restricted",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0273": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0275": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0277": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "COMPLETE",
+            "display": "A request to add a completed appointment, used to maintain records of completed appointments that did not appear in the schedule (e.g., STAT, walk-in, etc.)",
+            "status": "A"
+          },
+          {
+            "code": "NORMAL",
+            "display": "Routine schedule request type - default if not valued",
+            "status": "A"
+          },
+          {
+            "code": "TENTATIVE",
+            "display": "A request for a tentative (e.g., “penciled in”) appointment",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0278": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "BLOCKED",
+            "display": "Blocked",
+            "status": "D"
+          },
+          {
+            "code": "BOOKED",
+            "display": "Booked",
+            "status": "A"
+          },
+          {
+            "code": "CANCELLED",
+            "display": "Cancelled",
+            "status": "A"
+          },
+          {
+            "code": "COMPLETE",
+            "display": "Complete",
+            "status": "A"
+          },
+          {
+            "code": "DELETED",
+            "display": "Deleted",
+            "status": "A"
+          },
+          {
+            "code": "OVERBOOK",
+            "display": "Overbook",
+            "status": "A"
+          },
+          {
+            "code": "PENDING",
+            "display": "Pending",
+            "status": "A"
+          },
+          {
+            "code": "STARTED",
+            "display": "Started",
+            "status": "A"
+          },
+          {
+            "code": "WAITLIST",
+            "display": "Waitlist",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "Pending": {
+            "display": "THO: Pending; v2: Appointment has not yet been confirmed"
+          },
+          "Waitlist": {
+            "display": "THO: Waitlist; v2: Appointment has been placed on a waiting list for a particular slot, or set of slots"
+          },
+          "Booked": {
+            "display": "THO: Booked; v2: The indicated appointment is booked"
+          },
+          "Started": {
+            "display": "THO: Started; v2: The indicated appointment has begun and is currently in progress"
+          },
+          "Complete": {
+            "display": "THO: Complete; v2: The indicated appointment has completed normally (was not discontinued, canceled, or deleted)"
+          },
+          "Cancelled": {
+            "display": "THO: Cancelled; v2: The indicated appointment was stopped from occurring (canceled prior to starting)"
+          },
+          "DC": {
+            "display": "THO: Discontinued; v2: The indicated appointment was discontinued (DC’ed while in progress, discontinued parent appointment, or discontinued child appointment)"
+          },
+          "Discontinued": {
+            "display": "THO: Discontinued; v2: The indicated appointment was discontinued (DC’ed while in progress, discontinued parent appointment, or discontinued child appointment)"
+          },
+          "Deleted": {
+            "display": "THO: Deleted; v2: The indicated appointment was deleted from the filler application"
+          },
+          "Blocked": {
+            "display": "THO: Blocked; v2: The indicated time slot(s) is(are) blocked"
+          },
+          "Overbook": {
+            "display": "THO: Overbook; v2: The appointment has been confirmed; however it is confirmed in an overbooked state"
+          },
+          "Noshow": {
+            "display": "THO: Noshow; v2: The patient did not show up for the appointment"
+          }
+        }
+      }
+    }
+  },
+  "0279": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "CONFIRM",
+            "display": "Contact the Placer Contact Person prior to making any substitutions of this resource",
+            "status": "A"
+          },
+          {
+            "code": "NO",
+            "display": "Substitution of this resource is not allowed",
+            "status": "A"
+          },
+          {
+            "code": "NOTIFY",
+            "display": "Notify the Placer Contact Person, through normal institutional procedures, that a substitution of this resource has been made",
+            "status": "A"
+          },
+          {
+            "code": "YES",
+            "display": "Substitution of this resource is allowed",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0281": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "HOM",
+            "display": "Home Care",
+            "status": "A"
+          },
+          {
+            "code": "LAB",
+            "display": "Laboratory",
+            "status": "A"
+          },
+          {
+            "code": "MED",
+            "display": "Medical",
+            "status": "A"
+          },
+          {
+            "code": "PSY",
+            "display": "Psychiatric",
+            "status": "A"
+          },
+          {
+            "code": "RAD",
+            "display": "Radiology",
+            "status": "A"
+          },
+          {
+            "code": "SKN",
+            "display": "Skilled Nursing",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0287": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "SP": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0291": {
+    "diff": {
+      "concepts": {
+        "tho_vs_only": [
+          {
+            "code": "…",
+            "display": "Source RFC 2046",
+            "status": "D"
+          }
+        ],
+        "diff": {
+          "BASIC": {
+            "definition": "THO(from CS): ; v2: ISDN PCM audio data"
+          },
+          "DICOM": {
+            "definition": "THO(from CS): ; v2: Digital Imaging and Communications in Medicine"
+          },
+          "FAX": {
+            "definition": "THO(from CS): ; v2: Facsimile data"
+          },
+          "GIF": {
+            "definition": "THO(from CS): ; v2: Graphics Interchange Format"
+          },
+          "HTML": {
+            "definition": "THO(from CS): ; v2: Hypertext Markup Language"
+          },
+          "JOT": {
+            "definition": "THO(from CS): ; v2: Electronic ink data (Jot 1.0 standard)"
+          },
+          "JPEG": {
+            "definition": "THO(from CS): ; v2: Joint Photographic Experts Group"
+          },
+          "Octet-stream": {
+            "definition": "THO(from CS): ; v2: Uninterpreted binary data"
+          },
+          "PICT": {
+            "definition": "THO(from CS): ; v2: PICT format image data"
+          },
+          "PostScript": {
+            "definition": "THO(from CS): ; v2: PostScript program"
+          },
+          "RTF": {
+            "definition": "THO(from CS): ; v2: Rich Text Format"
+          },
+          "SGML": {
+            "definition": "THO(from CS): ; v2: Standard Generalized Markup Language (HL7 V2.3.1 and later)"
+          },
+          "TIFF": {
+            "definition": "THO(from CS): ; v2: TIFF image data"
+          },
+          "XML": {
+            "definition": "THO(from CS): ; v2: Extensible Markup Language (HL7 V2.3.1 and later)"
+          },
+          "x-hl7-cda-level-one": {
+            "definition": "THO(from CS): ; v2: HL7 Clinical Document Architecture Level One document",
+            "comment": "THO: Retained for backwards compatibility only as of v2.6 and CDA R 2. Preferred value is text/xml.; v2: Retained for backwards compatibility only as of v2.6 and CDA R 2.\nPreferred value is text/xml."
+          }
+        }
+      }
+    }
+  },
+  "0292": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but THO includes ValueSet resource"
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Vaccines Administered != PH_VaccinesAdministeredCVX_CDC_NIP",
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.12.292 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://hl7.org/fhir/sid/cvx != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.114222.4.11.934 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0292 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "v2-binding::binding_info-realm": "Universal != ",
+      "vs.title::vs_info-symbolic_name": "PHVS_VaccinesAdministeredCVX_CDC_NIP != ",
+      "vs.description::vs_info-description": "Value Set of codes that specify the administered vaccines. The values are maintained by the US Centers of Disease Control.. The code system is maintained by the CDC, and may be found at URL; https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.1 != "
+    }
+  },
+  "0293": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0294": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/S&L",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "PREFSTART",
+            "display": "The preferred start time for the appointment request, service or resource.   Any legal time specification in the format HHMM, using 24-hour clock notation",
+            "status": "A"
+          },
+          {
+            "code": "PREFEND",
+            "display": "The preferred end time for the appointment request, service or resource.  Any legal time specification in the format HHMM, using 24-hour clock notation",
+            "status": "A"
+          },
+          {
+            "code": "MON",
+            "display": "An indicator that Monday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "TUE",
+            "display": "An indicator that Tuesday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "WED",
+            "display": "An indicator that Wednesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "THU",
+            "display": "An indicator that Thursday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "FRI",
+            "display": "An indicator that Friday is or is not preferred for the day on which the appointment will occur.  OK =  Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "SAT",
+            "display": "An indicator that Saturday is or is not preferred for the day on which the appointment will occur.  OK =  Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          },
+          {
+            "code": "SUN",
+            "display": "An indicator that Sunday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day NO = Day is not preferred",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "Mon": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Tue": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Wed": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Thu": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Fri": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Sat": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          },
+          "Sun": {
+            "comment": "THO: In component 2, specify OK or NO.<p>OK = Preferred appointment day NO = Day is not preferred; v2: In component 2, specify OK or NO. OK = Preferred appointment day NO = Day is not preferred"
+          }
+        }
+      }
+    }
+  },
+  "0296": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0297": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0301": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "CAP": {
+            "status": "THO: N; v2: "
+          },
+          "NPI": {
+            "status": "THO: N; v2: "
+          },
+          "Random": {
+            "definition": "THO: Usually a base64 encoded string of random bits.<p>Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers; v2: Usually a base64 encoded string of random bits. Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers",
+            "comment": "THO: Usually a base64 encoded string of random bits.Retained for backward compatibility only as of v2.7; equivalent to a locally defined entity identifier scheme; use L. M, or N instead. Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers; v2: Usually a base64 encoded string of random bits.Retained for backward compatibility only as of v2.7; equivalent to a locally defined entity identifier scheme; use L. M, or N instead. Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers Usage Note: Retained for backward compatibility only as of v2.7; equivalent to a locally defined entity identifier scheme; use L. M, or N instead."
+          }
+        }
+      }
+    }
+  },
+  "0302": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0303": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0304": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0305": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0306": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0307": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0308": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0315": {
+    "diff": {
+      "vs.description::vs_info-description": "Value Set of codes that specify whether or not the patient has a living will and, if so, whether a copy fo the living will is on file at the healthcare facility. If the patient does not have a living will, the value of this field indicates whether the  != Value Set of codes that specify whether or not the patient has a living will and, if so, whether a copy fo the living will is on file at the healthcare facility. If the patient does not have a living will, the value of this field indicates whether the"
+    }
+  },
+  "0324": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0325": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0326": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "A": {
+            "comment": "THO: ; v2: Usage Note: default"
+          }
+        }
+      }
+    }
+  },
+  "0327": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0328": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0333": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0335": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0337": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0338": {
+    "errors": [
+      "THO ValueSet version is 2.7.0; THO CodeSystem version is 2.9.0"
+    ],
+    "diff": {
+      "cs.version::cs_id_info-version": "2.9.0 != 2.7.0",
+      "concepts": {
+        "diff": {
+          "CY": {
+            "definition": "THO(from CS): ; v2: County number"
+          },
+          "DEA": {
+            "display": "THO: Drug Enforcement Administration registration number; v2: Drug Enforcement Agency no.",
+            "definition": "THO(from CS): ; v2: Drug Enforcement Agency no.",
+            "comment": "THO: Use case: This is a registration number that identifies an individual or organization relative to controlled substance regulation and transactions. \r\nA DEA number has a very precise and widely accepted meaning within the United States. Surprisingly, the US Drug Enforcement Administration does not solely assign DEA numbers in the United States. Hospitals have the authority to issue DEA numbers to their medical residents. These DEA numbers are based upon the hospital’s DEA number, but the authority rests with the hospital on the assignment to the residents. Thus, DEA as an Identifier Type is necessary in addition to DEA as an Assigning Authority.; v2: "
+          },
+          "GL": {
+            "definition": "THO(from CS): ; v2: General ledger number",
+            "comment": "THO: Class: Financial; v2: "
+          },
+          "LI": {
+            "definition": "THO(from CS): ; v2: Labor and industries number"
+          },
+          "L&I": {
+            "definition": "THO(from CS): ; v2: Labor and industries number",
+            "comment": "THO: ; v2: Deprecated as of v 2.5; Use LI instead"
+          },
+          "MCD": {
+            "display": "THO: Practitioner Medicaid number; v2: Medicaid number",
+            "definition": "THO(from CS): ; v2: Medicaid number",
+            "comment": "THO: Class: Insurance; v2: "
+          },
+          "MCR": {
+            "display": "THO: Practitioner Medicare number; v2: Medicare number",
+            "definition": "THO(from CS): ; v2: Medicare number",
+            "comment": "THO: Class: Insurance; v2: "
+          },
+          "QA": {
+            "definition": "THO(from CS): ; v2: QA number"
+          },
+          "SL": {
+            "display": "THO: State license; v2: State license number",
+            "definition": "THO(from CS): ; v2: State license number"
+          },
+          "TAX": {
+            "definition": "THO(from CS): ; v2: Tax ID number"
+          },
+          "TRL": {
+            "display": "THO: Training License Number; v2: Training license number",
+            "definition": "THO(from CS): ; v2: Training license number",
+            "status": "THO: N; v2: "
+          },
+          "UPIN": {
+            "display": "THO: Medicare/CMS (formerly HCFA)'s Universal Physician Identification numbers; v2: Unique physician ID no.",
+            "definition": "THO(from CS): ; v2: Unique physician ID no.",
+            "comment": "THO: Class: Insurance; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0340": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but v2.9.1 includes codes anyway",
+      "V2.9.1 indicates concept domain only but includes codes"
+    ],
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != External"
+    }
+  },
+  "0347": {
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != iso3166-2",
+      "cs.description::cs_id_info-description": " != ISO 3166 Part 2 Country Subdivision Codes. This coding system is published in the ISO 3166-2 Standard for Country Subdivision codes. This standard is released periodically, and a new OID will be assigned by ISO for new editions.",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "vs.title::vs_info-symbolic_name": " != hl7VS-stateProvince",
+      "vs.description::vs_info-description": " != Concepts used to specify a state or province. Used in Version 2 messaging in the Extended Composite ID with Check Digit (CX), Performing Person Time Stamp (PPN), and Extended Composite ID Number and Name for Persons (XCN) values as well as the Accident (ACC) segment."
+    }
+  },
+  "0350": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references a CodeSystem metadata record (content = not-present)"
+    ],
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "steward::metadata-steward": "fm != InM/FM",
+      "cs.description::cs_id_info-description": "National Uniform Billing Committee (NUBC) UB-04 Data Specifications Manual, UB form locator 31 - 34, Occurrence Codes and Amounts - code and associated date defining asignificant event relating to the bill that may affect payer processing the claim. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the OCD segment. Updated by NUBC annually; see the coding instructions for more detail. Note that this content was previously published in HL7 artifacts in violaton of IP restrictions; the content has been removed in version 2.2.0 pending finalization of a republication permission request to AHA/NUBC. != National Uniform Billing Committee (NUBC) UB-04 Data Specifications Manual, UB form locator 31 - 34, Occurrence Codes and Amounts - code and associated date defining a significant event relating to the bill that may affect payer processing the claim. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the OCD segment. Updated by NUBC annually; see the coding instructions for more detail.",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.1.0"
+    }
+  },
+  "0351": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references a CodeSystem metadata record (content = not-present)"
+    ],
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "steward::metadata-steward": "fm != InM/FM",
+      "cs.description::cs_id_info-description": "HL7-defined code system of concepts specifying a National Uniform Billing Committee (NUBC) code that identifies an event that relates to the payment of a claim. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the Occurrence Span Code and Date (OSP) value. Updated by NUBC annually; see the coding instructions for more detail. Note that this content was previously published in HL7 artifacts in violaton of IP restrictions; the content has been removed in version 2.2.0 pending finalization of a republication permission request to AHA/NUBC. != HL7-defined code system of concepts specifying a National Uniform Billing Committee (NUBC) code that identifies an event that relates to the payment of a claim. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the Occurrence Span Code and Date (OSP) value. Updated by NUBC annually; see the coding instructions for more detail.",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.1.0"
+    }
+  },
+  "0354": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "OMD_O01",
+            "status": "A"
+          },
+          {
+            "code": "OMN_O01",
+            "status": "A"
+          },
+          {
+            "code": "OMS_O01",
+            "status": "A"
+          },
+          {
+            "code": "ORD_O02",
+            "status": "A"
+          },
+          {
+            "code": "ORN_O02",
+            "status": "A"
+          },
+          {
+            "code": "ORS_O02",
+            "status": "A"
+          },
+          {
+            "code": "RDO_O01",
+            "status": "A"
+          },
+          {
+            "code": "RRO_O02",
+            "status": "A"
+          },
+          {
+            "code": "ADT_A28",
+            "display": "A28, A31",
+            "status": "A"
+          },
+          {
+            "code": "ARD_A19",
+            "display": "A19",
+            "status": "D"
+          },
+          {
+            "code": "BRP_030",
+            "display": "O30",
+            "status": "D"
+          },
+          {
+            "code": "MFD_P09",
+            "display": "P09",
+            "status": "D"
+          },
+          {
+            "code": "DSR_Q01",
+            "display": "Q01",
+            "status": "A"
+          },
+          {
+            "code": "DSR_P04",
+            "display": "P04",
+            "status": "A"
+          },
+          {
+            "code": "DSR_Q03",
+            "display": "Q03",
+            "status": "A"
+          },
+          {
+            "code": "ORF_R02",
+            "display": "R02, R04",
+            "status": "A"
+          },
+          {
+            "code": "EDR_R07",
+            "display": "R07",
+            "status": "A"
+          },
+          {
+            "code": "EQQ_Q04",
+            "display": "Q04",
+            "status": "A"
+          },
+          {
+            "code": "ORM_Q06",
+            "display": "Q06",
+            "status": "A"
+          },
+          {
+            "code": "ERP_R09",
+            "display": "R09",
+            "status": "A"
+          },
+          {
+            "code": "ORR_Q06",
+            "display": "Q06",
+            "status": "A"
+          },
+          {
+            "code": "PIN_I07",
+            "display": "I07",
+            "status": "A"
+          },
+          {
+            "code": "MFD_MFA",
+            "display": "MFA",
+            "status": "A"
+          },
+          {
+            "code": "RAS_O01",
+            "display": "O01",
+            "status": "A"
+          },
+          {
+            "code": "RAS_O02",
+            "display": "O022",
+            "status": "A"
+          },
+          {
+            "code": "RDS_O01",
+            "display": "O01",
+            "status": "A"
+          },
+          {
+            "code": "RGV_O01",
+            "display": "O01",
+            "status": "A"
+          },
+          {
+            "code": "RPI_I0I",
+            "display": "I01, I04",
+            "status": "A"
+          },
+          {
+            "code": "RQC_I06",
+            "display": "I06",
+            "status": "A"
+          },
+          {
+            "code": "RQI_I0I",
+            "display": "I01, I02, I03",
+            "status": "A"
+          },
+          {
+            "code": "RRD_O02",
+            "display": "O02",
+            "status": "A"
+          },
+          {
+            "code": "RRE_O02",
+            "display": "O02",
+            "status": "A"
+          },
+          {
+            "code": "RRG_O02",
+            "display": "O02",
+            "status": "A"
+          },
+          {
+            "code": "ORU_R31",
+            "display": "R31",
+            "status": "A"
+          },
+          {
+            "code": "SRM_T12",
+            "display": "T12",
+            "status": "A"
+          },
+          {
+            "code": "ORU_R32",
+            "display": "R32",
+            "status": "A"
+          },
+          {
+            "code": "SRR_T12",
+            "display": "T12",
+            "status": "A"
+          },
+          {
+            "code": "QRY_P04",
+            "display": "P04",
+            "status": "A"
+          },
+          {
+            "code": "RDE_O01",
+            "display": "O01",
+            "status": "A"
+          },
+          {
+            "code": "RQQ_Q09",
+            "display": "Q09",
+            "status": "A"
+          },
+          {
+            "code": "RRA_O02",
+            "display": "O02",
+            "status": "A"
+          },
+          {
+            "code": "SPQ_Q08",
+            "display": "Q08",
+            "status": "A"
+          },
+          {
+            "code": "RDY_K11",
+            "display": "K11",
+            "status": "A"
+          },
+          {
+            "code": "RSP_K24",
+            "display": "K24",
+            "status": "A"
+          },
+          {
+            "code": "TBR_R08",
+            "display": "R08",
+            "status": "A"
+          },
+          {
+            "code": "TBR_R09",
+            "display": "R09",
+            "status": "A"
+          },
+          {
+            "code": "VQQ_Q07",
+            "display": "Q07",
+            "status": "A"
+          },
+          {
+            "code": "QBP_Z73",
+            "display": "Z73",
+            "status": "A"
+          },
+          {
+            "code": "RSP_Z82",
+            "display": "Z82",
+            "status": "A"
+          },
+          {
+            "code": "RSP_Z86",
+            "display": "Z86",
+            "status": "A"
+          },
+          {
+            "code": "RSP_Z88",
+            "display": "Z88",
+            "status": "A"
+          },
+          {
+            "code": "RSP_Z90",
+            "display": "Z90",
+            "status": "A"
+          },
+          {
+            "code": "RTB_Knn",
+            "display": "Knn",
+            "status": "A"
+          },
+          {
+            "code": "RTB_Z74",
+            "display": "Z74",
+            "status": "A"
+          },
+          {
+            "code": "QBP_Qnn",
+            "display": "Qnn",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "ADR_A19": {
+            "display": "THO: A19; v2: ",
+            "definition": "THO: A19; v2: "
+          },
+          "ADT_A18": {
+            "display": "THO: A18; v2: ",
+            "definition": "THO: A18; v2: "
+          },
+          "ADT_A30": {
+            "display": "THO: A30, A34, A35, A36, A46, A47, A48, A49; v2: ",
+            "definition": "THO: A30, A34, A35, A36, A46, A47, A48, A49; v2: "
+          },
+          "DOC_T12": {
+            "display": "THO: T12; v2: ",
+            "definition": "THO: T12; v2: "
+          },
+          "MFN_M01": {
+            "display": "THO: M01; v2: ",
+            "definition": "THO: M01; v2: "
+          },
+          "OML_O59": {
+            "status": "THO: N; v2: "
+          },
+          "OMQ_O57": {
+            "status": "THO: N; v2: "
+          },
+          "ORL_O53": {
+            "status": "THO: N; v2: "
+          },
+          "ORL_O54": {
+            "status": "THO: N; v2: "
+          },
+          "ORL_O55": {
+            "status": "THO: N; v2: "
+          },
+          "ORL_O56": {
+            "status": "THO: N; v2: "
+          },
+          "ORX_O58": {
+            "status": "THO: N; v2: "
+          },
+          "OSU_O51": {
+            "status": "THO: N; v2: "
+          },
+          "OSU_O52": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S38": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S40": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S41": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S45": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S50": {
+            "status": "THO: N; v2: "
+          },
+          "SET_S52": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0357": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "198": {
+            "status": "THO: N; v2: "
+          },
+          "199": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0359": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "2 and higher",
+            "display": "for ranked secondary diagnoses",
+            "status": "A"
+          },
+          {
+            "code": "2 ...",
+            "display": "For ranked secondary diagnoses",
+            "status": "A"
+          },
+          {
+            "code": "...",
+            "display": "No suggested values defined",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0360": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0365": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "…",
+            "display": "(null) No state change",
+            "status": "D"
+          },
+          {
+            "code": "...",
+            "display": "(null) No state change",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0366": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "...",
+            "display": "(null) No state change",
+            "status": "D"
+          },
+          {
+            "code": "…",
+            "display": "(null) No state change",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0367": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "...",
+            "display": "(null) No level change",
+            "status": "D"
+          },
+          {
+            "code": "…",
+            "display": "(null) No level change",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0369": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "H": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0391": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "PIDG",
+            "display": "PID group",
+            "status": "A"
+          },
+          {
+            "code": "OBRG",
+            "display": "OBR group",
+            "status": "A"
+          },
+          {
+            "code": "ORCG",
+            "display": "ORC group",
+            "status": "A"
+          },
+          {
+            "code": "RXAG",
+            "display": "RXA group",
+            "status": "A"
+          },
+          {
+            "code": "RXDG",
+            "display": "RXD group",
+            "status": "A"
+          },
+          {
+            "code": "RXEG",
+            "display": "RXE group",
+            "status": "A"
+          },
+          {
+            "code": "RXOG",
+            "display": "RXO group",
+            "status": "A"
+          },
+          {
+            "code": "etc",
+            "status": "D"
+          },
+          {
+            "code": "CLOCK_AND_STATS_WITH_NOTE",
+            "status": "A"
+          },
+          {
+            "code": "ENCODED ORDER",
+            "status": "D"
+          },
+          {
+            "code": "FINANCIAL_COMMON ORDER",
+            "status": "D"
+          },
+          {
+            "code": "FINANCIAL_TIMING QUANTITY",
+            "status": "D"
+          },
+          {
+            "code": "GENERAL RESOURCE",
+            "status": "D"
+          },
+          {
+            "code": "LOCATION RESOURCE",
+            "status": "D"
+          },
+          {
+            "code": "PATIENT VISIT",
+            "status": "D"
+          },
+          {
+            "code": "PERSONNEL RESOURCE",
+            "status": "D"
+          }
+        ],
+        "diff": {
+          "ADMINISTRATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ALLERGY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "APP_STATS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "APP_STATUS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ASSOCIATED_PERSON": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ASSOCIATED_RX_ADMIN": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ASSOCIATED_RX_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "AUTHORIZATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "AUTHORIZATION_CONTACT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CERTIFICATE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CLOCK": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CLOCK_AND_STATISTICS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CLOCK_AND_STATS_WITH_NOTES": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CLOCK_AND_STATS_WITH_NOTES_ALT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "COMMAND": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "COMMAND_RESPONSE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "COMMON_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "COMPONENT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "COMPONENTS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "CONTAINER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "DEFINITION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "DIET": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "DISPENSE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ENCODED_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ENCODING": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "EXPERIENCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_COMMON_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_INSURANCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_PROCEDURE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "FINANCIAL_TIMING_QUANTITY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GENERAL_RESOURCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GIVE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GOAL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GOAL_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GOAL_PATHWAY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GOAL_ROLE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "GUARANTOR_INSURANCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "INSURANCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "LOCATION_RESOURCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MERGE_INFO": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_CDM": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_CLIN_STUDY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_CLIN_STUDY_SCHED": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_INV_ITEM": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_LOC_DEPT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_LOCATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_OBS_ATTRIBUTES": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_PHASE_SCHED_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_QUERY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_SITE_DEFINED": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_STAFF": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_BATT_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_BATTERIES": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_CALC_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_CALCULATED": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_CAT_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_CATEGORICAL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "MF_TEST_NUMERIC": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "NK1_TIMING_QTY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "NOTIFICATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "OBSERVATION_PRIOR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "OBSERVATION_REQUEST": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "OMSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_CHOICE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_DETAIL_SUPPLEMENT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_DIET": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_ENCODED": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_PRIOR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ORDER_TRAY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATHWAY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATHWAY_ROLE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATIENT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATIENT_PRIOR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATIENT_RESULT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATIENT_VISIT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PATIENT_VISIT_PRIOR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PERSONNEL_RESOURCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PEX_CAUSE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PEX_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PRIOR_RESULT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROBLEM": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROBLEM_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROBLEM_PATHWAY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROBLEM_ROLE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROCEDURE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PRODUCT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PRODUCT_STATUS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROVIDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "PROVIDER_CONTACT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "QBP": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "QRY_WITH_DETAIL": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "QUERY_RESPONSE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "QUERY_RESULT_CLUSTER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "REQUEST": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESOURCE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESOURCES": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESPONSE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESULT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESULTS": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RESULTS_NOTES": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "ROW_DEFINITION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RX_ADMINISTRATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "RX_ORDER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "SCHEDULE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "SERVICE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "SPECIMEN": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "SPECIMEN_CONTAINER": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "STAFF": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "STUDY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "STUDY_OBSERVATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "STUDY_PHASE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "STUDY_SCHEDULE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TEST_CONFIGURATION": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_DIET": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_ENCODED": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_GIVE": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_PRIOR": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_QTY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_QUANTITY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TIMING_TRAY": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "TREATMENT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          },
+          "VISIT": {
+            "display": "THO: ; v2: ",
+            "definition": "THO: ; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0392": {
+    "diff": {
+      "vs.description::vs_info-description": "Value Set of codes identifying what search components (e.g., name, birthdate, social security number) of the record returned matched the original query where the responding system does not assign numeric match weights or confidence levels. It  != Value Set of codes identifying what search components (e.g., name, birthdate, social security number) of the record returned matched the original query where the responding system does not assign numeric match weights or confidence levels. It"
+    }
+  },
+  "0396": {
+    "diff": {
+      "steward::metadata-steward": "vocab != Vocabulary",
+      "cs.version::cs_id_info-version": "2.4.0 != 2.5.0",
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "ALPHAID2017",
+            "display_name": "German Alpha-ID v2017",
+            "definition": "German Alpha-ID v2017",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2017",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2018",
+            "display_name": "German Alpha-ID v2018",
+            "definition": "German Alpha-ID v2018",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2018",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2019",
+            "display_name": "German Alpha-ID v2019",
+            "definition": "German Alpha-ID v2019",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2019",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2020",
+            "display_name": "German Alpha-ID v2020",
+            "definition": "German Alpha-ID v2020",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2020",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2021",
+            "display_name": "German Alpha-ID v2021",
+            "definition": "German Alpha-ID v2021",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2021",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2022",
+            "display_name": "German Alpha-ID v2022",
+            "definition": "German Alpha-ID v2022",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2022",
+            "status": "N"
+          },
+          {
+            "value": "ALPHAID2023",
+            "display_name": "German Alpha-ID v2023",
+            "definition": "German Alpha-ID v2023",
+            "comment": "ID of the alphabetical Index ICD-10-GM-2023",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2010",
+            "display_name": "German Major Diagnostic Codes v2010",
+            "definition": "German Major Diagnostic Codes v2010",
+            "comment": "German Major Diagnostic Codes v2010",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2011",
+            "display_name": "German Major Diagnostic Codes v2011",
+            "definition": "German Major Diagnostic Codes v2011",
+            "comment": "German Major Diagnostic Codes v2011",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2012",
+            "display_name": "German Major Diagnostic Codes v2012",
+            "definition": "German Major Diagnostic Codes v2012",
+            "comment": "German Major Diagnostic Codes v2012",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2013",
+            "display_name": "German Major Diagnostic Codes v2013",
+            "definition": "German Major Diagnostic Codes v2013",
+            "comment": "German Major Diagnostic Codes v2013",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2014",
+            "display_name": "German Major Diagnostic Codes v2014",
+            "definition": "German Major Diagnostic Codes v2014",
+            "comment": "German Major Diagnostic Codes v2014",
+            "status": "N"
+          },
+          {
+            "value": "GLN",
+            "display_name": "Global Location Number",
+            "definition": "Global Location Number",
+            "comment": "",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2015",
+            "display_name": "German Major Diagnostic Codes v2015",
+            "definition": "German Major Diagnostic Codes v2015",
+            "comment": "German Major Diagnostic Codes v2015",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2016",
+            "display_name": "German Major Diagnostic Codes v2016",
+            "definition": "German Major Diagnostic Codes v2016",
+            "comment": "German Major Diagnostic Codes v2016",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2017",
+            "display_name": "German Major Diagnostic Codes v2017",
+            "definition": "German Major Diagnostic Codes v2017",
+            "comment": "German Major Diagnostic Codes v2017",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2018",
+            "display_name": "German Major Diagnostic Codes v2018",
+            "definition": "German Major Diagnostic Codes v2018",
+            "comment": "German Major Diagnostic Codes v2018",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2019",
+            "display_name": "German Major Diagnostic Codes v2019",
+            "definition": "German Major Diagnostic Codes v2019",
+            "comment": "German Major Diagnostic Codes v2019",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2020",
+            "display_name": "German Major Diagnostic Codes v2020",
+            "definition": "German Major Diagnostic Codes v2020",
+            "comment": "German Major Diagnostic Codes v2020",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2021",
+            "display_name": "German Major Diagnostic Codes v2021",
+            "definition": "German Major Diagnostic Codes v2021",
+            "comment": "German Major Diagnostic Codes v2021",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2022",
+            "display_name": "German Major Diagnostic Codes v2022",
+            "definition": "German Major Diagnostic Codes v2022",
+            "comment": "German Major Diagnostic Codes v2022",
+            "status": "N"
+          },
+          {
+            "value": "GMDC2023",
+            "display_name": "German Major Diagnostic Codes v2023",
+            "definition": "German Major Diagnostic Codes v2023",
+            "comment": "German Major Diagnostic Codes v2023",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2017",
+            "display_name": "ICD 10 Germany v2017",
+            "definition": "ICD 10 Germany v2017",
+            "comment": "ICD German modification for 2017",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2018",
+            "display_name": "ICD 10 Germany v2018",
+            "definition": "ICD 10 Germany v2018",
+            "comment": "ICD German modification for 2018",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2019",
+            "display_name": "ICD 10 Germany v2019",
+            "definition": "ICD 10 Germany v2019",
+            "comment": "ICD German modification for 2019",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2020",
+            "display_name": "ICD 10 Germany v2020",
+            "definition": "ICD 10 Germany v2020",
+            "comment": "ICD German modification for 2020",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2021",
+            "display_name": "ICD 10 Germany v2021",
+            "definition": "ICD 10 Germany v2021",
+            "comment": "ICD German modification for 2021",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2022",
+            "display_name": "ICD 10 Germany v2022",
+            "definition": "ICD 10 Germany v2022",
+            "comment": "ICD German modification for 2022",
+            "status": "N"
+          },
+          {
+            "value": "ICD10GM2023",
+            "display_name": "ICD 10 Germany v2023",
+            "definition": "ICD 10 Germany v2023",
+            "comment": "ICD German modification for 2023",
+            "status": "N"
+          },
+          {
+            "value": "OPS2017",
+            "display_name": "OPS Germany v2017",
+            "definition": "OPS Germany v2017",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2017",
+            "status": "N"
+          },
+          {
+            "value": "OPS2018",
+            "display_name": "OPS Germany v2018",
+            "definition": "OPS Germany v2018",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2018",
+            "status": "N"
+          },
+          {
+            "value": "OPS2019",
+            "display_name": "OPS Germany v2019",
+            "definition": "OPS Germany v2019",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2019",
+            "status": "N"
+          },
+          {
+            "value": "OPS2020",
+            "display_name": "OPS Germany v2020",
+            "definition": "OPS Germany v2020",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2020",
+            "status": "N"
+          },
+          {
+            "value": "OPS2021",
+            "display_name": "OPS Germany v2021",
+            "definition": "OPS Germany v2021",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2021",
+            "status": "N"
+          },
+          {
+            "value": "OPS2022",
+            "display_name": "OPS Germany v2022",
+            "definition": "OPS Germany v2022",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2022",
+            "status": "N"
+          },
+          {
+            "value": "OPS2023",
+            "display_name": "OPS Germany v2023",
+            "definition": "OPS Germany v2023",
+            "comment": "Source: OPS Operationen- und Prozedurenschlussel 2023",
+            "status": "N"
+          }
+        ],
+        "tho_cs_only": [
+          {
+            "code": "General code",
+            "display": "Active",
+            "status": "A"
+          },
+          {
+            "code": "99zzz or L",
+            "display": "Local general code (where z is an alphanumeric character)",
+            "status": "A"
+          },
+          {
+            "code": "DCL",
+            "display": "DICOM Class Label",
+            "status": "A"
+          },
+          {
+            "code": "DQL",
+            "display": "DICOM Query Label",
+            "status": "A"
+          },
+          {
+            "code": "CE (obsolete)",
+            "display": "CEN ECG diagnostic codes",
+            "status": "A"
+          },
+          {
+            "code": "FDAUDI",
+            "display": "FDA Unique Device Identifier",
+            "status": "A"
+          },
+          {
+            "code": "GS1UDI",
+            "display": "GS1 Unique Device Identifier",
+            "status": "A"
+          },
+          {
+            "code": "HIBUDI",
+            "display": "HIBCC Unique Device Identifier",
+            "status": "A"
+          },
+          {
+            "code": "IBTnnnn",
+            "display": "ISBT 128 codes where nnnn  specifies a specific table within ISBT 128.",
+            "status": "A"
+          },
+          {
+            "code": "ICCUDI",
+            "display": "ICCBBA Unique Device Identifier",
+            "status": "A"
+          },
+          {
+            "code": "ISOnnnn (deprecated)",
+            "display": "ISO Defined Codes where nnnn is the ISO table number",
+            "status": "A"
+          },
+          {
+            "code": "ISO",
+            "display": "ISO 2955.83 (units of measure) with HL7 extensions",
+            "status": "A"
+          },
+          {
+            "code": "X12Dennnn",
+            "display": "ASC X12 Code List nnnn",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "ALPHAID2012": {
+            "display": "THO: German Alpha-ID v2013; v2: German Alpha-ID v2012",
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2012"
+          },
+          "ALPHAID2013": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2013"
+          },
+          "ALPHAID2014": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2014"
+          },
+          "ALPHAID2015": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2015"
+          },
+          "ALPHAID2016": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2016"
+          },
+          "ICD10GM2012": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2012"
+          },
+          "ICD10GM2013": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2013"
+          },
+          "ICD10GM2014": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2014"
+          },
+          "ICD10GM2015": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2015"
+          },
+          "ICD10GM2016": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2016"
+          },
+          "OPS2012": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2012"
+          },
+          "OPS2013": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2013"
+          },
+          "OPS2014": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2014"
+          },
+          "OPS2015": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2015"
+          },
+          "OPS2016": {
+            "status": "THO: D; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2016"
+          },
+          "99zzz": {
+            "status": "THO: A; v2: D"
+          },
+          "ALPHAID2010": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2010"
+          },
+          "ALPHAID2011": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: ID of the alphabetical Index ICD-10-GM-2011"
+          },
+          "CDCINDUSTRY2010": {
+            "status": "THO: N; v2: "
+          },
+          "CDCOCCUPATION2010": {
+            "status": "THO: N; v2: "
+          },
+          "CDCODH": {
+            "status": "THO: N; v2: "
+          },
+          "CMSOEC": {
+            "status": "THO: N; v2: "
+          },
+          "CMSOMC": {
+            "status": "THO: N; v2: "
+          },
+          "GMDC2009": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: German Major Diagnostic Codes v2009"
+          },
+          "ICD10GM2010": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2010"
+          },
+          "ICD10GM2011": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: ICD German modification for 2011"
+          },
+          "I10P0": {
+            "status": "THO: N; v2: "
+          },
+          "OPS2010": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2010"
+          },
+          "OPS2011": {
+            "status": "THO: A; v2: N",
+            "comment": "THO: ; v2: Source: OPS Operationen- und Prozedurenschlussel 2011"
+          },
+          "NCPDPnnnnsss": {
+            "status": "THO: A; v2: D"
+          },
+          "OPS2009": {
+            "display": "THO: OPS Germany v2008; v2: OPS Germany v2009",
+            "definition": "THO: OPS Germany v2008; v2: OPS Germany v2009"
+          },
+          "ROLECLASS": {
+            "comment": "THO: For use in v2.x systems interoperating with V3 systems. Identical to the code system 2.16.840.1.113883.5.111 RoleCode in the Version 3 vocabulary.; v2: For use in v2.x systems interoperating with V3 systems. Identical to the code system 2.16.840.1.113883.5.110 RoleCode in the Version 3 vocabulary."
+          },
+          "UB04FL42": {
+            "status": "THO: N; v2: "
+          },
+          "UB04FL67": {
+            "status": "THO: N; v2: "
+          },
+          "X12DEnnnn": {
+            "status": "THO: A; v2: D"
+          }
+        }
+      }
+    }
+  },
+  "0399": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for urn:iso:std:iso:3166",
+      "v2 table has no concepts but THO includes a VS with CLD that references urn:iso:std:iso:3166. This is probably fine??"
+    ],
+    "diff": {
+      "v2-cld::vs_version_info-cld": "unique intensional definition != ISO 3166-1 alpha-3 axis",
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "cs.title::cs_id_info-symbolic_name": " != iso3166-1",
+      "cs.description::cs_id_info-description": " != ISO 3166 Part 1 Country Codes.This coding system is published in the ISO 3166-1 Standard for Country codes. This standard is released periodically, and a new OID will be assigned by ISO for new editions.",
+      "cs.version::cs_id_info-version": " != 2.1.0",
+      "vs.title::vs_info-symbolic_name": "hl7VS-countryCode-3alpha != hl7VS-countryCode",
+      "vs.description::vs_info-description": "Value Set of codes that identifies a country of origin for a message. It will be used primarily to specify default elements, such as currency denominations. The values to be used are those of ISO 3166. The ISO 3166 table has three separate forms for the codes for each country, this value set includes only the 3-character alpha form. != Value Set of codes that identifies a country of origin for a message. It will be used primarily to specify default elements, such as currency denominations. The values to be used are those of ISO 3166. The ISO 3166 table has three separate forms for the codes for each country, this value set includes only the 3-character alpha from."
+    }
+  },
+  "0406": {
+    "diff": {
+      "display::metadata-symbolic_name": "Participant Organization Unit Type != Participant Organization unit type"
+    }
+  },
+  "0411": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but v2.9.1 includes codes anyway",
+      "V2.9.1 indicates concept domain only but includes codes"
+    ],
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.452 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0411 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.477 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0411 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "v2-binding::binding_info-realm": "Example != "
+    }
+  },
+  "0412": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0413": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0414": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0418": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "…",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0440": {
+    "diff": {
+      "cs.version::cs_id_info-version": "2.4.0 != 2.5.0",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "CNS",
+            "display": "Composite ID number and name simplified",
+            "status": "A"
+          }
+        ],
+        "diff": {
+          "AD": {
+            "status": "THO: A; v2: D",
+            "comment": "THO: Replaced by XAD as of v 2.3; v2: WITHDRAWN"
+          },
+          "CE": {
+            "status": "THO: A; v2: D"
+          },
+          "CK": {
+            "status": "THO: A; v2: D"
+          },
+          "CM": {
+            "status": "THO: A; v2: D"
+          },
+          "CN": {
+            "status": "THO: A; v2: D"
+          },
+          "CSU": {
+            "status": "THO: A; v2: D"
+          },
+          "ELD": {
+            "status": "THO: A; v2: D"
+          },
+          "LA1": {
+            "status": "THO: B; v2: D"
+          },
+          "LA2": {
+            "status": "THO: B; v2: D"
+          },
+          "OSD": {
+            "status": "THO: A; v2: D"
+          },
+          "PN": {
+            "status": "THO: A; v2: D"
+          },
+          "SPS": {
+            "status": "THO: A; v2: D"
+          },
+          "TN": {
+            "status": "THO: A; v2: D"
+          },
+          "TQ": {
+            "status": "THO: A; v2: D"
+          },
+          "TS": {
+            "status": "THO: A; v2: D"
+          }
+        }
+      }
+    }
+  },
+  "0442": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0451": {
+    "errors": [
+      "Ch2c table is 'concept domain only' but v2.9.1 includes codes anyway",
+      "V2.9.1 indicates concept domain only but includes codes"
+    ]
+  },
+  "0452": {
+    "diff": {
+      "v2-binding::binding_info-realm": "Universal != "
+    }
+  },
+  "0453": {
+    "diff": {
+      "v2-binding::binding_info-realm": "Universal != "
+    }
+  },
+  "0454": {
+    "diff": {
+      "v2-binding::binding_info-realm": "Universal != "
+    }
+  },
+  "0456": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references a CodeSystem metadata record (content = not-present)"
+    ],
+    "diff": {
+      "cs.description::cs_id_info-description": "Code system of concepts specifying a revenue code as specified in the National Uniform Billing Committee (NUBC) UB-04 manual, UB form locator 42, the service line revenue code. These are claim codes indicating the identifying number for the product or service provided. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the Revenue Code (GP1) value. Updated by NUBC annually; see the coding instructions for more detail. Note that this content was previously published in HL7 artifacts in violaton of IP restrictions; the content has been removed in version 2.2.0 pending finalization of a republication permission request to AHA/NUBC. != Code system of concepts specifying a revenue code as specified in the . National Uniform Billing Committee (NUBC) UB-04 manual, UB form locator 42, the service line revenue code. These are claim codes indicating the identifying number for the product or service provided. The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the Revenue Code (GP1) value. Updated by NUBC annually; see the coding instructions for more detail.",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.1.0"
+    }
+  },
+  "0458": {
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != User"
+    }
+  },
+  "0459": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": " != 2.16.840.1.113883.6.301.9",
+      "v2-vs-oid::vs_version_info-oid": " != 2.16.840.1.113883.21.309",
+      "v2-cld::vs_version_info-cld": "THO has no CLD! != all codes",
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "v2-binding::binding_info-realm": "N/A != example",
+      "cs.title::cs_id_info-symbolic_name": " != cms-OCEEditCode-cs",
+      "cs.description::cs_id_info-description": " != Code system of concepts specifying the action to be taken during reimbursement calculations. Used in HL7 Version 2.x messaging in the GP2 segment.",
+      "cs.version::cs_id_info-version": " != 2.1.0",
+      "vs.title::vs_info-symbolic_name": " != hl7VS-reimbursementActionCode",
+      "vs.description::vs_info-description": " != Value Set of codes that specify the action to be taken during reimbursement calculations."
+    }
+  },
+  "0460": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": " != 2.16.840.1.113883.18.294",
+      "v2-vs-oid::vs_version_info-oid": " != 2.16.840.1.113883.21.310",
+      "v2-cld::vs_version_info-cld": "THO has no CLD! != all codes",
+      "cs.title::cs_id_info-symbolic_name": " != denialOrRejectionType",
+      "cs.description::cs_id_info-description": " != Code system of concepts specifying the OCE status of the line item. Used in HL7 Version 2.x messaging in the GP2 segment.",
+      "cs.version::cs_id_info-version": " != 2.1.0",
+      "vs.title::vs_info-symbolic_name": " != hl7VS-denialOrRejectionCode",
+      "vs.description::vs_info-description": " != Value Set of codes that specify the OCE status of the line item."
+    }
+  },
+  "0461": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0462": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0463": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0464": {
+    "diff": {
+      "steward::metadata-steward": "fm != InM/FM"
+    }
+  },
+  "0467": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.6.301.10 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0467 != ",
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.469 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0467 != ",
+      "v2-cld::vs_version_info-cld": "all codes != "
+    }
+  },
+  "0473": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0474": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "L",
+            "display": "Local market area",
+            "status": "A"
+          },
+          {
+            "code": "M",
+            "display": "Medical Center Area",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0487": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "...",
+            "display": "No suggested values",
+            "status": "D"
+          },
+          {
+            "code": "BONE",
+            "display": "Bone",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0492": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "??",
+            "display": "Inappropriate due to ...",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0496": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0497": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0498": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0499": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0500": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0501": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0502": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0505": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "*": {
+            "comment": "THO: ; v2: Usage Note: Retired March 2016. Use code F instead"
+          },
+          "#": {
+            "comment": "THO: ; v2: Usage Note: Retired March 2016. Use code L instead"
+          }
+        }
+      }
+    }
+  },
+  "0513": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "TI": {
+            "status": "THO: N; v2: "
+          },
+          "TS": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0520": {
+    "diff": {
+      "vs.description::vs_info-description": "Value Set of codes that specify how important the most important waiting mesasge is. For example, if there are 3 low priority messages, 1 medium priority message and 1 high priority message, the message waiting priority would be \"high\", because  != Value Set of codes that specify how important the most important waiting mesasge is. For example, if there are 3 low priority messages, 1 medium priority message and 1 high priority message, the message waiting priority would be \"high\", because"
+    }
+  },
+  "0523": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0525": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0526": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0527": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0528": {
+    "diff": {
+      "steward::metadata-steward": "oo != InM/OO"
+    }
+  },
+  "0531": {
+    "diff": {
+      "steward::metadata-steward": "pa != InM/PA"
+    }
+  },
+  "0544": {
+    "diff": {
+      "vs.description::vs_info-description": "Value Set of codes that specify at each receipt the status of the container in which the specimen is shipped in chain of custody cases where specimens are moved from lab to lab. If the container is compromised in any way (seal broken, container  != Value Set of codes that specify at each receipt the status of the container in which the specimen is shipped in chain of custody cases where specimens are moved from lab to lab. If the container is compromised in any way (seal broken, container",
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "...",
+            "display": "No suggested values",
+            "status": "D"
+          }
+        ]
+      }
+    }
+  },
+  "0548": {
+    "diff": {
+      "steward::metadata-steward": "sd != StrucDoc"
+    }
+  },
+  "0549": {
+    "diff": {
+      "v2-table-type::metadata-type": "Externally defined != External"
+    }
+  },
+  "0550": {
+    "diff": {
+      "vs.title::vs_info-symbolic_name": " != hl7VS-bodyParts",
+      "vs.description::vs_info-description": " != Value Set of codes that specify the part of the body."
+    }
+  },
+  "0552": {
+    "diff": {
+      "v2-vs-oid::vs_version_info-oid": "2.16.840.1.113883.21.372 != ",
+      "v2-vs-uri::vs_version_info-utg_url": "http://terminology.hl7.org/ValueSet/v2-0552 != ",
+      "v2-cld::vs_version_info-cld": "all codes != ",
+      "v2-binding::binding_info-realm": "Universal != "
+    }
+  },
+  "0560": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "2.16.840.1.113883.18.455 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0560 != ",
+      "concepts": {
+        "diff": {
+          "FL": {
+            "definition": "THO: no definition; v2: Units"
+          },
+          "DY": {
+            "definition": "THO: no definition; v2: Days"
+          },
+          "HS": {
+            "definition": "THO: no definition; v2: Hours"
+          },
+          "MN": {
+            "definition": "THO: no definition; v2: Month"
+          },
+          "YY": {
+            "definition": "THO: no definition; v2: Years"
+          }
+        }
+      }
+    }
+  },
+  "0567": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "THO ValueSet system is http://unitsofmeasure.org; THO CodeSystem url is "
+    ],
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concepts": {
+        "diff": {
+          "[lb_av]": {
+            "display": "THO: ; v2: Pound",
+            "definition": "v2 has definition for concept from non-HL7 CS: Pound",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "[oz_av]": {
+            "display": "THO: ; v2: Ounce",
+            "definition": "v2 has definition for concept from non-HL7 CS: Ounce",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "kg": {
+            "display": "THO: ; v2: Kilogram",
+            "definition": "v2 has definition for concept from non-HL7 CS: Kilogram",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "g": {
+            "display": "THO: ; v2: Gram",
+            "definition": "v2 has definition for concept from non-HL7 CS: Gram",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0568": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "THO ValueSet system is http://unitsofmeasure.org; THO CodeSystem url is "
+    ],
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concepts": {
+        "diff": {
+          "l": {
+            "display": "THO: ; v2: Liter",
+            "definition": "v2 has definition for concept from non-HL7 CS: Liter",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "[pt_us]": {
+            "display": "THO: ; v2: Pint",
+            "definition": "v2 has definition for concept from non-HL7 CS: Pint",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "ml": {
+            "display": "THO: ; v2: Milliliters",
+            "definition": "v2 has definition for concept from non-HL7 CS: Milliliters",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0717": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "JurisIP": {
+            "status": "THO: N; v2: "
+          },
+          "JurisCUI": {
+            "status": "THO: N; v2: "
+          },
+          "JurisDEID": {
+            "status": "THO: N; v2: "
+          },
+          "JurisLDS": {
+            "status": "THO: N; v2: "
+          },
+          "JurisNSI": {
+            "status": "THO: N; v2: "
+          },
+          "JurisPI": {
+            "status": "THO: N; v2: "
+          },
+          "JurisSP-CUI": {
+            "status": "THO: N; v2: "
+          },
+          "JurisUUI": {
+            "status": "THO: N; v2: "
+          },
+          "OrgIP": {
+            "status": "THO: N; v2: "
+          },
+          "OrgCUI": {
+            "status": "THO: N; v2: "
+          },
+          "OrgDEID": {
+            "status": "THO: N; v2: "
+          },
+          "OrgLDS": {
+            "status": "THO: N; v2: "
+          },
+          "OrgNSI": {
+            "status": "THO: N; v2: "
+          },
+          "OrgPI": {
+            "status": "THO: N; v2: "
+          },
+          "OrgSP-CUI": {
+            "status": "THO: N; v2: "
+          },
+          "OrgUUI": {
+            "status": "THO: N; v2: "
+          },
+          "PersIP": {
+            "status": "THO: N; v2: "
+          },
+          "PersNSI": {
+            "status": "THO: N; v2: "
+          },
+          "PersLDS": {
+            "status": "THO: N; v2: "
+          },
+          "PersPI": {
+            "status": "THO: N; v2: "
+          },
+          "GRANTORCHOICE": {
+            "status": "THO: N; v2: "
+          },
+          "IMPLIED": {
+            "status": "THO: N; v2: "
+          },
+          "IMPLIEDD": {
+            "status": "THO: N; v2: "
+          },
+          "NOCONSENT": {
+            "status": "THO: N; v2: "
+          },
+          "OPTIN": {
+            "status": "THO: N; v2: "
+          },
+          "OPTINR": {
+            "status": "THO: N; v2: "
+          },
+          "OPTOUT": {
+            "status": "THO: N; v2: "
+          },
+          "OPTOUTE": {
+            "status": "THO: N; v2: "
+          },
+          "EMRGONLY": {
+            "status": "THO: N; v2: "
+          },
+          "NOPP": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: Map - An “implied” consent directive maps to ISO/TS 17975:2015(E) definition for “Implied: Consent to Collect, Use and Disclose personal health information is implied by the actions or inactions of the individual and the circumstances under which it was implied”; v2: Map: An “implied” consent directive maps to ISO/TS 17975:2015(E) definition for “Implied: Consent to Collect, Use and Disclose personal health information is implied by the actions or inactions of the individual and the circumstances under which it was implied"
+          },
+          "OOC": {
+            "status": "THO: N; v2: "
+          },
+          "OOS": {
+            "status": "THO: N; v2: "
+          },
+          "OIC": {
+            "status": "THO: N; v2: "
+          },
+          "OIS": {
+            "status": "THO: N; v2: "
+          },
+          "42CFRPart2CD": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAAuthCD": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAConsentCD": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAROACD": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAResearchAuthCD": {
+            "status": "THO: N; v2: "
+          },
+          "CompoundResearchCD": {
+            "status": "THO: N; v2: "
+          },
+          "MDHHS-5515": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRCD": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRResearchCD": {
+            "status": "THO: N; v2: "
+          },
+          "42CFRPart2": {
+            "status": "THO: N; v2: "
+          },
+          "COMMONRULE": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAANOPP": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAPsyNotes": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAASelfPay": {
+            "status": "THO: N; v2: "
+          },
+          "Title38Section7332": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAConsent": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAAuth": {
+            "status": "THO: N; v2: "
+          },
+          "HIPAAROA": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRCONSENT": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRCONTRACT": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRHLTHSOCSY": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRLEGALCLAIM": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRLEGALOBL": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRLEGITINTEREST": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRPUBLICHEALTH": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRPUBLICINTEREST": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRRESEARCH": {
+            "status": "THO: N; v2: "
+          },
+          "GDPRVITALINTEREST": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0719": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references http://terminology.hl7.org/CodeSystem/v3-ActCode, which has concepts that could be included in Ch2c."
+    ],
+    "diff": {
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v3-ActCode != ",
+      "v2-cld::vs_version_info-cld": "V3 value set definition != HL7 V3 Value Set",
+      "cs.description::cs_id_info-description": "A code specifying the particular kind of Act that the Act-instance represents within its class. *Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted. != A code specifying the particular kind of Act that the Act-instance represents within its class. Constraints: The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.Code system of concepts specifying the reason for the restricted access. Used in HL7 Version 2.x messaging in the ARV segment.",
+      "cs.version::cs_id_info-version": "8.0.0 != 2.139.0"
+    }
+  },
+  "0725": {
+    "diff": {
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v3-ActMood != ",
+      "cs.title::cs_id_info-symbolic_name": "ActMood != actMood",
+      "cs.description::cs_id_info-description": "OpenIssue: In Ballot 2009May, a strong Negative vote was lodged against several of the concept definitions in the vocabulary used for Act.moodCode. The vote was found \"Persuasive With Mod\", with the understanding that M and M would undertake a detailed review of these concept definitions for a future release of the RIM. != tbd",
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "EXP",
+            "display_name": "Expectation",
+            "definition": "Expectation",
+            "comment": "Expecting that something will occur independently of deliberate\nintent. E.g. expect a patient will discard medications.",
+            "status": ""
+          }
+        ],
+        "tho_vs_only": [
+          {
+            "code": "EXPEC",
+            "display": "expectation",
+            "status": "active"
+          }
+        ],
+        "diff": {
+          "INT": {
+            "display": "THO: intent; v2: Intent",
+            "definition": "THO(from CS): ; v2: Intent",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Plan to perform a service"
+          },
+          "APT": {
+            "display": "THO: appointment; v2: Appointment",
+            "definition": "THO(from CS): ; v2: Appointment",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Planned act for specific time and place"
+          },
+          "ARQ": {
+            "display": "THO: appointment request; v2: Appointment Request",
+            "definition": "THO(from CS): ; v2: Appointment Request",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Request for Booking of an Appointment"
+          },
+          "PRMS": {
+            "display": "THO: promise; v2: Promise",
+            "definition": "THO(from CS): ; v2: Promise",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: An intent to perform a service"
+          },
+          "PRP": {
+            "display": "THO: proposal; v2: Proposal",
+            "definition": "THO(from CS): ; v2: Proposal",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Non-mandated intent to perform an act"
+          },
+          "RQO": {
+            "display": "THO: request; v2: Request-Order",
+            "definition": "THO(from CS): ; v2: Request-Order",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Request or Order for a service"
+          },
+          "EVN": {
+            "display": "THO: event (occurrence); v2: Event",
+            "definition": "THO(from CS): ; v2: Event",
+            "status": "THO: active; v2: ",
+            "comment": "THO: ; v2: Service actually happens or happened or is ongoing."
+          },
+          "EVN.CRT": {
+            "display": "THO: event criterion; v2: Event Criterion",
+            "definition": "THO(from CS): ; v2: Event Criterion",
+            "status": "THO: deprecated; v2: ",
+            "comment": "THO: ; v2: Criterion applying to Events for another Service to be\napplied.\nThis is an Act Mood Predicate.\nSimilar uses of above moods may be defined.\nE.g. Use in Care Plans,"
+          }
+        }
+      }
+    }
+  },
+  "0776": {
+    "diff": {
+      "steward::metadata-steward": "mnm != MM"
+    }
+  },
+  "0834": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "application": {
+            "definition": "THO(from CS): ; v2: Application data"
+          },
+          "audio": {
+            "definition": "THO(from CS): ; v2: Audio data"
+          },
+          "image": {
+            "definition": "THO(from CS): ; v2: Image data"
+          },
+          "model": {
+            "definition": "THO(from CS): ; v2: Model data"
+          },
+          "text": {
+            "definition": "THO(from CS): ; v2: Text data"
+          },
+          "video": {
+            "definition": "THO(from CS): ; v2: Video data"
+          },
+          "multipart": {
+            "definition": "THO(from CS): ; v2: MIME multipart package"
+          }
+        }
+      }
+    }
+  },
+  "0895": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references a CodeSystem metadata record (content = not-present)"
+    ],
+    "diff": {
+      "cs.description::cs_id_info-description": "National Uniform Billing Committee (NUBC) UB-04 Data Specifications Manual, UB form locator 67, Present on Admission (POA) Indicator. Code identifying a diagnosis that was present at the time the order for inpatient admission occurs. POA indicator is assigned to all diagnoses as defined in Appendix I of the \"ICD-9-CM Official Guidelines for Coding and Reporting\" or \"ICD-10-CM Official Guidelines for Coding and Reporting (appropriate to the ICD revision used). The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the DG1 segment. Note that this content was previously published in HL7 artifacts in violaton of IP restrictions; the content has been removed in version 2.2.0 pending finalization of a republication permission request to AHA/NUBC. != National Uniform Billing Committee (NUBC) UB-04 Data Specifications Manual, UB form locator 67, Present on Admission (POA) Indicator. Code identifying a diagnosis that was present at the time the order for inpatient admission occurs. POA indicator is assigned to all diagnoses as defined in Appendix I of the \"ICD-9-CM Official Guidelines for Coding and Reporting\" or \"ICD-10-CM Official Guidelines for Coding and Reporting (appropriate to the ICD revision used). The UB-04 Data Specifications Manual with the codes is available by subscription from NUBC at http://www.nubc.org/become.html. Used in HL7 Version 2.x messaging in the DG1 segment.",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.1.0"
+    }
+  },
+  "0909": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "STBD": {
+            "display": "THO: Share To Be Determined -<p>Category to be determined; v2: Share To Be Determined - Category to be determined",
+            "definition": "THO: Share To Be Determined -<p>Category to be determined; v2: Share To Be Determined - Category to be determined"
+          },
+          "SIMM": {
+            "display": "THO: Share Immediately -<p>Share result with patient immediately; v2: Share Immediately - Share result with patient immediately",
+            "definition": "THO: Share Immediately -<p>Share result with patient immediately; v2: Share Immediately - Share result with patient immediately"
+          },
+          "SWNL": {
+            "display": "THO: Share Within Normal Limits -<p>Share result in reference/therapeutic range with patient immediately<p>Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play.; v2: Share Within Normal Limits - Share result in reference/therapeutic range with patient immediately Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play.",
+            "definition": "THO: Share Within Normal Limits -<p>Share result in reference/therapeutic range with patient immediately<p>Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play.; v2: Share Within Normal Limits - Share result in reference/therapeutic range with patient immediately Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play.",
+            "comment": "THO: immediate<p>1 day; v2: immediate 1 day"
+          },
+          "SID": {
+            "display": "THO: Share In1 Day -<p>Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play.; v2: Share In1 Day - Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play.",
+            "definition": "THO: Share In1 Day -<p>Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play.; v2: Share In1 Day - Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play."
+          },
+          "SIDC": {
+            "display": "THO: Share in 1 Day Conditionally -<p>Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play.<p>Withhold result out of reference/therapeutic range until physician release; v2: Share in 1 Day Conditionally - Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play. Withhold result out of reference/therapeutic range until physician release",
+            "definition": "THO: Share in 1 Day Conditionally -<p>Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play.<p>Withhold result out of reference/therapeutic range until physician release; v2: Share in 1 Day Conditionally - Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play. Withhold result out of reference/therapeutic range until physician release",
+            "comment": "THO: 1 day<p>Withhold; v2: 1 day Withhold"
+          },
+          "SWTH": {
+            "display": "THO: Share Withhold -<p>Withhold result regardless of reference/therapeutic ranges; v2: Share Withhold - Withhold result regardless of reference/therapeutic ranges",
+            "definition": "THO: Share Withhold -<p>Withhold result regardless of reference/therapeutic ranges; v2: Share Withhold - Withhold result regardless of reference/therapeutic ranges"
+          }
+        }
+      }
+    }
+  },
+  "0910": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": " != -",
+      "v2-vs-oid::vs_version_info-oid": " != 2.16.840.1.113883.21.437",
+      "steward::metadata-steward": "oo != InM/OO",
+      "v2-binding::binding_info-realm": "N/A != representative",
+      "cs.title::cs_id_info-symbolic_name": " != noObject",
+      "cs.description::cs_id_info-description": " != tbd",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "vs.title::vs_info-symbolic_name": " != hl7VS-acquisitionModality",
+      "vs.description::vs_info-description": " != Value Set of codes specifying the modality for the acquisition of an image."
+    }
+  },
+  "0912": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "AHP": {
+            "status": "THO: N; v2: "
+          },
+          "APO": {
+            "status": "THO: N; v2: "
+          },
+          "CLPO": {
+            "status": "THO: N; v2: "
+          },
+          "DIE": {
+            "status": "THO: N; v2: "
+          },
+          "EARI": {
+            "status": "THO: N; v2: "
+          },
+          "ED": {
+            "status": "THO: N; v2: "
+          },
+          "EO": {
+            "status": "THO: N; v2: "
+          },
+          "EPRI": {
+            "status": "THO: N; v2: "
+          },
+          "FL": {
+            "status": "THO: N; v2: "
+          },
+          "OF": {
+            "status": "THO: N; v2: "
+          },
+          "OPO": {
+            "status": "THO: N; v2: "
+          },
+          "PPH": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: When a patient registers, this allows a system to indicate the default pharmacy to which the provider should send prescribed medication orders.; v2: When a patient registers, this allows a system to indicate the default pharmacy to which the provider should send prescribed medication orders. Usage Note: Most likely to be used in ADT messages for outpatient care."
+          },
+          "RHP": {
+            "status": "THO: N; v2: "
+          },
+          "RIE": {
+            "status": "THO: N; v2: "
+          },
+          "RPO": {
+            "status": "THO: N; v2: "
+          },
+          "TL": {
+            "status": "THO: N; v2: "
+          },
+          "VPS": {
+            "comment": "THO: ; v2: Usage Note: Use of this code is deprecated; depending on the role of the person use either PH or VP."
+          },
+          "VTS": {
+            "comment": "THO: ; v2: Usage Note: Use of this code is deprecated; depending on the role of the person use either PH or VP."
+          }
+        }
+      }
+    }
+  },
+  "0913": {
+    "diff": {
+      "v2-cs-oid::cs_info-oid": "1.0.4217 != ",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v2-0913 != ",
+      "v2-table-type::metadata-type": "Externally defined != External"
+    }
+  },
+  "0914": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "AP": {
+            "comment": "THO: Enter (AP) when ANALYSIS PROCESS is the reason due to: • Product or supply failure (reagents, calibrators, QC material) • Equipment or instrumentation failure; v2: Enter (AP) when ANALYSIS PROCESS is the reason due to: • Product or supply failure (reagents, calibrators, QC material) • Equipment or instrumentation failure Usage Note: Enter (AP) when ANALYSIS PROCESS is the reason due to: • Product or supply failure (reagents, calibrators, QC material) • Equipment or instrumentation failure"
+          },
+          "IM": {
+            "comment": "THO: Enter (IM) when INFORMATION MANAGEMENT is the reason due to: • Database or Programming issues • Overriding of test results • Inaccurate calculations • Inaccurate flagging, reference ranges, units of measure • Incomplete/inaccurate transmission of test results • Other; v2: Enter (IM) when INFORMATION MANAGEMENT is the reason due to: • Database or Programming issues • Overriding of test results • Inaccurate calculations • Inaccurate flagging, reference ranges, units of measure • Incomplete/inaccurate transmission of test results • Other Usage Note: Enter (IM) when INFORMATION MANAGEMENT is the reason due to: • Database or Programming issues • Overriding of test results • Inaccurate calculations • Inaccurate flagging, reference ranges, units of measure • Incomplete/inaccurate transmission of test results • Other"
+          },
+          "L": {
+            "comment": "THO: Enter (L) when LABORATORY is the reason due to:<p>• Data Entry error<p>• Testing/Technical error<p>• Repeat testing causing change to test result; v2: Enter (L) when LABORATORY is the reason due to: • Data Entry error • Testing/Technical error • Repeat testing causing change to test result Usage Note: Enter (L) when LABORATORY is the reason due to: • Data Entry error • Testing/Technical error • Repeat testing causing change to test result"
+          },
+          "NA": {
+            "comment": "THO: Enter (NA) when NOT-APPLICABLE is the reason due to: • If no revisions performed or • unable to determine reason for revision Note: Do not use NA if result code status is not corrected (revised) or if a preliminary release of results with a correction (revision); v2: Enter (NA) when NOT-APPLICABLE is the reason due to: • If no revisions performed or • unable to determine reason for revision Note: Do not use NA if result code status is not corrected (revised) or if a preliminary release of results with a correction (revision) Usage Note: Enter (NA) when NOT-APPLICABLE is the reason due to: • If no revisions performed or • unable to determine reason for revision Note: Do not use NA if result code status is not corrected (revised) or if a preliminary release of results with a correction (revision)"
+          },
+          "PD": {
+            "comment": "THO: Enter (PD) when new or changed PLACER DATA information is the reason due to: • Changed patient demographics or • Result code data provided by the client on the requisition or specimen manifest that will be entered during order entry (i.e. Previous Biopsy Date, Clinical Information, Source, etc...); v2: Enter (PD) when new or changed PLACER DATA information is the reason due to: • Changed patient demographics or • Result code data provided by the client on the requisition or specimen manifest that will be entered during order entry (i.e. Previous Biopsy Date, Clinical Information, Source, etc...) Usage Note: Enter (PD) when new or changed PLACER DATA information is the reason due to: • Changed patient demographics or • Result code data provided by the client on the requisition or specimen manifest that will be entered during order entry (i.e. Previous Biopsy Date, Clinical Information, Source, etc...)"
+          }
+        }
+      }
+    }
+  },
+  "0916": {
+    "diff": {
+      "concepts": {
+        "tho_cs_only": [
+          {
+            "code": "FNA",
+            "display": "Fasting not asked of the patient at time of procedure.",
+            "status": "A"
+          }
+        ]
+      }
+    }
+  },
+  "0929": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "THO ValueSet system is http://unitsofmeasure.org; THO CodeSystem url is "
+    ],
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concept_domain.code::concept_domain_info-symbolic_name": "WeightUnitsSNAFU != WeightUnits",
+      "concepts": {
+        "diff": {
+          "[lb_av]": {
+            "display": "THO: ; v2: Pound",
+            "definition": "v2 has definition for concept from non-HL7 CS: Pound",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "[oz_av]": {
+            "display": "THO: ; v2: Ounce",
+            "definition": "v2 has definition for concept from non-HL7 CS: Ounce",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "kg": {
+            "display": "THO: ; v2: Kilogram",
+            "definition": "v2 has definition for concept from non-HL7 CS: Kilogram",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "g": {
+            "display": "THO: ; v2: Gram",
+            "definition": "v2 has definition for concept from non-HL7 CS: Gram",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0930": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "THO ValueSet system is http://unitsofmeasure.org; THO CodeSystem url is "
+    ],
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concept_domain.code::concept_domain_info-symbolic_name": "VolumeUnitsSNAFU != VolumeUnits",
+      "concepts": {
+        "diff": {
+          "l": {
+            "display": "THO: ; v2: Liter",
+            "definition": "v2 has definition for concept from non-HL7 CS: Liter",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "[pt_us]": {
+            "display": "THO: ; v2: Pint",
+            "definition": "v2 has definition for concept from non-HL7 CS: Pint",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "ml": {
+            "display": "THO: ; v2: Milliliters",
+            "definition": "v2 has definition for concept from non-HL7 CS: Milliliters",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0931": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "V2.9.1 indicates INCORRECTLY that value set CLD is \"all codes\"",
+      "THO ValueSet system is http://unitsofmeasure.org; THO CodeSystem url is "
+    ],
+    "diff": {
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2.2.0",
+      "concepts": {
+        "v2_only": [
+          {
+            "value": "degF",
+            "display_name": "Degrees Fahrenheit",
+            "definition": "Degrees Fahrenheit",
+            "comment": "typo",
+            "status": "D"
+          }
+        ],
+        "diff": {
+          "[degF]": {
+            "display": "THO: Degrees Fahrenheit (note that V2 has erroneously published this for many years without the square brackets); v2: Degrees Fahrenheit",
+            "definition": "v2 has definition for concept from non-HL7 CS: Degrees Fahrenheit",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "Cel": {
+            "definition": "v2 has definition for concept from non-HL7 CS: Degrees Celsius",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0932": {
+    "warnings": [
+      "ValueSet.compose can't be programmatically checked for http://unitsofmeasure.org"
+    ],
+    "errors": [
+      "V2.9.1 indicates INCORRECTLY that value set CLD is \"all codes\""
+    ],
+    "diff": {
+      "v2-cs-oid::cs_info-oid": " != 2.16.840.1.113883.6.8",
+      "v2-cs-uri::cs_info-utg_url": " != http://unitsofmeasure.org",
+      "cs.title::cs_id_info-symbolic_name": " != ucum",
+      "cs.description::cs_id_info-description": " != Unified Codes for Unit of Measurement",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concepts": {
+        "diff": {
+          "min": {
+            "definition": "v2 has definition for concept from non-HL7 CS: Minutes",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          },
+          "s": {
+            "definition": "v2 has definition for concept from non-HL7 CS: Seconds",
+            "status": "v2 has status for concept from non-HL7 CS: "
+          }
+        }
+      }
+    }
+  },
+  "0937": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "MCS": {
+            "status": "THO: N; v2: "
+          },
+          "MID": {
+            "status": "THO: N; v2: "
+          },
+          "MIG": {
+            "status": "THO: N; v2: "
+          },
+          "MIN": {
+            "status": "THO: N; v2: "
+          },
+          "MOD": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0942": {
+    "diff": {
+      "vs.title::vs_info-symbolic_name": "V2 Table 0942 Version Master != "
+    }
+  },
+  "0945": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "X2": {
+            "comment": "THO: ; v2: Usage Note: corresponds to ^1^:^2 in TCD-2"
+          },
+          "X5": {
+            "comment": "THO: ; v2: Usage Note: corresponds to ^1^:^5 in TCD-2"
+          },
+          "D1": {
+            "comment": "THO: ; v2: Usage Note: corresponds to ^1^:^1.23 in TCD-2"
+          },
+          "D2": {
+            "comment": "THO: ; v2: Usage Note: corresponds to ^1^:^1.45 in TCD-2"
+          }
+        }
+      }
+    }
+  },
+  "0948": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "CAUS": {
+            "status": "THO: N; v2: "
+          },
+          "COMP": {
+            "status": "THO: N; v2: "
+          },
+          "CONCR": {
+            "status": "THO: N; v2: "
+          },
+          "EVID": {
+            "status": "THO: N; v2: "
+          },
+          "INTF": {
+            "status": "THO: N; v2: "
+          },
+          "LIMIT": {
+            "status": "THO: N; v2: "
+          },
+          "SUCCD": {
+            "status": "THO: N; v2: "
+          },
+          "SVTGT": {
+            "status": "THO: N; v2: "
+          },
+          "TRIG": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0949": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "CO": {
+            "status": "THO: N; v2: "
+          },
+          "ST": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: Order placer may accept, cancel and replace, or choose other testing.; v2: Order placer may accept, cancel and replace, or choose other testing. Usage Note: Recommend testing that can use the submitted specimen type"
+          },
+          "SV": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: The question is how to use the available specimen. The Order Placer may choose a different subset of tests.; v2: The question is how to use the available specimen. The Order Placer may choose a different subset of tests. Usage Note: Recommend a subset of ordered tests appropriate for volume"
+          },
+          "UN": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0950": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "EOE": {
+            "status": "THO: N; v2: "
+          },
+          "EOT": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: For example this code would be used to indicate that the order is not currently being worked on but has been placed on a time limited hold awaiting a replacement order. If the hold time expires, default processing will resume.; v2: For example this code would be used to indicate that the order is not currently being worked on but has been placed on a time limited hold awaiting a replacement order. If the hold time expires, default processing will resume. Usage Note: Filler Applications: In an order replacement setting, sent in recommendation for order replacement message (OML), where ORC-5 = HD, indicating that the hold for a response to the recommendation is timed."
+          }
+        }
+      }
+    }
+  },
+  "0951": {
+    "diff": {
+      "concepts": {
+        "diff": {
+          "BS": {
+            "status": "THO: N; v2: "
+          },
+          "CR": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "FP": {
+            "status": "THO: N; v2: "
+          },
+          "IN": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "IR": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "IT": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "OP": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "PI": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "SI": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "SP": {
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "TP": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "TT": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          },
+          "XR": {
+            "status": "THO: N; v2: ",
+            "comment": "THO: ; v2: Usage Note: Used to indicate why review is requested"
+          }
+        }
+      }
+    }
+  },
+  "0952": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references http://terminology.hl7.org/CodeSystem/v3-Confidentiality, which has concepts that could be included in Ch2c."
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Confidentiality Classification != Confidentiality",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality != ",
+      "v2-cld::vs_version_info-cld": "V3 value set definition != HL7 V3 Value Set",
+      "v2-table-type::metadata-type": "Externally defined != External",
+      "cs.description::cs_id_info-description": "A set of codes specifying the security classification of acts and roles in accordance with the definition for concept domain \"Confidentiality\". != A set of codes specifying the security classification of acts and roles in accordance with the definition for concept domain D:Confidentiality.",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.134.0",
+      "concept_domain.code::concept_domain_info-symbolic_name": "ConfidentialityV2 != Confidentiality"
+    }
+  },
+  "0959": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH, which has concepts that could be included in Ch2c."
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Work Classification ODH != workClassificationODH",
+      "v2-cs-uri::cs_info-utg_url": "http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH != ",
+      "v2-cld::vs_version_info-cld": "V3 value set definition != HL7 V3 Value Set",
+      "steward::metadata-steward": "pher != PH",
+      "cs.title::cs_id_info-symbolic_name": "Work Classification (Occupational Data for Health) != workClassificationODH",
+      "cs.description::cs_id_info-description": "Code system of concepts representing a person's job type as defined by compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.). != Code system of concepts representing a person’s employment type as defined by compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.).",
+      "cs.version::cs_id_info-version": "2.2.0 != 2.1404.0"
+    }
+  },
+  "0960": {
+    "diff": {
+      "display::metadata-symbolic_name": "Data Absent Reason != DataAbsentReason",
+      "cs.title::cs_id_info-symbolic_name": "DataAbsentReason != dataAbsentReason",
+      "cs.version::cs_id_info-version": "0.1.0 != 2.3.4.0.0",
+      "vs.title::vs_info-symbolic_name": " != dataAbsentReason",
+      "vs.description::vs_info-description": " != Used to specify why the normally expected content of the data element is missing."
+    }
+  },
+  "0961": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references another ValueSet: [\"http://terminology.hl7.org/ValueSet/device-kind\"] that has values that may be available for inclusion in Ch2c."
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Device Type != DeviceType",
+      "v2-cs-oid::cs_info-oid": " != -",
+      "v2-cld::vs_version_info-cld": "FHIR value set definition != This value set includes codes from the following code systems: Include codes from http://snomed.info/sct where concept is-a 49062001 (Device)",
+      "cs.title::cs_id_info-symbolic_name": " != noObject",
+      "cs.description::cs_id_info-description": " != tbd",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concept_domain.code::concept_domain_info-symbolic_name": "DeviceTypeSNAFU != DeviceType"
+    }
+  },
+  "0962": {
+    "warnings": [
+      "v2 table has no concepts but THO includes a VS with CLD that references http://hl7.org/fhir/device-status, which has concepts that could be included in Ch2c...if they are actually the concepts that v2 wants."
+    ],
+    "diff": {
+      "display::metadata-symbolic_name": "Device Status != DeviceStatus",
+      "cs.title::cs_id_info-symbolic_name": " != DeviceStatus",
+      "cs.description::cs_id_info-description": " != The availability status of the device.",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "concept_domain.code::concept_domain_info-symbolic_name": "DeviceStatusSNAFU != DeviceStatus"
+    }
+  },
+  "0963": {
+    "diff": {
+      "display::metadata-symbolic_name": "Device Safety != DeviceSafety",
+      "v2-cld::vs_version_info-cld": "non-HL7 value set definition != See content logical definition of the referenced value set",
+      "cs.title::cs_id_info-symbolic_name": " != NCI Thesaurus",
+      "cs.description::cs_id_info-description": " != NCIt is a widely recognized standard for biomedical coding and reference, used by a broad variety of public and private partners both nationally and internationally including the Clinical Data Interchange Standards Consortium Terminology (CDISC), the U.S. Food and Drug Administration (FDA), the Federal Medication Terminologies (FMT), and the National Council for Prescription Drug Programs (NCPDP).",
+      "cs.version::cs_id_info-version": " != 2..0",
+      "vs.title::vs_info-symbolic_name": " != DeviceSafety",
+      "vs.description::vs_info-description": " != Codes used to identify medical devices safety characteristics. These codes are taken from the [NCI Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/pages/home.jsf) and are provided here as a suggestive example."
+    }
+  },
+  "0964": {
+    "diff": {
+      "display::metadata-symbolic_name": "Service Reason != ServiceReason",
+      "v2-binding::binding_info-realm": "Universal != "
+    }
+  },
+  "0965": {
+    "diff": {
+      "display::metadata-symbolic_name": "Contract Type != "
+    }
+  },
+  "0966": {
+    "diff": {
+      "display::metadata-symbolic_name": "Pricing Tier Level != "
+    }
+  },
+  "0967": {
+    "diff": {
+      "display::metadata-symbolic_name": "Container Form != ",
+      "concept_domain.code::concept_domain_info-symbolic_name": "ContainerFormV2 != ContainerForm"
+    }
+  },
+  "0968": {
+    "diff": {
+      "display::metadata-symbolic_name": "Container Material != "
+    }
+  },
+  "0969": {
+    "diff": {
+      "display::metadata-symbolic_name": "Container Common Name != ",
+      "v2-binding::binding_info-realm": "Representative != "
+    }
+  },
+  "0970": {
+    "diff": {
+      "display::metadata-symbolic_name": "Online Verification Result != ",
+      "concepts": {
+        "diff": {
+          "1": {
+            "status": "THO: N; v2: "
+          },
+          "2": {
+            "status": "THO: N; v2: "
+          },
+          "3": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  },
+  "0971": {
+    "diff": {
+      "display::metadata-symbolic_name": "Online Verification Result Error Code != ",
+      "vs.description::vs_info-description": "V2 Table 0971 Version Master (Online Verification Result Error Code) != tbd",
+      "concepts": {
+        "diff": {
+          "1": {
+            "status": "THO: N; v2: "
+          },
+          "2": {
+            "status": "THO: N; v2: "
+          },
+          "3": {
+            "status": "THO: N; v2: "
+          },
+          "4": {
+            "status": "THO: N; v2: "
+          }
+        }
+      }
+    }
+  }
+}

@@ -71,25 +71,28 @@ module Docx
     #   @link_rels
     # end
     
-    def register_rels
+    def register_rels      
+      puts Rainbow('NO @rels!!!!!!!!!!!!!!!!!').red unless @rels
       modes = []
       types = []
       ids   = []
       @rels_by_type = {}
       by_id   = {}
       by_type = {}
-      @rels.xpath("//xmlns:Relationship").each do |n|
-        type = n['Type'].split('/').last
-        types << type
-        id   = n['Id']
-        mode   = n['TargetMode']
-        modes << mode
-        target = n['Target']
-        data = {:target => target, :id => id, :type => type}
-        data[:external] = true if mode == 'External'
-        by_type[type.to_sym] ||= {}
-        by_type[type.to_sym][id] = data
-        by_id[id] = data
+      if @rels
+        @rels.xpath("//xmlns:Relationship").each do |n|
+          type = n['Type'].split('/').last
+          types << type
+          id   = n['Id']
+          mode   = n['TargetMode']
+          modes << mode
+          target = n['Target']
+          data = {:target => target, :id => id, :type => type}
+          data[:external] = true if mode == 'External'
+          by_type[type.to_sym] ||= {}
+          by_type[type.to_sym][id] = data
+          by_id[id] = data
+        end
       end
       # puts types.uniq.sort
       @obj_rels   = by_type[:oleObject] || {}

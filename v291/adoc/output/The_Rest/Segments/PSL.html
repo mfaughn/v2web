@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>PSL</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>PSL</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_psl_productservice_line_item_segment">PSL &ndash; Product/Service Line Item Segment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_psl_1_provider_productservice_line_item_number_ei_01955">PSL-1 Provider Product/Service Line Item Number (EI) 01955</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_2_payer_productservice_line_item_number_ei_01956">PSL-2 Payer Product/Service Line Item Number (EI) 01956</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_3_productservice_line_item_sequence_number_si_01957">PSL-3 Product/Service Line Item Sequence Number (SI) 01957</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_4_provider_tracking_id_ei_01958">PSL-4 Provider Tracking ID (EI) 01958</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_5_payer_tracking_id_ei_01959">PSL-5 Payer Tracking ID (EI) 01959</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_6_productservice_line_item_status_cwe_01960">PSL-6 Product/Service Line Item Status (CWE) 01960</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_7_productservice_code_cwe_01961">PSL-7 Product/Service Code (CWE) 01961</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_8_productservice_code_modifier_cwe_01962">PSL-8 Product/Service Code Modifier (CWE) 01962</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_9_productservice_code_description_st_01963">PSL-9 Product/Service Code Description (ST) 01963</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_10_productservice_effective_date_dtm_01964">PSL-10 Product/Service Effective Date (DTM) 01964</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_11_productservice_expiration_date_dtm_01965">PSL-11 Product/Service Expiration Date (DTM) 01965</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_12_productservice_quantity_cq_01966">PSL-12 Product/Service Quantity (CQ) 01966</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_13_productservice_unit_cost_cp_01967">PSL-13 Product/Service Unit Cost (CP) 01967</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_14_number_of_items_per_unit_nm_01968">PSL-14 Number of Items per Unit (NM) 01968</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_15_productservice_gross_amount_cp_01969">PSL-15 Product/Service Gross Amount (CP) 01969</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_16_productservice_billed_amount_cp_01970">PSL-16 Product/Service Billed Amount (CP) 01970</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_17_productservice_clarification_code_type_cwe_01971">PSL-17 Product/Service Clarification Code Type (CWE) 01971</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_18_productservice_clarification_code_value_st_01972">PSL-18 Product/Service Clarification Code Value (ST) 01972</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_19_health_document_reference_identifier_ei_01973">PSL-19 Health Document Reference Identifier (EI) 01973</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_20_processing_consideration_code_cwe_01974">PSL-20 Processing Consideration Code (CWE) 01974</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_21_restricted_disclosure_indicator_id_01975">PSL-21 Restricted Disclosure Indicator (ID) 01975</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_22_related_productservice_code_indicator_cwe_01976">PSL-22 Related Product/Service Code Indicator (CWE) 01976</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_23_productservice_amount_for_physician_cp_01977">PSL-23 Product/Service Amount for Physician (CP) 01977</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_24_productservice_cost_factor_nm_01978">PSL-24 Product/Service Cost Factor (NM) 01978</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_25_cost_center_cx_01933">PSL-25 Cost Center (CX) 01933</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_26_billing_period_dr_01980">PSL-26 Billing Period (DR) 01980</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_27_days_without_billing_nm_01981">PSL-27 Days without Billing (NM) 01981</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_28_session_no_nm_01982">PSL-28 Session-No (NM) 01982</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_29_executing_physician_id_xcn_01983">PSL-29 Executing Physician ID (XCN) 01983</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_30_responsible_physician_id_xcn_01984">PSL-30 Responsible Physician ID (XCN) 01984</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_31_role_executing_physician_cwe_01985">PSL-31 Role Executing Physician (CWE) 01985</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_32_medical_role_executing_physician_cwe_01986">PSL-32 Medical Role Executing Physician (CWE) 01986</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_33_side_of_body_cwe_01987">PSL-33 Side of body (CWE) 01987</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_34_number_of_tps_pp_nm_01988">PSL-34 Number of TP&#8217;s PP (NM) 01988</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_35_tp_value_pp_cp_01989">PSL-35 TP-Value PP (CP) 01989</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_36_internal_scaling_factor_pp_nm_01990">PSL-36 Internal Scaling Factor PP (NM) 01990</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_37_external_scaling_factor_pp_nm_01991">PSL-37 External Scaling Factor PP (NM) 01991</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_38_amount_pp_cp_01992">PSL-38 Amount PP (CP) 01992</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_39_number_of_tps_technical_part_nm_01993">PSL-39 Number of TP&#8217;s Technical Part (NM) 01993</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_40_tp_value_technical_part_cp_01994">PSL-40 TP-Value Technical Part (CP) 01994</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_41_internal_scaling_factor_technical_part_nm_01995">PSL-41 Internal Scaling Factor Technical Part (NM) 01995</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_42_external_scaling_factor_technical_part_nm_01996">PSL-42 External Scaling Factor Technical Part (NM) 01996</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_43_amount_technical_part_cp_01997">PSL-43 Amount Technical Part (CP) 01997</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_44_total_amount_professional_part_technical_part_cp_01998">PSL-44 Total Amount Professional Part + Technical Part (CP) 01998</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_45_vat_rate_nm_01999">PSL-45 VAT-Rate (NM) 01999</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_46_main_service_id_02000">PSL-46 Main-Service (ID) 02000</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_47_validation_id_02001">PSL-47 Validation (ID) 02001</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_psl_48_comment_st_02002">PSL-48 Comment (ST) 02002</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 16:00:03 -0600
+</div>
+</div>
+</body>
+</html>

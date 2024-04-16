@@ -1,0 +1,1789 @@
+AdministrativeSex - Administrative Sex (0001): 
+The domain of possible values for a patient's sex.
+------------------------------------
+V2MaritalStatus - Marital Status (0002): 
+The domain of possible values for a person's marital (civil/legal) status.
+------------------------------------
+EventType - Event Type (0003): 
+The domain of possible values for the trigger event for Version 2.x interface messages.
+------------------------------------
+PatientClass - Patient Class (0004): 
+The domain of possible values that systems to categorize patients by site in HL7 Version 2.x interfaces.
+------------------------------------
+V2Race - Race (0005): 
+The domain of possible values for the patient's race.
+------------------------------------
+Religion - Religion (0006): 
+The domain of possible values for a person's religion.
+------------------------------------
+AdmissionType - Admission Type (0007): 
+The domain of possible values for the circumstances under which the patient was or will be admitted.
+------------------------------------
+AcknowledgmentCode - Acknowledgment code (0008): 
+The domain of possible values for acknowledgment codes used in Version 2.x message.  For details of usage, see message processing rules in the published Standard.
+------------------------------------
+AmbulatoryStatus - Ambulatory Status (0009): 
+The domain of possible values for permanent or transient handicapped conditions of a person.
+------------------------------------
+TransactionType - Transaction Type (0017): 
+The domain of possible values for a type of financial transaction.
+------------------------------------
+PatientType - Patient Type (0018): 
+The domain of possible values for the patient type.  No suggested values.
+------------------------------------
+AnesthesiaCode - Anesthesia Code (0019): 
+The domain of possible values for the anesthesia used during the procedure.  No suggested values.
+------------------------------------
+BadDebtAgencyCode - Bad Debt Agency Code (0021): 
+The domain of possible values for the bad debt agency to which the account was transferred.
+------------------------------------
+BillingStatus - Billing Status (0022): 
+The domain of possible values for whether the particular insurance has been billed and, if so, the type of bill.  No suggested values.
+------------------------------------
+AdmitSource - Admit Source (0023): 
+The domain of possible values for where the patient was admitted.  No suggested values.
+------------------------------------
+FeeSchedule - Fee Schedule (0024): 
+The domain of possible values for the appropriate fee schedule to be used for this transaction posting.
+------------------------------------
+Priority - Priority (0027): 
+The domain of possible values for the allowed priorities for obtaining the specimen.
+------------------------------------
+Charge_PriceIndicator - Charge/Price Indicator (0032): 
+The domain of possible values for which price schedule is to be used for room and bed charges.  No suggested values.
+------------------------------------
+OrderStatus - Order status (0038): 
+The domain of possible values for the status of an order. The purpose of these values are to report the status of an order either upon request (solicited), or when the status changes (unsolicited). The values are not intended to initiate action.  It is assumed that the order status value always reflects the status as it is known to the sending application at the time that a message is sent.  Only the filler can originate these values.
+------------------------------------
+CompanyPlanCode - Company Plan Code (0042): 
+The domain of possible values for an insurance company plan uniquely.  No suggested values.
+------------------------------------
+ConditionCode - Condition Code (0043): 
+The domain of possible values for the condition code.
+------------------------------------
+ContractCode - Contract Code (0044): 
+The domain of possible values for the type of contract entered into by the healthcare facility and the guarantor for the purpose of settling outstanding account balances.
+------------------------------------
+CourtesyCode - Courtesy Code (0045): 
+The domain of possible values for whether the patient will be extended certain special courtesies.
+------------------------------------
+CreditRating - Credit Rating (0046): 
+The domain of possible values for past credit experience.
+------------------------------------
+DepartmentCode - Department Code (0049): 
+The domain of possible values for the department that controls a specified transaction code.
+------------------------------------
+AccidentCode - Accident Code (0050): 
+The domain of possible values for the type of accident.
+------------------------------------
+DiagnosisCode - Diagnosis Code (0051): 
+The domain of possible values for the primary diagnosis code for billing purposes.
+------------------------------------
+DiagnosisType - Diagnosis Type (0052): 
+The domain of possible values that specify a type of diagnosis being sent.
+------------------------------------
+DiagnosisRelatedGroup - Diagnosis Related Group (0055): 
+The domain of possible values for the diagnostic related group (DRG) for the transaction.
+------------------------------------
+DrgGrouperReviewCode - DRG Grouper Review Code (0056): 
+The domain of possible values for that the grouper results have been reviewed and approved.
+------------------------------------
+ConsentCode - Consent Code (0059): 
+The domain of possible values for the type of consent that was obtained for permission to treat the patient.
+------------------------------------
+CheckDigitScheme - Check Digit Scheme (0061): 
+The domain of possible values for the check digit scheme employed.
+------------------------------------
+EventReason - Event Reason (0062): 
+The domain of possible values for the reason for an event.
+------------------------------------
+Relationship - Relationship (0063): 
+The domain of possible values for an actual personal relationship that the next of kin/associated party has to a patient.
+------------------------------------
+FinancialClass - Financial Class (0064): 
+The domain of possible values for the financial class assigned to a person.
+------------------------------------
+SpecimenActionCode - Specimen Action Code (0065): 
+The domain of possible values for actions to be taken with respect to the specimens that accompany or precede an order.  The purpose of these are to further qualify (when appropriate) the general action indicated by the order control code.
+------------------------------------
+EmploymentStatusV2 - Employment Status (0066): 
+The domain of possible values for the guarantor's employment status.
+------------------------------------
+GuarantorType - Guarantor Type (0068): 
+The domain of possible values for the type of guarantor, e.g., individual, institution, etc.  No suggested values.
+------------------------------------
+HospitalService - Hospital Service (0069): 
+The domain of possible values for the treatment or type of surgery the patient is scheduled to receive.
+------------------------------------
+InsurancePlanId - Insurance Plan ID (0072): 
+The domain of possible values for the identifier of an insurance plan with which a transaction should be associated.
+------------------------------------
+InterestRateCode - Interest Rate Code (0073): 
+The domain of possible values for the amount of interest that will be charged the guarantor on any outstanding amounts.
+------------------------------------
+DiagnosticServiceSectionId - Diagnostic Service Section ID (0074): 
+The domain of possible values for a section of a diagnostic service where an observation may be performed.
+------------------------------------
+MessageType - Message Type (0076): 
+The domain of possible values for message types.
+------------------------------------
+InterpretationCodes - Interpretation Codes (0078): 
+The domain of possible values for a categorical assessment of an observation value.
+Discussion: These interpretation codes are sometimes called "abnormal flags", however, the judgment of normalcy is just one of the common rough interpretations, and is often not relevant. For example, the susceptibility interpretations are not about "normalcy", and for any observation of a pathologic condition, it does not make sense to state the normalcy, since pathologic conditions are never considered "normal."
+------------------------------------
+NatureOfAbnormalTesting - Nature of Abnormal Testing (0080): 
+The domain of possible values for the nature of an abnormal test.
+------------------------------------
+OutlierType - Outlier Type (0083): 
+The domain of possible values for the type of outlier (i.e. period of care beyond DRG-standard stay in facility) that has been paid.
+------------------------------------
+PerformedBy - Performed by (0084): 
+The domain of possible values for a composite number/name of a person/group that performed a test/procedure/transaction, etc.
+------------------------------------
+ObservationResultStatusCodesInterpretation - Observation Result Status Codes Interpretation (0085): 
+The domain of possible values for observation result status. These codes reflect the current completion status of the results for one Observation Identifier.
+------------------------------------
+PlanId - Plan ID (0086): 
+The domain of possible values for the coding structure that identifies the various plan types (i.e., Medicare, Medicaid, Blue Cross, HMO, etc.).
+------------------------------------
+Pre-admitTestIndicator - Pre-Admit Test Indicator (0087): 
+The domain of possible values for whether the patient must have pre-admission testing done in order to be admitted.
+------------------------------------
+ProcedureCode - Procedure Code (0088): 
+The domain of possible values for a unique identifier assigned to a procedure, if any, associated with a charge.
+------------------------------------
+V2QueryPriority - Query Priority (0091): 
+The domain of possible values for a time frame in which a querry response is expected.
+------------------------------------
+Re-admissionIndicator - Re-Admission Indicator (0092): 
+The domain of possible values which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.
+------------------------------------
+ReleaseInformation - Release Information (0093): 
+The domain of possible values for whether the healthcare provider can release information about a patient and what information can be released.
+------------------------------------
+TypeOfAgreement - Type of Agreement (0098): 
+The domain of possible values for codes to further identify an insurance plan.
+------------------------------------
+VipIndicator - VIP Indicator (0099): 
+The domain of possible values for a type of VIP.
+------------------------------------
+InvocationEvent - Invocation event (0100): 
+The domain of possible values for codes for an event precipitating/triggering a charge activity.
+------------------------------------
+ProcessingId - Processing ID (0103): 
+The domain of possible values for whether the message is part of a production, training or debugging system.
+------------------------------------
+VersionId - Version ID (0104): 
+The domain of possible values which are used to identify an HL7 version in the Version 2.x family of published standards.
+------------------------------------
+SourceOfComment - Source of Comment (0105): 
+The domain of possible values which are used to specify the source of a comment.
+------------------------------------
+TransferToBadDebtCode - Transfer to Bad Debt Code (0110): 
+The domain of possible values for that the account was transferred to bad debts and gives the reason.  No suggested values.
+------------------------------------
+DeleteAccountCode - Delete Account Code (0111): 
+The domain of possible values for that the account was deleted from the file and gives the reason.  No suggested values.
+------------------------------------
+DischargeDisposition - Discharge Disposition (0112): 
+The domain of possible values for the disposition of the patient at time of discharge (i.e., discharged to home, expired, etc.).  No suggested values.  In the US, this field should use the Official Uniform Billing (UB) 04 2008 numeric codes found on form locator 17.
+------------------------------------
+DischargedToLocation - Discharged to Location (0113): 
+The domain of possible values for the healthcare facility to which the patient was discharged.  No suggested values.
+------------------------------------
+DietType - Diet Type (0114): 
+The domain of possible values for a special diet type for a patient.  No suggested values.
+------------------------------------
+ServicingFacilities - Servicing Facilities (0115): 
+The domain of possible values for the healthcare facility with which this visit is associated in a multiple facility environment.  No suggested values.
+------------------------------------
+BedStatus - Bed Status (0116): 
+The domain of possible values for the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.
+------------------------------------
+AccountStatus - Account Status (0117): 
+The domain of possible values for the account status.  No suggested values.
+------------------------------------
+MajorDiagnosticCategory - Major Diagnostic Category (0118): 
+The domain of possible values for the major diagnostic category.  No suggested values.
+------------------------------------
+OrderControlCodes - Order Control Codes (0119): 
+The domain of possible values which are used to determine the function of the order segment.  Depending on the message, the action specified by one of these control codes may refer to an order or an individual service.
+------------------------------------
+ResponseFlag - Response Flag (0121): 
+The domain of possible values allowing the placer (sending) application to determine the amount of information to be returned from the filler.
+------------------------------------
+ChargeType - Charge Type (0122): 
+The domain of possible values for someone or something other than the patient to be billed for a service.
+------------------------------------
+ResultStatus - Result Status (0123): 
+The domain of possible values for a status of results for an order.
+------------------------------------
+TransportationMode - Transportation Mode (0124): 
+The domain of possible values for how (or whether) to transport a patient, when applicable, for an ordered service.
+------------------------------------
+ValueType - Value Type (0125): 
+The domain of possible values for the format of the observation value in the Observation Result (OBX).
+------------------------------------
+QuantityLimitedRequest - Quantity Limited Request (0126): 
+The domain of possible values for the maximum length of a query response that can be accepted by a requesting system, and are expressed as units of mesaure of query response objects.
+------------------------------------
+AllergenType - Allergen Type (0127): 
+The domain of possible values fora classification of general allergy categories (drug, food, pollen, etc.).
+------------------------------------
+AllergySeverity - Allergy Severity (0128): 
+The domain of possible values for the general severity of an allergy.
+------------------------------------
+AccommodationCode - Accommodation Code (0129): 
+The domain of possible values for the fiancial accommodation type of the bed or room which implies the rate to be used when occupied by a patient under specific medical conditions, which determines how it is billed.  No suggested values.
+------------------------------------
+VisitUserCode - Visit User Code (0130): 
+The domain of possible values for categories of a patient's visit with respect to an individual institution's needs, and is expected to be different on a site-specific basis.
+------------------------------------
+ContactRole - Contact Role (0131): 
+The domain of possible values for a relationship role that the next of kin/associated parties plays with regard to a patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that issued a referral.
+------------------------------------
+TransactionCode - Transaction Code (0132): 
+The domain of possible values that are used by an institution for the purpose of uniquely identifying a transaction based on the Transaction Type.  For example, procedure, supply item, or test for charges; or to identify the payment medium for payments.
+------------------------------------
+AssignmentOfBenefits - Assignment of Benefits (0135): 
+The domain of possible values which indicate whether an insured person agreed to assign the insurance benefits to a healthcare provider.  If so, the insurance will pay the provider directly.
+------------------------------------
+Yes/noIndicator - Yes/no Indicator (0136): 
+The domain of possible values for either Yes or No used in fields containing binary answers generally user-specified.
+------------------------------------
+MailClaimParty - Mail Claim Party (0137): 
+The domain of possible values for a party to which a claim should be mailed when claims are sent by mail.
+------------------------------------
+EmployerInformationData - Employer Information Data (0139): 
+The domain of possible values for the required employer information data for UB82 form locator 71.  No suggested values.
+------------------------------------
+MilitaryService - Military Service (0140): 
+The domain of possible values for the military branch.  This field is defined by CMS or other regulatory agencies.
+------------------------------------
+MilitaryRank/grade - Military Rank/Grade (0141): 
+The domain of possible values for the military rank/grade of the patient.
+Australia: https://en.wikipedia.org/wiki/Australian_Defence_Force_ranks
+Canada: http://www.forces.gc.ca/en/honours-history-badges-insignia/rank.page
+United States: published in the Defense Travel Administrator's Manual, Appendix M: Military Rank/Civilian Pay Grade Abbreviations and Service Agency Names, http://www.defensetravel.dod.mil/Docs/Training/DTA_App_M.pdf
+------------------------------------
+MilitaryStatus - Military Status (0142): 
+The domain of possible values for the military status of the patient.  This field is defined by CMS or other regulatory agencies.
+------------------------------------
+Non-coveredInsuranceCode - Non-covered Insurance Code (0143): 
+The domain of possible values for the reason a service is not covered.  No suggested values.
+------------------------------------
+EligibilitySource - Eligibility Source (0144): 
+The domain of possible values for the source of information about the insured's eligibility for benefits.
+------------------------------------
+RoomType - Room Type (0145): 
+The domain of possible values for the room type.
+------------------------------------
+AmountType - Amount Type (0146): 
+The domain of possible values for amount quantity type.
+------------------------------------
+PolicyType - Policy Type (0147): 
+The domain of possible values for the policy type.
+------------------------------------
+MoneyOrPercentageIndicator - Money or Percentage Indicator (0148): 
+The domain of possible values for whether the amount is currency or a percentage.
+------------------------------------
+DayType - Day Type (0149): 
+The domain of possible values for whether the days are denied, pending or approved.
+------------------------------------
+CertificationPatientType - Certification Patient Type (0150): 
+The domain of possible values for the category or type of patient for which this certification is requested.
+------------------------------------
+SecondOpinionStatus - Second Opinion Status (0151): 
+The domain of possible values for the status of the second opinion.  No suggested values.
+------------------------------------
+SecondOpinionDocumentationReceived - Second Opinion Documentation Received (0152): 
+The domain of possible values for if accompanying documentation has been received by the provider.  No suggested values.
+------------------------------------
+ValueCode - Value Code (0153): 
+The domain of possible values for the National Uniform Billing Committee (NUBC) code.  In the US, the codes defined in code system 2.16.840.1.113883.6.301.6 nubc-ValueCode-cs are often used.
+------------------------------------
+AcknowledgmentConditions - Accept/Application Acknowledgment Conditions (0155): 
+The domain of possible values which identify conditions under which accept acknowledgments are required to be returned in response to a message, and required for enhanced acknowledgment mode.
+------------------------------------
+DietCodeSpecificationType - Diet Code Specification Type (0159): 
+The domain of possible values for the type of diet.
+------------------------------------
+TrayType - Tray Type (0160): 
+The domain of possible values for the type of dietary tray.
+------------------------------------
+AllowSubstitution - Allow Substitution (0161): 
+The domain of possible values for whether substitutions are allowed and, if so, the type of substitutions allowed.
+------------------------------------
+V2RouteOfAdministration - Route of Administration (0162): 
+The domain of possible values for the route of administration.
+------------------------------------
+BodySite - Body Site (0163): 
+The domain of possible values that specify a body site from which a specimen is obtained.
+------------------------------------
+AdministrationDevice - Administration Device (0164): 
+The domain of possible values for the mechanical device used to aid in the administration of the drug or other treatment.  Common examples are IV-sets of different types.
+------------------------------------
+AdministrationMethod - Administration Method (0165): 
+The domain of possible values for the specific method requested for the administration of the drug or treatment to the patient.
+------------------------------------
+RxComponentType - RX Component Type (0166): 
+The domain of possible values for the RX component type.
+------------------------------------
+SubstitutionStatus - Substitution Status (0167): 
+The domain of possible values for the substitution status.
+------------------------------------
+ProcessingPriority - Processing Priority (0168): 
+The domain of possible values for one or more available priorities for performing the observation or test.
+------------------------------------
+ReportingPriority - Reporting Priority (0169): 
+The domain of possible values for the available priorities reporting the test results when the user is asked to specify the reporting priority independent of the processing priority.
+------------------------------------
+DerivedSpecimen - Derived Specimen (0170): 
+The domain of possible values for the parents and children for diagnostic studies, especially in microbiology, where the initial specimen (e.g., blood) is processed to produce results (e.g., the identity of the bacteria grown out of the culture).  The process also produces new "specimens" (e.g., pure culture of staphylococcus, and E. coli), and these are studied by a second order process (bacterial sensitivities). The parents (e.g., blood culture) and children (e.g., penicillin MIC) are identified in such cases.
+------------------------------------
+Citizenship - Citizenship (0171): 
+The domain of possible values for the information related to a person's country citizenship.  No suggested values.
+------------------------------------
+VeteransMilitaryStatus - Veterans Military Status (0172): 
+The domain of possible values for the military status assigned to a veteran.  No suggested values.
+------------------------------------
+CoordinationOfBenefits - Coordination of Benefits (0173): 
+The domain of possible values for whether this insurance works in conjunction with other insurance plans or if it provides independent coverage and payment of benefits regardless of other insurance that might be available to the patient.
+------------------------------------
+NatureOfService_Test_Observation - Nature of Service/Test/Observation (0174): 
+The domain of possible values for an identification of a test battery, an entire functional procedure or study, a single test value (observation), multiple test batteries or functional procedures as an orderable unit (profile), or a single test value (observation) calculated from other independent observations, typically used as an indicator for Master Files.
+------------------------------------
+MasterFileIdentifierCode - Master File Identifier Code (0175): 
+The domain of possible values which are represented by codes identifying HL7 Versions 2.x Master Files.
+------------------------------------
+ConfidentialityCode - Confidentiality Code (0177): 
+The domain of possible values for the degree to which special confidentiality protection should be applied to the observation.
+------------------------------------
+FileLevelEventCode - File Level Event Code (0178): 
+The domain of possible values for file-level events for master files.
+------------------------------------
+V2ResponseLevel - Response Level (0179): 
+The domain of possible values for application response levels defined for a given Master File Message at the MFE segment level, and used for MFN-Master File Notification message.
+------------------------------------
+MasterfileActionCode - Record-level Event Code (0180): 
+The domain of possible values for a record-level event for a master file record.
+------------------------------------
+MfnRecord-levelErrorReturn - MFN Record-level Error Return (0181): 
+The domain of possible values for the status of the requested update.  Site-defined table, specific to each master file being updated via this transaction.
+------------------------------------
+StaffType - Staff type (0182): 
+The domain of possible values for the staff person's sex.  No suggested values.
+------------------------------------
+Active/Inactive - Active/Inactive (0183): 
+The domain of possible values for whether a person is currently a valid staff member.
+------------------------------------
+Department - Department (0184): 
+The domain of possible values for the institution department to which this person reports or belongs.  No suggested values.
+------------------------------------
+PreferredMethodOfContact - Preferred Method of Contact (0185): 
+The domain of possible values for which of a group of multiple phone numbers is the preferred method of contact for this person.
+------------------------------------
+PractitionerCategory - Practitioner Category (0186): 
+The domain of possible values for the category of practitioner.  No suggested values.
+------------------------------------
+ProviderBilling - Provider Billing (0187): 
+The domain of possible values for how provider services are billed.
+------------------------------------
+EthnicGroup - Ethnic Group (0189): 
+The domain of possible values further defining a patient's ancestry.  In the US, a current use is to use these codes to report ethnicity in line with US federal standards for Hispanic origin.
+------------------------------------
+AddressType - Address Type (0190): 
+The domain of possible values for types or kinds of addresses.
+------------------------------------
+TypeOfReferencedData - Type of Referenced Data (0191): 
+The domain of possible values declaring the general type of media data that is encoded.
+------------------------------------
+AmountClass - Amount Class (0193): 
+The domain of possible values for the amount quantity class.
+------------------------------------
+NameType - Name Type (0200): 
+The domain of possible values for types of names for persons.
+------------------------------------
+TelecommunicationUseCode - Telecommunication Use Code (0201): 
+The domain of possible values for specifying a specific use of a telecommunication number.  Best practice is to use this concept whenever a telecommunication number or access string is specified.
+------------------------------------
+TelecommunicationEquipmentType - Telecommunication Equipment Type (0202): 
+The domain of possible values  for specifying a type of telecommunication equipment.  Best practice is to use this concept whenever a telecommunication number or access string for particular equipment is specified.
+------------------------------------
+IdentifierType - Identifier Type (0203): 
+The domain of possible values for the type of identifier.
+------------------------------------
+OrganizationalNameType - Organizational Name Type (0204): 
+The domain of possible values that specify the type of name for an organization i.e., legal name, display name.
+------------------------------------
+PriceType - Price Type (0205): 
+The domain of possible values to identify the intent for the dollar amount on a pricing transaction.
+------------------------------------
+SegmentActionCode - Segment Action Code (0206): 
+The domain of possible values for actions to be applied for segments when an HL7 version 2 interface is operating in "action code mode" (a kind of update mode in the Standard).
+------------------------------------
+V2ProcessingMode - Processing Mode (0207): 
+The domain of possible values that indicate an archival process or an initial load process.
+------------------------------------
+QueryResponseStatus - Query Response Status (0208): 
+The domain of possible values defining precise response status concepts in support of HL7 Version 2 query messaging.  It is commonly used to indicate no data is found that matches the query parameters, but no error.
+------------------------------------
+V2RelationalOperator - Relational Operator (0209): 
+The domain of possible values to define the relationship between HL7 segment field names identified in a query construct.
+------------------------------------
+RelationalConjunction - Relational Conjunction (0210): 
+The domain of possible values used with relational operator values to group more than one segment field name.
+------------------------------------
+AlternateCharacterSets - Alternate Character Sets (0211): 
+The domain of possible values that identify one of a number of possible standard alternate character sets for a message, either single-byte or double-byte.
+------------------------------------
+Nationality - Nationality (0212): 
+The domain of possible values that identify the nation or national grouping to which the person belongs.  This information may be different from a person’s citizenship in countries in which multiple nationalities are recognized (for example, Spain: Basque, Catalan, etc.).
+------------------------------------
+PurgeStatusCode - Purge Status Code (0213): 
+The domain of possible values that define the state of a visit relative to its place in a purge workflow.
+------------------------------------
+SpecialProgramCode - Special Program Code (0214): 
+The domain of possible values that record a health insurance program required for healthcare visit reimbursement.
+------------------------------------
+PublicityCode - Publicity Code (0215): 
+The domain of possible values for a level of publicity of information about a patient for a specific visit.
+------------------------------------
+PatientStatusCode - Patient Status Code (0216): 
+The domain of possible values that define the state of a care episode for a patient.
+------------------------------------
+VisitPriorityCode - Visit Priority Code (0217): 
+The domain of possible values that define a relative level of urgency applied to a patient visit.
+------------------------------------
+PatientChargeAdjustment - Patient Charge Adjustment (0218): 
+The domain of possible values that indicate which adjustments should be made to a guarantor’s charges.  For example, when a hospital agrees to adjust a guarantor’s charges to a sliding scale.  No suggested values.
+------------------------------------
+RecurringServiceCode - Recurring Service Code (0219): 
+The domain of possible values that indicate whether a treatment is continuous.  No suggested values.
+------------------------------------
+V2LivingArrangement - Living Arrangement (0220): 
+The domain of possible values characterizing the situation that patient-associated parties live in at their residential address.
+------------------------------------
+ContactReason - Contact Reason (0222): 
+The domain of possible values that indicate a reason for contacting a guarantor, for example, to phone a guarantor if payments are late.  No suggested values.
+------------------------------------
+LivingDependency - Living Dependency (0223): 
+The domain of possible values identifying specific living conditions (e.g., spouse dependent on patient, walk-up) that are relevant to an evaluation of the patient's healthcare needs.
+------------------------------------
+TransportArranged - Transport Arranged (0224): 
+The domain of possible values defining whether patient transportation preparations are in place.
+------------------------------------
+EscortRequired - Escort Required (0225): 
+The domain of possible values indicating whether a patient must be accompanied while travelling to a diagnostic service department.
+------------------------------------
+ManufacturersOfVaccines - Manufacturers of Vaccines (code=MVX) (0227): 
+The domain of possible values for the organization that manufactures a vaccine. The values are maintained by the US Centers of Disease Control.  Note that the source of truth for these code values are maintained by the CDC, and the code system may be accessed at URL: https://phinvads.cdc.gov/vads/SearchCodeSystems_search.action?searchOptions.searchText=PH_ManufacturersOfVaccinesMVX_CDC_NIP.  The value set is also maintained by the CDC, and may be accessed at URL: https://phinvads.cdc.gov/vads/SearchValueSets_search.action?searchOptions.searchText=PHVS_ManufacturersOfVaccinesMVX_CDC_NIP
+------------------------------------
+DiagnosisClassification - Diagnosis Classification (0228): 
+The domain of possible values that classify whether a patient visit can be related to a diagnosis.
+------------------------------------
+DrgPayor - DRG Payor (0229): 
+The domain of possible values that identify a Diagnostic Resource Group Payor.  US Realm.  No suggested values.
+------------------------------------
+ProcedureFunctionalType - Procedure Functional Type (0230): 
+The domain of possible values that classify a procedure.
+------------------------------------
+StudentStatus - Student Status (0231): 
+The domain of possible values that designate whether a guarantor is a full or part time student.
+------------------------------------
+InsuranceCompanyContactReason - - Insurance Company Contact Reason (0232): 
+The domain of possible values that describe why an insurance company has been contacted.
+------------------------------------
+Non-concurCode_Description - Non-Concur Code/Description (0233): 
+The domain of possible values that specify a non-concur code and description for a denied request, used in insurance claims processing.  No suggested values.
+------------------------------------
+ReportTiming - Report Timing (0234): 
+The domain of possible values to identify the time span of a report or the reason for a report sent to a regulatory agency.
+------------------------------------
+ReportSource - Report Source (0235): 
+The domain of possible values to identify where a report sender learned about an event.
+------------------------------------
+EventReportedTo - Event Reported To (0236): 
+The domain of possible values to identify the type of entity to which the event has been reported.
+------------------------------------
+EventQualification - Event Qualification (0237): 
+The domain of possible values to qualify an event related to a product experience.
+------------------------------------
+EventSeriousness - Event Seriousness (0238): 
+The domain of possible values to a sender to designate an event as serious or significant.
+------------------------------------
+EventExpected - Event Expected (0239): 
+The domain of possible values to communicate whether an event has been judged to be expected or unexpected.
+------------------------------------
+EventConsequence - Event Consequence (0240): 
+The domain of possible values to describe the impact of an event on a patient.
+------------------------------------
+PatientOutcome - Patient Outcome (0241): 
+The domain of possible values to describe the overall state of a patient as a result of patient care.
+------------------------------------
+PrimaryObserversQualification - Primary Observer's Qualification (0242): 
+The domain of possible values to provide a general description of the kind of health care professional who provided the primary observation.
+------------------------------------
+IdentityMayBeDivulged - Identity May Be Divulged (0243): 
+The domain of possible values to define whether the primary observer has given permission for their identification information to be provided to a product manufacturer.
+------------------------------------
+SingleUseDevice - Single Use Device (0244): 
+The domain of possible values that indicate whether a product is designed for a single use.  No suggested values.
+------------------------------------
+ProductProblem - Product Problem (0245): 
+The domain of possible values that indicate if a product problem would exist if a product malfunction could lead to death or serious injury.
+------------------------------------
+ProductAvailableForInspection - Product Available for Inspection (0246): 
+The domain of possible values that indicate that the product is available for analysis. No suggested values.
+------------------------------------
+StatusOfEvaluation - Status of Evaluation (0247): 
+The domain of possible values that describes the status of product evaluation.
+------------------------------------
+ProductSource - Product Source (0248): 
+The domain of possible values to describe the evaluation state of a product identified in an incident.
+------------------------------------
+GenericProduct - Generic Product (0249): 
+The domain of possible values that indicate whether the product used is a generic or a branded product. No suggested values.
+------------------------------------
+RelatednessAssessment - Relatedness Assessment (0250): 
+The domain of possible values to provide an estimate of whether an issue with a  product was the cause of an event.
+------------------------------------
+ActionTakenInResponseToTheEvent - Action Taken in Response to the Event (0251): 
+The domain of possible values to define the action taken as a result of an event related to a product issue.
+------------------------------------
+CausalityObservations - Causality Observations (0252): 
+The domain of possible values to record event observations regarding what may have caused a product related event.
+------------------------------------
+IndirectExposureMechanism - Indirect Exposure Mechanism (0253): 
+The domain of possible values to identify the mechanism of product transmission when the product has not been directly applied to the patient.
+------------------------------------
+KindOfQuantity - Kind of Quantity (0254): 
+The domain of possible values that describe the underlying kind of property represented by an observation.  The categories distinguish concentrations from total amounts, molar concentrations from mass concentrations, partial pressures from colors, and so forth.  These are discussed more fully in the LOINC Users' Manual.   They are derived from the approach described in 1995 edition of the IUPAC Silver Book.  These distinctions are used in IUPAC and LOINC standard codes.    The distinctions of true quantities in this table are based primarily on dimensional analyses. The table contains a number of "families," those related to simple counts (number, number concentration, etc.), to mass (mass, mass concentration, etc.), to enzyme activity (catalytic content, catalytic concentration, etc.), and molar or equivalents (substance content, substance concentration).
+------------------------------------
+DurationCategories - Duration Categories (0255): 
+The domain of possible values that classify an observation definition as intended to measure a patient's state at a point in time.
+------------------------------------
+TimeDelayPostChallenge - Time Delay Post Challenge (0256): 
+The domain of possible values to classify an observation definition as being a component of a challenge test.
+------------------------------------
+NatureOfChallenge - Nature of Challenge (0257): 
+The domain of possible values to further describe an observation definition that is characterized as a challenge observation.
+------------------------------------
+RelationshipModifier - Relationship Modifier (0258): 
+The domain of possible values to an observation definition to describe the subject of an observation in relation to a patient.
+------------------------------------
+Modality - Modality (0259): 
+The domain of possible values that define the imaging apparatus expected to be used to acquire an observation.  This table has been removed from the standard as of 2.7 in favor of table 0910.
+------------------------------------
+PatientLocationType - Patient Location Type (0260): 
+The domain of possible values that identify the kind of location described in the location definition.
+------------------------------------
+LocationEquipment - Location Equipment (0261): 
+The domain of possible values that identify the equipment available in a location definition identified as a room or bed.
+------------------------------------
+PrivacyLevel - Privacy Level (0262): 
+The domain of possible values that identify the level of privacy a patient will be afforded when assigned to this location definition.
+------------------------------------
+LevelOfCare - Level of Care (0263): 
+The domain of possible values that identify the level of care a patient may be afforded when assigned to this location definition.
+------------------------------------
+LocationDepartment - Location Department (0264): 
+The domain of possible values used to specify the institution’s department to which a location belongs, or its cost center.
+------------------------------------
+SpecialtyType - Specialty Type (0265): 
+The domain of possible values that identify the specialty of the care professional who is supported when using this location definition.
+------------------------------------
+DaysOfTheWeek - Days of the Week (0267): 
+The domain of possible values to identify the day(s) of the week when a location may be scheduled for appointments.
+------------------------------------
+Override - Override (0268): 
+The domain of possible values that define whether a Charge Description Master description may be overridden or if it must be overridden.
+------------------------------------
+ChargeOnIndicator - Charge On Indicator (0269): 
+The domain of possible values that define the event upon which a charge should be generated.
+------------------------------------
+V2DocumentType - Document Type (0270): 
+The domain of possible values that identify the kind of patient document.
+------------------------------------
+DocumentCompletionStatus - Document Completion Status (0271): 
+The domain of possible values to record the state of a document in a workflow.
+------------------------------------
+DocumentConfidentialityStatus - Document Confidentiality Status (0272): 
+The domain of possible values that specify the degree to which special confidentiality protection should be applied to  information.  The assignment of data elements to these categories is left to the discretion of the healthcare organization.
+------------------------------------
+DocumentAvailabilityStatus - Document Availability Status (0273): 
+The domain of possible values to define whether a patient document is appropriate or available for use in patient care.
+------------------------------------
+DocumentStorageStatus - Document Storage Status (0275): 
+The domain of possible values to describe the availability of a document in relation to the type of storage.
+------------------------------------
+AppointmentReasonCodes - Appointment reason codes (0276): 
+The domain of possible values that describe the kind of appointment or the reason why an appointment has been scheduled.
+------------------------------------
+AppointmentTypeCodes - Appointment Type Codes (0277): 
+The domain of possible values that an appointment request to describe the kind of appointment.
+------------------------------------
+FillerStatusCodes - Filler status codes (0278): 
+The domain of possible values that describe an appointment status from the perspective of the entity assigned to fulfill the appointment.
+------------------------------------
+AllowSubstitutionCodes - Allow Substitution Codes (0279): 
+The domain of possible values that indicate whether the appointment resource may be substituted for another by the entity assigned to fulfill the appointment.
+------------------------------------
+ReferralPriority - Referral Priority (0280): 
+The domain of possible values that designate the urgency of a  referral.
+------------------------------------
+ReferralType - Referral Type (0281): 
+The domain of possible values that identify the general category of healthcare professional desired to satisfy a referral.
+------------------------------------
+ReferralDisposition - Referral Disposition (0282): 
+The domain of possible values that identify the expected response from the healthcare professional receiving a referral.
+------------------------------------
+ReferralStatus - Referral Status (0283): 
+The domain of possible values that define the state of a  referral.
+------------------------------------
+ReferralCategory - Referral Category (0284): 
+The domain of possible values that describe the patient care setting where a referral should take place.
+------------------------------------
+InsuranceCompanyIdCodes - Insurance Company ID Codes (0285): 
+The domain of possible values for the identification of the insurance company or other entity that administers the authorizing coverage plan.  No suggested values.
+------------------------------------
+ReferralProviderRole - Provider Role (0286): 
+The domain of possible values that define the relationship between a referral recipient and a patient or between a referral initiator and a patient.
+------------------------------------
+Problem_GoalActionCode - Problem/Goal Action Code (0287): 
+The domain of possible values to Patient Care for the intent of a problem or goal.
+------------------------------------
+CensusTract - Census Tract (0288): 
+The domain of possible values for the census tract in which the specified address resides.  No suggested values.
+------------------------------------
+County/Parish - County/Parish (0289): 
+The domain of possible values for the county or parish in which the specified address resides.  No suggested values.
+------------------------------------
+SubtypeOfReferencedData - Subtype of Referenced Data (0291): 
+The domain of possible values for a subset of the media subtypes of binary data that are encoded in an ascii structure or stream.
+------------------------------------
+VaccinesAdministered - Vaccines Administered (0292): 
+The domain of possible values for the administered vaccines.   The values are maintained by the US Centers of Disease Control..  The code system is maintained by the CDC, and may be found at URL;  https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.12.292
+The value set is maintained by the CDC and may be found at URL: https://phinvads.cdc.gov/vads/ViewValueSet.action?id=ABDEE003-77C3-48E7-B941-EBF92B6B81FC
+------------------------------------
+BillingCategory - Billing Category (0293): 
+The domain of possible values for the billing category codes for any classification systems needed, for example, general ledger codes and UB92 categories.  No suggested values.
+------------------------------------
+TimeSelectionCriteriaParameterClassCodes - Time Selection Criteria Parameter Class Codes (0294): 
+The domain of possible values that describe acceptable start and end times, as well as days of the week, for appointment or resource scheduling.
+------------------------------------
+Handicap - Handicap (0295): 
+The domain of possible values for an associated party's disability.  No suggested values.
+------------------------------------
+PrimaryLanguage - Primary Language (0296): 
+The domain of possible values for the patient's primary language.  No suggested values.
+------------------------------------
+CnIdSource - CN ID Source (0297): 
+The domain of possible values for the CN identification source.  No suggested values.
+------------------------------------
+CpRangeType - CP Range Type (0298): 
+The domain of possible values that specify whether a composite price range is experssed as a flat rate or a percentage.
+------------------------------------
+Encoding - Encoding (0299): 
+The domain of possible values identifying the type of encoding used to represent successive octets of binary data as displayable ASCII characters.  These are defined by IETF; more information may be found at https://www.ietf.org/rfc/rfc1521.txt
+------------------------------------
+NamespaceId - Namespace ID (0300): 
+The domain of possible values for the unique name of the system that stores the data.   It was previously named the Application ID.  No suggested values.
+------------------------------------
+UniversalIdType - Universal ID Type (0301): 
+The domain of possible values for the type of UID (Universal Identifier).
+------------------------------------
+PointOfCare - Point of Care (0302): 
+The domain of possible values for the point where patient care is administered.  It is conditional on Person Location Type (e.g., nursing unit or department or clinic).   No suggested values.
+------------------------------------
+Room - Room (0303): 
+The domain of possible values for the patient's room.  No suggested values.
+------------------------------------
+Bed - Bed (0304): 
+The domain of possible values for the patient's bed.  No suggested values.
+------------------------------------
+PersonLocationType - Person Location Type (0305): 
+The domain of possible values for the categorization of the person's location.
+------------------------------------
+LocationStatus - Location Status (0306): 
+The domain of possible values for the status or availability of the location, such as the bed status.   No suggested values.
+------------------------------------
+Building - Building (0307): 
+The domain of possible values for the building where the person is located.  No suggested values.
+------------------------------------
+Floor - Floor (0308): 
+The domain of possible values for the floor where the person is located.  No suggested values.
+------------------------------------
+CoverageType - Coverage Type (0309): 
+The domain of possible values for the type of insurance coverage or what types of services are covered for the purposes of a billing system.  For example, a physician billing system will only want to receive insurance information for plans that cover physician/professional charges.
+------------------------------------
+JobStatus - Job Status (0311): 
+The domain of possible values for a next of kin/associated party's job status.
+------------------------------------
+PolicyScope - Policy Scope (0312): 
+The domain of possible values for the extent of insurance coverage for a participating member (e.g., single, family, etc.).  No suggested values.
+------------------------------------
+PolicySource - Policy Source (0313): 
+The domain of possible values for how an insurance policy is established.  No suggested values.
+------------------------------------
+LivingWillCode - Living Will Code (0315): 
+The domain of possible values for whether or not the patient has a living will and, if so, whether a copy fo the living will is on file at the healthcare facility.  If the patient does not have a living will, the value of this field indicates whether the patient was provided information on living wills.
+------------------------------------
+OrganDonorCode - Organ Donor Code (0316): 
+The domain of possible values for whether the patient wants to donate his/her organs and whether an organ donor card or similar documentation is on file with the healthcare organization.
+------------------------------------
+Annotations - Annotations (0317): 
+The domain of possible values for the coded entry associated with a given point in time during the waveform recording.  Note codes beyond 9903 may exist; extensions to this table may be done by incrementing the code value.
+------------------------------------
+DepartmentCostCenter - Department Cost Center (0319): 
+The domain of possible values for the accounting code that identifies the department in order to charge for the item.  No suggested values.
+------------------------------------
+ItemNaturalAccountCode - Item Natural Account Code (0320): 
+The domain of possible values identifying an item in order to charge for the item.  No suggested values.
+------------------------------------
+DispenseMethod - Dispense Method (0321): 
+The domain of possible values for the method by which treatment is dispensed.
+------------------------------------
+CompletionStatus - Completion Status (0322): 
+The domain of possible values for the status of the treatment administration event.
+------------------------------------
+LocationCharacteristicId - Location Characteristic ID (0324): 
+The domain of possible values for an identifier code to show which characteristic is being communicated with the segment.
+------------------------------------
+LocationRelationshipId - Location Relationship ID (0325): 
+The domain of possible values for an identifier code to show which relationship is being communicated with the segment.
+------------------------------------
+VisitIndicator - Visit Indicator (0326): 
+The domain of possible values for the level on which data are being sent.  It is the indicator used to send data at two levels, visit and account.  HL7 recommends sending an "A" or no value when the data in the message are at the account level or "V" to indicate that the data sent in the message are at the visit level.
+------------------------------------
+JobCode - Job Code (0327): 
+The domain of possible values that specify a person's job code.  No suggested values.
+------------------------------------
+EmployeeClassification - Employee Classification (0328): 
+The domain of possible values that specify a person's employee classification.  No suggested values.
+------------------------------------
+QuantityMethod - Quantity Method (0329): 
+The domain of possible values to specify the method by which the quantity distributed is measured.
+------------------------------------
+MarketingBasis - Marketing Basis (0330): 
+The domain of possible values to specify the basis for marketing approval.
+------------------------------------
+FacilityType - Facility Type (0331): 
+The domain of possible values to specify the type of facility.
+------------------------------------
+SourceType - Source Type (0332): 
+The domain of possible values to indicate (in certain systems) whether a lower level source identifier is an initiate or accept type.
+------------------------------------
+DriversLicenseIssuingAuthority - Driver's License Issuing Authority (0333): 
+The domain of possible values for the driver's license issuing authority.  No suggested values.
+------------------------------------
+DisabledPersonCode - Disabled Person Code (0334): 
+The domain of possible values that specify to which person the disability information relates in the message.  For example, if the value is PT, the disability information relates to the patient.
+------------------------------------
+RepeatPattern - Repeat Pattern (0335): 
+The domain of possible values that specify the interval between repeated services. See the Comment/Usage Note in the table below, as the table contains both precoordinated codes that may be used in an HL7 field or component and also explanatory patterns illustrating the syntax used to construct expressions using the codes and other modifiers.
+------------------------------------
+ReferralReason - Referral Reason (0336): 
+The domain of possible values that specify the reason for which the referral will take place.
+------------------------------------
+CertificationStatus - Certification Status (0337): 
+The domain of possible values to specify the status of the practitioner's speciality certification.
+------------------------------------
+PractitionerIdNumberType - Practitioner ID Number Type (0338): 
+The domain of possible values for the type of number used for the practitioner identification.
+------------------------------------
+AdvancedBeneficiaryNoticeCode - Advanced Beneficiary Notice Code (0339): 
+The domain of possible values for the status of the patient's or the patient's representative's consent for responsibility to pay for potentially uninsured services. This element was introduced to satisfy CMS Medical Necessity requirements for outpatient services in the United States. Includes concepts such as (a) whether the associated diagnosis codes for the service are subject to medical necessity procedures, (b) whether, for this type of service, the patient has been informed that they may be responsible for payment for the service, and (c) whether the patient agrees to be billed for this service.
+------------------------------------
+ProcedureCodeModifier - Procedure Code Modifier (0340): 
+The domain of possible values that specify a procedure code modifier to a procedure code.  Procedure code modifiers are defined by regulatory agencies such as CMS and the AMA.  Multiple modifiers may be reported.  The modifiers are sequenced in priority according to user entry.  This is a requirement of the UB and the 1500 claim forms.  Multiple modifiers are allowed and the order placed on the form affects reimbursement.
+------------------------------------
+GuarantorCreditRatingCode - Guarantor Credit Rating Code (0341): 
+The domain of possible values that specify a guarantor's credit rating.  No suggested values.
+------------------------------------
+MilitaryRecipient - Military Recipient (0342): 
+The domain of possible values that specify a designation as a military recipient.  This field is defined by CMS or other regulatory agencies.  No suggested values.
+------------------------------------
+MilitaryHandicappedProgramCode - Military Handicapped Program Code (0343): 
+The domain of possible values that specify a military program for the handicapped in which a patient is enrolled.  No suggested values.
+------------------------------------
+Patient'sRelationshipToInsured - Patient's Relationship to Insured (0344): 
+The domain of possible values that specify the relationship of the patient to the insured, as defined by CMS or other regulatory agencies.
+------------------------------------
+AppealReason - Appeal Reason (0345): 
+The domain of possible values that specify  reasons an appeal was made on a non-concur for certification.  No suggested values.
+------------------------------------
+CertificationAgency - Certification Agency (0346): 
+The domain of possible values that specify a certification agency.  No suggested values.
+------------------------------------
+CountrySubdivision - State/Province (0347): 
+The domain of possible values for the names of the principal country subdivisions (e.g., provinces or states).  The values in the table are country specific.  For example, in the US, the Federal Information Processing Standard (FIPS) alpha codes may be used by local agreement.
+------------------------------------
+OccurrenceCode - Occurrence Code (0350): 
+The domain of possible values that specify the event or occurrence relating to a bill that may affect payer processing.
+------------------------------------
+OccurrenceSpan - Occurrence Span (0351): 
+The domain of possible values that identify an event that relates to the payment of a claim.
+------------------------------------
+CweStatuses - CWE statuses (0353): 
+The domain of possible values that represent an exception identifier code; that is, a code that is not defined in the value set (either model or site-extended).  These are occationsally referred to a 'flavors of null' although this set of concepts is specific to the CWE datatype used in Version 2 messaging, and the codes may be used in the 'identifier' component of the 'triplets' in that datatype.
+------------------------------------
+MessageStructure - Message Structure (0354): 
+The domain of possible values of abstract message structure codes. Each code identifies a specific message structure abstract syntax as published in the HL7 Version 2 standard.
+------------------------------------
+PrimaryKeyValueType - Primary Key Value Type (0355): 
+The domain of possible values to specify the type for the master file record identifier.
+------------------------------------
+AlternateCharacterSetHandlingScheme - Alternate Character Set Handling Scheme (0356): 
+The domain of possible values that specify the scheme used when any alternative character sets are specified in the second or later iterations of MSH-18 Character Set, and if any special handling scheme is needed.
+------------------------------------
+MessageErrorConditionCodes - Message Error Condition Codes (0357): 
+The domain of possible values for the HL7 (communications) error code.
+------------------------------------
+PractitionerGroup - Practitioner Group (0358): 
+The domain of possible values for the name and/or code of a group of practitioners to which this practitioner belongs.  No suggested values.
+------------------------------------
+DiagnosisPriority - Diagnosis Priority (0359): 
+The domain of possible values that identify the significance or priority of the diagnosis code.  Note that the codes are numeric, and the number of the code represents the ordinal priority of the associated diagnosis. The predefined codes are the most common, and just a starter set, as the codes are an unbounded list; additional ranked procedures may be signified by incrementing the code value as needed.
+------------------------------------
+Degree/License/Certificate - Degree/License/Certificate (0360): 
+The domain of possible values for an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.
+------------------------------------
+Application - Application (0361): 
+The domain of possible values that identify a sending application among all other applications within the network enterprise.  The network enterprise consists of all those applications that participate in the exchange of HL7 messages within the enterprise.  No suggested values.
+------------------------------------
+Facility - Facility (0362): 
+The domain of possible values for the site-specific name for the facility used by this application.  No suggested values.
+------------------------------------
+AssigningAuthority - Assigning Authority (0363): 
+The domain of possible values for a unique name of the system (or organization or agency or department) that creates the data.  No suggested values.
+------------------------------------
+CommentType - Comment Type (0364): 
+The domain of possible values that identify the type of comment text being sent in the specific comment record.
+------------------------------------
+EquipmentState - Equipment State (0365): 
+The domain of possible values that identify the status the equipment was in at the time the transaction was initiated.
+------------------------------------
+Local_RemoteControlState - Local/Remote Control State (0366): 
+The domain of possible values that identify the current state of control associated with the equipment.   Equipment can either work autonomously ('Local' control state) or it can be controlled by another system, e.g., LAS computer ('Remote' control state).
+------------------------------------
+AlertLevel - Alert Level (0367): 
+The domain of possible values that identify the highest level of the alert state (e.g.,highest alert severity) that is associated with the indicated equipment (e.g. processing event, inventory event, QC event).
+------------------------------------
+RemoteControlCommand - Remote Control Command (0368): 
+The domain of possible values that identify the comment the component is to initiate.
+------------------------------------
+SpecimenRole - Specimen Role (0369): 
+The domain of possible values that identify the role of a sample.
+------------------------------------
+ContainerStatus - Container Status (0370): 
+The domain of possible values that identify the status of the unique container in which the specimen resides at the time the transaction was initiated.
+------------------------------------
+Additive/Preservative - Additive/Preservative (0371): 
+The domain of possible values for any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.
+------------------------------------
+SpecimenComponent - Specimen Component (0372): 
+The domain of possible values that identify the specimen component, e.g., supernatant, sediment, etc.
+------------------------------------
+Treatment - Treatment (0373): 
+The domain of possible values that identify the specimen treatment performed during lab processing.
+------------------------------------
+SystemInducedContaminants - System Induced Contaminants (0374): 
+The domain of possible values that identify the specimen contaminant identifier associated with the specimen in the container.
+------------------------------------
+ArtificialBlood - Artificial Blood (0375): 
+The domain of possible values that identify the artificial blood identifier associated with the specimen.
+------------------------------------
+SpecialHandlingCode - Special Handling Code (0376): 
+The domain of possible values describing how a specimen and/or container needs to be handled from the time of collection through the initiation of testing.
+------------------------------------
+OtherEnvironmentalFactors - Other Environmental Factors (0377): 
+The domain of possible values that identify the other environmental factors associated with the specimen in a specific container, e.g., atmospheric exposure.
+------------------------------------
+CarrierType - Carrier Type (0378): 
+The domain of possible values that identify a type of carrier.  Because the geometry can be different, the carrier type should, if possible, express the number of positions in the carrier.  The definition assumes hierarchical nesting using the following phrases: container is located in a carrier, carrier is located in a tray.  No suggested values.
+------------------------------------
+ContainerTrayType - Tray Type (0379): 
+The domain of possible values that identify a type of tray.  Because the geometry can be different, the tray type should, if possible, express the number of positions in the tray.  The definition assumes hierarchical nesting using the following phrases: container is located in a carrier, carrier is located in a tray.  No suggested values.
+------------------------------------
+SeparatorType - Separator Type (0380): 
+The domain of possible values that identify a type of separator being used (e.g., a gel separator in a container - not to be confused with the communication separators).  It is recommended the first table entry be "NO" meaning "No Separator".  No suggested values.
+------------------------------------
+CapType - Cap Type (0381): 
+The domain of possible values that identify a type of cap that is to be used with a container for decapping, piercing or other mechanisms.  No suggested values.
+------------------------------------
+DrugInterference - Drug Interference (0382): 
+The domain of possible values that identify a drug interference  associated with a specimen.  No suggested values.
+------------------------------------
+SubstanceStatus - Substance Status (0383): 
+The domain of possible values identifying the status of the inventoried item.  The status indicates the current status of the substance.
+------------------------------------
+SubstanceType - Substance Type (0384): 
+The domain of possible values identifying the type of substance.
+------------------------------------
+ManufacturerIdentifier - Manufacturer Identifier (0385): 
+The domain of possible values that identify a manufacturer of a substance.  Relevant external code systems may be used, e.g., HIBCC Manufacturers Labeler ID Code (LIC), UPC, NDC, etc.  No suggested values.
+------------------------------------
+SupplierIdentifier - Supplier Identifier (0386): 
+The domain of possible values that identify a supplier of a substance.  No suggested values.
+------------------------------------
+CommandResponse - Command Response (0387): 
+The domain of possible values identifying the response of the previously issued command.
+------------------------------------
+ProcessingType - Processing Type (0388): 
+The domain of possible values identifying the processing type that applies to the test code.  If this attribute is omitted, then regular production is the default.
+------------------------------------
+AnalyteRepeatStatus - Analyte Repeat Status (0389): 
+The domain of possible values identifying the repeat status for the analyte/result (e.g. original, rerun, repeat, reflex).  The following are assumptions regarding the table values: Repeated without dilution — performed usually to confirm correctness of results (e.g., in case of results flagged as "Panic" or mechanical failures).  Repeated with dilution — performed usually in the case the original result exceeded the measurement range (technical limits).  Reflex test — this test is performed as the consequence of rules triggered based on other test result(s).
+------------------------------------
+SegmentGroup - Segment Group (0391): 
+The domain of possible values for the optional segment groups which are to be included in a response.
+------------------------------------
+MatchReason - Match Reason (0392): 
+The domain of possible values identifying what search components (e.g., name, birthdate, social security number) of the record returned matched the original query where the responding system does not assign numeric match weights or confidence levels.  It provides a method for passing a descriptive indication of the reason a particular record was found.
+------------------------------------
+MatchAlgorithms - Match Algorithms (0393): 
+The domain of possible values identifying the name or identity of the specific search algorithm to which the RCP-5 Search Confidence Threshold and the QRI-1 Candidate Confidence refer.
+------------------------------------
+V2ResponseModality - Response Modality (0394): 
+The domain of possible values identifying the timing and grouping of the response message(s).
+------------------------------------
+V2ModifyIndicator - Modify Indicator (0395): 
+The domain of possible values identifying whether the subscription is new or is being modified.
+------------------------------------
+CodingSystem - Coding System (0396): 
+The domain of possible values of specifying the coding system.  This table is maintained outside of the published Version 2 standards, and may be found at http://www.hl7.org/Special/committees/vocab/table_0396/index.cfm.
+------------------------------------
+V2Sequencing - Sequencing (0397): 
+The domain of possible values identifying how the field or parameter will be sorted and, if sorted, whether the sort will be case sensitive (the default) or not.
+------------------------------------
+ContinuationStyleCode - Continuation Style Code (0398): 
+The domain of possible values identifying whether it is a fragmented message or part of an interactive continuation message.
+------------------------------------
+CountryCode - Country Code (0399): 
+The domain of possible values that identifies a country of origin for a message.  It will be used primarily to specify default elements, such as currency denominations. The values to be used are those of ISO 3166. The ISO 3166 table has three separate forms of the country code: HL7 specifies that the 3-character (alphabetic) form be used for the country code.
+------------------------------------
+GovernmentReimbursementProgram - Government Reimbursement Program (0401): 
+The domain of possible values for codes that indicate an agency that the practitioner is authorized to bill for medical services.  Existing codes only for use in the United States.
+------------------------------------
+SchoolType - School Type (0402): 
+The domain of possible values for a categorization of an academic institution that grants a degree to a Staff Member.
+------------------------------------
+LanguageAbility - Language Ability (0403): 
+The domain of possible values for codes that indicate the ability that a Staff Member possesses with respect to the language.
+------------------------------------
+LanguageProficiency - Language Proficiency (0404): 
+The domain of possible values which specify the level of knowledge a person possesses with respect to a language ability identified.
+------------------------------------
+OrganizationUnit - Organization Unit (0405): 
+The domain of possible values which specify the hierarchical components of an organization unit, as defined by the institution.  No suggested values.
+------------------------------------
+ParticipantOrganizationUnitType - Participant Organization Unit Type (0406): 
+The domain of possible values that specify the environment in which the provider acts in the role associated with the provider type, and inludes codes for venues outside of formal organized healthcare settings, such as Home. The provider environment is not the specialty for the provider.
+------------------------------------
+ApplicationChangeType - Application Change Type (0409): 
+The domain of possible values that specify a type of change being requested (if NMR query) or announced (if NMD unsolicited update).
+------------------------------------
+SupplementalServiceInformationValues - Supplemental Service Information Values (0411): 
+The domain of possible values that specify supplemental service information sent between a placer system and a filler system for the universal procedure code reported in OBR-4 Universal Service ID. This specifies ordering information detail that is not available in other specific tables for fields in the OBR segment.  These might be details such as whether a study is to be done on the right or left, for example, where the study is of the arm and the order master file does not distinguish right from left, or whether a study is to be done with or without contrast (when the order master file does not make such distinctions).
+------------------------------------
+CategoryIdentifier - Category Identifier (0412): 
+The domain of possible values that specify a category name (term given to a group of service items for the purpose of classification). Examples: Laboratory, Pharmacy, Diagnostic Imaging, etc.  No suggested values.
+------------------------------------
+ConsentIdentifier - Consent Identifier (0413): 
+The domain of possible values that provide an identifier for the consent specified for a service item.  No suggested values.
+------------------------------------
+UnitsOfTime - Units of Time (0414): 
+The domain of possible values that specify a unit of time.  No suggested values.
+------------------------------------
+TransferType - Transfer Type (0415): 
+The domain of possible values that specify a type of hospital receiving a transfer patient, which affects how a facility is reimbursed under diagnosis related group (DRG's), for example, exempt or non-exempt.
+------------------------------------
+ProcedureDrgType - Procedure DRG Type (0416): 
+The domain of possible values that specify a procedure's priority ranking relative to its DRG.
+------------------------------------
+TissueTypeCode - Tissue Type Code (0417): 
+The domain of possible values that specify the type of tissue removed from a patient during a procedure.
+------------------------------------
+ProcedurePriority - Procedure Priority (0418): 
+The domain of possible values specifying a number that identifies the significance or priority of the procedure code.
+------------------------------------
+SeverityOfIllnessCode - Severity of Illness Code (0421): 
+The domain of possible values specifying the severity ranking of a patient's illness.
+------------------------------------
+TriageCode - Triage Code (0422): 
+The domain of possible values specifying a patient's prioritization within the context of this abstract.
+------------------------------------
+CaseCategoryCode - Case Category Code (0423): 
+The domain of possible values specifying the reason a non-urgent patient presents to the emergency room for treatment instead of a clinic or physican office.
+------------------------------------
+GestationCategoryCode - Gestation Category Code (0424): 
+The domain of possible values specifying the status of the birth in relation to the gestation
+------------------------------------
+NewbornCode - Newborn Code (0425): 
+The domain of possible values specifying whether the baby was born in or out of the facility.
+------------------------------------
+BloodProductCode - Blood Product Code (0426): 
+The domain of possible values specifying the blood product code.
+------------------------------------
+RiskManagementIncidentCode - Risk Management Incident Code (0427): 
+The domain of possible values specifying the incident that occurred during a patient's stay.
+------------------------------------
+IncidentTypeCode - Incident Type Code (0428): 
+The domain of possible values specifying a classification of the incident type.
+------------------------------------
+ProductionClassCode - Production Class Code (0429): 
+The domain of possible values specifying the code and/or text indicating the primary use for which the living subject was bred or grown.
+------------------------------------
+ModeOfArrivalCode - Mode of Arrival Code (0430): 
+The domain of possible values specifying how the patient was brought to the healthcare facility.
+------------------------------------
+RecreationalDrugUseCode - Recreational Drug Use Code (0431): 
+The domain of possible values specifying what recreational drugs the patient uses.
+------------------------------------
+AdmissionLevelOfCareCode - Admission Level of Care Code (0432): 
+The domain of possible values specifying the acuity level assigned to the patient at the time of admission.
+------------------------------------
+PrecautionCode - Precaution Code (0433): 
+The domain of possible values specifying non-clincal precautions that need to be taken with the patient.
+------------------------------------
+PatientConditionCode - Patient Condition Code (0434): 
+The domain of possible values specifying the patient's current medical condition for the purpose of communicating to non-medical outside parties, e.g. family, employer, religious minister, media, etc.
+------------------------------------
+AdvanceDirectiveCode - Advance Directive Code (0435): 
+The domain of possible values specifying the patient's instructions to the healthcare facility.
+------------------------------------
+SensitivityToCausativeAgentCode - Sensitivity to Causative Agent Code (0436): 
+The domain of possible values specifying the reason the patient should not be exposed to a substance.
+------------------------------------
+AlertDeviceCode - Alert Device Code (0437): 
+The domain of possible values specifying any type of allergy alert device the patient may be carrying or wearing.
+------------------------------------
+AllergyClinicalStatus - Allergy Clinical Status (0438): 
+The domain of possible values specifying the verification status for the allergy.
+------------------------------------
+DataTypes - Data Types (0440): 
+The domain of possible values specifying the data type.
+------------------------------------
+ImmunizationRegistryStatus - Immunization Registry Status (0441): 
+The domain of possible values for the immunization registry status of the patient.
+------------------------------------
+LocationServiceCode - Location Service Code (0442): 
+The domain of possible values specifying the types of services provided by the location.
+------------------------------------
+ProviderRole - Provider Role (0443): 
+The domain of possible values for the functional involvement with the activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.).
+------------------------------------
+NameAssemblyOrder - Name Assembly Order (0444): 
+The domain of possible values specifying the preferred display order of the components of this person name.
+------------------------------------
+IdentityReliabilityCode - Identity Reliability Code (0445): 
+The domain of possible values for the reliability of patient/person identifying data transmitted via a transaction.
+------------------------------------
+SpeciesCode - Species Code (0446): 
+The domain of possible values for the species of living organism.
+------------------------------------
+BreedCode - Breed Code (0447): 
+The domain of possible values for the specific breed of animal.
+------------------------------------
+NameContext - Name Context (0448): 
+The domain of possible values specifying the context in which a name is used.
+------------------------------------
+EQPEventType - Event Type (0450): 
+The domain of possible values specifying the type of event of the message.
+------------------------------------
+SubstanceIdentifier - Substance Identifier (0451): 
+The domain of possible values specifying the substance that is in inventory.
+------------------------------------
+HealthCareProviderTypeCode - Health Care Provider Type Code (0452): 
+The domain of possible values for the major grouping of the service or occupation of a practitioner at a specific organization unit.
+------------------------------------
+HealthCareProviderClassification - Health Care Provider Classification (0453): 
+The domain of possible values for the more specific service or occupation within the healthcare provider type of the practitioner at a specific organization unit.
+------------------------------------
+HealthCareProviderAreaOfSpecialization - Health Care Provider Area of Specialization (0454): 
+The domain of possible values for the segment of the population that a health care provider chooses to service, a specific medical service, a specialization in treating a specific disease, or any other descriptive characteristic about a provider’s practice relating to the services rendered of a practitioner at a specific organization unit.
+------------------------------------
+TypeOfBillCode - Type of Bill Code (0455): 
+The domain of possible values specifying the specific type of bill with digit 1 showing type of facility, digit 2 showing bill classification and digit 3 showing frequency.
+------------------------------------
+RevenueCode - Revenue code (0456): 
+The domain of possible values specifying a service line revenue code.  These are claim codes indicating the identifying number for the product or service provided.
+------------------------------------
+OverallClaimDispositionCode - Overall Claim Disposition Code (0457): 
+The domain of possible values specifying the final status of the claim.
+------------------------------------
+OceEditCode - OCE Edit Code (0458): 
+The domain of possible values that specify the edits that result from processing the HCPCS/CPT procedures for a record after evaluating all the codes, revenue codes, and modifiers.
+------------------------------------
+ReimbursementActionCode - Reimbursement Action Code (0459): 
+The domain of possible values for the action to be taken during reimbursement calculations.
+------------------------------------
+DenialOrRejectionCode - Denial or Rejection Code (0460): 
+The domain of possible values for the OCE status of the line item.
+------------------------------------
+LicenseNumber - License Number (0461): 
+The domain of possible values for the license number for the facility.
+------------------------------------
+LocationCostCenter - Location Cost Center (0462): 
+The domain of possible values for the cost center to which this location belongs.
+------------------------------------
+InventoryNumber - Inventory Number (0463): 
+The domain of possible values specifying an identifying stock number, if any, which might be used, for example, as a cross reference for materials management.
+------------------------------------
+FacilityId - Facility ID (0464): 
+The domain of possible values for the facility of the institution for which a specified price is valid.  For use when needing multi-facility pricing.
+------------------------------------
+Name_AddressRepresentation - Name/Address Representation (0465): 
+The domain of possible values for an indication of the representation provided by the data item.
+------------------------------------
+AmbulatoryPaymentClassificationCode - Ambulatory Payment Classification Code (0466): 
+The domain of possible values for the derived Ambulatory Payment Classification (APC) code.
+------------------------------------
+ModifierEditCode - Modifier Edit Code (0467): 
+The domain of possible values that specify the edits of the modifiers for each line or HCPCS/CPT.
+------------------------------------
+PaymentAdjustmentCode - Payment Adjustment Code (0468): 
+The domain of possible values for any payment adjustment due to drugs or medical devices.
+------------------------------------
+PackagingStatusCode - Packaging Status Code (0469): 
+The domain of possible values for the packaging status of the service.
+------------------------------------
+ReimbursementTypeCode - Reimbursement Type Code (0470): 
+The domain of possible values for the fee schedule reimbursement type applied to a line item.
+------------------------------------
+QueryName - Query Name (0471): 
+The domain of possible values for the name of a query.
+------------------------------------
+TqConjunctionId - TQ Conjunction ID (0472): 
+The domain of possible values for that a second timing specification is to follow using the repeat delimiter.
+------------------------------------
+ServiceFormularyStatus - Formulary Status (0473): 
+The domain of possible values for whether or not the service (pharmaceutical) is in the formulary.
+------------------------------------
+PractitionerOrganizationUnitType - Practitioner Organization Unit Type (0474): 
+The domain of possible values for the classification of the organization unit.
+------------------------------------
+ChargeTypeReason - Charge Type Reason (0475): 
+The domain of possible values for the choice of, and providing the clinical rationale for, a selected charge type.
+------------------------------------
+V2MedicallyNecessaryDuplicateProcedureReason - Medically Necessary Duplicate Procedure Reason (0476): 
+The domain of possible values specifying the reason the procedure code found in OBR-44 Procedure Code is a duplicate of one ordered/charged previously for the same patient within the same date of service and has been determined to be medically necessary.
+------------------------------------
+ControlledSubstanceSchedule - Controlled Substance Schedule (0477): 
+The domain of possible values for the class of the drug or other substance if its usage is controlled by legislation.
+------------------------------------
+SubstanceFormularyStatus - Formulary Status (0478): 
+The domain of possible values for whether or not the pharmaceutical substance is part of the local formulary.
+------------------------------------
+PharmaceuticalSubstances - Pharmaceutical Substances (0479): 
+The domain of possible values for a medical substance or treatment that has been ordered to be given to a patient, as encoded by a pharmacy or treatment supplier.
+------------------------------------
+PharmacyOrderTypes - Pharmacy Order Types (0480): 
+The domain of possible values for the general category of pharmacy order which may be used to determine the processing path the order will take.
+------------------------------------
+OrderType - Order Type (0482): 
+The domain of possible values for whether the order is to be executed in an inpatient setting or an outpatient setting.
+------------------------------------
+AuthorizationMode - Authorization Mode (0483): 
+The domain of possible values of forms of authorization a recorder may receive from the responsible practitioner to create or change an order.
+------------------------------------
+DispenseType - Dispense Type (0484): 
+The domain of possible values for the type of dispensing event that occurred.
+------------------------------------
+ExtendedPriorityCodes - Extended Priority Codes (0485): 
+The domain of possible values describing the urgency of a request carried in an order.
+------------------------------------
+SpecimenType - Specimen Type (0487): 
+The domain of possible values that describe the precise nature of an entity that may be used as the source material for an observation.
+------------------------------------
+SpecimenCollectionMethod - Specimen Collection Method (0488): 
+The domain of possible values for the specimen collection method.
+------------------------------------
+RiskCodes - Risk Codes (0489): 
+The domain of possible values for any known or suspected specimen hazards, e.g., exceptionally infectious agent or blood from a hepatitis patient.
+------------------------------------
+SpecimenRejectReason - Specimen Reject Reason (0490): 
+The domain of possible values for the reasons a specimen may be rejected for a specified observation/result/analysis.
+------------------------------------
+SpecimenQuality - Specimen Quality (0491): 
+The domain of possible values for the degree or grade of excellence of the specimen at receipt.
+------------------------------------
+SpecimenAppropriateness - Specimen Appropriateness (0492): 
+The domain of possible values for the suitability of the specimen for the particular planned use as determined by the filler.
+------------------------------------
+SpecimenCondition - Specimen Condition (0493): 
+The domain of possible values for a mode or state of being that describes the nature of a specimen.
+------------------------------------
+SpecimenChildRole - Specimen Child Role (0494): 
+The domain of possible values for for child specimens the relationship between this specimen and the parent specimen.
+------------------------------------
+BodySiteModifier - Body Site Modifier (0495): 
+The domain of possible values for the modifier for the body site.
+------------------------------------
+ConsentType - Consent Type (0496): 
+The domain of possible values for to what the subject is consenting, i.e. what type of service, surgical procedure, information access/release or other event.
+------------------------------------
+ConsentMode - Consent Mode (0497): 
+The domain of possible values for the method in which a subject provides consent.
+------------------------------------
+ConsentStatus - Consent Status (0498): 
+The domain of possible values for whether the consent has been sought and granted.
+------------------------------------
+ConsentBypassReason - Consent Bypass Reason (0499): 
+The domain of possible values for the reason the subject's consent was not sought.
+------------------------------------
+ConsentDisclosureLevel - Consent Disclosure Level (0500): 
+The domain of possible values to specify how much information was disclosed to the subject as part of the informed consent process.
+------------------------------------
+ConsentNon-disclosureReason - Consent Non-Disclosure Reason (0501): 
+The domain of possible values that specify a reason the subject did not receive full disclosure.
+------------------------------------
+Non-subjectConsenterReason - Non-Subject Consenter Reason (0502): 
+The domain of possible values to specify a reason consent was granted by a person other than the subject of the consent.
+------------------------------------
+Sequence_ResultsFlag - Sequence/Results Flag (0503): 
+The domain of possible values to specify the sequencing relationship between the current service request and a related service request(s) specified in the same information model structure.
+------------------------------------
+SequenceConditionCode - Sequence Condition Code (0504): 
+The domain of possible values to specify the relationship between the start/end of the related service request(s) and the current service request.
+------------------------------------
+CyclicEntry_ExitIndicator - Cyclic Entry/Exit Indicator (0505): 
+The domain of possible values to specify if this service request is the first or last service request in a cyclic series of service requests.
+------------------------------------
+ServiceRequestRelationship - Service Request Relationship (0506): 
+The domain of possible values to specify an additional or alternate relationship between this service request and other service requests.
+------------------------------------
+ObservationResultHandling - Observation Result Handling (0507): 
+The domain of possible values regarding the handling of a result.  For example, an order may specify that the result (e.g., an x-ray film) should be given to the patient for return to the requestor.
+------------------------------------
+BloodProductProcessingRequirements - Blood Product Processing Requirements (0508): 
+The domain of possible values that specify additional information about the blood component class associated with the Universal Service ID.  The placer of the order can specify any required processing of the blood product that must be completed prior to transfusion to the intended recipient.
+------------------------------------
+IndicationForUse - Indication for Use (0509): 
+The domain of possible values that specify the reason the blood product was ordered.
+------------------------------------
+BloodProductDispenseStatus - Blood Product Dispense Status (0510): 
+The domain of possible values to specify the current status of the specified blood product as indicated by the filler or placer.  For example, the first status change of a product that may trigger a Blood Product Dispense Status Message occurs when it first becomes linked to a patient and is ready to dispense. The placer system may use the Blood Product Dispense Status Message to request the transfusion service to dispense the product.  When the blood product is delivered or issued to a patient, the status of the blood product would be changed to indicate that it has now been "dispensed".
+------------------------------------
+BpObservationStatusCodesInterpretation - BP Observation Status Codes Interpretation (0511): 
+The domain of possible values to specify the interpretation for the blood product observation status codes.  A status is considered preliminary until a blood product has reached a final disposition for the patient. For example, when the product is first cross-matched and a status message is sent, it would be considered preliminary. When the product is dispensed to the patient, that status would also be considered preliminary.  However, once the product is transfused, the status would be considered final.
+------------------------------------
+CommercialProduct - Commercial Product (0512): 
+The domain of possible values that specify a commercial product.  Examples of commercial products are blood derivatives such as Rh Immune Globulin and Factor VIII concentrate, Leukoreduction filters and blood administration sets.
+------------------------------------
+BloodProductTransfusion_DispositionStatus - Blood Product Transfusion/Disposition Status (0513): 
+The domain of possible values to specify the current status of the specified blood product as indicated by the placer.  For example, the placer may return the blood product to the transfusion service unused because an IV could not be started. The blood component may have been entered, but the line was clogged and could not be used, in which case the component must be wasted. A final status would indicate that the product has actually been "transfused."
+------------------------------------
+TransfusionAdverseReaction - Transfusion Adverse Reaction (0514): 
+The domain of possible values that specify the type of adverse reaction that the recipient of the blood product experienced.
+------------------------------------
+TransfusionInterruptedReason - Transfusion Interrupted Reason (0515): 
+The domain of possible values that specify the reason the transfusion of the blood product was interrupted.
+------------------------------------
+ErrorSeverity - Error Severity (0516): 
+The domain of possible values for the severity of an application error as reported during acknowledgment of messages. Knowing if something is Error, Warning or Information is intrinsic to how an application handles the content and the information flow.
+------------------------------------
+InformPersonCode - Inform Person Code (0517): 
+The domain of possible values that specify who (if anyone) shouldor should not be informed of an error.
+------------------------------------
+OverrideType - Override Type (0518): 
+The domain of possible values that specify what type of override can be used to override the specific error identified.
+------------------------------------
+OverrideReason - Override Reason (0519): 
+The domain of possible values that specify the override codes that can be used to override enforcement of the application rule that generated an error.
+------------------------------------
+V2MessageWaitingPriority - Message Waiting Priority (0520): 
+The domain of possible values to specify how important the most important waiting mesasge is.  For example, if there are 3 low priority messages, 1 medium priority message and 1 high priority message, the message waiting priority would be "high", because that is the highest priority of any new message waiting.
+------------------------------------
+OverrideCode - Override Code (0521): 
+The domain of possible values that specify the reason for the business rule override.
+------------------------------------
+ComputationType - Computation Type (0523): 
+The domain of possible values to specify if the change is computed as a percent change or as an absolute change.
+------------------------------------
+Privilege - Privilege (0525): 
+The domain of possible values that specify the institutional privilege.
+------------------------------------
+PrivilegeClass - Privilege Class (0526): 
+The domain of possible values that specify the class category of institutional privilege.
+------------------------------------
+CalendarAlignment - Calendar Alignment (0527): 
+The domain of possible values to specify an alignment of the repetition to a calendar (e.g., to distinguish every  30 days from "the 5th of every month").
+------------------------------------
+EventRelatedPeriod - Event Related Period (0528): 
+The domain of possible values to specify a common (periodical) activity of daily living.
+------------------------------------
+Organization_Agency_Department - Organization, Agency, Department (0530): 
+The domain of possible values that specify the agency or department that assigned a specified identifier.
+------------------------------------
+Institution - Institution (0531): 
+The domain of possible values that specify the institution where a staff member is or was active.
+------------------------------------
+ExpandedYes_NoIndicator - Expanded Yes/no Indicator (0532): 
+The domain of possible values to specify an expansion on the original Yes/No indicator table by including "flavors of null".  It is intended to be applied to fields where the response is not limited to "yes" or "no".
+------------------------------------
+ApplicationErrorCode - Application Error Code (0533): 
+The domain of possible values that specify the application specific code identifying the specific error that occurred.
+------------------------------------
+NotifyClergyCode - Notify Clergy Code (0534): 
+The domain of possible values that specify whether the clergy should be notified.
+------------------------------------
+SignatureCode - Signature Code (0535): 
+The domain of possible values that indicate how a patient/subscriber authorization signature is obtained and how it is being retained by a provider.
+------------------------------------
+CertificateStatus - Certificate Status (0536): 
+The domain of possible values that specify the status of the certificate held by a health professional.
+------------------------------------
+Institution2 - Institution (0537): 
+The domain of possible values that specify the institution a specified practitioner began or intends to begin practicing at (e.g., at hospital, at physician organization, at managed care network).
+------------------------------------
+InstitutionRelationshipType - Institution Relationship Type (0538): 
+The domain of possible values that specify the relationship the staff person has with the institution for whom he/she provides services.
+------------------------------------
+CostCenterCode - Cost Center Code (0539): 
+The domain of possible values that specify the organization unit in the General Ledger to which the staff member is currently assigned.
+------------------------------------
+InactiveReasonCode - Inactive Reason Code (0540): 
+The domain of possible values that specify the reason the staff member is inactive.
+------------------------------------
+SpecimenTypeModifier - Specimen Type Modifier (0541): 
+The domain of possible values that specify the modifying or qualifying description(s) about the specimen type.
+------------------------------------
+SpecimenSourceTypeModifier - Specimen Source Type Modifier (0542): 
+The domain of possible values that specify the modifying or qualifying description(s) about the specimen source site.
+------------------------------------
+SpecimenCollectionSite - Specimen Collection Site (0543): 
+The domain of possible values that specify the modifying or qualifying description(s) about the specimen collection site.  This Domain differs from SpecimenSourceSite in those cases where the source site must be approached via a particular site (e.g., anatomic location). For example, in the case where a liver biopsy is obtained via a percutaneous needle, the collection site would be the point of entry of the needle. For venous blood collected from the left radial vein, the collection site could be “antecubital fossa”.
+------------------------------------
+ContainerCondition - Container Condition (0544): 
+The domain of possible values to specify at each receipt the status of the container in which the specimen is shipped in chain of custody cases where specimens are moved from lab to lab.  If the container is compromised in any way (seal broken, container cracked or leaking, etc.), then this status needs to be recorded for legal reasons.
+------------------------------------
+JurisdictionalBreadth - Jurisdictional Breadth (0547): 
+The domain of possible values that specify the breadth/extent of the jurisdiction where the qualification is valid.
+------------------------------------
+SignatorysRelationshipToSubject - Signatory's Relationship to Subject (0548): 
+The domain of possible values that specify the relationship of the consenter to the subject.
+------------------------------------
+NdcCodes - NDC Codes (0549): 
+The domain of possible values that specify the National Drug Codes (NDC) that are required by the Health Insurance Portability and Accountability Act (HIPAA) for electronic claims for pharmacy charges.
+------------------------------------
+BodyParts - Body Parts (0550): 
+The domain of possible values to specify the part of the body.
+------------------------------------
+AdvancedBeneficiaryNoticeOverrideReason - Advanced Beneficiary Notice Override Reason (0552): 
+The domain of possible values that specify the reason the patient did not sign an Advanced Beneficiary Notice.
+------------------------------------
+InvoiceControlCode - Invoice Control Code (0553): 
+The domain of possible values that specify what invoice action is being performed by this message.
+------------------------------------
+InvoiceReasonCodes - Invoice Reason Codes (0554): 
+The domain of possible values that specify the reason for an invoice.
+------------------------------------
+InvoiceType - Invoice Type (0555): 
+The domain of possible values that specify the type of invoice.
+------------------------------------
+BenefitGroup - Benefit Group (0556): 
+The domain of possible values that specify the benefit group.
+------------------------------------
+PayeeType - Payee Type (0557): 
+The domain of possible values that specify the type of payee (e.g., organization, person).
+------------------------------------
+PayeeRelationshipToInvoice - Payee Relationship to Invoice (0558): 
+The domain of possible values used to specify the relationship to the invoice for Person Payee Types.
+------------------------------------
+Product_ServiceStatus - Product/Service Status (0559): 
+The domain of possible values that specify the processing status for the Product/Service Code.
+------------------------------------
+QuantityUnits - Quantity Units (0560): 
+The domain of possible values that specify the adjustment quantity.
+------------------------------------
+Product_ServicesClarificationCodes - Product/Services Clarification Codes (0561): 
+The domain of possible values that specify the Product/Service Code.
+------------------------------------
+ProcessingConsiderationCodes - Processing Consideration Codes (0562): 
+The domain of possible values that specify special processing requested of Payer for this Product/Service Line Item (e.g., hold until paper supporting documentation is received by Payer).
+------------------------------------
+AdjustmentCategoryCode - Adjustment Category Code (0564): 
+The domain of possible values used to specify the category of adjustment and is used to assist in determining which table is used for Adjustment Reason.
+------------------------------------
+ProviderAdjustmentReasonCode - Provider Adjustment Reason Code (0565): 
+The domain of possible values used to specify the reason for this adjustment.
+------------------------------------
+BloodUnitType - Blood Unit Type (0566): 
+The domain of possible values used to specify the type of blood unit
+------------------------------------
+WeightUnits - Weight Units (0567): 
+The domain of possible values of units of measure that are used to specify weight.
+------------------------------------
+VolumeUnits - Volume Units (0568): 
+The domain of possible values of units of measure that are used to specify volume.
+------------------------------------
+AdjustmentAction - Adjustment Action (0569): 
+The domain of possible values used to specify the action requested of a party that receives an adjustment.
+------------------------------------
+PaymentMethodCode - Payment Method Code (0570): 
+The domain of possible values used to specify the method for the movement of payment.
+------------------------------------
+InvoiceProcessingResultsStatus - Invoice Processing Results Status (0571): 
+The domain of possible values used to specify the processing status for an Invoice Processing Result.
+------------------------------------
+TaxStatus - Tax status (0572): 
+The domain of possible values used to specify the tax status of a provider.
+------------------------------------
+UserAuthenticationCredentialTypeCode - User Authentication Credential Type Code (0615): 
+The domain of possible values for a type of user authentication credential.
+------------------------------------
+AddressExpirationReason - Address Expiration Reason (0616): 
+The domain of possible values for the reason this address was marked as "ended".
+------------------------------------
+AddressUsage - Address Usage (0617): 
+The domain of possible values for how an address is intended to be used.
+------------------------------------
+ProtectionCode - Protection Code (0618): 
+The domain of possible values for that an address needs to be treated with special care or sensitivity.
+------------------------------------
+ItemStatusCodes - Item Status Codes (0625): 
+The domain of possible values for the state of an inventory item within the context of an inventory location.
+------------------------------------
+ItemImportanceCodes - Item Importance Codes (0634): 
+The domain of possible values that denote a level or importance of an inventory item within the context of an inventory location.
+------------------------------------
+ReorderTheoryCodes - Reorder Theory Codes (0642): 
+The domain of possible values for the calculation method used to determine the resupply schedule.
+------------------------------------
+LaborCalculationType - Labor Calculation Type (0651): 
+The domain of possible values for the method used to calculate employee labor and measure employee productivity.
+------------------------------------
+DateFormat - Date Format (0653): 
+The domain of possible values for the date format for a decontamination/sterilization instance.
+------------------------------------
+DeviceType - Device Type (0657): 
+The domain of possible values for the kind of device as defined by the manufacturer.
+------------------------------------
+LotControl - Lot Control (0659): 
+The domain of possible values for whether the sterilization load for a device is built in the sub-sterile area adjacent to an Operating Room or the Central Processing Department.
+------------------------------------
+DeviceDataState - Device Data State (0667): 
+The domain of possible values for the state of the data as provided from a device.
+------------------------------------
+LoadStatus - Load Status (0669): 
+The domain of possible values for the status of the information provided in a device sterilization or decontamination cycle.
+------------------------------------
+DeviceStatus - Device Status (0682): 
+The domain of possible values for the state of a device.
+------------------------------------
+CycleType - Cycle Type (0702): 
+The domain of possible values for the type of cycle that is being executed.  A cycle type is a specific sterilization method used for a specific type of supply item.
+------------------------------------
+AccessRestrictionValue - Access Restriction Value (0717): 
+The domain of possible values for the policies governing the information to which access is contolled.
+------------------------------------
+AccessRestrictionReasonCode - Access Restriction Reason Code (0719): 
+The domain of possible values for the reason for the restricted access.
+------------------------------------
+MoodCodes - Mood Codes (0725): 
+The domain of possible values for the functional state of an order.
+------------------------------------
+CclValue - CCL Value (0728): 
+The domain of possible values for the clinical complexity level (CCL) value for the determined diagnosis related group (DRG) for this diagnosis.
+------------------------------------
+DrgDiagnosisDeterminationStatus - DRG Diagnosis Determination Status (0731): 
+The domain of possible values for the status of a diagnosis for a diagnosis related group (DRG) determination.
+------------------------------------
+GrouperStatus - Grouper Status (0734): 
+The domain of possible values for the status of a grouper in general.
+------------------------------------
+DrgStatusPatient - DRG Status Patient (0739): 
+The domain of possible values for whether the length of stay is normal or respectively shorter or longer than normal.
+------------------------------------
+DrgStatusFinancialCalculation - DRG Status Financial Calculation (0742): 
+The domain of possible values for the status of the diagnosis related group (DRG) calculation regarding the financial aspects.
+------------------------------------
+DrgGroupingStatus - DRG Grouping Status (0749): 
+The domain of possible values for the status of the use of the gender information for diagnosis related group (DRG) determination.
+------------------------------------
+StatusWeightAtBirth - Status Weight At Birth (0755): 
+The domain of possible values for the status of the use of the weight at birth for diagnosis related group (DRG) determination.
+------------------------------------
+DrgStatusRespirationMinutes - DRG Status Respiration Minutes (0757): 
+The domain of possible values for the status of the use of the respiration minutes information for diagnosis related group (DRG) determination.
+------------------------------------
+StatusAdmission - Status Admission (0759): 
+The domain of possible values for the admission status for the diagnosis related group (DRG) determination.
+------------------------------------
+DRGProcedureDeterminationStatus - DRG Procedure Determination Status (0761): 
+The domain of possible values for the status of the use of this particular procedure for the diagnosis related group (DRG) determination.
+------------------------------------
+DRGProcedureRelevance - DRG Procedure Relevance (0763): 
+The domain of possible values for the relevance of this particular procedure for the diagnosis related group (DRG) determination.
+------------------------------------
+ResourceTypeOrCategory - Resource Type or Category (0771): 
+The domain of possible values for a high level categorization of resources.
+------------------------------------
+ItemStatus - Item Status (0776): 
+The domain of possible values for the status (useful for reporting and item usage purposes) that applies to an item.
+------------------------------------
+ItemType - Item Type (0778): 
+The domain of possible values for a classification of material items into like groups as defined and utilized within an operating room setting for charting procedures.
+------------------------------------
+ApprovingRegulatoryAgency - Approving Regulatory Agency (0790): 
+The domain of possible values for the regulatory agency by which the item has been approved, such as the FDA or AMA.
+------------------------------------
+RulingAct - Ruling Act (0793): 
+The domain of possible values for an act containing a rule that the item is legally required to be included in notification reporting.
+------------------------------------
+SterilizationType - Sterilization Type (0806): 
+The domain of possible values specifying the type of sterilization used for sterilizing the inventory supply item in the ITM segment.
+------------------------------------
+MaintenanceCycle - Maintenance Cycle (0809): 
+The domain of possible values specifying the maintenance cycle used for the inventory supply item, such as the number of times to sharpen after five uses.
+------------------------------------
+MaintenanceType - Maintenance Type (0811): 
+The domain of possible values specifying the type of maintenance performed on the inventory supply item.  This is different than the maintenance cycle in the sense that it can describe the number of maintenance cycles that can be performed before disposing of the inventory supply item.
+------------------------------------
+Package - Package (0818): 
+The domain of possible values specifying the packaging unit in which this inventory supply item can be ordered or issued when purchased from the vendor in the related vendor segment.
+------------------------------------
+MimeTypes - MIME Types (0834): 
+The domain of possible values specifying the general type of data.
+------------------------------------
+ProblemSeverity - Problem Severity (0836): 
+The domain of possible values specifying the severity of a problem.
+------------------------------------
+ProblemPerspective - Problem Perspective (0838): 
+The domain of possible values specifying from whose perspective a problem was identified.
+------------------------------------
+ReferralDocumentationCompletionStatus - Referral Documentation Completion Status (0865): 
+The domain of possible values specifying to the receiving provider that the clinical history in the message is incomplete and that more will follow.
+------------------------------------
+TelecommunicationExpirationReason - Telecommunication Expiration Reason (0868): 
+The domain of possible values specifying the reason this contact number/email was marked as "ended".
+------------------------------------
+SupplyRiskCodes - Supply Risk Codes (0871): 
+The domain of possible values specifying any known or suspected hazard associated with this material item.
+------------------------------------
+Product_ServiceCode - Product/Service Code (0879): 
+The domain of possible values specifying what service was delivered/received.
+------------------------------------
+Product_ServiceCodeModifier - Product/Service Code Modifier (0880): 
+The domain of possible values specifying additional optional modifier(s) for the Product/Service Code (e.g., after hours - evening, after hours - weekend).
+------------------------------------
+RoleExecutingPhysician - Role Executing Physician (0881): 
+The domain of possible values specifying the account role of the physician, for example, only billing for the professional part, the technical part or both.
+------------------------------------
+MedicalRoleExecutingPhysician - Medical Role Executing Physician (0882): 
+The domain of possible values specifying the role of the physician ("self-employed" or "employed").
+------------------------------------
+SideOfBody - Side of body (0894): 
+The domain of possible values specifying the side of the body ("left" or "right").
+------------------------------------
+PresentOnAdmissionIndicator - Present On Admission (POA) Indicator (0895): 
+The domain of possible values specifying the present on admission indicator for this particular diagnosis.
+------------------------------------
+SecurityCheckScheme - Security Check Scheme (0904): 
+The domain of possible values specifying the scheme for a security check.
+------------------------------------
+ShipmentStatus - Shipment Status (0905): 
+The domain of possible values specifying the status of a shipment.
+------------------------------------
+V2ActPriority - ActPriority (0906): 
+The domain of possible values specifying the priority for a shipment.
+------------------------------------
+V2Confidentiality - Confidentiality (0907): 
+The domain of possible values specifying the confidentiality for a shipment.
+------------------------------------
+PackageType - Package Type (0908): 
+The domain of possible values specifying the type of package.
+------------------------------------
+PatientResultsReleaseCategorizationScheme - Patient Results Release Categorization Scheme (0909): 
+The domain of possible values specifying the scheme for the patient results release categorization.
+------------------------------------
+AcquisitionModality - Acquisition Modality (0910): 
+The domain of possible values specifying the modality for the acquisition of an image.
+------------------------------------
+Participation - Participation (0912): 
+The domain of possible values that represent functional involvement of a caregiver or member of a care team with an activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.).
+------------------------------------
+MonetaryDenominationCode - Monetary Denomination Code (0913): 
+The domain of possible values specifying the denomination in which the quantity is expressed. Values commonly used are the three-character codes specified in  ISO-4217 (1.0.4217 iso4217).
+------------------------------------
+RootCause - Root Cause (0914): 
+The domain of possible values specifying a root cause.
+------------------------------------
+ProcessControlCode - Process Control Code (0915): 
+The domain of possible values specifying a process control code.
+------------------------------------
+RelevantClinicialInformation - Relevant Clincial Information (0916): 
+The domain of possible values for additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies.
+------------------------------------
+BolusType - Bolus Type (0917): 
+The domain of possible values specifying a type of bolus.
+------------------------------------
+PcaType - PCA Type (0918): 
+The domain of possible values specifying a type of PCA.
+------------------------------------
+ExclusiveTest - Exclusive Test (0919): 
+The domain of possible values that define if a test should be a specific event with no other tests to be performed with this test, or not, or other special circumstances.
+------------------------------------
+PreferredSpecimen_AttributeStatus - Preferred Specimen/Attribute Status (0920): 
+The domain of possible values that indicate whether a Specimen/Attribute is Preferred or Alternate for collection of a particular specimen.
+------------------------------------
+CertificationTypeCode - Certification Type Code (0921): 
+The domain of possible values specifying the code for a certification type.
+------------------------------------
+CertificationCategoryCode - Certification Category Code (0922): 
+The domain of possible values specifying the code for a certification category.
+------------------------------------
+ProcessInterruption - Process Interruption (0923): 
+The domain of possible values specifying whether a process was interrrupted and whether a needle had been inserted in the donor's arm prior to the interruption.
+------------------------------------
+CumulativeDosageLimitUom - Cumulative Dosage Limit UoM (0924): 
+The domain of possible values specifying the unit of measure (UoM) for the cumulative dosage limit.
+------------------------------------
+PhlebotomyIssue - Phlebotomy Issue (0925): 
+The domain of possible values specifying a phlebotomy issue.
+------------------------------------
+PhlebotomyStatus - Phlebotomy Status (0926): 
+The domain of possible values specifying the status of a phlebotomy.
+------------------------------------
+ArmStick - Arm Stick (0927): 
+The domain of possible values specifying the arm(s) receiving a stick.
+------------------------------------
+WeightUnitsSNAFU - Weight Units (0929): 
+The domain of possible values of units of measure that are used to specify weight.
+------------------------------------
+VolumeUnitsSNAFU - Volume Units (0930): 
+The domain of possible values of units of measure that are used to specify volume.
+------------------------------------
+TemperatureUnits - Temperature Units (0931): 
+The domain of possible values specifying  the units of transport temperature.
+------------------------------------
+DonationDurationUnits - Donation Duration Units (0932): 
+The domain of possible values specifying the units of donation duration.
+------------------------------------
+IntendedProcedureType - Intended Procedure Type (0933): 
+The domain of possible values specifying the type of intended procedure.
+------------------------------------
+OrderWorkflowProfile - Order Workflow Profile (0934): 
+The domain of possible values specifying the profile of the order workflow.
+------------------------------------
+ProcessInterruptionReason - Process Interruption Reason (0935): 
+The domain of possible values specifying the reason for a process interruption.
+------------------------------------
+V2ObservationType - Observation Type (0936): 
+The domain of possible values for types of observations to enable systems to distinguish between observations sent along with an order, versus observations sent as the result to an order.
+------------------------------------
+ObservationSub-type - Observation Sub-Type (0937): 
+The domain of possible values specifying an observation sub-type.
+------------------------------------
+CollectionEvent_ProcessStepLimit - Collection Event/Process Step Limit (0938): 
+The domain of possible values specifying the limit for a collection event or process step.
+------------------------------------
+CommunicationLocation - Communication Location (0939): 
+The domain of possible values specifying a communication location.
+------------------------------------
+LimitationTypeCodes - Limitation Type Codes (0940): 
+The domain of possible values specifying a type of limitation.
+------------------------------------
+PayerCoverageProcedureCode - Procedure Code (0941): 
+The domain of possible values specifying procedure codes that may impact payer coverage requirements, for example procedure code 1234 is not covered by a payer ABCD or may be covered in conjunction with a specific diagnosis code which can be identifeid in DPS-1 Diagnosis Code. The procedure codes should be drawn from appropriate externally defined procedure codes, for example in the US Realm these include CPT-4 codes defined by the American Medical Association and ICD codes published by CMS.
+------------------------------------
+EquipmentStateIndicatorTypeCode - Equipment State Indicator Type Code (0942): 
+The domain of possible values that specify the type of measurement of the state of an automated laboratory instrument.
+------------------------------------
+TransportDestination - Transport Destination (0943): 
+The domain of possible values that identify the destination for transport of a specific container.
+------------------------------------
+TransportRoute - Transport Route (0944): 
+The domain of possible values that identify the route for transport of a specific container.
+------------------------------------
+Auto-dilutionType - Auto-Dilution Type (0945): 
+The domain of possible values for the pre‑configured dilution to be applied on the instrument, which can be used instead of a numeric declaration.
+------------------------------------
+SupplierType - Supplier Type (0946): 
+The domain of possible values for the type of supplier that will distribute the supply items associated to a contract number.
+------------------------------------
+ClassOfTrade - Class of Trade (0947): 
+The domain of possible values for the purchasing channel with which the contract is associated  such as Hospital, Retail, etc.
+------------------------------------
+RelationshipType - Relationship Type (0948): 
+The domain of possible values for the type of relationship that is established between the instances of Source Information and  Target Information.
+------------------------------------
+orderControlCodeReason - Order Control Code Reason (0949): 
+The domain of possible values that describe reasons for the chosen order control codes.
+------------------------------------
+orderStatusModifier - Order Status Modifier (0950): 
+The domain of possible values that further define an identified status.
+------------------------------------
+reasonForStudy - Reason for Study (0951): 
+The domain of possible values that provide additional information to the universal service identifier on why a test, study or review was ordered.
+------------------------------------
+ConfidentialityV2 - Confidentiality Classification (0952): 
+Types of privacy metadata classifying an IT resource (data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.
+Usage Note : Confidentiality codes may be used in security labels and privacy markings to classify IT resources based on sensitivity to indicate the obligation of a custodian or receiver to ensure that the protected resource is not made available or disclosed to individuals, entities, or processes (security principals) unless authorized per applicable policies. Confidentiality codes may also be used in the clearances of initiators requesting access to protected resources.
+Map: Definition aligns with ISO 7498-2:1989 - Confidentiality is the property that information is not made available or disclosed to unauthorized individuals, entities, or processes
+------------------------------------
+WorkClassificationODH - Work Classification ODH (0959): 
+Types of a person’s employment type as defined by compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.).
+------------------------------------
+DataAbsentReason - Data Absent Reason (0960): 
+??
+------------------------------------
+DeviceTypeSNAFU - Device Type (0961): 
+Domain of concepts describing what kind a particular device is. Focus here is on devices used in the medical field.
+------------------------------------
+DeviceStatusSNAFU - Device Status (0962): 
+The domain describing the availability status of a device.
+------------------------------------
+DeviceSafety - Device Safety (0963): 
+The domain describing safety characteristics of medical devices.
+------------------------------------
+ServiceReason - Service Reason (0964): 
+Domain of concepts describing reasons why a particular service was performed.
+This could be explaining why something was ordered differently than typically done, or explain that it was ordered by mistake.
+	Patient disability requires it
+	No provider in network
+	Patient paid out of pocket
+------------------------------------
+ContractType - Contract Type (0965): 
+The domain of possible values describing the scope of contracts in a masterfile, e.g.:
+•	Local
+•	Regional
+•	Global
+------------------------------------
+PricingTierLevel - Pricing Tier Level (0966): 
+The domain of possible values describing the declared level of pricing for a particular product under a contract, usually based on a discount for larger orders under the contract – often assigned numerically, e.g.:
+•	Tier 1
+•	Tier 2
+•	Tier 3
+------------------------------------
+ContainerFormV2 - Container Form (0967): 
+The domain of possible values describing shape or type of the container, e.g.:
+•	Tube/vial
+•	Jar
+•	Bag
+•	Block
+•	Slide
+------------------------------------
+ContainerMaterial - Container Material (0968): 
+The domain of possible values describing the material a container is made of or indication that the container may be a virtual type, e.g.:
+•	Glass
+•	Plastic
+•	Whole Slide Image
+------------------------------------
+ContainerCommonName - Container Common Name (0969): 
+Codes created by an organization as a shorthand way to express a combination of container attributes; for example the combination of SAC-47 (Container Form) of “Tube/vial” + SAC-48 (Container Material) of “Glass” + SAC-27 (Additive) of “EDTA” may be referenced commonly in an organization as a “Lavender Top”, e.g.:
+•	Lavender Top
+•	Wet Mount (slides for parasitology)
+•	LJ plate (for Mycobacterium cultures)
+------------------------------------
+OnlineVerificationResult - Online Verification Result (0970): 
+Domain of values for the results of an operation to perform online verification of insurance data
+------------------------------------
+OnlineVerificationResultErrorCode - Online Verification Result Error Code (0971): 
+Domain of values representing a type of error from a failed operation to perform online verification of insurance data.
+------------------------------------
+source
+------------------------------------
+[83] pry(main)> 

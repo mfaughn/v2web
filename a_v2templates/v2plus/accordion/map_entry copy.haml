@@ -1,0 +1,8 @@
+.v2-v2plus-map-entry
+  %h3
+    - if url
+      %a{:href => "#{url}"}
+        = title
+    - else
+      = title
+  = entries

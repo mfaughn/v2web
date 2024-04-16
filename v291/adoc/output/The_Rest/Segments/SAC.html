@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>SAC</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>SAC</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_sac_specimen_container_detail_segment">SAC &ndash; Specimen Container Detail Segment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sac_1_external_accession_identifier_ei_01329">SAC-1 External Accession Identifier (EI) 01329</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_2_accession_identifier_ei_01330">SAC-2 Accession Identifier (EI) 01330</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_3_container_identifier_ei_01331">SAC-3 Container Identifier (EI) 01331</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_4_primary_parent_container_identifier_ei_01332">SAC-4 Primary (Parent) Container Identifier (EI) 01332</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_5_equipment_container_identifier_ei_01333">SAC-5 Equipment Container Identifier (EI) 01333</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_6_specimen_source_00249">SAC-6 Specimen Source 00249</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_7_registration_datetime_dtm_01334">SAC-7 Registration Date/Time (DTM) 01334</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_8_container_status_cwe_01335">SAC-8 Container Status (CWE) 01335</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_9_carrier_type_cwe_01336">SAC-9 Carrier Type (CWE) 01336</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_10_carrier_identifier_ei_01337">SAC-10 Carrier Identifier (EI) 01337</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_11_position_in_carrier_na_01338">SAC-11 Position in Carrier (NA) 01338</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_12_tray_type_sac_cwe_01339">SAC-12 Tray Type - SAC (CWE) 01339</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_13_tray_identifier_ei_01340">SAC-13 Tray Identifier (EI) 01340</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_14_position_in_tray_na_01341">SAC-14 Position in Tray (NA) 01341</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_15_location_cwe_01342">SAC-15 Location (CWE) 01342</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_16_container_height_nm_01343">SAC-16 Container Height (NM) 01343</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_17_container_diameter_nm_01344">SAC-17 Container Diameter (NM) 01344</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_18_barrier_delta_nm_01345">SAC-18 Barrier Delta (NM) 01345</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_19_bottom_delta_nm_01346">SAC-19 Bottom Delta (NM) 01346</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_20_container_heightdiameterdelta_units_cwe_01347">SAC-20 Container Height/Diameter/Delta Units (CWE) 01347</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_21_container_volume_nm_00644">SAC-21 Container Volume (NM) 00644</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_22_available_specimen_volume_nm_01349">SAC-22 Available Specimen Volume (NM) 01349</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_23_initial_specimen_volume_nm_01350">SAC-23 Initial Specimen Volume (NM) 01350</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_24_volume_units_cwe_01351">SAC-24 Volume Units (CWE) 01351</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_25_separator_type_cwe_01352">SAC-25 Separator Type (CWE) 01352</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_26_cap_type_cwe_01353">SAC-26 Cap Type (CWE) 01353</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_27_additive_cwe_00647">SAC-27 Additive (CWE) 00647</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_28_specimen_component_cwe_01355">SAC-28 Specimen Component (CWE) 01355</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_29_dilution_factor_sn_01356">SAC-29 Dilution Factor (SN) 01356</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_30_treatment_cwe_01357">SAC-30 Treatment (CWE) 01357</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_31_temperature_sn_01358">SAC-31 Temperature (SN) 01358</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_32_hemolysis_index_nm_01359">SAC-32 Hemolysis Index (NM) 01359</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_33_hemolysis_index_units_cwe_01360">SAC-33 Hemolysis Index Units (CWE) 01360</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_34_lipemia_index_nm_01361">SAC-34 Lipemia Index (NM) 01361</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_35_lipemia_index_units_cwe_01362">SAC-35 Lipemia Index Units (CWE) 01362</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_36_icterus_index_nm_01363">SAC-36 Icterus Index (NM) 01363</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_37_icterus_index_units_cwe_01364">SAC-37 Icterus Index Units (CWE) 01364</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_38_fibrin_index_nm_01365">SAC-38 Fibrin Index (NM) 01365</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_39_fibrin_index_units_cwe_01366">SAC-39 Fibrin Index Units (CWE) 01366</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_40_system_induced_contaminants_cwe_01367">SAC-40 System Induced Contaminants (CWE) 01367</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_41_drug_interference_cwe_01368">SAC-41 Drug Interference (CWE) 01368</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_42_artificial_blood_cwe_01369">SAC-42 Artificial Blood (CWE) 01369</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_43_special_handling_code_cwe_01370">SAC-43 Special Handling Code (CWE) 01370</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_44_other_environmental_factors_cwe_01371">SAC-44 Other Environmental Factors (CWE) 01371</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_45_container_length_cq_02496">SAC-45 Container Length (CQ) 02496</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_46_container_width_cq_02497">SAC-46 Container Width (CQ) 02497</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_47_container_form_cwe_02498">SAC-47 Container Form (CWE) 02498</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_48_container_material_cwe_02499">SAC-48 Container Material (CWE) 02499</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sac_49_container_common_name_cwe_02500">SAC-49 Container Common Name (CWE) 02500</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 15:59:06 -0600
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+%tr.vocab-toc-entry
+  %td
+    - if concept_domain_name
+      %a{:href => "vocab/#{vocab_url}.html"}
+        = concept_domain_name
+    - else
+      %span.v2-missing-concept-domain
+        UNDEFINED
+  %td
+    = table_number
+  %td
+    = description
+  %td
+    = table_type
+  %td
+    = table_usage
+  %td
+    - if code_system_name
+      %a{:href => vocab_url}
+        = code_system_name

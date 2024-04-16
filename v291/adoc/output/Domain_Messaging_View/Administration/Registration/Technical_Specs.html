@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Technical Specs</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>Technical Specs</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<p class="v2">
+Placeholder Text: Technical Specs | Index: 17
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A01_AdmitVisit_Notification.html">Message - A01 Admit/Visit Notification</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A02_Transfer_a_Patient.html">Message - A02 Transfer a Patient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A03_DischargeEnd_Visit.html">Message - A03 Discharge/End Visit</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A04_Register_a_Patient.html">Message - A04 Register a Patient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A05_Pre-Admit_a_Patient.html">Message - A05 Pre-Admit a Patient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A06_Change_an_Outpatient_to_an_Inpatient.html">Message - A06  Change an Outpatient to an Inpatient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A07_Change_an_Inpatient_to_an_Outpatient.html">Message - A07 Change an Inpatient to an Outpatient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A08_Update_Patient_Information.html">Message - A08 Update Patient Information</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A09_Patient_Departing</em>-_Tracking.html">Message - A09 Patient Departing - Tracking </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A10_Patient_Arriving</em>-_Tracking.html">Message - A10 Patient Arriving - Tracking </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A11_Cancel_Admit_Visit_Notification.html">Message - A11 Cancel Admit / Visit Notification</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A12_Cancel_Transfer.html">Message - A12 Cancel Transfer</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A13_Cancel_Discharge_End_Visit.html">Message - A13 Cancel Discharge / End Visit</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A14_Pending_Admit.html">Message - A14 Pending Admit </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A15_Pending_Transfer.html">Message - A15 Pending Transfer </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A16_Pending_Discharge.html">Message - A16 Pending Discharge</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A17_Swap_Patients.html">Message - A17 Swap Patients </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A20_Bed_Status_Update.html">Message - A20 Bed Status Update</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A21_Patient_Goes_on_a_Leave_of_Absence.html">Message - A21 Patient Goes on a Leave of Absence </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A22_Patient_Returns_From_a_Leave_of_Absence.html">Message - A22 Patient Returns From a Leave of Absence</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A23_Delete_a_Patient_Record.html">Message - A23 Delete a Patient Record</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A24_Link_Patient_Information.html">Message - A24 Link Patient Information</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A25_Cancel_Pending_Discharge.html">Message - A25 Cancel Pending Discharge</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A26_Cancel_Pending_Transfer.html">Message - A26 Cancel Pending Transfer</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A27_Cancel_Pending_Admit.html">Message - A27 Cancel Pending Admit</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A28_Add_Person_or_Patient_Information.html">Message - A28 Add Person or Patient Information </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A29_Delete_Person_Information.html">Message - A29 Delete Person Information</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A31_Update_Person_Information.html">Message - A31 Update Person Information</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A32_Cancel_Patient_Arriving</em>-_Tracking.html">Message - A32 Cancel Patient Arriving - Tracking </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A33_Cancel_Patient_Departing</em>-_Tracking.html">Message - A33 Cancel Patient Departing - Tracking</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A37_Unlink_Patient_Information.html">Message - A37 Unlink Patient Information </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A38_Cancel_Pre-Admit.html">Message - A38 Cancel Pre-Admit </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A40_Merge_Patient</em>-_Patient_Identifier_List.html">Message - A40 Merge Patient - Patient Identifier List </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A41_Merge_Account</em>-_Patient_Account_Number.html">Message - A41 Merge Account - Patient Account Number</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A42_Merge_Visit</em>-_Visit_Number.html">Message - A42 Merge Visit - Visit Number </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A43_Move_Patient_Information</em>-_Patient_Identifier_List.html">Message - A43 Move Patient Information - Patient Identifier List </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A44_Move_Account_Information</em>-_Patient_Account_Number.html">Message - A44 Move Account Information - Patient Account Number</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>A45_Move_Visit_Information</em>-_Visit_Number.html">Message - A45 Move Visit Information - Visit Number</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A47_Change_Patient_Identifier_List.html">Message - A47 Change Patient Identifier List </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A49_Change_Patient_Account_Number.html">Message - A49 Change Patient Account Number </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A50_Change_Visit_Number.html">Message - A50 Change Visit Number</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A51_Change_Alternate_Visit_ID.html">Message - A51 Change Alternate Visit ID </a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A52_Cancel_Leave_of_Absence_for_a_Patient.html">Message - A52 Cancel Leave of Absence for a Patient</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A53_Cancel_Patient_Returns_from_a_Leave_of_Absence.html">Message - A53 Cancel Patient Returns from a Leave of Absence</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A50_Change_Attending_Doctor.html">Message - A50 Change Attending Doctor</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A55_Cancel_Change_Attending_Doctor.html">Message - A55 Cancel Change Attending Doctor</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A60_Update_Adverse_Reaction_Information.html">Message - A60 Update Adverse Reaction Information</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A61_Change_Consulting_Doctor.html">Message - A61 Change Consulting Doctor</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-_A62_Cancel_Change_Consulting_Doctor.html">Message - A62 Cancel Change Consulting Doctor</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>Q21K21_Get_Person_Demographics</em>(QBP)_and_Response.html">Message - Q21/K21 Get Person Demographics (QBP) and Response</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>Q22K22_Find_Candidates</em>(QBP)<em>and_Response</em>(RSP).html">Message - Q22/K22 Find Candidates (QBP) and Response (RSP)</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>Q23K23_Get_Corresponding_Identifiers</em>(QBP)<em>and_Response</em>(RSP).html">Message - Q23/K23 Get Corresponding Identifiers (QBP) and Response (RSP)</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>Q24K24_Allocate_Identifiers</em>(QBP)<em>and_Response</em>(RSP).html">Message - Q24/K24 Allocate Identifiers (QBP) and Response (RSP)</a>
+</p>
+<p class="v2">
+<a href="Technical_Specs/Message_-<em>Q32K32_Find_Candidates_including_Visit_Information</em>(QBP)<em>and_Response</em>(RSP).html">Message - Q32/K32 Find Candidates including Visit Information (QBP) and Response (RSP)</a>
+</p>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 15:55:18 -0600
+</div>
+</div>
+</body>
+</html>

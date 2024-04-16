@@ -1,11 +1,4 @@
 module V2Web
-  
-  class SectionContent
-    def to_html
-      "#{self.class}#to_html is not implemented"
-    end
-  end
-
   class Section
     attr_accessor :configuration
 
@@ -13,14 +6,30 @@ module V2Web
       {:subsections => {:value => subsections, :data => self.class.properties[:subsections] }}.to_a
     end
     
+    # For debugging because we're just getting the first in the path
+    def _breadcrumbs
+      bc = [self.title]
+      bc = bc + parents.first._breadcrumbs if parents.first
+      bc
+    end
+    
+    # For debugging because we're just getting the first in the path
+    def breadcrumbs
+      _breadcrumbs.reverse.join(' > ')
+    end
+    
     # FIXME not sure this is correct anymore
     alias_association :subsections, 'V2Web::Section', :type => :many_to_many, :alias_of => :content
     
     alias_association :tab_sets, 'V2Web::TabSet', :type => :many_to_many, :alias_of => :content
     
-    # def subsections
-    #   content.select { |c| c.is_a?(V2Web::Section) }
-    # end
+    def subsections
+      content.select { |c| c.is_a?(V2Web::Section) }
+    end
+    
+    def subcontent
+      content.select { |c| c.is_a?(V2Web::Section) || c.is_a?(V2Web::Reference) }
+    end
     
     derived_attribute(:identifying_text, ::String)
     def identifying_text
@@ -34,7 +43,7 @@ module V2Web
     end
 
     def to_composition_section
-      xml = HL7.get_instance_template(:composition, 'section')
+      xml = HL7::V2.get_instance_template(:domain, 'section')
       [:title].each do |methd|
         xml.sub!(methd.to_s.upcase, send(methd).to_s)
       end
@@ -477,3 +486,192 @@ module V2Web
     end
   end  
 end
+
+module V2Web
+  class Section
+        
+    def to_pub(depth, html_id)
+      ensure_valid_content_ordering
+      output = case render_as&.value
+      when 'pre'
+        to_pub_pre
+      when 'clause'
+        to_pub_clause(depth, html_id)
+      # when 'segment-definition'
+     #    obj_id  = entry.split('/').last
+     #    pbug entry, 'orange'
+     #    begin
+     #      seg_def = SegmentDefinition.get(obj_id)
+     #      seg_content = seg_def.to_pub_clause(depth)
+     #      V2Pub.render_with_locals(:section, :wrapper_div, {:html_id => html_id, :depth => depth, :content => seg_content})
+     #    rescue Exception => e
+     #      # Doesn't get much dirtier than this ....
+     #      return '' if e.message =~ /segment-usage-in-vaccine-messages/
+     #      raise
+     #    end
+      when 'datatype-definition'
+        obj_id = entry.split('/').last
+        dt     = DataType.get(obj_id)
+        dt_content = dt.to_pub_clause(depth)
+        V2Pub.render_with_locals(:section, :wrapper_div, {:html_id => html_id, :depth => depth, :content => dt_content})
+      else
+        puts "Section for #{code} -- #{entry}"
+      end
+      # err = Nokogiri::XML(output).errors
+      # if err.any?
+      #   puts err
+      #   raise
+      # end
+      output
+    end
+    
+    def to_pub_pre
+      html = []
+      content.each do |c|
+        case c
+        when V2Web::Text
+          html << c.content.content
+        when V2Web::Figure
+          html << c.to_web_pub
+        else
+          raise "Can't handle a #{c.class} in clause frontmatter."
+        end
+      end
+      html.join("\n")
+    end
+    
+    def to_pub_clause(depth, html_id)
+      locals = {
+        :html_id  => html_id,
+        :depth    => depth,
+        :title    => title,
+        :content  => completed_text(depth + 1),
+        :sections => pub_subcontent(depth + 1, html_id)
+      }
+      html = V2Pub.render_with_locals(:section, :clause, locals)
+      html
+    end
+    
+    def to_toc(depth, url, num)
+      pub = []
+      content.each_with_index do |s, i|
+        next unless s.is_a?(V2Web::Section)
+        next if s.render_as&.value == 'pre'
+        pub << s.to_toc(depth, "#{url}-#{i+1}", "#{num}.#{i+1}")
+      end
+      locals = {
+        :url      => url,
+        :title    => "#{num} #{title}",
+        :sections => pub.join
+      }
+      V2Pub.render_with_locals(:section, :toc_entry, locals)
+    end
+    
+    def ensure_valid_content_ordering
+      section_seen = false
+      content.each do |item|
+        section_seen = section_seen || item.is_a?(V2Web::Section) || item.is_a?(V2Web::Reference)
+        # puts "Item is a #{item.class} -- section_seen is #{section_seen}"
+        next if item.is_a?(V2Web::Section) || item.is_a?(V2Web::Reference)
+        next unless section_seen
+        puts Rainbow("#{item.class} element encountered after a Section element in #{self.class}[#{self.id}]").orange
+        display_for_debug
+        puts '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+        return
+      end
+    end
+    
+    def non_section_content
+      content.reject { |item| item.is_a?(V2Web::Section) || item.is_a?(V2Web::Reference) }
+    end
+
+    def completed_text(depth)
+      html = []
+      non_section_content.each do |item|
+        case item
+        when V2Web::Text
+          txt = item.content.content
+          # puts txt;puts
+          html << txt unless txt.strip.empty?
+        when V2Web::Figure
+          html << item.to_hl7_site
+        when V2Web::Reference
+          raise "Should not be here"
+          puts item.render_as&.value
+          puts item.ref.class
+          raise
+          html << nil
+        else
+          display_for_debug
+          raise Rainbow("Can't handle a #{item.class} in clause frontmatter for #{self.class}[#{self.id}].").red
+        end
+      end
+      return '' unless html.any?
+      remove_ack_chor_reference(html.join("\n"))
+    end
+
+    def display_for_debug
+      content.each_with_index do |c, i|
+        output = "#{i}) #{c.class}: "
+        case c
+        when V2Web::Text
+          output << Rainbow(c.content_content).yellow
+        when V2Web::Reference
+          output << Rainbow(c.ref.class.name.demodulize).magenta + " #{c.render_as&.value}"
+        else          
+          output << Rainbow(c.title).cyan + " #{c.render_as&.value}"
+        end
+        puts output
+      end
+      puts '______________________IN_______________________'
+      pp self
+    end
+
+    def remove_ack_chor_reference(html)
+      regex = /<div class=.insert-ack-choreography.\s+id=.([A-Z0-9\^_]+)-ack-choreography.+<\/div>/
+      html.gsub(regex, '') # putting ack chor in tabs instead
+    end
+
+    def insert_ack_chor(html, depth)
+      regex = /<div class=.insert-ack-choreography.\s+id=.([A-Z0-9\^_]+)-ack-choreography.+<\/div>/
+      return html.gsub(regex, '') # putting ack chor in tabs instead
+      matches = html.scan(regex)
+      # puts Rainbow(matches.flatten.inspect).coral
+      matches.flatten.each do |m|
+        msg_id = m.split('^')[0..-2].join('-').downcase
+        begin
+          msg = HL7::Message.get(msg_id)
+        rescue
+          puts title
+          raise
+        end
+        ac    = msg.ack_chor
+        entry = ac.to_composition_entry(depth)
+        replacer = /<div class=.insert-ack-choreography. id=.#{m.gsub('^', '\^')}-ack-choreography.+<\/div>/
+        # puts replacer.inspect
+        replaceables = html.scan(replacer)
+        raise "#{replaceables.count} substrings match #{replacer.inspect}" unless replaceables.count == 1
+        # puts Rainbow(replaceables.inspect).cadetblue
+        html.sub!(replacer, entry)
+      end
+      html
+    end
+    
+    def pub_subcontent(depth, html_id)
+      htmls = []
+      subcontent.each_with_index do |item, i|
+        case item
+        when V2Web::Section
+          htmls << item.to_pub_clause(depth, "#{html_id}-#{i+1}")
+        when V2Web::Reference
+          htmls << item.to_pub(depth)
+        else
+          display_for_debug
+          raise Rainbow("Can't handle a #{item.class} in #{self.class}[#{self.id}]").red
+        end
+      end
+      htmls
+    end
+    
+  end # Section
+end # V2Web

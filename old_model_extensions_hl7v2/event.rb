@@ -9,7 +9,7 @@ module HL7
     end
         
     def to_resource
-      xml = HL7.get_instance_template(:event, 'base')
+      xml = HL7::V2.get_instance_template(:event, 'base')
       xml.sub!('URL', local_url_name)
       [:name, :code].each do |methd|
         xml.sub!(methd.to_s.upcase, send(methd).to_s)
@@ -24,7 +24,7 @@ module HL7
     
     def resource_description_content
        if description_content && description_content.strip[0]
-         xml = HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
+         xml = HL7::V2.get_instance_template(:common, 'description').sub('VALUE', description_content)
          Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
        else
          ''
@@ -33,7 +33,7 @@ module HL7
     
     def resource_response
        if response
-         xml = HL7.get_instance_template(:event, 'response').sub('MESSAGE_URL', response.local_url_name)
+         xml = HL7::V2.get_instance_template(:event, 'response').sub('MESSAGE_URL', response.local_url_name)
          Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
        else
          ''
@@ -42,7 +42,7 @@ module HL7
     
     def resource_ack
        if ack
-         xml = HL7.get_instance_template(:event, 'acknowledgment').sub('MESSAGE_URL', ack.local_url_name)
+         xml = HL7::V2.get_instance_template(:event, 'acknowledgment').sub('MESSAGE_URL', ack.local_url_name)
          Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
        else
          ''

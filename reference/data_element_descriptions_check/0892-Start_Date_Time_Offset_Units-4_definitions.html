@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #892 - Start Date/Time Offset Units</h2><h3>4 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 10 AIS.6 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used for expressing the start date/time offset.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &quot;<em>s&quot;</em>) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.</p><p class="v2 v2_normalindented">This field is conditionally required.  If a value for <a href="REFERENCE_ATTRIBUTEBROKENAIS-5-Start Date/Time Offset">AIS-5-Start Date/Time Offset</a> is provided, then a value is required for this field.</p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Unit of Measure Coding Systems from HL7 Table 0396</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 16.13%;"/>
+    <col span="1" style="width: 27.38%;"/>
+    <col span="1" style="width: 56.47%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="width:16.13%; ">
+      <p class="v2 v2_othertableheader">Coding System</p>
+    </th>
+    <th style="width:27.38%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="width:56.47%; ">
+      <p class="v2 v2_othertableheader">Comment</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:16.13%; ">
+      <p class="v2 v2_othertablebody">ISO+</p>
+    </td>
+    <td style="width:27.38%; ">
+      <p class="v2 v2_othertablebody">ISO 2955.83 (units of measure) with HL7 extensions</p>
+    </td>
+    <td style="width:56.47%; ">
+      <p class="v2 v2_othertablebody">See chapter 7.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.13%; ">
+      <p class="v2 v2_othertablebody">ANS+</p>
+    </td>
+    <td style="width:27.38%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure</p>
+    </td>
+    <td style="width:56.47%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.</p>
+    </td>
+  </tr>
+</table>
+<br/><h4>          ---------- 2nd Description: Ch. 10 AIG.10 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used for expressing <a href="REFERENCE_ATTRIBUTEBROKENAIG-9-Start Date/Time Offset">AIG-9-Start Date/Time Offset</a>. This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &quot;<em>s</em>&quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.</p><p class="v2 v2_normalindented">This field is conditionally required.  If a value for <a href="REFERENCE_ATTRIBUTEBROKENAIG-9-Start Date/Time Offset">AIG-9-Start Date/Time Offset</a> is provided, then a value is required for this field.</p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Unit of Measure Coding Systems from HL7 Table 0396</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 16.73%;"/>
+    <col span="1" style="width: 33.27%;"/>
+    <col span="1" style="width: 49.99%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="width:16.73%; ">
+      <p class="v2 v2_othertableheader">Coding System</p>
+    </th>
+    <th style="width:33.27%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="width:49.99%; ">
+      <p class="v2 v2_othertableheader">Comment</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:16.73%; ">
+      <p class="v2 v2_othertablebody">ISO+</p>
+    </td>
+    <td style="width:33.27%; ">
+      <p class="v2 v2_othertablebody">ISO 2955.83 (units of measure) with HL7 extensions</p>
+    </td>
+    <td style="width:49.99%; ">
+      <p class="v2 v2_othertablebody">See chapter 7.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.73%; ">
+      <p class="v2 v2_othertablebody">ANS+</p>
+    </td>
+    <td style="width:33.27%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure</p>
+    </td>
+    <td style="width:49.99%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.</p>
+    </td>
+  </tr>
+</table>
+<br/><h4>          ---------- 3rd Description: Ch. 10 AIL.8 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used for expressing the <a href="REFERENCE_ATTRIBUTEBROKENAIL-7 Start Date/Time Offset">AIL-7 Start Date/Time Offset</a> field.  This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &quot;<em>s</em>&quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.</p><p class="v2 v2_normalindented">This field is conditionally required.  If a value for <a href="REFERENCE_ATTRIBUTEBROKENAIL-7 Start Date/Time Offset">AIL-7 Start Date/Time Offset</a> is provided, then a value is required for this field.</p><br/><h4>          ---------- 4th Description: Ch. 10 AIP.8 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used for expressing <a href="REFERENCE_ATTRIBUTEBROKENAIP-7 Start Date/Time Offset">AIP-7 Start Date/Time Offset</a>.  This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &quot;<em>s</em>&quot;) is assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.</p><p class="v2 v2_normalindented">This field is conditionally required.  If a value for <a href="REFERENCE_ATTRIBUTEBROKENAIP-7 Start Date/Time Offset">AIP-7 Start Date/Time Offset</a> is provided, then a value is required for this field.</p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Unit of Measure Coding Systems from HL7 Table 0396</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 15.64%;"/>
+    <col span="1" style="width: 35.66%;"/>
+    <col span="1" style="width: 48.69%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="width:15.64%; ">
+      <p class="v2 v2_othertableheader">Coding System</p>
+    </th>
+    <th style="width:35.66%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="width:48.69%; ">
+      <p class="v2 v2_othertableheader">Comment</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:15.64%; ">
+      <p class="v2 v2_othertablebody">ISO+</p>
+    </td>
+    <td style="width:35.66%; ">
+      <p class="v2 v2_othertablebody">ISO 2955.83 (units of measure) with HL7 extensions</p>
+    </td>
+    <td style="width:48.69%; ">
+      <p class="v2 v2_othertablebody">See chapter 7.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.64%; ">
+      <p class="v2 v2_othertablebody">ANS+</p>
+    </td>
+    <td style="width:35.66%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure</p>
+    </td>
+    <td style="width:48.69%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>the s</strong>tart <strong>d</strong>ate/<strong>t</strong>ime <strong>o</strong>ffset<strong>.  </strong>This field should be valued according to the recommendations in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&amp;quot;<strong>&lt;/em&gt;</strong>) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANS<strong>I</strong>+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>S-5</strong>-Start Date/Time Offset&quot;&gt;AI<strong>S-5</strong>-Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAIG-9-Start Date/Time Offset&quot;&gt;AIG-9-S</strong>tart <strong>D</strong>ate/<strong>T</strong>ime <strong>O</strong>ffset<strong>&lt;/a&gt;. </strong>This field should be valued according to the recommendations <strong>made </strong>in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s<strong>&lt;/em&gt;</strong>&amp;quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO<strong>+</strong> and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>G-9</strong>-Start Date/Time Offset&quot;&gt;AI<strong>G-9</strong>-Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;colgroup&gt;</span></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 16.<strong>1</strong>3%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>27.38</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>56.47</strong>%;&quot;/&gt;</del></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 16.<strong>7</strong>3%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>33.27</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>49.99</strong>%;&quot;/&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;/colgroup&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr class=&quot;v2-table-header&quot;&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:16.<strong>1</strong>3%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:16.<strong>7</strong>3%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:<strong>33.27</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:<strong>49.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:16.<strong>1</strong>3%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:16.<strong>7</strong>3%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>33.27</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>49.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:16.<strong>1</strong>3%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:16.<strong>7</strong>3%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>33.27</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>49.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing the <strong>s</strong>tart <strong>d</strong>ate/<strong>t</strong>ime <strong>o</strong>ffset.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&amp;quot;<strong>&lt;/em&gt;</strong>) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANS<strong>I</strong>+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>S-5-</strong>Start Date/Time Offset&quot;&gt;AI<strong>S-5-</strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;<strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 16.13%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 27.38%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 56.47%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:16.13%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:27.38%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:56.47%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:16.13%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:27.38%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:56.47%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:16.13%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:27.38%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:56.47%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing the <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAIL-7 S</strong>tart <strong>D</strong>ate/<strong>Time Offset&quot;&gt;AIL-7 Start Date/T</strong>ime <strong>O</strong>ffset<strong>&lt;/a&gt; field</strong>.  This field should be valued according to the recommendations <strong>made </strong>in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s<strong>&lt;/em&gt;</strong>&amp;quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO<strong>+</strong> and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>L-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>L-7 </strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>the s</strong>tart <strong>d</strong>ate/<strong>t</strong>ime <strong>o</strong>ffset.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&amp;quot;<strong>&lt;/em&gt;) will be</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANS<strong>I</strong>+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>S-5-</strong>Start Date/Time Offset&quot;&gt;AI<strong>S-5-</strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAIP-7 S</strong>tart <strong>D</strong>ate/<strong>Time Offset&quot;&gt;AIP-7 Start Date/T</strong>ime <strong>O</strong>ffset<strong>&lt;/a&gt;</strong>.  This field should be valued according to the recommendations <strong>made </strong>in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s<strong>&lt;/em&gt;</strong>&amp;quot;<strong>) is</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO<strong>+</strong> and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>P-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>P-7 </strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;colgroup&gt;</span></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>6.13</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>27.38</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>56.47</strong>%;&quot;/&gt;</del></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>5.64</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>35.66</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>48.69</strong>%;&quot;/&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;/colgroup&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr class=&quot;v2-table-header&quot;&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:1<strong>6.13</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:<strong>35.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:<strong>48.69</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.13</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>35.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>48.69</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.13</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>27.38</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>35.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>56.47</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>48.69</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>G-9-</strong>Start Date/Time Offset&quot;&gt;AI<strong>G-9-</strong>Start Date/Time Offset&lt;/a&gt;<strong>. </strong>This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>G-9-</strong>Start Date/Time Offset&quot;&gt;AI<strong>G-9-</strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;<strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 16.73%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 33.27%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 49.99%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:16.73%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:33.27%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:49.99%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:16.73%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:33.27%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:49.99%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:16.73%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:33.27%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:49.99%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>the </strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>L-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>L-7 </strong>Start Date/Time Offset&lt;/a&gt;<strong> field.  </strong>This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>L-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>L-7 </strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>G-9-</strong>Start Date/Time Offset&quot;&gt;AI<strong>G-9-</strong>Start Date/Time Offset&lt;/a&gt;. This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) <strong>will be</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>G-9-</strong>Start Date/Time Offset&quot;&gt;AI<strong>G-9-</strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>P-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>P-7 </strong>Start Date/Time Offset&lt;/a&gt;. <strong> </strong>This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) <strong>is</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>P-7 </strong>Start Date/Time Offset&quot;&gt;AI<strong>P-7 </strong>Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;colgroup&gt;</span></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>6.73</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 3<strong>3.27</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 4<strong>9.9</strong>9%;&quot;/&gt;</del></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>5.64</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 3<strong>5.66</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 4<strong>8.6</strong>9%;&quot;/&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;/colgroup&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr class=&quot;v2-table-header&quot;&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:1<strong>6.73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:3<strong>3.27</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:3<strong>5.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:4<strong>9.9</strong>9%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:4<strong>8.6</strong>9%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:3<strong>3.27</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:3<strong>5.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:4<strong>9.9</strong>9%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:4<strong>8.6</strong>9%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.64</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:3<strong>3.27</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:3<strong>5.66</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:4<strong>9.9</strong>9%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:4<strong>8.6</strong>9%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing <strong>the </strong>&lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>L</strong>-7 Start Date/Time Offset&quot;&gt;AI<strong>L</strong>-7 Start Date/Time Offset&lt;/a&gt;<strong> field</strong>.  This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) <strong>will be</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>L</strong>-7 Start Date/Time Offset&quot;&gt;AI<strong>L</strong>-7 Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used for expressing &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>P</strong>-7 Start Date/Time Offset&quot;&gt;AI<strong>P</strong>-7 Start Date/Time Offset&lt;/a&gt;.  This field should be valued according to the recommendations made in Chapters 2 and 7.  If this field is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&lt;/em&gt;&amp;quot;) <strong>is</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO+ and ANS+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This field is conditionally required.  If a value for &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENAI<strong>P</strong>-7 Start Date/Time Offset&quot;&gt;AI<strong>P</strong>-7 Start Date/Time Offset&lt;/a&gt; is provided, then a value is required for this field.&lt;/p&gt;<strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;colgroup&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 15.64%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 35.66%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 48.69%;&quot;/&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/colgroup&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr class=&quot;v2-table-header&quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;width:15.64%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;width:35.66%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;th style=&quot;width:48.69%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/th&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:15.64%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:35.66%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:48.69%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:15.64%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:35.66%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;td style=&quot;width:48.69%; &quot;&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>    &lt;/td&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>  &lt;/tr&gt;</strong></ins></li>
+    <li class="ins"><ins><strong>&lt;/table&gt;</strong></ins></li>
+  </ul>
+</div>
+</body>
+</html>

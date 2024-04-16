@@ -1,0 +1,15 @@
+:javascript
+  $(".accordion").accordion({
+      // header: "> h3:not(.item)",
+      heightStyle: "content",
+      active: false,
+      collapsible: true
+    });
+%h2.v2
+  Mapping between HL7 v2.9 and v2+
+%p.v2
+  This Table of Contents lists the sections from the v2.9 chapters.  Clicking on any entry will take you to corresponding section of this v2+ website.
+.v2-v2plus-map
+  - entries.each do |entry|
+    .v2-v2plus-map-entries.accordion
+      = entry

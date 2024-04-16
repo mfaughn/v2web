@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #869 - Appointment Duration Units</h2><h3>2 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 10 ARQ.10 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used in expressing the <a href="REFERENCE_ATTRIBUTEBROKENARQ-9-Appointment duration">ARQ-9-Appointment duration</a> field.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this component is not valued, the ISO base unit of seconds (code &quot;<em>s&quot;</em>) will be assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.</p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Unit of Measure Coding Systems from HL7 Table 0396</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 16.05%;"/>
+    <col span="1" style="width: 27.73%;"/>
+    <col span="1" style="width: 56.20%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="width:16.05%; ">
+      <p class="v2 v2_othertableheader">Coding System</p>
+    </th>
+    <th style="width:27.73%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="width:56.20%; ">
+      <p class="v2 v2_othertableheader">Comment</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:16.05%; ">
+      <p class="v2 v2_othertablebody">ISO+</p>
+    </td>
+    <td style="width:27.73%; ">
+      <p class="v2 v2_othertablebody">ISO 2955.83 (units of measure) with HL7 extensions</p>
+    </td>
+    <td style="width:56.20%; ">
+      <p class="v2 v2_othertablebody">See chapter 7.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.05%; ">
+      <p class="v2 v2_othertablebody">ANS+</p>
+    </td>
+    <td style="width:27.73%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure</p>
+    </td>
+    <td style="width:56.20%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.</p>
+    </td>
+  </tr>
+</table>
+<br/><h4>          ---------- 2nd Description: Ch. 10 SCH.10 ----------</h4><p class="v2 v2_normalindented"><strong>As of version 2.5, this field is retained for backward compatibility only.</strong> Refer to the TQ1 segment described in Chapter 4.</p><p class="v2 v2_normalindented">Definition:  This field contains a code describing the units of time used for expressing the <a href="REFERENCE_ATTRIBUTEBROKENARQ-9-Appointment Duration">ARQ-9-Appointment Duration</a> field.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this component is not valued, the ISO base unit of seconds (code &quot;<em>s</em>&quot;) is assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.</p><p class="v2 v2_normalindented">As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.</p><p class="v2 v2_othertablecaption">Unit of Measure Coding Systems from HL7 Table 0396</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 16.13%;"/>
+    <col span="1" style="width: 27.86%;"/>
+    <col span="1" style="width: 55.99%;"/>
+  </colgroup>
+  <tr class="v2-table-header">
+    <th style="width:16.13%; ">
+      <p class="v2 v2_othertableheader">Coding System</p>
+    </th>
+    <th style="width:27.86%; ">
+      <p class="v2 v2_othertableheader">Description</p>
+    </th>
+    <th style="width:55.99%; ">
+      <p class="v2 v2_othertableheader">Comment</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:16.13%; ">
+      <p class="v2 v2_othertablebody">ISO+</p>
+    </td>
+    <td style="width:27.86%; ">
+      <p class="v2 v2_othertablebody">ISO 2955.83 (units of measure) with HL7 extensions</p>
+    </td>
+    <td style="width:55.99%; ">
+      <p class="v2 v2_othertablebody">See chapter 7.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.13%; ">
+      <p class="v2 v2_othertablebody">ANS+</p>
+    </td>
+    <td style="width:27.86%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure</p>
+    </td>
+    <td style="width:55.99%; ">
+      <p class="v2 v2_othertablebody">HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains a code describing the units of time used <strong>in</strong> expressing the &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENARQ-9-Appointment <strong>d</strong>uration&quot;&gt;ARQ-9-Appointment <strong>d</strong>uration&lt;/a&gt; field.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this component is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s&amp;quot;<strong>&lt;/em&gt;) will be</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;<strong>&lt;strong&gt;As of version 2.5, this field is retained for backward compatibility only.&lt;/strong&gt; Refer to the TQ1 segment described in Chapter 4.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>Definition:  This field contains a code describing the units of time used <strong>for</strong> expressing the &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENARQ-9-Appointment <strong>D</strong>uration&quot;&gt;ARQ-9-Appointment <strong>D</strong>uration&lt;/a&gt; field.  This field should be valued according to the recommendations in Chapters 2 and 7.  If this component is not valued, the ISO base unit of seconds (code &amp;quot;&lt;em&gt;s<strong>&lt;/em&gt;</strong>&amp;quot;<strong>) is</strong> assumed.  Refer to Chapter 7, Figures 7-6 through 7-9, for a list of ISO and ANSI+ unit codes.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;As of v2.6, the known applicable external coding systems include those in the table below. If the code set you are using is in this table, then you must use that designation.&lt;/p&gt;&lt;p class=&quot;v2 v2_othertablecaption&quot;&gt;Unit of Measure Coding Systems from HL7 Table 0396&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;colgroup&gt;</span></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 16.<strong>05</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 27.<strong>73</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 5<strong>6.20</strong>%;&quot;/&gt;</del></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 16.<strong>13</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 27.<strong>86</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 5<strong>5.99</strong>%;&quot;/&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;/colgroup&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr class=&quot;v2-table-header&quot;&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:16.<strong>05</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:16.<strong>13</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Coding System&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:27.<strong>73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:27.<strong>86</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Description&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:5<strong>6.20</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:5<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertableheader&quot;&gt;Comment&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:16.<strong>05</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:16.<strong>13</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:27.<strong>73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:27.<strong>86</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ISO 2955.83 (units of measure) with HL7 extensions&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:5<strong>6.20</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:5<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;See chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:16.<strong>05</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:16.<strong>13</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;ANS+&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:27.<strong>73</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:27.<strong>86</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:5<strong>6.20</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:5<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;HL7 set of units of measure based upon ANSI X3.50 - 1986, ISO 2988-83, and US customary units / see chapter 7.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+  </ul>
+</div>
+</body>
+</html>

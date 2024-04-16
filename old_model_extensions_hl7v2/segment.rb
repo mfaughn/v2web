@@ -1,7 +1,7 @@
 module HL7
   class Segment    
     def to_resource
-      xml = HL7.get_instance_template(:message_structure, 'segment')
+      xml = HL7::V2.get_instance_template(:message_structure, 'segment')
       xml.sub!('URL', type.local_url_name)
       Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
     end
@@ -18,7 +18,7 @@ module HL7
     
     def resource_description
        if description && description.strip[0]
-         xml = HL7.get_instance_template(:common, 'description').sub('VALUE', "<p>#{description.strip}</p>")
+         xml = HL7::V2.get_instance_template(:common, 'description').sub('VALUE', "<p>#{description.strip}</p>")
          Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
        else
          ''

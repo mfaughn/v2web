@@ -3,37 +3,15 @@ require 'ostruct'
 require 'indentation'
 require 'htmlentities'
 Dir["#{File.join(__dir__, 'model_extensions')}/**/*.rb"].each { |file| load file }
+GBP = Gui_Builder_Profile unless defined?(GBP)
+V2  = HL7::V2 unless defined?(V2)
+Vocab = HL7::Vocab unless defined?(Vocab)
+HL7::Vocab::VSD = HL7::Vocab::ValueSetDefinition  unless defined?(HL7::Vocab::VSD)
 
-module HL7
-  classes = [
-    AbstractSegment,
-    AcknowledgmentChoreography,
-    Component,
-    DataElement,
-    DataType,
-    Event,
-    ExampleSegment,
-    Field,
-    MessageStructure,
-    Message,
-    SegmentChoice,
-    SegmentDefinition,
-    SegmentSequence,
-    Segment,
-    ValueSet
-  ]
-  classes.each do |c|
-    c.include(const_get(c.name.split('::').last + 'Methods'))
-  end
-end
-
-module FHIR
-  classes = [
-    Composition,
-    Section,
-    Basic
-  ]
-  classes.each do |c|
-    c.include(const_get(c.name.split('::').last + 'Methods'))
+def pbug(str, color = nil)
+  if color
+    puts Rainbow(str).send(color.to_sym)
+  else
+    puts str
   end
 end

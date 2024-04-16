@@ -1,0 +1,289 @@
+!!! Strict
+
+%html{:lang => 'en'}
+  %head
+    %meta{:'http-equiv'=>'Content-Type', :content =>'text/html; charset=UTF-8'}
+    -# Bad value for html5, but necessary for older IEs
+    %meta{:'http-equiv'=>'cache-control', :content => 'no-cache'}
+    -# 'expires' is not used in HTML5 (error in w3 validator). IE may treat 0 as cache never expires, other browsers treate as no-cache.
+    -# -1 for most browsers means never cache, but IE will have errors with it.
+    %meta{:'http-equiv'=>'expires', :content => '0'}
+    
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1, shrink-to-fit=no"}
+
+    - if flash[:trigger_action_download]
+      / Current implementation of file download uses meta tag with the URL being the output of this HAML file.
+      / alternatively could implement JQuery download here if meta tag doesn't work out
+      %meta{:'http-equiv'=>'refresh', :content => "0; URL=#{flash[:trigger_action_download]}"}
+    
+    %style{:type => 'text/css' }
+      @import "/css/bootstrap/bootstrap.min.css";
+      @import "/css/ui-lightness/jquery-ui-1.10.3.custom.min.css";
+      @import "/css/jquery-ui-timepicker-addon.css";
+      @import "/js/jq/dist/themes/default/style.min.css";
+      @import "/css/tree_viewer.css";
+      @import "/css/bootstrap/bootstrap-select/bootstrap-select.min.css";
+      @import "/js/editors/summernote/summernote-bs4.css";
+      @import "/fonts/font-awesome/css-files/all.min.css";
+      @import "/css/main.css";
+      @import "/js/editors/codemirror/lib/codemirror.css";
+      @import "/css/v2_editor.css";
+    - # Stuff that's only needed for testing
+    / - if Gui.option(:testing_mode)
+    /   %style{:type => 'text/css' }
+    /     @import "/css/only_for_testing.css";
+    
+    - if Gui.option(:disable_external_resources)
+      %script{:type => 'text/javascript', :src => '/js/prometheus/disabled_scripts.js'}
+    - else
+      - # MathJax Script
+      / %script{:type => 'text/javascript', :src => "/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML", :defer => true}
+
+    - # Bootstrap, jQuery, and jQuery ui
+    %script{:type => 'text/javascript', :src => '/js/jq/jquery-3.6.0.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/jq/jquery-ui.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/jq/dist/jstree.min.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/bootstrap/bootstrap.bundle.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/bootstrap/bootstrap-select/bootstrap-select.min.js'}
+    - # Plugins
+    %script{:type => 'text/javascript', :src => '/js/jq/jquery-ui-timepicker-addon.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/jq/jquery.mousewheel.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/jq/jquery.blockUI.min.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/js_utils.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/imgpreview.jquery.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/garlic.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/jquery.mark.js', :defer => true}  
+    %script{:type => 'text/javascript', :src => '/js/editors/summernote/summernote-bs4.min.js', :defer => true}
+
+    - # This file and any other ES6 javascript has to be compiled with Babel or some other transpilor to work with old browsers like the capybara browser
+    - if Gui.option(:mode) == :dev
+      %script{:type => 'text/javascript', :src => '/js/prometheus/es6_classes.js', :defer => true}
+      %script{:type => 'text/javascript', :src => '/js/prometheus/load_spec.js', :defer => true}
+    - else
+      %script{:type => 'text/javascript', :src => '/js/prometheus/compiled-es6.js', :defer => true}
+      
+    - # Prometheus JS
+    %script{:type => 'text/javascript', :src => '/js/prometheus/association_management.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/change_listeners.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/clone.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/collection.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/collection_position.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/collection_button.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/column_sorting.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/common.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/compatibility.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/concurrency.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/deleting.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/filtering.js', :defer => true}    
+    %script{:type => 'text/javascript', :src => '/js/prometheus/gb_widgets.js', :defer => true}
+    - #CKEditor Wysiwg editor
+    %script{:type => 'text/javascript', :src => '/ckeditor/ckeditor.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/load_functions.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/multi_simple_widget.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/organizer.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/pagination.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/richtext.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/saving.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/form_validating.js', :defer => true}
+    - # %script{:type => 'text/javascript', :src => '/js/prometheus/serialize_map.js'}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/syntax_highlighting.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/timestamp_widget.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/uniqueness.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/tree_view.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/form_draft_saving.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/misc_widget_setup.js', :defer => true}
+    %script{:type => 'text/javascript', :src => '/js/prometheus/fugazi.js', :defer => true}
+
+    - # main.js
+    %script{:type => 'text/javascript', :src => '/js/prometheus/main.js', :defer => true}
+  
+    - if Gui.option(:favicon)
+      / %link{:rel => 'icon', :type => 'image/png', :href => Gui.option(:favicon)}
+      %link{:rel => 'shortcut icon', :href => Gui.option(:favicon)}
+      
+    %title
+      = page_title
+  
+  - side_nav_on = Gui.option(:side_nav_bar)
+  - top_nav_on = Gui.option(:top_nav_bar)
+  - body_classes = []
+  - body_classes.push 'fixed-topnav' if top_nav_on
+  - body_classes.push 'fixed-sidenav' if side_nav_on
+
+  %body{:class => body_classes.join(' ')}
+    %input.fugazi{:id => @csrfx_param, :type => "hidden", :name => @csrfx_param, :value => @csrfx_token}
+    %header
+      - if Gui.option(:top_nav_bar)
+        /Start of top nav bar
+        %nav#nav_bar{:class => 'navbar navbar-expand-lg navbar-dark bg-primary fixed-top'}
+          - if !side_nav_on
+            %a.pl-2{:class => 'navbar-brand app_title', :href => Gui.option(:home_page)[:url]}
+              = Gui.option(:spec_title)
+          %button#topNavBarToggleButton{:class => 'navbar-toggler', :type => 'button', 'data-toggle' => 'collapse', 'data-target' => '#topNavBarToggler', 'aria-controls' => 'topNavBarToggler', 'aria-expanded' => false, 'aria-label' => 'Toggle navigation'}
+            %span{:class => 'navbar-toggler-icon'}
+          #topNavBarToggler{:class => 'collapse navbar-collapse'}
+            %ul{:class => 'navbar-nav mr-auto'}
+              - home_link_shown = false
+              - if !side_nav_on
+                - unless homeless_urls.include?(request.fullpath)
+                  - home_link_shown = true
+                  %li{:class => 'nav-item'}
+                    %a{:class => 'nav-link', :href => Gui.option(:home_page)[:url]} 
+                      = Gui.option(:home_page)[:name]
+              - if !Gui.option(:workflow_options).empty?
+                %li{:class => 'nav-item'}
+                  %a{:class => 'nav-link', :href => '/workflow'}
+                    Workflow
+            #user_bar
+              %ul{:class => 'navbar-nav'}
+                - if logged_in?
+                  /Custom Page links
+                  - if !side_nav_on
+                    - CUSTOM_PAGES.each do |page_key, page_info|
+                      - if page_info[:show_in_nav_bar]
+                        %li{:class => 'nav-item'}
+                          %a{:class => 'nav-link', :href => page_info[:url]}
+                            = page_info[:name]
+                    - if session[:is_admin]
+                      /Admin Dropdown Links
+                      %li{:class => 'dropdown nav-item'}
+                        %a.nav-link.dropdown-toggle{'data-toggle' => 'dropdown', :role => 'button', 'aria-expanded' => false, :href => '#'}
+                          Administration
+                        .dropdown-menu.dropdown-menu-right
+                          - if session[:is_admin]
+                            %a.dropdown-item#org-admin-link{:href => "/gb_users/user_admin/"} 
+                              Manage Users
+                          - if session[:is_admin]
+                            %a.dropdown-item#site-admin-link{:href => '/gb_users/site_admin'} 
+                              Manage Site
+                            %a.dropdown-item#enumerations-link{:href => '/gb_enumerations/enumerations'} 
+                              Manage Enumeration
+                  /User Dropdown Links
+                  %li{:class => 'dropdown nav-item'}
+                    %a.login-name.nav-link.dropdown-toggle{'data-toggle' => 'dropdown', :role => 'button', 'aria-expanded' => false, :href => '#'}
+                      = user.login
+                    .dropdown-menu.dropdown-menu-right
+                      %a.dropdown-item#user-preferences-link{:href => '/gb_users/preferences'}
+                        Preferences
+                      %a.dropdown-item#logout-link{:href => '/gb_users/logout'}
+                        Log Out
+                - else
+                  %li{:class => 'nav-item'}
+                    %a{:class=>'nav-link', :href => '/gb_users/login'} 
+                      Login
+                  - if LOCAL_AUTHENTICATION
+                    %li{:class => 'nav-item'}
+                      %a{:class=>'nav-link', :href => '/gb_users/register'} 
+                        Register              
+      /Start of side nav bar
+      - if Gui.option(:side_nav_bar)
+        %aside.sidebar
+          .logo
+            %a.logo-normal{:href => Gui.option(:home_page)[:url]}
+              = Gui.option(:spec_title)
+          .sidebar-content
+            - filename = File.expand_path(File.join(File.dirname(__FILE__), '../view/sidebar_links.haml'))
+            = Haml::Engine.new(File.read(filename)).render(binding)
+                    
+    /start of main content
+    %main#wrapper.container-fluid.mb-4
+      .message_box{:style => 'border-top-left-radius: 10px; border-top-right-radius: 10px; overflow:hidden;'}
+        - if flash[:message]
+          #message
+            = flash[:message]
+        - if @message_error
+          .message_error
+            = @message_error
+        - if @message_success
+          .alert.alert-success
+          = @message_success
+        - flash_error_messages = flash[:error_messages]; flash[:error_messages] = []
+        - if flash_error_messages && !flash_error_messages.empty?
+          - flash_error_messages.each do |error_message|
+            .message_error.alert.alert-danger.alert-dismissible.fade.show{:role => 'alert'}
+              = error_message
+              %button{:type => 'button', :class => 'close', 'data-dismiss' => 'alert', 'aria-label' => 'Close'}
+                %span{'aria-hidden' => true}
+                  &times;
+        - flash_info_messages = flash[:info_messages]; flash[:info_messages] = []
+        - if flash_info_messages && !flash_info_messages.empty?
+          - flash_info_messages.each do |info_message|
+            .message_success.alert.alert-success.alert-dismissible.fade.show{:role => 'alert'}
+              = info_message
+              %button{:type => 'button', :class => 'close', 'data-dismiss' => 'alert', 'aria-label' => 'Close'}
+                %span{'aria-hidden' => true}
+                  &times;
+      .content
+        = @content
+    %footer#footer
+      %p#prometheus_statement.text-center.text-white
+        = "&copy; Prometheus Computing, LLC #{Time.now.strftime("%Y")}"
+      - if Gui.option(:mode) == :dev
+        #spec_load_button.text-center
+          %script{:type => 'text/javascript', :src => '/js/prometheus/load_spec.js', :defer => true}
+          %button.spec_loader.btn.btn-primary.btn-lg{:type => "button", :onClick => "load_spec()"} Reload Spec
+  
+  - if flash[:uniqueness_popup]
+    = flash[:uniqueness_popup]
+  - elsif flash[:action_popup]
+    = flash[:action_popup]
+  - elsif flash[:concurrency_popup]
+    = flash[:concurrency_popup]
+  - if html_script_string = Gui.option(:string_html_scripts)
+    = html_script_string
+  
+  -#TODO Could go back to fully adding these through javascript or put them in a seperate haml file that gets inserted here -TB
+  #site-modals
+    .modal.fade{:id => 'collectionDeleteSelectedModal', :tabindex => '-1', :role => 'dialog', 'aria-labelledby' => 'deleteSelectedLabel', 'aria-hidden' => true}
+      .modal-dialog.modal-lg{:role => 'document'}
+        .modal-content
+          .modal-header
+            %h5.modal-title{:id => 'deleteSelectedLabel'}
+              Delete Selected Objects
+            %button{:type => 'button', :class => 'close', 'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+              %span{'aria-hidden' => true}
+                &times;
+          .modal-body
+            %p
+              Are you sure you want to delete the following items:
+            .items-to-delete
+          .modal-footer
+            %button{:class => 'btn btn-secondary', 'data-dismiss' => 'modal'}
+              Cancel
+            %button{:id => 'confirmCollectionDeleteSelected', :class => 'btn btn-primary'}
+              Confirm Delete
+    
+    .modal.fade{:id => 'discardChangesModal', :tabindex => '-1', :role => 'dialog', 'aria-labelledby' => 'discardChangesLabel', 'aria-hidden' => true}
+      .modal-dialog{:role => 'document'}
+        .modal-content
+          .modal-header
+            %h5.modal-title{:id => 'discardChangesLabel'}
+              Discard Changes
+            %button{:type => 'button', :class => 'close', 'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+              %span{'aria-hidden' => true}
+                &times;
+          .modal-body
+            %p
+              Discard all unsaved changes on the page?
+          .modal-footer
+            %button{:id => 'closeDiscardChangesModal', :class => 'btn btn-secondary', :type => 'button', 'data-dismiss' => 'modal'}
+              Cancel
+            %button{:id => 'confirmDiscardChanges', :class => 'btn btn-primary'}
+              Discard
+              
+    .modal.fade{:id => 'cloneDomainObjModal', :tabindex => '-1', :role => 'dialog', 'aria-labelledby' => 'cloneDomainObjLabel', 'aria-hidden' => true}
+      .modal-dialog{:role => 'document'}
+        .modal-content
+          .modal-header
+            %h5.modal-title{:id => 'cloneDomainObjLabel'}
+              Clone Object
+            %button{:type => 'button', :class => 'close', 'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+              %span{'aria-hidden' => true}
+                &times;
+          .modal-body
+            .cloning-information 
+          .modal-footer
+            %button{:class => 'btn btn-secondary', 'data-dismiss' => 'modal'}
+              Cancel
+            %button{:id => 'confirmCloneDomainObj', :class => 'btn btn-primary'}
+              Clone

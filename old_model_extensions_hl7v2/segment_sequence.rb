@@ -2,7 +2,7 @@ require 'terminal-table'
 module HL7
   class SegmentSequence
     def to_resource
-      xml = HL7.get_instance_template(:message_structure, 'sequence')
+      xml = HL7::V2.get_instance_template(:message_structure, 'sequence')
       xml.sub!('NAME', resource_name)
       segments_xml = []
       segments.each { |seg| segments_xml << seg.to_segment_entry }
@@ -24,7 +24,7 @@ module HL7
     
     def resource_name
       if name && name.strip[0]
-        HL7.get_instance_template(:common, 'name').sub('VALUE', name)
+        HL7::V2.get_instance_template(:common, 'name').sub('VALUE', name)
       else
         ''
       end

@@ -5,14 +5,17 @@ organizer(:Details, V2Web::Section) do
   relabel('fhir_composition', 'FHIR Composition')
   relabel('fhir', 'FHIR Section (backbone element)')
   relabel('parents', 'Parent Section(s)')
+  relabel('content', 'Contents (including subsections)')
   reorder('remarks', 'subsections', 'content', 'parents', 'fhir_composition', 'fhir', 'original', 'ooxml', :to_end => true)
   reorder('title', 'version', 'rendering_as', :to_beginning => true)
+  hide('fhir', 'fhir_composition')
 end
 organizer(:Details, V2Web::Standard) do
   inherits_from_spec(:Details, V2Web::Section)
   hide('ooxml')
   reorder('remarks', 'subsections', 'content', 'parents', 'fhir_composition', 'fhir', 'original', 'ooxml', :to_end => true)
   reorder('title', 'version', 'rendering_as', :to_beginning => true)
+  hide('fhir', 'fhir_composition')
 end
 
 collection(:Summary, V2Web::SubsectionContent) do
@@ -28,6 +31,7 @@ organizer(:Details, V2Web::Table) do
   # reorder('html_simple', :to_beginning => true)
   reorder('caption', 'style', 'cols', 'rows', :to_beginning => true)
   reorder('ooxml', 'rendering_as', :to_end => true)
+  hide('fhir', 'fhir_composition')
 end
 
 collection(:Summary, V2Web::Cell) do
@@ -38,4 +42,15 @@ end
 collection(:Summary, V2Web::Row) do
   string('identifying_text', :label => 'Content', :disable_search => true)
   order('identifying_text', :to_beginning => true)
+end
+
+organizer(:Details, V2Web::TabSet) do
+  hide('boxes', 'list', 'cell', 'tab')
+  reorder('title', 'styles', 'tabs', 'parents', 'footnotes', :to_beginning => true)
+  hide('fhir', 'fhir_composition')
+end
+
+organizer(:Details, V2Web::Tab) do
+  order('styles', 'render_as', 'ref', :to_beginning => true)
+  relabel('tabset', 'Parent Tab Set')
 end

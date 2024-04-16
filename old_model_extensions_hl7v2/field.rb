@@ -5,7 +5,7 @@ module HL7
     end
     
     def to_resource
-      xml = HL7.get_instance_template(:segment_def, 'field')
+      xml = HL7::V2.get_instance_template(:segment_def, 'field')
       [:sequence_number].each do |property|
         xml.sub!(property.to_s.upcase, send(property).to_s)
       end
@@ -21,10 +21,10 @@ module HL7
     end
 
     def resource_min_cardinality
-      min_cardinality ? HL7.get_instance_template(:segment_def, 'min_cardinality').sub('VALUE', min_cardinality.to_s) : ''
+      min_cardinality ? HL7::V2.get_instance_template(:segment_def, 'min_cardinality').sub('VALUE', min_cardinality.to_s) : ''
     end
     def resource_max_cardinality
-      max_cardinality ? HL7.get_instance_template(:segment_def, 'max_cardinality').sub('VALUE', max_cardinality.to_s) : ''
+      max_cardinality ? HL7::V2.get_instance_template(:segment_def, 'max_cardinality').sub('VALUE', max_cardinality.to_s) : ''
     end
   end
 end # module HL7

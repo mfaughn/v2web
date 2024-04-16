@@ -11,21 +11,32 @@
       %th
         %a{:href => segment_list_page}
           Seq#
+          - # FIXME add reciprocal links to definition clauses
       %th
         %a{:href => segment_list_page}
-          DataElement
+          / DataElement
+          Data Element Name
       %th
         %a{:href => segment_list_page}
-          Description
+          DataType
       %th
         %a{:href => segment_list_page}
-          Must Implement
+          Usage
       %th
         %a{:href => segment_list_page}
-          Flags
+          Vocabulary
       %th
         %a{:href => segment_list_page}
           Cardinality
+      %th
+        %a{:href => segment_list_page}
+          Item #
+      / %th
+      /   %a{:href => segment_list_page}
+      /     Description
+      / %th
+      /   %a{:href => segment_list_page}
+      /     Must Implement
       %th
         %a{:href => segment_list_page}
           Length  
@@ -34,13 +45,13 @@
           C.LEN
       %th
         %a{:href => segment_list_page}
-          Vocabulary
-      %th
-        %a{:href => segment_list_page}
-          DataType
+          Flags
+
+
+
     %tr
       %td.hierarchy{:colspan => 3}
-        %img{:src =>"/images/folder_icon.gif"}
+        %img{:src =>"images/folder_icon.gif"}
         %b
           =code
     =field_rows

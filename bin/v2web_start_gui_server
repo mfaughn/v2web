@@ -1,17 +1,28 @@
 #!/usr/bin/env ruby
-# This is the shebang line for rvm. For default OS X ruby, it's #!/usr/bin/ruby
-
-# An alternative is to run from the shell "ruby catapult.rb" (if app has been generated)
-
-# Foundation load_path_management can not be revectored to a development version, 
-# becasue it's code is used to do the redirection (to reduce redundancy)
-if ARGV[0] =~ /test|dev|local/i
-  ARGV.shift
-  require 'lodepath'
-  LodePath.amend
-  LodePath.display
-end
-require 'Foundation/load_path_management'
-application_module = Foundation.setup_app('v2web', __FILE__)
+puts "rtm_start_gui_server is DEPRECATED.  Use the bin/start script instead!"
+exit 1
+require 'lodepath'
+LodePath.add_project_lib
+LodePath.amend if ARGV.any? { |a| a =~ /test|dev|docker/ }
+LodePath.display
+require LodePath.find(File.join('v2web', 'meta_info.rb'))
+require LodePath.find(File.join('v2web', 'app_options.rb'))
 require 'gui_site/launcher'
-Gui.run(application_module)
+Gui.run(RTM)
+
+# # This is the shebang line for rvm. For default OS X ruby, it's #!/usr/bin/ruby
+#
+# # An alternative is to run from the shell "ruby catapult.rb" (if app has been generated)
+#
+# # Foundation load_path_management can not be revectored to a development version,
+# # becasue it's code is used to do the redirection (to reduce redundancy)
+# if ARGV[0] =~ /test|dev|local/i
+#   ARGV.shift
+#   require 'lodepath'
+#   LodePath.amend
+#   LodePath.display
+# end
+# require 'Foundation/load_path_management'
+# application_module = Foundation.setup_app('v2web', __FILE__)
+# require 'gui_site/launcher'
+# Gui.run(application_module)

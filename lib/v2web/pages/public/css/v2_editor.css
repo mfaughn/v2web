@@ -1,0 +1,39 @@
+.v2_homepage_label_style { 
+  display: block;
+  font-size: 16px;
+  background-color: #053aaa;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px
+}
+
+.hl7_link_style {
+  display:; block;
+  font-size: 16px;
+  background-color: #053aaa;
+  border-radius: 5px;
+}
+
+.hl7_link_style a {
+  color: #84f9eb;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hl7_link_style a {
+  color: #84f9eb;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hl7_link_style a:visited {
+  color: #9cd5f3;
+}
+.hl7_link_style a:hover {
+  color: #84f9eb;
+}
+

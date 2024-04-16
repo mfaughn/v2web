@@ -35,7 +35,7 @@ module HL7
     end
     
     def to_resource
-      xml = HL7.get_instance_template(:message, 'base')
+      xml = HL7::V2.get_instance_template(:message, 'base')
       xml.sub!('URL', local_url_name)
       [:name, :code].each do |methd|
         xml.sub!(methd.to_s.upcase, send(methd).to_s)
@@ -54,7 +54,7 @@ module HL7
     
     def resource_description_content
        if description_content && description_content.strip[0]
-         xml = HL7.get_instance_template(:common, 'description').sub('VALUE', description_content)
+         xml = HL7::V2.get_instance_template(:common, 'description').sub('VALUE', description_content)
          Nokogiri::XML(xml) { |config| config.strict.noblanks }.root.to_s
        else
          ''

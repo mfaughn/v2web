@@ -1,32 +1,35 @@
 %tr.datatype_component
   %td
     - if last
-      %img{:src => "/images/tbl_vjoin_end.png"}
+      %img{:src => "images/tbl_vjoin_end.png"}
     - else
-      %img{:src => "/images/tbl_vjoin.png"}
+      %img{:src => "images/tbl_vjoin.png"}
     %a{:href => sequence_number_url}
       =sequence_number
     - if !last
       - fat_row.times do
         %br
-        %img{:src => "/images/tbl_vline.png"}
+        %img{:src => "images/tbl_vline.png"}
       
   %td
     =name
-  %td
-    =implement
   %td.centered
-    =flags
+    %a{:href => type_url}
+      =type_code
   %td.centered
-    =cardinality
+    =usage
+  %td.centered
+    %div.vocab-link
+      %a{ :href => vocab_url, :title => vocab_hover }
+        =vocab_info
+        %span.vocab-link-text
+          =vocab_hover
+  / %td.centered
+  /   =cardinality
   %td.centered
     =length
   %td.centered
     =c_length
-  %td
-    %a{:href => value_set_url}
-      =value_set
   %td.centered
-    %a{:href => type_url}
-      =type_code
+    =flags
     

@@ -1,0 +1,11 @@
+%li.v2-v2plus-map-entry
+  %h3
+    - if url
+      %a{:href => "#{url}"}
+        = title
+    - else
+      = title
+  - if entries.any?
+    %ul.v2-v2plus-map-entries
+      - entries.each do |entry|
+        = entry

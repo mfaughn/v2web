@@ -31,7 +31,7 @@ module V2Web
     
     def setup(source, chapter = nil)
       chapter  ||= source.slice(/(?<=CH)\d\dA?/)
-      chapter  = chapter[1..-1] if chapter[0] == '0' # get rid of leading zero
+      chapter  = chapter[1..-1] if chapter.to_s[0] == '0' # get rid of leading zero
       @chapter = chapter
       HL7Parse.set_list_styles(@chapter)
       docx_path = HL7Parse.docx_path(source)

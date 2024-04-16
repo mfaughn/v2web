@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>INV</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>INV</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_inv_inventory_detail_segment">INV &ndash; Inventory Detail Segment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_inv_1_substance_identifier_cwe_01372">INV-1 Substance Identifier (CWE) 01372</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_2_substance_status_cwe_01373">INV-2 Substance Status (CWE) 01373</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_3_substance_type_cwe_01374">INV-3 Substance Type (CWE) 01374</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_4_inventory_container_identifier_cwe_01532">INV-4 Inventory Container Identifier (CWE) 01532</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_5_container_carrier_identifier_cwe_01376">INV-5 Container Carrier Identifier (CWE) 01376</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_6_position_on_carrier_cwe_01377">INV-6 Position on Carrier (CWE) 01377</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_7_initial_quantity_nm_01378">INV-7 Initial Quantity (NM) 01378</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_8_current_quantity_nm_01379">INV-8 Current Quantity (NM) 01379</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_9_available_quantity_nm_01380">INV-9 Available Quantity (NM) 01380</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_10_consumption_quantity_nm_01381">INV-10 Consumption Quantity (NM) 01381</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_11_quantity_units_cwe_01382">INV-11 Quantity Units (CWE) 01382</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_12_expiration_datetime_dtm_01383">INV-12 Expiration Date/Time (DTM) 01383</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_13_first_used_datetime_dtm_01384">INV-13 First Used Date/Time (DTM) 01384</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_14_on_board_stability_duration_01385">INV-14 On Board Stability Duration 01385</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_15_testfluid_identifiers_cwe_01386">INV-15 Test/Fluid Identifier(s) (CWE) 01386</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_16_manufacturer_lot_number_st_01387">INV-16 Manufacturer Lot Number (ST) 01387</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_17_manufacturer_identifier_cwe_00286">INV-17 Manufacturer Identifier (CWE) 00286</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_18_supplier_identifier_cwe_01389">INV-18 Supplier Identifier (CWE) 01389</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_19_on_board_stability_time_cq_01626">INV-19 On Board Stability Time (CQ) 01626</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_20_target_value_cq_01896">INV-20 Target Value (CQ) 01896</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_21_equipment_state_indicator_type_code_cwe_03488">INV-21 Equipment State Indicator Type Code (CWE) 03488</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_inv_22_equipment_state_indicator_value_cq_03489">INV-22 Equipment State Indicator Value (CQ) 03489</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 15:59:10 -0600
+</div>
+</div>
+</body>
+</html>

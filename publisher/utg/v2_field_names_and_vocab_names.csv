@@ -1,0 +1,1143 @@
+DataElement (Field) Name,CodeSystem Name,Field,Table #
+Security Classification Tag,Confidentiality Classification,BHS.15,952
+Security Handling Instructions,"",BHS.16,953
+Continuation Style,Continuation Style Code,DSC.2,398
+HL7 Error Code,Message Error Condition Codes,ERR.3,357
+Severity,Error Severity,ERR.4,516
+Application Error Code,Application Error Code,ERR.5,533
+Inform Person Indicator,Inform Person Code,ERR.9,517
+Override Type,Override Type,ERR.10,518
+Override Reason Code,Override Reason,ERR.11,519
+Security Classification Tag,Confidentiality Classification,FHS.15,952
+Security Handling Instructions,"",FHS.16,953
+Acknowledgment Code,Acknowledgment code,MSA.1,8
+Message Waiting Priority,Message Waiting Priority,MSA.8,520
+Sending Application,Application,MSH.3,361
+Sending Facility,Facility,MSH.4,362
+Receiving Application,Application,MSH.5,361
+Receiving Facility,Facility,MSH.6,362
+Accept Acknowledgment Type,Accept/Application Acknowledgment Conditions,MSH.15,155
+Application Acknowledgment Type,Accept/Application Acknowledgment Conditions,MSH.16,155
+Country Code,Country Code,MSH.17,399
+Character Set,Alternate Character Sets,MSH.18,211
+Principal Language Of Message,"",MSH.19,609
+Alternate Character Set Handling Scheme,Alternate Character Set Handling Scheme,MSH.20,356
+Security Classification Tag,Confidentiality Classification,MSH.26,952
+Security Handling Instructions,"",MSH.27,953
+Source of Comment,Source of Comment,NTE.2,105
+Comment Type,Comment Type,NTE.4,364
+Coded Comment,"",NTE.9,611
+Business Rule Override Type,Override Type,OVR.1,518
+Business Rule Override Code,Override Code,OVR.2,521
+User Authentication Credential Type Code,User Authentication Credential Type Code,UAC.1,615
+Event Reason Code,Event Reason,EVN.4,62
+Operator ID,Operator ID,EVN.5,188
+Patient Name,Name Type,PID.5,200
+Administrative Sex,Administrative Sex,PID.8,1
+Race,Race,PID.10,5
+Primary Language,Primary Language,PID.15,296
+Marital Status,Marital Status,PID.16,2
+Religion,Religion,PID.17,6
+Patient Account Number,Check Digit Scheme,PID.18,61
+Mother's Identifier,Check Digit Scheme,PID.21,61
+Ethnic Group,Ethnic Group,PID.22,189
+Multiple Birth Indicator,Yes/no Indicator,PID.24,136
+Citizenship,Citizenship,PID.26,171
+Veterans Military Status,Veterans Military Status,PID.27,172
+Nationality,Nationality,PID.28,212
+Patient Death Indicator,Yes/no Indicator,PID.30,136
+Identity Unknown Indicator,Yes/no Indicator,PID.31,136
+Identity Reliability Code,Identity Reliability Code,PID.32,445
+Taxonomic Classification Code,Species Code,PID.35,446
+Breed Code,Breed Code,PID.36,447
+Production Class Code,Production Class Code,PID.38,429
+Tribal Citizenship,Citizenship,PID.39,171
+Patient Class,Patient Class,PV1.2,4
+Admission Type,Admission Type,PV1.4,7
+Attending Doctor,Physician ID,PV1.7,10
+Referring Doctor,Physician ID,PV1.8,10
+Hospital Service,Hospital Service,PV1.10,69
+Preadmit Test Indicator,Pre-Admit Test Indicator,PV1.12,87
+Re-admission Indicator,Re-Admission Indicator,PV1.13,92
+Admit Source,Admit Source,PV1.14,23
+Ambulatory Status,Ambulatory Status,PV1.15,9
+VIP Indicator,VIP Indicator,PV1.16,99
+Admitting Doctor,Physician ID,PV1.17,10
+Patient Type,Patient Type,PV1.18,18
+Financial Class,Financial Class,PV1.20,64
+Charge Price Indicator,Charge/Price Indicator,PV1.21,32
+Courtesy Code,Courtesy Code,PV1.22,45
+Credit Rating,Credit Rating,PV1.23,46
+Contract Code,Contract Code,PV1.24,44
+Interest Code,Interest Rate Code,PV1.28,73
+Transfer to Bad Debt Code,Transfer to Bad Debt Code,PV1.29,110
+Bad Debt Agency Code,Bad Debt Agency Code,PV1.31,21
+Delete Account Indicator,Delete Account Code,PV1.34,111
+Discharge Disposition,Discharge Disposition,PV1.36,112
+Discharged to Location,Discharged to Location,PV1.37,113
+Diet Type,Diet Type,PV1.38,114
+Servicing Facility,Servicing Facilities,PV1.39,115
+Bed Status,Bed Status,PV1.40,116
+Account Status,Account Status,PV1.41,117
+Alternate Visit ID,Identifier Type,PV1.50,203
+Visit Indicator,Visit Indicator,PV1.51,326
+Accommodation Code,Accommodation Code,PV2.2,129
+Visit User Code,Visit User Code,PV2.7,130
+Employment Illness Related Indicator,Yes/no Indicator,PV2.15,136
+Purge Status Code,Purge Status Code,PV2.16,213
+Special Program Code,Special Program Code,PV2.18,214
+Retention Indicator,Yes/no Indicator,PV2.19,136
+Visit Publicity Code,Publicity Code,PV2.21,215
+Visit Protection Indicator,Yes/no Indicator,PV2.22,136
+Patient Status Code,Patient Status Code,PV2.24,216
+Visit Priority Code,Visit Priority Code,PV2.25,217
+Expected Discharge Disposition,Discharge Disposition,PV2.27,112
+Patient Charge Adjustment Code,Patient Charge Adjustment,PV2.30,218
+Recurring Service Code,Recurring Service Code,PV2.31,219
+Billing Media Code,Yes/no Indicator,PV2.32,136
+Military Partnership Code,Yes/no Indicator,PV2.34,136
+Military Non-Availability Code,Yes/no Indicator,PV2.35,136
+Newborn Baby Indicator,Yes/no Indicator,PV2.36,136
+Baby Detained Indicator,Yes/no Indicator,PV2.37,136
+Mode of Arrival Code,Mode of Arrival Code,PV2.38,430
+Recreational Drug Use Code,Recreational Drug Use Code,PV2.39,431
+Admission Level of Care Code,Admission Level of Care Code,PV2.40,432
+Precaution Code,Precaution Code,PV2.41,433
+Patient Condition Code,Patient Condition Code,PV2.42,434
+Living Will Code,Living Will Code,PV2.43,315
+Organ Donor Code,Organ Donor Code,PV2.44,316
+Advance Directive Code,Advance Directive Code,PV2.45,435
+Notify Clergy Code,Notify Clergy Code,PV2.49,534
+Name,Name Type,NK1.2,200
+Relationship,Relationship,NK1.3,63
+Contact Role,Contact Role,NK1.7,131
+Marital Status,Marital Status,NK1.14,2
+Administrative Sex,Administrative Sex,NK1.15,1
+Living Dependency,Living Dependency,NK1.17,223
+Ambulatory Status,Ambulatory Status,NK1.18,9
+Citizenship,Citizenship,NK1.19,171
+Primary Language,Primary Language,NK1.20,296
+Living Arrangement,Living Arrangement,NK1.21,220
+Publicity Code,Publicity Code,NK1.22,215
+Protection Indicator,Yes/no Indicator,NK1.23,136
+Student Indicator,Student Status,NK1.24,231
+Religion,Religion,NK1.25,6
+Nationality,Nationality,NK1.27,212
+Ethnic Group,Ethnic Group,NK1.28,189
+Contact Reason,Contact Reason,NK1.29,222
+Contact Person's Name,Name Type,NK1.30,200
+Job Status,Job Status,NK1.34,311
+Race,Race,NK1.35,5
+Handicap,Handicap,NK1.36,295
+VIP Indicator,VIP Indicator,NK1.39,99
+Allergen Type Code,Allergen Type,AL1.2,127
+Allergy Severity Code,Allergy Severity,AL1.4,128
+Allergen Type Code,Allergen Type,IAM.2,127
+Allergy Severity Code,Allergy Severity,IAM.4,128
+Allergy Action Code,Segment Action Code,IAM.6,206
+Sensitivity to Causative Agent Code,Sensitivity to Causative Agent Code,IAM.9,436
+Relationship to Patient Code,Relationship,IAM.15,63
+Alert Device Code,Alert Device Code,IAM.16,437
+Allergy Clinical Status Code,Allergy Clinical Status,IAM.17,438
+Allergy Severity Code,Allergy Severity,IAR.2,128
+Sensitivity to Causative Agent Code,Sensitivity to Causative Agent Code,IAR.3,436
+Bed Status,Bed Status,NPU.2,116
+Prior Patient Identifier List,Check Digit Scheme,MRG.1,61
+Prior Patient Account Number,Check Digit Scheme,MRG.3,61
+Prior Visit Number,Check Digit Scheme,MRG.5,61
+Prior Alternate Visit ID,Check Digit Scheme,MRG.6,61
+Prior Patient Name,Name Type,MRG.7,200
+Living Dependency,Living Dependency,PD1.1,223
+Living Arrangement,Living Arrangement,PD1.2,220
+Patient Primary Facility,Organizational Name Type,PD1.3,204
+Student Indicator,Student Status,PD1.5,231
+Handicap,Handicap,PD1.6,295
+Living Will Code,Living Will Code,PD1.7,315
+Organ Donor Code,Organ Donor Code,PD1.8,316
+Separate Bill,Yes/no Indicator,PD1.9,136
+Publicity Code,Publicity Code,PD1.11,215
+Protection Indicator,Yes/no Indicator,PD1.12,136
+Advance Directive Code,Advance Directive Code,PD1.15,435
+Immunization Registry Status,Immunization Registry Status,PD1.16,441
+Military Branch,Military Service,PD1.19,140
+Military Rank/Grade,Military Rank/Grade,PD1.20,141
+Military Status,Military Status,PD1.21,142
+Disabled Person Code,Disabled Person Code,DB1.2,334
+Disability Indicator,Yes/no Indicator,DB1.4,136
+Death Certified Indicator,Yes/no Indicator,PDA.3,136
+Autopsy Indicator,Yes/no Indicator,PDA.6,136
+Coroner Indicator,Yes/no Indicator,PDA.9,136
+Access Restriction Action Code,Segment Action Code,ARV.2,206
+Access Restriction Value,Access Restriction Value,ARV.3,717
+Access Restriction Reason,Access Restriction Reason Code,ARV.4,719
+Security Classification Tag,Confidentiality Classification,ARV.7,952
+Security Handling Instructions,"",ARV.8,953
+Action Code,Segment Action Code,OH1.2,206
+Employment Status,"",OH1.3,957
+Action Code,Segment Action Code,OH2.2,206
+Occupation,"",OH2.4,958
+Industry,"",OH2.5,955
+Work Classification,Work Classification ODH,OH2.6,959
+Work Schedule,"",OH2.9,954
+Supervisory Level,"",OH2.14,956
+Current Job Indicator,Yes/no Indicator,OH2.18,136
+Action Code,Segment Action Code,OH3.2,206
+Occupation,"",OH3.3,958
+Industry,"",OH3.4,955
+Action Code,Segment Action Code,OH4.2,206
+Order Control,Order Control Codes,ORC.1,119
+Order Status,Order status,ORC.5,38
+Response Flag,Response Flag,ORC.6,121
+Parent Order,Order Control Codes,ORC.8,119
+Order Control Code Reason,Order Control Code Reason,ORC.16,949
+Entering Organization,"",ORC.17,666
+Entering Device,"",ORC.18,668
+Advanced Beneficiary Notice Code,Advanced Beneficiary Notice Code,ORC.20,339
+Order Status Modifier,Order Status Modifier,ORC.25,950
+Advanced Beneficiary Notice Override Reason,Advanced Beneficiary Notice Override Reason,ORC.26,552
+Confidentiality Code,Confidentiality Code,ORC.28,177
+Order Type,Order Type,ORC.29,482
+Enterer Authorization Mode,Authorization Mode,ORC.30,483
+Order Workflow Profile,Order Workflow Profile,ORC.34,934
+Action Code,Segment Action Code,ORC.35,206
+When to Charge,Invocation event,BLG.1,100
+Charge Type,Charge Type,BLG.2,122
+Charge Type Reason,Charge Type Reason,BLG.4,475
+Universal Service Identifier,"",OBR.4,612
+Specimen Action Code *,Specimen Action Code,OBR.11,65
+Danger Code,"",OBR.12,613
+Relevant Clinical Information,Relevant Clincial Information,OBR.13,916
+Diagnostic Serv Sect ID,Diagnostic Service Section ID,OBR.24,74
+Result Status +,Result Status,OBR.25,123
+Transportation Mode,Transportation Mode,OBR.30,124
+Reason for Study,Reason for Study,OBR.31,951
+Transport Logistics of Collected Sample *,"",OBR.38,614
+Collector's Comment *,"",OBR.39,619
+Transport Arrangement Responsibility,"",OBR.40,620
+Transport Arranged,Transport Arranged,OBR.41,224
+Escort Required,Escort Required,OBR.42,225
+Planned Patient Transport Comment,"",OBR.43,621
+Placer Supplemental Service Information,Supplemental Service Information Values,OBR.46,411
+Filler Supplemental Service Information,Supplemental Service Information Values,OBR.47,411
+Medically Necessary Duplicate Procedure Reason,Medically Necessary Duplicate Procedure Reason,OBR.48,476
+Result Handling,Observation Result Handling,OBR.49,507
+Parent Order,Order Control Codes,OBR.54,119
+Action Code,Segment Action Code,OBR.55,206
+Priority,Extended Priority Codes,TQ1.9,485
+Conjunction,TQ Conjunction ID,TQ1.12,472
+Sequence/Results Flag,Sequence/Results Flag,TQ2.2,503
+Sequence Condition Code,Sequence Condition Code,TQ2.6,504
+Special Service Request Relationship,Service Request Relationship,TQ2.10,506
+Modality,"",IPC.5,604
+Protocol Code,"",IPC.6,605
+Scheduled Procedure Step Location,"",IPC.8,606
+Action Code,Segment Action Code,IPC.10,206
+Type,Diet Code Specification Type,ODS.1,159
+"Diet, Supplement, or Preference Code","",ODS.3,628
+Tray Type,Tray Type,ODT.1,160
+Item Code - Internal,"",RQD.2,684
+Item Code - External,"",RQD.3,685
+Hospital Item Code,"",RQD.4,686
+Requisition Unit of Measure,"",RQD.6,687
+Cost Center Account Number,Department Cost Center,RQD.7,319
+Item Natural Account Code,Item Natural Account Code,RQD.8,320
+Deliver To ID,"",RQD.9,688
+Manufacturer Identifier,Manufacturer Identifier,RQ1.2,385
+Vendor ID,"",RQ1.4,683
+Taxable,Yes/no Indicator,RQ1.6,136
+Substitute Allowed,Yes/no Indicator,RQ1.7,136
+BP Universal Service Identifier,"",BPO.2,575
+BP Processing Requirements,Blood Product Processing Requirements,BPO.3,508
+BP Units,"",BPO.6,576
+BP Indication for Use,Indication for Use,BPO.13,509
+BP Informed Consent Indicator,Yes/no Indicator,BPO.14,136
+BP Dispense Status,Blood Product Dispense Status,BPX.2,510
+BP Status,BP Observation Status Codes Interpretation,BPX.3,511
+BC Component,"",BPX.6,577
+BC Donation Type / Intended Use,"",BPX.7,578
+CP Commercial Product,Commercial Product,BPX.8,512
+BP Blood Group,"",BPX.11,579
+BC Special Testing,"",BPX.12,580
+BP Units,"",BPX.16,581
+Action Code,Segment Action Code,BPX.22,206
+BC Component,"",BTX.3,582
+BC Blood Group,"",BTX.4,583
+CP Commercial Product,Commercial Product,BTX.5,512
+BP Units,"",BTX.10,584
+BP Transfusion/Disposition Status,Blood Product Transfusion/Disposition Status,BTX.11,513
+BP Message Status,BP Observation Status Codes Interpretation,BTX.12,511
+BP Adverse Reaction Type,Transfusion Adverse Reaction,BTX.18,514
+BP Transfusion Interrupted Reason,Transfusion Interrupted Reason,BTX.19,515
+Action Code,Segment Action Code,BTX.21,206
+Donation Duration Units,Donation Duration Units,DON.6,932
+Intended Procedure Type,Intended Procedure Type,DON.7,933
+Actual Procedure Type,Intended Procedure Type,DON.8,933
+Donor Eligibility Flag,Yes/no Indicator,DON.9,136
+Donor Eligibility Procedure Type,Intended Procedure Type,DON.10,933
+Process Interruption,Process Interruption,DON.12,923
+Process Interruption Reason,Process Interruption Reason,DON.13,935
+Phlebotomy Issue,Phlebotomy Issue,DON.14,925
+Intended Recipient Blood Relative,Yes/no Indicator,DON.15,136
+Phlebotomy Status,Phlebotomy Status,DON.21,926
+Arm Stick,Arm Stick,DON.22,927
+Donor Reaction,Yes/no Indicator,DON.27,136
+Action Code,Segment Action Code,DON.34,206
+Blood Unit Type,Blood Unit Type,BUI.3,566
+Weight Units,Weight Units,BUI.5,929
+Volume Units,Volume Units,BUI.7,930
+Transport Temperature Units,Temperature Units,BUI.12,931
+Action Code,Segment Action Code,BUI.13,206
+Requested Give Code,"",RXO.1,747
+Requested Give Units,"",RXO.4,748
+Requested Dosage Form,"",RXO.5,750
+Provider's Pharmacy/Treatment Instructions,"",RXO.6,751
+Provider's Administration Instructions,"",RXO.7,752
+Allow Substitutions,Allow Substitution,RXO.9,161
+Requested Dispense Code,"",RXO.10,753
+Requested Dispense Units,"",RXO.12,754
+Needs Human Review,Yes/no Indicator,RXO.16,136
+Requested Give Strength Units,"",RXO.19,756
+Indication,"",RXO.20,758
+Requested Give Rate Units,"",RXO.22,760
+Supplementary Code,"",RXO.24,762
+Requested Drug Strength Volume Units,"",RXO.26,764
+Pharmacy Order Type,Pharmacy Order Types,RXO.27,480
+Mood Code,Mood Codes,RXO.31,725
+Dispensing Pharmacy,"",RXO.32,765
+Route,Route of Administration,RXR.1,162
+Administration Site,Body Parts,RXR.2,550
+Administration Device,Administration Device,RXR.3,164
+Administration Method,Administration Method,RXR.4,165
+Routing Instruction,"",RXR.5,766
+Administration Site Modifier,Body Site Modifier,RXR.6,495
+RX Component Type,RX Component Type,RXC.1,166
+Component Code,"",RXC.2,697
+Component Units,"",RXC.4,698
+Component Strength Units,"",RXC.6,699
+Supplementary Code,"",RXC.7,762
+Component Drug Strength Volume Units,"",RXC.9,701
+Dispense Units,"",RXC.11,703
+Give Code,Vaccines Administered,RXE.2,292
+Give Units,"",RXE.5,715
+Give Dosage Form,"",RXE.6,716
+Provider's Administration Instructions,"",RXE.7,752
+Substitution Status,Substitution Status,RXE.9,167
+Dispense Units,"",RXE.11,720
+Needs Human Review,Yes/no Indicator,RXE.20,136
+Special Dispensing Instructions,"",RXE.21,721
+Give Rate Units,"",RXE.24,722
+Give Strength Units,"",RXE.26,723
+Give Indication,"",RXE.27,724
+Dispense Package Size Unit,"",RXE.29,726
+Dispense Package Method,Dispense Method,RXE.30,321
+Supplementary Code,"",RXE.31,762
+Give Drug Strength Volume Units,"",RXE.34,729
+Controlled Substance Schedule,Controlled Substance Schedule,RXE.35,477
+Formulary Status,Formulary Status,RXE.36,478
+Pharmaceutical Substance Alternative,"",RXE.37,730
+Pharmacy of Most Recent Fill,"",RXE.38,732
+Dispensing Pharmacy,"",RXE.40,765
+Pharmacy Order Type,Pharmacy Order Types,RXE.44,480
+Dispense/Give Code,Vaccines Administered,RXD.2,292
+Actual Dispense Units,"",RXD.5,704
+Actual Dosage Form,"",RXD.6,705
+Substitution Status,Substitution Status,RXD.11,167
+Needs Human Review,Yes/no Indicator,RXD.14,136
+Special Dispensing Instructions,"",RXD.15,721
+Actual Strength Unit,"",RXD.17,707
+Indication,"",RXD.21,758
+Dispense Package Size Unit,"",RXD.23,726
+Dispense Package Method,Dispense Method,RXD.24,321
+Supplementary Code,"",RXD.25,762
+Initiating Location,"",RXD.26,711
+Packaging/Assembly Location,"",RXD.27,712
+Actual Drug Strength Volume Units,"",RXD.29,713
+Dispense to Pharmacy,"",RXD.30,714
+Pharmacy Order Type,Pharmacy Order Types,RXD.32,480
+Dispense Type,Dispense Type,RXD.33,484
+Give Code,Vaccines Administered,RXG.4,292
+Give Units,"",RXG.7,715
+Give Dosage Form,"",RXG.8,716
+Administration Notes,"",RXG.9,737
+Substitution Status,Substitution Status,RXG.10,167
+Needs Human Review,Yes/no Indicator,RXG.12,136
+Special Administration Instructions,"",RXG.13,738
+Give Rate Units,"",RXG.16,722
+Give Strength Units,"",RXG.18,723
+Indication,"",RXG.22,758
+Give Drug Strength Volume Units,"",RXG.24,744
+Give Barcode Identifier,"",RXG.25,745
+Pharmacy Order Type,Pharmacy Order Types,RXG.26,480
+Dispense to Pharmacy,"",RXG.27,714
+Dispense Units,"",RXG.33,746
+Administered Code,Vaccines Administered,RXA.5,292
+Administered Units,"",RXA.7,689
+Administered Dosage Form,"",RXA.8,690
+Administration Notes,"",RXA.9,737
+Administered Strength Units,"",RXA.14,692
+Substance/Treatment Refusal Reason,"",RXA.18,693
+Indication,"",RXA.19,758
+Completion Status,Completion Status,RXA.20,322
+Action Code – RXA,Segment Action Code,RXA.21,206
+Administered Drug Strength Volume Units,"",RXA.24,695
+Administered Barcode Identifier,"",RXA.25,696
+Pharmacy Order Type,Pharmacy Order Types,RXA.26,480
+Bolus Type,Bolus Type,RXV.2,917
+Bolus Dose Amount Units,"",RXV.4,767
+Bolus Dose Volume Units,"",RXV.6,768
+PCA Type,PCA Type,RXV.7,918
+PCA Dose Amount Units,"",RXV.9,769
+PCA Dose Amount Volume Units,"",RXV.11,770
+Max Dose Amount Units,"",RXV.13,772
+Max Dose Amount Volume Units,"",RXV.15,773
+Action Code,Segment Action Code,RXV.22,206
+Action Code,Segment Action Code,CDO.2,206
+Cumulative Dosage Limit Time Interval,Cumulative Dosage Limit UoM,CDO.4,924
+Query Response Status,Query Response Status,QAK.2,208
+Message Query Name,Query Name,QAK.3,471
+Message Query Name,Query Name,QID.2,471
+Message Query Name,Query Name,QPD.1,471
+Match Reason Code,Match Reason,QRI.2,392
+Algorithm Descriptor,Match Algorithms,QRI.3,393
+Query Priority,Query Priority,RCP.1,91
+Quantity Limited Request,Quantity Limited Request,RCP.2,126
+Response Modality,Response Modality,RCP.3,394
+Modify Indicator,Modify Indicator,RCP.5,395
+Segment group inclusion,Segment Group,RCP.7,391
+Column Description,Data Types,RDF.2,440
+Transaction Type,Transaction Type,FT1.6,17
+Transaction Code,Transaction Code,FT1.7,132
+Department Code,Department Code,FT1.13,49
+Health Plan ID,Insurance Plan ID,FT1.14,72
+Fee Schedule,Fee Schedule,FT1.17,24
+Patient Type,Patient Type,FT1.18,18
+Diagnosis Code - FT1,Diagnosis Code,FT1.19,51
+Performed By Code,Performed by,FT1.20,84
+Advanced Beneficiary Notice Code,Advanced Beneficiary Notice Code,FT1.27,339
+Medically Necessary Duplicate Procedure Reason,Medically Necessary Duplicate Procedure Reason,FT1.28,476
+NDC Code,NDC Codes,FT1.29,549
+Revenue Code,Revenue code,FT1.41,456
+Service Reason Code,Service Reason,FT1.56,964
+Diagnosis Code - DG1,Diagnosis Code,DG1.3,51
+Diagnosis Type,Diagnosis Type,DG1.6,52
+Major Diagnostic Category,Major Diagnostic Category,DG1.7,118
+Diagnostic Related Group,Diagnosis Related Group,DG1.8,55
+DRG Approval Indicator,Yes/no Indicator,DG1.9,136
+DRG Grouper Review Code,DRG Grouper Review Code,DG1.10,56
+Outlier Type,Outlier Type,DG1.11,83
+Diagnosis Priority,Diagnosis Priority,DG1.15,359
+Diagnosis Classification,Diagnosis Classification,DG1.17,228
+Confidential Indicator,Yes/no Indicator,DG1.18,136
+Diagnosis Action Code,Segment Action Code,DG1.21,206
+DRG CCL Value Code,CCL Value,DG1.23,728
+DRG Grouping Usage,Yes/no Indicator,DG1.24,136
+DRG Diagnosis Determination Status,DRG Diagnosis Determination Status,DG1.25,731
+Present On Admission,Present On Admission (POA) Indicator,DG1.26,895
+Diagnostic Related Group,Diagnosis Related Group,DRG.1,55
+DRG Approval Indicator,Yes/no Indicator,DRG.3,136
+DRG Grouper Review Code,DRG Grouper Review Code,DRG.4,56
+Outlier Type,Outlier Type,DRG.5,83
+DRG Payor,DRG Payor,DRG.8,229
+Confidential Indicator,Yes/no Indicator,DRG.10,136
+DRG Transfer Type,Transfer Type,DRG.11,415
+Grouper Status,Grouper Status,DRG.13,734
+PCCL Value Code,CCL Value,DRG.14,728
+Status Patient,DRG Status Patient,DRG.17,739
+Status Financial Calculation,DRG Status Financial Calculation,DRG.20,742
+Status Gender,DRG Grouping Status,DRG.26,749
+Status Age,DRG Grouping Status,DRG.27,749
+Status Length of Stay,DRG Grouping Status,DRG.28,749
+Status Same Day Flag,DRG Grouping Status,DRG.29,749
+Status Separation Mode,DRG Grouping Status,DRG.30,749
+Status Weight at Birth,Status Weight At Birth,DRG.31,755
+Status Respiration Minutes,DRG Status Respiration Minutes,DRG.32,757
+Status Admission,Status Admission,DRG.33,759
+Procedure Functional Type,Procedure Functional Type,PR1.6,230
+Anesthesia Code,Anesthesia Code,PR1.9,19
+Consent Code,Consent Code,PR1.13,59
+Procedure Priority,Procedure Priority,PR1.14,418
+Associated Diagnosis Code,Diagnosis Code,PR1.15,51
+Procedure DRG Type,Procedure DRG Type,PR1.17,416
+Tissue Type Code,Tissue Type Code,PR1.18,417
+Procedure Action Code,Segment Action Code,PR1.20,206
+DRG Procedure Determination Status,DRG Procedure Determination Status,PR1.21,761
+DRG Procedure Relevance,DRG Procedure Relevance,PR1.22,763
+Respiratory Within Surgery,Yes/no Indicator,PR1.24,136
+Guarantor Administrative Sex,Administrative Sex,GT1.9,1
+Guarantor Type,Guarantor Type,GT1.10,68
+Guarantor Relationship,Relationship,GT1.11,63
+Guarantor Employment Status,Employment Status,GT1.20,66
+Guarantor Billing Hold Flag,Yes/no Indicator,GT1.22,136
+Guarantor Credit Rating Code,Guarantor Credit Rating Code,GT1.23,341
+Guarantor Death Flag,Yes/no Indicator,GT1.25,136
+Guarantor Charge Adjustment Code,Patient Charge Adjustment,GT1.26,218
+Guarantor Marital Status Code,Marital Status,GT1.30,2
+Living Dependency,Living Dependency,GT1.33,223
+Ambulatory Status,Ambulatory Status,GT1.34,9
+Citizenship,Citizenship,GT1.35,171
+Primary Language,Primary Language,GT1.36,296
+Living Arrangement,Living Arrangement,GT1.37,220
+Publicity Code,Publicity Code,GT1.38,215
+Protection Indicator,Yes/no Indicator,GT1.39,136
+Student Indicator,Student Status,GT1.40,231
+Religion,Religion,GT1.41,6
+Nationality,Nationality,GT1.43,212
+Ethnic Group,Ethnic Group,GT1.44,189
+Contact Person's Name,Name Type,GT1.45,200
+Contact Reason,Contact Reason,GT1.47,222
+Contact Relationship,Relationship,GT1.48,63
+Job Code/Class,Job Code,GT1.50,327
+Handicap,Handicap,GT1.52,295
+Job Status,Job Status,GT1.53,311
+Guarantor Race,Race,GT1.55,5
+VIP Indicator,VIP Indicator,GT1.57,99
+Health Plan ID,Insurance Plan ID,IN1.2,72
+Plan Type,Plan ID,IN1.15,86
+Insured's Relationship To Patient,Relationship,IN1.17,63
+Assignment Of Benefits,Assignment of Benefits,IN1.20,135
+Coordination Of Benefits,Coordination of Benefits,IN1.21,173
+Notice Of Admission Flag,Yes/no Indicator,IN1.23,136
+Report Of Eligibility Flag,Yes/no Indicator,IN1.25,136
+Release Information Code,Release Information,IN1.27,93
+Type Of Agreement Code,Type of Agreement,IN1.31,98
+Billing Status,Billing Status,IN1.32,22
+Company Plan Code,Company Plan Code,IN1.35,42
+Insured's Employment Status,Employment Status,IN1.42,66
+Insured's Administrative Sex,Administrative Sex,IN1.43,1
+Prior Insurance Plan ID,Insurance Plan ID,IN1.46,72
+Coverage Type,Coverage Type,IN1.47,309
+Handicap,Handicap,IN1.48,295
+Signature Code,Signature Code,IN1.50,535
+VIP Indicator,VIP Indicator,IN1.53,99
+Insurance Action Code,Segment Action Code,IN1.55,206
+Employer Information Data,Employer Information Data,IN2.4,139
+Mail Claim Party,Mail Claim Party,IN2.5,137
+Dependent Of Military Recipient,Military Recipient,IN2.11,342
+Military Service,Military Service,IN2.14,140
+Military Rank/Grade,Military Rank/Grade,IN2.15,141
+Military Status,Military Status,IN2.16,142
+Military Non-Avail Cert On File,Yes/no Indicator,IN2.18,136
+Baby Coverage,Yes/no Indicator,IN2.19,136
+Combine Baby Bill,Yes/no Indicator,IN2.20,136
+Non-Covered Insurance Code,Non-covered Insurance Code,IN2.24,143
+Eligibility Source,Eligibility Source,IN2.27,144
+Living Dependency,Living Dependency,IN2.31,223
+Ambulatory Status,Ambulatory Status,IN2.32,9
+Citizenship,Citizenship,IN2.33,171
+Primary Language,Primary Language,IN2.34,296
+Living Arrangement,Living Arrangement,IN2.35,220
+Publicity Code,Publicity Code,IN2.36,215
+Protection Indicator,Yes/no Indicator,IN2.37,136
+Student Indicator,Student Status,IN2.38,231
+Religion,Religion,IN2.39,6
+Nationality,Nationality,IN2.41,212
+Ethnic Group,Ethnic Group,IN2.42,189
+Marital Status,Marital Status,IN2.43,2
+Job Code/Class,Job Code,IN2.47,327
+Job Status,Job Status,IN2.48,311
+Employer Contact Reason,Contact Reason,IN2.51,222
+Insured's Contact Person Reason,Contact Reason,IN2.54,222
+Insurance Co Contact Reason,- Insurance Company Contact Reason,IN2.57,232
+Policy Scope,Policy Scope,IN2.59,312
+Policy Source,Policy Source,IN2.60,313
+Guarantor's Relationship to Insured,Relationship,IN2.62,63
+Military Handicapped Program,Military Handicapped Program Code,IN2.65,343
+Suspend Flag,Yes/no Indicator,IN2.66,136
+Copay Limit Flag,Yes/no Indicator,IN2.67,136
+Stoploss Limit Flag,Yes/no Indicator,IN2.68,136
+Race,Race,IN2.71,5
+Patient's Relationship to Insured,Patient's Relationship to Insured,IN2.72,344
+Certification Required,Yes/no Indicator,IN3.4,136
+Non-Concur Code/Description,Non-Concur Code/Description,IN3.12,233
+Physician Reviewer,Physician ID,IN3.14,10
+Appeal Reason,Appeal Reason,IN3.17,345
+Certification Agency,Certification Agency,IN3.18,346
+Pre-Certification Requirement,Yes/no Indicator,IN3.20,136
+Second Opinion Status,Second Opinion Status,IN3.23,151
+Second Opinion Documentation Received,Second Opinion Documentation Received,IN3.24,152
+Second Opinion Physician,Physician ID,IN3.25,10
+Certification Type,Certification Type Code,IN3.26,921
+Certification Category,Certification Category Code,IN3.27,922
+Online Verification Result,Online Verification Result,IN3.29,970
+Online Verification Result Error Code,Online Verification Result Error Code,IN3.30,971
+Accident Code,Accident Code,ACC.2,50
+Auto Accident State,State/Province,ACC.4,347
+Accident Job Related Indicator,Yes/no Indicator,ACC.5,136
+Accident Death Indicator,Yes/no Indicator,ACC.6,136
+Police Notified Indicator,Yes/no Indicator,ACC.10,136
+Condition Code,Condition Code,UB2.3,43
+Discharge Care Provider,Physician ID,ABS.1,10
+Transfer Medical Service Code,Hospital Service,ABS.2,69
+Severity of Illness Code,Severity of Illness Code,ABS.3,421
+Triage Code,Triage Code,ABS.6,422
+Case Category Code,Case Category Code,ABS.9,423
+Caesarian Section Indicator,Yes/no Indicator,ABS.10,136
+Gestation Category Code,Gestation Category Code,ABS.11,424
+Newborn Code,Newborn Code,ABS.13,425
+Stillborn Indicator,Yes/no Indicator,ABS.14,136
+Blood Product Code,Blood Product Code,BLC.1,426
+Risk Management Incident Code,Risk Management Incident Code,RMI.1,427
+Incident Type Code,Incident Type Code,RMI.3,428
+Type of Bill Code,Type of Bill Code,GP1.1,455
+Revenue Code,Revenue code,GP1.2,456
+Overall Claim Disposition Code,Overall Claim Disposition Code,GP1.3,457
+OCE Edits per Visit Code,OCE Edit Code,GP1.4,458
+Revenue Code,Revenue code,GP2.1,456
+Reimbursement Action Code,Reimbursement Action Code,GP2.4,459
+Denial or Rejection Code,Denial or Rejection Code,GP2.5,460
+OCE Edit Code,OCE Edit Code,GP2.6,458
+Ambulatory Payment Classification Code,Ambulatory Payment Classification Code,GP2.7,466
+Modifier Edit Code,Modifier Edit Code,GP2.8,467
+Payment Adjustment Code,Payment Adjustment Code,GP2.9,468
+Packaging Status Code,Packaging Status Code,GP2.10,469
+Reimbursement Type Code,Reimbursement Type Code,GP2.12,470
+Value Type,Value Type,OBX.2,125
+Observation Identifier,"",OBX.3,622
+Units,"",OBX.6,623
+Interpretation Codes,Interpretation Codes,OBX.8,78
+Nature of Abnormal Test,Nature of Abnormal Testing,OBX.10,80
+Observation Result Status,Observation Result Status Codes Interpretation,OBX.11,85
+Producer's ID,"",OBX.15,624
+Observation Method,"",OBX.17,626
+Observation Site,Body Site,OBX.20,163
+Mood Code,Mood Codes,OBX.22,725
+Patient Results Release Category,Patient Results Release Categorization Scheme,OBX.26,909
+Root Cause,Root Cause,OBX.27,914
+Local Process Control,Process Control Code,OBX.28,915
+Observation Type,Observation Type,OBX.29,936
+Observation Sub-Type,Observation Sub-Type,OBX.30,937
+Action Code,Segment Action Code,OBX.31,206
+Observation Value Absent Reason,Data Absent Reason,OBX.32,960
+Specimen Type,Specimen Type,SPM.4,487
+Specimen Type Modifier,Specimen Type Modifier,SPM.5,541
+Specimen Additives,Additive/Preservative,SPM.6,371
+Specimen Collection Method,Specimen Collection Method,SPM.7,488
+Specimen Source Site,"",SPM.8,784
+Specimen Source Site Modifier,Specimen Source Type Modifier,SPM.9,542
+Specimen Collection Site,Specimen Collection Site,SPM.10,543
+Specimen Role,Specimen Role,SPM.11,369
+Specimen Handling Code,Special Handling Code,SPM.15,376
+Specimen Risk Code,Risk Codes,SPM.16,489
+Specimen Availability,Yes/no Indicator,SPM.20,136
+Specimen Reject Reason,Specimen Reject Reason,SPM.21,490
+Specimen Quality,Specimen Quality,SPM.22,491
+Specimen Appropriateness,Specimen Appropriateness,SPM.23,492
+Specimen Condition,Specimen Condition,SPM.24,493
+Container Type,"",SPM.27,785
+Container Condition,Container Condition,SPM.28,544
+Specimen Child Role,Specimen Child Role,SPM.29,494
+Action Code,Segment Action Code,SPM.35,206
+Action Code,Segment Action Code,PRT.2,206
+Role of Participation,Participation,PRT.4,912
+Organization Unit Type,Participant Organization Unit Type,PRT.7,406
+Device Type,Device Type,PRT.22,961
+Preferred Method of Contact,Preferred Method of Contact,PRT.23,185
+Contact Identifiers,Employee Classification,PRT.24,328
+Institution Registering the Patient,"",CSR.3,589
+Patient Study Eligibility Status,"",CSR.10,590
+Randomized Study Arm,"",CSR.12,591
+Stratum for Study Randomization,"",CSR.13,592
+Patient Evaluability Status,"",CSR.14,593
+Reason Ended Study,"",CSR.16,594
+Action Code,Segment Action Code,CSR.17,206
+Study Phase Identifier,"",CSP.1,587
+Study Phase Evaluability,"",CSP.4,588
+Study Scheduled Time Point,"",CSS.1,595
+Study Quality Control Codes,"",CSS.3,596
+Study Phase Identifier,"",CTI.2,587
+Study Scheduled Time Point,"",CTI.3,595
+Action Code,Segment Action Code,CTI.4,206
+Event Report Timing/Type,Report Timing,PES.11,234
+Event Report Source,Report Source,PES.12,235
+Event Reported To,Event Reported To,PES.13,236
+Event Identifiers Used,"",PEO.1,678
+Event Symptom/Diagnosis Code,"",PEO.2,679
+Event Qualification,Event Qualification,PEO.8,237
+Event Serious,Event Seriousness,PEO.9,238
+Event Expected,Event Expected,PEO.10,239
+Event Outcome,Event Consequence,PEO.11,240
+Patient Outcome,Patient Outcome,PEO.12,241
+Cause Of Death,"",PEO.18,680
+Primary Observer's Qualification,Primary Observer's Qualification,PEO.22,242
+Confirmation Provided By,Primary Observer's Qualification,PEO.23,242
+Primary Observer's identity May Be Divulged,Identity May Be Divulged,PEO.25,243
+Implicated Product,"",PCR.1,670
+Generic Product,Generic Product,PCR.2,249
+Product Class,"",PCR.3,671
+Single Use Device,Single Use Device,PCR.9,244
+Indication For Product Use,"",PCR.10,672
+Product Problem,Product Problem,PCR.11,245
+Product Available For Inspection,Product Available for Inspection,PCR.13,246
+Product Evaluation Performed,"",PCR.14,673
+Product Evaluation Status,Status of Evaluation,PCR.15,247
+Product Evaluation Results,"",PCR.16,674
+Evaluated Product Source,Product Source,PCR.17,248
+Device Operator Qualifications,Primary Observer's Qualification,PCR.19,242
+Relatedness Assessment,Relatedness Assessment,PCR.20,250
+Action Taken In Response To The Event,Action Taken in Response to the Event,PCR.21,251
+Event Causality Observations,Causality Observations,PCR.22,252
+Indirect Exposure Mechanism,Indirect Exposure Mechanism,PCR.23,253
+Quantity Distributed Method,Quantity Method,PSH.8,329
+Quantity in Use Method,Quantity Method,PSH.11,329
+Country,"",PDC.2,675
+Generic Name,"",PDC.5,676
+Product Code,"",PDC.9,677
+Marketing Basis,Marketing Basis,PDC.10,330
+Facility Type,Facility Type,FAC.2,331
+Shipment Status,Shipment Status,SHP.3,905
+Shipment Priority,ActPriority,SHP.6,906
+Shipment Confidentiality,Confidentiality,SHP.7,907
+Shipment Condition,Container Condition,SHP.9,544
+Shipment Handling Code,Special Handling Code,SHP.10,376
+Shipment Risk Code,Risk Codes,SHP.11,489
+Action Code,Segment Action Code,SHP.12,206
+Package Type,Package Type,PAC.5,908
+Package Condition,Container Condition,PAC.6,544
+Package Handling Code,Special Handling Code,PAC.7,376
+Package Risk Code,Risk Codes,PAC.8,489
+Action Code,Segment Action Code,PAC.9,206
+Master File Identifier,Master File Identifier Code,MFI.1,175
+Master File Application Identifier,Application,MFI.2,361
+File-Level Event Code,File Level Event Code,MFI.3,178
+Response Level Code,Response Level,MFI.6,179
+Record-Level Event Code,Record-level Event Code,MFE.1,180
+Primary Key Value - MFE,"",MFE.4,608
+Primary Key Value Type,Primary Key Value Type,MFE.5,355
+Record-Level Event Code,Record-level Event Code,MFA.1,180
+MFN Record Level Error Return,MFN Record-level Error Return,MFA.4,181
+Primary Key Value - MFA,"",MFA.5,607
+Primary Key Value Type - MFA,Primary Key Value Type,MFA.6,355
+Producer's Service/Test/Observation ID,"",OM1.2,630
+Permitted Data Types,Value Type,OM1.3,125
+Specimen Required,Yes/no Indicator,OM1.4,136
+Producer ID,"",OM1.5,631
+Other Service/Test/Observation IDs for the Observation,"",OM1.7,632
+Orderability,Yes/no Indicator,OM1.12,136
+Identity of Instrument Used to Perform this Study,"",OM1.13,633
+Coded Representation of Method,"",OM1.14,635
+Portable Device Indicator,Yes/no Indicator,OM1.15,136
+Observation Producing Department/Section,"",OM1.16,636
+Nature of Service/Test/Observation,Nature of Service/Test/Observation,OM1.18,174
+Report Subheader,"",OM1.19,637
+Processing Priority,Processing Priority,OM1.25,168
+Reporting Priority,Reporting Priority,OM1.26,169
+Outside Site(s) Where Observation May Be Performed,"",OM1.27,638
+Confidentiality Code,Confidentiality Code,OM1.30,177
+Observations Required to Interpret this Observation,"",OM1.31,639
+Contraindications to Observations,"",OM1.33,640
+Reflex Tests/Observations,"",OM1.34,641
+Fixed Canned Message,"",OM1.36,643
+Procedure Medication,"",OM1.38,644
+Kind of Quantity Observed,Kind of Quantity,OM1.42,254
+Point Versus Interval,Duration Categories,OM1.43,255
+Challenge Information,Time Delay Post Challenge,OM1.44,256
+Relationship Modifier,Relationship Modifier,OM1.45,258
+Target Anatomic Site Of Test,"",OM1.46,645
+Modality of Imaging Measurement,Acquisition Modality,OM1.47,910
+Exclusive Test,Exclusive Test,OM1.48,919
+Diagnostic Serv Sect ID,Diagnostic Service Section ID,OM1.49,74
+Taxonomic Classification Code,Species Code,OM1.50,446
+Observation/Identifier associated with Producer’s Service/Test/Observation ID,"",OM1.56,647
+Gender Restriction,Administrative Sex,OM1.58,1
+Units of Measure,"",OM2.2,648
+Corresponding SI Units of Measure,"",OM2.4,649
+Preferred Coding System,"",OM3.2,650
+"Valid Coded ""Answers""","",OM3.3,652
+Normal Text/Codes for Categorical Observations,"",OM3.4,654
+Abnormal Text/Codes for Categorical Observations,"",OM3.5,655
+Critical Text/Codes for Categorical Observations,"",OM3.6,656
+Value Type,Value Type,OM3.7,125
+Derived Specimen,Derived Specimen,OM4.2,170
+Container Units,"",OM4.5,658
+Specimen,"",OM4.6,660
+Additive,Additive/Preservative,OM4.7,371
+Specimen Priorities,Priority,OM4.13,27
+Specimen Handling Code,Special Handling Code,OM4.15,376
+Specimen Preference,Preferred Specimen/Attribute Status,OM4.16,920
+Taxonomic Classification Code,Species Code,OM4.18,446
+Test/Observations Included Within an Ordered Test Battery,"",OM5.2,662
+Universal Service Identifier,"",OM7.2,612
+Category Identifier,Category Identifier,OM7.3,412
+Test/Service Default Duration Units,"",OM7.9,663
+Consent Indicator,Yes/no Indicator,OM7.11,136
+Consent Identifier,Consent Identifier,OM7.12,413
+Consent Interval Units,Units of Time,OM7.16,414
+Consent Waiting Period Units,Units of Time,OM7.18,414
+Formulary Status,Formulary Status,OM7.22,473
+Special Order Indicator,Yes/no Indicator,OM7.23,136
+Primary Key Value - CDM,Transaction Code,OM7.24,132
+Segment Action Code,Segment Action Code,OMC.2,206
+Clinical Information Request,"",OMC.4,664
+Collection Event/Process Step,Collection Event/Process Step Limit,OMC.5,938
+Communication Location,Communication Location,OMC.6,939
+Answer Required,Yes/no Indicator,OMC.7,136
+Type of Answer,Value Type,OMC.9,125
+Multiple Answers Allowed,Yes/no Indicator,OMC.10,136
+Answer Choices,"",OMC.11,665
+Health Plan ID,Insurance Plan ID,PM1.1,72
+Patient DOB Required,Yes/no Indicator,PM1.11,136
+Patient Gender Required,Yes/no Indicator,PM1.12,136
+Patient Relationship Required,Yes/no Indicator,PM1.13,136
+Patient Signature Required,Yes/no Indicator,PM1.14,136
+Diagnosis Required,Yes/no Indicator,PM1.15,136
+Service Required,Yes/no Indicator,PM1.16,136
+Patient Name Required,Yes/no Indicator,PM1.17,136
+Patient Address Required,Yes/no Indicator,PM1.18,136
+Subscribers Name Required,Yes/no Indicator,PM1.19,136
+Workman's Comp Indicator,Yes/no Indicator,PM1.20,136
+Bill Type Required,Yes/no Indicator,PM1.21,136
+Commercial Carrier Name and Address Required,Yes/no Indicator,PM1.22,136
+Producer's Service/Test/Observation ID,"",MCP.2,630
+Diagnosis Code - MCP,Diagnosis Code,DPS.1,51
+Procedure Code,Procedure Code,DPS.2,941
+Type of Limitation,Limitation Type Codes,DPS.5,940
+Location Type - LOC,Patient Location Type,LOC.3,260
+License Number,License Number,LOC.7,461
+Location Equipment,Location Equipment,LOC.8,261
+Location Service Code,Location Service Code,LOC.9,442
+Segment Action Code,Segment Action Code,LCH.2,206
+Location Characteristic ID,Location Characteristic ID,LCH.4,324
+Location Characteristic Value - LCH,Yes/no Indicator,LCH.5,136
+Segment Action Code,Segment Action Code,LRL.2,206
+Location Relationship ID,Location Relationship ID,LRL.4,325
+Location Department,Location Department,LDP.2,264
+Location Service,Hospital Service,LDP.3,69
+Specialty Type,Specialty Type,LDP.4,265
+Valid Patient Classes,Patient Class,LDP.5,4
+Active/Inactive Flag,Active/Inactive,LDP.6,183
+Visiting Hours,Days of the Week,LDP.10,267
+Location Cost Center,Location Cost Center,LDP.12,462
+Location Department,Location Department,LCC.2,264
+Accommodation Type,Accommodation Code,LCC.3,129
+Charge Code,Transaction Code,LCC.4,132
+Primary Key Value - CDM,Transaction Code,CDM.1,132
+Charge Code Alias,Transaction Code,CDM.2,132
+Description Override Indicator,Override,CDM.5,268
+Exploding Charges,Transaction Code,CDM.6,132
+Active/Inactive Flag,Active/Inactive,CDM.8,183
+Inventory Number,Inventory Number,CDM.9,463
+Room Fee Indicator,Yes/no Indicator,CDM.13,136
+Primary Key Value - PRC,Transaction Code,PRC.1,132
+Facility ID - PRC,Facility ID,PRC.2,464
+Department,Department,PRC.3,184
+Valid Patient Classes,Patient Class,PRC.4,4
+Price Override Flag,Override,PRC.13,268
+Billing Category,Billing Category,PRC.14,293
+Chargeable Flag,Yes/no Indicator,PRC.15,136
+Active/Inactive Flag,Active/Inactive,PRC.16,183
+Charge on Indicator,Charge On Indicator,PRC.18,269
+Study Phase Identifier,"",CM1.2,587
+Diagnostic Related Group,Diagnosis Related Group,DMI.1,55
+Major Diagnostic Category,Major Diagnostic Category,DMI.2,118
+Contract Status,Certificate Status,CTR.3,536
+Supplier Type,Supplier Type,CTR.8,946
+Contract Type,Contract Type,CTR.9,965
+Free On Board Freight Terms,Expanded Yes/no Indicator,CTR.10,532
+Fixed Price Contract Indicator,Expanded Yes/no Indicator,CTR.12,532
+Pricing Tier Level,Pricing Tier Level,CTR.18,966
+Class of Trade,Class of Trade,CTR.20,947
+Consent Type,Consent Type,CON.2,496
+Consent Mode,Consent Mode,CON.10,497
+Consent Status,Consent Status,CON.11,498
+Subject Competence Indicator,Yes/no Indicator,CON.16,136
+Translator Assistance Indicator,Yes/no Indicator,CON.17,136
+Language Translated To,Primary Language,CON.18,296
+Informational Material Supplied Indicator,Yes/no Indicator,CON.19,136
+Consent Bypass Reason,Consent Bypass Reason,CON.20,499
+Consent Disclosure Level,Consent Disclosure Level,CON.21,500
+Consent Non-disclosure Reason,Consent Non-Disclosure Reason,CON.22,501
+Non-subject Consenter Reason,Non-Subject Consenter Reason,CON.23,502
+Relationship to Subject,Signatory's Relationship to Subject,CON.25,548
+Document Type,Document Type,TXA.2,270
+Document Content Presentation,Type of Referenced Data,TXA.3,191
+Document Confidentiality Status,Document Confidentiality Status,TXA.18,272
+Document Storage Status,Document Storage Status,TXA.20,275
+Folder Assignment,"",TXA.24,791
+Creating Specialty,"",TXA.28,792
+Appointment Reason,Appointment reason codes,ARQ.7,276
+Appointment Type,Appointment Type Codes,ARQ.8,277
+Appointment Reason,Appointment reason codes,SCH.7,276
+Appointment Type,Appointment Type Codes,SCH.8,277
+Filler Status Code,Filler status codes,SCH.25,278
+Segment Action Code,Segment Action Code,RGS.2,206
+Segment Action Code,Segment Action Code,AIS.2,206
+Universal Service Identifier,"",AIS.3,612
+Allow Substitution Code,Allow Substitution Codes,AIS.9,279
+Filler Status Code,Filler status codes,AIS.10,278
+Placer Supplemental Service Information,Supplemental Service Information Values,AIS.11,411
+Filler Supplemental Service Information,Supplemental Service Information Values,AIS.12,411
+Segment Action Code,Segment Action Code,AIG.2,206
+Allow Substitution Code,Allow Substitution Codes,AIG.13,279
+Filler Status Code,Filler status codes,AIG.14,278
+Segment Action Code,Segment Action Code,AIL.2,206
+Location Type - AIL,Person Location Type,AIL.4,305
+Allow Substitution Code,Allow Substitution Codes,AIL.11,279
+Filler Status Code,Filler status codes,AIL.12,278
+Segment Action Code,Segment Action Code,AIP.2,206
+Resource Type,Staff type,AIP.4,182
+Allow Substitution Code,Allow Substitution Codes,AIP.11,279
+Filler Status Code,Filler status codes,AIP.12,278
+Time Selection Criteria,Time Selection Criteria Parameter Class Codes,APR.1,294
+Resource Selection Criteria,Time Selection Criteria Parameter Class Codes,APR.2,294
+Location Selection Criteria,Time Selection Criteria Parameter Class Codes,APR.3,294
+Referral Status,Referral Status,RF1.1,283
+Referral Priority,Referral Priority,RF1.2,280
+Referral Type,Referral Type,RF1.3,281
+Referral Disposition,Referral Disposition,RF1.4,282
+Referral Category,Referral Category,RF1.5,284
+Referral Reason,Referral Reason,RF1.10,336
+Referral Documentation Completion Status,Referral Documentation Completion Status,RF1.12,865
+Action Code,Segment Action Code,RF1.25,206
+"Authorizing Payor, Plan ID",Insurance Plan ID,AUT.1,72
+"Authorizing Payor, Company ID",Insurance Company ID Codes,AUT.2,285
+Requested Discipline(s),"",AUT.11,522
+Authorized Discipline(s),"",AUT.12,546
+Authorization Referral Type,"",AUT.13,551
+Approval Status,"",AUT.14,563
+Clinical Service,"",AUT.16,573
+Encounter Type,"",AUT.21,574
+Action Code,Segment Action Code,AUT.29,206
+Provider Role,Provider Role,PRD.1,286
+Preferred Method of Contact,Preferred Method of Contact,PRD.6,185
+Provider Identifiers,Practitioner ID Number Type,PRD.7,338
+Provider Organization Method of Contact,Preferred Method of Contact,PRD.14,185
+Contact Role,Contact Role,CTD.1,131
+Preferred Method of Contact,Preferred Method of Contact,CTD.6,185
+Contact Identifiers,Employee Classification,CTD.7,328
+Action Code,Segment Action Code,GOL.1,206
+Mood Code,Mood Codes,GOL.22,725
+Action Code,Segment Action Code,PRB.1,206
+Problem Severity,Problem Severity,PRB.26,836
+Problem Perspective,Problem Perspective,PRB.27,838
+Mood Code,Mood Codes,PRB.28,725
+Action Code,Segment Action Code,PTH.1,206
+Mood Code,Mood Codes,PTH.7,725
+Relationship Type,Relationship Type,REL.2,948
+Negation Indicator,Yes/no Indicator,REL.12,136
+Separability Indicator,Yes/no Indicator,REL.16,136
+Source Information Instance Object Type,Identifier Type,REL.17,203
+Target Information Instance Object Type,Identifier Type,REL.18,203
+Equipment State,Equipment State,EQU.3,365
+Local/Remote Control State,Local/Remote Control State,EQU.4,366
+Alert Level,Alert Level,EQU.5,367
+Interaction Type Identifier,Remote Control Command,ISD.2,368
+Interaction Active State,Command Response,ISD.3,387
+Container Status,Container Status,SAC.8,370
+Carrier Type,Carrier Type,SAC.9,378
+Tray Type – SAC,Tray Type,SAC.12,379
+Location,"",SAC.15,774
+Container Height/Diameter/Delta Units,"",SAC.20,775
+Volume Units,"",SAC.24,777
+Separator Type,Separator Type,SAC.25,380
+Cap Type,Cap Type,SAC.26,381
+Additive,Additive/Preservative,SAC.27,371
+Specimen Component,Specimen Component,SAC.28,372
+Treatment,Treatment,SAC.30,373
+Hemolysis Index Units,"",SAC.33,779
+Lipemia Index Units,"",SAC.35,780
+Icterus Index Units,"",SAC.37,781
+Fibrin Index Units,"",SAC.39,782
+System Induced Contaminants,System Induced Contaminants,SAC.40,374
+Drug Interference,Drug Interference,SAC.41,382
+Artificial Blood,Artificial Blood,SAC.42,375
+Special Handling Code,Special Handling Code,SAC.43,376
+Other Environmental Factors,Other Environmental Factors,SAC.44,377
+Container Form,Container Form,SAC.47,967
+Container Material,Container Material,SAC.48,968
+Container Common Name,Container Common Name,SAC.49,969
+Substance Identifier,Substance Identifier,INV.1,451
+Substance Status,Substance Status,INV.2,383
+Substance Type,Substance Type,INV.3,384
+Inventory Container Identifier,"",INV.4,599
+Container Carrier Identifier,"",INV.5,600
+Position on Carrier,"",INV.6,601
+Quantity Units,"",INV.11,602
+Test/Fluid Identifier(s),"",INV.15,603
+Manufacturer Identifier,Manufacturer Identifier,INV.17,385
+Supplier Identifier,Supplier Identifier,INV.18,386
+Equipment State Indicator Type Code,Equipment State Indicator Type Code,INV.21,942
+Remote Control Command,Remote Control Command,ECD.2,368
+Response Required,Yes/no Indicator,ECD.3,136
+Command Response,Command Response,ECR.1,387
+Notification Alert Severity,Alert Level,NDS.3,367
+Notification Code,"",NDS.4,610
+Starting Notification Code,"",CNS.5,585
+Ending Notification Code,"",CNS.6,586
+Universal Service Identifier,"",TCC.1,612
+Automatic Rerun Allowed,Yes/no Indicator,TCC.9,136
+Automatic Repeat Allowed,Yes/no Indicator,TCC.10,136
+Automatic Reflex Allowed,Yes/no Indicator,TCC.11,136
+Units,"",TCC.13,623
+Processing Type,Processing Type,TCC.14,388
+Universal Service Identifier,"",TCD.1,612
+Automatic Repeat Allowed,Yes/no Indicator,TCD.6,136
+Reflex Allowed,Yes/no Indicator,TCD.7,136
+Analyte Repeat Status,Analyte Repeat Status,TCD.8,389
+Auto-Dilution Type,Auto-Dilution Type,TCD.11,945
+Application/Method Identifier,"",SID.1,783
+Substance Manufacturer Identifier,Manufacturer Identifier,SID.4,385
+Event type,Event Type,EQP.1,450
+Destination,Transport Destination,DST.1,943
+Route,Transport Route,DST.2,944
+Application Change Type,Application Change Type,NSC.1,409
+Current Application,Application,NSC.4,361
+Current Facility,Facility,NSC.5,362
+New Application,Application,NSC.8,361
+New Facility,Facility,NSC.9,362
+Statistics Available,Yes/no Indicator,NST.1,136
+Source Type,Source Type,NST.3,332
+Granting Country,Country Code,CER.7,399
+Granting State/Province,State/Province,CER.8,347
+Granting County/Parish,County/Parish,CER.9,289
+Basic Constraint,Yes/no Indicator,CER.17,136
+Jurisdiction Country,Country Code,CER.19,399
+Jurisdiction State/Province,State/Province,CER.20,347
+Jurisdiction County/Parish,County/Parish,CER.21,289
+Jurisdiction Breadth,Jurisdictional Breadth,CER.22,547
+Certificate Status Code,Certificate Status,CER.31,536
+Academic Degree,Degree/License/Certificate,EDU.2,360
+School Type Code,School Type,EDU.7,402
+Language Code,Primary Language,LAN.2,296
+Language Ability Code,Language Ability,LAN.3,403
+Language Proficiency Code,Language Proficiency,LAN.4,404
+Organization Unit Code,Organization Unit,ORG.2,405
+Organization Unit Type Code,Practitioner Organization Unit Type,ORG.3,474
+Primary Org Unit Indicator,Yes/no Indicator,ORG.4,136
+Health Care Provider Type Code,Health Care Provider Type Code,ORG.6,452
+Health Care Provider Classification Code,Health Care Provider Classification,ORG.7,453
+Health Care Provider Area of Specialization Code,Health Care Provider Area of Specialization,ORG.8,454
+Employment Status Code,Employment Status,ORG.10,66
+Board Approval Indicator,Yes/no Indicator,ORG.11,136
+Primary Care Physician Indicator,Yes/no Indicator,ORG.12,136
+Cost Center Code,Cost Center Code,ORG.13,539
+Primary Key Value - PRA,"",PRA.1,681
+Practitioner Group,Practitioner Group,PRA.2,358
+Practitioner Category,Practitioner Category,PRA.3,186
+Provider Billing,Provider Billing,PRA.4,187
+Specialty,Certification Status,PRA.5,337
+Practitioner ID Numbers,Practitioner ID Number Type,PRA.6,338
+Institution,Institution,PRA.9,537
+Government Reimbursement Billing Eligibility,Government Reimbursement Program,PRA.11,401
+Action Code,Segment Action Code,ROL.2,206
+Role-ROL,Provider Role,ROL.3,443
+Organization Unit Type,Participant Organization Unit Type,ROL.10,406
+Primary Key Value – STF,"",STF.1,786
+Staff Identifier List,Check Digit Scheme,STF.2,61
+Staff Type,Staff type,STF.4,182
+Administrative Sex,Administrative Sex,STF.5,1
+Active/Inactive Flag,Active/Inactive,STF.7,183
+Department,Department,STF.8,184
+Hospital Service – STF,Hospital Service,STF.9,69
+Institution Activation Date,Institution,STF.12,537
+Institution Inactivation Date,Institution,STF.13,537
+Preferred Method of Contact,Preferred Method of Contact,STF.16,185
+Marital Status,Marital Status,STF.17,2
+Job Code/Class,Job Code,STF.19,327
+Employment Status Code,Employment Status,STF.20,66
+Additional Insured on Auto,Yes/no Indicator,STF.21,136
+Copy Auto Ins,Yes/no Indicator,STF.23,136
+Race,Race,STF.27,5
+Ethnic Group,Ethnic Group,STF.28,189
+Re-activation Approval Indicator,Yes/no Indicator,STF.29,136
+Citizenship,Citizenship,STF.30,171
+Death Indicator,Yes/no Indicator,STF.32,136
+Institution Relationship Type Code,Institution Relationship Type,STF.33,538
+Cost Center Code,Cost Center Code,STF.36,539
+Generic Classification Indicator,Yes/no Indicator,STF.37,136
+Inactive Reason Code,Inactive Reason Code,STF.38,540
+Religion,Religion,STF.40,6
+Patient Consent,Yes/no Indicator,RFI.3,136
+Invoice Control,Invoice Control Code,IVC.4,553
+Invoice Reason,Invoice Reason Codes,IVC.5,554
+Invoice Type,Invoice Type,IVC.6,555
+Last Invoice Indicator,Yes/no Indicator,IVC.13,136
+Benefit Group,Benefit Group,IVC.25,556
+Provider Tax Status,Tax status,IVC.28,572
+Payer Tax Status,Tax status,IVC.29,572
+Payee Type,Payee Type,PYE.2,557
+Payee Relationship to Invoice,Payee Relationship to Invoice,PYE.3,558
+Payment Method,Payment Method Code,PYE.7,570
+Adjudicate as Group,Yes/no Indicator,PSG.4,136
+Product/Service Line Item Status,Product/Service Status,PSL.6,559
+Product/Service Code,Product/Service Code,PSL.7,879
+Product/Service Code Modifier,Product/Service Code Modifier,PSL.8,880
+Product/Service Quantity,Quantity Units,PSL.12,560
+Product/Service Clarification Code Type,Product/Services Clarification Codes,PSL.17,561
+Processing Consideration Code,Processing Consideration Codes,PSL.20,562
+Restricted Disclosure Indicator,Expanded Yes/no Indicator,PSL.21,532
+Related Product/Service Code Indicator,Product/Service Code,PSL.22,879
+Role Executing Physician,Role Executing Physician,PSL.31,881
+Medical Role Executing Physician,Medical Role Executing Physician,PSL.32,882
+Side of body,Side of body,PSL.33,894
+Validation,Yes/no Indicator,PSL.47,136
+Adjustment Category,Adjustment Category Code,ADJ.4,564
+Adjustment Quantity,Quantity Units,ADJ.6,560
+Adjustment Reason PA,Provider Adjustment Reason Code,ADJ.7,565
+Adjustment Action,Adjustment Action,ADJ.11,569
+Payment Method,Payment Method Code,PMT.4,570
+IPR Status,Invoice Processing Results Status,IPR.4,571
+Inventory Received Quantity Unit,Package,IIM.9,818
+Inventory On Hand Quantity Unit,Package,IIM.13,818
+Item Status,Item Status,ITM.3,776
+Item Type,Item Type,ITM.4,778
+Subject to Expiration Indicator,Expanded Yes/no Indicator,ITM.6,532
+Patient Chargeable Indicator,Expanded Yes/no Indicator,ITM.11,532
+Transaction Code,Transaction Code,ITM.12,132
+Stocked Item Indicator,Expanded Yes/no Indicator,ITM.14,532
+Supply Risk Codes,Supply Risk Codes,ITM.15,871
+Approving Regulatory Agency,Approving Regulatory Agency,ITM.16,790
+Latex Indicator,Expanded Yes/no Indicator,ITM.17,532
+Ruling Act,Ruling Act,ITM.18,793
+Item Natural Account Code,Item Natural Account Code,ITM.19,320
+Taxable Item Indicator,Expanded Yes/no Indicator,ITM.22,532
+Freight Charge Indicator,Expanded Yes/no Indicator,ITM.23,532
+Item Set Indicator,Expanded Yes/no Indicator,ITM.24,532
+Track Department Usage Indicator,Expanded Yes/no Indicator,ITM.26,532
+Special Handling Code,Special Handling Code,ITM.29,376
+Hazardous Indicator,Expanded Yes/no Indicator,ITM.30,532
+Sterile Indicator,Expanded Yes/no Indicator,ITM.31,532
+United Nations Standard Products and Services Code,Coding System,ITM.33,396
+Field Level Event Code,Record-level Event Code,ITM.38,180
+Sterilization Type,Sterilization Type,STZ.1,806
+Sterilization Cycle,Cycle Type,STZ.2,702
+Maintenance Cycle,Maintenance Cycle,STZ.3,809
+Maintenance Type,Maintenance Type,STZ.4,811
+Primary Vendor Indicator,Expanded Yes/no Indicator,VND.5,532
+Packaging Units,Package,PKG.2,818
+Default Order Unit Of Measure Indicator,Expanded Yes/no Indicator,PKG.3,532
+Cost Center Account Number,Department Cost Center,PCE.2,319
+Transaction Code,Transaction Code,PCE.3,132
+Item Status,Item Status Codes,IVT.6,625
+Order Packaging,Package,IVT.8,818
+Patient Chargeable Indicator,Expanded Yes/no Indicator,IVT.11,532
+Transaction Code,Transaction Code,IVT.12,132
+Item Importance Code,Item Importance Codes,IVT.14,634
+Stocked Item Indicator,Expanded Yes/no Indicator,IVT.15,532
+Consignment Item Indicator,Expanded Yes/no Indicator,IVT.16,532
+Reusable Item Indicator,Expanded Yes/no Indicator,IVT.17,532
+Recommended Reorder Theory,Reorder Theory Codes,IVT.21,642
+Operating Room Par Level Indicator,Expanded Yes/no Indicator,IVT.26,532
+Inventory Received Quantity Unit,Package,ILT.6,818
+Inventory On Hand Quantity Unit,Package,ILT.10,818
+Labor Calculation Type,Labor Calculation Type,SCP.2,651
+Date Format,Date Format,SCP.3,653
+Device Type,Device Type,SCP.7,657
+Lot Control,Lot Control,SCP.8,659
+Device Data State,Device Data State,SDD.4,667
+Load Status,Load Status,SDD.5,669
+Device Status,Device Status,SCD.10,682
+Abort Cycle,Expanded Yes/no Indicator,SCD.19,532
+Alarm,Expanded Yes/no Indicator,SCD.20,532
+Long in Charge Phase,Expanded Yes/no Indicator,SCD.21,532
+Long in Exhaust Phase,Expanded Yes/no Indicator,SCD.22,532
+Long in Fast Exhaust Phase,Expanded Yes/no Indicator,SCD.23,532
+Reset,Expanded Yes/no Indicator,SCD.24,532
+Door Open,Expanded Yes/no Indicator,SCD.26,532
+Reading Failure,Expanded Yes/no Indicator,SCD.27,532
+Cycle Type,Cycle Type,SCD.28,702
+Attending Doctor,Physician ID,SCD.34,10
+Action Code,Segment Action Code,DEV.1,206
+Device Type,Device Type,DEV.3,961
+Device Status,Device Status,DEV.4,962
+Safety Characteristics,Device Safety,DEV.14,963
+Implantation Status,"",DEV.17,795

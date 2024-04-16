@@ -1,7 +1,7 @@
 module HL7
   class SegmentChoice 
     def to_resource
-      xml = HL7.get_instance_template(:message_structure, 'choice')
+      xml = HL7::V2.get_instance_template(:message_structure, 'choice')
       segments_xml = []
       segments.each { |seg| segments_xml << seg.to_segment_entry }
       xml.sub!('SEGMENT_ENTRIES', segments_xml.join)

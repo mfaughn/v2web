@@ -5,6 +5,31 @@ module V2Web
       ref.name
     end
     
+    def to_pub(depth)
+      rendering_type = render_as&.value
+      begin
+        r = ref
+      rescue
+        pp self
+        raise
+      end
+      unless r
+        puts Rainbow("Reference does not reference a model element!").red
+        pp self
+        puts '---------parents-----------'
+        parents.each { |parent| pp parent }
+        return '<strong>FIXME</strong>'
+      end
+      case rendering_type
+      when 'message table'
+        r.to_tabs
+      when 'segment-definition', 'segment definition', 'datatype-definition', 'datatype definition'
+        r.to_pub_clause(depth)
+      else
+        raise Rainbow("Can't render a #{rendering_type}").red
+      end
+    end
+    
     # Wow, this should really be #to_composition, I think?? FIXME
     def to_hl7_site
       # "INSERT REFERENCE TO: #{identifying_text}"

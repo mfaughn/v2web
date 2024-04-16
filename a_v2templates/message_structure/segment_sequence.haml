@@ -1,9 +1,9 @@
 %tr.segment.segment_sequence{:id => row_id}
   %td
     - icons.each do |file_name|
-      %img{:src => "/images/#{file_name}"}
-    %img{:src => "/images/#{icon}", :onclick => 'tableRowAction(this)'}  
-    %img{:src => "/images/folder_icon.gif"}
+      %img{:src => "images/#{file_name}"}
+    %img{:src => "images/#{icon}", :onclick => 'tableRowAction(this)'}  
+    %img{:src => "images/folder_icon.gif"}
       %b
         = name
   %td.centered

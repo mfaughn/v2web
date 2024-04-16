@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #270 - Service Period</h2><h3>2 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 4 ODS.2 ----------</h4><p class="v2 v2_normalindented">Definition:  When blank, the modifier applies to all service periods.  Diet orders, for example, typically apply to all service periods.  This field usually specifies supplements.  This field allows you to designate a modification for one or more of the service periods during a day by combining service specifications as needed.  The service periods will be local CEs, normally numbers.  Suggested are:</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 22.22%;"/>
+    <col span="1" style="width: 9.66%;"/>
+    <col span="1" style="width: 68.11%;"/>
+  </colgroup>
+  <tr>
+    <th style="width:22.22%; ">
+      <p class="v2">service 1</p>
+    </th>
+    <th style="width:9.66%; ">
+      <p class="v2">is</p>
+    </th>
+    <th style="width:68.11%; ">
+      <p class="v2">breakfast</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:22.22%; ">
+      <p class="v2">service 2</p>
+    </td>
+    <td style="width:9.66%; ">
+      <p class="v2">is</p>
+    </td>
+    <td style="width:68.11%; ">
+      <p class="v2">mid-morning snack</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:22.22%; ">
+      <p class="v2">service 3</p>
+    </td>
+    <td style="width:9.66%; ">
+      <p class="v2">is</p>
+    </td>
+    <td style="width:68.11%; ">
+      <p class="v2">lunch</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:22.22%; ">
+      <p class="v2">service 4</p>
+    </td>
+    <td style="width:9.66%; ">
+      <p class="v2">is</p>
+    </td>
+    <td style="width:68.11%; ">
+      <p class="v2">mid-afternoon snack</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:22.22%; ">
+      <p class="v2">service 5</p>
+    </td>
+    <td style="width:9.66%; ">
+      <p class="v2">is</p>
+    </td>
+    <td style="width:68.11%; ">
+      <p class="v2">dinner</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:22.22%; ">
+      <p class="v2">service 6</p>
+    </td>
+    <td style="width:9.66%; ">
+      <p class="v2">is</p>
+    </td>
+    <td style="width:68.11%; ">
+      <p class="v2">bedtime snack</p>
+    </td>
+  </tr>
+</table>
+<p class="v2 v2_normalindented">Ex: |1~5| means service 1 and service 5, whatever these are locally defined to be.</p><p class="v2 v2_normalindented">Refer to Table 0627 - Service Period in Chapter 2C for valid values.</p><br/><h4>          ---------- 2nd Description: Ch. 4 ODT.2 ----------</h4><p class="v2 v2_normalindented">Definition:  When blank, the modifier applies to all service periods.  This field allows you to designate one or more of the feeding periods during a day by combining the codes as needed.  It can also combine with quantity/timing to give such information as which service period the order belongs with.  This field is identical in meaning with <a href="REFERENCE_ATTRIBUTEBROKENODS-2-service period">ODS-2-service period</a>.  See section <a href="BROKEN4.8.1.2">4.8.1.2</a>, &quot;<a href="BROKENODS-2   Service Period">ODS-2   Service Period</a>   (CWE)   00270,&quot; for further details. Refer to Table 0629 - Service Period in Chapter 2C for valid values.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  When blank, the modifier applies to all service periods.  <strong>Diet orders, for example, typically apply to all service periods.  This field usually specifies supplements.  </strong>This field allows you to designate <strong>a modification for </strong>one or more of the <strong>service</strong> periods during a day by combining <strong>service specification</strong>s as needed.  <strong>The service periods will be local CEs, n</strong>orma<strong>lly numbers.  Suggested are:&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 22.22%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 9.66%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;col span=&quot;1&quot; style=&quot;width: 68.11%;&quot;/&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/colgroup&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 1&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;th style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;breakfast&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/th&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 2&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;mid-morning snack&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 3&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;lunch&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 4&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;mid-afternoon snack&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 5&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;dinner&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;tr&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:22.22%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;service 6&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:9.66%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;is&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;td style=&quot;width:68.11%; &quot;&gt;</strong></del></li>
+    <li class="del"><del><strong>      &lt;p class=&quot;v2&quot;&gt;bedtime snack&lt;/p&gt;</strong></del></li>
+    <li class="del"><del><strong>    &lt;/td&gt;</strong></del></li>
+    <li class="del"><del><strong>  &lt;/tr&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;/table&gt;</strong></del></li>
+    <li class="del"><del><strong>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Ex: |1~5| means s</strong>ervice <strong>1 and service 5, whatever these are locally defined to be.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;</strong>Refer to Table 062<strong>7</strong> - Service Period in Chapter 2C for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  When blank, the modifier applies to all service periods.  This field allows you to designate one or more of the <strong>feeding</strong> periods during a day by combining <strong>the code</strong>s as needed.  <strong>It can also combine with quantity/timing to give such inf</strong>orma<strong>tion as which service period the order belongs with.  This field is identical in meaning with &lt;a href=&quot;REFERENCE_ATTRIBUTEBROKENODS-2-service period&quot;&gt;ODS-2-service period&lt;/a&gt;.  See section &lt;a href=&quot;BROKEN4.8.1.2&quot;&gt;4.8.1.2&lt;/a&gt;, &amp;quot;&lt;a href=&quot;BROKENODS-2   Service Period&quot;&gt;ODS-2   S</strong>ervice <strong>Period&lt;/a&gt;   (CWE)   00270,&amp;quot; for further details. </strong>Refer to Table 062<strong>9</strong> - Service Period in Chapter 2C for valid values.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

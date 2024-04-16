@@ -100,6 +100,12 @@ module HL7Parse
       File.open(path, 'w+') { |f| f.puts JSON.dump(to_index(chapter)) }
     end
     
+    FileUtils.mkdir_p(File.expand_path('~/projects/v2web/test_data/section_indices'))
+    def to_inverse_json_index(chapter)
+      path = File.expand_path(File.join('~/projects/v2web/test_data/section_indices', "Chapter#{chapter}.json"))
+      File.open(path, 'w+') { |f| f.puts JSON.dump(to_inverse_index(chapter)) }
+    end
+    
     def to_toc(prefix)
       # puts Rainbow(prefix).red if depth == 0
       entries = []
@@ -125,5 +131,20 @@ module HL7Parse
       end
       entries
     end
+    
+    def to_inverse_index(prefix, entries = {})
+      # puts Rainbow(prefix).red if depth == 0
+      # txt = "#{prefix}  #{title}"
+      # entry =  "  "*depth + txt
+      puts "#{prefix} already exists" if entries[prefix]
+      entries[prefix] = title 
+      sections.each_with_index do |s, i|
+        # next_prefix = [prefix,(i+1).to_s].join('.')
+        s.to_inverse_index(prefix + '.' + (i+1).to_s, entries)
+      end
+      entries
+    end
+    
+    
   end
 end

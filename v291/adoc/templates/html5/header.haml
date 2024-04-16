@@ -1,0 +1,41 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    / HEADER CONTENT
+    #segment-header
+      .navbar-header
+        .container{:style => "padding-top:10px"}
+          %a#logo{:href => "http://www.hl7.org/", "no-external" => "true"}
+            %img{:alt => "HL7 International", :src => "images/hl7-logo-header.png", :width => "120"}
+          #hl7-nav
+            %a#hl7-logo{:href => "http://v2.hl7.org/", "no-external" => "true"}
+              %img{:alt => "Visit the HL7 V2 website", :height => "50", :src => "images/HL7-v2-logo.png"}
+      %button.navbar-toggle{"data-target" => ".navbar-inverse-collapse", "data-toggle" => "collapse", :type => "button"}
+    
+    #stripe
+    
+    #segment-navbar.navbar-nav-box
+      .container
+        .nav-collapse.collapse.navbar-inverse-collapse
+          %ul.nav.navbar-nav
+            %li.navbar-v2web
+              %a{:href => homepage_url} V2 Conformance Home
+            %li.navbar-v2web.dropdown
+              %a.dropdown-toggle{:href => "#", :'data-toggle' => "dropdown"}
+                Sections
+                %b{:class => 'caret'}
+              %ul.dropdown-menu.multi-level
+                = navbar_items
+            - if toc_url
+              %li.navbar-v2web
+                %a{:href => toc_url} Table of Contents
+    - if draft
+      .container
+        #v2draft
+          %h1
+            Draft Website - For Review Purposes Only
+  / #segment-breadcrumb.segment
+  /   .container
+  /     %ul.breadcrumb
+  /       %li
+  /         %b
+  /           %a{:href => homepage_url} Home

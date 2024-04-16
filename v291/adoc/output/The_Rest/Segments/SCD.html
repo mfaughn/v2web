@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>SCD</title>
+<link rel="stylesheet" href="/css/v2.css">
+<meta content='(C) Health Level Seven, Int. 2024' name='COPYRIGHT'>
+<meta content='HL7, v2.x, v2+, v2plus' name='Keywords'>
+<!-- <base href="https://usnistgov.github.io/v2plusDemo/"> -->
+
+<link rel="stylesheet" href="/css/doctor.css"; type="text/css">
+<link rel="stylesheet" href="/css/bootstrap.css"; type="text/css">
+<link rel="stylesheet" href="/css/codemirror.css"; type="text/css">
+<link rel="stylesheet" href="/css/hl7.css"; type="text/css">
+<link rel="stylesheet" href="/css/fhir.css"; type="text/css">
+<!-- <link rel="stylesheet" href="/css/bootstrap-fhir.css"; type="text/css">-->
+<link rel="stylesheet" href="/css/bootstrap-v2.css"; type="text/css">
+<link rel="stylesheet" href="/css/project.css"; type="text/css">
+<link rel="stylesheet" href="/css/pygments-manni.css"; type="text/css">
+<link rel="stylesheet" href="/css/jquery-ui.css"; type="text/css">
+<link rel="stylesheet" href="/css/modules.css"; type="text/css">
+<link rel="stylesheet" href="/css/v2.css"; type="text/css">
+
+<script src='/js/jquery.js'></script>
+<script src='/js/jquery-ui.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/codemirror/codemirror.js'></script>
+<script src='/js/codemirror/mode/xml.js'></script>
+<script src='/js/v2.js'></script>
+<script src='/js/fhir-table-scripts.js' type='text/javascript'></script>
+<script src='/js/format_xml.js' type='text/javascript'></script>
+<link href='/images/hl7.ico' rel='shortcut icon'>
+</head>
+<body class="book">
+<div id="header">
+<h1>SCD</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_scd_anti_microbial_cycle_data_segment">SCD &ndash; Anti-Microbial Cycle Data Segment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_scd_1_cycle_start_time_02104">SCD-1 Cycle Start Time &#8482; 02104</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_2_cycle_count_nm_02105">SCD-2 Cycle Count (NM) 02105</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_3_temp_max_cq_02106">SCD-3 Temp Max (CQ) 02106</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_4_temp_min_cq_02107">SCD-4 Temp Min (CQ) 02107</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_5_load_number_nm_02108">SCD-5 Load Number (NM) 02108</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_6_condition_time_cq_02109">SCD-6 Condition Time (CQ) 02109</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_7_sterilize_time_cq_02110">SCD-7 Sterilize Time (CQ) 02110</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_8_exhaust_time_cq_02111">SCD-8 Exhaust Time (CQ) 02111</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_9_total_cycle_time_cq_02112">SCD-9 Total Cycle Time (CQ) 02112</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_10_device_status_cwe_02113">SCD-10 Device Status (CWE) 02113</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_11_cycle_start_datetime_dtm_02114">SCD-11 Cycle Start Date/Time (DTM) 02114</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_12_dry_time_cq_02115">SCD-12 Dry Time (CQ) 02115</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_13_leak_rate_cq_02116">SCD-13 Leak Rate (CQ) 02116</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_14_control_temperature_cq_02117">SCD-14 Control Temperature (CQ) 02117</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_15_sterilizer_temperature_cq_02118">SCD-15 Sterilizer Temperature (CQ) 02118</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_16_cycle_complete_time_02119">SCD-16 Cycle Complete Time &#8482; 02119</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_17_under_temperature_cq_02120">SCD-17 Under Temperature (CQ) 02120</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_18_over_temperature_cq_02121">SCD-18 Over Temperature (CQ) 02121</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_19_abort_cycle_cne_02122">SCD-19 Abort Cycle (CNE) 02122</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_20_alarm_cne_02123">SCD-20 Alarm (CNE) 02123</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_21_long_in_charge_phase_cne_02124">SCD-21 Long in Charge Phase (CNE) 02124</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_22_long_in_exhaust_phase_cne_02125">SCD-22 Long in Exhaust Phase (CNE) 02125</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_23_long_in_fast_exhaust_phase_cne_02126">SCD-23 Long in Fast Exhaust Phase (CNE) 02126</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_24_reset_cne_02127">SCD-24 Reset (CNE) 02127</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_25_operator_unload_xcn_02128">SCD-25 Operator &ndash; Unload (XCN) 02128</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_26_door_open_cne_02129">SCD-26 Door Open (CNE) 02129</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_27_reading_failure_cne_02130">SCD-27 Reading Failure (CNE) 02130</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_28_cycle_type_cwe_02131">SCD-28 Cycle Type (CWE) 02131</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_29_thermal_rinse_time_cq_02132">SCD-29 Thermal Rinse Time (CQ) 02132</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_30_wash_time_cq_02133">SCD-30 Wash Time (CQ) 02133</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_31_injection_rate_cq_02134">SCD-31 Injection Rate (CQ) 02134</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd_32_procedure_code_cne_00393">SCD-32 Procedure Code (CNE) 00393</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd33_patient_identifier_list_cx_00106">SCD&ndash;33 Patient Identifier List (CX) 00106</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd34_attending_doctor_xcn_01137">SCD&ndash;34 Attending Doctor (XCN) 01137</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd35_dilution_factor_sn_01356">SCD&ndash;35 Dilution Factor (SN) 01356</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd36_fill_time_cq_02139">SCD&ndash;36 Fill Time (CQ) 02139</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_scd37_inlet_temperature_cq_02140">SCD&ndash;37 Inlet Temperature (CQ) 02140</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-03-15 16:00:39 -0600
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #238 - Universal Service Identifier</h2><h3>4 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 4 OBR.4 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the identifier code for the requested observation/test/battery.  The identifier can come from either a local coding system or industry standards.  Examples may be LOINC (emerging as the global standard for observation identifiers), JLAC10, or SNOMED CT. Refer to Table 0612 - Universal Service Identifier in Chapter 2C for valid values.</p><br/><h4 style='background-color:yellow'>Description from Ch.7: OBR.4 is the same as that from Ch.4: OBR.4 and has been eliminated.</h4><br/><h4>          ---------- 2nd Description: Ch. 10 AIS.3 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains an identifier code for a service to be scheduled.  This field may contain a universal service identifier describing the observation/test/battery/procedure or other activity that is to be performed during the requested appointment, similar to the universal service identifier defined for the OBR segment in the Order Entry chapter (Chapter 4).  This code can be based on local and/or universal codes.  The use of universal codes is recommended.  </p><br/><h4>          ---------- 3rd Description: Ch. 13 TCC.1 ----------</h4><p class="v2 v2_normalindented">Definition:  This field identifies the test code that information is being transmitted about.  The alternate elements represent the test code identifier that has been assigned by the manufacturer to this particular test code. Refer to Table 0787 - Universal Service Identifier in Chapter 2C for valid values.</p><br/><h4>          ---------- 4th Description: Ch. 13 TCD.1 ----------</h4><p class="v2 v2_normalindented">Definition:  This field identifies the test code that information is being transmitted about. Refer to Table 0789 - Universal Service Identifier in Chapter 2C for valid values.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 1 and 3 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains <strong>the</strong> identifier code for <strong>the requested observation/test/battery.  Th</strong>e identifier <strong>can come from either a local coding system or industry standards.  Examples may</strong> be <strong>LOINC (emerg</strong>ing <strong>as </strong>the <strong>global standard for ob</strong>serv<strong>ation</strong> identifier<strong>s), JLAC10, or SNOMED CT. Refer to Table 0612 - U</strong>niversal <strong>Service Identifier in Chapter 2C for valid values.</strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains <strong>an</strong> identifier code for <strong>a service to be scheduled.  This field may contain a universal servic</strong>e identifier <strong>describing the observation/test/battery/procedure or other activity that is to</strong> be <strong>performed dur</strong>ing the <strong>requested appointment, similar to the universal </strong>serv<strong>ice</strong> identifier<strong> defined for the OBR segment in the Order Entry chapter (Chapter 4).  This code can be based on local and/or u</strong>niversal <strong>codes.  The use of universal codes is recommended.  </strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field <strong>contain</strong>s the <strong>identifier</strong> code <strong>for the requested observ</strong>ation<strong>/test/battery</strong>.  The <strong>identifier can come from either a local</strong> cod<strong>ing system or industry standards.  Examples may be LOINC (emerging as the global standard for observation identifiers), JLAC10, or SNOMED CT</strong>. Refer to Table 0<strong>612</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field <strong>identifie</strong>s the <strong>test</strong> code <strong>that inform</strong>ation<strong> is being transmitted about</strong>.  The <strong>alternate elements represent the test</strong> cod<strong>e identifier that has been assigned by the manufacturer to this particular test code</strong>. Refer to Table 0<strong>787</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 1 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field <strong>contains the </strong>identifie<strong>r code for</strong> the <strong>requested observation/test/battery.  The identifier can come from either a local coding system or industry standards.  Examples may be LOINC (emerg</strong>ing <strong>as the global standard for observation identifiers), JLAC10, or SNOMED CT</strong>. Refer to Table 0<strong>612</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field identifie<strong>s</strong> the <strong>test code that information is be</strong>ing <strong>transmitted about</strong>. Refer to Table 0<strong>789</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 3 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 2 and 4 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field <strong>contains an </strong>identifie<strong>r code for a service to be scheduled.  This field may contain a universal service identifier describ</strong>ing t<strong>he observation/test/battery/procedure or other activity that is to be performed during the requested appointment, similar to</strong> the <strong>universal servic</strong>e identifier <strong>defined for the OBR segment in</strong> the <strong>Order Entry chapter (Chapter 4).  This</strong> code<strong> can be based on local and/or u</strong>niversal <strong>codes.  The use of universal codes is recommended.  </strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field identifie<strong>s the test code that information is be</strong>ing t<strong>ransmitted about.  The alternate elements represent</strong> the <strong>test cod</strong>e identifier <strong>that has been assigned by</strong> the <strong>manufacturer to this particular test</strong> code<strong>. Refer to Table 0787 - U</strong>niversal <strong>Service Identifier in Chapter 2C for valid values.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 2 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field <strong>contains an </strong>identifie<strong>r code for a service to be scheduled.  This field may contain a universal service identifier describing the observation/test/battery/procedure or other activity that</strong> is <strong>to be performed dur</strong>ing t<strong>he reques</strong>ted a<strong>ppointment, simila</strong>r to <strong>the u</strong>niversal <strong>s</strong>ervice <strong>i</strong>dentifier <strong>defined for the OBR segment in the Order Entry chapter (</strong>Chapter <strong>4).  This code can be based on local and/or universal codes.  The use of universal codes is recommended.  </strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field identifie<strong>s the test code that information</strong> is <strong>be</strong>ing t<strong>ransmit</strong>ted a<strong>bout. Refe</strong>r to <strong>Table 0789 - U</strong>niversal <strong>S</strong>ervice <strong>I</strong>dentifier <strong>in </strong>Chapter <strong>2C for valid values.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 3 and 4 ----------</h4><div class="diff"></div>
+<h4>          ---------- DIFF b/w 3 and 5 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field identifies the test code that information is being transmitted about. <strong> The alternate elements represent the test code identifier that has been assigned by the manufacturer to this particular test code. </strong>Refer to Table 078<strong>7</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field identifies the test code that information is being transmitted about. Refer to Table 078<strong>9</strong> - Universal Service Identifier in Chapter 2C for valid values.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+<h4>          ---------- DIFF b/w 4 and 5 ----------</h4><div class="diff"></div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/projects/v2plus_adoc_source
+ruby ~/projects/v2web/v291/adoc/go.rb
+cd -

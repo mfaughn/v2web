@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #331 - Give Per</h2><h3>2 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 4A RXE.22 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the time unit to use to calculate the rate at which the pharmaceutical is to be administered. </p><p class="v2 v2_normalindented">Format:</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 16.32%;"/>
+    <col span="1" style="width: 8.16%;"/>
+    <col span="1" style="width: 75.51%;"/>
+  </colgroup>
+  <tr>
+    <th style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">S&lt;integer&gt;</p>
+    </th>
+    <th style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </th>
+    <th style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; seconds</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">M&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; minutes</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">H&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; hours</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">D&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; days</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">W&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; weeks</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">L&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; months</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">T&lt;integer&gt;</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">at the interval and amount stated until a total of &lt;integer&gt; &quot;DOSAGE&quot; is accumulated.  Units would be assumed to be the same as in the QUANTITY field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:16.32%; ">
+      <p class="v2 v2_othertablebody">INDEF</p>
+    </td>
+    <td style="width:8.16%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:75.51%; ">
+      <p class="v2 v2_othertablebody">do indefinitely - also the default</p>
+    </td>
+  </tr>
+</table>
+<p class="v2 v2_normalindented">This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the &quot;X&quot; specification. </p><p class="v2 v2_normalindented">This field is defined as conditional because it is required when the ordered substance is to be administered continuously at a prescribed rate (e.g., certain IVs).  For example, if the &quot;give amount/units&quot; were 300 ml and the &quot;give per&quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.</p><br/><h4>          ---------- 2nd Description: Ch. 4A RXG.14 ----------</h4><p class="v2 v2_normalindented">Definition:  This field contains the time unit to use to calculate the rate at which the pharmaceutical/treatment is to be administered.</p><p class="v2 v2_normalindented">Format:</p><table class="v2">
+  <colgroup>
+    <col span="1" style="width: 15.99%;"/>
+    <col span="1" style="width: 7.99%;"/>
+    <col span="1" style="width: 76.00%;"/>
+  </colgroup>
+  <tr>
+    <th style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">S&lt;integer&gt;</p>
+    </th>
+    <th style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </th>
+    <th style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; seconds</p>
+    </th>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">M&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; minutes</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">H&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; hours</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">D&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; days</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">W&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; weeks</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">L&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">&lt;integer&gt; months</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">T&lt;integer&gt;</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">at the interval and amount stated until a total of &lt;integer&gt; &quot;DOSAGE&quot; is accumulated.  Units would be assumed to be the same as in the QUANTITY field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:15.99%; ">
+      <p class="v2 v2_othertablebody">INDEF</p>
+    </td>
+    <td style="width:7.99%; ">
+      <p class="v2 v2_othertablebody">=</p>
+    </td>
+    <td style="width:76.00%; ">
+      <p class="v2 v2_othertablebody">do indefinitely - also the default</p>
+    </td>
+  </tr>
+</table>
+<p class="v2 v2_normalindented">This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the &quot;X&quot; specification. </p><p class="v2 v2_normalindented">Required when relevant (e.g., certain IVs). For example, if the &quot;give amount/units&quot; were 300 ml and the &quot;give per&quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the time unit to use to calculate the rate at which the pharmaceutical is to be administered.<strong> </strong>&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Format:&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition:  This field contains the time unit to use to calculate the rate at which the pharmaceutical<strong>/treatment</strong> is to be administered.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Format:&lt;/p&gt;&lt;table class=&quot;v2&quot;&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;colgroup&gt;</span></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>6.32</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>8.16</strong>%;&quot;/&gt;</del></li>
+    <li class="del"><del>    &lt;col span=&quot;1&quot; style=&quot;width: 7<strong>5.51</strong>%;&quot;/&gt;</del></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 1<strong>5.99</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: <strong>7.99</strong>%;&quot;/&gt;</ins></li>
+    <li class="ins"><ins>    &lt;col span=&quot;1&quot; style=&quot;width: 7<strong>6.00</strong>%;&quot;/&gt;</ins></li>
+    <li class="unchanged"><span>  &lt;/colgroup&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;S&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="del"><del>    &lt;th style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;th style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; seconds&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/th&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;M&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; minutes&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;H&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; hours&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;D&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; days&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;W&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; weeks&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;L&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;&amp;lt;integer&amp;gt; months&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;T&amp;lt;integer&amp;gt;&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;at the interval and amount stated until a total of &amp;lt;integer&amp;gt; &amp;quot;DOSAGE&amp;quot; is accumulated.  Units would be assumed to be the same as in the QUANTITY field.&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>  &lt;tr&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:1<strong>6.32</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:1<strong>5.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;INDEF&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:<strong>8.16</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:<strong>7.99</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;=&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="del"><del>    &lt;td style=&quot;width:7<strong>5.51</strong>%; &quot;&gt;</del></li>
+    <li class="ins"><ins>    &lt;td style=&quot;width:7<strong>6.00</strong>%; &quot;&gt;</ins></li>
+    <li class="unchanged"><span>      &lt;p class=&quot;v2 v2_othertablebody&quot;&gt;do indefinitely - also the default&lt;/p&gt;</span></li>
+    <li class="unchanged"><span>    &lt;/td&gt;</span></li>
+    <li class="unchanged"><span>  &lt;/tr&gt;</span></li>
+    <li class="unchanged"><span>&lt;/table&gt;</span></li>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the &amp;quot;X&amp;quot; specification. &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;<strong>This field is defined as conditional because it is r</strong>equired when <strong>the ordered substance is to be administered continuously at a prescribed rate</strong> (e.g., certain IVs). <strong> </strong>For example, if the &amp;quot;give amount/units&amp;quot; were 300 ml and the &amp;quot;give per&amp;quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;This is the same as the format specified for the DURATION component of the quantity/timing field, excluding the &amp;quot;X&amp;quot; specification. &lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;<strong>R</strong>equired when <strong>relevant</strong> (e.g., certain IVs). For example, if the &amp;quot;give amount/units&amp;quot; were 300 ml and the &amp;quot;give per&amp;quot; time unit were H1 (equivalent to one hour), the rate is 300ml/hr.&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,2514 @@
+{
+  "0001": {
+    "codeSystemOid": "2.16.840.1.113883.18.2",
+    "hl7TableType": "User"
+  },
+  "0002": {
+    "codeSystemOid": "2.16.840.1.113883.18.179",
+    "hl7TableType": "User"
+  },
+  "0003": {
+    "codeSystemOid": "2.16.840.1.113883.18.4",
+    "hl7TableType": "HL7"
+  },
+  "0004": {
+    "codeSystemOid": "2.16.840.1.113883.18.5",
+    "hl7TableType": "User"
+  },
+  "0005": {
+    "codeSystemOid": "2.16.840.1.113883.6.238",
+    "hl7TableType": "User"
+  },
+  "0006": {
+    "codeSystemOid": "2.16.840.1.113883.18.8",
+    "hl7TableType": "User"
+  },
+  "0007": {
+    "codeSystemOid": "2.16.840.1.113883.18.9",
+    "hl7TableType": "User"
+  },
+  "0008": {
+    "codeSystemOid": "2.16.840.1.113883.18.10",
+    "hl7TableType": "HL7"
+  },
+  "0009": {
+    "codeSystemOid": "2.16.840.1.113883.18.11",
+    "hl7TableType": "User"
+  },
+  "0010": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0011": {
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  "0012": {
+    "codeSystemOid": "2.16.840.1.113883.18.12",
+    "hl7TableType": "no longer used"
+  },
+  "0016": {
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  "0017": {
+    "codeSystemOid": "2.16.840.1.113883.18.13",
+    "hl7TableType": "User"
+  },
+  "0018": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0019": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0020": {
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  "0021": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0022": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0023": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0024": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0027": {
+    "codeSystemOid": "2.16.840.1.113883.18.15",
+    "hl7TableType": "HL7"
+  },
+  "0032": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0033": {
+    "codeSystemOid": "2.16.840.1.113883.18.16",
+    "hl7TableType": "HL7"
+  },
+  "0034": {
+    "codeSystemOid": "2.16.840.1.113883.18.17",
+    "hl7TableType": "HL7"
+  },
+  "0038": {
+    "codeSystemOid": "2.16.840.1.113883.18.18",
+    "hl7TableType": "HL7"
+  },
+  "0042": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0043": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0044": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0045": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0046": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0047": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0048": {
+    "codeSystemOid": "2.16.840.1.113883.18.20",
+    "hl7TableType": "HL7"
+  },
+  "0049": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0050": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0051": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0052": {
+    "codeSystemOid": "2.16.840.1.113883.18.21",
+    "hl7TableType": "User"
+  },
+  "0053": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0055": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0056": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0057": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0059": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0060": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0061": {
+    "codeSystemOid": "2.16.840.1.113883.18.22",
+    "hl7TableType": "HL7"
+  },
+  "0062": {
+    "codeSystemOid": "2.16.840.1.113883.18.23",
+    "hl7TableType": "User"
+  },
+  "0063": {
+    "codeSystemOid": "2.16.840.1.113883.18.24",
+    "hl7TableType": "User"
+  },
+  "0064": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0065": {
+    "codeSystemOid": "2.16.840.1.113883.18.25",
+    "hl7TableType": "HL7"
+  },
+  "0066": {
+    "codeSystemOid": "2.16.840.1.113883.18.26",
+    "hl7TableType": "User"
+  },
+  "0068": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0069": {
+    "codeSystemOid": "2.16.840.1.113883.18.27",
+    "hl7TableType": "User"
+  },
+  "0070": {
+    "codeSystemOid": "2.16.840.1.113883.18.28",
+    "hl7TableType": "HL7"
+  },
+  "0072": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0073": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0074": {
+    "codeSystemOid": "2.16.840.1.113883.18.29",
+    "hl7TableType": "HL7"
+  },
+  "0075": {
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  "0076": {
+    "codeSystemOid": "2.16.840.1.113883.18.30",
+    "hl7TableType": "HL7"
+  },
+  "0078": {
+    "codeSystemOid": "2.16.840.1.113883.5.83",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0079": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0080": {
+    "codeSystemOid": "2.16.840.1.113883.18.32",
+    "hl7TableType": "HL7"
+  },
+  "0081": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0083": {
+    "codeSystemOid": "2.16.840.1.113883.18.33",
+    "hl7TableType": "User"
+  },
+  "0084": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0085": {
+    "codeSystemOid": "2.16.840.1.113883.18.34",
+    "hl7TableType": "HL7"
+  },
+  "0086": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0087": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0088": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0089": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0090": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0091": {
+    "codeSystemOid": "2.16.840.1.113883.18.35",
+    "hl7TableType": "HL7"
+  },
+  "0092": {
+    "codeSystemOid": "2.16.840.1.113883.18.36",
+    "hl7TableType": "User"
+  },
+  "0093": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0094": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0096": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0098": {
+    "codeSystemOid": "2.16.840.1.113883.18.37",
+    "hl7TableType": "User"
+  },
+  "0099": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0100": {
+    "codeSystemOid": "2.16.840.1.113883.18.38",
+    "hl7TableType": "HL7"
+  },
+  "0101": {
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  "0102": {
+    "codeSystemOid": "2.16.840.1.113883.18.39",
+    "hl7TableType": "HL7"
+  },
+  "0103": {
+    "codeSystemOid": "2.16.840.1.113883.18.40",
+    "hl7TableType": "HL7"
+  },
+  "0104": {
+    "codeSystemOid": "2.16.840.1.113883.18.41",
+    "hl7TableType": "HL7"
+  },
+  "0105": {
+    "codeSystemOid": "2.16.840.1.113883.18.42",
+    "hl7TableType": "HL7"
+  },
+  "0106": {
+    "codeSystemOid": "2.16.840.1.113883.18.43",
+    "hl7TableType": "HL7"
+  },
+  "0107": {
+    "codeSystemOid": "2.16.840.1.113883.18.44",
+    "hl7TableType": "HL7"
+  },
+  "0108": {
+    "codeSystemOid": "2.16.840.1.113883.18.45",
+    "hl7TableType": "HL7"
+  },
+  "0109": {
+    "codeSystemOid": "2.16.840.1.113883.18.46",
+    "hl7TableType": "HL7"
+  },
+  "0110": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0111": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0112": {
+    "codeSystemOid": "2.16.840.1.113883.18.438",
+    "hl7TableType": "User"
+  },
+  "0113": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0114": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0115": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0116": {
+    "codeSystemOid": "2.16.840.1.113883.18.47",
+    "hl7TableType": "User"
+  },
+  "0117": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0118": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0119": {
+    "codeSystemOid": "2.16.840.1.113883.18.48",
+    "hl7TableType": "HL7"
+  },
+  "0121": {
+    "codeSystemOid": "2.16.840.1.113883.18.49",
+    "hl7TableType": "HL7"
+  },
+  "0122": {
+    "codeSystemOid": "2.16.840.1.113883.18.50",
+    "hl7TableType": "HL7"
+  },
+  "0123": {
+    "codeSystemOid": "2.16.840.1.113883.18.51",
+    "hl7TableType": "HL7"
+  },
+  "0124": {
+    "codeSystemOid": "2.16.840.1.113883.18.52",
+    "hl7TableType": "HL7"
+  },
+  "0125": {
+    "codeSystemOid": "2.16.840.1.113883.18.280",
+    "hl7TableType": "HL7"
+  },
+  "0126": {
+    "codeSystemOid": "2.16.840.1.113883.18.53",
+    "hl7TableType": "HL7"
+  },
+  "0127": {
+    "codeSystemOid": "2.16.840.1.113883.18.54",
+    "hl7TableType": "User"
+  },
+  "0128": {
+    "codeSystemOid": "2.16.840.1.113883.18.55",
+    "hl7TableType": "User"
+  },
+  "0129": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0130": {
+    "codeSystemOid": "2.16.840.1.113883.18.56",
+    "hl7TableType": "User"
+  },
+  "0131": {
+    "codeSystemOid": "2.16.840.1.113883.18.58",
+    "hl7TableType": "User"
+  },
+  "0132": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0133": {
+    "codeSystemOid": "2.16.840.1.113883.18.59",
+    "hl7TableType": "User"
+  },
+  "0135": {
+    "codeSystemOid": "2.16.840.1.113883.18.60",
+    "hl7TableType": "User"
+  },
+  "0136": {
+    "codeSystemOid": "2.16.840.1.113883.18.347",
+    "hl7TableType": "HL7"
+  },
+  "0137": {
+    "codeSystemOid": "2.16.840.1.113883.18.61",
+    "hl7TableType": "User"
+  },
+  "0139": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0140": {
+    "codeSystemOid": "2.16.840.1.113883.18.62",
+    "hl7TableType": "User"
+  },
+  "0141": {
+    "codeSystemOid": "2.16.840.1.113883.18.63",
+    "hl7TableType": "User"
+  },
+  "0142": {
+    "codeSystemOid": "2.16.840.1.113883.18.64",
+    "hl7TableType": "User"
+  },
+  "0143": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0144": {
+    "codeSystemOid": "2.16.840.1.113883.18.65",
+    "hl7TableType": "User"
+  },
+  "0145": {
+    "codeSystemOid": "2.16.840.1.113883.18.66",
+    "hl7TableType": "User"
+  },
+  "0146": {
+    "codeSystemOid": "2.16.840.1.113883.18.67",
+    "hl7TableType": "User"
+  },
+  "0147": {
+    "codeSystemOid": "2.16.840.1.113883.18.68",
+    "hl7TableType": "User"
+  },
+  "0148": {
+    "codeSystemOid": "2.16.840.1.113883.18.69",
+    "hl7TableType": "HL7"
+  },
+  "0149": {
+    "codeSystemOid": "2.16.840.1.113883.18.70",
+    "hl7TableType": "User"
+  },
+  "0150": {
+    "codeSystemOid": "2.16.840.1.113883.18.71",
+    "hl7TableType": "User"
+  },
+  "0151": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0152": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0153": {
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  "0155": {
+    "codeSystemOid": "2.16.840.1.113883.18.73",
+    "hl7TableType": "HL7"
+  },
+  "0156": {
+    "codeSystemOid": "2.16.840.1.113883.18.74",
+    "hl7TableType": "HL7"
+  },
+  "0157": {
+    "codeSystemOid": "2.16.840.1.113883.18.75",
+    "hl7TableType": "HL7"
+  },
+  "0158": {
+    "codeSystemOid": "2.16.840.1.113883.18.76",
+    "hl7TableType": "HL7"
+  },
+  "0159": {
+    "codeSystemOid": "2.16.840.1.113883.18.77",
+    "hl7TableType": "HL7"
+  },
+  "0160": {
+    "codeSystemOid": "2.16.840.1.113883.18.78",
+    "hl7TableType": "HL7"
+  },
+  "0161": {
+    "codeSystemOid": "2.16.840.1.113883.18.79",
+    "hl7TableType": "HL7"
+  },
+  "0162": {
+    "codeSystemOid": "2.16.840.1.113883.18.80",
+    "hl7TableType": "User"
+  },
+  "0163": {
+    "codeSystemOid": "2.16.840.1.113883.18.81",
+    "hl7TableType": "HL7"
+  },
+  "0164": {
+    "codeSystemOid": "2.16.840.1.113883.18.82",
+    "hl7TableType": "User"
+  },
+  "0165": {
+    "codeSystemOid": "2.16.840.1.113883.18.83",
+    "hl7TableType": "User"
+  },
+  "0166": {
+    "codeSystemOid": "2.16.840.1.113883.18.84",
+    "hl7TableType": "HL7"
+  },
+  "0167": {
+    "codeSystemOid": "2.16.840.1.113883.18.85",
+    "hl7TableType": "HL7"
+  },
+  "0168": {
+    "codeSystemOid": "2.16.840.1.113883.18.86",
+    "hl7TableType": "HL7"
+  },
+  "0169": {
+    "codeSystemOid": "2.16.840.1.113883.18.87",
+    "hl7TableType": "HL7"
+  },
+  "0170": {
+    "codeSystemOid": "2.16.840.1.113883.18.88",
+    "hl7TableType": "HL7"
+  },
+  "0171": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0172": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0173": {
+    "codeSystemOid": "2.16.840.1.113883.18.89",
+    "hl7TableType": "User"
+  },
+  "0174": {
+    "codeSystemOid": "2.16.840.1.113883.18.90",
+    "hl7TableType": "User"
+  },
+  "0175": {
+    "codeSystemOid": "2.16.840.1.113883.18.91",
+    "hl7TableType": "HL7"
+  },
+  "0176": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0177": {
+    "codeSystemOid": "2.16.840.1.113883.18.92",
+    "hl7TableType": "User"
+  },
+  "0178": {
+    "codeSystemOid": "2.16.840.1.113883.18.93",
+    "hl7TableType": "HL7"
+  },
+  "0179": {
+    "codeSystemOid": "2.16.840.1.113883.18.94",
+    "hl7TableType": "HL7"
+  },
+  "0180": {
+    "codeSystemOid": "2.16.840.1.113883.18.95",
+    "hl7TableType": "HL7"
+  },
+  "0181": {
+    "codeSystemOid": "2.16.840.1.113883.18.96",
+    "hl7TableType": "User"
+  },
+  "0182": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0183": {
+    "codeSystemOid": "2.16.840.1.113883.18.97",
+    "hl7TableType": "HL7"
+  },
+  "0184": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0185": {
+    "codeSystemOid": "2.16.840.1.113883.18.98",
+    "hl7TableType": "HL7"
+  },
+  "0186": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0187": {
+    "codeSystemOid": "2.16.840.1.113883.18.99",
+    "hl7TableType": "HL7"
+  },
+  "0188": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0189": {
+    "codeSystemOid": "2.16.840.1.113883.18.100",
+    "hl7TableType": "User"
+  },
+  "0190": {
+    "codeSystemOid": "2.16.840.1.113883.18.101",
+    "hl7TableType": "HL7"
+  },
+  "0191": {
+    "codeSystemOid": "2.16.840.1.113883.18.102",
+    "hl7TableType": "HL7"
+  },
+  "0192": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0193": {
+    "codeSystemOid": "2.16.840.1.113883.18.103",
+    "hl7TableType": "User"
+  },
+  "0200": {
+    "codeSystemOid": "2.16.840.1.113883.18.105",
+    "hl7TableType": "HL7"
+  },
+  "0201": {
+    "codeSystemOid": "2.16.840.1.113883.18.106",
+    "hl7TableType": "HL7"
+  },
+  "0202": {
+    "codeSystemOid": "2.16.840.1.113883.18.107",
+    "hl7TableType": "HL7"
+  },
+  "0203": {
+    "codeSystemOid": "2.16.840.1.113883.18.108",
+    "hl7TableType": "HL7"
+  },
+  "0204": {
+    "codeSystemOid": "2.16.840.1.113883.18.109",
+    "hl7TableType": "User"
+  },
+  "0205": {
+    "codeSystemOid": "2.16.840.1.113883.18.110",
+    "hl7TableType": "HL7"
+  },
+  "0206": {
+    "codeSystemOid": "2.16.840.1.113883.18.111",
+    "hl7TableType": "HL7"
+  },
+  "0207": {
+    "codeSystemOid": "2.16.840.1.113883.18.112",
+    "hl7TableType": "HL7"
+  },
+  "0208": {
+    "codeSystemOid": "2.16.840.1.113883.18.113",
+    "hl7TableType": "HL7"
+  },
+  "0209": {
+    "codeSystemOid": "2.16.840.1.113883.18.114",
+    "hl7TableType": "HL7"
+  },
+  "0210": {
+    "codeSystemOid": "2.16.840.1.113883.18.115",
+    "hl7TableType": "HL7"
+  },
+  "0211": {
+    "codeSystemOid": "2.16.840.1.113883.18.116",
+    "hl7TableType": "HL7"
+  },
+  "0212": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0213": {
+    "codeSystemOid": "2.16.840.1.113883.18.117",
+    "hl7TableType": "User"
+  },
+  "0214": {
+    "codeSystemOid": "2.16.840.1.113883.18.118",
+    "hl7TableType": "User"
+  },
+  "0215": {
+    "codeSystemOid": "2.16.840.1.113883.18.119",
+    "hl7TableType": "User"
+  },
+  "0216": {
+    "codeSystemOid": "2.16.840.1.113883.18.120",
+    "hl7TableType": "User"
+  },
+  "0217": {
+    "codeSystemOid": "2.16.840.1.113883.18.121",
+    "hl7TableType": "User"
+  },
+  "0218": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0219": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0220": {
+    "codeSystemOid": "2.16.840.1.113883.18.122",
+    "hl7TableType": "User"
+  },
+  "0222": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0223": {
+    "codeSystemOid": "2.16.840.1.113883.18.124",
+    "hl7TableType": "User"
+  },
+  "0224": {
+    "codeSystemOid": "2.16.840.1.113883.18.125",
+    "hl7TableType": "HL7"
+  },
+  "0225": {
+    "codeSystemOid": "2.16.840.1.113883.18.126",
+    "hl7TableType": "HL7"
+  },
+  "0227": {
+    "codeSystemOid": "2.16.840.1.113883.12.227",
+    "hl7TableType": "Imported"
+  },
+  "0228": {
+    "codeSystemOid": "2.16.840.1.113883.18.128",
+    "hl7TableType": "User"
+  },
+  "0229": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0230": {
+    "codeSystemOid": "2.16.840.1.113883.18.130",
+    "hl7TableType": "User"
+  },
+  "0231": {
+    "codeSystemOid": "2.16.840.1.113883.18.131",
+    "hl7TableType": "User"
+  },
+  "0232": {
+    "codeSystemOid": "2.16.840.1.113883.18.132",
+    "hl7TableType": "User"
+  },
+  "0233": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0234": {
+    "codeSystemOid": "2.16.840.1.113883.18.133",
+    "hl7TableType": "HL7"
+  },
+  "0235": {
+    "codeSystemOid": "2.16.840.1.113883.18.134",
+    "hl7TableType": "HL7"
+  },
+  "0236": {
+    "codeSystemOid": "2.16.840.1.113883.18.135",
+    "hl7TableType": "HL7"
+  },
+  "0237": {
+    "codeSystemOid": "2.16.840.1.113883.18.136",
+    "hl7TableType": "HL7"
+  },
+  "0238": {
+    "codeSystemOid": "2.16.840.1.113883.18.137",
+    "hl7TableType": "HL7"
+  },
+  "0239": {
+    "codeSystemOid": "2.16.840.1.113883.18.138",
+    "hl7TableType": "HL7"
+  },
+  "0240": {
+    "codeSystemOid": "2.16.840.1.113883.18.139",
+    "hl7TableType": "HL7"
+  },
+  "0241": {
+    "codeSystemOid": "2.16.840.1.113883.18.140",
+    "hl7TableType": "HL7"
+  },
+  "0242": {
+    "codeSystemOid": "2.16.840.1.113883.18.141",
+    "hl7TableType": "HL7"
+  },
+  "0243": {
+    "codeSystemOid": "2.16.840.1.113883.18.142",
+    "hl7TableType": "HL7"
+  },
+  "0244": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0245": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0246": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0247": {
+    "codeSystemOid": "2.16.840.1.113883.18.143",
+    "hl7TableType": "HL7"
+  },
+  "0248": {
+    "codeSystemOid": "2.16.840.1.113883.18.144",
+    "hl7TableType": "HL7"
+  },
+  "0249": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0250": {
+    "codeSystemOid": "2.16.840.1.113883.18.145",
+    "hl7TableType": "HL7"
+  },
+  "0251": {
+    "codeSystemOid": "2.16.840.1.113883.18.146",
+    "hl7TableType": "HL7"
+  },
+  "0252": {
+    "codeSystemOid": "2.16.840.1.113883.18.147",
+    "hl7TableType": "HL7"
+  },
+  "0253": {
+    "codeSystemOid": "2.16.840.1.113883.18.148",
+    "hl7TableType": "HL7"
+  },
+  "0254": {
+    "codeSystemOid": "2.16.840.1.113883.18.149",
+    "hl7TableType": "HL7"
+  },
+  "0255": {
+    "codeSystemOid": "2.16.840.1.113883.18.150",
+    "hl7TableType": "User"
+  },
+  "0256": {
+    "codeSystemOid": "2.16.840.1.113883.18.151",
+    "hl7TableType": "HL7"
+  },
+  "0257": {
+    "codeSystemOid": "2.16.840.1.113883.18.152",
+    "hl7TableType": "HL7"
+  },
+  "0258": {
+    "codeSystemOid": "2.16.840.1.113883.18.153",
+    "hl7TableType": "HL7"
+  },
+  "0259": {
+    "codeSystemOid": "2.16.840.1.113883.18.154",
+    "hl7TableType": "User"
+  },
+  "0260": {
+    "codeSystemOid": "2.16.840.1.113883.18.155",
+    "hl7TableType": "User"
+  },
+  "0261": {
+    "codeSystemOid": "2.16.840.1.113883.18.156",
+    "hl7TableType": "User"
+  },
+  "0262": {
+    "codeSystemOid": "2.16.840.1.113883.18.157",
+    "hl7TableType": "User"
+  },
+  "0263": {
+    "codeSystemOid": "2.16.840.1.113883.18.158",
+    "hl7TableType": "User"
+  },
+  "0264": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0265": {
+    "codeSystemOid": "2.16.840.1.113883.18.159",
+    "hl7TableType": "User"
+  },
+  "0267": {
+    "codeSystemOid": "2.16.840.1.113883.18.160",
+    "hl7TableType": "HL7"
+  },
+  "0268": {
+    "codeSystemOid": "2.16.840.1.113883.18.161",
+    "hl7TableType": "User"
+  },
+  "0269": {
+    "codeSystemOid": "2.16.840.1.113883.18.162",
+    "hl7TableType": "User"
+  },
+  "0270": {
+    "codeSystemOid": "2.16.840.1.113883.18.163",
+    "hl7TableType": "User"
+  },
+  "0271": {
+    "codeSystemOid": "2.16.840.1.113883.18.164",
+    "hl7TableType": "HL7"
+  },
+  "0272": {
+    "codeSystemOid": "2.16.840.1.113883.18.166",
+    "hl7TableType": "HL7"
+  },
+  "0273": {
+    "codeSystemOid": "2.16.840.1.113883.18.167",
+    "hl7TableType": "HL7"
+  },
+  "0275": {
+    "codeSystemOid": "2.16.840.1.113883.18.168",
+    "hl7TableType": "HL7"
+  },
+  "0276": {
+    "codeSystemOid": "2.16.840.1.113883.18.169",
+    "hl7TableType": "User"
+  },
+  "0277": {
+    "codeSystemOid": "2.16.840.1.113883.18.170",
+    "hl7TableType": "User"
+  },
+  "0278": {
+    "codeSystemOid": "2.16.840.1.113883.18.171",
+    "hl7TableType": "User"
+  },
+  "0279": {
+    "codeSystemOid": "2.16.840.1.113883.18.172",
+    "hl7TableType": "User"
+  },
+  "0280": {
+    "codeSystemOid": "2.16.840.1.113883.18.173",
+    "hl7TableType": "User"
+  },
+  "0281": {
+    "codeSystemOid": "2.16.840.1.113883.18.174",
+    "hl7TableType": "User"
+  },
+  "0282": {
+    "codeSystemOid": "2.16.840.1.113883.18.175",
+    "hl7TableType": "User"
+  },
+  "0283": {
+    "codeSystemOid": "2.16.840.1.113883.18.176",
+    "hl7TableType": "User"
+  },
+  "0284": {
+    "codeSystemOid": "2.16.840.1.113883.18.177",
+    "hl7TableType": "User"
+  },
+  "0285": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0286": {
+    "codeSystemOid": "2.16.840.1.113883.18.178",
+    "hl7TableType": "User"
+  },
+  "0287": {
+    "codeSystemOid": "2.16.840.1.113883.18.3",
+    "hl7TableType": "HL7"
+  },
+  "0288": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0289": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0290": {
+    "codeSystemOid": "2.16.840.1.113883.18.180",
+    "hl7TableType": "HL7"
+  },
+  "0291": {
+    "codeSystemOid": "2.16.840.1.113883.18.181",
+    "hl7TableType": "HL7"
+  },
+  "0292": {
+    "codeSystemOid": "2.16.840.1.113883.12.292",
+    "hl7TableType": "Externally defined"
+  },
+  "0293": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0294": {
+    "codeSystemOid": "2.16.840.1.113883.18.183",
+    "hl7TableType": "User"
+  },
+  "0295": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0296": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0297": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0298": {
+    "codeSystemOid": "2.16.840.1.113883.18.184",
+    "hl7TableType": "HL7"
+  },
+  "0299": {
+    "codeSystemOid": "2.16.840.1.113883.18.185",
+    "hl7TableType": "HL7"
+  },
+  "0300": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0301": {
+    "codeSystemOid": "2.16.840.1.113883.18.186",
+    "hl7TableType": "HL7"
+  },
+  "0302": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0303": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0304": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0305": {
+    "codeSystemOid": "2.16.840.1.113883.18.187",
+    "hl7TableType": "User"
+  },
+  "0306": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0307": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0308": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0309": {
+    "codeSystemOid": "2.16.840.1.113883.18.188",
+    "hl7TableType": "User"
+  },
+  "0311": {
+    "codeSystemOid": "2.16.840.1.113883.18.189",
+    "hl7TableType": "User"
+  },
+  "0312": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0313": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0315": {
+    "codeSystemOid": "2.16.840.1.113883.18.190",
+    "hl7TableType": "User"
+  },
+  "0316": {
+    "codeSystemOid": "2.16.840.1.113883.18.192",
+    "hl7TableType": "User"
+  },
+  "0317": {
+    "codeSystemOid": "2.16.840.1.113883.18.193",
+    "hl7TableType": "User"
+  },
+  "0319": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0320": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0321": {
+    "codeSystemOid": "2.16.840.1.113883.18.194",
+    "hl7TableType": "HL7"
+  },
+  "0322": {
+    "codeSystemOid": "2.16.840.1.113883.18.195",
+    "hl7TableType": "HL7"
+  },
+  "0323": {
+    "codeSystemOid": "2.16.840.1.113883.18.196",
+    "hl7TableType": "HL7"
+  },
+  "0324": {
+    "codeSystemOid": "2.16.840.1.113883.18.197",
+    "hl7TableType": "User"
+  },
+  "0325": {
+    "codeSystemOid": "2.16.840.1.113883.18.198",
+    "hl7TableType": "User"
+  },
+  "0326": {
+    "codeSystemOid": "2.16.840.1.113883.18.199",
+    "hl7TableType": "User"
+  },
+  "0327": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0328": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0329": {
+    "codeSystemOid": "2.16.840.1.113883.18.200",
+    "hl7TableType": "HL7"
+  },
+  "0330": {
+    "codeSystemOid": "2.16.840.1.113883.18.201",
+    "hl7TableType": "HL7"
+  },
+  "0331": {
+    "codeSystemOid": "2.16.840.1.113883.18.202",
+    "hl7TableType": "HL7"
+  },
+  "0332": {
+    "codeSystemOid": "2.16.840.1.113883.18.203",
+    "hl7TableType": "HL7"
+  },
+  "0333": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0334": {
+    "codeSystemOid": "2.16.840.1.113883.18.204",
+    "hl7TableType": "User"
+  },
+  "0335": {
+    "codeSystemOid": "2.16.840.1.113883.18.205",
+    "hl7TableType": "User"
+  },
+  "0336": {
+    "codeSystemOid": "2.16.840.1.113883.18.206",
+    "hl7TableType": "User"
+  },
+  "0337": {
+    "codeSystemOid": "2.16.840.1.113883.18.207",
+    "hl7TableType": "HL7"
+  },
+  "0338": {
+    "codeSystemOid": "2.16.840.1.113883.18.108",
+    "hl7TableType": "User"
+  },
+  "0339": {
+    "codeSystemOid": "2.16.840.1.113883.18.209",
+    "hl7TableType": "User"
+  },
+  "0340": {
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  "0341": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0342": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0343": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0344": {
+    "codeSystemOid": "2.16.840.1.113883.18.210",
+    "hl7TableType": "User"
+  },
+  "0345": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0346": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0347": {
+    "codeSystemOid": "1.0.3166.2",
+    "hl7TableType": "User"
+  },
+  "0348": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0349": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0350": {
+    "codeSystemOid": "2.16.840.1.113883.6.301.7",
+    "hl7TableType": "Externally defined"
+  },
+  "0351": {
+    "codeSystemOid": "2.16.840.1.113883.6.301.8",
+    "hl7TableType": "Externally defined"
+  },
+  "0353": {
+    "codeSystemOid": "2.16.840.1.113883.18.213",
+    "hl7TableType": "HL7"
+  },
+  "0354": {
+    "codeSystemOid": "2.16.840.1.113883.18.214",
+    "hl7TableType": "HL7"
+  },
+  "0355": {
+    "codeSystemOid": "2.16.840.1.113883.18.215",
+    "hl7TableType": "HL7"
+  },
+  "0356": {
+    "codeSystemOid": "2.16.840.1.113883.18.216",
+    "hl7TableType": "HL7"
+  },
+  "0357": {
+    "codeSystemOid": "2.16.840.1.113883.18.217",
+    "hl7TableType": "HL7"
+  },
+  "0358": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0359": {
+    "codeSystemOid": "2.16.840.1.113883.18.218",
+    "hl7TableType": "User"
+  },
+  "0360": {
+    "codeSystemOid": "2.16.840.1.113883.18.220",
+    "hl7TableType": "User"
+  },
+  "0361": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0362": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0363": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0364": {
+    "codeSystemOid": "2.16.840.1.113883.18.222",
+    "hl7TableType": "User"
+  },
+  "0365": {
+    "codeSystemOid": "2.16.840.1.113883.18.223",
+    "hl7TableType": "HL7"
+  },
+  "0366": {
+    "codeSystemOid": "2.16.840.1.113883.18.224",
+    "hl7TableType": "HL7"
+  },
+  "0367": {
+    "codeSystemOid": "2.16.840.1.113883.18.225",
+    "hl7TableType": "HL7"
+  },
+  "0368": {
+    "codeSystemOid": "2.16.840.1.113883.18.226",
+    "hl7TableType": "User"
+  },
+  "0369": {
+    "codeSystemOid": "2.16.840.1.113883.18.227",
+    "hl7TableType": "User"
+  },
+  "0370": {
+    "codeSystemOid": "2.16.840.1.113883.18.228",
+    "hl7TableType": "HL7"
+  },
+  "0371": {
+    "codeSystemOid": "2.16.840.1.113883.18.229",
+    "hl7TableType": "HL7"
+  },
+  "0372": {
+    "codeSystemOid": "2.16.840.1.113883.18.230",
+    "hl7TableType": "User"
+  },
+  "0373": {
+    "codeSystemOid": "2.16.840.1.113883.18.231",
+    "hl7TableType": "User"
+  },
+  "0374": {
+    "codeSystemOid": "2.16.840.1.113883.18.232",
+    "hl7TableType": "User"
+  },
+  "0375": {
+    "codeSystemOid": "2.16.840.1.113883.18.233",
+    "hl7TableType": "User"
+  },
+  "0376": {
+    "codeSystemOid": "2.16.840.1.113883.18.234",
+    "hl7TableType": "User"
+  },
+  "0377": {
+    "codeSystemOid": "2.16.840.1.113883.18.235",
+    "hl7TableType": "User"
+  },
+  "0378": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0379": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0380": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0381": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0382": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0383": {
+    "codeSystemOid": "2.16.840.1.113883.18.236",
+    "hl7TableType": "HL7"
+  },
+  "0384": {
+    "codeSystemOid": "2.16.840.1.113883.18.237",
+    "hl7TableType": "HL7"
+  },
+  "0385": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0386": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0387": {
+    "codeSystemOid": "2.16.840.1.113883.18.238",
+    "hl7TableType": "User"
+  },
+  "0388": {
+    "codeSystemOid": "2.16.840.1.113883.18.239",
+    "hl7TableType": "HL7"
+  },
+  "0389": {
+    "codeSystemOid": "2.16.840.1.113883.18.240",
+    "hl7TableType": "HL7"
+  },
+  "0391": {
+    "codeSystemOid": "2.16.840.1.113883.18.242",
+    "hl7TableType": "HL7"
+  },
+  "0392": {
+    "codeSystemOid": "2.16.840.1.113883.18.243",
+    "hl7TableType": "User"
+  },
+  "0393": {
+    "codeSystemOid": "2.16.840.1.113883.18.244",
+    "hl7TableType": "User"
+  },
+  "0394": {
+    "codeSystemOid": "2.16.840.1.113883.18.245",
+    "hl7TableType": "HL7"
+  },
+  "0395": {
+    "codeSystemOid": "2.16.840.1.113883.18.246",
+    "hl7TableType": "HL7"
+  },
+  "0396": {
+    "codeSystemOid": "2.16.840.1.113883.18.247",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0397": {
+    "codeSystemOid": "2.16.840.1.113883.18.248",
+    "hl7TableType": "HL7"
+  },
+  "0398": {
+    "codeSystemOid": "2.16.840.1.113883.18.249",
+    "hl7TableType": "HL7"
+  },
+  "0399": {
+    "codeSystemOid": "1.0.3166.1",
+    "hl7TableType": "Externally defined"
+  },
+  "0401": {
+    "codeSystemOid": "2.16.840.1.113883.18.250",
+    "hl7TableType": "User"
+  },
+  "0402": {
+    "codeSystemOid": "2.16.840.1.113883.18.251",
+    "hl7TableType": "User"
+  },
+  "0403": {
+    "codeSystemOid": "2.16.840.1.113883.18.252",
+    "hl7TableType": "User"
+  },
+  "0404": {
+    "codeSystemOid": "2.16.840.1.113883.18.253",
+    "hl7TableType": "User"
+  },
+  "0405": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0406": {
+    "codeSystemOid": "2.16.840.1.113883.18.254",
+    "hl7TableType": "User"
+  },
+  "0409": {
+    "codeSystemOid": "2.16.840.1.113883.18.255",
+    "hl7TableType": "User"
+  },
+  "0411": {
+    "codeSystemOid": "2.16.840.1.113883.18.452",
+    "hl7TableType": "User"
+  },
+  "0412": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0413": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0414": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0415": {
+    "codeSystemOid": "2.16.840.1.113883.18.257",
+    "hl7TableType": "HL7"
+  },
+  "0416": {
+    "codeSystemOid": "2.16.840.1.113883.18.258",
+    "hl7TableType": "User"
+  },
+  "0417": {
+    "codeSystemOid": "2.16.840.1.113883.18.259",
+    "hl7TableType": "User"
+  },
+  "0418": {
+    "codeSystemOid": "2.16.840.1.113883.18.260",
+    "hl7TableType": "User"
+  },
+  "0421": {
+    "codeSystemOid": "2.16.840.1.113883.18.262",
+    "hl7TableType": "User"
+  },
+  "0422": {
+    "codeSystemOid": "2.16.840.1.113883.18.263",
+    "hl7TableType": "User"
+  },
+  "0423": {
+    "codeSystemOid": "2.16.840.1.113883.18.264",
+    "hl7TableType": "User"
+  },
+  "0424": {
+    "codeSystemOid": "2.16.840.1.113883.18.265",
+    "hl7TableType": "User"
+  },
+  "0425": {
+    "codeSystemOid": "2.16.840.1.113883.18.266",
+    "hl7TableType": "User"
+  },
+  "0426": {
+    "codeSystemOid": "2.16.840.1.113883.18.267",
+    "hl7TableType": "User"
+  },
+  "0427": {
+    "codeSystemOid": "2.16.840.1.113883.18.268",
+    "hl7TableType": "User"
+  },
+  "0428": {
+    "codeSystemOid": "2.16.840.1.113883.18.269",
+    "hl7TableType": "User"
+  },
+  "0429": {
+    "codeSystemOid": "2.16.840.1.113883.18.270",
+    "hl7TableType": "User"
+  },
+  "0430": {
+    "codeSystemOid": "2.16.840.1.113883.18.271",
+    "hl7TableType": "User"
+  },
+  "0431": {
+    "codeSystemOid": "2.16.840.1.113883.18.272",
+    "hl7TableType": "User"
+  },
+  "0432": {
+    "codeSystemOid": "2.16.840.1.113883.18.273",
+    "hl7TableType": "User"
+  },
+  "0433": {
+    "codeSystemOid": "2.16.840.1.113883.18.274",
+    "hl7TableType": "User"
+  },
+  "0434": {
+    "codeSystemOid": "2.16.840.1.113883.18.275",
+    "hl7TableType": "User"
+  },
+  "0435": {
+    "codeSystemOid": "2.16.840.1.113883.18.276",
+    "hl7TableType": "User"
+  },
+  "0436": {
+    "codeSystemOid": "2.16.840.1.113883.18.277",
+    "hl7TableType": "User"
+  },
+  "0437": {
+    "codeSystemOid": "2.16.840.1.113883.18.278",
+    "hl7TableType": "User"
+  },
+  "0438": {
+    "codeSystemOid": "2.16.840.1.113883.18.279",
+    "hl7TableType": "User"
+  },
+  "0440": {
+    "codeSystemOid": "2.16.840.1.113883.18.280",
+    "hl7TableType": "HL7"
+  },
+  "0441": {
+    "codeSystemOid": "2.16.840.1.113883.18.281",
+    "hl7TableType": "User"
+  },
+  "0442": {
+    "codeSystemOid": "2.16.840.1.113883.18.282",
+    "hl7TableType": "User"
+  },
+  "0443": {
+    "codeSystemOid": "2.16.840.1.113883.18.283",
+    "hl7TableType": "User"
+  },
+  "0444": {
+    "codeSystemOid": "2.16.840.1.113883.18.284",
+    "hl7TableType": "HL7"
+  },
+  "0445": {
+    "codeSystemOid": "2.16.840.1.113883.18.285",
+    "hl7TableType": "User"
+  },
+  "0446": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0447": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0448": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0449": {
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  "0450": {
+    "codeSystemOid": "2.16.840.1.113883.18.286",
+    "hl7TableType": "HL7"
+  },
+  "0451": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0452": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0453": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0454": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0455": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0456": {
+    "codeSystemOid": "2.16.840.1.113883.6.301.3",
+    "hl7TableType": "User"
+  },
+  "0457": {
+    "codeSystemOid": "2.16.840.1.113883.18.292",
+    "hl7TableType": "User"
+  },
+  "0458": {
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  "0459": {
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  "0460": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0461": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0462": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0463": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0464": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0465": {
+    "codeSystemOid": "2.16.840.1.113883.18.295",
+    "hl7TableType": "HL7"
+  },
+  "0466": {
+    "codeSystemOid": "2.16.840.1.113883.18.296",
+    "hl7TableType": "User"
+  },
+  "0467": {
+    "codeSystemOid": "2.16.840.1.113883.6.301.10",
+    "hl7TableType": "User"
+  },
+  "0468": {
+    "codeSystemOid": "2.16.840.1.113883.18.297",
+    "hl7TableType": "User"
+  },
+  "0469": {
+    "codeSystemOid": "2.16.840.1.113883.18.298",
+    "hl7TableType": "User"
+  },
+  "0470": {
+    "codeSystemOid": "2.16.840.1.113883.18.299",
+    "hl7TableType": "User"
+  },
+  "0471": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0472": {
+    "codeSystemOid": "2.16.840.1.113883.18.300",
+    "hl7TableType": "HL7"
+  },
+  "0473": {
+    "codeSystemOid": "2.16.840.1.113883.18.301",
+    "hl7TableType": "User"
+  },
+  "0474": {
+    "codeSystemOid": "2.16.840.1.113883.18.302",
+    "hl7TableType": "User"
+  },
+  "0475": {
+    "codeSystemOid": "2.16.840.1.113883.18.303",
+    "hl7TableType": "User"
+  },
+  "0476": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0477": {
+    "codeSystemOid": "2.16.840.1.113883.18.304",
+    "hl7TableType": "User"
+  },
+  "0478": {
+    "codeSystemOid": "2.16.840.1.113883.18.305",
+    "hl7TableType": "HL7"
+  },
+  "0479": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0480": {
+    "codeSystemOid": "2.16.840.1.113883.18.306",
+    "hl7TableType": "HL7"
+  },
+  "0482": {
+    "codeSystemOid": "2.16.840.1.113883.18.307",
+    "hl7TableType": "HL7"
+  },
+  "0483": {
+    "codeSystemOid": "2.16.840.1.113883.18.308",
+    "hl7TableType": "HL7"
+  },
+  "0484": {
+    "codeSystemOid": "2.16.840.1.113883.18.309",
+    "hl7TableType": "User"
+  },
+  "0485": {
+    "codeSystemOid": "2.16.840.1.113883.18.310",
+    "hl7TableType": "User"
+  },
+  "0487": {
+    "codeSystemOid": "2.16.840.1.113883.18.311",
+    "hl7TableType": "HL7"
+  },
+  "0488": {
+    "codeSystemOid": "2.16.840.1.113883.18.312",
+    "hl7TableType": "HL7"
+  },
+  "0489": {
+    "codeSystemOid": "2.16.840.1.113883.18.313",
+    "hl7TableType": "User"
+  },
+  "0490": {
+    "codeSystemOid": "2.16.840.1.113883.18.314",
+    "hl7TableType": "HL7"
+  },
+  "0491": {
+    "codeSystemOid": "2.16.840.1.113883.18.315",
+    "hl7TableType": "User"
+  },
+  "0492": {
+    "codeSystemOid": "2.16.840.1.113883.18.316",
+    "hl7TableType": "User"
+  },
+  "0493": {
+    "codeSystemOid": "2.16.840.1.113883.18.317",
+    "hl7TableType": "User"
+  },
+  "0494": {
+    "codeSystemOid": "2.16.840.1.113883.18.318",
+    "hl7TableType": "HL7"
+  },
+  "0495": {
+    "codeSystemOid": "2.16.840.1.113883.18.319",
+    "hl7TableType": "HL7"
+  },
+  "0496": {
+    "codeSystemOid": "2.16.840.1.113883.18.320",
+    "hl7TableType": "User"
+  },
+  "0497": {
+    "codeSystemOid": "2.16.840.1.113883.18.321",
+    "hl7TableType": "HL7"
+  },
+  "0498": {
+    "codeSystemOid": "2.16.840.1.113883.18.322",
+    "hl7TableType": "HL7"
+  },
+  "0499": {
+    "codeSystemOid": "2.16.840.1.113883.18.323",
+    "hl7TableType": "User"
+  },
+  "0500": {
+    "codeSystemOid": "2.16.840.1.113883.18.324",
+    "hl7TableType": "HL7"
+  },
+  "0501": {
+    "codeSystemOid": "2.16.840.1.113883.18.325",
+    "hl7TableType": "User"
+  },
+  "0502": {
+    "codeSystemOid": "2.16.840.1.113883.18.326",
+    "hl7TableType": "User"
+  },
+  "0503": {
+    "codeSystemOid": "2.16.840.1.113883.18.327",
+    "hl7TableType": "HL7"
+  },
+  "0504": {
+    "codeSystemOid": "2.16.840.1.113883.18.328",
+    "hl7TableType": "HL7"
+  },
+  "0505": {
+    "codeSystemOid": "2.16.840.1.113883.18.329",
+    "hl7TableType": "HL7"
+  },
+  "0506": {
+    "codeSystemOid": "2.16.840.1.113883.18.330",
+    "hl7TableType": "HL7"
+  },
+  "0507": {
+    "codeSystemOid": "2.16.840.1.113883.18.331",
+    "hl7TableType": "User"
+  },
+  "0508": {
+    "codeSystemOid": "2.16.840.1.113883.18.332",
+    "hl7TableType": "User"
+  },
+  "0509": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0510": {
+    "codeSystemOid": "2.16.840.1.113883.18.333",
+    "hl7TableType": "HL7"
+  },
+  "0511": {
+    "codeSystemOid": "2.16.840.1.113883.18.334",
+    "hl7TableType": "HL7"
+  },
+  "0512": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0513": {
+    "codeSystemOid": "2.16.840.1.113883.18.335",
+    "hl7TableType": "HL7"
+  },
+  "0514": {
+    "codeSystemOid": "2.16.840.1.113883.18.336",
+    "hl7TableType": "User"
+  },
+  "0515": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0516": {
+    "codeSystemOid": "2.16.840.1.113883.18.337",
+    "hl7TableType": "HL7"
+  },
+  "0517": {
+    "codeSystemOid": "2.16.840.1.113883.18.338",
+    "hl7TableType": "User"
+  },
+  "0518": {
+    "codeSystemOid": "2.16.840.1.113883.18.339",
+    "hl7TableType": "User"
+  },
+  "0519": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0520": {
+    "codeSystemOid": "2.16.840.1.113883.18.340",
+    "hl7TableType": "HL7"
+  },
+  "0521": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0523": {
+    "codeSystemOid": "2.16.840.1.113883.18.341",
+    "hl7TableType": "HL7"
+  },
+  "0524": {
+    "codeSystemOid": "2.16.840.1.113883.18.342",
+    "hl7TableType": "HL7"
+  },
+  "0525": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0526": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0527": {
+    "codeSystemOid": "2.16.840.1.113883.18.343",
+    "hl7TableType": "HL7"
+  },
+  "0528": {
+    "codeSystemOid": "2.16.840.1.113883.18.344",
+    "hl7TableType": "HL7"
+  },
+  "0529": {
+    "codeSystemOid": "2.16.840.1.113883.18.345",
+    "hl7TableType": "HL7"
+  },
+  "0530": {
+    "codeSystemOid": "2.16.840.1.113883.18.346",
+    "hl7TableType": "User"
+  },
+  "0531": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0532": {
+    "codeSystemOid": "2.16.840.1.113883.18.347",
+    "hl7TableType": "HL7"
+  },
+  "0533": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0534": {
+    "codeSystemOid": "2.16.840.1.113883.18.348",
+    "hl7TableType": "User"
+  },
+  "0535": {
+    "codeSystemOid": "2.16.840.1.113883.18.349",
+    "hl7TableType": "User"
+  },
+  "0536": {
+    "codeSystemOid": "2.16.840.1.113883.18.350",
+    "hl7TableType": "User"
+  },
+  "0537": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0538": {
+    "codeSystemOid": "2.16.840.1.113883.18.351",
+    "hl7TableType": "User"
+  },
+  "0539": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0540": {
+    "codeSystemOid": "2.16.840.1.113883.18.352",
+    "hl7TableType": "User"
+  },
+  "0541": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0542": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0543": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0544": {
+    "codeSystemOid": "2.16.840.1.113883.18.353",
+    "hl7TableType": "User"
+  },
+  "0545": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0547": {
+    "codeSystemOid": "2.16.840.1.113883.18.354",
+    "hl7TableType": "User"
+  },
+  "0548": {
+    "codeSystemOid": "2.16.840.1.113883.18.355",
+    "hl7TableType": "User"
+  },
+  "0549": {
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  "0550": {
+    "codeSystemOid": "2.16.840.1.113883.18.356",
+    "hl7TableType": "HL7"
+  },
+  "0552": {
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  "0553": {
+    "codeSystemOid": "2.16.840.1.113883.18.357",
+    "hl7TableType": "User"
+  },
+  "0554": {
+    "codeSystemOid": "2.16.840.1.113883.18.358",
+    "hl7TableType": "User"
+  },
+  "0555": {
+    "codeSystemOid": "2.16.840.1.113883.18.359",
+    "hl7TableType": "User"
+  },
+  "0556": {
+    "codeSystemOid": "2.16.840.1.113883.18.360",
+    "hl7TableType": "User"
+  },
+  "0557": {
+    "codeSystemOid": "2.16.840.1.113883.18.361",
+    "hl7TableType": "User"
+  },
+  "0558": {
+    "codeSystemOid": "2.16.840.1.113883.18.362",
+    "hl7TableType": "User"
+  },
+  "0559": {
+    "codeSystemOid": "2.16.840.1.113883.18.363",
+    "hl7TableType": "User"
+  },
+  "0560": {
+    "codeSystemOid": "2.16.840.1.113883.18.455",
+    "hl7TableType": "User"
+  },
+  "0561": {
+    "codeSystemOid": "2.16.840.1.113883.18.364",
+    "hl7TableType": "User"
+  },
+  "0562": {
+    "codeSystemOid": "2.16.840.1.113883.18.365",
+    "hl7TableType": "User"
+  },
+  "0564": {
+    "codeSystemOid": "2.16.840.1.113883.18.366",
+    "hl7TableType": "User"
+  },
+  "0565": {
+    "codeSystemOid": "2.16.840.1.113883.18.367",
+    "hl7TableType": "User"
+  },
+  "0566": {
+    "codeSystemOid": "2.16.840.1.113883.18.368",
+    "hl7TableType": "HL7"
+  },
+  "0567": {
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  "0568": {
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  "0569": {
+    "codeSystemOid": "2.16.840.1.113883.18.369",
+    "hl7TableType": "User"
+  },
+  "0570": {
+    "codeSystemOid": "2.16.840.1.113883.18.370",
+    "hl7TableType": "User"
+  },
+  "0571": {
+    "codeSystemOid": "2.16.840.1.113883.18.371",
+    "hl7TableType": "User"
+  },
+  "0572": {
+    "codeSystemOid": "2.16.840.1.113883.18.372",
+    "hl7TableType": "User"
+  },
+  "0615": {
+    "codeSystemOid": "2.16.840.1.113883.18.373",
+    "hl7TableType": "HL7"
+  },
+  "0616": {
+    "codeSystemOid": "2.16.840.1.113883.18.374",
+    "hl7TableType": "User"
+  },
+  "0617": {
+    "codeSystemOid": "2.16.840.1.113883.18.375",
+    "hl7TableType": "HL7"
+  },
+  "0618": {
+    "codeSystemOid": "2.16.840.1.113883.18.376",
+    "hl7TableType": "User"
+  },
+  "0625": {
+    "codeSystemOid": "2.16.840.1.113883.18.377",
+    "hl7TableType": "User"
+  },
+  "0634": {
+    "codeSystemOid": "2.16.840.1.113883.18.378",
+    "hl7TableType": "User"
+  },
+  "0642": {
+    "codeSystemOid": "2.16.840.1.113883.18.379",
+    "hl7TableType": "User"
+  },
+  "0651": {
+    "codeSystemOid": "2.16.840.1.113883.18.380",
+    "hl7TableType": "User"
+  },
+  "0653": {
+    "codeSystemOid": "2.16.840.1.113883.18.381",
+    "hl7TableType": "User"
+  },
+  "0657": {
+    "codeSystemOid": "2.16.840.1.113883.18.382",
+    "hl7TableType": "User"
+  },
+  "0659": {
+    "codeSystemOid": "2.16.840.1.113883.18.383",
+    "hl7TableType": "User"
+  },
+  "0667": {
+    "codeSystemOid": "2.16.840.1.113883.18.384",
+    "hl7TableType": "User"
+  },
+  "0669": {
+    "codeSystemOid": "2.16.840.1.113883.18.385",
+    "hl7TableType": "User"
+  },
+  "0682": {
+    "codeSystemOid": "2.16.840.1.113883.18.386",
+    "hl7TableType": "User"
+  },
+  "0702": {
+    "codeSystemOid": "2.16.840.1.113883.18.387",
+    "hl7TableType": "User"
+  },
+  "0717": {
+    "codeSystemOid": "2.16.840.1.113883.18.388",
+    "hl7TableType": "User"
+  },
+  "0719": {
+    "codeSystemOid": "2.16.840.1.113883.5.4",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0725": {
+    "codeSystemOid": "2.16.840.1.113883.5.1001",
+    "hl7TableType": "HL7"
+  },
+  "0728": {
+    "codeSystemOid": "2.16.840.1.113883.18.391",
+    "hl7TableType": "HL7"
+  },
+  "0731": {
+    "codeSystemOid": "2.16.840.1.113883.18.392",
+    "hl7TableType": "HL7"
+  },
+  "0734": {
+    "codeSystemOid": "2.16.840.1.113883.18.393",
+    "hl7TableType": "User"
+  },
+  "0739": {
+    "codeSystemOid": "2.16.840.1.113883.18.394",
+    "hl7TableType": "User"
+  },
+  "0742": {
+    "codeSystemOid": "2.16.840.1.113883.18.395",
+    "hl7TableType": "User"
+  },
+  "0749": {
+    "codeSystemOid": "2.16.840.1.113883.18.396",
+    "hl7TableType": "User"
+  },
+  "0755": {
+    "codeSystemOid": "2.16.840.1.113883.18.397",
+    "hl7TableType": "User"
+  },
+  "0757": {
+    "codeSystemOid": "2.16.840.1.113883.18.398",
+    "hl7TableType": "User"
+  },
+  "0759": {
+    "codeSystemOid": "2.16.840.1.113883.18.399",
+    "hl7TableType": "User"
+  },
+  "0761": {
+    "codeSystemOid": "2.16.840.1.113883.18.400",
+    "hl7TableType": "User"
+  },
+  "0763": {
+    "codeSystemOid": "2.16.840.1.113883.18.401",
+    "hl7TableType": "User"
+  },
+  "0771": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0776": {
+    "codeSystemOid": "2.16.840.1.113883.18.402",
+    "hl7TableType": "User"
+  },
+  "0778": {
+    "codeSystemOid": "2.16.840.1.113883.18.403",
+    "hl7TableType": "User"
+  },
+  "0790": {
+    "codeSystemOid": "2.16.840.1.113883.18.404",
+    "hl7TableType": "User"
+  },
+  "0793": {
+    "codeSystemOid": "2.16.840.1.113883.18.405",
+    "hl7TableType": "User"
+  },
+  "0806": {
+    "codeSystemOid": "2.16.840.1.113883.18.406",
+    "hl7TableType": "User"
+  },
+  "0809": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0811": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0818": {
+    "codeSystemOid": "2.16.840.1.113883.18.407",
+    "hl7TableType": "User"
+  },
+  "0834": {
+    "codeSystemOid": "2.16.840.1.113883.18.408",
+    "hl7TableType": "Imported"
+  },
+  "0836": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0838": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0865": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0868": {
+    "codeSystemOid": "2.16.840.1.113883.18.409",
+    "hl7TableType": "User"
+  },
+  "0871": {
+    "codeSystemOid": "2.16.840.1.113883.18.410",
+    "hl7TableType": "User"
+  },
+  "0879": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0880": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0881": {
+    "codeSystemOid": "2.16.840.1.113883.18.411",
+    "hl7TableType": "User"
+  },
+  "0882": {
+    "codeSystemOid": "2.16.840.1.113883.18.412",
+    "hl7TableType": "User"
+  },
+  "0894": {
+    "codeSystemOid": "2.16.840.1.113883.18.413",
+    "hl7TableType": "User"
+  },
+  "0895": {
+    "codeSystemOid": "2.16.840.1.113883.6.301.11",
+    "hl7TableType": "User"
+  },
+  "0904": {
+    "codeSystemOid": "2.16.840.1.113883.18.415",
+    "hl7TableType": "HL7"
+  },
+  "0905": {
+    "codeSystemOid": "2.16.840.1.113883.18.416",
+    "hl7TableType": "User"
+  },
+  "0906": {
+    "codeSystemOid": "2.16.840.1.113883.18.417",
+    "hl7TableType": "User"
+  },
+  "0907": {
+    "codeSystemOid": "2.16.840.1.113883.18.418",
+    "hl7TableType": "User"
+  },
+  "0908": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0909": {
+    "codeSystemOid": "2.16.840.1.113883.18.419",
+    "hl7TableType": "HL7"
+  },
+  "0910": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0912": {
+    "codeSystemOid": "2.16.840.1.113883.18.420",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0913": {
+    "codeSystemOid": "1.0.4217",
+    "hl7TableType": "Externally defined"
+  },
+  "0914": {
+    "codeSystemOid": "2.16.840.1.113883.18.421",
+    "hl7TableType": "User"
+  },
+  "0915": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0916": {
+    "codeSystemOid": "2.16.840.1.113883.18.422",
+    "hl7TableType": "User"
+  },
+  "0917": {
+    "codeSystemOid": "2.16.840.1.113883.18.423",
+    "hl7TableType": "HL7"
+  },
+  "0918": {
+    "codeSystemOid": "2.16.840.1.113883.18.424",
+    "hl7TableType": "HL7"
+  },
+  "0919": {
+    "codeSystemOid": "2.16.840.1.113883.18.425",
+    "hl7TableType": "HL7"
+  },
+  "0920": {
+    "codeSystemOid": "2.16.840.1.113883.18.426",
+    "hl7TableType": "HL7"
+  },
+  "0921": {
+    "codeSystemOid": "2.16.840.1.113883.18.427",
+    "hl7TableType": "User"
+  },
+  "0922": {
+    "codeSystemOid": "2.16.840.1.113883.18.428",
+    "hl7TableType": "User"
+  },
+  "0923": {
+    "codeSystemOid": "2.16.840.1.113883.18.429",
+    "hl7TableType": "User"
+  },
+  "0924": {
+    "codeSystemOid": "2.16.840.1.113883.18.430",
+    "hl7TableType": "User"
+  },
+  "0925": {
+    "codeSystemOid": "2.16.840.1.113883.18.431",
+    "hl7TableType": "HL7"
+  },
+  "0926": {
+    "codeSystemOid": "2.16.840.1.113883.18.432",
+    "hl7TableType": "HL7"
+  },
+  "0927": {
+    "codeSystemOid": "2.16.840.1.113883.18.433",
+    "hl7TableType": "HL7"
+  },
+  "0929": {
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  "0930": {
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  "0931": {
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  "0932": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0933": {
+    "codeSystemOid": "2.16.840.1.113883.18.434",
+    "hl7TableType": "HL7"
+  },
+  "0934": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0935": {
+    "codeSystemOid": "2.16.840.1.113883.18.435",
+    "hl7TableType": "User"
+  },
+  "0936": {
+    "codeSystemOid": "2.16.840.1.113883.18.439",
+    "hl7TableType": "HL7"
+  },
+  "0937": {
+    "codeSystemOid": "2.16.840.1.113883.18.440",
+    "hl7TableType": "HL7"
+  },
+  "0938": {
+    "codeSystemOid": "2.16.840.1.113883.18.441",
+    "hl7TableType": "HL7"
+  },
+  "0939": {
+    "codeSystemOid": "2.16.840.1.113883.18.442",
+    "hl7TableType": "HL7"
+  },
+  "0940": {
+    "codeSystemOid": "2.16.840.1.113883.18.443",
+    "hl7TableType": "HL7"
+  },
+  "0941": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0942": {
+    "codeSystemOid": "2.16.840.1.113883.18.444",
+    "hl7TableType": "HL7"
+  },
+  "0943": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0944": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0945": {
+    "codeSystemOid": "2.16.840.1.113883.18.445",
+    "hl7TableType": "User"
+  },
+  "0946": {
+    "codeSystemOid": "2.16.840.1.113883.18.446",
+    "hl7TableType": "User"
+  },
+  "0947": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0948": {
+    "codeSystemOid": "2.16.840.1.113883.18.448",
+    "hl7TableType": "User"
+  },
+  "0949": {
+    "codeSystemOid": "2.16.840.1.113883.18.449",
+    "hl7TableType": "User"
+  },
+  "0950": {
+    "codeSystemOid": "2.16.840.1.113883.18.450",
+    "hl7TableType": "User"
+  },
+  "0951": {
+    "codeSystemOid": "2.16.840.1.113883.18.451",
+    "hl7TableType": "User"
+  },
+  "0952": {
+    "codeSystemOid": "2.16.840.1.113883.5.25",
+    "hl7TableType": "Externally defined"
+  },
+  "0959": {
+    "codeSystemOid": "2.16.840.1.113883.5.1139",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0960": {
+    "codeSystemOid": "2.16.840.1.113883.4.642.1.1048",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0961": {
+    "codeSystemOid": null,
+    "hl7TableType": "HL7-EXT"
+  },
+  "0962": {
+    "codeSystemOid": "2.16.840.1.113883.4.642.1.200",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0963": {
+    "codeSystemOid": "2.16.840.1.113883.3.26.1.1",
+    "hl7TableType": "HL7-EXT"
+  },
+  "0964": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0965": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0966": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0967": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0968": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0969": {
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  "0970": {
+    "codeSystemOid": "2.16.840.1.113883.18.453",
+    "hl7TableType": "User"
+  },
+  "0971": {
+    "codeSystemOid": "2.16.840.1.113883.18.454",
+    "hl7TableType": "User"
+  },
+  "4000": {
+    "codeSystemOid": "2.16.840.1.113883.18.436",
+    "hl7TableType": "HL7"
+  }
+}

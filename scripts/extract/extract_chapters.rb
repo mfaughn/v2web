@@ -4,9 +4,9 @@ require_relative 'debug_tables'
 module V2Web
   class DocXtractor
 
-    def setup_for_chapter(source)
+    def setup_for_chapter(source, short_id = nil)
       puts Rainbow("#### Parse Chapter #{source} ###").orange
-      setup(source)
+      setup(source, short_id)
     end
     
     def extract_chapter(source)
@@ -14,6 +14,18 @@ module V2Web
       @datatype_titles = Marshal.load(File.binread(File.join(__dir__, '../parse/datatype_titles.bin')))
       @segment_titles  = Marshal.load(File.binread(File.join(__dir__, '../parse/segment_titles.bin')))
       # @node_types = []
+      @styles = []
+      @html_fragments = []
+      @p_buffer       = []
+      # @last_node = nil
+      doc.at('body').children.each { |c| extract_chapter_node(c) }
+      fill_narrative # add text to last section
+      # @composition.toc
+      @composition
+    end
+    
+    def extract_generic(source, short_id)
+      doc = setup_for_chapter(source, short_id)
       @styles = []
       @html_fragments = []
       @p_buffer       = []
@@ -189,7 +201,7 @@ module V2Web
 
     def create_segment_section(title, depth)
       name = title.gsub(/^[A-Z][A-Z][A-Z0-9]?\s*[–|-]\s*/, '').strip
-      create_reference_section(title, depth, 'segment-defintion', HL7::SegmentDefinition.new(:name => name).url_name)
+      create_reference_section(title, depth, 'segment-definition', HL7::SegmentDefinition.new(:name => name).url_name)
     end
 
     def create_reference_section(title, depth, code, url)

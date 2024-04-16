@@ -29,7 +29,7 @@ module HL7
     end
         
     def to_resource
-      xml = HL7.get_instance_template(:message_structure, 'base')
+      xml = HL7::V2.get_instance_template(:message_structure, 'base')
       xml.sub!('URL', local_url_name)
       [:code].each do |methd|
         xml.sub!(methd.to_s.upcase, send(methd).to_s)
@@ -48,7 +48,7 @@ module HL7
     end
     
     def simple_render
-      puts "HL7::MessageStructure[#{id}] #{code}"
+      puts "V2::MessageStructure[#{id}] #{code}"
       puts Terminal::Table.new(:rows => _simple_render_segments)
     end
     

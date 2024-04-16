@@ -278,6 +278,7 @@ module V2Web
           add_parent = true
         elsif seg =~ /\]|\}|>/
           segment_parents.pop
+          # puts "Closing parent #{seg}"
           next
         elsif segment_parents.last.code == "QBP_Q21" && @chapter.to_s == '15'
           next # Silly stuff in 15.3.7
@@ -286,12 +287,19 @@ module V2Web
         end      
         ChangeTracker.start
         segment_parents.last.add_segment(segment)
+        puts "Adding #{segment.class}[#{segment.object_id}] #{seg.inspect} to #{segment_parents.last.class}[#{segment_parents.last.object_id}]"
         # if segment_parents.last.is_a?(HL7::SegmentChoice)
-        #   puts "Added #{segment.type.code} to SegmentChoice[#{segment_parents.last.id}]"
+          # puts "Added #{segment.type.code} to SegmentChoice[#{segment_parents.last.id}]"
         # end
         ChangeTracker.commit
-        segment_parents << segment if add_parent
+        if add_parent
+          # puts "Adding parent  #{seg}"
+          segment_parents << segment
+        else
+          # puts "               #{seg}"
+        end
       end
+      structure.simple_render
     end
     
     def create_special_segment_definitions

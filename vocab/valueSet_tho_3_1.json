@@ -1,0 +1,3770 @@
+[
+  {
+    "bindingIdentifier": "HL70001",
+    "name": "Administrative Sex",
+    "codeSystemOid": "2.16.840.1.113883.18.2",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70002",
+    "name": "Marital Status",
+    "codeSystemOid": "2.16.840.1.113883.18.179",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70003",
+    "name": "Event Type",
+    "codeSystemOid": "2.16.840.1.113883.18.4",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70004",
+    "name": "Patient Class",
+    "codeSystemOid": "2.16.840.1.113883.18.5",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70005",
+    "name": "Race",
+    "codeSystemOid": "2.16.840.1.113883.6.238",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70006",
+    "name": "Religion",
+    "codeSystemOid": "2.16.840.1.113883.18.8",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70007",
+    "name": "Admission Type",
+    "codeSystemOid": "2.16.840.1.113883.18.9",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70008",
+    "name": "Acknowledgment code",
+    "codeSystemOid": "2.16.840.1.113883.18.10",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70009",
+    "name": "Ambulatory Status",
+    "codeSystemOid": "2.16.840.1.113883.18.11",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70010",
+    "name": "Physician ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70011",
+    "name": "CHARGING SYSTEM",
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  {
+    "bindingIdentifier": "HL70012",
+    "name": "STOCK LOCATION",
+    "codeSystemOid": "2.16.840.1.113883.18.12",
+    "hl7TableType": "no longer used"
+  },
+  {
+    "bindingIdentifier": "HL70016",
+    "name": "ISOLATION",
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  {
+    "bindingIdentifier": "HL70017",
+    "name": "Transaction Type",
+    "codeSystemOid": "2.16.840.1.113883.18.13",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70018",
+    "name": "Patient Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70019",
+    "name": "Anesthesia Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70020",
+    "name": "UNUSED TABLE",
+    "codeSystemOid": null,
+    "hl7TableType": "no longer used"
+  },
+  {
+    "bindingIdentifier": "HL70021",
+    "name": "Bad Debt Agency Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70022",
+    "name": "Billing Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70023",
+    "name": "Admit Source",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70024",
+    "name": "Fee Schedule",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70027",
+    "name": "Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.15",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70032",
+    "name": "Charge/Price Indicator",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70033",
+    "name": "ROUTE",
+    "codeSystemOid": "2.16.840.1.113883.18.16",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70034",
+    "name": "SITE ADMINISTERED",
+    "codeSystemOid": "2.16.840.1.113883.18.17",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70038",
+    "name": "Order status",
+    "codeSystemOid": "2.16.840.1.113883.18.18",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70042",
+    "name": "Company Plan Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70043",
+    "name": "Condition Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70044",
+    "name": "Contract Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70045",
+    "name": "Courtesy Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70046",
+    "name": "Credit Rating",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70047",
+    "name": "DANGER CODE",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70048",
+    "name": "What subject filter",
+    "codeSystemOid": "2.16.840.1.113883.18.20",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70049",
+    "name": "Department Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70050",
+    "name": "Accident Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70051",
+    "name": "Diagnosis Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70052",
+    "name": "Diagnosis Type",
+    "codeSystemOid": "2.16.840.1.113883.18.21",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70053",
+    "name": "Diagnosis Coding Method",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70055",
+    "name": "Diagnosis Related Group",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70056",
+    "name": "DRG Grouper Review Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70057",
+    "name": "DRUG CODE",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70059",
+    "name": "Consent Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70060",
+    "name": "ERROR CODE",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70061",
+    "name": "Check Digit Scheme",
+    "codeSystemOid": "2.16.840.1.113883.18.22",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70062",
+    "name": "Event Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.23",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70063",
+    "name": "Relationship",
+    "codeSystemOid": "2.16.840.1.113883.18.24",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70064",
+    "name": "Financial Class",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70065",
+    "name": "Specimen Action Code",
+    "codeSystemOid": "2.16.840.1.113883.18.25",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70066",
+    "name": "Employment Status",
+    "codeSystemOid": "2.16.840.1.113883.18.26",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70068",
+    "name": "Guarantor Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70069",
+    "name": "Hospital Service",
+    "codeSystemOid": "2.16.840.1.113883.18.27",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70070",
+    "name": "Specimen Source Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.28",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70072",
+    "name": "Insurance Plan ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70073",
+    "name": "Interest Rate Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70074",
+    "name": "Diagnostic Service Section ID",
+    "codeSystemOid": "2.16.840.1.113883.18.29",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70075",
+    "name": "REPORT TYPES",
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70076",
+    "name": "Message Type",
+    "codeSystemOid": "2.16.840.1.113883.18.30",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70078",
+    "name": "Interpretation Codes",
+    "codeSystemOid": "2.16.840.1.113883.5.83",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70079",
+    "name": "Location",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70080",
+    "name": "Nature of Abnormal Testing",
+    "codeSystemOid": "2.16.840.1.113883.18.32",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70081",
+    "name": "NOTICE OF ADMISSION",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70083",
+    "name": "Outlier Type",
+    "codeSystemOid": "2.16.840.1.113883.18.33",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70084",
+    "name": "Performed by",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70085",
+    "name": "Observation Result Status Codes Interpretation",
+    "codeSystemOid": "2.16.840.1.113883.18.34",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70086",
+    "name": "Plan ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70087",
+    "name": "Pre-Admit Test Indicator",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70088",
+    "name": "Procedure Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70089",
+    "name": "Procedure Coding Method",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70090",
+    "name": "PROCEDURE TYPE",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70091",
+    "name": "Query Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.35",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70092",
+    "name": "Re-Admission Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.36",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70093",
+    "name": "Release Information",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70094",
+    "name": "REPORT OF ELIGIBILITY",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70096",
+    "name": "FINANCIAL TRANSACTION CODE",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70098",
+    "name": "Type of Agreement",
+    "codeSystemOid": "2.16.840.1.113883.18.37",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70099",
+    "name": "VIP Indicator",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70100",
+    "name": "Invocation event",
+    "codeSystemOid": "2.16.840.1.113883.18.38",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70101",
+    "name": "DISPLAY LEVEL",
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70102",
+    "name": "Delayed acknowledgment type",
+    "codeSystemOid": "2.16.840.1.113883.18.39",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70103",
+    "name": "Processing ID",
+    "codeSystemOid": "2.16.840.1.113883.18.40",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70104",
+    "name": "Version ID",
+    "codeSystemOid": "2.16.840.1.113883.18.41",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70105",
+    "name": "Source of Comment",
+    "codeSystemOid": "2.16.840.1.113883.18.42",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70106",
+    "name": "Query/response format code",
+    "codeSystemOid": "2.16.840.1.113883.18.43",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70107",
+    "name": "Deferred response type",
+    "codeSystemOid": "2.16.840.1.113883.18.44",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70108",
+    "name": "Query results level",
+    "codeSystemOid": "2.16.840.1.113883.18.45",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70109",
+    "name": "Report priority",
+    "codeSystemOid": "2.16.840.1.113883.18.46",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70110",
+    "name": "Transfer to Bad Debt Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70111",
+    "name": "Delete Account Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70112",
+    "name": "Discharge Disposition",
+    "codeSystemOid": "2.16.840.1.113883.18.438",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70113",
+    "name": "Discharged to Location",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70114",
+    "name": "Diet Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70115",
+    "name": "Servicing Facilities",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70116",
+    "name": "Bed Status",
+    "codeSystemOid": "2.16.840.1.113883.18.47",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70117",
+    "name": "Account Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70118",
+    "name": "Major Diagnostic Category",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70119",
+    "name": "Order Control Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.48",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70121",
+    "name": "Response Flag",
+    "codeSystemOid": "2.16.840.1.113883.18.49",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70122",
+    "name": "Charge Type",
+    "codeSystemOid": "2.16.840.1.113883.18.50",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70123",
+    "name": "Result Status",
+    "codeSystemOid": "2.16.840.1.113883.18.51",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70124",
+    "name": "Transportation Mode",
+    "codeSystemOid": "2.16.840.1.113883.18.52",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70125",
+    "name": "Value Type",
+    "codeSystemOid": "2.16.840.1.113883.18.280",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70126",
+    "name": "Quantity Limited Request",
+    "codeSystemOid": "2.16.840.1.113883.18.53",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70127",
+    "name": "Allergen Type",
+    "codeSystemOid": "2.16.840.1.113883.18.54",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70128",
+    "name": "Allergy Severity",
+    "codeSystemOid": "2.16.840.1.113883.18.55",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70129",
+    "name": "Accommodation Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70130",
+    "name": "Visit User Code",
+    "codeSystemOid": "2.16.840.1.113883.18.56",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70131",
+    "name": "Contact Role",
+    "codeSystemOid": "2.16.840.1.113883.18.58",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70132",
+    "name": "Transaction Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70133",
+    "name": "Procedure Practitioner Identifier Code Type",
+    "codeSystemOid": "2.16.840.1.113883.18.59",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70135",
+    "name": "Assignment of Benefits",
+    "codeSystemOid": "2.16.840.1.113883.18.60",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70136",
+    "name": "Yes/no Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.347",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70137",
+    "name": "Mail Claim Party",
+    "codeSystemOid": "2.16.840.1.113883.18.61",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70139",
+    "name": "Employer Information Data",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70140",
+    "name": "Military Service",
+    "codeSystemOid": "2.16.840.1.113883.18.62",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70141",
+    "name": "Military Rank/Grade",
+    "codeSystemOid": "2.16.840.1.113883.18.63",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70142",
+    "name": "Military Status",
+    "codeSystemOid": "2.16.840.1.113883.18.64",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70143",
+    "name": "Non-covered Insurance Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70144",
+    "name": "Eligibility Source",
+    "codeSystemOid": "2.16.840.1.113883.18.65",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70145",
+    "name": "Room Type",
+    "codeSystemOid": "2.16.840.1.113883.18.66",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70146",
+    "name": "Amount Type",
+    "codeSystemOid": "2.16.840.1.113883.18.67",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70147",
+    "name": "Policy Type",
+    "codeSystemOid": "2.16.840.1.113883.18.68",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70148",
+    "name": "Money or Percentage Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.69",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70149",
+    "name": "Day Type",
+    "codeSystemOid": "2.16.840.1.113883.18.70",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70150",
+    "name": "Certification Patient Type",
+    "codeSystemOid": "2.16.840.1.113883.18.71",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70151",
+    "name": "Second Opinion Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70152",
+    "name": "Second Opinion Documentation Received",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70153",
+    "name": "Value Code",
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70155",
+    "name": "Accept/Application Acknowledgment Conditions",
+    "codeSystemOid": "2.16.840.1.113883.18.73",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70156",
+    "name": "Which date/time qualifier",
+    "codeSystemOid": "2.16.840.1.113883.18.74",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70157",
+    "name": "Which date/time status qualifier",
+    "codeSystemOid": "2.16.840.1.113883.18.75",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70158",
+    "name": "Date/time selection qualifier",
+    "codeSystemOid": "2.16.840.1.113883.18.76",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70159",
+    "name": "Diet Code Specification Type",
+    "codeSystemOid": "2.16.840.1.113883.18.77",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70160",
+    "name": "Tray Type",
+    "codeSystemOid": "2.16.840.1.113883.18.78",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70161",
+    "name": "Allow Substitution",
+    "codeSystemOid": "2.16.840.1.113883.18.79",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70162",
+    "name": "Route of Administration",
+    "codeSystemOid": "2.16.840.1.113883.18.80",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70163",
+    "name": "Body Site",
+    "codeSystemOid": "2.16.840.1.113883.18.81",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70164",
+    "name": "Administration Device",
+    "codeSystemOid": "2.16.840.1.113883.18.82",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70165",
+    "name": "Administration Method",
+    "codeSystemOid": "2.16.840.1.113883.18.83",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70166",
+    "name": "RX Component Type",
+    "codeSystemOid": "2.16.840.1.113883.18.84",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70167",
+    "name": "Substitution Status",
+    "codeSystemOid": "2.16.840.1.113883.18.85",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70168",
+    "name": "Processing Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.86",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70169",
+    "name": "Reporting Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.87",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70170",
+    "name": "Derived Specimen",
+    "codeSystemOid": "2.16.840.1.113883.18.88",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70171",
+    "name": "Citizenship",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70172",
+    "name": "Veterans Military Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70173",
+    "name": "Coordination of Benefits",
+    "codeSystemOid": "2.16.840.1.113883.18.89",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70174",
+    "name": "Nature of Service/Test/Observation",
+    "codeSystemOid": "2.16.840.1.113883.18.90",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70175",
+    "name": "Master File Identifier Code",
+    "codeSystemOid": "2.16.840.1.113883.18.91",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70176",
+    "name": "Master File Application Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70177",
+    "name": "Confidentiality Code",
+    "codeSystemOid": "2.16.840.1.113883.18.92",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70178",
+    "name": "File Level Event Code",
+    "codeSystemOid": "2.16.840.1.113883.18.93",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70179",
+    "name": "Response Level",
+    "codeSystemOid": "2.16.840.1.113883.18.94",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70180",
+    "name": "Record-level Event Code",
+    "codeSystemOid": "2.16.840.1.113883.18.95",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70181",
+    "name": "MFN Record-level Error Return",
+    "codeSystemOid": "2.16.840.1.113883.18.96",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70182",
+    "name": "Staff type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70183",
+    "name": "Active/Inactive",
+    "codeSystemOid": "2.16.840.1.113883.18.97",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70184",
+    "name": "Department",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70185",
+    "name": "Preferred Method of Contact",
+    "codeSystemOid": "2.16.840.1.113883.18.98",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70186",
+    "name": "Practitioner Category",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70187",
+    "name": "Provider Billing",
+    "codeSystemOid": "2.16.840.1.113883.18.99",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70188",
+    "name": "Operator ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70189",
+    "name": "Ethnic Group",
+    "codeSystemOid": "2.16.840.1.113883.18.100",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70190",
+    "name": "Address Type",
+    "codeSystemOid": "2.16.840.1.113883.18.101",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70191",
+    "name": "Type of Referenced Data",
+    "codeSystemOid": "2.16.840.1.113883.18.102",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70192",
+    "name": "Visit ID Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70193",
+    "name": "Amount Class",
+    "codeSystemOid": "2.16.840.1.113883.18.103",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70200",
+    "name": "Name Type",
+    "codeSystemOid": "2.16.840.1.113883.18.105",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70201",
+    "name": "Telecommunication Use Code",
+    "codeSystemOid": "2.16.840.1.113883.18.106",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70202",
+    "name": "Telecommunication Equipment Type",
+    "codeSystemOid": "2.16.840.1.113883.18.107",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70203",
+    "name": "Identifier Type",
+    "codeSystemOid": "2.16.840.1.113883.18.108",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70204",
+    "name": "Organizational Name Type",
+    "codeSystemOid": "2.16.840.1.113883.18.109",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70205",
+    "name": "Price Type",
+    "codeSystemOid": "2.16.840.1.113883.18.110",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70206",
+    "name": "Segment Action Code",
+    "codeSystemOid": "2.16.840.1.113883.18.111",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70207",
+    "name": "Processing Mode",
+    "codeSystemOid": "2.16.840.1.113883.18.112",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70208",
+    "name": "Query Response Status",
+    "codeSystemOid": "2.16.840.1.113883.18.113",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70209",
+    "name": "Relational Operator",
+    "codeSystemOid": "2.16.840.1.113883.18.114",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70210",
+    "name": "Relational Conjunction",
+    "codeSystemOid": "2.16.840.1.113883.18.115",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70211",
+    "name": "Alternate Character Sets",
+    "codeSystemOid": "2.16.840.1.113883.18.116",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70212",
+    "name": "Nationality",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70213",
+    "name": "Purge Status Code",
+    "codeSystemOid": "2.16.840.1.113883.18.117",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70214",
+    "name": "Special Program Code",
+    "codeSystemOid": "2.16.840.1.113883.18.118",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70215",
+    "name": "Publicity Code",
+    "codeSystemOid": "2.16.840.1.113883.18.119",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70216",
+    "name": "Patient Status Code",
+    "codeSystemOid": "2.16.840.1.113883.18.120",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70217",
+    "name": "Visit Priority Code",
+    "codeSystemOid": "2.16.840.1.113883.18.121",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70218",
+    "name": "Patient Charge Adjustment",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70219",
+    "name": "Recurring Service Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70220",
+    "name": "Living Arrangement",
+    "codeSystemOid": "2.16.840.1.113883.18.122",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70222",
+    "name": "Contact Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70223",
+    "name": "Living Dependency",
+    "codeSystemOid": "2.16.840.1.113883.18.124",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70224",
+    "name": "Transport Arranged",
+    "codeSystemOid": "2.16.840.1.113883.18.125",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70225",
+    "name": "Escort Required",
+    "codeSystemOid": "2.16.840.1.113883.18.126",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70227",
+    "name": "Manufacturers of Vaccines (code=MVX)",
+    "codeSystemOid": "2.16.840.1.113883.12.227",
+    "hl7TableType": "Imported"
+  },
+  {
+    "bindingIdentifier": "HL70228",
+    "name": "Diagnosis Classification",
+    "codeSystemOid": "2.16.840.1.113883.18.128",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70229",
+    "name": "DRG Payor",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70230",
+    "name": "Procedure Functional Type",
+    "codeSystemOid": "2.16.840.1.113883.18.130",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70231",
+    "name": "Student Status",
+    "codeSystemOid": "2.16.840.1.113883.18.131",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70232",
+    "name": "- Insurance Company Contact Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.132",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70233",
+    "name": "Non-Concur Code/Description",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70234",
+    "name": "Report Timing",
+    "codeSystemOid": "2.16.840.1.113883.18.133",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70235",
+    "name": "Report Source",
+    "codeSystemOid": "2.16.840.1.113883.18.134",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70236",
+    "name": "Event Reported To",
+    "codeSystemOid": "2.16.840.1.113883.18.135",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70237",
+    "name": "Event Qualification",
+    "codeSystemOid": "2.16.840.1.113883.18.136",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70238",
+    "name": "Event Seriousness",
+    "codeSystemOid": "2.16.840.1.113883.18.137",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70239",
+    "name": "Event Expected",
+    "codeSystemOid": "2.16.840.1.113883.18.138",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70240",
+    "name": "Event Consequence",
+    "codeSystemOid": "2.16.840.1.113883.18.139",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70241",
+    "name": "Patient Outcome",
+    "codeSystemOid": "2.16.840.1.113883.18.140",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70242",
+    "name": "Primary Observer's Qualification",
+    "codeSystemOid": "2.16.840.1.113883.18.141",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70243",
+    "name": "Identity May Be Divulged",
+    "codeSystemOid": "2.16.840.1.113883.18.142",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70244",
+    "name": "Single Use Device",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70245",
+    "name": "Product Problem",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70246",
+    "name": "Product Available for Inspection",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70247",
+    "name": "Status of Evaluation",
+    "codeSystemOid": "2.16.840.1.113883.18.143",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70248",
+    "name": "Product Source",
+    "codeSystemOid": "2.16.840.1.113883.18.144",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70249",
+    "name": "Generic Product",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70250",
+    "name": "Relatedness Assessment",
+    "codeSystemOid": "2.16.840.1.113883.18.145",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70251",
+    "name": "Action Taken in Response to the Event",
+    "codeSystemOid": "2.16.840.1.113883.18.146",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70252",
+    "name": "Causality Observations",
+    "codeSystemOid": "2.16.840.1.113883.18.147",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70253",
+    "name": "Indirect Exposure Mechanism",
+    "codeSystemOid": "2.16.840.1.113883.18.148",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70254",
+    "name": "Kind of Quantity",
+    "codeSystemOid": "2.16.840.1.113883.18.149",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70255",
+    "name": "Duration Categories",
+    "codeSystemOid": "2.16.840.1.113883.18.150",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70256",
+    "name": "Time Delay Post Challenge",
+    "codeSystemOid": "2.16.840.1.113883.18.151",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70257",
+    "name": "Nature of Challenge",
+    "codeSystemOid": "2.16.840.1.113883.18.152",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70258",
+    "name": "Relationship Modifier",
+    "codeSystemOid": "2.16.840.1.113883.18.153",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70259",
+    "name": "Modality",
+    "codeSystemOid": "2.16.840.1.113883.18.154",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70260",
+    "name": "Patient Location Type",
+    "codeSystemOid": "2.16.840.1.113883.18.155",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70261",
+    "name": "Location Equipment",
+    "codeSystemOid": "2.16.840.1.113883.18.156",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70262",
+    "name": "Privacy Level",
+    "codeSystemOid": "2.16.840.1.113883.18.157",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70263",
+    "name": "Level of Care",
+    "codeSystemOid": "2.16.840.1.113883.18.158",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70264",
+    "name": "Location Department",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70265",
+    "name": "Specialty Type",
+    "codeSystemOid": "2.16.840.1.113883.18.159",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70267",
+    "name": "Days of the Week",
+    "codeSystemOid": "2.16.840.1.113883.18.160",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70268",
+    "name": "Override",
+    "codeSystemOid": "2.16.840.1.113883.18.161",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70269",
+    "name": "Charge On Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.162",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70270",
+    "name": "Document Type",
+    "codeSystemOid": "2.16.840.1.113883.18.163",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70271",
+    "name": "Document Completion Status",
+    "codeSystemOid": "2.16.840.1.113883.18.164",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70272",
+    "name": "Document Confidentiality Status",
+    "codeSystemOid": "2.16.840.1.113883.18.166",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70273",
+    "name": "Document Availability Status",
+    "codeSystemOid": "2.16.840.1.113883.18.167",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70275",
+    "name": "Document Storage Status",
+    "codeSystemOid": "2.16.840.1.113883.18.168",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70276",
+    "name": "Appointment reason codes",
+    "codeSystemOid": "2.16.840.1.113883.18.169",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70277",
+    "name": "Appointment Type Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.170",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70278",
+    "name": "Filler status codes",
+    "codeSystemOid": "2.16.840.1.113883.18.171",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70279",
+    "name": "Allow Substitution Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.172",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70280",
+    "name": "Referral Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.173",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70281",
+    "name": "Referral Type",
+    "codeSystemOid": "2.16.840.1.113883.18.174",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70282",
+    "name": "Referral Disposition",
+    "codeSystemOid": "2.16.840.1.113883.18.175",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70283",
+    "name": "Referral Status",
+    "codeSystemOid": "2.16.840.1.113883.18.176",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70284",
+    "name": "Referral Category",
+    "codeSystemOid": "2.16.840.1.113883.18.177",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70285",
+    "name": "Insurance Company ID Codes",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70286",
+    "name": "Provider Role",
+    "codeSystemOid": "2.16.840.1.113883.18.178",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70287",
+    "name": "Problem/Goal Action Code",
+    "codeSystemOid": "2.16.840.1.113883.18.3",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70288",
+    "name": "Census Tract",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70289",
+    "name": "County/Parish",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70290",
+    "name": "MIME base64 encoding characters",
+    "codeSystemOid": "2.16.840.1.113883.18.180",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70291",
+    "name": "Subtype of Referenced Data",
+    "codeSystemOid": "2.16.840.1.113883.18.181",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70292",
+    "name": "Vaccines Administered",
+    "codeSystemOid": "2.16.840.1.113883.12.292",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70293",
+    "name": "Billing Category",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70294",
+    "name": "Time Selection Criteria Parameter Class Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.183",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70295",
+    "name": "Handicap",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70296",
+    "name": "Primary Language",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70297",
+    "name": "CN ID Source",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70298",
+    "name": "CP Range Type",
+    "codeSystemOid": "2.16.840.1.113883.18.184",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70299",
+    "name": "Encoding",
+    "codeSystemOid": "2.16.840.1.113883.18.185",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70300",
+    "name": "Namespace ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70301",
+    "name": "Universal ID Type",
+    "codeSystemOid": "2.16.840.1.113883.18.186",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70302",
+    "name": "Point of Care",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70303",
+    "name": "Room",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70304",
+    "name": "Bed",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70305",
+    "name": "Person Location Type",
+    "codeSystemOid": "2.16.840.1.113883.18.187",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70306",
+    "name": "Location Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70307",
+    "name": "Building",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70308",
+    "name": "Floor",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70309",
+    "name": "Coverage Type",
+    "codeSystemOid": "2.16.840.1.113883.18.188",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70311",
+    "name": "Job Status",
+    "codeSystemOid": "2.16.840.1.113883.18.189",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70312",
+    "name": "Policy Scope",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70313",
+    "name": "Policy Source",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70315",
+    "name": "Living Will Code",
+    "codeSystemOid": "2.16.840.1.113883.18.190",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70316",
+    "name": "Organ Donor Code",
+    "codeSystemOid": "2.16.840.1.113883.18.192",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70317",
+    "name": "Annotations",
+    "codeSystemOid": "2.16.840.1.113883.18.193",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70319",
+    "name": "Department Cost Center",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70320",
+    "name": "Item Natural Account Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70321",
+    "name": "Dispense Method",
+    "codeSystemOid": "2.16.840.1.113883.18.194",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70322",
+    "name": "Completion Status",
+    "codeSystemOid": "2.16.840.1.113883.18.195",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70323",
+    "name": "Action Code",
+    "codeSystemOid": "2.16.840.1.113883.18.196",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70324",
+    "name": "Location Characteristic ID",
+    "codeSystemOid": "2.16.840.1.113883.18.197",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70325",
+    "name": "Location Relationship ID",
+    "codeSystemOid": "2.16.840.1.113883.18.198",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70326",
+    "name": "Visit Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.199",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70327",
+    "name": "Job Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70328",
+    "name": "Employee Classification",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70329",
+    "name": "Quantity Method",
+    "codeSystemOid": "2.16.840.1.113883.18.200",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70330",
+    "name": "Marketing Basis",
+    "codeSystemOid": "2.16.840.1.113883.18.201",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70331",
+    "name": "Facility Type",
+    "codeSystemOid": "2.16.840.1.113883.18.202",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70332",
+    "name": "Source Type",
+    "codeSystemOid": "2.16.840.1.113883.18.203",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70333",
+    "name": "Driver's License Issuing Authority",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70334",
+    "name": "Disabled Person Code",
+    "codeSystemOid": "2.16.840.1.113883.18.204",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70335",
+    "name": "Repeat Pattern",
+    "codeSystemOid": "2.16.840.1.113883.18.205",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70336",
+    "name": "Referral Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.206",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70337",
+    "name": "Certification Status",
+    "codeSystemOid": "2.16.840.1.113883.18.207",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70338",
+    "name": "Practitioner ID Number Type",
+    "codeSystemOid": "2.16.840.1.113883.18.108",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70339",
+    "name": "Advanced Beneficiary Notice Code",
+    "codeSystemOid": "2.16.840.1.113883.18.209",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70340",
+    "name": "Procedure Code Modifier",
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70341",
+    "name": "Guarantor Credit Rating Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70342",
+    "name": "Military Recipient",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70343",
+    "name": "Military Handicapped Program Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70344",
+    "name": "Patient's Relationship to Insured",
+    "codeSystemOid": "2.16.840.1.113883.18.210",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70345",
+    "name": "Appeal Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70346",
+    "name": "Certification Agency",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70347",
+    "name": "State/Province",
+    "codeSystemOid": "1.0.3166.2",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70348",
+    "name": "Special Program Indicator",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70349",
+    "name": "PSRO/UR Approval Indicator",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70350",
+    "name": "Occurrence Code",
+    "codeSystemOid": "2.16.840.1.113883.6.301.7",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70351",
+    "name": "Occurrence Span",
+    "codeSystemOid": "2.16.840.1.113883.6.301.8",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70353",
+    "name": "CWE statuses",
+    "codeSystemOid": "2.16.840.1.113883.18.213",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70354",
+    "name": "Message Structure",
+    "codeSystemOid": "2.16.840.1.113883.18.214",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70355",
+    "name": "Primary Key Value Type",
+    "codeSystemOid": "2.16.840.1.113883.18.215",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70356",
+    "name": "Alternate Character Set Handling Scheme",
+    "codeSystemOid": "2.16.840.1.113883.18.216",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70357",
+    "name": "Message Error Condition Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.217",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70358",
+    "name": "Practitioner Group",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70359",
+    "name": "Diagnosis Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.218",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70360",
+    "name": "Degree/License/Certificate",
+    "codeSystemOid": "2.16.840.1.113883.18.220",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70361",
+    "name": "Application",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70362",
+    "name": "Facility",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70363",
+    "name": "Assigning Authority",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70364",
+    "name": "Comment Type",
+    "codeSystemOid": "2.16.840.1.113883.18.222",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70365",
+    "name": "Equipment State",
+    "codeSystemOid": "2.16.840.1.113883.18.223",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70366",
+    "name": "Local/Remote Control State",
+    "codeSystemOid": "2.16.840.1.113883.18.224",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70367",
+    "name": "Alert Level",
+    "codeSystemOid": "2.16.840.1.113883.18.225",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70368",
+    "name": "Remote Control Command",
+    "codeSystemOid": "2.16.840.1.113883.18.226",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70369",
+    "name": "Specimen Role",
+    "codeSystemOid": "2.16.840.1.113883.18.227",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70370",
+    "name": "Container Status",
+    "codeSystemOid": "2.16.840.1.113883.18.228",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70371",
+    "name": "Additive/Preservative",
+    "codeSystemOid": "2.16.840.1.113883.18.229",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70372",
+    "name": "Specimen Component",
+    "codeSystemOid": "2.16.840.1.113883.18.230",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70373",
+    "name": "Treatment",
+    "codeSystemOid": "2.16.840.1.113883.18.231",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70374",
+    "name": "System Induced Contaminants",
+    "codeSystemOid": "2.16.840.1.113883.18.232",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70375",
+    "name": "Artificial Blood",
+    "codeSystemOid": "2.16.840.1.113883.18.233",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70376",
+    "name": "Special Handling Code",
+    "codeSystemOid": "2.16.840.1.113883.18.234",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70377",
+    "name": "Other Environmental Factors",
+    "codeSystemOid": "2.16.840.1.113883.18.235",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70378",
+    "name": "Carrier Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70379",
+    "name": "Tray Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70380",
+    "name": "Separator Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70381",
+    "name": "Cap Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70382",
+    "name": "Drug Interference",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70383",
+    "name": "Substance Status",
+    "codeSystemOid": "2.16.840.1.113883.18.236",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70384",
+    "name": "Substance Type",
+    "codeSystemOid": "2.16.840.1.113883.18.237",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70385",
+    "name": "Manufacturer Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70386",
+    "name": "Supplier Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70387",
+    "name": "Command Response",
+    "codeSystemOid": "2.16.840.1.113883.18.238",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70388",
+    "name": "Processing Type",
+    "codeSystemOid": "2.16.840.1.113883.18.239",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70389",
+    "name": "Analyte Repeat Status",
+    "codeSystemOid": "2.16.840.1.113883.18.240",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70391",
+    "name": "Segment Group",
+    "codeSystemOid": "2.16.840.1.113883.18.242",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70392",
+    "name": "Match Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.243",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70393",
+    "name": "Match Algorithms",
+    "codeSystemOid": "2.16.840.1.113883.18.244",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70394",
+    "name": "Response Modality",
+    "codeSystemOid": "2.16.840.1.113883.18.245",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70395",
+    "name": "Modify Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.246",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70396",
+    "name": "Coding System",
+    "codeSystemOid": "2.16.840.1.113883.18.247",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70397",
+    "name": "Sequencing",
+    "codeSystemOid": "2.16.840.1.113883.18.248",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70398",
+    "name": "Continuation Style Code",
+    "codeSystemOid": "2.16.840.1.113883.18.249",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70399",
+    "name": "Country Code",
+    "codeSystemOid": "1.0.3166.1",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70401",
+    "name": "Government Reimbursement Program",
+    "codeSystemOid": "2.16.840.1.113883.18.250",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70402",
+    "name": "School Type",
+    "codeSystemOid": "2.16.840.1.113883.18.251",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70403",
+    "name": "Language Ability",
+    "codeSystemOid": "2.16.840.1.113883.18.252",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70404",
+    "name": "Language Proficiency",
+    "codeSystemOid": "2.16.840.1.113883.18.253",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70405",
+    "name": "Organization Unit",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70406",
+    "name": "Participant Organization Unit Type",
+    "codeSystemOid": "2.16.840.1.113883.18.254",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70409",
+    "name": "Application Change Type",
+    "codeSystemOid": "2.16.840.1.113883.18.255",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70411",
+    "name": "Supplemental Service Information Values",
+    "codeSystemOid": "2.16.840.1.113883.18.452",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70412",
+    "name": "Category Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70413",
+    "name": "Consent Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70414",
+    "name": "Units of Time",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70415",
+    "name": "Transfer Type",
+    "codeSystemOid": "2.16.840.1.113883.18.257",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70416",
+    "name": "Procedure DRG Type",
+    "codeSystemOid": "2.16.840.1.113883.18.258",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70417",
+    "name": "Tissue Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.259",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70418",
+    "name": "Procedure Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.260",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70421",
+    "name": "Severity of Illness Code",
+    "codeSystemOid": "2.16.840.1.113883.18.262",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70422",
+    "name": "Triage Code",
+    "codeSystemOid": "2.16.840.1.113883.18.263",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70423",
+    "name": "Case Category Code",
+    "codeSystemOid": "2.16.840.1.113883.18.264",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70424",
+    "name": "Gestation Category Code",
+    "codeSystemOid": "2.16.840.1.113883.18.265",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70425",
+    "name": "Newborn Code",
+    "codeSystemOid": "2.16.840.1.113883.18.266",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70426",
+    "name": "Blood Product Code",
+    "codeSystemOid": "2.16.840.1.113883.18.267",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70427",
+    "name": "Risk Management Incident Code",
+    "codeSystemOid": "2.16.840.1.113883.18.268",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70428",
+    "name": "Incident Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.269",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70429",
+    "name": "Production Class Code",
+    "codeSystemOid": "2.16.840.1.113883.18.270",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70430",
+    "name": "Mode of Arrival Code",
+    "codeSystemOid": "2.16.840.1.113883.18.271",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70431",
+    "name": "Recreational Drug Use Code",
+    "codeSystemOid": "2.16.840.1.113883.18.272",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70432",
+    "name": "Admission Level of Care Code",
+    "codeSystemOid": "2.16.840.1.113883.18.273",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70433",
+    "name": "Precaution Code",
+    "codeSystemOid": "2.16.840.1.113883.18.274",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70434",
+    "name": "Patient Condition Code",
+    "codeSystemOid": "2.16.840.1.113883.18.275",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70435",
+    "name": "Advance Directive Code",
+    "codeSystemOid": "2.16.840.1.113883.18.276",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70436",
+    "name": "Sensitivity to Causative Agent Code",
+    "codeSystemOid": "2.16.840.1.113883.18.277",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70437",
+    "name": "Alert Device Code",
+    "codeSystemOid": "2.16.840.1.113883.18.278",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70438",
+    "name": "Allergy Clinical Status",
+    "codeSystemOid": "2.16.840.1.113883.18.279",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70440",
+    "name": "Data Types",
+    "codeSystemOid": "2.16.840.1.113883.18.280",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70441",
+    "name": "Immunization Registry Status",
+    "codeSystemOid": "2.16.840.1.113883.18.281",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70442",
+    "name": "Location Service Code",
+    "codeSystemOid": "2.16.840.1.113883.18.282",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70443",
+    "name": "Provider Role",
+    "codeSystemOid": "2.16.840.1.113883.18.283",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70444",
+    "name": "Name Assembly Order",
+    "codeSystemOid": "2.16.840.1.113883.18.284",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70445",
+    "name": "Identity Reliability Code",
+    "codeSystemOid": "2.16.840.1.113883.18.285",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70446",
+    "name": "Species Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70447",
+    "name": "Breed Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70448",
+    "name": "Name Context",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70449",
+    "name": "Conformance statements",
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70450",
+    "name": "Event Type",
+    "codeSystemOid": "2.16.840.1.113883.18.286",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70451",
+    "name": "Substance Identifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70452",
+    "name": "Health Care Provider Type Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70453",
+    "name": "Health Care Provider Classification",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70454",
+    "name": "Health Care Provider Area of Specialization",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70455",
+    "name": "Type of Bill Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70456",
+    "name": "Revenue code",
+    "codeSystemOid": "2.16.840.1.113883.6.301.3",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70457",
+    "name": "Overall Claim Disposition Code",
+    "codeSystemOid": "2.16.840.1.113883.18.292",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70458",
+    "name": "OCE Edit Code",
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70459",
+    "name": "Reimbursement Action Code",
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70460",
+    "name": "Denial or Rejection Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70461",
+    "name": "License Number",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70462",
+    "name": "Location Cost Center",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70463",
+    "name": "Inventory Number",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70464",
+    "name": "Facility ID",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70465",
+    "name": "Name/Address Representation",
+    "codeSystemOid": "2.16.840.1.113883.18.295",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70466",
+    "name": "Ambulatory Payment Classification Code",
+    "codeSystemOid": "2.16.840.1.113883.18.296",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70467",
+    "name": "Modifier Edit Code",
+    "codeSystemOid": "2.16.840.1.113883.6.301.10",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70468",
+    "name": "Payment Adjustment Code",
+    "codeSystemOid": "2.16.840.1.113883.18.297",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70469",
+    "name": "Packaging Status Code",
+    "codeSystemOid": "2.16.840.1.113883.18.298",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70470",
+    "name": "Reimbursement Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.299",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70471",
+    "name": "Query Name",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70472",
+    "name": "TQ Conjunction ID",
+    "codeSystemOid": "2.16.840.1.113883.18.300",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70473",
+    "name": "Formulary Status",
+    "codeSystemOid": "2.16.840.1.113883.18.301",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70474",
+    "name": "Practitioner Organization Unit Type",
+    "codeSystemOid": "2.16.840.1.113883.18.302",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70475",
+    "name": "Charge Type Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.303",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70476",
+    "name": "Medically Necessary Duplicate Procedure Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70477",
+    "name": "Controlled Substance Schedule",
+    "codeSystemOid": "2.16.840.1.113883.18.304",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70478",
+    "name": "Formulary Status",
+    "codeSystemOid": "2.16.840.1.113883.18.305",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70479",
+    "name": "Pharmaceutical Substances",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70480",
+    "name": "Pharmacy Order Types",
+    "codeSystemOid": "2.16.840.1.113883.18.306",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70482",
+    "name": "Order Type",
+    "codeSystemOid": "2.16.840.1.113883.18.307",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70483",
+    "name": "Authorization Mode",
+    "codeSystemOid": "2.16.840.1.113883.18.308",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70484",
+    "name": "Dispense Type",
+    "codeSystemOid": "2.16.840.1.113883.18.309",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70485",
+    "name": "Extended Priority Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.310",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70487",
+    "name": "Specimen Type",
+    "codeSystemOid": "2.16.840.1.113883.18.311",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70488",
+    "name": "Specimen Collection Method",
+    "codeSystemOid": "2.16.840.1.113883.18.312",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70489",
+    "name": "Risk Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.313",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70490",
+    "name": "Specimen Reject Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.314",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70491",
+    "name": "Specimen Quality",
+    "codeSystemOid": "2.16.840.1.113883.18.315",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70492",
+    "name": "Specimen Appropriateness",
+    "codeSystemOid": "2.16.840.1.113883.18.316",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70493",
+    "name": "Specimen Condition",
+    "codeSystemOid": "2.16.840.1.113883.18.317",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70494",
+    "name": "Specimen Child Role",
+    "codeSystemOid": "2.16.840.1.113883.18.318",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70495",
+    "name": "Body Site Modifier",
+    "codeSystemOid": "2.16.840.1.113883.18.319",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70496",
+    "name": "Consent Type",
+    "codeSystemOid": "2.16.840.1.113883.18.320",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70497",
+    "name": "Consent Mode",
+    "codeSystemOid": "2.16.840.1.113883.18.321",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70498",
+    "name": "Consent Status",
+    "codeSystemOid": "2.16.840.1.113883.18.322",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70499",
+    "name": "Consent Bypass Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.323",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70500",
+    "name": "Consent Disclosure Level",
+    "codeSystemOid": "2.16.840.1.113883.18.324",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70501",
+    "name": "Consent Non-Disclosure Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.325",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70502",
+    "name": "Non-Subject Consenter Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.326",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70503",
+    "name": "Sequence/Results Flag",
+    "codeSystemOid": "2.16.840.1.113883.18.327",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70504",
+    "name": "Sequence Condition Code",
+    "codeSystemOid": "2.16.840.1.113883.18.328",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70505",
+    "name": "Cyclic Entry/Exit Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.329",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70506",
+    "name": "Service Request Relationship",
+    "codeSystemOid": "2.16.840.1.113883.18.330",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70507",
+    "name": "Observation Result Handling",
+    "codeSystemOid": "2.16.840.1.113883.18.331",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70508",
+    "name": "Blood Product Processing Requirements",
+    "codeSystemOid": "2.16.840.1.113883.18.332",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70509",
+    "name": "Indication for Use",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70510",
+    "name": "Blood Product Dispense Status",
+    "codeSystemOid": "2.16.840.1.113883.18.333",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70511",
+    "name": "BP Observation Status Codes Interpretation",
+    "codeSystemOid": "2.16.840.1.113883.18.334",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70512",
+    "name": "Commercial Product",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70513",
+    "name": "Blood Product Transfusion/Disposition Status",
+    "codeSystemOid": "2.16.840.1.113883.18.335",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70514",
+    "name": "Transfusion Adverse Reaction",
+    "codeSystemOid": "2.16.840.1.113883.18.336",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70515",
+    "name": "Transfusion Interrupted Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70516",
+    "name": "Error Severity",
+    "codeSystemOid": "2.16.840.1.113883.18.337",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70517",
+    "name": "Inform Person Code",
+    "codeSystemOid": "2.16.840.1.113883.18.338",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70518",
+    "name": "Override Type",
+    "codeSystemOid": "2.16.840.1.113883.18.339",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70519",
+    "name": "Override Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70520",
+    "name": "Message Waiting Priority",
+    "codeSystemOid": "2.16.840.1.113883.18.340",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70521",
+    "name": "Override Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70523",
+    "name": "Computation Type",
+    "codeSystemOid": "2.16.840.1.113883.18.341",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70524",
+    "name": "Sequence condition",
+    "codeSystemOid": "2.16.840.1.113883.18.342",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70525",
+    "name": "Privilege",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70526",
+    "name": "Privilege Class",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70527",
+    "name": "Calendar Alignment",
+    "codeSystemOid": "2.16.840.1.113883.18.343",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70528",
+    "name": "Event Related Period",
+    "codeSystemOid": "2.16.840.1.113883.18.344",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70529",
+    "name": "Precision",
+    "codeSystemOid": "2.16.840.1.113883.18.345",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70530",
+    "name": "Organization, Agency, Department",
+    "codeSystemOid": "2.16.840.1.113883.18.346",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70531",
+    "name": "Institution",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70532",
+    "name": "Expanded Yes/no Indicator",
+    "codeSystemOid": "2.16.840.1.113883.18.347",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70533",
+    "name": "Application Error Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70534",
+    "name": "Notify Clergy Code",
+    "codeSystemOid": "2.16.840.1.113883.18.348",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70535",
+    "name": "Signature Code",
+    "codeSystemOid": "2.16.840.1.113883.18.349",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70536",
+    "name": "Certificate Status",
+    "codeSystemOid": "2.16.840.1.113883.18.350",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70537",
+    "name": "Institution",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70538",
+    "name": "Institution Relationship Type",
+    "codeSystemOid": "2.16.840.1.113883.18.351",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70539",
+    "name": "Cost Center Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70540",
+    "name": "Inactive Reason Code",
+    "codeSystemOid": "2.16.840.1.113883.18.352",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70541",
+    "name": "Specimen Type Modifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70542",
+    "name": "Specimen Source Type Modifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70543",
+    "name": "Specimen Collection Site",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70544",
+    "name": "Container Condition",
+    "codeSystemOid": "2.16.840.1.113883.18.353",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70545",
+    "name": "Language Translated To",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70547",
+    "name": "Jurisdictional Breadth",
+    "codeSystemOid": "2.16.840.1.113883.18.354",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70548",
+    "name": "Signatory's Relationship to Subject",
+    "codeSystemOid": "2.16.840.1.113883.18.355",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70549",
+    "name": "NDC Codes",
+    "codeSystemOid": null,
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70550",
+    "name": "Body Parts",
+    "codeSystemOid": "2.16.840.1.113883.18.356",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70552",
+    "name": "Advanced Beneficiary Notice Override Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70553",
+    "name": "Invoice Control Code",
+    "codeSystemOid": "2.16.840.1.113883.18.357",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70554",
+    "name": "Invoice Reason Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.358",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70555",
+    "name": "Invoice Type",
+    "codeSystemOid": "2.16.840.1.113883.18.359",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70556",
+    "name": "Benefit Group",
+    "codeSystemOid": "2.16.840.1.113883.18.360",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70557",
+    "name": "Payee Type",
+    "codeSystemOid": "2.16.840.1.113883.18.361",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70558",
+    "name": "Payee Relationship to Invoice",
+    "codeSystemOid": "2.16.840.1.113883.18.362",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70559",
+    "name": "Product/Service Status",
+    "codeSystemOid": "2.16.840.1.113883.18.363",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70560",
+    "name": "Quantity Units",
+    "codeSystemOid": "2.16.840.1.113883.18.455",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70561",
+    "name": "Product/Services Clarification Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.364",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70562",
+    "name": "Processing Consideration Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.365",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70564",
+    "name": "Adjustment Category Code",
+    "codeSystemOid": "2.16.840.1.113883.18.366",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70565",
+    "name": "Provider Adjustment Reason Code",
+    "codeSystemOid": "2.16.840.1.113883.18.367",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70566",
+    "name": "Blood Unit Type",
+    "codeSystemOid": "2.16.840.1.113883.18.368",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70567",
+    "name": "Weight Units",
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70568",
+    "name": "Volume Units",
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70569",
+    "name": "Adjustment Action",
+    "codeSystemOid": "2.16.840.1.113883.18.369",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70570",
+    "name": "Payment Method Code",
+    "codeSystemOid": "2.16.840.1.113883.18.370",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70571",
+    "name": "Invoice Processing Results Status",
+    "codeSystemOid": "2.16.840.1.113883.18.371",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70572",
+    "name": "Tax status",
+    "codeSystemOid": "2.16.840.1.113883.18.372",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70615",
+    "name": "User Authentication Credential Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.373",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70616",
+    "name": "Address Expiration Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.374",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70617",
+    "name": "Address Usage",
+    "codeSystemOid": "2.16.840.1.113883.18.375",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70618",
+    "name": "Protection Code",
+    "codeSystemOid": "2.16.840.1.113883.18.376",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70625",
+    "name": "Item Status Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.377",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70634",
+    "name": "Item Importance Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.378",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70642",
+    "name": "Reorder Theory Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.379",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70651",
+    "name": "Labor Calculation Type",
+    "codeSystemOid": "2.16.840.1.113883.18.380",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70653",
+    "name": "Date Format",
+    "codeSystemOid": "2.16.840.1.113883.18.381",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70657",
+    "name": "Device Type",
+    "codeSystemOid": "2.16.840.1.113883.18.382",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70659",
+    "name": "Lot Control",
+    "codeSystemOid": "2.16.840.1.113883.18.383",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70667",
+    "name": "Device Data State",
+    "codeSystemOid": "2.16.840.1.113883.18.384",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70669",
+    "name": "Load Status",
+    "codeSystemOid": "2.16.840.1.113883.18.385",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70682",
+    "name": "Device Status",
+    "codeSystemOid": "2.16.840.1.113883.18.386",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70702",
+    "name": "Cycle Type",
+    "codeSystemOid": "2.16.840.1.113883.18.387",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70717",
+    "name": "Access Restriction Value",
+    "codeSystemOid": "2.16.840.1.113883.18.388",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70719",
+    "name": "Access Restriction Reason Code",
+    "codeSystemOid": "2.16.840.1.113883.5.4",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70725",
+    "name": "Mood Codes",
+    "codeSystemOid": "2.16.840.1.113883.5.1001",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70728",
+    "name": "CCL Value",
+    "codeSystemOid": "2.16.840.1.113883.18.391",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70731",
+    "name": "DRG Diagnosis Determination Status",
+    "codeSystemOid": "2.16.840.1.113883.18.392",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70734",
+    "name": "Grouper Status",
+    "codeSystemOid": "2.16.840.1.113883.18.393",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70739",
+    "name": "DRG Status Patient",
+    "codeSystemOid": "2.16.840.1.113883.18.394",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70742",
+    "name": "DRG Status Financial Calculation",
+    "codeSystemOid": "2.16.840.1.113883.18.395",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70749",
+    "name": "DRG Grouping Status",
+    "codeSystemOid": "2.16.840.1.113883.18.396",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70755",
+    "name": "Status Weight At Birth",
+    "codeSystemOid": "2.16.840.1.113883.18.397",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70757",
+    "name": "DRG Status Respiration Minutes",
+    "codeSystemOid": "2.16.840.1.113883.18.398",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70759",
+    "name": "Status Admission",
+    "codeSystemOid": "2.16.840.1.113883.18.399",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70761",
+    "name": "DRG Procedure Determination Status",
+    "codeSystemOid": "2.16.840.1.113883.18.400",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70763",
+    "name": "DRG Procedure Relevance",
+    "codeSystemOid": "2.16.840.1.113883.18.401",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70771",
+    "name": "Resource Type or Category",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70776",
+    "name": "Item Status",
+    "codeSystemOid": "2.16.840.1.113883.18.402",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70778",
+    "name": "Item Type",
+    "codeSystemOid": "2.16.840.1.113883.18.403",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70790",
+    "name": "Approving Regulatory Agency",
+    "codeSystemOid": "2.16.840.1.113883.18.404",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70793",
+    "name": "Ruling Act",
+    "codeSystemOid": "2.16.840.1.113883.18.405",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70806",
+    "name": "Sterilization Type",
+    "codeSystemOid": "2.16.840.1.113883.18.406",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70809",
+    "name": "Maintenance Cycle",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70811",
+    "name": "Maintenance Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70818",
+    "name": "Package",
+    "codeSystemOid": "2.16.840.1.113883.18.407",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70834",
+    "name": "MIME Types",
+    "codeSystemOid": "2.16.840.1.113883.18.408",
+    "hl7TableType": "Imported"
+  },
+  {
+    "bindingIdentifier": "HL70836",
+    "name": "Problem Severity",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70838",
+    "name": "Problem Perspective",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70865",
+    "name": "Referral Documentation Completion Status",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70868",
+    "name": "Telecommunication Expiration Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.409",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70871",
+    "name": "Supply Risk Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.410",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70879",
+    "name": "Product/Service Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70880",
+    "name": "Product/Service Code Modifier",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70881",
+    "name": "Role Executing Physician",
+    "codeSystemOid": "2.16.840.1.113883.18.411",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70882",
+    "name": "Medical Role Executing Physician",
+    "codeSystemOid": "2.16.840.1.113883.18.412",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70894",
+    "name": "Side of body",
+    "codeSystemOid": "2.16.840.1.113883.18.413",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70895",
+    "name": "Present On Admission (POA) Indicator",
+    "codeSystemOid": "2.16.840.1.113883.6.301.11",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70904",
+    "name": "Security Check Scheme",
+    "codeSystemOid": "2.16.840.1.113883.18.415",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70905",
+    "name": "Shipment Status",
+    "codeSystemOid": "2.16.840.1.113883.18.416",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70906",
+    "name": "ActPriority",
+    "codeSystemOid": "2.16.840.1.113883.18.417",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70907",
+    "name": "Confidentiality",
+    "codeSystemOid": "2.16.840.1.113883.18.418",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70908",
+    "name": "Package Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70909",
+    "name": "Patient Results Release Categorization Scheme",
+    "codeSystemOid": "2.16.840.1.113883.18.419",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70910",
+    "name": "Acquisition Modality",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70912",
+    "name": "Participation",
+    "codeSystemOid": "2.16.840.1.113883.18.420",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70913",
+    "name": "Monetary Denomination Code",
+    "codeSystemOid": "1.0.4217",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70914",
+    "name": "Root Cause",
+    "codeSystemOid": "2.16.840.1.113883.18.421",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70915",
+    "name": "Process Control Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70916",
+    "name": "Relevant Clincial Information",
+    "codeSystemOid": "2.16.840.1.113883.18.422",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70917",
+    "name": "Bolus Type",
+    "codeSystemOid": "2.16.840.1.113883.18.423",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70918",
+    "name": "PCA Type",
+    "codeSystemOid": "2.16.840.1.113883.18.424",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70919",
+    "name": "Exclusive Test",
+    "codeSystemOid": "2.16.840.1.113883.18.425",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70920",
+    "name": "Preferred Specimen/Attribute Status",
+    "codeSystemOid": "2.16.840.1.113883.18.426",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70921",
+    "name": "Certification Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.427",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70922",
+    "name": "Certification Category Code",
+    "codeSystemOid": "2.16.840.1.113883.18.428",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70923",
+    "name": "Process Interruption",
+    "codeSystemOid": "2.16.840.1.113883.18.429",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70924",
+    "name": "Cumulative Dosage Limit UoM",
+    "codeSystemOid": "2.16.840.1.113883.18.430",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70925",
+    "name": "Phlebotomy Issue",
+    "codeSystemOid": "2.16.840.1.113883.18.431",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70926",
+    "name": "Phlebotomy Status",
+    "codeSystemOid": "2.16.840.1.113883.18.432",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70927",
+    "name": "Arm Stick",
+    "codeSystemOid": "2.16.840.1.113883.18.433",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70929",
+    "name": "Weight Units",
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70930",
+    "name": "Volume Units",
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70931",
+    "name": "Temperature Units",
+    "codeSystemOid": "2.16.840.1.113883.6.8",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70932",
+    "name": "Donation Duration Units",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70933",
+    "name": "Intended Procedure Type",
+    "codeSystemOid": "2.16.840.1.113883.18.434",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70934",
+    "name": "Order Workflow Profile",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70935",
+    "name": "Process Interruption Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.435",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70936",
+    "name": "Observation Type",
+    "codeSystemOid": "2.16.840.1.113883.18.439",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70937",
+    "name": "Observation Sub-Type",
+    "codeSystemOid": "2.16.840.1.113883.18.440",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70938",
+    "name": "Collection Event/Process Step Limit",
+    "codeSystemOid": "2.16.840.1.113883.18.441",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70939",
+    "name": "Communication Location",
+    "codeSystemOid": "2.16.840.1.113883.18.442",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70940",
+    "name": "Limitation Type Codes",
+    "codeSystemOid": "2.16.840.1.113883.18.443",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70941",
+    "name": "Procedure Code",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70942",
+    "name": "Equipment State Indicator Type Code",
+    "codeSystemOid": "2.16.840.1.113883.18.444",
+    "hl7TableType": "HL7"
+  },
+  {
+    "bindingIdentifier": "HL70943",
+    "name": "Transport Destination",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70944",
+    "name": "Transport Route",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70945",
+    "name": "Auto-Dilution Type",
+    "codeSystemOid": "2.16.840.1.113883.18.445",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70946",
+    "name": "Supplier Type",
+    "codeSystemOid": "2.16.840.1.113883.18.446",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70947",
+    "name": "Class of Trade",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70948",
+    "name": "Relationship Type",
+    "codeSystemOid": "2.16.840.1.113883.18.448",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70949",
+    "name": "Order Control Code Reason",
+    "codeSystemOid": "2.16.840.1.113883.18.449",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70950",
+    "name": "Order Status Modifier",
+    "codeSystemOid": "2.16.840.1.113883.18.450",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70951",
+    "name": "Reason for Study",
+    "codeSystemOid": "2.16.840.1.113883.18.451",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70952",
+    "name": "Confidentiality Classification",
+    "codeSystemOid": "2.16.840.1.113883.5.25",
+    "hl7TableType": "Externally defined"
+  },
+  {
+    "bindingIdentifier": "HL70959",
+    "name": "Work Classification ODH",
+    "codeSystemOid": "2.16.840.1.113883.5.1139",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70960",
+    "name": "Data Absent Reason",
+    "codeSystemOid": "2.16.840.1.113883.4.642.1.1048",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70961",
+    "name": "Device Type",
+    "codeSystemOid": null,
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70962",
+    "name": "Device Status",
+    "codeSystemOid": "2.16.840.1.113883.4.642.1.200",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70963",
+    "name": "Device Safety",
+    "codeSystemOid": "2.16.840.1.113883.3.26.1.1",
+    "hl7TableType": "HL7-EXT"
+  },
+  {
+    "bindingIdentifier": "HL70964",
+    "name": "Service Reason",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70965",
+    "name": "Contract Type",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70966",
+    "name": "Pricing Tier Level",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70967",
+    "name": "Container Form",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70968",
+    "name": "Container Material",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70969",
+    "name": "Container Common Name",
+    "codeSystemOid": null,
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70970",
+    "name": "Online Verification Result",
+    "codeSystemOid": "2.16.840.1.113883.18.453",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL70971",
+    "name": "Online Verification Result Error Code",
+    "codeSystemOid": "2.16.840.1.113883.18.454",
+    "hl7TableType": "User"
+  },
+  {
+    "bindingIdentifier": "HL74000",
+    "name": "Name/address representation",
+    "codeSystemOid": "2.16.840.1.113883.18.436",
+    "hl7TableType": "HL7"
+  }
+]

@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+require_relative 'determine_exec_env'
+# This is intended to start rtm web server or pry within a Docker container...and nowhere else!
+docker = DetermineExecEnv.in_container?
+
+db_location = docker ? File.expand_path("/database/SQL.db") : File.expand_path("../database/SQL.db", __dir__)
+
+require 'lodepath'
+LodePath.add_project_lib
+arg0 = ARGV[0]
+arg1 = ARGV[1]
+if true #arg1 =~ /test|dev|docker/i
+  puts Rainbow("Started #{arg0} with development libraries!").orange
+  # ARGV.shift
+  LodePath.amend
+  if docker # this is a hack because lodepath isn't getting them on its own for some reason
+    $:.unshift '/gem_override/gui_site/lib'
+    $:.unshift '/gem_override/gui_spec/lib'
+    $:.unshift '/gem_override/gui_director/lib'
+    $:.unshift '/gem_override/html_gui_builder/lib'
+  end
+else
+  puts Rainbow("Started #{arg0} without development libraries!").cyan
+end
+LodePath.display
+require LodePath.find(File.join('v2web', 'meta_info.rb'))
+require LodePath.find(File.join('v2web', 'app_options.rb'))
+
+require 'gui_site/launcher'
+opts = {:db_location => db_location}
+  
+if arg0 =~ /web/
+  opts[:mode] = :dev if arg1 =~ /test|dev/i
+  puts "OPTS"
+  pp opts
+  Gui.run(V2Web, opts)
+end
+
+if arg0 =~ /pry/
+  require_relative 'show_rainbow'
+  puts '--------------- Rainbow Colors ----------------'; showcolors; puts '----------------------------------------'
+  require 'html_gui_builder'
+  opts[:server] = :setup_only
+  Gui.run(V2Web, opts)
+  require 'gui_site/server_config'
+  require 'pry'
+  binding.pry
+end

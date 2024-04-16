@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<h2>Data Element #14 - Continuation Pointer</h2><h3>2 distinct definitions</h3><br/>
+<h4>          ---------- 1st Description: Ch. 2 DSC.1 ----------</h4><p class="v2 v2_normalindented">Definition: This field contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete indicator or not present, then there is no more data to fulfill any future continuation requests. For use with continuations of unsolicited messages, see chapter 5 and section <a href="BROKEN2.10.2">2.10.2</a>, &quot;<a href="BROKENContinuation messages and segments">Continuation messages and segments</a>.&quot; Note that continuation protocols work with both display- and record-oriented messages. </p><br/><h4>          ---------- 2nd Description: Ch. 2 MSH.14 ----------</h4><p class="v2 v2_normalindented">Definition: This field is used to define continuations in application-specific ways.</p><p class="v2 v2_normalindented">Only the sender of a fragmented message values this field.</p>
+<hr>
+<h4>          ---------- DIFF b/w 1 and 2 ----------</h4><div class="diff">
+  <ul>
+    <li class="del"><del>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition: This field <strong>contains the continuation pointer. In an initial query, this field is not present. If the responder returns a value of delete ind</strong>icat<strong>or or not present, then there is no more data to fulfill any future continuation requests. For use with continuations of unsolicited messages, see chapter 5 and section &lt;a href=&quot;BROKEN2.10.2&quot;&gt;2.10.2&lt;/a&gt;, &amp;quot;&lt;a href=&quot;BROKENContinuation messages and se</strong>gment<strong>s&quot;&gt;Continuation</strong> message<strong>s and segments&lt;/a&gt;.&amp;quot; Note that continuation protocols work with both display- and record-oriented messages. </strong>&lt;/p&gt;</del></li>
+    <li class="ins"><ins>&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Definition: This field <strong>is used to define continuations in appl</strong>icat<strong>ion-specific ways.&lt;/p&gt;&lt;p class=&quot;v2 v2_normalindented&quot;&gt;Only the sender of a fra</strong>gment<strong>ed</strong> message<strong> values this field.</strong>&lt;/p&gt;</ins></li>
+  </ul>
+</div>
+</body>
+</html>

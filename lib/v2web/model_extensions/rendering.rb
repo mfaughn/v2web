@@ -1,5 +1,5 @@
 require 'base64'
-require_relative 'ig_rendering'
+# require_relative 'ig_rendering'
 module V2Web
   @@draft ||= false
   def self.draft
